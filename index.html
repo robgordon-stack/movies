@@ -709,5 +709,15 @@ function ex(s){return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").r
 loadOverrides();
 sts();filt();
 </script>
+
+<script>
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('/movies/sw.js')
+      .then(r=>console.log('SW registered'))
+      .catch(e=>console.log('SW failed:',e));
+  });
+}
+</script>
 </body>
 </html>
