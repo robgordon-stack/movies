@@ -763,10 +763,18 @@ function openWnFilm(i){
   document.getElementById('ov').classList.add('open');
   document.body.style.overflow='hidden';
 }
+function wnSurprise(){
+  const pool=wnFilmMap.filter(f=>!f.watched);
+  const src=pool.length?pool:wnFilmMap;
+  if(!src.length)return;
+  const f=src[Math.floor(Math.random()*src.length)];
+  const i=wnFilmMap.indexOf(f);
+  openWnFilm(i);
+}
 function renderWatchNext(){
   const pg=document.getElementById('page-watchnext');
   wnFilmMap.length=0;
-  let h='<div style="padding:4px 0 16px"><p style="font-size:13px;color:var(--mut);margin:0">All films you own · grouped by mood · tap any poster to open</p></div>';
+  let h='<div style="display:flex;align-items:center;gap:10px;padding:4px 0 16px"><p style="font-size:13px;color:var(--mut);margin:0;flex:1">All films you own · grouped by mood · tap any poster to open</p><button onclick="wnSurprise()" style="flex-shrink:0;background:var(--surf2);border:1px solid var(--bdr);color:var(--acc);border-radius:8px;padding:6px 12px;font-size:12px;cursor:pointer;white-space:nowrap">&#9825; Surprise me</button></div>';
   WN.forEach(g=>{
     const all=g.films;
     const unwatched=all.filter(f=>!f.watched);
