@@ -757,10 +757,10 @@ loadOverrides();
 sts();filt();
 function renderWatchNext(){
   const pg=document.getElementById('page-watchnext');
-  let h='<div style="padding:4px 0 16px"><p style="font-size:13px;color:var(--mut);margin:0">All unwatched films you own · grouped by mood · tap any poster to open</p></div>';
+  let h='<div style="padding:4px 0 16px"><p style="font-size:13px;color:var(--mut);margin:0">All films you own · grouped by mood · tap any poster to open</p></div>';
   WN.forEach(g=>{
-    const unwatched=g.films.filter(f=>!watchedSet.has(f.title));
     const all=g.films;
+    const unwatched=all.filter(f=>!f.watched);
     h+=`<div style="margin-bottom:28px">
       <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px">
         <span style="font-size:17px;font-weight:600;color:var(--fg)">${g.icon} ${g.name}</span>
@@ -769,7 +769,7 @@ function renderWatchNext(){
       <div style="font-size:12px;color:var(--mut);margin-bottom:10px">${g.desc}</div>
       <div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none">`;
     all.forEach(f=>{
-      const watched=watchedSet.has(f.title);
+      const watched=f.watched;
       const poster=f.poster||'';
       h+=`<div onclick="openDetail(${JSON.stringify(f).replace(/"/g,'&quot;')})" style="flex:0 0 80px;cursor:pointer;position:relative;opacity:${watched?0.45:1}">
         <div style="width:80px;height:120px;border-radius:6px;overflow:hidden;background:var(--card-bg)">
