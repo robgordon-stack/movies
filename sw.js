@@ -1,6 +1,6 @@
 // Service Worker for My Movie Collection
 // To update: bump the version number below, then redeploy
-const VERSION = 'v11';
+const VERSION = 'v12';
 const CACHE   = 'my-films-' + VERSION;
 const ASSETS  = [
   '/movies/',
@@ -26,7 +26,8 @@ self.addEventListener('activate', e => {
       Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
     ).then(() => self.clients.claim())
   );
-});
+});python3 fetch_new_posters.py
+
 
 // Fetch — serve from cache, fall back to network
 self.addEventListener('fetch', e => {
