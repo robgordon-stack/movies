@@ -767,7 +767,7 @@ function rw(l,v){return v?`<div class="dr"><span class="lb">${l}</span><span cla
 function ex(s){return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;")}
 
 // ── Init ──────────────────────────────────────────────────────────────────────
-loadOverrides();
+loadOverrides(); updateFilmCount(C);
 sts();filt();
 const wnFilmMap=[];
 function openWnFilm(i){
