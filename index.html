@@ -182,7 +182,7 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1}
       </svg>
       <div style="display:flex;flex-direction:column;line-height:1">
         <span style="font-size:15px;font-weight:700;color:var(--txt);letter-spacing:.06em;text-transform:uppercase">The Archive</span>
-        <span style="font-size:9px;color:var(--mut);letter-spacing:.12em;text-transform:uppercase;margin-top:2px"><span id="filmCountText">0 films · physical media</span></span>
+        <span style="font-size:9px;color:var(--mut);letter-spacing:.12em;text-transform:uppercase;margin-top:2px"><span id="filmCountText">943 films · physical media</span></span>
       </div>
     </div>
     <button class="surprise-btn" id="surpriseBtn">&#9825; Surprise me</button>
@@ -837,18 +837,15 @@ if('serviceWorker' in navigator){
     navigator.serviceWorker.register('/movies/sw.js')
       .then(r=>console.log('SW registered'))
       .catch(e=>console.log('SW failed:',e));
+
+      setTimeout(() => {
+  if (window.films && films.length) {
+    updateFilmCount(films);
+  }
+}, 100);
   });
 }
 
-// --- Injected: dynamic film count ---
-function updateFilmCount(films){
-  const total = films.length;
-  const el = document.getElementById('filmCountText');
-  if(el){
-    el.textContent = `${total} films · physical media`;
-  }
-}
-// Call this wherever films array is available
 
 </script>
 </body>
