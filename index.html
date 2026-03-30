@@ -328,7 +328,7 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
   <div class="statsrow">
     <div class="stat"><div class="n" id="sT"><div class="skeleton-stat"></div></div><div class="l">Films</div></div>
     <div class="stat"><div class="n" id="sW"><div class="skeleton-stat"></div></div><div class="l">Watched</div></div>
-    <div class="stat"><div class="n" id="sK"><div class="skeleton-stat"></div></div><div class="l">4K</div></div>
+    <div class="stat"><div class="n" id="sP"><div class="skeleton-stat"></div></div><div class="l">Progress</div></div>
     <div class="stat"><div class="n" id="sA"><div class="skeleton-stat"></div></div><div class="l">Avg Score</div></div>
   </div>
 </header>
@@ -736,11 +736,12 @@ function renderStats(){
 
 // ── Stats bar ─────────────────────────────────────────────────────────────────
 function sts(){
-  const w=C.filter(f=>f.watched).length,k=C.filter(f=>f.format&&f.format.includes("4K")).length;
+  const w=C.filter(f=>f.watched).length;
   const sc=C.map(f=>f.score).filter(Boolean);
   const avg=sc.length?(sc.reduce((a,b)=>a+b,0)/sc.length).toFixed(1):"-";
+  const pct=Math.round(w/C.length*100)+"%";
   document.getElementById("sW").textContent=w;
-  document.getElementById("sK").textContent=k;
+  document.getElementById("sP").textContent=pct;
   document.getElementById("sA").textContent=avg;
   document.getElementById("progressBar").style.width=Math.round(w/C.length*100)+"%";
 }
@@ -884,34 +885,38 @@ sts();filt();
 // ── Rotating cinema quotes ─────────────────────────────────────────────────────
 (function(){
   const QUOTES=[
-    "Cinema is a mirror by which we often see ourselves.",
-    "A film is never really good unless the camera is an eye in the head of a poet.",
-    "Every film should have a beginning, a middle and an end, but not necessarily in that order.",
-    "Cinema is the most beautiful fraud in the world.",
-    "Life is like a movie — write your own ending.",
-    "Film is a disease. When it infects your bloodstream, you never recover.",
-    "The cinema is not a slice of life, it is a piece of cake.",
-    "Making a film means, first of all, to tell a story.",
-    "A good film is when the price of the dinner, the theatre admission and the babysitter were worth it.",
-    "I steal from every movie ever made.",
-    "The camera is an instrument that teaches people how to see without a camera.",
-    "Cinema is a matter of what's in the frame and what's out.",
-    "To make a great film you need three things: the script, the script and the script.",
-    "Film as dream, film as music. No art passes our conscience in the way film does.",
-    "I don't make films to make money. I make money to make films.",
+    ["Cinema is a mirror by which we often see ourselves.","Ingmar Bergman"],
+    ["A film is never really good unless the camera is an eye in the head of a poet.","Orson Welles"],
+    ["Every film should have a beginning, a middle and an end, but not necessarily in that order.","Jean-Luc Godard"],
+    ["Cinema is the most beautiful fraud in the world.","Jean-Luc Godard"],
+    ["Film is a disease. When it infects your bloodstream, you never recover.","Frank Capra"],
+    ["The cinema is not a slice of life, it is a piece of cake.","Alfred Hitchcock"],
+    ["I steal from every movie ever made.","Quentin Tarantino"],
+    ["The camera is an instrument that teaches people how to see without a camera.","Dorothea Lange"],
+    ["Cinema is a matter of what's in the frame and what's out.","Martin Scorsese"],
+    ["To make a great film you need three things: the script, the script and the script.","Alfred Hitchcock"],
+    ["Film as dream, film as music. No art passes our conscience in the way film does.","Ingmar Bergman"],
+    ["I don't make films to make money. I make money to make films.","Stanley Kubrick"],
+    ["A story should have a beginning, a middle and an end, but not necessarily in that order.","Jean-Luc Godard"],
+    ["The most honest form of filmmaking is to make a film for yourself.","Peter Jackson"],
+    ["Cinema is a collective dream.","Jean Cocteau"],
   ];
   const el=document.getElementById("cinemaQuote");
   if(!el)return;
   let i=Math.floor(Math.random()*QUOTES.length);
-  el.textContent=QUOTES[i];
+  const show=()=>{
+    const [quote,author]=QUOTES[i];
+    el.innerHTML=`${quote} <span style="opacity:.5;font-style:normal;font-family:'DM Sans',sans-serif">— ${author}</span>`;
+  };
+  show();
   setInterval(()=>{
     el.style.opacity="0";
     setTimeout(()=>{
       i=(i+1)%QUOTES.length;
-      el.textContent=QUOTES[i];
+      show();
       el.style.opacity="1";
     },600);
-  },6000);
+  },15000);
 })();
 const wnFilmMap=[];
 function openWnFilm(i){
