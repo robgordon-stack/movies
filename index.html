@@ -215,7 +215,7 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
       </svg>
       <div style="display:flex;flex-direction:column;line-height:1">
         <span style="font-size:16px;font-weight:400;color:var(--txt);letter-spacing:.02em;font-family:'DM Serif Display',serif">The Archive</span>
-        <span style="font-size:9px;color:var(--mut);letter-spacing:.04em;margin-top:3px;font-family:'DM Sans',sans-serif" id="headerSubtitle">physical media</span>
+        <span style="font-size:9px;color:var(--mut);letter-spacing:.04em;margin-top:3px;font-family:'DM Serif Display',sans-serif;font-style:italic;transition:opacity .6s" id="cinemaQuote"></span>
       </div>
     </div>
     <button class="surprise-btn" id="surpriseBtn" title="Pick a random unwatched film for me">&#9825; Surprise me</button>
@@ -770,7 +770,6 @@ function updateSummary(){
     fb.classList.remove("has-active");
     if(badge){badge.textContent="";badge.classList.remove("visible");}
   }
-  updateHeaderSubtitle();
 }
 
 // ── Surprise me ───────────────────────────────────────────────────────────────
@@ -790,7 +789,6 @@ document.getElementById("q").addEventListener("input",e=>{
   sq=e.target.value;
   document.getElementById("qc").style.display=sq?"block":"none";
   filt();
-  updateHeaderSubtitle();
 });
 document.getElementById("qc").addEventListener("click",()=>{
   document.getElementById("q").value="";sq="";
@@ -883,26 +881,38 @@ function ex(s){return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").r
 loadOverrides();
 sts();filt();
 
-// ── Reactive header subtitle ───────────────────────────────────────────────────
-function updateHeaderSubtitle(){
-  const el=document.getElementById("headerSubtitle");
+// ── Rotating cinema quotes ─────────────────────────────────────────────────────
+(function(){
+  const QUOTES=[
+    "Cinema is a mirror by which we often see ourselves.",
+    "A film is never really good unless the camera is an eye in the head of a poet.",
+    "Every film should have a beginning, a middle and an end, but not necessarily in that order.",
+    "Cinema is the most beautiful fraud in the world.",
+    "Life is like a movie — write your own ending.",
+    "Film is a disease. When it infects your bloodstream, you never recover.",
+    "The cinema is not a slice of life, it is a piece of cake.",
+    "Making a film means, first of all, to tell a story.",
+    "A good film is when the price of the dinner, the theatre admission and the babysitter were worth it.",
+    "I steal from every movie ever made.",
+    "The camera is an instrument that teaches people how to see without a camera.",
+    "Cinema is a matter of what's in the frame and what's out.",
+    "To make a great film you need three things: the script, the script and the script.",
+    "Film as dream, film as music. No art passes our conscience in the way film does.",
+    "I don't make films to make money. I make money to make films.",
+  ];
+  const el=document.getElementById("cinemaQuote");
   if(!el)return;
-  const parts=[];
-  if(af!=="all")parts.push(af==="4k"?"4K":af.charAt(0).toUpperCase()+af.slice(1));
-  if(ad!=="all")parts.push(DIST_MAP[ad]||ad);
-  if(adecade!=="all")parts.push(adecade);
-  if(ag!=="all")parts.push(ag);
-  if(ac!=="all")parts.push(ac);
-  if(art!=="all")parts.push(art==="short"?"Under 90 min":art==="medium"?"90–120 min":art==="long"?"120–180 min":"Epic 180+");
-  if(minScore>5)parts.push("Score "+minScore+"+");
-  if(sq)parts.push('"'+sq+'"');
-  const count=fil.length;
-  if(parts.length){
-    el.innerHTML=`<span style="color:var(--acc)">${count}</span> film${count!==1?"s":""} &middot; `+parts.join(" &middot; ");
-  } else {
-    el.textContent=C.length+" films · physical media";
-  }
-}
+  let i=Math.floor(Math.random()*QUOTES.length);
+  el.textContent=QUOTES[i];
+  setInterval(()=>{
+    el.style.opacity="0";
+    setTimeout(()=>{
+      i=(i+1)%QUOTES.length;
+      el.textContent=QUOTES[i];
+      el.style.opacity="1";
+    },600);
+  },6000);
+})();
 const wnFilmMap=[];
 function openWnFilm(i){
   const f=wnFilmMap[i];if(!f)return;
