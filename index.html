@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0f0f0f">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0d0d0d;--surf:#171717;--surf2:#202020;--surf3:#2a2a2a;--bdr:rgba(255,255,255,0.07);--txt:#efefef;--mut:#777;--acc:#e8b94f;--grn:#4caf7d;--blu:#5b9bd5;--pur:#9c7fd4;--r:6px;--gap:8px}
+:root{--bg:#0d0d0d;--surf:#171717;--surf2:#202020;--surf3:#2a2a2a;--bdr:rgba(255,255,255,0.07);--txt:#efefef;--mut:#999;--acc:#e8b94f;--grn:#4caf7d;--blu:#5b9bd5;--pur:#9c7fd4;--r:6px;--gap:8px}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:var(--bg);color:var(--txt);font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;min-height:100vh;overscroll-behavior:none}
 
@@ -34,7 +34,7 @@ header{background:rgba(23,23,23,.97);backdrop-filter:blur(16px);-webkit-backdrop
 .hrow{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family:'DM Serif Display',serif}
 .cnt{font-size:11px;color:var(--mut);white-space:nowrap}
-.surprise-btn{background:var(--acc);border:none;color:#000;border-radius:20px;padding:5px 12px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;font-family:'DM Sans',sans-serif;transition:transform .15s,box-shadow .15s}
+.surprise-btn{background:var(--acc);border:none;color:#000;border-radius:20px;padding:5px 12px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;font-family:'DM Sans',sans-serif;transition:transform .15s,box-shadow .15s;will-change:transform}
 .surprise-btn:hover{box-shadow:0 0 16px rgba(232,185,79,.4)}
 .surprise-btn:active{opacity:.8;transform:scale(.95)}
 .surprise-btn.spinning{animation:surprisePop .5s cubic-bezier(.36,.07,.19,.97) both}
@@ -42,10 +42,10 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 
 /* ── SEARCH ── */
 .sw{position:relative;margin-bottom:8px}
-.sw input{width:100%;background:var(--surf2);border:1px solid var(--bdr);color:var(--txt);border-radius:8px;padding:9px 36px;font-size:15px;outline:none;-webkit-appearance:none;font-family:'DM Sans',sans-serif;transition:border-color .2s}
+.sw input{width:100%;background:var(--surf2);border:1px solid var(--bdr);color:var(--txt);border-radius:8px;padding:9px 36px 9px 36px;font-size:15px;outline:none;-webkit-appearance:none;font-family:'DM Sans',sans-serif;transition:border-color .2s}
 .sw input:focus{border-color:rgba(232,185,79,.35)}
 .si{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--mut);font-size:15px;pointer-events:none}
-.scl{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--mut);font-size:20px;cursor:pointer;display:none;line-height:1;padding:0 4px}
+.scl{position:absolute;right:6px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--mut);font-size:20px;cursor:pointer;display:none;line-height:1;padding:8px;min-width:44px;min-height:44px;display:none;align-items:center;justify-content:center}
 
 /* ── FILTER TOGGLE ── */
 .filter-toggle{display:flex;align-items:center;gap:8px;margin-bottom:8px}
@@ -54,7 +54,7 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 .filter-badge{display:none;position:absolute;top:-6px;right:-6px;background:var(--acc);color:#000;font-size:9px;font-weight:800;border-radius:10px;min-width:16px;height:16px;padding:0 4px;align-items:center;justify-content:center;line-height:1}
 .filter-badge.visible{display:flex}
 .active-summary{font-size:11px;color:var(--acc);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.clear-all{background:none;border:none;color:var(--mut);font-size:20px;cursor:pointer;padding:0 2px;line-height:1;flex-shrink:0;display:none;transition:color .15s}
+.clear-all{background:none;border:none;color:var(--mut);font-size:20px;cursor:pointer;padding:8px;line-height:1;flex-shrink:0;display:none;transition:color .15s;min-width:44px;min-height:44px;display:none;align-items:center;justify-content:center}
 .clear-all:hover{color:var(--txt)}
 
 /* ── FILTER PANEL ── */
@@ -63,7 +63,7 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 .frow{display:flex;gap:6px;overflow-x:auto;padding:0 0 6px;scrollbar-width:none;-webkit-overflow-scrolling:touch;align-items:center}
 .frow::-webkit-scrollbar{display:none}
 .flabel{flex-shrink:0;font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;width:44px;font-weight:600}
-.chip{flex-shrink:0;background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:20px;padding:4px 10px;font-size:11px;cursor:pointer;white-space:nowrap;user-select:none;transition:all .15s}
+.chip{flex-shrink:0;background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:20px;padding:7px 12px;font-size:11px;cursor:pointer;white-space:nowrap;user-select:none;transition:all .15s}
 .chip.active{background:var(--acc);border-color:var(--acc);color:#000;font-weight:700}
 .chip:active{opacity:.7}
 .chip-count{opacity:.6;font-size:10px;margin-left:2px}
@@ -131,7 +131,7 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 /* ── SHEET ── */
 .ov{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;opacity:0;pointer-events:none;transition:opacity .2s}
 .ov.open{opacity:1;pointer-events:all}
-.sh{position:fixed;bottom:0;left:0;right:0;max-height:90vh;background:var(--surf);border-radius:16px 16px 0 0;z-index:201;transform:translateY(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:env(safe-area-inset-bottom)}
+.sh{position:fixed;bottom:0;left:0;right:0;max-height:90vh;background:var(--surf);border-radius:16px 16px 0 0;z-index:201;transform:translateY(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:calc(env(safe-area-inset-bottom) + 16px)}
 .sh.open{transform:translateY(0)}
 .shn{width:36px;height:4px;background:var(--bdr);border-radius:2px;margin:12px auto 0}
 .shi{padding:16px 20px 48px}
@@ -334,13 +334,7 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 </header>
 <div class="gw">
   <div class="skeleton-grid" id="skeletonGrid">
-    <!-- 18 skeleton cards as loading placeholders -->
-    <div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div>
-    <div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div>
-    <div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div>
-    <div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div>
-    <div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div>
-    <div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div>
+    <!-- skeleton cards generated dynamically by JS based on collection size -->
   </div>
   <div class="grid" id="grid" style="display:none"></div>
   <div class="empty" id="emp" style="display:none"><h2>No films found</h2><p>Try adjusting filters</p></div>
@@ -567,7 +561,7 @@ function renderSheet(f,arr){
     ${syn}<hr class="divl">
     ${gs?`<div class="tags" style="margin-bottom:12px">${gs}</div>`:""}
     ${rw("Distributor",f.distributor)}
-    <div class="dr"><span class="lb">Director</span><span class="vl dir-link" onclick="openDirector('${ex(f.director)}')">${ex(f.director)}</span></div>
+    <div class="dr"><span class="lb">Director</span><span class="vl dir-link" onclick="openDirector('${ex(f.director)}')">${ex(f.director)}</span><span style="margin-left:8px;font-size:11px;color:var(--mut);cursor:pointer;text-decoration:underline;text-decoration-style:dotted" onclick="searchByDirector('${ex(f.director)}')">filter</span></div>
     ${rw("Country",flag?flag+" "+f.country:f.country)}
     ${rw("Runtime",f.runtime?f.runtime+" min":"")}
     ${rw("Decade",f.decade)}
@@ -619,6 +613,18 @@ function applyFilter(type, value){
   // Switch to collection tab and apply
   switchTab("collection");
   filt();
+}
+
+function searchByDirector(name){
+  cls();
+  sq=name;
+  const input=document.getElementById('q');
+  input.value=name;
+  document.getElementById('qc').style.display='block';
+  switchTab('collection');
+  filt();
+  // Scroll header into view so search bar is visible
+  document.querySelector('header').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
 function openDirector(name){
@@ -877,6 +883,18 @@ document.getElementById("sh").addEventListener("touchend",e=>{if(e.changedTouche
 // ── Helpers ───────────────────────────────────────────────────────────────────
 function rw(l,v){return v?`<div class="dr"><span class="lb">${l}</span><span class="vl">${ex(String(v))}</span></div>`:""}
 function ex(s){return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;")}
+
+// ── Dynamic skeleton loader ───────────────────────────────────────────────────
+(function(){
+  const skGrid = document.getElementById('skeletonGrid');
+  if (!skGrid) return;
+  // Fill with enough cards to match viewport columns, capped to collection size
+  const vw = window.innerWidth;
+  const cols = vw >= 1200 ? 9 : vw >= 900 ? 7 : vw >= 640 ? 5 : vw >= 480 ? 4 : 3;
+  const rows = 3;
+  const count = Math.min(C.length, cols * rows);
+  skGrid.innerHTML = Array(count).fill('<div class="skeleton-card"></div>').join('');
+})();
 
 // ── Init ──────────────────────────────────────────────────────────────────────
 loadOverrides();
