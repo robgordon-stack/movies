@@ -389,7 +389,10 @@ const FLAGS={"Usa": "🇺🇸", "Uk": "🇬🇧", "Japan": "🇯🇵", "France":
 const DIST_MAP={criterion:"Criterion Collection",arrow:"Arrow Films",indicator:"Indicator",bfi:"BFI",masters:"Masters of Cinema",umbrella:"Umbrella Entertainment",imprint:"Imprint",radiance:"Radiance Films"};
 const LS_KEY="watched_overrides_v2";
 
-let fil=[],af="all",ad="all",adecade="all",ag="all",ac="all",art="all",minScore=5,sq="",sk="title",sa=true,openIdx=-1;
+// openFilm holds a direct reference to the film object currently shown in the
+// detail sheet. This avoids the stale-index bug where openIdx pointed into
+// fil[] but fil[] could be re-sorted/re-filtered while the sheet was open.
+let fil=[],af="all",ad="all",adecade="all",ag="all",ac="all",art="all",minScore=5,sq="",sk="title",sa=true,openIdx=-1,openFilm=null;
 
 // ── localStorage ─────────────────────────────────────────────────────────────
 function loadOverrides(){
@@ -424,6 +427,8 @@ function switchTab(name){
 }
 
 // ── Filter & sort ─────────────────────────────────────────────────────────────
+// filt() rebuilds fil[] then delegates to srt() for sorting + rendering.
+// srt() can also be called directly (e.g. sort chip click) without re-filtering.
 function filt(){
   const q=sq.toLowerCase();
   fil=C.filter(f=>{
@@ -450,11 +455,14 @@ function filt(){
     if(minScore>5&&(!f.score||f.score<minScore))return false;
     return true;
   });
-  srt();
+  // Sort the freshly-filtered array and render
+  sortFil();
   updateSummary();
 }
 
-function srt(){
+// sortFil() sorts fil[] in-place and renders — no re-filter.
+// srt() is the public alias used by sort chip clicks.
+function sortFil(){
   const a=sa?1:-1;
   fil.sort((x,y)=>{
     switch(sk){
@@ -469,6 +477,8 @@ function srt(){
   render();
   document.getElementById("sT").textContent=fil.length===C.length?C.length+" films":fil.length+" of "+C.length;
 }
+// Keep srt as alias so sort-chip click handlers continue to work
+function srt(){sortFil();}
 
 // ── Grid render ───────────────────────────────────────────────────────────────
 function render(){
@@ -497,6 +507,7 @@ function opn(i,arr){
   const src=arr||fil;
   const f=src[i];if(!f)return;
   openIdx=i;
+  openFilm=f; // store reference so navigation survives filter changes
   renderSheet(f,arr);
   document.getElementById("sh").classList.add("open");
   document.getElementById("ov").classList.add("open");
@@ -572,8 +583,8 @@ function renderSheet(f,arr){
 }
 
 function toggleWatched(arrKey){
-  const arr=arrKey==="dirArr"?currentDirFilms:fil;
-  const f=arr[openIdx];if(!f)return;
+  // Use openFilm reference directly — immune to filter/sort changes while sheet is open
+  const f=openFilm;if(!f)return;
   const master=C.find(m=>m.title===f.title&&m.year===f.year);
   if(master){master.watched=!master.watched;f.watched=master.watched;saveOverride(f.title,f.year,f.watched);}
   renderSheet(f,arrKey==="dirArr"?currentDirFilms:null);
@@ -583,7 +594,7 @@ function toggleWatched(arrKey){
 function cls(){
   document.getElementById("sh").classList.remove("open");
   document.getElementById("ov").classList.remove("open");
-  document.body.style.overflow="";openIdx=-1;
+  document.body.style.overflow="";openIdx=-1;openFilm=null;
 }
 
 // ── Director page ─────────────────────────────────────────────────────────────
@@ -936,53 +947,88 @@ sts();filt();
     },600);
   },15000);
 })();
+// wnFilmMap: flat array of unique film objects across all WN groups.
+// Films that appear in multiple groups are deduplicated here so that
+// wnSurprise() always finds a valid index regardless of duplicates.
 const wnFilmMap=[];
+
+// Per-group slot map: group index → array of [globalIdx, film] pairs.
+// Posters use globalIdx so openWnFilm always resolves to the right object.
 function openWnFilm(i){
   const f=wnFilmMap[i];if(!f)return;
+  openFilm=f;
   renderSheet(f,wnFilmMap);
   document.getElementById('sh').classList.add('open');
   document.getElementById('ov').classList.add('open');
   document.body.style.overflow='hidden';
 }
 function wnSurprise(){
+  if(!wnFilmMap.length)return;
   const pool=wnFilmMap.filter(f=>!f.watched);
   const src=pool.length?pool:wnFilmMap;
-  if(!src.length)return;
   const f=src[Math.floor(Math.random()*src.length)];
-  const i=wnFilmMap.indexOf(f);
-  openWnFilm(i);
+  // Find index in wnFilmMap by identity reference
+  openWnFilm(wnFilmMap.indexOf(f));
 }
 function renderWatchNext(){
   const pg=document.getElementById('page-watchnext');
   wnFilmMap.length=0;
-  let h='<div style="display:flex;align-items:center;gap:10px;padding:4px 0 16px"><p style="font-size:13px;color:var(--mut);margin:0;flex:1">All films you own · grouped by mood · tap any poster to open</p><button onclick="wnSurprise()" style="flex-shrink:0;background:var(--surf2);border:1px solid var(--bdr);color:var(--acc);border-radius:8px;padding:6px 12px;font-size:12px;cursor:pointer;white-space:nowrap">&#9825; Surprise me</button></div>';
+
+  // Build a Set to deduplicate films across groups; the first occurrence
+  // owns the globalIdx used by posters in every group.
+  const seenTitles=new Map(); // title+year → globalIdx
+
+  // Use a DocumentFragment for efficient DOM insertion
+  const frag=document.createDocumentFragment();
+
+  // Header row
+  const header=document.createElement('div');
+  header.innerHTML='<div style="display:flex;align-items:center;gap:10px;padding:4px 0 16px"><p style="font-size:13px;color:var(--mut);margin:0;flex:1">All films you own · grouped by mood · tap any poster to open</p><button onclick="wnSurprise()" style="flex-shrink:0;background:var(--surf2);border:1px solid var(--bdr);color:var(--acc);border-radius:8px;padding:6px 12px;font-size:12px;cursor:pointer;white-space:nowrap">&#9825; Surprise me</button></div>';
+  frag.appendChild(header.firstElementChild);
+
   WN.forEach(g=>{
     const all=g.films;
     const unwatched=all.filter(f=>!f.watched);
-    h+=`<div style="margin-bottom:28px">
-      <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px">
-        <span style="font-size:17px;font-weight:600;color:var(--txt)">${g.icon} ${g.name}</span>
-        <span style="font-size:11px;color:var(--mut)">${unwatched.length} unwatched of ${all.length}</span>
-      </div>
-      <div style="font-size:12px;color:var(--mut);margin-bottom:10px">${g.desc}</div>
-      <div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none">`;
-    all.forEach(f=>{
-      const idx=wnFilmMap.length;
-      wnFilmMap.push(f);
+
+    // Resolve global indices for each film in this group
+    const groupSlots=all.map(f=>{
+      const key=f.title+"|"+(f.year||"");
+      if(!seenTitles.has(key)){
+        seenTitles.set(key,wnFilmMap.length);
+        wnFilmMap.push(f);
+      }
+      return{idx:seenTitles.get(key),f};
+    });
+
+    const section=document.createElement('div');
+    section.style.marginBottom='28px';
+
+    let postersHtml='';
+    groupSlots.forEach(({idx,f})=>{
       const watched=f.watched;
       const poster=f.poster||'';
-      h+=`<div onclick="openWnFilm(${idx})" class="wn-poster" style="opacity:${watched?0.45:1}">
+      postersHtml+=`<div onclick="openWnFilm(${idx})" class="wn-poster" style="opacity:${watched?0.45:1}">
         <div class="wn-poster-img">
-          ${poster?`<img src="${poster}" style="width:100%;height:100%;object-fit:cover" loading="lazy">`:`<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--mut);padding:4px;text-align:center">${f.title}</div>`}
+          ${poster?`<img src="${ex(poster)}" style="width:100%;height:100%;object-fit:cover" loading="lazy">`:`<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--mut);padding:4px;text-align:center">${ex(f.title)}</div>`}
         </div>
         ${watched?'<div style="position:absolute;top:4px;right:4px;width:16px;height:16px;border-radius:50%;background:var(--grn);display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff">✓</div>':''}
-        <div style="font-size:10px;color:var(--txt);margin-top:4px;line-height:1.3;max-width:80px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">${f.title}</div>
+        <div style="font-size:10px;color:var(--txt);margin-top:4px;line-height:1.3;max-width:80px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">${ex(f.title)}</div>
         <div style="font-size:10px;color:var(--mut)">${f.score||''}</div>
       </div>`;
     });
-    h+=`</div></div>`;
+
+    section.innerHTML=`
+      <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px">
+        <span style="font-size:17px;font-weight:600;color:var(--txt)">${g.icon} ${ex(g.name)}</span>
+        <span style="font-size:11px;color:var(--mut)">${unwatched.length} unwatched of ${all.length}</span>
+      </div>
+      <div style="font-size:12px;color:var(--mut);margin-bottom:10px">${ex(g.desc)}</div>
+      <div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none">${postersHtml}</div>`;
+    frag.appendChild(section);
   });
-  pg.innerHTML=h;
+
+  pg.innerHTML='';
+  pg.appendChild(frag);
 }
 
 
