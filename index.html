@@ -579,7 +579,7 @@ function renderSheet(f,arr){
     ${gs?`<div class="tags" style="margin-bottom:12px">${gs}</div>`:""}
     ${rw("Distributor",f.distributor)}
     <div class="dr"><span class="lb">Director</span><span class="vl dir-link" onclick="openDirector('${ex(f.director)}')">${ex(f.director)}</span><span style="margin-left:8px;font-size:11px;color:var(--mut);cursor:pointer;text-decoration:underline;text-decoration-style:dotted" onclick="searchByDirector('${ex(f.director)}')">filter</span></div>
-    ${f.cast&&f.cast.length?`<div class="dr"><span class="lb">Cast</span><span class="vl">${f.cast.join(', ')}</span></div>`:""}
+    ${f.cast&&f.cast.length?`<div class="dr"><span class="lb">Cast</span><span class="vl">${f.cast.map(n=>`<span class="dir-link" style="cursor:pointer;text-decoration:underline;color:var(--blu)" onclick="searchByCast('${n.replace(/'/g,"\\'")}')">${ex(n)}</span>`).join(', ')}</span></div>`:""}
     ${rw("Country",flag?flag+" "+f.country:f.country)}
     ${rw("Runtime",f.runtime?f.runtime+" min":"")}
     ${rw("Decade",f.decade)}
@@ -642,6 +642,17 @@ function searchByDirector(name){
   switchTab('collection');
   filt();
   // Scroll header into view so search bar is visible
+  document.querySelector('header').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function searchByCast(name){
+  cls();
+  sq=name;
+  const input=document.getElementById('q');
+  input.value=name;
+  document.getElementById('qc').style.display='block';
+  switchTab('collection');
+  filt();
   document.querySelector('header').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
