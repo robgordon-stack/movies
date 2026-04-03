@@ -712,6 +712,11 @@ function renderStats(){
   C.forEach(f=>{(f.genre||"").split(",").forEach(g=>{g=g.trim();if(g&&g!=="nan")genMap[g]=(genMap[g]||0)+1;});});
   const topGens=Object.entries(genMap).sort((a,b)=>b[1]-a[1]).slice(0,10);
 
+  // Top cast
+  const castMap={};
+  C.forEach(f=>{(f.cast||[]).forEach(n=>{n=n.trim();if(n)castMap[n]=(castMap[n]||0)+1;});});
+  const topCast=Object.entries(castMap).sort((a,b)=>b[1]-a[1]).slice(0,12);
+
   el.innerHTML=`
     <div class="stat-card">
       <h3>Overview</h3>
@@ -750,6 +755,14 @@ function renderStats(){
         <span class="bar-count">${n}</span>
       </div>`).join("")}
     </div>
+    ${topCast.length?`<div class="stat-card">
+      <h3>Top Cast Members</h3>
+      ${topCast.map(([n,c])=>`<div class="bar-row">
+        <span class="bar-label wide" style="cursor:pointer;color:var(--blu);text-decoration:underline" onclick="searchByCast('${n.replace(/'/g,"\\'")}')">${ex(n)}</span>
+        <div class="bar-wrap"><div class="bar-fill grn" style="width:${Math.round(c/topCast[0][1]*100)}%"></div></div>
+        <span class="bar-count">${c}</span>
+      </div>`).join("")}
+    </div>`:""}
     <div class="stat-card">
       <h3>By Country</h3>
       ${topCtys.map(([c,n])=>`<div class="bar-row">
