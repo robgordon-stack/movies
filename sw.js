@@ -8,8 +8,6 @@ const ASSETS  = [
   '/movies/manifest.json',
   '/movies/icon-192.png',
   '/movies/icon-512.png',
-  '/movies/wishlist.html',
-  '/movies/wishlist.json',
 ];
 
 // Install — cache all assets
@@ -28,7 +26,7 @@ self.addEventListener('activate', e => {
       Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
     ).then(() => self.clients.claim())
   );
-}); // ← this closing }); was missing, causing the fetch handler to never register
+
 
 // Fetch — serve from cache, fall back to network
 self.addEventListener('fetch', e => {
