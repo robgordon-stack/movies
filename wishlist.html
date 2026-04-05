@@ -102,7 +102,7 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 /* ── OVERLAY / SHEET ── */
 .ov{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:200;opacity:0;pointer-events:none;transition:opacity .2s}
 .ov.open{opacity:1;pointer-events:all}
-.sh{position:fixed;bottom:0;left:0;right:0;max-height:90vh;background:var(--surf);border-radius:16px 16px 0 0;z-index:201;transform:translateY(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:calc(env(safe-area-inset-bottom)+16px)}
+.sh{position:fixed;bottom:0;left:0;right:0;max-height:90vh;background:var(--surf);border-radius:16px 16px 0 0;z-index:201;transform:translateY(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:calc(env(safe-area-inset-bottom)+80px)}
 .sh.open{transform:translateY(0)}
 .shn{width:36px;height:4px;background:var(--surf3);border-radius:2px;margin:12px auto 4px}
 .shi{padding:0 16px 24px}
@@ -211,7 +211,8 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
 <div class="page active" id="page-wishlist">
   <header>
     <div class="hrow">
-      <h1>The List</h1>
+      <a href="index.html" style="font-size:11px;color:var(--mut);text-decoration:none;display:block;margin-bottom:2px;letter-spacing:.04em">&#8592; The Archive</a>
+      <h1>Wish List</h1>
       <span class="cnt" id="wl-count">0 films</span>
       <button class="add-btn" onclick="openAddModal()">+ Add</button>
     </div>
@@ -229,8 +230,8 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
     </div>
     <div class="sortrow">
       <span class="sortlabel">Sort</span>
-      <div class="sortchip active" id="sk-added" onclick="setSort('added',this)">Date added ↓</div>
-      <div class="sortchip" id="sk-title" onclick="setSort('title',this)">Title</div>
+      <div class="sortchip" id="sk-added" onclick="setSort('added',this)">Date added ↓</div>
+      <div class="sortchip active" id="sk-title" onclick="setSort('title',this)">Title</div>
       <div class="sortchip" id="sk-year" onclick="setSort('year',this)">Year</div>
       <div class="sortchip" id="sk-pri" onclick="setSort('priority',this)">Priority</div>
     </div>
@@ -394,7 +395,7 @@ function saveArchive(titles){try{localStorage.setItem(ARCHIVE_KEY,JSON.stringify
 let WL=load();
 let ARCHIVE_TITLES=loadArchive();
 let filterPri="all";
-let sortKey="added";
+let sortKey="title";
 let openItem=null;
 let tmdbTimer=null;
 
