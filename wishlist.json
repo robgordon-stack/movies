@@ -1,5 +1,20 @@
 [
   {
+    "id": "1775369564988i3ewoak8ml",
+    "title": "Misery",
+    "year": 1990,
+    "director": null,
+    "poster": "https://m.media-amazon.com/images/M/MV5BNzY0ODQ3MTMxN15BMl5BanBnXkFtZTgwMDkwNTg4NjE@._V1_SX300.jpg",
+    "imdb_id": "tt0100157",
+    "genre": null,
+    "country": null,
+    "runtime": null,
+    "priority": "High",
+    "notes": "Kino Lorber 4K",
+    "owned": false,
+    "added": 1775369564988
+  },
+  {
     "id": "17753640833188k5tezc05vp",
     "title": "WALL-E",
     "priority": "Someday",
@@ -141,7 +156,8 @@
     "country": "United States of America",
     "director": "Wes Anderson",
     "tmdb_id": 10315,
-    "lb": "https://letterboxd.com/search/Fantastic%20Mr.%20Fox/"
+    "lb": "https://letterboxd.com/search/Fantastic%20Mr.%20Fox/",
+    "notes": "Criterion"
   },
   {
     "id": "17753640833189s8zvmbze3m",
@@ -397,7 +413,8 @@
     "country": "United States of America",
     "director": "Paul Verhoeven",
     "tmdb_id": 563,
-    "lb": "https://letterboxd.com/search/Starship%20Troopers/"
+    "lb": "https://letterboxd.com/search/Starship%20Troopers/",
+    "notes": "4K"
   },
   {
     "id": "1775363855869mhlk0kgw5x",
@@ -493,7 +510,8 @@
     "country": "Australia",
     "director": "Jane Campion",
     "tmdb_id": 600583,
-    "lb": "https://letterboxd.com/search/The%20Power%20of%20the%20Dog/"
+    "lb": "https://letterboxd.com/search/The%20Power%20of%20the%20Dog/",
+    "notes": "Criterion 4K"
   },
   {
     "id": "1775363855869m563tc4q2ob",
@@ -589,7 +607,8 @@
     "country": "United States of America",
     "director": "Benny Safdie, Josh Safdie",
     "tmdb_id": 473033,
-    "lb": "https://letterboxd.com/search/Uncut%20Gems/"
+    "lb": "https://letterboxd.com/search/Uncut%20Gems/",
+    "notes": "Criterion 4K"
   },
   {
     "id": "17753637107522lhva4egqmt",
@@ -621,7 +640,8 @@
     "country": "United States of America",
     "director": "Robert Wise",
     "tmdb_id": 15121,
-    "lb": "https://letterboxd.com/search/The%20Sound%20of%20Music/"
+    "lb": "https://letterboxd.com/search/The%20Sound%20of%20Music/",
+    "notes": "4K"
   },
   {
     "id": "1775363710752glfyzn774ul",
@@ -669,7 +689,8 @@
     "country": "Germany",
     "director": "Ingmar Bergman",
     "tmdb_id": 12761,
-    "lb": "https://letterboxd.com/search/Autumn%20Sonata/"
+    "lb": "https://letterboxd.com/search/Autumn%20Sonata/",
+    "notes": "Criterion Bluray"
   },
   {
     "id": "17753637107521n4znt8b1mv",
@@ -781,7 +802,8 @@
     "country": "United States of America",
     "director": "Billy Wilder",
     "tmdb_id": 239,
-    "lb": "https://letterboxd.com/search/Some%20Like%20It%20Hot/"
+    "lb": "https://letterboxd.com/search/Some%20Like%20It%20Hot/",
+    "notes": "4K"
   },
   {
     "id": "177536371075180vc972vgje",
@@ -797,7 +819,8 @@
     "country": "United Kingdom",
     "director": "Ridley Scott",
     "tmdb_id": 98,
-    "lb": "https://letterboxd.com/search/Gladiator/"
+    "lb": "https://letterboxd.com/search/Gladiator/",
+    "notes": "4k"
   },
   {
     "id": "17753635899860b5zq1t06lgp",
@@ -973,7 +996,8 @@
     "country": "New Zealand",
     "director": "Peter Jackson",
     "tmdb_id": 120,
-    "lb": "https://letterboxd.com/search/The%20Lord%20of%20the%20Rings%3A%20The%20Fellowship%20of%20the%20Ring/"
+    "lb": "https://letterboxd.com/search/The%20Lord%20of%20the%20Rings%3A%20The%20Fellowship%20of%20the%20Ring/",
+    "notes": "4K"
   },
   {
     "id": "1775363589986iyceng33ntq",
@@ -1021,7 +1045,8 @@
     "country": "United States of America",
     "director": "Martin Scorsese",
     "tmdb_id": 769,
-    "lb": "https://letterboxd.com/search/Goodfellas/"
+    "lb": "https://letterboxd.com/search/Goodfellas/",
+    "notes": "4K"
   },
   {
     "id": "1775363589986curtr4o4y6k",
@@ -1069,7 +1094,8 @@
     "country": "Mexico",
     "director": "Alejandro González Iñárritu",
     "tmdb_id": 55,
-    "lb": "https://letterboxd.com/search/Amores%20Perros/"
+    "lb": "https://letterboxd.com/search/Amores%20Perros/",
+    "notes": "Criterion\n"
   },
   {
     "id": "1775363589986ygphtg1hotp",
@@ -1101,7 +1127,8 @@
     "country": "China",
     "director": "Chen Kaige",
     "tmdb_id": 10997,
-    "lb": "https://letterboxd.com/search/Farewell%20My%20Concubine/"
+    "lb": "https://letterboxd.com/search/Farewell%20My%20Concubine/",
+    "notes": "Criterion 4K"
   },
   {
     "id": "17753635899862i5xvqcq0f1",
@@ -1197,7 +1224,8 @@
     "country": "Japan",
     "director": "Akira Kurosawa",
     "tmdb_id": 11878,
-    "lb": "https://letterboxd.com/search/Yojimbo/"
+    "lb": "https://letterboxd.com/search/Yojimbo/",
+    "notes": "BFI 4K"
   },
   {
     "id": "1775363589985wp0lb8sa139",
@@ -1245,7 +1273,8 @@
     "country": "United States of America",
     "director": "Celine Song",
     "tmdb_id": 666277,
-    "lb": "https://letterboxd.com/search/Past%20Lives/"
+    "lb": "https://letterboxd.com/search/Past%20Lives/",
+    "notes": "4K"
   },
   {
     "id": "177536358998524ycdlt9b1a",
@@ -1277,7 +1306,8 @@
     "country": "Japan",
     "director": "Akira Kurosawa",
     "tmdb_id": 11712,
-    "lb": "https://letterboxd.com/search/Sanjuro/"
+    "lb": "https://letterboxd.com/search/Sanjuro/",
+    "notes": "BFI 4K"
   },
   {
     "id": "17753635899858ag3d93ketn",
@@ -1293,7 +1323,8 @@
     "country": "France",
     "director": "Roman Polanski",
     "tmdb_id": 423,
-    "lb": "https://letterboxd.com/search/The%20Pianist/"
+    "lb": "https://letterboxd.com/search/The%20Pianist/",
+    "notes": "4K"
   },
   {
     "id": "1775363589985sqazc1r9re",
@@ -1341,7 +1372,8 @@
     "country": "Spain",
     "director": "Pedro Almodóvar",
     "tmdb_id": 99,
-    "lb": "https://letterboxd.com/search/All%20About%20My%20Mother/"
+    "lb": "https://letterboxd.com/search/All%20About%20My%20Mother/",
+    "notes": "Criterion"
   },
   {
     "id": "1775363589985crerbmkmc4",
@@ -1418,7 +1450,7 @@
     "country": "Italy",
     "runtime": 115,
     "priority": "High",
-    "notes": null,
+    "notes": "Criterion",
     "owned": false,
     "added": 1775363294687,
     "tmdb_id": 405,
