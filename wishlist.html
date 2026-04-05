@@ -102,7 +102,7 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 /* ── OVERLAY / SHEET ── */
 .ov{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:200;opacity:0;pointer-events:none;transition:opacity .2s}
 .ov.open{opacity:1;pointer-events:all}
-.sh{position:fixed;bottom:0;left:0;right:0;max-height:90vh;background:var(--surf);border-radius:16px 16px 0 0;z-index:201;transform:translateY(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:calc(env(safe-area-inset-bottom)+80px)}
+.sh{position:fixed;bottom:calc(56px + env(safe-area-inset-bottom));left:0;right:0;max-height:calc(100vh - 56px - env(safe-area-inset-bottom) - env(safe-area-inset-top));background:var(--surf);border-radius:16px 16px 0 0;z-index:201;transform:translateY(calc(100% + 56px + env(safe-area-inset-bottom)));transition:transform .28s cubic-bezier(.4,0,.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:24px}
 .sh.open{transform:translateY(0)}
 .shn{width:36px;height:4px;background:var(--surf3);border-radius:2px;margin:12px auto 4px}
 .shi{padding:0 16px 24px}
@@ -227,13 +227,15 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
       <div class="chip" id="chip-hot" onclick="setPriFilter('Must Own',this)">🔴 Must Own</div>
       <div class="chip" id="chip-med" onclick="setPriFilter('High',this)">🟡 High</div>
       <div class="chip" id="chip-low" onclick="setPriFilter('Someday',this)">🔵 Someday</div>
+      <div class="chip" id="chip-4k" onclick="toggle4kFilter(this)">4K</div>
     </div>
     <div class="sortrow">
       <span class="sortlabel">Sort</span>
-      <div class="sortchip" id="sk-added" onclick="setSort('added',this)">Date added ↓</div>
-      <div class="sortchip active" id="sk-title" onclick="setSort('title',this)">Title</div>
-      <div class="sortchip" id="sk-year" onclick="setSort('year',this)">Year</div>
-      <div class="sortchip" id="sk-pri" onclick="setSort('priority',this)">Priority</div>
+      <div class="sortchip" id="sk-added" onclick="setSort('added',this)">Date added<span class="sd"></span></div>
+      <div class="sortchip active" id="sk-title" onclick="setSort('title',this)">Title<span class="sd"> ↑</span></div>
+      <div class="sortchip" id="sk-year" onclick="setSort('year',this)">Year<span class="sd"></span></div>
+      <div class="sortchip" id="sk-pri" onclick="setSort('priority',this)">Priority<span class="sd"></span></div>
+      <div class="sortchip" id="sk-dist" onclick="setSort('distributor',this)">Distributor<span class="sd"></span></div>
     </div>
     <div class="statsbar">
       <div class="sstat hot"><div class="n" id="st-hot">0</div><div class="l">Must Own</div></div>
@@ -395,7 +397,9 @@ function saveArchive(titles){try{localStorage.setItem(ARCHIVE_KEY,JSON.stringify
 let WL=load();
 let ARCHIVE_TITLES=loadArchive();
 let filterPri="all";
+let filter4k=false;
 let sortKey="title";
+let sortDir=1; // 1=asc, -1=desc
 let openItem=null;
 let tmdbTimer=null;
 
@@ -411,16 +415,20 @@ function getFiltered(){
   const q=(document.getElementById("wl-search").value||"").toLowerCase();
   let list=WL.filter(f=>{
     if(filterPri!=="all"&&f.priority!==filterPri)return false;
-    if(q&&!(f.title+" "+(f.director||"")+" "+(f.genre||"")).toLowerCase().includes(q))return false;
+    if(filter4k&&!f.has4k)return false;
+    if(q&&!(f.title+" "+(f.director||"")+" "+(f.genre||"")+" "+(f.distributor||"")).toLowerCase().includes(q))return false;
     return true;
   });
   list.sort((a,b)=>{
+    let r=0;
     switch(sortKey){
-      case "title": return a.title.localeCompare(b.title);
-      case "year": return (b.year||0)-(a.year||0);
-      case "priority": return (PRI_ORDER[a.priority]||2)-(PRI_ORDER[b.priority]||2);
-      default: return (b.added||0)-(a.added||0);
+      case "title": r=a.title.localeCompare(b.title); break;
+      case "year": r=(a.year||0)-(b.year||0); break;
+      case "priority": r=(PRI_ORDER[a.priority]??2)-(PRI_ORDER[b.priority]??2); break;
+      case "distributor": r=(a.distributor||"zzz").localeCompare(b.distributor||"zzz"); break;
+      default: r=(a.added||0)-(b.added||0);
     }
+    return r*sortDir;
   });
   return list;
 }
@@ -462,9 +470,23 @@ function setPriFilter(p,el){
   render();
 }
 function setSort(k,el){
-  sortKey=k;
-  document.querySelectorAll(".sortchip").forEach(c=>c.classList.remove("active"));
+  if(sortKey===k){
+    sortDir*=-1;
+  } else {
+    sortKey=k;
+    // Default directions: added=newest first(-1), year=newest first(-1), others asc(1)
+    sortDir=(k==="added"||k==="year")?-1:1;
+  }
+  document.querySelectorAll(".sortchip").forEach(c=>{c.classList.remove("active");c.querySelector(".sd")&&(c.querySelector(".sd").textContent="");});
   el.classList.add("active");
+  // Show arrow on active chip
+  const arrow=el.querySelector(".sd");
+  if(arrow) arrow.textContent=sortDir===1?" ↑":" ↓";
+  render();
+}
+function toggle4kFilter(el){
+  filter4k=!filter4k;
+  el.className=filter4k?"chip active-all":"chip";
   render();
 }
 
@@ -776,21 +798,20 @@ document.addEventListener("keydown",e=>{
 
 // ── INIT ─────────────────────────────────────────────────────────────────────
 async function init() {
+  // If localStorage already has data, just render it
+  if (WL.length > 0) { render(); renderHunt(); return; }
+
+  // Otherwise try to seed from wishlist.json (works on GitHub Pages)
   try {
     const resp = await fetch('wishlist.json');
     if (!resp.ok) throw new Error('not found');
     const data = await resp.json();
     if (Array.isArray(data) && data.length) {
-      // Merge: seed is base, local edits to existing items win, local-only items kept
-      const seedMap = Object.fromEntries(data.map(f => [f.id, f]));
-      WL.forEach(f => { if (seedMap[f.id]) seedMap[f.id] = f; });
-      const localOnly = WL.filter(f => !seedMap[f.id]);
-      WL = [...localOnly, ...Object.values(seedMap)];
-      save(WL);
+      WL = data;
+      save(WL); // persist to localStorage so future loads are instant
     }
   } catch (e) {
-    // Fetch failed — use whatever is in localStorage
-    console.warn('wishlist.json not loaded:', e);
+    // No JSON file or fetch failed — start with empty list, that's fine
   }
   render();
   renderHunt();
