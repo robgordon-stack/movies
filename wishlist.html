@@ -88,6 +88,7 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 .card{position:relative;cursor:pointer;border-radius:var(--r);overflow:hidden;background:var(--surf2);aspect-ratio:2/3;transition:transform .15s,box-shadow .15s;border:1px solid var(--bdr)}
 .card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.6)}
 .card:active{transform:scale(.96)}
+.card.card-owned{opacity:.45;filter:saturate(.4)}
 .card img{width:100%;height:100%;object-fit:cover;display:block}
 .fb2{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px;text-align:center}
 .fb2 .ft{font-size:11px;font-weight:600;line-height:1.3;color:var(--txt);margin-bottom:4px}
@@ -102,8 +103,9 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 /* ── OVERLAY / SHEET ── */
 .ov{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:200;opacity:0;pointer-events:none;transition:opacity .2s}
 .ov.open{opacity:1;pointer-events:all}
-.sh{position:fixed;bottom:0;left:0;right:0;max-height:calc(90vh - 60px - env(safe-area-inset-bottom));background:var(--surf);border-radius:16px 16px 0 0;z-index:201;transform:translateY(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:calc(env(safe-area-inset-bottom)+24px)}
+.sh{position:fixed;bottom:calc(56px + env(safe-area-inset-bottom));left:0;right:0;max-height:calc(88vh - 56px - env(safe-area-inset-bottom));background:var(--surf);border-radius:16px 16px 0 0;z-index:201;transform:translateY(calc(100% + 56px + env(safe-area-inset-bottom)));transition:transform .28s cubic-bezier(.4,0,.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:24px}
 .sh.open{transform:translateY(0)}
+
 .shn{width:36px;height:4px;background:var(--surf3);border-radius:2px;margin:12px auto 4px}
 .shi{padding:0 16px 24px}
 .shh{display:flex;gap:14px;margin-bottom:16px;padding-top:8px}
@@ -201,8 +203,9 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
 .file-drop strong{display:block;color:var(--txt);font-size:14px;margin-bottom:4px}
 
 /* ── TOAST ── */
-.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--surf3);color:var(--txt);padding:10px 20px;border-radius:20px;font-size:13px;font-weight:500;z-index:500;opacity:0;transition:all .25s;pointer-events:none;white-space:nowrap;border:1px solid var(--bdr2)}
-.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast{position:fixed;bottom:calc(68px + env(safe-area-inset-bottom) + 8px);left:50%;transform:translateX(-50%) translateY(20px);background:var(--surf3);color:var(--txt);padding:10px 20px;border-radius:20px;font-size:13px;font-weight:500;z-index:500;opacity:0;transition:all .25s;pointer-events:none;white-space:nowrap;border:1px solid var(--bdr2)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);pointer-events:all}
+.toast-undo-btn{color:var(--acc);font-weight:700;margin-left:10px;cursor:pointer;text-decoration:underline}
 </style>
 </head>
 <body>
@@ -211,7 +214,7 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
 <div class="page active" id="page-wishlist">
   <header>
     <div class="hrow">
-      <a href="index.html" style="font-size:11px;color:var(--mut);text-decoration:none;display:block;margin-bottom:2px;letter-spacing:.04em">&#8592; The Archive</a>
+      <a href="index.html" id="archive-link" style="font-size:11px;color:var(--mut);text-decoration:none;display:none;margin-bottom:2px;letter-spacing:.04em">&#8592; The Archive</a>
       <h1>Wish List</h1>
       <span class="cnt" id="wl-count">0 films</span>
       <button class="add-btn" onclick="openAddModal()">+ Add</button>
@@ -402,7 +405,7 @@ let tmdbTimer=null;
 // ── PRIORITY HELPERS ─────────────────────────────────────────────────────────
 const PRI_ORDER={"Must Own":0,"High":1,"Someday":2};
 const PRI_CLASS={"Must Own":"hot","High":"med","Someday":"low"};
-const PRI_LABEL={"Must Own":"Must Own","High":"High","Someday":"Someday"};
+const PRI_LABEL={"Must Own":"Must","High":"High","Someday":"Soon"};
 
 function ex(s){return(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
 
@@ -448,7 +451,7 @@ function cardHtml(f){
   const fb=f.poster?`<div class="fb2" style="display:none"><div class="ft">${ex(f.title)}</div><div class="fy">${f.year||""}</div></div>`
     :`<div class="fb2"><div class="ft">${ex(f.title)}</div><div class="fy">${f.year||""}</div></div>`;
   const owned=isOwned?`<div class="archive-badge">✓</div>`:"";
-  return`<div class="card" onclick="openSheet('${ex(f.id)}')">${img}${fb}<div class="pri-badge pri-${pc}">${PRI_LABEL[f.priority]}</div>${owned}</div>`;
+  return`<div class="card${isOwned?' card-owned':''}" onclick="openSheet('${ex(f.id)}')">${img}${fb}<div class="pri-badge pri-${pc}">${PRI_LABEL[f.priority]}</div>${owned}</div>`;
 }
 
 function filterWishlist(){render();renderHunt();}
@@ -520,6 +523,9 @@ function openSheet(id){
 }
 
 function closeSheet(){
+  // Save any unsaved notes before tearing down
+  const notesEl=document.querySelector("#shi .notes-area");
+  if(notesEl&&openItem){updateNotes(openItem.id,notesEl.value);}
   document.getElementById("sh").classList.remove("open");
   document.getElementById("ov").classList.remove("open");
   document.body.style.overflow="";
@@ -540,11 +546,20 @@ function markOwned(id,remove){
   closeSheet();
   showToast(remove?"Removed owned flag":"Marked as owned ✓");
 }
+let undoTimer=null;
+let pendingDelete=null;
 function deleteFilm(id){
-  if(!confirm("Remove this film from your wishlist?"))return;
+  const f=WL.find(x=>x.id===id);if(!f)return;
+  pendingDelete={id,film:{...f},index:WL.indexOf(f)};
   WL=WL.filter(x=>x.id!==id);save(WL);
   closeSheet();
-  showToast("Removed from wishlist");
+  showToastUndo(`"${f.title}" removed`,()=>{
+    if(pendingDelete&&pendingDelete.id===id){
+      WL.splice(pendingDelete.index,0,pendingDelete.film);
+      save(WL);render();renderHunt();
+      pendingDelete=null;
+    }
+  });
 }
 
 // ── ADD MODAL ────────────────────────────────────────────────────────────────
@@ -581,14 +596,15 @@ async function doTmdbSearch(q){
   res.style.display="block";
   res.innerHTML=`<div class="searching-indicator">Searching…</div>`;
   try{
-    const r=await fetch(`https://www.omdbapi.com/?s=${encodeURIComponent(q)}&type=movie&apikey=trilogy`);
+    const r=await fetch(`https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(q)}&api_key=629e63fca4e9b61a912511334debd42c&language=en-US&page=1`);
     const d=await r.json();
-    if(d.Search&&d.Search.length){
-      searchResultCache=d.Search.slice(0,6).map(m=>({
-        title:m.Title,
-        year:m.Year?parseInt(m.Year):null,
-        poster:m.Poster&&m.Poster!=="N/A"?m.Poster:"",
-        imdb_id:m.imdbID
+    if(d.results&&d.results.length){
+      searchResultCache=d.results.slice(0,6).map(m=>({
+        tmdb_id:m.id,
+        title:m.title,
+        year:m.release_date?parseInt(m.release_date):null,
+        poster:m.poster_path?`https://image.tmdb.org/t/p/w342${m.poster_path}`:"",
+        overview:m.overview||""
       }));
       res.innerHTML=searchResultCache.map((m,i)=>`
         <div class="search-result-item" onclick="selectFilm(${i})">
@@ -603,15 +619,27 @@ async function doTmdbSearch(q){
   }
 }
 
-function selectFilm(i){
+async function selectFilm(i){
   const f=searchResultCache[i];
   if(!f)return;
   document.getElementById("f-title").value=f.title||"";
   document.getElementById("f-year").value=f.year||"";
   document.getElementById("f-poster").value=f.poster||"";
-  document.getElementById("f-imdb-id").value=f.imdb_id||"";
   document.getElementById("tmdb-results").style.display="none";
   document.getElementById("tmdb-search").value=f.title;
+  // Fetch full details from TMDB for director, genre, runtime, country, imdb_id
+  if(f.tmdb_id){
+    try{
+      const r=await fetch(`https://api.themoviedb.org/3/movie/${f.tmdb_id}?api_key=629e63fca4e9b61a912511334debd42c&append_to_response=credits`);
+      const d=await r.json();
+      const director=(d.credits&&d.credits.crew||[]).find(c=>c.job==="Director");
+      if(director)document.getElementById("f-director").value=director.name;
+      if(d.imdb_id)document.getElementById("f-imdb-id").value=d.imdb_id;
+      if(d.runtime)document.getElementById("f-runtime").value=d.runtime;
+      if(d.genres&&d.genres.length)document.getElementById("f-genre").value=d.genres.map(g=>g.name).join(", ");
+      if(d.production_countries&&d.production_countries.length)document.getElementById("f-country").value=d.production_countries.map(c=>c.iso_3166_1).join(", ");
+    }catch(e){}
+  }
   document.getElementById("f-director").focus();
 }
 
@@ -761,9 +789,16 @@ function switchTab(name){
 let toastTimer;
 function showToast(msg){
   const t=document.getElementById("toast");
-  t.textContent=msg;t.classList.add("show");
+  t.innerHTML=msg;t.classList.add("show");t.classList.remove("toast-undo");
   clearTimeout(toastTimer);
   toastTimer=setTimeout(()=>t.classList.remove("show"),2800);
+}
+function showToastUndo(msg,onUndo){
+  const t=document.getElementById("toast");
+  t.innerHTML=`${msg} <span class="toast-undo-btn" onclick="(${onUndo.toString()})();document.getElementById('toast').classList.remove('show')">Undo</span>`;
+  t.classList.add("show","toast-undo");
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>t.classList.remove("show"),4500);
 }
 
 // ── KEYBOARD ─────────────────────────────────────────────────────────────────
@@ -776,6 +811,11 @@ document.addEventListener("keydown",e=>{
 
 // ── INIT ─────────────────────────────────────────────────────────────────────
 async function init() {
+  // Show archive link only if archive data has been imported
+  if(ARCHIVE_TITLES.size>0){
+    const al=document.getElementById("archive-link");
+    if(al)al.style.display="block";
+  }
   // If localStorage already has data, just render it
   if (WL.length > 0) { render(); renderHunt(); return; }
 
