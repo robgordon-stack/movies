@@ -56,17 +56,30 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 .frow{display:flex;gap:6px;overflow-x:auto;padding:0 0 8px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .frow::-webkit-scrollbar{display:none}
 .chip{flex-shrink:0;background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:20px;padding:6px 12px;font-size:11px;cursor:pointer;white-space:nowrap;user-select:none;transition:all .15s}
+.chip.active{background:var(--acc);border-color:var(--acc);color:#03111f;font-weight:700}
 .chip.active-hot{background:var(--hot-dim);border-color:var(--hot);color:var(--hot);font-weight:700}
 .chip.active-med{background:var(--med-dim);border-color:var(--med);color:var(--med);font-weight:700}
 .chip.active-low{background:var(--low-dim);border-color:var(--low);color:var(--low);font-weight:700}
 .chip.active-all{background:var(--acc-dim);border-color:var(--acc);color:var(--acc);font-weight:700}
 
+/* ── FILTER TOGGLE + PANEL ── */
+.filter-toggle{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.ftbtn{background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:8px;padding:6px 12px;font-size:12px;cursor:pointer;display:flex;align-items:center;gap:6px;white-space:nowrap;flex-shrink:0;transition:all .2s;font-family:'DM Sans',sans-serif;font-weight:500;position:relative}
+.ftbtn.has-active{border-color:var(--acc);color:var(--acc)}
+.filter-badge{display:none;position:absolute;top:-6px;right:-6px;background:var(--acc);color:#03111f;font-size:9px;font-weight:800;border-radius:10px;min-width:16px;height:16px;padding:0 4px;align-items:center;justify-content:center;line-height:1}
+.filter-badge.visible{display:flex}
+.active-summary{font-size:11px;color:var(--acc);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.clear-all-btn{background:none;border:none;color:var(--mut);font-size:20px;cursor:pointer;padding:4px 8px;line-height:1;flex-shrink:0;display:none;transition:color .15s}
+.clear-all-btn:hover{color:var(--txt)}
+.filter-panel{display:none;padding-bottom:4px}
+.filter-panel.open{display:block}
+.flabel{flex-shrink:0;font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;width:56px;font-weight:600}
 /* ── SORT ── */
 .sortrow{display:flex;gap:6px;padding:0 0 8px;overflow-x:auto;scrollbar-width:none;align-items:center}
 .sortrow::-webkit-scrollbar{display:none}
-.sortlabel{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;flex-shrink:0;font-weight:600}
-.sortchip{flex-shrink:0;background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:3px;transition:all .15s}
+.sortchip{flex-shrink:0;background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:4px;transition:all .15s;font-family:'DM Sans',sans-serif}
 .sortchip.active{border-color:rgba(126,184,247,.3);color:var(--acc);background:rgba(126,184,247,.06)}
+.sortchip .arr{font-size:9px}
 
 /* ── STAT BAR ── */
 .statsbar{display:flex;border-top:1px solid var(--bdr)}
@@ -203,22 +216,7 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
 .file-drop .icon{font-size:28px;margin-bottom:8px}
 .file-drop strong{display:block;color:var(--txt);font-size:14px;margin-bottom:4px}
 
-/* ── FILTER SHEET ── */
-.fsheet-ov{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:450;opacity:0;pointer-events:none;transition:opacity .2s}
-.fsheet-ov.open{opacity:1;pointer-events:all}
-.fsheet{position:fixed;bottom:calc(56px + env(safe-area-inset-bottom));left:0;right:0;background:var(--surf);border-radius:16px 16px 0 0;z-index:451;transform:translateY(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);padding:16px 16px calc(16px);max-height:70vh;overflow-y:auto}
-.fsheet.open{transform:translateY(0)}
-.fsheet-handle{width:36px;height:4px;background:var(--surf3);border-radius:2px;margin:0 auto 16px}
-.fsheet-section{margin-bottom:16px}
-.fsheet-section h4{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.07em;font-weight:700;margin-bottom:8px}
-.fsheet-chips{display:flex;flex-wrap:wrap;gap:6px}
-.fsheet-footer{display:flex;gap:8px;padding-top:8px;border-top:1px solid var(--bdr);margin-top:4px}
-.fsheet-apply{flex:1;background:var(--acc);color:#03111f;border:none;border-radius:10px;padding:12px;font-size:14px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif}
-.fsheet-clear{background:var(--surf2);border:1px solid var(--bdr2);color:var(--mut);border-radius:10px;padding:12px 16px;font-size:14px;cursor:pointer;font-family:'DM Sans',sans-serif}
-/* Filter button with active dot */
-.filter-btn{background:var(--surf2);border:1px solid var(--bdr2);color:var(--txt);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .15s;position:relative;flex-shrink:0}
-.filter-btn.has-filters{border-color:var(--acc);color:var(--acc);background:var(--acc-dim)}
-.filter-btn.has-filters::after{content:'';position:absolute;top:2px;right:2px;width:6px;height:6px;background:var(--acc);border-radius:50%}
+
 
 /* ── TOAST ── */
 .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--surf3);color:var(--txt);padding:10px 20px;border-radius:20px;font-size:13px;font-weight:500;z-index:600;opacity:0;transition:all .25s;pointer-events:none;white-space:nowrap;border:1px solid var(--bdr2)}
@@ -242,9 +240,63 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
       </span>
       <input type="search" placeholder="Title, director, genre…" id="wl-search" oninput="filterWishlist()" autocomplete="off">
     </div>
-    <div style="display:flex;align-items:center;gap:8px;padding-bottom:8px;overflow:hidden">
-      <div style="display:flex;gap:6px;overflow-x:auto;flex:1;scrollbar-width:none;-webkit-overflow-scrolling:touch" id="active-filter-pills"></div>
-      <button class="filter-btn" id="filter-btn" onclick="openFilterSheet()">⊞ Filter &amp; Sort</button>
+    <div class="filter-toggle">
+      <button class="ftbtn" id="ftbtn">&#x25BC; Filters<span class="filter-badge" id="filterBadge"></span></button>
+      <span class="active-summary" id="activeSummary"></span>
+      <button class="clear-all-btn" id="clearAllBtn">&times;</button>
+    </div>
+    <div class="filter-panel" id="filterPanel">
+      <div class="frow">
+        <span class="flabel">Priority</span>
+        <div class="chip active" id="fc-all" data-pri="all">All</div>
+        <div class="chip" id="fc-hot" data-pri="Must Own">🔴 Must Own</div>
+        <div class="chip" id="fc-med" data-pri="High">🟡 High</div>
+        <div class="chip" id="fc-low" data-pri="Someday">🔵 Someday</div>
+      </div>
+      <div class="frow">
+        <span class="flabel">Format</span>
+        <div class="chip active" data-fmt="all">All</div>
+        <div class="chip" data-fmt="bluray">Blu-ray only</div>
+        <div class="chip" data-fmt="4k">4K available</div>
+      </div>
+      <div class="frow">
+        <span class="flabel">Label</span>
+        <div class="chip active" data-dist="all">All</div>
+        <div class="chip" data-dist="Criterion">Criterion</div>
+        <div class="chip" data-dist="Second Sight">Second Sight</div>
+        <div class="chip" data-dist="Kino Lorber">Kino Lorber</div>
+        <div class="chip" data-dist="Arrow">Arrow</div>
+        <div class="chip" data-dist="A24">A24</div>
+        <div class="chip" data-dist="Umbrella">Umbrella</div>
+      </div>
+      <div class="frow">
+        <span class="flabel">Country</span>
+        <div class="chip active" data-country="all">All</div>
+        <div class="chip" data-country="USA">🇺🇸 USA</div>
+        <div class="chip" data-country="France">🇫🇷 France</div>
+        <div class="chip" data-country="Japan">🇯🇵 Japan</div>
+        <div class="chip" data-country="United Kingdom">🇬🇧 UK</div>
+        <div class="chip" data-country="Italy">🇮🇹 Italy</div>
+        <div class="chip" data-country="Germany">🇩🇪 Germany</div>
+      </div>
+      <div class="frow">
+        <span class="flabel">Director</span>
+        <div class="chip active" data-director="all">All</div>
+        <div class="chip" data-director="Steven Spielberg">Spielberg</div>
+        <div class="chip" data-director="Akira Kurosawa">Kurosawa</div>
+        <div class="chip" data-director="Hayao Miyazaki">Miyazaki</div>
+        <div class="chip" data-director="Martin Scorsese">Scorsese</div>
+        <div class="chip" data-director="Quentin Tarantino">Tarantino</div>
+        <div class="chip" data-director="Peter Jackson">P. Jackson</div>
+      </div>
+    </div>
+    <div class="sortrow">
+      <span class="flabel" style="width:56px">Sort</span>
+      <div class="sortchip active" id="sk-title" data-s="title" data-asc="1"><span class="sortdir">A→Z</span> <span class="arr">▲</span></div>
+      <div class="sortchip" id="sk-added" data-s="added" data-asc="0"><span class="sortdir">Date added</span> <span class="arr">↕</span></div>
+      <div class="sortchip" id="sk-year" data-s="year" data-asc="0"><span class="sortdir">Year</span> <span class="arr">↕</span></div>
+      <div class="sortchip" id="sk-pri" data-s="priority" data-asc="1"><span class="sortdir">Priority</span> <span class="arr">↕</span></div>
+      <div class="sortchip" id="sk-dist" data-s="distributor" data-asc="1"><span class="sortdir">Distributor</span> <span class="arr">↕</span></div>
     </div>
     <div class="statsbar">
       <div class="sstat hot"><div class="n" id="st-hot">0</div><div class="l">Must Own</div></div>
@@ -316,50 +368,6 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-<!-- ── FILTER SHEET ── -->
-<div class="fsheet-ov" id="fsheet-ov" onclick="closeFilterSheet()"></div>
-<div class="fsheet" id="fsheet">
-  <div class="fsheet-handle"></div>
-
-  <div class="fsheet-section">
-    <h4>Priority</h4>
-    <div class="fsheet-chips">
-      <div class="chip active-all" id="fc-all" onclick="fs_setPri('all',this)">All</div>
-      <div class="chip" id="fc-hot" onclick="fs_setPri('Must Own',this)">🔴 Must Own</div>
-      <div class="chip" id="fc-med" onclick="fs_setPri('High',this)">🟡 High</div>
-      <div class="chip" id="fc-low" onclick="fs_setPri('Someday',this)">🔵 Someday</div>
-    </div>
-  </div>
-
-  <div class="fsheet-section">
-    <h4>Format</h4>
-    <div class="fsheet-chips">
-      <div class="chip" id="fc-4k" onclick="fs_toggle4k(this)">4K available</div>
-    </div>
-  </div>
-
-  <div class="fsheet-section" id="fs-country-section">
-    <h4>Country</h4>
-    <div class="fsheet-chips" id="fs-country-chips"></div>
-  </div>
-
-  <div class="fsheet-section">
-    <h4>Sort by</h4>
-    <div class="fsheet-chips">
-      <div class="sortchip active" id="fs-sk-title" onclick="fs_setSort('title',this)">Title<span class="sd"> ↑</span></div>
-      <div class="sortchip" id="fs-sk-added" onclick="fs_setSort('added',this)">Date added<span class="sd"></span></div>
-      <div class="sortchip" id="fs-sk-year" onclick="fs_setSort('year',this)">Year<span class="sd"></span></div>
-      <div class="sortchip" id="fs-sk-pri" onclick="fs_setSort('priority',this)">Priority<span class="sd"></span></div>
-      <div class="sortchip" id="fs-sk-dist" onclick="fs_setSort('distributor',this)">Distributor<span class="sd"></span></div>
-    </div>
-  </div>
-
-  <div class="fsheet-footer">
-    <button class="fsheet-clear" onclick="clearAllFilters()">Clear all</button>
-    <button class="fsheet-apply" onclick="closeFilterSheet()">Show results</button>
   </div>
 </div>
 
@@ -460,8 +468,10 @@ function saveArchive(titles){try{localStorage.setItem(ARCHIVE_KEY,JSON.stringify
 let WL=load();
 let ARCHIVE_TITLES=loadArchive();
 let filterPri="all";
-let filter4k=false;
+let filterFmt="all";   // "all" | "bluray" | "4k"
+let filterDist="all";
 let filterCountry="all";
+let filterDirector="all";
 let sortKey="title";
 let sortDir=1; // 1=asc, -1=desc
 let openItem=null;
@@ -479,9 +489,15 @@ function getFiltered(){
   const q=(document.getElementById("wl-search").value||"").toLowerCase();
   let list=WL.filter(f=>{
     if(filterPri!=="all"&&f.priority!==filterPri)return false;
-    if(filter4k&&!f.has4k)return false;
-    if(filterCountry!=="all"&&(f.country||"").toLowerCase()!==filterCountry)return false;
-    if(q&&!(f.title+" "+(f.director||"")+" "+(f.genre||"")+" "+(f.distributor||"")+" "+(f.country||"")).toLowerCase().includes(q))return false;
+    if(filterFmt==="4k"&&!f.has4k)return false;
+    if(filterFmt==="bluray"&&f.has4k)return false;
+    if(filterDist!=="all"){
+      const dArr=Array.isArray(f.distributor)?f.distributor:(f.distributor?[f.distributor]:[]);
+      if(!dArr.some(d=>d===filterDist))return false;
+    }
+    if(filterCountry!=="all"&&(f.country||"")!==filterCountry)return false;
+    if(filterDirector!=="all"&&(f.director||"")!==filterDirector)return false;
+    if(q&&!(f.title+" "+(f.director||"")+" "+(f.genre||"")+" "+(Array.isArray(f.distributor)?f.distributor.join(" "):f.distributor||"")+" "+(f.country||"")).toLowerCase().includes(q))return false;
     return true;
   });
   list.sort((a,b)=>{
@@ -509,10 +525,9 @@ function render(){
   document.getElementById("st-low").textContent=WL.filter(f=>f.priority==="Someday").length;
   document.getElementById("st-own").textContent=WL.filter(f=>f.owned).length;
 
-  if(!list.length){grid.innerHTML="";empty.style.display="block";renderCountryChips();return;}
+  if(!list.length){grid.innerHTML="";empty.style.display="block";return;}
   empty.style.display="none";
   grid.innerHTML=list.map(f=>cardHtml(f)).join("");
-  renderCountryChips();
 }
 
 function cardHtml(f){
@@ -528,106 +543,132 @@ function cardHtml(f){
 
 function filterWishlist(){render();renderHunt();}
 
-// ── FILTER SHEET ─────────────────────────────────────────────────────────────
-function openFilterSheet(){
-  // Sync sheet UI to current filter state before opening
-  syncFilterSheetUI();
-  document.getElementById("fsheet").classList.add("open");
-  document.getElementById("fsheet-ov").classList.add("open");
-}
-function closeFilterSheet(){
-  document.getElementById("fsheet").classList.remove("open");
-  document.getElementById("fsheet-ov").classList.remove("open");
-  render();
-  renderHunt();
-  renderActivePills();
-}
+// ── FILTER PANEL (index-style) ────────────────────────────────────────────────
+document.getElementById("ftbtn").addEventListener("click",()=>{
+  const p=document.getElementById("filterPanel");
+  const isOpen=p.classList.toggle("open");
+  document.getElementById("ftbtn").innerHTML=(isOpen?"&#x25B2;":"&#x25BC;")+" Filters<span class='filter-badge' id='filterBadge'></span>";
+  updateSummary();
+});
 
-function syncFilterSheetUI(){
-  // Priority chips
-  ["fc-all","fc-hot","fc-med","fc-low"].forEach(id=>document.getElementById(id).className="chip");
-  const priMap={"all":"fc-all","Must Own":"fc-hot","High":"fc-med","Someday":"fc-low"};
-  const activePri=document.getElementById(priMap[filterPri]||"fc-all");
-  const priClass={"all":"active-all","Must Own":"active-hot","High":"active-med","Someday":"active-low"};
-  activePri.className="chip "+(priClass[filterPri]||"active-all");
-
-  // 4K chip
-  document.getElementById("fc-4k").className="chip"+(filter4k?" active-all":"");
-
-  // Country chips
-  const countries=[...new Set(WL.map(f=>(f.country||"").trim()).filter(c=>c))].sort();
-  const cc=document.getElementById("fs-country-chips");
-  const cs=document.getElementById("fs-country-section");
-  if(!countries.length){cs.style.display="none";}
-  else{
-    cs.style.display="block";
-    cc.innerHTML=`<div class="chip ${filterCountry==="all"?"active-all":""}" onclick="fs_setCountry('all',this)">All</div>`
-      +countries.map(c=>`<div class="chip ${filterCountry===c.toLowerCase()?"active-all":""}" onclick="fs_setCountry(${JSON.stringify(c.toLowerCase())},this)">${ex(c)}</div>`).join("");
+document.getElementById("filterPanel").addEventListener("click",e=>{
+  const priChip=e.target.closest("[data-pri]");
+  if(priChip){
+    filterPri=priChip.dataset.pri;
+    document.querySelectorAll("[data-pri]").forEach(c=>c.classList.remove("active"));
+    priChip.classList.add("active");
+    render();renderHunt();updateSummary();return;
   }
+  const fmtChip=e.target.closest("[data-fmt]");
+  if(fmtChip){
+    filterFmt=fmtChip.dataset.fmt;
+    document.querySelectorAll("[data-fmt]").forEach(c=>c.classList.remove("active"));
+    fmtChip.classList.add("active");
+    render();renderHunt();updateSummary();return;
+  }
+  const distChip=e.target.closest("[data-dist]");
+  if(distChip){
+    filterDist=distChip.dataset.dist;
+    document.querySelectorAll("[data-dist]").forEach(c=>c.classList.remove("active"));
+    distChip.classList.add("active");
+    render();renderHunt();updateSummary();return;
+  }
+  const cc=e.target.closest("[data-country]");
+  if(cc){
+    filterCountry=cc.dataset.country;
+    document.querySelectorAll("[data-country]").forEach(c=>c.classList.remove("active"));
+    cc.classList.add("active");
+    render();renderHunt();updateSummary();return;
+  }
+  const dc=e.target.closest("[data-director]");
+  if(dc){
+    filterDirector=dc.dataset.director;
+    document.querySelectorAll("[data-director]").forEach(c=>c.classList.remove("active"));
+    dc.classList.add("active");
+    render();renderHunt();updateSummary();
+  }
+});
 
-  // Sort chips
-  document.querySelectorAll("#fsheet .sortchip").forEach(c=>{c.classList.remove("active");const sd=c.querySelector(".sd");if(sd)sd.textContent="";});
-  const sortIdMap={title:"fs-sk-title",added:"fs-sk-added",year:"fs-sk-year",priority:"fs-sk-pri",distributor:"fs-sk-dist"};
-  const activeSortEl=document.getElementById(sortIdMap[sortKey]);
-  if(activeSortEl){activeSortEl.classList.add("active");const sd=activeSortEl.querySelector(".sd");if(sd)sd.textContent=sortDir===1?" ↑":" ↓";}
-}
+document.getElementById("clearAllBtn").addEventListener("click",()=>{
+  filterPri="all";filterFmt="all";filterDist="all";filterCountry="all";filterDirector="all";
+  document.querySelectorAll("[data-pri]").forEach(c=>c.classList.remove("active"));
+  document.getElementById("fc-all").classList.add("active");
+  document.querySelectorAll("[data-fmt]").forEach(c=>c.classList.remove("active"));
+  document.querySelector("[data-fmt='all']").classList.add("active");
+  document.querySelectorAll("[data-dist]").forEach(c=>c.classList.remove("active"));
+  document.querySelector("[data-dist='all']").classList.add("active");
+  document.querySelectorAll("[data-country]").forEach(c=>c.classList.remove("active"));
+  document.querySelector("[data-country='all']").classList.add("active");
+  document.querySelectorAll("[data-director]").forEach(c=>c.classList.remove("active"));
+  document.querySelector("[data-director='all']").classList.add("active");
+  render();renderHunt();updateSummary();
+});
 
-// In-sheet filter setters (apply immediately so you can see count change)
-function fs_setPri(p,el){
-  filterPri=p;
-  document.querySelectorAll("#fsheet .fsheet-chips .chip").forEach(c=>{if(["fc-all","fc-hot","fc-med","fc-low"].includes(c.id))c.className="chip";});
-  const cls={"all":"active-all","Must Own":"active-hot","High":"active-med","Someday":"active-low"};
-  el.className="chip "+(cls[p]||"active-all");
+// Sort chips — index.html pattern
+const SORT_LABELS={
+  title:{base:"Title",asc:"A→Z",desc:"Z→A"},
+  added:{base:"Date added",asc:"Oldest",desc:"Newest"},
+  year:{base:"Year",asc:"Oldest",desc:"Newest"},
+  priority:{base:"Priority",asc:"High→Low",desc:"Low→High"},
+  distributor:{base:"Distributor",asc:"A→Z",desc:"Z→A"}
+};
+function updateSortChips(){
+  document.querySelectorAll(".sortchip").forEach(c=>{
+    const s=c.dataset.s;if(!s||!SORT_LABELS[s])return;
+    const lbl=SORT_LABELS[s];
+    const sd=c.querySelector(".sortdir"),ar=c.querySelector(".arr");
+    if(c.classList.contains("active")){
+      if(sd)sd.textContent=sortDir===1?lbl.asc:lbl.desc;
+      if(ar)ar.innerHTML=sortDir===1?"▲":"▼";
+    } else {
+      if(sd)sd.textContent=lbl.base;
+      if(ar)ar.innerHTML="↕";
+    }
+  });
 }
-function fs_toggle4k(el){
-  filter4k=!filter4k;
-  el.className="chip"+(filter4k?" active-all":"");
-}
-function fs_setCountry(c,el){
-  filterCountry=c;
-  document.querySelectorAll("#fs-country-chips .chip").forEach(x=>x.className="chip");
-  el.className="chip active-all";
-}
-function fs_setSort(k,el){
-  if(sortKey===k){sortDir*=-1;}
-  else{sortKey=k;sortDir=(k==="added"||k==="year")?-1:1;}
-  document.querySelectorAll("#fsheet .sortchip").forEach(c=>{c.classList.remove("active");const sd=c.querySelector(".sd");if(sd)sd.textContent="";});
-  el.classList.add("active");
-  const sd=el.querySelector(".sd");if(sd)sd.textContent=sortDir===1?" ↑":" ↓";
-}
+document.querySelectorAll(".sortchip").forEach(chip=>{
+  chip.addEventListener("click",()=>{
+    const s=chip.dataset.s;if(!s)return;
+    if(sortKey===s){sortDir*=-1;}
+    else{sortKey=s;sortDir=chip.dataset.asc==="1"?1:-1;}
+    document.querySelectorAll(".sortchip").forEach(c=>c.classList.remove("active"));
+    chip.classList.add("active");
+    updateSortChips();
+    render();renderHunt();
+  });
+});
+updateSortChips();
 
-function clearAllFilters(){
-  filterPri="all";filter4k=false;filterCountry="all";sortKey="title";sortDir=1;
-  syncFilterSheetUI();
-}
-
-// Render the active-filter pill summary in the header bar
-function renderActivePills(){
-  const container=document.getElementById("active-filter-pills");
-  const btn=document.getElementById("filter-btn");
-  if(!container)return;
-  const pills=[];
+// Active filter summary — mirrors index.html
+function updateSummary(){
   const priLabels={"Must Own":"🔴 Must Own","High":"🟡 High","Someday":"🔵 Someday"};
-  if(filterPri!=="all")pills.push({label:priLabels[filterPri]||filterPri,clear:()=>{filterPri="all";}});
-  if(filter4k)pills.push({label:"4K",clear:()=>{filter4k=false;}});
-  if(filterCountry!=="all")pills.push({label:filterCountry,clear:()=>{filterCountry="all";}});
-  const sortLabels={title:"Title",added:"Date added",year:"Year",priority:"Priority",distributor:"Distributor"};
-  if(sortKey!=="title"||sortDir!==1)
-    pills.push({label:"Sort: "+(sortLabels[sortKey]||sortKey)+(sortDir===1?" ↑":" ↓"),clear:null});
-
-  btn.className="filter-btn"+(pills.length?" has-filters":"");
-  container.innerHTML=pills.map((p,i)=>
-    p.clear
-      ? `<div class="chip active-all" style="font-size:11px;padding:4px 8px;display:flex;align-items:center;gap:4px">${ex(p.label)}<span onclick="(${p.clear.toString()})();render();renderActivePills()" style="font-size:13px;line-height:1;opacity:.7;cursor:pointer">×</span></div>`
-      : `<div class="chip active-all" style="font-size:11px;padding:4px 8px">${ex(p.label)}</div>`
-  ).join("");
+  const parts=[];
+  if(filterPri!=="all")parts.push(priLabels[filterPri]||filterPri);
+  if(filterFmt==="4k")parts.push("4K");
+  if(filterFmt==="bluray")parts.push("Blu-ray only");
+  if(filterDist!=="all")parts.push(filterDist);
+  if(filterCountry!=="all")parts.push(filterCountry);
+  if(filterDirector!=="all")parts.push(filterDirector);
+  const s=document.getElementById("activeSummary");
+  const ca=document.getElementById("clearAllBtn");
+  const fb=document.getElementById("ftbtn");
+  const badge=document.getElementById("filterBadge");
+  if(parts.length){
+    s.textContent=parts.join(" · ");
+    ca.style.display="block";
+    fb.classList.add("has-active");
+    if(badge){badge.textContent=parts.length;badge.classList.add("visible");}
+  } else {
+    s.textContent="";
+    ca.style.display="none";
+    fb.classList.remove("has-active");
+    if(badge)badge.classList.remove("visible");
+  }
 }
 
-// keep old render() calling this
-function renderCountryChips(){renderActivePills();}
+function renderCountryChips(){}  // country chips are now static HTML
 function handleCountryClick(){}
-// Stub old direct-call sort for keyboard shortcut compatibility
-function setSort(k,el){fs_setSort(k,el);render();}
+function setSort(k){sortKey=k;render();}
 
 // ── SHEET ───────────────────────────────────────────────────────────────────
 function openSheet(id){
