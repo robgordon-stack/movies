@@ -1,5 +1,20 @@
 [
   {
+    "id": "1775392611262o1i2czhhj5n",
+    "title": "King Creole",
+    "year": 1958,
+    "director": "Michael Curtiz",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZTU1YjE2MzgtNmNhYi00OGY1LWEwNDUtY2NmNDVmZThmN2EyXkEyXkFqcGc@._V1_SX300.jpg",
+    "imdb_id": "tt0051818",
+    "genre": "Crime, Drama, Musical",
+    "country": "United States",
+    "runtime": 116,
+    "priority": "Someday",
+    "notes": null,
+    "owned": false,
+    "added": 1775392611262
+  },
+  {
     "id": "1775391551451f5eydj2l5x",
     "title": "My Neighbor Totoro",
     "year": 1988,
@@ -27,7 +42,8 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775391533485
+    "added": 1775391533485,
+    "has4k": true
   },
   {
     "id": "1775391497635svszusfidgk",
@@ -162,7 +178,8 @@
     "priority": "High",
     "notes": null,
     "owned": false,
-    "added": 1775390728602
+    "added": 1775390728602,
+    "has4k": true
   },
   {
     "id": "1775371723640ww49gz5goyj",
@@ -178,7 +195,7 @@
     "notes": null,
     "owned": false,
     "added": 1775371723640,
-    "has4k": false,
+    "has4k": true,
     "distributor": null
   },
   {
@@ -930,7 +947,7 @@
     "director": "Danny Boyle",
     "tmdb_id": 1100988,
     "lb": "https://letterboxd.com/search/28%20Days%20Later/",
-    "has4k": false,
+    "has4k": true,
     "distributor": null
   },
   {
@@ -1220,7 +1237,7 @@
     "director": "Robert Zemeckis",
     "tmdb_id": 13,
     "lb": "https://letterboxd.com/search/Forrest%20Gump/",
-    "has4k": false,
+    "has4k": true,
     "distributor": null
   },
   {
@@ -1532,7 +1549,7 @@
     "director": "Joel Coen",
     "tmdb_id": 275,
     "lb": "https://letterboxd.com/search/Fargo/",
-    "has4k": false,
+    "has4k": true,
     "distributor": null
   },
   {
@@ -1550,7 +1567,7 @@
     "director": "John McTiernan",
     "tmdb_id": 562,
     "lb": "https://letterboxd.com/search/Die%20Hard/",
-    "has4k": false,
+    "has4k": true,
     "distributor": null
   },
   {
@@ -1568,7 +1585,7 @@
     "director": "Christopher Nolan",
     "tmdb_id": 77,
     "lb": "https://letterboxd.com/search/Memento/",
-    "has4k": false,
+    "has4k": true,
     "distributor": null
   },
   {
@@ -1622,7 +1639,7 @@
     "director": "James Cameron",
     "tmdb_id": 280,
     "lb": "https://letterboxd.com/search/Terminator%202%3A%20Judgment%20Day/",
-    "has4k": false,
+    "has4k": true,
     "distributor": null
   },
   {
