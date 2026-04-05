@@ -88,7 +88,6 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 .card{position:relative;cursor:pointer;border-radius:var(--r);overflow:hidden;background:var(--surf2);aspect-ratio:2/3;transition:transform .15s,box-shadow .15s;border:1px solid var(--bdr)}
 .card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.6)}
 .card:active{transform:scale(.96)}
-.card.card-owned{opacity:.45;filter:saturate(.4)}
 .card img{width:100%;height:100%;object-fit:cover;display:block}
 .fb2{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px;text-align:center}
 .fb2 .ft{font-size:11px;font-weight:600;line-height:1.3;color:var(--txt);margin-bottom:4px}
@@ -103,12 +102,9 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 /* ── OVERLAY / SHEET ── */
 .ov{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:200;opacity:0;pointer-events:none;transition:opacity .2s}
 .ov.open{opacity:1;pointer-events:all}
-.sh{position:fixed;bottom:calc(56px + env(safe-area-inset-bottom));left:0;right:0;max-height:calc(88vh - 56px - env(safe-area-inset-bottom));background:var(--surf);border-radius:16px 16px 0 0;z-index:201;transform:translateY(calc(100% + 56px + env(safe-area-inset-bottom)));transition:transform .28s cubic-bezier(.4,0,.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:24px}
+.sh{position:fixed;bottom:0;left:0;right:0;max-height:90vh;background:var(--surf);border-radius:16px 16px 0 0;z-index:201;transform:translateY(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:calc(env(safe-area-inset-bottom)+80px)}
 .sh.open{transform:translateY(0)}
-.sh.dragging{transition:none}
-.shn{width:36px;height:4px;background:var(--surf3);border-radius:2px;margin:12px auto 4px;cursor:grab}
-.tag-4k{background:rgba(126,184,247,.15);border-color:var(--acc);color:var(--acc);font-weight:700}
-.chip.active-4k{background:var(--acc-dim);border-color:var(--acc);color:var(--acc);font-weight:700}
+.shn{width:36px;height:4px;background:var(--surf3);border-radius:2px;margin:12px auto 4px}
 .shi{padding:0 16px 24px}
 .shh{display:flex;gap:14px;margin-bottom:16px;padding-top:8px}
 .shp{width:90px;flex-shrink:0;aspect-ratio:2/3;border-radius:8px;overflow:hidden;background:var(--surf2)}
@@ -205,9 +201,8 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
 .file-drop strong{display:block;color:var(--txt);font-size:14px;margin-bottom:4px}
 
 /* ── TOAST ── */
-.toast{position:fixed;bottom:calc(68px + env(safe-area-inset-bottom) + 8px);left:50%;transform:translateX(-50%) translateY(20px);background:var(--surf3);color:var(--txt);padding:10px 20px;border-radius:20px;font-size:13px;font-weight:500;z-index:500;opacity:0;transition:all .25s;pointer-events:none;white-space:nowrap;border:1px solid var(--bdr2)}
-.toast.show{opacity:1;transform:translateX(-50%) translateY(0);pointer-events:all}
-.toast-undo-btn{color:var(--acc);font-weight:700;margin-left:10px;cursor:pointer;text-decoration:underline}
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--surf3);color:var(--txt);padding:10px 20px;border-radius:20px;font-size:13px;font-weight:500;z-index:500;opacity:0;transition:all .25s;pointer-events:none;white-space:nowrap;border:1px solid var(--bdr2)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 </style>
 </head>
 <body>
@@ -216,7 +211,7 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
 <div class="page active" id="page-wishlist">
   <header>
     <div class="hrow">
-      <a href="index.html" id="archive-link" style="font-size:11px;color:var(--mut);text-decoration:none;display:none;margin-bottom:2px;letter-spacing:.04em">&#8592; The Archive</a>
+      <a href="index.html" style="font-size:11px;color:var(--mut);text-decoration:none;display:block;margin-bottom:2px;letter-spacing:.04em">&#8592; The Archive</a>
       <h1>Wish List</h1>
       <span class="cnt" id="wl-count">0 films</span>
       <button class="add-btn" onclick="openAddModal()">+ Add</button>
@@ -232,7 +227,6 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
       <div class="chip" id="chip-hot" onclick="setPriFilter('Must Own',this)">🔴 Must Own</div>
       <div class="chip" id="chip-med" onclick="setPriFilter('High',this)">🟡 High</div>
       <div class="chip" id="chip-low" onclick="setPriFilter('Someday',this)">🔵 Someday</div>
-      <div class="chip" id="chip-4k" onclick="set4kFilter(this)">4K</div>
     </div>
     <div class="sortrow">
       <span class="sortlabel">Sort</span>
@@ -401,16 +395,14 @@ function saveArchive(titles){try{localStorage.setItem(ARCHIVE_KEY,JSON.stringify
 let WL=load();
 let ARCHIVE_TITLES=loadArchive();
 let filterPri="all";
-let filter4k=false;
 let sortKey="title";
-let sortDir=1;
 let openItem=null;
 let tmdbTimer=null;
 
 // ── PRIORITY HELPERS ─────────────────────────────────────────────────────────
 const PRI_ORDER={"Must Own":0,"High":1,"Someday":2};
 const PRI_CLASS={"Must Own":"hot","High":"med","Someday":"low"};
-const PRI_LABEL={"Must Own":"Must","High":"High","Someday":"Soon"};
+const PRI_LABEL={"Must Own":"Must Own","High":"High","Someday":"Someday"};
 
 function ex(s){return(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
 
@@ -419,8 +411,7 @@ function getFiltered(){
   const q=(document.getElementById("wl-search").value||"").toLowerCase();
   let list=WL.filter(f=>{
     if(filterPri!=="all"&&f.priority!==filterPri)return false;
-    if(filter4k&&!f.has4k)return false;
-    if(q&&!(f.title+" "+(f.director||"")+" "+(f.genre||"")+" "+(f.distributor||"")).toLowerCase().includes(q))return false;
+    if(q&&!(f.title+" "+(f.director||"")+" "+(f.genre||"")).toLowerCase().includes(q))return false;
     return true;
   });
   list.sort((a,b)=>{
@@ -457,7 +448,7 @@ function cardHtml(f){
   const fb=f.poster?`<div class="fb2" style="display:none"><div class="ft">${ex(f.title)}</div><div class="fy">${f.year||""}</div></div>`
     :`<div class="fb2"><div class="ft">${ex(f.title)}</div><div class="fy">${f.year||""}</div></div>`;
   const owned=isOwned?`<div class="archive-badge">✓</div>`:"";
-  return`<div class="card${isOwned?' card-owned':''}" onclick="openSheet('${ex(f.id)}')">${img}${fb}<div class="pri-badge pri-${pc}">${PRI_LABEL[f.priority]}</div>${owned}</div>`;
+  return`<div class="card" onclick="openSheet('${ex(f.id)}')">${img}${fb}<div class="pri-badge pri-${pc}">${PRI_LABEL[f.priority]}</div>${owned}</div>`;
 }
 
 function filterWishlist(){render();renderHunt();}
@@ -468,13 +459,6 @@ function setPriFilter(p,el){
   else if(p==="Must Own")el.className="chip active-hot";
   else if(p==="High")el.className="chip active-med";
   else el.className="chip active-low";
-  // restore 4K chip state
-  if(filter4k)document.getElementById("chip-4k").className="chip active-4k";
-  render();
-}
-function set4kFilter(el){
-  filter4k=!filter4k;
-  el.className=filter4k?"chip active-4k":"chip";
   render();
 }
 function setSort(k,el){
@@ -503,7 +487,6 @@ function openSheet(id){
         <div class="shd">${f.director?ex(f.director):""}${f.year?` · ${f.year}`:""}</div>
         <div class="tags">
           <span class="tag tag-${pc}">${["Must Own","High","Someday"].includes(f.priority)?{Must:"🔴 Must Own",High:"🟡 High",Someday:"🔵 Someday"}[f.priority.replace(" Own","")]||"🔵 "+f.priority:"🔵 "+f.priority}</span>
-          ${f.has4k?`<span class="tag tag-4k">4K</span>`:""}
           ${ownedTag}
         </div>
       </div>
@@ -511,7 +494,6 @@ function openSheet(id){
     ${f.genre?`<div class="tags" style="margin-bottom:12px">${f.genre.split(",").slice(0,4).map(g=>`<span class="tag">${g.trim()}</span>`).join("")}</div>`:""}
     ${f.runtime?`<div class="dr"><span class="lb">Runtime</span><span class="vl">${f.runtime} min</span></div>`:""}
     ${f.country?`<div class="dr"><span class="lb">Country</span><span class="vl">${f.country}</span></div>`:""}
-    ${f.distributor?`<div class="dr"><span class="lb">Label</span><span class="vl">${ex(f.distributor)}</span></div>`:""}
     ${f.notes?`<div class="dr"><span class="lb">Notes</span><span class="vl" style="white-space:pre-wrap">${ex(f.notes)}</span></div>`:""}
     <hr class="divl">
     <div class="field">
@@ -521,17 +503,6 @@ function openSheet(id){
         <option value="High"${f.priority==="High"?" selected":""}>🟡 High</option>
         <option value="Someday"${f.priority==="Someday"?" selected":""}>🔵 Someday</option>
       </select>
-    </div>
-    <div class="field">
-      <label>Distributor / Label</label>
-      <input type="text" class="pri-select" id="sh-distributor" value="${ex(f.distributor||"")}" placeholder="e.g. Criterion, Arrow, Kino Lorber…" onblur="updateField('${f.id}','distributor',this.value)">
-    </div>
-    <div class="field" style="display:flex;align-items:center;gap:10px;margin-top:4px">
-      <label style="margin-bottom:0;flex:1">4K disc available</label>
-      <label style="display:flex;align-items:center;gap:6px;cursor:pointer;margin-bottom:0">
-        <input type="checkbox" id="sh-4k" ${f.has4k?"checked":""} onchange="updateField('${f.id}','has4k',this.checked)" style="width:16px;height:16px;accent-color:var(--acc);cursor:pointer">
-        <span style="font-size:13px;color:var(--mut)">${f.has4k?"Yes":"No"}</span>
-      </label>
     </div>
     <div class="field">
       <label>Notes</label>
@@ -549,11 +520,6 @@ function openSheet(id){
 }
 
 function closeSheet(){
-  // Save any unsaved fields before tearing down
-  const notesEl=document.querySelector("#shi .notes-area");
-  if(notesEl&&openItem)updateNotes(openItem.id,notesEl.value);
-  const distEl=document.getElementById("sh-distributor");
-  if(distEl&&openItem)updateField(openItem.id,"distributor",distEl.value);
   document.getElementById("sh").classList.remove("open");
   document.getElementById("ov").classList.remove("open");
   document.body.style.overflow="";
@@ -566,17 +532,7 @@ function updatePriority(id,val){
 }
 function updateNotes(id,val){
   const f=WL.find(x=>x.id===id);if(!f)return;
-  f.notes=val||null;save(WL);
-}
-function updateField(id,field,val){
-  const f=WL.find(x=>x.id===id);if(!f)return;
-  f[field]=(typeof val==="boolean")?val:(val.trim()||null);
-  save(WL);
-  // Refresh the 4K label text next to checkbox
-  if(field==="has4k"){
-    const lbl=document.querySelector("#sh-4k + span");
-    if(lbl)lbl.textContent=val?"Yes":"No";
-  }
+  f.notes=val;save(WL);
 }
 function markOwned(id,remove){
   const f=WL.find(x=>x.id===id);if(!f)return;
@@ -584,20 +540,11 @@ function markOwned(id,remove){
   closeSheet();
   showToast(remove?"Removed owned flag":"Marked as owned ✓");
 }
-let undoTimer=null;
-let pendingDelete=null;
 function deleteFilm(id){
-  const f=WL.find(x=>x.id===id);if(!f)return;
-  pendingDelete={id,film:{...f},index:WL.indexOf(f)};
+  if(!confirm("Remove this film from your wishlist?"))return;
   WL=WL.filter(x=>x.id!==id);save(WL);
   closeSheet();
-  showToastUndo(`"${f.title}" removed`,()=>{
-    if(pendingDelete&&pendingDelete.id===id){
-      WL.splice(pendingDelete.index,0,pendingDelete.film);
-      save(WL);render();renderHunt();
-      pendingDelete=null;
-    }
-  });
+  showToast("Removed from wishlist");
 }
 
 // ── ADD MODAL ────────────────────────────────────────────────────────────────
@@ -634,15 +581,14 @@ async function doTmdbSearch(q){
   res.style.display="block";
   res.innerHTML=`<div class="searching-indicator">Searching…</div>`;
   try{
-    const r=await fetch(`https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(q)}&api_key=629e63fca4e9b61a912511334debd42c&language=en-US&page=1`);
+    const r=await fetch(`https://www.omdbapi.com/?s=${encodeURIComponent(q)}&type=movie&apikey=trilogy`);
     const d=await r.json();
-    if(d.results&&d.results.length){
-      searchResultCache=d.results.slice(0,6).map(m=>({
-        tmdb_id:m.id,
-        title:m.title,
-        year:m.release_date?parseInt(m.release_date):null,
-        poster:m.poster_path?`https://image.tmdb.org/t/p/w342${m.poster_path}`:"",
-        overview:m.overview||""
+    if(d.Search&&d.Search.length){
+      searchResultCache=d.Search.slice(0,6).map(m=>({
+        title:m.Title,
+        year:m.Year?parseInt(m.Year):null,
+        poster:m.Poster&&m.Poster!=="N/A"?m.Poster:"",
+        imdb_id:m.imdbID
       }));
       res.innerHTML=searchResultCache.map((m,i)=>`
         <div class="search-result-item" onclick="selectFilm(${i})">
@@ -657,27 +603,15 @@ async function doTmdbSearch(q){
   }
 }
 
-async function selectFilm(i){
+function selectFilm(i){
   const f=searchResultCache[i];
   if(!f)return;
   document.getElementById("f-title").value=f.title||"";
   document.getElementById("f-year").value=f.year||"";
   document.getElementById("f-poster").value=f.poster||"";
+  document.getElementById("f-imdb-id").value=f.imdb_id||"";
   document.getElementById("tmdb-results").style.display="none";
   document.getElementById("tmdb-search").value=f.title;
-  // Fetch full details from TMDB for director, genre, runtime, country, imdb_id
-  if(f.tmdb_id){
-    try{
-      const r=await fetch(`https://api.themoviedb.org/3/movie/${f.tmdb_id}?api_key=629e63fca4e9b61a912511334debd42c&append_to_response=credits`);
-      const d=await r.json();
-      const director=(d.credits&&d.credits.crew||[]).find(c=>c.job==="Director");
-      if(director)document.getElementById("f-director").value=director.name;
-      if(d.imdb_id)document.getElementById("f-imdb-id").value=d.imdb_id;
-      if(d.runtime)document.getElementById("f-runtime").value=d.runtime;
-      if(d.genres&&d.genres.length)document.getElementById("f-genre").value=d.genres.map(g=>g.name).join(", ");
-      if(d.production_countries&&d.production_countries.length)document.getElementById("f-country").value=d.production_countries.map(c=>c.iso_3166_1).join(", ");
-    }catch(e){}
-  }
   document.getElementById("f-director").focus();
 }
 
@@ -827,16 +761,9 @@ function switchTab(name){
 let toastTimer;
 function showToast(msg){
   const t=document.getElementById("toast");
-  t.innerHTML=msg;t.classList.add("show");t.classList.remove("toast-undo");
+  t.textContent=msg;t.classList.add("show");
   clearTimeout(toastTimer);
   toastTimer=setTimeout(()=>t.classList.remove("show"),2800);
-}
-function showToastUndo(msg,onUndo){
-  const t=document.getElementById("toast");
-  t.innerHTML=`${msg} <span class="toast-undo-btn" onclick="(${onUndo.toString()})();document.getElementById('toast').classList.remove('show')">Undo</span>`;
-  t.classList.add("show","toast-undo");
-  clearTimeout(toastTimer);
-  toastTimer=setTimeout(()=>t.classList.remove("show"),4500);
 }
 
 // ── KEYBOARD ─────────────────────────────────────────────────────────────────
@@ -847,47 +774,8 @@ document.addEventListener("keydown",e=>{
   }
 });
 
-// ── SWIPE TO DISMISS SHEET ───────────────────────────────────────────────────
-(function(){
-  const sh=document.getElementById("sh");
-  let startY=0,startScrollTop=0,dragging=false,currentY=0;
-
-  sh.addEventListener("touchstart",e=>{
-    startY=e.touches[0].clientY;
-    startScrollTop=sh.scrollTop;
-    dragging=false;
-    currentY=0;
-  },{passive:true});
-
-  sh.addEventListener("touchmove",e=>{
-    const dy=e.touches[0].clientY-startY;
-    // Only drag down, and only if sheet is scrolled to top
-    if(dy>0&&startScrollTop<=0){
-      dragging=true;
-      currentY=dy;
-      sh.classList.add("dragging");
-      sh.style.transform=`translateY(${dy}px)`;
-      e.preventDefault();
-    }
-  },{passive:false});
-
-  sh.addEventListener("touchend",()=>{
-    sh.classList.remove("dragging");
-    sh.style.transform="";
-    if(dragging&&currentY>80){
-      closeSheet();
-    }
-    dragging=false;currentY=0;
-  });
-})();
-
 // ── INIT ─────────────────────────────────────────────────────────────────────
 async function init() {
-  // Show archive link only if archive data has been imported
-  if(ARCHIVE_TITLES.size>0){
-    const al=document.getElementById("archive-link");
-    if(al)al.style.display="block";
-  }
   // If localStorage already has data, just render it
   if (WL.length > 0) { render(); renderHunt(); return; }
 
