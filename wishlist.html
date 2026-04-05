@@ -607,11 +607,13 @@ function renderActivePills(){
   const btn=document.getElementById("filter-btn");
   if(!container)return;
   const pills=[];
-  if(filterPri!=="all")pills.push({label:{Must Own:"🔴 Must Own",High:"🟡 High",Someday:"🔵 Someday"}[filterPri]||filterPri,clear:()=>{filterPri="all";}});
+  const priLabels={"Must Own":"🔴 Must Own","High":"🟡 High","Someday":"🔵 Someday"};
+  if(filterPri!=="all")pills.push({label:priLabels[filterPri]||filterPri,clear:()=>{filterPri="all";}});
   if(filter4k)pills.push({label:"4K",clear:()=>{filter4k=false;}});
   if(filterCountry!=="all")pills.push({label:filterCountry,clear:()=>{filterCountry="all";}});
-  if(sortKey!=="title"||sortDir!==-1&&sortKey==="added"||sortDir!==1&&sortKey!=="added")
-    pills.push({label:"Sort: "+({title:"Title",added:"Date added",year:"Year",priority:"Priority",distributor:"Distributor"}[sortKey]||sortKey)+(sortDir===1?" ↑":" ↓"),clear:null});
+  const sortLabels={title:"Title",added:"Date added",year:"Year",priority:"Priority",distributor:"Distributor"};
+  if(sortKey!=="title"||sortDir!==1)
+    pills.push({label:"Sort: "+(sortLabels[sortKey]||sortKey)+(sortDir===1?" ↑":" ↓"),clear:null});
 
   btn.className="filter-btn"+(pills.length?" has-filters":"");
   container.innerHTML=pills.map((p,i)=>
