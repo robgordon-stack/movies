@@ -106,7 +106,8 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 .ov.open{opacity:1;pointer-events:all}
 .sh{position:fixed;bottom:calc(56px + env(safe-area-inset-bottom));left:0;right:0;max-height:calc(100vh - 56px - env(safe-area-inset-bottom) - env(safe-area-inset-top));background:var(--surf);border-radius:16px 16px 0 0;z-index:201;transform:translateY(calc(100% + 56px + env(safe-area-inset-bottom)));transition:transform .28s cubic-bezier(.4,0,.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:24px}
 .sh.open{transform:translateY(0)}
-.shn{width:36px;height:4px;background:var(--surf3);border-radius:2px;margin:12px auto 4px}
+.shn{width:36px;height:4px;background:var(--surf3);border-radius:2px;margin:12px auto 4px;cursor:grab;touch-action:none}
+.shn-wrap{padding:8px 0 0;text-align:center;cursor:grab}
 .shi{padding:0 16px 24px}
 .shh{display:flex;gap:14px;margin-bottom:16px;padding-top:8px}
 .shp{width:90px;flex-shrink:0;aspect-ratio:2/3;border-radius:8px;overflow:hidden;background:var(--surf2)}
@@ -478,11 +479,13 @@ function cardHtml(f){
 function filterWishlist(){render();renderHunt();}
 function setPriFilter(p,el){
   filterPri=p;
-  document.querySelectorAll(".frow .chip").forEach(c=>c.className="chip");
-  if(p==="all")el.className="chip active-all";
-  else if(p==="Must Own")el.className="chip active-hot";
-  else if(p==="High")el.className="chip active-med";
-  else el.className="chip active-low";
+  document.querySelectorAll(".frow:first-of-type .chip, #chip-all, #chip-hot, #chip-med, #chip-low, #chip-4k").forEach(c=>{
+    if(c.id&&["chip-all","chip-hot","chip-med","chip-low"].includes(c.id))c.className="chip";
+  });
+  document.getElementById("chip-all").className="chip"+(p==="all"?" active-all":"");
+  document.getElementById("chip-hot").className="chip"+(p==="Must Own"?" active-hot":"");
+  document.getElementById("chip-med").className="chip"+(p==="High"?" active-med":"");
+  document.getElementById("chip-low").className="chip"+(p==="Someday"?" active-low":"");
   render();
 }
 function setSort(k,el){
@@ -536,23 +539,32 @@ function openSheet(id){
   const lbBtn=f.title?`<a href="https://letterboxd.com/search/${encodeURIComponent(f.title)}/" target="_blank" class="extlink">Letterboxd</a>`:"";
   const k4tag=f.has4k?`<span class="tag" style="background:rgba(126,184,247,.15);border-color:var(--acc);color:var(--acc);font-weight:700">4K</span>`:"";
 
+  const PRI_TAG={"Must Own":"🔴 Must Own","High":"🟡 High","Someday":"🔵 Someday"};
+  const priLabel=PRI_TAG[f.priority]||("🔵 "+f.priority);
+
   document.getElementById("shi").innerHTML=`
     <div class="shh">
       <div class="shp">${poster}</div>
       <div class="shm">
         <div class="sht">${ex(f.title)}</div>
-        <div class="shd">${f.director?ex(f.director):""}${f.year?` · ${f.year}`:""}</div>
+        <div class="shd">${f.director?ex(f.director):"Unknown director"}${f.year?` · ${f.year}`:""}</div>
         <div class="tags">
-          <span class="tag tag-${pc}">${["Must Own","High","Someday"].includes(f.priority)?{Must:"🔴 Must Own",High:"🟡 High",Someday:"🔵 Someday"}[f.priority.replace(" Own","")]||"🔵 "+f.priority:"🔵 "+f.priority}</span>
+          <span class="tag tag-${pc}">${priLabel}</span>
           ${ownedTag}${k4tag}
         </div>
       </div>
     </div>
-    ${f.genre?`<div class="tags" style="margin-bottom:12px">${f.genre.split(",").slice(0,4).map(g=>`<span class="tag">${g.trim()}</span>`).join("")}</div>`:""}
-    ${f.runtime?`<div class="dr"><span class="lb">Runtime</span><span class="vl">${f.runtime} min</span></div>`:""}
-    ${f.country?`<div class="dr"><span class="lb">Country</span><span class="vl">${ex(f.country)}</span></div>`:""}
-    ${f.distributor?`<div class="dr"><span class="lb">Distributor</span><span class="vl">${ex(f.distributor)}</span></div>`:""}
-    ${f.notes?`<div class="dr"><span class="lb">Notes</span><span class="vl" style="white-space:pre-wrap">${ex(f.notes)}</span></div>`:""}
+    ${f.genre?`<div class="tags" style="margin-bottom:8px">${f.genre.split(",").slice(0,5).map(g=>`<span class="tag">${ex(g.trim())}</span>`).join("")}</div>`:""}
+    <div style="border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);margin-bottom:12px">
+      ${f.year?`<div class="dr"><span class="lb">Year</span><span class="vl">${f.year}</span></div>`:""}
+      ${f.director?`<div class="dr"><span class="lb">Director</span><span class="vl">${ex(f.director)}</span></div>`:""}
+      ${f.runtime?`<div class="dr"><span class="lb">Runtime</span><span class="vl">${f.runtime} min</span></div>`:""}
+      ${f.country?`<div class="dr"><span class="lb">Country</span><span class="vl">${ex(f.country)}</span></div>`:""}
+      ${f.distributor?`<div class="dr"><span class="lb">Distributor</span><span class="vl">${ex(f.distributor)}</span></div>`:""}
+      ${f.imdb_id?`<div class="dr"><span class="lb">IMDb ID</span><span class="vl" style="font-family:monospace;font-size:12px">${ex(f.imdb_id)}</span></div>`:""}
+      ${f.added?`<div class="dr"><span class="lb">Added</span><span class="vl">${new Date(f.added).toLocaleDateString(undefined,{year:"numeric",month:"short",day:"numeric"})}</span></div>`:""}
+      ${f.notes?`<div class="dr"><span class="lb">Notes</span><span class="vl" style="white-space:pre-wrap">${ex(f.notes)}</span></div>`:""}
+    </div>
     <hr class="divl">
     <div class="field">
       <label>Priority</label>
@@ -585,11 +597,83 @@ function openSheet(id){
 }
 
 function closeSheet(){
-  document.getElementById("sh").classList.remove("open");
+  const sh=document.getElementById("sh");
+  sh.style.transition="transform .28s cubic-bezier(.4,0,.2,1)";
+  sh.style.transform="";
+  sh.classList.remove("open");
   document.getElementById("ov").classList.remove("open");
   document.body.style.overflow="";
   render();renderHunt();
 }
+
+// ── SWIPE TO CLOSE ────────────────────────────────────────────────────────────
+(function(){
+  const sh=document.getElementById("sh");
+  let startY=0,startX=0,currentY=0,dragging=false,scrollLocked=false;
+
+  sh.addEventListener("touchstart",e=>{
+    // Only initiate swipe from the handle area or if already at scroll top
+    startY=e.touches[0].clientY;
+    startX=e.touches[0].clientX;
+    currentY=0;
+    dragging=false;
+    scrollLocked=false;
+  },{passive:true});
+
+  sh.addEventListener("touchmove",e=>{
+    const dy=e.touches[0].clientY-startY;
+    const dx=e.touches[0].clientX-startX;
+
+    // Determine intent on first significant move
+    if(!dragging&&!scrollLocked){
+      if(Math.abs(dy)>Math.abs(dx)&&dy>6){
+        // Downward drag — only swipe if sheet is scrolled to top
+        if(sh.scrollTop<=0){
+          dragging=true;
+        } else {
+          scrollLocked=true; // let normal scroll happen
+        }
+      } else if(Math.abs(dx)>6||dy<-6){
+        scrollLocked=true;
+      }
+    }
+
+    if(dragging){
+      e.preventDefault();
+      currentY=Math.max(0,dy);
+      sh.style.transition="none";
+      sh.style.transform=`translateY(${currentY}px)`;
+      // Fade overlay proportionally
+      const progress=Math.min(currentY/260,1);
+      document.getElementById("ov").style.opacity=1-progress*.8;
+    }
+  },{passive:false});
+
+  sh.addEventListener("touchend",e=>{
+    if(!dragging){sh.style.transform="";return;}
+    dragging=false;
+    const vel=e.changedTouches[0].clientY-startY;
+    if(currentY>90||vel>400){
+      // Flick or drag past threshold — close
+      sh.style.transition="transform .22s cubic-bezier(.4,0,.8,1)";
+      sh.style.transform=`translateY(110%)`;
+      setTimeout(()=>{
+        sh.classList.remove("open");
+        document.getElementById("ov").classList.remove("open");
+        document.getElementById("ov").style.opacity="";
+        sh.style.transform="";
+        sh.style.transition="";
+        document.body.style.overflow="";
+        render();renderHunt();
+      },220);
+    } else {
+      // Snap back
+      sh.style.transition="transform .24s cubic-bezier(.4,0,.2,1)";
+      sh.style.transform="";
+      document.getElementById("ov").style.opacity="";
+    }
+  },{passive:true});
+})();
 
 function updatePriority(id,val){
   const f=WL.find(x=>x.id===id);if(!f)return;
