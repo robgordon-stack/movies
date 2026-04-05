@@ -232,8 +232,8 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
       <div class="chip" id="chip-low" onclick="setPriFilter('Someday',this)">🔵 Someday</div>
       <div class="chip" id="chip-4k" onclick="toggle4kFilter(this)">4K</div>
     </div>
-    <div class="frow" id="country-filter-row" style="display:none;padding-bottom:8px">
-      <div id="country-chip-row" style="display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch"></div>
+    <div id="country-filter-row" style="display:none;overflow-x:auto;white-space:nowrap;padding:0 0 8px;scrollbar-width:none;-webkit-overflow-scrolling:touch">
+      <div id="country-chip-row" style="display:inline-flex;gap:6px;padding:0"></div>
     </div>
     <div class="sortrow">
       <span class="sortlabel">Sort</span>
@@ -515,7 +515,7 @@ function renderCountryChips(){
   if(!row||!wrap)return;
   const countries=[...new Set(WL.map(f=>(f.country||"").trim()).filter(c=>c))].sort();
   if(!countries.length){wrap.style.display="none";return;}
-  wrap.style.display="";
+  wrap.style.display="block";
   row.innerHTML=`<div class="chip ${filterCountry==="all"?"active-all":""}" onclick="setCountryFilter('all',this)">🌍 All</div>`
     +countries.map(c=>`<div class="chip ${filterCountry===c.toLowerCase()?"active-all":""}" onclick="setCountryFilter(${JSON.stringify(c.toLowerCase())},this)">${ex(c)}</div>`).join("");
 }
@@ -653,7 +653,11 @@ function closeSheet(){
   },{passive:false});
 
   sh.addEventListener("touchend",e=>{
-    if(!dragging){sh.style.transform="";return;}
+    if(!dragging){
+      // Only clear transform if we set one — not if sheet is just open normally
+      if(sh.style.transform&&sh.style.transform!=="translateY(0px)")sh.style.transform="";
+      return;
+    }
     dragging=false;
     const vel=e.changedTouches[0].clientY-startY;
     if(currentY>90||vel>400){
@@ -1062,12 +1066,16 @@ async function init() {
     const data = await resp.json();
     if (Array.isArray(data) && data.length) {
       const before = WL.length;
+      const beforeJson = JSON.stringify(WL.map(f=>({id:f.id,priority:f.priority})));
       WL = mergeWithJson(WL, data);
+      const afterJson = JSON.stringify(WL.map(f=>({id:f.id,priority:f.priority})));
       save(WL);
-      // Only re-render if something actually changed
-      if (WL.length !== before) {
+      // Re-render if anything changed (count or priority values)
+      const changed = WL.length !== before || beforeJson !== afterJson;
+      if (changed) {
         render(); renderHunt();
-        showToast(`Synced — ${WL.length - before > 0 ? '+' + (WL.length - before) + ' new film' + (WL.length - before !== 1 ? 's' : '') : 'up to date'}`);
+        const added = WL.length - before;
+        if (added > 0) showToast(`Synced — +${added} new film${added!==1?'s':''}`);
       }
     }
   } catch (e) {
