@@ -17,7 +17,7 @@
   {
     "id": "17753640833188k5tezc05vp",
     "title": "WALL-E",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775364083318,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg",
@@ -145,7 +145,7 @@
   {
     "id": "17753640833181f8t6jjg3du",
     "title": "Fantastic Mr. Fox",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775364083318,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/euZyZb6iGreujYKrGyZHRddhUYh.jpg",
@@ -213,15 +213,15 @@
     "priority": "Someday",
     "added": 1775364083318,
     "owned": false,
-    "poster": "https://image.tmdb.org/t/p/w500/2rM7fQKpb7cs1Iq7IBqub9LFDzJ.jpg",
-    "imdb_id": "tt0077631",
-    "year": 1978,
-    "runtime": 110,
-    "genre": "Romance, Comedy",
-    "country": "United States of America",
-    "director": "Randal Kleiser",
-    "tmdb_id": 621,
-    "lb": "https://letterboxd.com/search/Ordet/"
+    "poster": "https://www.themoviedb.org/t/p/w1280/c9Oef9uQEuadZlnvv8hphRmTIgx.jpg",
+    "imdb_id": "tt0048452",
+    "year": 1955,
+    "runtime": 125,
+    "genre": "Drama, Religion",
+    "country": "Denmark",
+    "director": "Carl Theodor Dreyer",
+    "tmdb_id": 48035,
+    "lb": "https://letterboxd.com/film/ordet/"
   },
   {
     "id": "1775364083318rkn35st264",
@@ -338,7 +338,7 @@
   {
     "id": "1775363855869chovj2v2qvd",
     "title": "The Tree of Life",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363855869,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/l8cwuB5WJSoj4uMAsnzuHBOMaSJ.jpg",
@@ -613,7 +613,7 @@
   {
     "id": "17753637107522lhva4egqmt",
     "title": "Y Tu Mamá También",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363710752,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/aj3rqjab8jfc2fWmcS3H3c5qbur.jpg",
@@ -629,7 +629,7 @@
   {
     "id": "177536371075278av6jlpnc6",
     "title": "The Sound of Music",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363710752,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/c6CrUZypAsBCaRWX0M3RVRDbhNS.jpg",
@@ -646,7 +646,7 @@
   {
     "id": "1775363710752glfyzn774ul",
     "title": "Raising Arizona",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363710752,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/niKyjOqiB4XVl0BqgKTHIlHOCeF.jpg",
@@ -678,7 +678,7 @@
   {
     "id": "1775363710752tgb70ouxdw",
     "title": "Autumn Sonata",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363710752,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/6beNbtCXv3GkzHkxkGYf38ib7v8.jpg",
@@ -727,7 +727,7 @@
   {
     "id": "1775363710752gomuc3m0qiw",
     "title": "Scenes from a Marriage",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363710752,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/ArKEdvJesIktFX8OAhcdKAOLl6I.jpg",
@@ -743,7 +743,7 @@
   {
     "id": "1775363710752op45th2royl",
     "title": "Cinema Paradiso",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363710752,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/gCI2AeMV4IHSewhJkzsur5MEp6R.jpg",
@@ -759,7 +759,7 @@
   {
     "id": "1775363710752m8cnd2l7g8m",
     "title": "Before Sunset",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363710752,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/4sW5XH9ZfYXpvFzev00S1IGAEbg.jpg",
@@ -775,7 +775,7 @@
   {
     "id": "1775363710752bwrau27f6j",
     "title": "All About Eve",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363710752,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/blBzZaatPWVuWpXEnPscMA4Xp6m.jpg",
@@ -791,7 +791,7 @@
   {
     "id": "17753637107510zydx1iw6rjg",
     "title": "Some Like It Hot",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363710751,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/hVIKyTK13AvOGv7ICmJjK44DTzp.jpg",
@@ -808,7 +808,7 @@
   {
     "id": "177536371075180vc972vgje",
     "title": "Gladiator",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363710751,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg",
@@ -937,7 +937,7 @@
   {
     "id": "17753635899869keba4ku8b",
     "title": "Terminator 2: Judgment Day",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363589986,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/jFTVD4XoWQTcg7wdyJKa8PEds5q.jpg",
@@ -985,7 +985,7 @@
   {
     "id": "17753635899866ii5ko2ogvm",
     "title": "The Lord of the Rings: The Fellowship of the Ring",
-    "priority": "Someday",
+    "priority": "Must Own",
     "added": 1775363589986,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
@@ -1034,7 +1034,7 @@
   {
     "id": "17753635899860ynfg4m8oy5g",
     "title": "Goodfellas",
-    "priority": "Someday",
+    "priority": "Must Own",
     "added": 1775363589986,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/9OkCLM73MIU2CrKZbqiT8Ln1wY2.jpg",
@@ -1116,7 +1116,7 @@
   {
     "id": "1775363589986ug5z8lx5vo",
     "title": "Farewell My Concubine",
-    "priority": "Someday",
+    "priority": "Must Own",
     "added": 1775363589986,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/iJ99VEPZ8aZTGm18DN6RfZCxYwk.jpg",
@@ -1141,7 +1141,7 @@
     "year": 1978,
     "runtime": 80,
     "genre": "Drama, Psychological Drama",
-    "country": "Usa",
+    "country": "United States of America",
     "director": "Charles Burnett",
     "tmdb_id": 27432,
     "lb": "https://letterboxd.com/film/killer-of-sheep/"
@@ -1197,7 +1197,7 @@
   {
     "id": "17753635899857d567191xnp",
     "title": "Red Beard",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363589985,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/iYNH3Re0JSypoYaWvZtERUnNaJL.jpg",
@@ -1213,7 +1213,7 @@
   {
     "id": "1775363589985r0d9s82r3g",
     "title": "Yojimbo",
-    "priority": "Someday",
+    "priority": "Must Own",
     "added": 1775363589985,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/tN7kYPjRhDolpui9sc9Eq9n5b2O.jpg",
@@ -1262,7 +1262,7 @@
   {
     "id": "1775363589985khfxw1e5ltr",
     "title": "Past Lives",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363589985,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/k3waqVXSnvCZWfJYNtdamTgTtTA.jpg",
@@ -1295,7 +1295,7 @@
   {
     "id": "17753635899859028ivfg7v5",
     "title": "Sanjuro",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363589985,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/zW47oIH3bc3ggmmmzTvKqM4Fqjk.jpg",
@@ -1329,7 +1329,7 @@
   {
     "id": "1775363589985sqazc1r9re",
     "title": "Modern Times",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363589985,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/7uoiKOEjxBBW0AgDGQWrlfGQ90w.jpg",
@@ -1378,7 +1378,7 @@
   {
     "id": "1775363589985crerbmkmc4",
     "title": "There Will Be Blood",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363589985,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/fa0RDkAlCec0STeMNAhPaF89q6U.jpg",
@@ -1394,7 +1394,7 @@
   {
     "id": "17753635899856b4ux3jm27r",
     "title": "Shoplifters",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363589985,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/4nfRUOv3LX5zLn98WS1WqVBk9E9.jpg",
@@ -1410,7 +1410,7 @@
   {
     "id": "1775363589985rstiihcjugn",
     "title": "Cleo from 5 to 7",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363589985,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/oelBStY4xpguaplRv15P3Za7Xsr.jpg",
@@ -1426,7 +1426,7 @@
   {
     "id": "1775363589985zhdqbtgri7a",
     "title": "Portrait of a Lady on Fire",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363589985,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/2LquGwEhbg3soxSCs9VNyh5VJd9.jpg",
@@ -1449,7 +1449,7 @@
     "genre": "Drama",
     "country": "Italy",
     "runtime": 115,
-    "priority": "High",
+    "priority": "Must Own",
     "notes": "Criterion",
     "owned": false,
     "added": 1775363294687,
