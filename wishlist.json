@@ -48,7 +48,7 @@
     "owned": false,
     "added": 1775371673725,
     "has4k": true,
-    "distributor": Second Sight, Criterion
+    "distributor": "Second Sight, Criterion"
   },
   {
     "id": "1775371657973pnqzf049mkr",
@@ -82,7 +82,7 @@
     "owned": false,
     "added": 1775371647974,
     "has4k": true,
-    "distributor": A24
+    "distributor": "A24"
   },
   {
     "id": "1775371625207eoz1h8ix8ru",
@@ -150,7 +150,7 @@
     "owned": false,
     "added": 1775371594107,
     "has4k": true,
-    "distributor": Second Sight
+    "distributor": "Second Sight"
   },
   {
     "id": "1775371582007sg1j8ev1rgs",
@@ -167,7 +167,7 @@
     "owned": false,
     "added": 1775371582007,
     "has4k": true,
-    "distributor": Kino Lorber
+    "distributor": "Kino Lorber"
   },
   {
     "id": "1775371570590nupx8lx1ioq",
@@ -218,7 +218,7 @@
     "owned": false,
     "added": 1775371542557,
     "has4k": false,
-    "distributor": Criterion
+    "distributor": "Criterion"
   },
   {
     "id": "1775371530608mmgqpey1dym",
@@ -235,7 +235,7 @@
     "owned": false,
     "added": 1775371530608,
     "has4k": true,
-    "distributor": Criterion
+    "distributor": "Criterion"
   },
   {
     "id": "1775371513524dur9q0gdn7u",
@@ -252,7 +252,7 @@
     "owned": false,
     "added": 1775371513524,
     "has4k": true,
-    "distributor": Criterion
+    "distributor": "Criterion"
   },
   {
     "id": "1775371492857ndgtur5e9jr",
@@ -269,7 +269,7 @@
     "owned": false,
     "added": 1775371492857,
     "has4k": true,
-    "distributor": Criterion
+    "distributor": "Criterion"
   },
   {
     "id": "17753714747914whsuu5empr",
@@ -286,7 +286,7 @@
     "owned": false,
     "added": 1775371474791,
     "has4k": true,
-    "distributor": Criterion
+    "distributor": "Criterion"
   },
   {
     "id": "17753714485577inbzhhv6dx",
@@ -303,7 +303,7 @@
     "owned": false,
     "added": 1775371448557,
     "has4k": true,
-    "distributor": Criterion
+    "distributor": "Criterion"
   },
   {
     "id": "1775371437274qdgqjk7djf",
@@ -337,7 +337,7 @@
     "owned": false,
     "added": 1775371424124,
     "has4k": true,
-    "distributor": Umbrella
+    "distributor": "Umbrella"
   },
   {
     "id": "17753714094419j7ecwynwtt",
@@ -405,7 +405,7 @@
     "owned": false,
     "added": 1775369564988,
     "has4k": true,
-    "distributor": Kino Lorber
+    "distributor": "Kino Lorber"
   },
   {
     "id": "17753640833188k5tezc05vp",
@@ -423,7 +423,7 @@
     "tmdb_id": 1398911,
     "lb": "https://letterboxd.com/search/WALL-E/",
     "has4k": true,
-    "distributor": Disney
+    "distributor": "Disney"
   },
   {
     "id": "17753640833180ma06opdv8xl",
@@ -527,7 +527,7 @@
     "runtime": 190,
     "genre": "Drama, Romance",
     "country": "France",
-    "director": "Marcel Carn\u00e9",
+    "director": "Marcel Carné",
     "tmdb_id": 2457,
     "lb": "https://letterboxd.com/search/Children%20of%20Paradise/",
     "has4k": false,
@@ -582,7 +582,7 @@
     "runtime": 139,
     "genre": "Drama",
     "country": "France",
-    "director": "B\u00e9la Tarr",
+    "director": "Béla Tarr",
     "tmdb_id": 23160,
     "lb": "https://letterboxd.com/search/Werckmeister%20Harmonies/",
     "has4k": false,
@@ -784,7 +784,7 @@
     "tmdb_id": 8967,
     "lb": "https://letterboxd.com/search/The%20Tree%20of%20Life/",
     "has4k": false,
-    "distributor": Criterion
+    "distributor": "Criterion"
   },
   {
     "id": "177536385586972vtk0ejktl",
@@ -966,7 +966,7 @@
     "lb": "https://letterboxd.com/search/The%20Power%20of%20the%20Dog/",
     "notes": "Criterion 4K",
     "has4k": true,
-    "distributor": Criterion
+    "distributor": "Criterion"
   },
   {
     "id": "1775363855869m563tc4q2ob",
@@ -1075,11 +1075,11 @@
     "lb": "https://letterboxd.com/search/Uncut%20Gems/",
     "notes": "Criterion 4K",
     "has4k": true,
-    "distributor": Criterion
+    "distributor": "Criterion"
   },
   {
     "id": "17753637107522lhva4egqmt",
-    "title": "Y Tu Mam\u00e1 Tambi\u00e9n",
+    "title": "Y Tu Mamá También",
     "priority": "High",
     "added": 1775363710752,
     "owned": false,
@@ -1089,11 +1089,11 @@
     "runtime": 106,
     "genre": "Drama, Romance",
     "country": "Mexico",
-    "director": "Alfonso Cuar\u00f3n",
+    "director": "Alfonso Cuarón",
     "tmdb_id": 1391,
     "lb": "https://letterboxd.com/search/Y%20Tu%20Mam%C3%A1%20Tambi%C3%A9n/",
     "has4k": false,
-    "distributor": Criterion
+    "distributor": "Criterion"
   },
   {
     "id": "177536371075278av6jlpnc6",
@@ -1167,7 +1167,7 @@
     "lb": "https://letterboxd.com/search/Autumn%20Sonata/",
     "notes": "Criterion Bluray",
     "has4k": false,
-    "distributor": Criterion
+    "distributor": "Criterion"
   },
   {
     "id": "17753637107521n4znt8b1mv",
@@ -1221,7 +1221,7 @@
     "tmdb_id": 133919,
     "lb": "https://letterboxd.com/search/Scenes%20from%20a%20Marriage/",
     "has4k": false,
-    "distributor": Criterion
+    "distributor": "Criterion"
   },
   {
     "id": "1775363710752op45th2royl",
@@ -1239,7 +1239,7 @@
     "tmdb_id": 11216,
     "lb": "https://letterboxd.com/search/Cinema%20Paradiso/",
     "has4k": true,
-    "distributor": Arrow
+    "distributor": "Arrow"
   },
   {
     "id": "1775363710752m8cnd2l7g8m",
@@ -1257,7 +1257,7 @@
     "tmdb_id": 80,
     "lb": "https://letterboxd.com/search/Before%20Sunset/",
     "has4k": true,
-    "distributor": Criterion
+    "distributor": "Criterion"
   },
   {
     "id": "1775363710752bwrau27f6j",
@@ -1581,7 +1581,7 @@
     "runtime": 148,
     "genre": "Drama",
     "country": "Japan",
-    "director": "T\u014dya Sat\u014d",
+    "director": "Tōya Satō",
     "tmdb_id": 76826,
     "lb": "https://letterboxd.com/search/Grave%20of%20the%20Fireflies/",
     "has4k": false,
@@ -1617,7 +1617,7 @@
     "runtime": 154,
     "genre": "Drama, Thriller",
     "country": "Mexico",
-    "director": "Alejandro Gonz\u00e1lez I\u00f1\u00e1rritu",
+    "director": "Alejandro González Iñárritu",
     "tmdb_id": 55,
     "lb": "https://letterboxd.com/search/Amores%20Perros/",
     "notes": "Criterion\n",
@@ -1636,7 +1636,7 @@
     "runtime": 98,
     "genre": "Drama, Fantasy",
     "country": "Spain",
-    "director": "V\u00edctor Erice",
+    "director": "Víctor Erice",
     "tmdb_id": 4495,
     "lb": "https://letterboxd.com/search/The%20Spirit%20of%20the%20Beehive/",
     "has4k": false,
@@ -1699,7 +1699,7 @@
   },
   {
     "id": "1775363589985tj4nam3pbd",
-    "title": "C\u00e9line and Julie Go Boating",
+    "title": "Céline and Julie Go Boating",
     "priority": "Someday",
     "added": 1775363589985,
     "owned": false,
@@ -1727,7 +1727,7 @@
     "runtime": 106,
     "genre": "Drama, Romance",
     "country": "France",
-    "director": "Fran\u00e7ois Truffaut",
+    "director": "François Truffaut",
     "tmdb_id": 1628,
     "lb": "https://letterboxd.com/search/Jules%20and%20Jim/",
     "has4k": false,
@@ -1929,7 +1929,7 @@
     "runtime": 101,
     "genre": "Comedy, Drama",
     "country": "Spain",
-    "director": "Pedro Almod\u00f3var",
+    "director": "Pedro Almodóvar",
     "tmdb_id": 99,
     "lb": "https://letterboxd.com/search/All%20About%20My%20Mother/",
     "notes": "Criterion",
@@ -1984,7 +1984,7 @@
     "runtime": 90,
     "genre": "Drama",
     "country": "France",
-    "director": "Agn\u00e8s Varda",
+    "director": "Agnès Varda",
     "tmdb_id": 499,
     "lb": "https://letterboxd.com/search/Cleo%20from%205%20to%207/",
     "has4k": false,
@@ -2002,7 +2002,7 @@
     "runtime": 121,
     "genre": "Drama, Romance",
     "country": "France",
-    "director": "C\u00e9line Sciamma",
+    "director": "Céline Sciamma",
     "tmdb_id": 531428,
     "lb": "https://letterboxd.com/search/Portrait%20of%20a%20Lady%20on%20Fire/",
     "has4k": false,

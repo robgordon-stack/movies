@@ -776,21 +776,21 @@ document.addEventListener("keydown",e=>{
 
 // ── INIT ─────────────────────────────────────────────────────────────────────
 async function init() {
-  // Always try to load from wishlist.json first — it is the source of truth.
-  // localStorage is only used as a cache for edits made inside the app.
   try {
     const resp = await fetch('wishlist.json');
     if (!resp.ok) throw new Error('not found');
     const data = await resp.json();
     if (Array.isArray(data) && data.length) {
-      // Merge: JSON is the base; any locally-added items (not in JSON) are kept on top
-      const jsonIds = new Set(data.map(f => f.id));
-      const localOnly = WL.filter(f => !jsonIds.has(f.id));
-      WL = [...localOnly, ...data];
+      // Merge: seed is base, local edits to existing items win, local-only items kept
+      const seedMap = Object.fromEntries(data.map(f => [f.id, f]));
+      WL.forEach(f => { if (seedMap[f.id]) seedMap[f.id] = f; });
+      const localOnly = WL.filter(f => !seedMap[f.id]);
+      WL = [...localOnly, ...Object.values(seedMap)];
       save(WL);
     }
   } catch (e) {
-    // No JSON file or fetch failed — fall back to whatever is in localStorage
+    // Fetch failed — use whatever is in localStorage
+    console.warn('wishlist.json not loaded:', e);
   }
   render();
   renderHunt();
