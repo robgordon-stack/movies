@@ -232,8 +232,8 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
       <div class="chip" id="chip-low" onclick="setPriFilter('Someday',this)">🔵 Someday</div>
       <div class="chip" id="chip-4k" onclick="toggle4kFilter(this)">4K</div>
     </div>
-    <div class="frow" id="country-filter-row" style="display:none">
-      <div class="frow" id="country-chip-row"></div>
+    <div class="frow" id="country-filter-row" style="display:none;padding-bottom:8px">
+      <div id="country-chip-row" style="display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch"></div>
     </div>
     <div class="sortrow">
       <span class="sortlabel">Sort</span>
@@ -598,10 +598,13 @@ function openSheet(id){
 
 function closeSheet(){
   const sh=document.getElementById("sh");
-  sh.style.transition="transform .28s cubic-bezier(.4,0,.2,1)";
+  const ov=document.getElementById("ov");
+  // Clear any inline styles left by the swipe handler
   sh.style.transform="";
+  sh.style.transition="";
+  ov.style.opacity="";
   sh.classList.remove("open");
-  document.getElementById("ov").classList.remove("open");
+  ov.classList.remove("open");
   document.body.style.overflow="";
   render();renderHunt();
 }
@@ -1037,8 +1040,8 @@ function mergeWithJson(local, remote) {
     } else {
       const lf = byId[rf.id];
       // JSON wins on metadata fields; local wins on user-preference fields
-      const META = ['title','year','director','poster','imdb_id','genre','country','runtime'];
-      const USER = ['priority','notes','owned','has4k','added'];
+      const META = ['title','year','director','poster','imdb_id','genre','country','runtime','priority','distributor'];
+      const USER = ['notes','owned','has4k','added'];
       META.forEach(k => { if (rf[k] != null) lf[k] = rf[k]; });
       // For user fields, keep local unless local is null/undefined
       USER.forEach(k => { if (lf[k] == null && rf[k] != null) lf[k] = rf[k]; });
