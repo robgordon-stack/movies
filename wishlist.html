@@ -102,7 +102,7 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 /* ── OVERLAY / SHEET ── */
 .ov{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:200;opacity:0;pointer-events:none;transition:opacity .2s}
 .ov.open{opacity:1;pointer-events:all}
-.sh{position:fixed;bottom:0;left:0;right:0;max-height:90vh;background:var(--surf);border-radius:16px 16px 0 0;z-index:201;transform:translateY(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:calc(env(safe-area-inset-bottom)+80px)}
+.sh{position:fixed;bottom:0;left:0;right:0;max-height:calc(90vh - 60px - env(safe-area-inset-bottom));background:var(--surf);border-radius:16px 16px 0 0;z-index:201;transform:translateY(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:calc(env(safe-area-inset-bottom)+24px)}
 .sh.open{transform:translateY(0)}
 .shn{width:36px;height:4px;background:var(--surf3);border-radius:2px;margin:12px auto 4px}
 .shi{padding:0 16px 24px}
@@ -775,7 +775,26 @@ document.addEventListener("keydown",e=>{
 });
 
 // ── INIT ─────────────────────────────────────────────────────────────────────
-render();
+async function init() {
+  // If localStorage already has data, just render it
+  if (WL.length > 0) { render(); renderHunt(); return; }
+
+  // Otherwise try to seed from wishlist.json (works on GitHub Pages)
+  try {
+    const resp = await fetch('wishlist.json');
+    if (!resp.ok) throw new Error('not found');
+    const data = await resp.json();
+    if (Array.isArray(data) && data.length) {
+      WL = data;
+      save(WL); // persist to localStorage so future loads are instant
+    }
+  } catch (e) {
+    // No JSON file or fetch failed — start with empty list, that's fine
+  }
+  render();
+  renderHunt();
+}
+init();
 </script>
 </body>
 </html>
