@@ -105,8 +105,10 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 .ov.open{opacity:1;pointer-events:all}
 .sh{position:fixed;bottom:calc(56px + env(safe-area-inset-bottom));left:0;right:0;max-height:calc(88vh - 56px - env(safe-area-inset-bottom));background:var(--surf);border-radius:16px 16px 0 0;z-index:201;transform:translateY(calc(100% + 56px + env(safe-area-inset-bottom)));transition:transform .28s cubic-bezier(.4,0,.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:24px}
 .sh.open{transform:translateY(0)}
-
-.shn{width:36px;height:4px;background:var(--surf3);border-radius:2px;margin:12px auto 4px}
+.sh.dragging{transition:none}
+.shn{width:36px;height:4px;background:var(--surf3);border-radius:2px;margin:12px auto 4px;cursor:grab}
+.tag-4k{background:rgba(126,184,247,.15);border-color:var(--acc);color:var(--acc);font-weight:700}
+.chip.active-4k{background:var(--acc-dim);border-color:var(--acc);color:var(--acc);font-weight:700}
 .shi{padding:0 16px 24px}
 .shh{display:flex;gap:14px;margin-bottom:16px;padding-top:8px}
 .shp{width:90px;flex-shrink:0;aspect-ratio:2/3;border-radius:8px;overflow:hidden;background:var(--surf2)}
@@ -230,6 +232,7 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
       <div class="chip" id="chip-hot" onclick="setPriFilter('Must Own',this)">🔴 Must Own</div>
       <div class="chip" id="chip-med" onclick="setPriFilter('High',this)">🟡 High</div>
       <div class="chip" id="chip-low" onclick="setPriFilter('Someday',this)">🔵 Someday</div>
+      <div class="chip" id="chip-4k" onclick="set4kFilter(this)">4K</div>
     </div>
     <div class="sortrow">
       <span class="sortlabel">Sort</span>
@@ -398,7 +401,9 @@ function saveArchive(titles){try{localStorage.setItem(ARCHIVE_KEY,JSON.stringify
 let WL=load();
 let ARCHIVE_TITLES=loadArchive();
 let filterPri="all";
+let filter4k=false;
 let sortKey="title";
+let sortDir=1;
 let openItem=null;
 let tmdbTimer=null;
 
@@ -414,7 +419,8 @@ function getFiltered(){
   const q=(document.getElementById("wl-search").value||"").toLowerCase();
   let list=WL.filter(f=>{
     if(filterPri!=="all"&&f.priority!==filterPri)return false;
-    if(q&&!(f.title+" "+(f.director||"")+" "+(f.genre||"")).toLowerCase().includes(q))return false;
+    if(filter4k&&!f.has4k)return false;
+    if(q&&!(f.title+" "+(f.director||"")+" "+(f.genre||"")+" "+(f.distributor||"")).toLowerCase().includes(q))return false;
     return true;
   });
   list.sort((a,b)=>{
@@ -462,6 +468,13 @@ function setPriFilter(p,el){
   else if(p==="Must Own")el.className="chip active-hot";
   else if(p==="High")el.className="chip active-med";
   else el.className="chip active-low";
+  // restore 4K chip state
+  if(filter4k)document.getElementById("chip-4k").className="chip active-4k";
+  render();
+}
+function set4kFilter(el){
+  filter4k=!filter4k;
+  el.className=filter4k?"chip active-4k":"chip";
   render();
 }
 function setSort(k,el){
@@ -490,6 +503,7 @@ function openSheet(id){
         <div class="shd">${f.director?ex(f.director):""}${f.year?` · ${f.year}`:""}</div>
         <div class="tags">
           <span class="tag tag-${pc}">${["Must Own","High","Someday"].includes(f.priority)?{Must:"🔴 Must Own",High:"🟡 High",Someday:"🔵 Someday"}[f.priority.replace(" Own","")]||"🔵 "+f.priority:"🔵 "+f.priority}</span>
+          ${f.has4k?`<span class="tag tag-4k">4K</span>`:""}
           ${ownedTag}
         </div>
       </div>
@@ -497,6 +511,7 @@ function openSheet(id){
     ${f.genre?`<div class="tags" style="margin-bottom:12px">${f.genre.split(",").slice(0,4).map(g=>`<span class="tag">${g.trim()}</span>`).join("")}</div>`:""}
     ${f.runtime?`<div class="dr"><span class="lb">Runtime</span><span class="vl">${f.runtime} min</span></div>`:""}
     ${f.country?`<div class="dr"><span class="lb">Country</span><span class="vl">${f.country}</span></div>`:""}
+    ${f.distributor?`<div class="dr"><span class="lb">Label</span><span class="vl">${ex(f.distributor)}</span></div>`:""}
     ${f.notes?`<div class="dr"><span class="lb">Notes</span><span class="vl" style="white-space:pre-wrap">${ex(f.notes)}</span></div>`:""}
     <hr class="divl">
     <div class="field">
@@ -506,6 +521,17 @@ function openSheet(id){
         <option value="High"${f.priority==="High"?" selected":""}>🟡 High</option>
         <option value="Someday"${f.priority==="Someday"?" selected":""}>🔵 Someday</option>
       </select>
+    </div>
+    <div class="field">
+      <label>Distributor / Label</label>
+      <input type="text" class="pri-select" id="sh-distributor" value="${ex(f.distributor||"")}" placeholder="e.g. Criterion, Arrow, Kino Lorber…" onblur="updateField('${f.id}','distributor',this.value)">
+    </div>
+    <div class="field" style="display:flex;align-items:center;gap:10px;margin-top:4px">
+      <label style="margin-bottom:0;flex:1">4K disc available</label>
+      <label style="display:flex;align-items:center;gap:6px;cursor:pointer;margin-bottom:0">
+        <input type="checkbox" id="sh-4k" ${f.has4k?"checked":""} onchange="updateField('${f.id}','has4k',this.checked)" style="width:16px;height:16px;accent-color:var(--acc);cursor:pointer">
+        <span style="font-size:13px;color:var(--mut)">${f.has4k?"Yes":"No"}</span>
+      </label>
     </div>
     <div class="field">
       <label>Notes</label>
@@ -523,9 +549,11 @@ function openSheet(id){
 }
 
 function closeSheet(){
-  // Save any unsaved notes before tearing down
+  // Save any unsaved fields before tearing down
   const notesEl=document.querySelector("#shi .notes-area");
-  if(notesEl&&openItem){updateNotes(openItem.id,notesEl.value);}
+  if(notesEl&&openItem)updateNotes(openItem.id,notesEl.value);
+  const distEl=document.getElementById("sh-distributor");
+  if(distEl&&openItem)updateField(openItem.id,"distributor",distEl.value);
   document.getElementById("sh").classList.remove("open");
   document.getElementById("ov").classList.remove("open");
   document.body.style.overflow="";
@@ -538,7 +566,17 @@ function updatePriority(id,val){
 }
 function updateNotes(id,val){
   const f=WL.find(x=>x.id===id);if(!f)return;
-  f.notes=val;save(WL);
+  f.notes=val||null;save(WL);
+}
+function updateField(id,field,val){
+  const f=WL.find(x=>x.id===id);if(!f)return;
+  f[field]=(typeof val==="boolean")?val:(val.trim()||null);
+  save(WL);
+  // Refresh the 4K label text next to checkbox
+  if(field==="has4k"){
+    const lbl=document.querySelector("#sh-4k + span");
+    if(lbl)lbl.textContent=val?"Yes":"No";
+  }
 }
 function markOwned(id,remove){
   const f=WL.find(x=>x.id===id);if(!f)return;
@@ -808,6 +846,40 @@ document.addEventListener("keydown",e=>{
     else if(document.getElementById("sh").classList.contains("open"))closeSheet();
   }
 });
+
+// ── SWIPE TO DISMISS SHEET ───────────────────────────────────────────────────
+(function(){
+  const sh=document.getElementById("sh");
+  let startY=0,startScrollTop=0,dragging=false,currentY=0;
+
+  sh.addEventListener("touchstart",e=>{
+    startY=e.touches[0].clientY;
+    startScrollTop=sh.scrollTop;
+    dragging=false;
+    currentY=0;
+  },{passive:true});
+
+  sh.addEventListener("touchmove",e=>{
+    const dy=e.touches[0].clientY-startY;
+    // Only drag down, and only if sheet is scrolled to top
+    if(dy>0&&startScrollTop<=0){
+      dragging=true;
+      currentY=dy;
+      sh.classList.add("dragging");
+      sh.style.transform=`translateY(${dy}px)`;
+      e.preventDefault();
+    }
+  },{passive:false});
+
+  sh.addEventListener("touchend",()=>{
+    sh.classList.remove("dragging");
+    sh.style.transform="";
+    if(dragging&&currentY>80){
+      closeSheet();
+    }
+    dragging=false;currentY=0;
+  });
+})();
 
 // ── INIT ─────────────────────────────────────────────────────────────────────
 async function init() {

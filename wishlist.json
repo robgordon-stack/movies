@@ -12,7 +12,9 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775371723640
+    "added": 1775371723640,
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775371684024m8um357g34",
@@ -27,7 +29,9 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775371684024
+    "added": 1775371684024,
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775371673725w1gn52pc3i",
@@ -42,7 +46,9 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775371673725
+    "added": 1775371673725,
+    "has4k": true,
+    "distributor": Second Sight, Criterion
   },
   {
     "id": "1775371657973pnqzf049mkr",
@@ -57,7 +63,9 @@
     "priority": "High",
     "notes": null,
     "owned": false,
-    "added": 1775371657973
+    "added": 1775371657973,
+    "has4k": true,
+    "distributor": null
   },
   {
     "id": "1775371647974cf3xxxpl6sc",
@@ -72,7 +80,9 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775371647974
+    "added": 1775371647974,
+    "has4k": true,
+    "distributor": A24
   },
   {
     "id": "1775371625207eoz1h8ix8ru",
@@ -87,7 +97,9 @@
     "priority": "High",
     "notes": null,
     "owned": false,
-    "added": 1775371625207
+    "added": 1775371625207,
+    "has4k": true,
+    "distributor": null
   },
   {
     "id": "17753716133406gnpzt8kahf",
@@ -102,7 +114,9 @@
     "priority": "High",
     "notes": null,
     "owned": false,
-    "added": 1775371613340
+    "added": 1775371613340,
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775371605424747e4u09fil",
@@ -117,7 +131,9 @@
     "priority": "High",
     "notes": null,
     "owned": false,
-    "added": 1775371605424
+    "added": 1775371605424,
+    "has4k": true,
+    "distributor": null
   },
   {
     "id": "1775371594107n44ungk2i6k",
@@ -132,7 +148,9 @@
     "priority": "High",
     "notes": null,
     "owned": false,
-    "added": 1775371594107
+    "added": 1775371594107,
+    "has4k": true,
+    "distributor": Second Sight
   },
   {
     "id": "1775371582007sg1j8ev1rgs",
@@ -147,7 +165,9 @@
     "priority": "High",
     "notes": null,
     "owned": false,
-    "added": 1775371582007
+    "added": 1775371582007,
+    "has4k": true,
+    "distributor": Kino Lorber
   },
   {
     "id": "1775371570590nupx8lx1ioq",
@@ -162,7 +182,9 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775371570590
+    "added": 1775371570590,
+    "has4k": true,
+    "distributor": null
   },
   {
     "id": "177537155579129ijzhk054x",
@@ -177,7 +199,9 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775371555792
+    "added": 1775371555792,
+    "has4k": true,
+    "distributor": null
   },
   {
     "id": "1775371542557j7c3c79i5wk",
@@ -192,7 +216,9 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775371542557
+    "added": 1775371542557,
+    "has4k": false,
+    "distributor": Criterion
   },
   {
     "id": "1775371530608mmgqpey1dym",
@@ -207,7 +233,9 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775371530608
+    "added": 1775371530608,
+    "has4k": true,
+    "distributor": Criterion
   },
   {
     "id": "1775371513524dur9q0gdn7u",
@@ -222,7 +250,9 @@
     "priority": "Someday",
     "notes": "Criterion 4K",
     "owned": false,
-    "added": 1775371513524
+    "added": 1775371513524,
+    "has4k": true,
+    "distributor": Criterion
   },
   {
     "id": "1775371492857ndgtur5e9jr",
@@ -237,7 +267,9 @@
     "priority": "Someday",
     "notes": "Criterion 4K",
     "owned": false,
-    "added": 1775371492857
+    "added": 1775371492857,
+    "has4k": true,
+    "distributor": Criterion
   },
   {
     "id": "17753714747914whsuu5empr",
@@ -252,7 +284,9 @@
     "priority": "Someday",
     "notes": "Criterion 4K",
     "owned": false,
-    "added": 1775371474791
+    "added": 1775371474791,
+    "has4k": true,
+    "distributor": Criterion
   },
   {
     "id": "17753714485577inbzhhv6dx",
@@ -267,7 +301,9 @@
     "priority": "High",
     "notes": null,
     "owned": false,
-    "added": 1775371448557
+    "added": 1775371448557,
+    "has4k": true,
+    "distributor": Criterion
   },
   {
     "id": "1775371437274qdgqjk7djf",
@@ -282,7 +318,9 @@
     "priority": "High",
     "notes": null,
     "owned": false,
-    "added": 1775371437274
+    "added": 1775371437274,
+    "has4k": true,
+    "distributor": null
   },
   {
     "id": "1775371424124nxuqflt15xo",
@@ -297,7 +335,9 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775371424124
+    "added": 1775371424124,
+    "has4k": true,
+    "distributor": Umbrella
   },
   {
     "id": "17753714094419j7ecwynwtt",
@@ -312,7 +352,9 @@
     "priority": "High",
     "notes": null,
     "owned": false,
-    "added": 1775371409441
+    "added": 1775371409441,
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775371378476wv5pwwnlysc",
@@ -327,7 +369,9 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775371378476
+    "added": 1775371378476,
+    "has4k": true,
+    "distributor": null
   },
   {
     "id": "1775371251892h8158xno6pn",
@@ -342,7 +386,9 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775371251892
+    "added": 1775371251892,
+    "has4k": true,
+    "distributor": null
   },
   {
     "id": "1775369564988i3ewoak8ml",
@@ -357,7 +403,9 @@
     "priority": "High",
     "notes": "Kino Lorber 4K",
     "owned": false,
-    "added": 1775369564988
+    "added": 1775369564988,
+    "has4k": true,
+    "distributor": Kino Lorber
   },
   {
     "id": "17753640833188k5tezc05vp",
@@ -373,7 +421,9 @@
     "country": "United States of America",
     "director": "Kate Beecroft",
     "tmdb_id": 1398911,
-    "lb": "https://letterboxd.com/search/WALL-E/"
+    "lb": "https://letterboxd.com/search/WALL-E/",
+    "has4k": true,
+    "distributor": Disney
   },
   {
     "id": "17753640833180ma06opdv8xl",
@@ -389,7 +439,9 @@
     "country": "Italy",
     "director": "Ettore Scola",
     "tmdb_id": 42269,
-    "lb": "https://letterboxd.com/search/We%20All%20Loved%20Each%20Other%20So%20Much/"
+    "lb": "https://letterboxd.com/search/We%20All%20Loved%20Each%20Other%20So%20Much/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775364083318xrbl3m8rqy",
@@ -405,7 +457,9 @@
     "country": "United States of America",
     "director": "Mark Pellington",
     "tmdb_id": 442709,
-    "lb": "https://letterboxd.com/search/Nostalgia/"
+    "lb": "https://letterboxd.com/search/Nostalgia/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775364083318t9ciojlhvxf",
@@ -421,7 +475,9 @@
     "country": "United States of America",
     "director": "Craig Zobel",
     "tmdb_id": 514847,
-    "lb": "https://letterboxd.com/search/The%20Hunt/"
+    "lb": "https://letterboxd.com/search/The%20Hunt/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775364083318lkou51klxhd",
@@ -437,7 +493,9 @@
     "country": "Sweden",
     "director": "Andrei Tarkovsky",
     "tmdb_id": 24657,
-    "lb": "https://letterboxd.com/film/the-sacrifice/"
+    "lb": "https://letterboxd.com/film/the-sacrifice/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775364083318o3obu8inwnd",
@@ -453,7 +511,9 @@
     "country": "Germany",
     "director": "Florian Henckel von Donnersmarck",
     "tmdb_id": 582,
-    "lb": "https://letterboxd.com/search/The%20Lives%20of%20Others/"
+    "lb": "https://letterboxd.com/search/The%20Lives%20of%20Others/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "17753640833187x20vxed2bb",
@@ -467,9 +527,11 @@
     "runtime": 190,
     "genre": "Drama, Romance",
     "country": "France",
-    "director": "Marcel Carné",
+    "director": "Marcel Carn\u00e9",
     "tmdb_id": 2457,
-    "lb": "https://letterboxd.com/search/Children%20of%20Paradise/"
+    "lb": "https://letterboxd.com/search/Children%20of%20Paradise/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "177536408331870ba5ekgioe",
@@ -485,7 +547,9 @@
     "country": "Czechoslovakia",
     "director": "Juraj Herz",
     "tmdb_id": 18352,
-    "lb": "https://letterboxd.com/search/The%20Cremator/"
+    "lb": "https://letterboxd.com/search/The%20Cremator/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "17753640833181f8t6jjg3du",
@@ -502,7 +566,9 @@
     "director": "Wes Anderson",
     "tmdb_id": 10315,
     "lb": "https://letterboxd.com/search/Fantastic%20Mr.%20Fox/",
-    "notes": "Criterion"
+    "notes": "Criterion",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "17753640833189s8zvmbze3m",
@@ -516,9 +582,11 @@
     "runtime": 139,
     "genre": "Drama",
     "country": "France",
-    "director": "Béla Tarr",
+    "director": "B\u00e9la Tarr",
     "tmdb_id": 23160,
-    "lb": "https://letterboxd.com/search/Werckmeister%20Harmonies/"
+    "lb": "https://letterboxd.com/search/Werckmeister%20Harmonies/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775364083318cz9t6cq6dwo",
@@ -534,7 +602,9 @@
     "country": "Japan",
     "director": "Toshio Matsumoto",
     "tmdb_id": 1556,
-    "lb": "https://letterboxd.com/search/Funeral%20Parade%20of%20Roses/"
+    "lb": "https://letterboxd.com/search/Funeral%20Parade%20of%20Roses/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "17753640833184yvczavxcd5",
@@ -550,7 +620,9 @@
     "country": "United States of America",
     "director": "Ernst Lubitsch",
     "tmdb_id": 198,
-    "lb": "https://letterboxd.com/search/To%20Be%20or%20Not%20to%20Be/"
+    "lb": "https://letterboxd.com/search/To%20Be%20or%20Not%20to%20Be/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775364083318i1ilmqr4cp",
@@ -566,7 +638,9 @@
     "country": "Denmark",
     "director": "Carl Theodor Dreyer",
     "tmdb_id": 48035,
-    "lb": "https://letterboxd.com/film/ordet/"
+    "lb": "https://letterboxd.com/film/ordet/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775364083318rkn35st264",
@@ -582,7 +656,9 @@
     "country": "France",
     "director": "Theo Angelopoulos",
     "tmdb_id": 47795,
-    "lb": "https://letterboxd.com/search/Landscape%20in%20the%20Mist/"
+    "lb": "https://letterboxd.com/search/Landscape%20in%20the%20Mist/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "17753640833185pwsv7inyqd",
@@ -598,7 +674,9 @@
     "country": "Iran",
     "director": "Asghar Farhadi",
     "tmdb_id": 60243,
-    "lb": "https://letterboxd.com/search/A%20Separation/"
+    "lb": "https://letterboxd.com/search/A%20Separation/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "177536408331875nvdur17q5",
@@ -614,7 +692,9 @@
     "country": "China",
     "director": "Hu Bo",
     "tmdb_id": 499556,
-    "lb": "https://letterboxd.com/search/An%20Elephant%20Sitting%20Still/"
+    "lb": "https://letterboxd.com/search/An%20Elephant%20Sitting%20Still/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "17753640833176v3cfc40ii9",
@@ -630,7 +710,9 @@
     "country": "Japan",
     "director": "Satoshi Kon",
     "tmdb_id": 10494,
-    "lb": "https://letterboxd.com/search/Perfect%20Blue/"
+    "lb": "https://letterboxd.com/search/Perfect%20Blue/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775364083317qt6i0kugl6s",
@@ -646,7 +728,9 @@
     "country": "Japan",
     "director": "Hayao Miyazaki",
     "tmdb_id": 128,
-    "lb": "https://letterboxd.com/search/Princess%20Mononoke/"
+    "lb": "https://letterboxd.com/search/Princess%20Mononoke/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775364083317w5ulmdoqxv",
@@ -662,7 +746,9 @@
     "country": "Japan",
     "director": "Hirokazu Kore-eda",
     "tmdb_id": 2517,
-    "lb": "https://letterboxd.com/search/Nobody%20Knows/"
+    "lb": "https://letterboxd.com/search/Nobody%20Knows/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "177536385586906ulpitei45h",
@@ -678,7 +764,9 @@
     "country": "United Kingdom",
     "director": "Danny Boyle",
     "tmdb_id": 1100988,
-    "lb": "https://letterboxd.com/search/28%20Days%20Later/"
+    "lb": "https://letterboxd.com/search/28%20Days%20Later/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363855869chovj2v2qvd",
@@ -694,7 +782,9 @@
     "country": "United States of America",
     "director": "Terrence Malick",
     "tmdb_id": 8967,
-    "lb": "https://letterboxd.com/search/The%20Tree%20of%20Life/"
+    "lb": "https://letterboxd.com/search/The%20Tree%20of%20Life/",
+    "has4k": false,
+    "distributor": Criterion
   },
   {
     "id": "177536385586972vtk0ejktl",
@@ -710,7 +800,9 @@
     "country": "United States of America",
     "director": "Gus Van Sant",
     "tmdb_id": 489,
-    "lb": "https://letterboxd.com/search/Good%20Will%20Hunting/"
+    "lb": "https://letterboxd.com/search/Good%20Will%20Hunting/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363855869v06aohojjvg",
@@ -726,7 +818,9 @@
     "country": "Japan",
     "director": "Akira Kurosawa",
     "tmdb_id": 3777,
-    "lb": "https://letterboxd.com/search/Throne%20of%20Blood/"
+    "lb": "https://letterboxd.com/search/Throne%20of%20Blood/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363855869l683eznh8k",
@@ -742,7 +836,9 @@
     "country": "United States of America",
     "director": "David Fincher",
     "tmdb_id": 37799,
-    "lb": "https://letterboxd.com/search/Network/"
+    "lb": "https://letterboxd.com/search/Network/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363855869wt6kbjr5krf",
@@ -759,7 +855,9 @@
     "director": "Paul Verhoeven",
     "tmdb_id": 563,
     "lb": "https://letterboxd.com/search/Starship%20Troopers/",
-    "notes": "4K"
+    "notes": "4K",
+    "has4k": true,
+    "distributor": null
   },
   {
     "id": "1775363855869mhlk0kgw5x",
@@ -775,7 +873,9 @@
     "country": "United States of America",
     "director": "Peter Weir",
     "tmdb_id": 207,
-    "lb": "https://letterboxd.com/search/Dead%20Poets%20Society/"
+    "lb": "https://letterboxd.com/search/Dead%20Poets%20Society/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363855869gvw8u1mxvcq",
@@ -791,7 +891,9 @@
     "country": "United States of America",
     "director": "Frank Darabont",
     "tmdb_id": 497,
-    "lb": "https://letterboxd.com/search/The%20Green%20Mile/"
+    "lb": "https://letterboxd.com/search/The%20Green%20Mile/",
+    "has4k": true,
+    "distributor": null
   },
   {
     "id": "1775363855869w7mogtrf41",
@@ -807,7 +909,9 @@
     "country": "United States of America",
     "director": "Brian De Palma",
     "tmdb_id": 111,
-    "lb": "https://letterboxd.com/search/Scarface/"
+    "lb": "https://letterboxd.com/search/Scarface/",
+    "has4k": true,
+    "distributor": null
   },
   {
     "id": "1775363855869n71n1wzf2us",
@@ -823,7 +927,9 @@
     "country": "United States of America",
     "director": "Martin Scorsese",
     "tmdb_id": 11324,
-    "lb": "https://letterboxd.com/search/Shutter%20Island/"
+    "lb": "https://letterboxd.com/search/Shutter%20Island/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363855869rsjkbb9bh0a",
@@ -839,7 +945,9 @@
     "country": "United States of America",
     "director": "Quentin Tarantino",
     "tmdb_id": 273248,
-    "lb": "https://letterboxd.com/search/The%20Hateful%20Eight/"
+    "lb": "https://letterboxd.com/search/The%20Hateful%20Eight/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363855869en9evv7xd9",
@@ -856,7 +964,9 @@
     "director": "Jane Campion",
     "tmdb_id": 600583,
     "lb": "https://letterboxd.com/search/The%20Power%20of%20the%20Dog/",
-    "notes": "Criterion 4K"
+    "notes": "Criterion 4K",
+    "has4k": true,
+    "distributor": Criterion
   },
   {
     "id": "1775363855869m563tc4q2ob",
@@ -872,7 +982,9 @@
     "country": "United States of America",
     "director": "Sergio Leone",
     "tmdb_id": 311,
-    "lb": "https://letterboxd.com/search/Once%20Upon%20a%20Time%20in%20America/"
+    "lb": "https://letterboxd.com/search/Once%20Upon%20a%20Time%20in%20America/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "17753638558693nxmruzyljr",
@@ -888,7 +1000,9 @@
     "country": "United States of America",
     "director": "Steven Spielberg",
     "tmdb_id": 87,
-    "lb": "https://letterboxd.com/search/Indiana%20Jones%20and%20the%20Temple%20of%20Doom/"
+    "lb": "https://letterboxd.com/search/Indiana%20Jones%20and%20the%20Temple%20of%20Doom/",
+    "has4k": true,
+    "distributor": null
   },
   {
     "id": "1775363855869cazsynrg2x",
@@ -904,7 +1018,9 @@
     "country": "United States of America",
     "director": "Darren Aronofsky",
     "tmdb_id": 44214,
-    "lb": "https://letterboxd.com/search/Black%20Swan/"
+    "lb": "https://letterboxd.com/search/Black%20Swan/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363855869dp7cd1m6k2q",
@@ -920,7 +1036,9 @@
     "country": "Canada",
     "director": "Ang Lee",
     "tmdb_id": 142,
-    "lb": "https://letterboxd.com/search/Brokeback%20Mountain/"
+    "lb": "https://letterboxd.com/search/Brokeback%20Mountain/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363855868nw52ffxuyum",
@@ -936,7 +1054,9 @@
     "country": "United States of America",
     "director": "Robert Zemeckis",
     "tmdb_id": 13,
-    "lb": "https://letterboxd.com/search/Forrest%20Gump/"
+    "lb": "https://letterboxd.com/search/Forrest%20Gump/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363855868jmfcm2u3edj",
@@ -953,11 +1073,13 @@
     "director": "Benny Safdie, Josh Safdie",
     "tmdb_id": 473033,
     "lb": "https://letterboxd.com/search/Uncut%20Gems/",
-    "notes": "Criterion 4K"
+    "notes": "Criterion 4K",
+    "has4k": true,
+    "distributor": Criterion
   },
   {
     "id": "17753637107522lhva4egqmt",
-    "title": "Y Tu Mamá También",
+    "title": "Y Tu Mam\u00e1 Tambi\u00e9n",
     "priority": "High",
     "added": 1775363710752,
     "owned": false,
@@ -967,9 +1089,11 @@
     "runtime": 106,
     "genre": "Drama, Romance",
     "country": "Mexico",
-    "director": "Alfonso Cuarón",
+    "director": "Alfonso Cuar\u00f3n",
     "tmdb_id": 1391,
-    "lb": "https://letterboxd.com/search/Y%20Tu%20Mam%C3%A1%20Tambi%C3%A9n/"
+    "lb": "https://letterboxd.com/search/Y%20Tu%20Mam%C3%A1%20Tambi%C3%A9n/",
+    "has4k": false,
+    "distributor": Criterion
   },
   {
     "id": "177536371075278av6jlpnc6",
@@ -986,7 +1110,9 @@
     "director": "Robert Wise",
     "tmdb_id": 15121,
     "lb": "https://letterboxd.com/search/The%20Sound%20of%20Music/",
-    "notes": "4K"
+    "notes": "4K",
+    "has4k": true,
+    "distributor": null
   },
   {
     "id": "1775363710752glfyzn774ul",
@@ -1002,7 +1128,9 @@
     "country": "United States of America",
     "director": "Joel Coen",
     "tmdb_id": 378,
-    "lb": "https://letterboxd.com/search/Raising%20Arizona/"
+    "lb": "https://letterboxd.com/search/Raising%20Arizona/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363710752pkmwphbvku",
@@ -1018,7 +1146,9 @@
     "country": "United States of America",
     "director": "Greta Gerwig",
     "tmdb_id": 391713,
-    "lb": "https://letterboxd.com/search/Lady%20Bird/"
+    "lb": "https://letterboxd.com/search/Lady%20Bird/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363710752tgb70ouxdw",
@@ -1035,7 +1165,9 @@
     "director": "Ingmar Bergman",
     "tmdb_id": 12761,
     "lb": "https://letterboxd.com/search/Autumn%20Sonata/",
-    "notes": "Criterion Bluray"
+    "notes": "Criterion Bluray",
+    "has4k": false,
+    "distributor": Criterion
   },
   {
     "id": "17753637107521n4znt8b1mv",
@@ -1051,7 +1183,9 @@
     "country": "United Kingdom",
     "director": "Terry Jones, Terry Gilliam",
     "tmdb_id": 762,
-    "lb": "https://letterboxd.com/search/Monty%20Python%20and%20the%20Holy%20Grail/"
+    "lb": "https://letterboxd.com/search/Monty%20Python%20and%20the%20Holy%20Grail/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363710752j3ubsg683rp",
@@ -1067,7 +1201,9 @@
     "country": "United States of America",
     "director": "Charlie Chaplin",
     "tmdb_id": 914,
-    "lb": "https://letterboxd.com/search/The%20Great%20Dictator/"
+    "lb": "https://letterboxd.com/search/The%20Great%20Dictator/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363710752gomuc3m0qiw",
@@ -1083,7 +1219,9 @@
     "country": "Sweden",
     "director": "Ingmar Bergman",
     "tmdb_id": 133919,
-    "lb": "https://letterboxd.com/search/Scenes%20from%20a%20Marriage/"
+    "lb": "https://letterboxd.com/search/Scenes%20from%20a%20Marriage/",
+    "has4k": false,
+    "distributor": Criterion
   },
   {
     "id": "1775363710752op45th2royl",
@@ -1099,7 +1237,9 @@
     "country": "Italy",
     "director": "Giuseppe Tornatore",
     "tmdb_id": 11216,
-    "lb": "https://letterboxd.com/search/Cinema%20Paradiso/"
+    "lb": "https://letterboxd.com/search/Cinema%20Paradiso/",
+    "has4k": true,
+    "distributor": Arrow
   },
   {
     "id": "1775363710752m8cnd2l7g8m",
@@ -1115,7 +1255,9 @@
     "country": "United States of America",
     "director": "Richard Linklater",
     "tmdb_id": 80,
-    "lb": "https://letterboxd.com/search/Before%20Sunset/"
+    "lb": "https://letterboxd.com/search/Before%20Sunset/",
+    "has4k": true,
+    "distributor": Criterion
   },
   {
     "id": "1775363710752bwrau27f6j",
@@ -1131,7 +1273,9 @@
     "country": "United States of America",
     "director": "Joseph L. Mankiewicz",
     "tmdb_id": 705,
-    "lb": "https://letterboxd.com/search/All%20About%20Eve/"
+    "lb": "https://letterboxd.com/search/All%20About%20Eve/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "17753637107510zydx1iw6rjg",
@@ -1148,7 +1292,9 @@
     "director": "Billy Wilder",
     "tmdb_id": 239,
     "lb": "https://letterboxd.com/search/Some%20Like%20It%20Hot/",
-    "notes": "4K"
+    "notes": "4K",
+    "has4k": true,
+    "distributor": null
   },
   {
     "id": "177536371075180vc972vgje",
@@ -1165,7 +1311,9 @@
     "director": "Ridley Scott",
     "tmdb_id": 98,
     "lb": "https://letterboxd.com/search/Gladiator/",
-    "notes": "4k"
+    "notes": "4k",
+    "has4k": true,
+    "distributor": null
   },
   {
     "id": "17753635899860b5zq1t06lgp",
@@ -1181,7 +1329,9 @@
     "country": "United States of America",
     "director": "Quentin Tarantino",
     "tmdb_id": 68718,
-    "lb": "https://letterboxd.com/search/Django%20Unchained/"
+    "lb": "https://letterboxd.com/search/Django%20Unchained/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589986qxf06l9aawq",
@@ -1197,7 +1347,9 @@
     "country": "United States of America",
     "director": "David Fincher",
     "tmdb_id": 37799,
-    "lb": "https://letterboxd.com/search/The%20Social%20Network/"
+    "lb": "https://letterboxd.com/search/The%20Social%20Network/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589986q8r12s7svoj",
@@ -1213,7 +1365,9 @@
     "country": "United Kingdom",
     "director": "Joel Coen",
     "tmdb_id": 275,
-    "lb": "https://letterboxd.com/search/Fargo/"
+    "lb": "https://letterboxd.com/search/Fargo/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589986poenamztics",
@@ -1229,7 +1383,9 @@
     "country": "United States of America",
     "director": "John McTiernan",
     "tmdb_id": 562,
-    "lb": "https://letterboxd.com/search/Die%20Hard/"
+    "lb": "https://letterboxd.com/search/Die%20Hard/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589986hsd70m1sx5",
@@ -1245,7 +1401,9 @@
     "country": "United States of America",
     "director": "Christopher Nolan",
     "tmdb_id": 77,
-    "lb": "https://letterboxd.com/search/Memento/"
+    "lb": "https://letterboxd.com/search/Memento/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589986ghqh0h73ctc",
@@ -1261,7 +1419,9 @@
     "country": "United Kingdom",
     "director": "Christopher Nolan",
     "tmdb_id": 27205,
-    "lb": "https://letterboxd.com/search/Inception/"
+    "lb": "https://letterboxd.com/search/Inception/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "177536358998636jfh2v1xna",
@@ -1277,7 +1437,9 @@
     "country": "United States of America",
     "director": "Steven Spielberg",
     "tmdb_id": 85,
-    "lb": "https://letterboxd.com/search/Raiders%20of%20the%20Lost%20Ark/"
+    "lb": "https://letterboxd.com/search/Raiders%20of%20the%20Lost%20Ark/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "17753635899869keba4ku8b",
@@ -1293,7 +1455,9 @@
     "country": "France",
     "director": "James Cameron",
     "tmdb_id": 280,
-    "lb": "https://letterboxd.com/search/Terminator%202%3A%20Judgment%20Day/"
+    "lb": "https://letterboxd.com/search/Terminator%202%3A%20Judgment%20Day/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "177536358998611lazodq3qlb",
@@ -1309,7 +1473,9 @@
     "country": "United Kingdom",
     "director": "James Cameron",
     "tmdb_id": 218,
-    "lb": "https://letterboxd.com/search/The%20Terminator/"
+    "lb": "https://letterboxd.com/search/The%20Terminator/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589986g3p1wdhzib",
@@ -1325,7 +1491,9 @@
     "country": "United States of America",
     "director": "Steven Spielberg",
     "tmdb_id": 857,
-    "lb": "https://letterboxd.com/search/Saving%20Private%20Ryan/"
+    "lb": "https://letterboxd.com/search/Saving%20Private%20Ryan/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "17753635899866ii5ko2ogvm",
@@ -1342,7 +1510,9 @@
     "director": "Peter Jackson",
     "tmdb_id": 120,
     "lb": "https://letterboxd.com/search/The%20Lord%20of%20the%20Rings%3A%20The%20Fellowship%20of%20the%20Ring/",
-    "notes": "4K"
+    "notes": "4K",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589986iyceng33ntq",
@@ -1358,7 +1528,9 @@
     "country": "New Zealand",
     "director": "Peter Jackson",
     "tmdb_id": 122,
-    "lb": "https://letterboxd.com/search/The%20Lord%20of%20the%20Rings%3A%20The%20Return%20of%20the%20King/"
+    "lb": "https://letterboxd.com/search/The%20Lord%20of%20the%20Rings%3A%20The%20Return%20of%20the%20King/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589986bt0wr659nc5",
@@ -1374,7 +1546,9 @@
     "country": "New Zealand",
     "director": "Peter Jackson",
     "tmdb_id": 121,
-    "lb": "https://letterboxd.com/search/The%20Lord%20of%20the%20Rings%3A%20The%20Two%20Towers/"
+    "lb": "https://letterboxd.com/search/The%20Lord%20of%20the%20Rings%3A%20The%20Two%20Towers/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "17753635899860ynfg4m8oy5g",
@@ -1391,7 +1565,9 @@
     "director": "Martin Scorsese",
     "tmdb_id": 769,
     "lb": "https://letterboxd.com/search/Goodfellas/",
-    "notes": "4K"
+    "notes": "4K",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589986curtr4o4y6k",
@@ -1405,9 +1581,11 @@
     "runtime": 148,
     "genre": "Drama",
     "country": "Japan",
-    "director": "Tōya Satō",
+    "director": "T\u014dya Sat\u014d",
     "tmdb_id": 76826,
-    "lb": "https://letterboxd.com/search/Grave%20of%20the%20Fireflies/"
+    "lb": "https://letterboxd.com/search/Grave%20of%20the%20Fireflies/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589986drfuuazm5pt",
@@ -1423,7 +1601,9 @@
     "country": "Japan",
     "director": "Hayao Miyazaki",
     "tmdb_id": 129,
-    "lb": "https://letterboxd.com/search/Spirited%20Away/"
+    "lb": "https://letterboxd.com/search/Spirited%20Away/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589986hm15ib2qh9g",
@@ -1437,10 +1617,12 @@
     "runtime": 154,
     "genre": "Drama, Thriller",
     "country": "Mexico",
-    "director": "Alejandro González Iñárritu",
+    "director": "Alejandro Gonz\u00e1lez I\u00f1\u00e1rritu",
     "tmdb_id": 55,
     "lb": "https://letterboxd.com/search/Amores%20Perros/",
-    "notes": "Criterion\n"
+    "notes": "Criterion\n",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589986ygphtg1hotp",
@@ -1454,9 +1636,11 @@
     "runtime": 98,
     "genre": "Drama, Fantasy",
     "country": "Spain",
-    "director": "Víctor Erice",
+    "director": "V\u00edctor Erice",
     "tmdb_id": 4495,
-    "lb": "https://letterboxd.com/search/The%20Spirit%20of%20the%20Beehive/"
+    "lb": "https://letterboxd.com/search/The%20Spirit%20of%20the%20Beehive/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589986ug5z8lx5vo",
@@ -1473,7 +1657,9 @@
     "director": "Chen Kaige",
     "tmdb_id": 10997,
     "lb": "https://letterboxd.com/search/Farewell%20My%20Concubine/",
-    "notes": "Criterion 4K"
+    "notes": "Criterion 4K",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "17753635899862i5xvqcq0f1",
@@ -1489,7 +1675,9 @@
     "country": "United States of America",
     "director": "Charles Burnett",
     "tmdb_id": 27432,
-    "lb": "https://letterboxd.com/film/killer-of-sheep/"
+    "lb": "https://letterboxd.com/film/killer-of-sheep/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589986fpcpt5k2ic7",
@@ -1505,11 +1693,13 @@
     "country": "Germany",
     "director": "Bernardo Bertolucci",
     "tmdb_id": 8416,
-    "lb": "https://letterboxd.com/search/The%20Conformist/"
+    "lb": "https://letterboxd.com/search/The%20Conformist/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589985tj4nam3pbd",
-    "title": "Céline and Julie Go Boating",
+    "title": "C\u00e9line and Julie Go Boating",
     "priority": "Someday",
     "added": 1775363589985,
     "owned": false,
@@ -1521,7 +1711,9 @@
     "country": "France",
     "director": "Jacques Rivette",
     "tmdb_id": 27019,
-    "lb": "https://letterboxd.com/search/C%C3%A9line%20and%20Julie%20Go%20Boating/"
+    "lb": "https://letterboxd.com/search/C%C3%A9line%20and%20Julie%20Go%20Boating/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589985j7pc6p2yx3a",
@@ -1535,9 +1727,11 @@
     "runtime": 106,
     "genre": "Drama, Romance",
     "country": "France",
-    "director": "François Truffaut",
+    "director": "Fran\u00e7ois Truffaut",
     "tmdb_id": 1628,
-    "lb": "https://letterboxd.com/search/Jules%20and%20Jim/"
+    "lb": "https://letterboxd.com/search/Jules%20and%20Jim/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "17753635899857d567191xnp",
@@ -1553,7 +1747,9 @@
     "country": "Japan",
     "director": "Akira Kurosawa",
     "tmdb_id": 3780,
-    "lb": "https://letterboxd.com/search/Red%20Beard/"
+    "lb": "https://letterboxd.com/search/Red%20Beard/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589985r0d9s82r3g",
@@ -1570,7 +1766,9 @@
     "director": "Akira Kurosawa",
     "tmdb_id": 11878,
     "lb": "https://letterboxd.com/search/Yojimbo/",
-    "notes": "BFI 4K"
+    "notes": "BFI 4K",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589985wp0lb8sa139",
@@ -1586,7 +1784,9 @@
     "country": "Italy",
     "director": "Roberto Benigni",
     "tmdb_id": 637,
-    "lb": "https://letterboxd.com/search/Life%20Is%20Beautiful/"
+    "lb": "https://letterboxd.com/search/Life%20Is%20Beautiful/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589985xf4vq1aoblq",
@@ -1602,7 +1802,9 @@
     "country": "United Kingdom",
     "director": "Charlotte Wells",
     "tmdb_id": 965150,
-    "lb": "https://letterboxd.com/search/Aftersun/"
+    "lb": "https://letterboxd.com/search/Aftersun/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589985khfxw1e5ltr",
@@ -1619,7 +1821,9 @@
     "director": "Celine Song",
     "tmdb_id": 666277,
     "lb": "https://letterboxd.com/search/Past%20Lives/",
-    "notes": "4K"
+    "notes": "4K",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "177536358998524ycdlt9b1a",
@@ -1635,7 +1839,9 @@
     "country": "France",
     "director": "Alain Resnais",
     "tmdb_id": 5544,
-    "lb": "https://letterboxd.com/search/Hiroshima%20Mon%20Amour/"
+    "lb": "https://letterboxd.com/search/Hiroshima%20Mon%20Amour/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "17753635899859028ivfg7v5",
@@ -1652,7 +1858,9 @@
     "director": "Akira Kurosawa",
     "tmdb_id": 11712,
     "lb": "https://letterboxd.com/search/Sanjuro/",
-    "notes": "BFI 4K"
+    "notes": "BFI 4K",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "17753635899858ag3d93ketn",
@@ -1669,7 +1877,9 @@
     "director": "Roman Polanski",
     "tmdb_id": 423,
     "lb": "https://letterboxd.com/search/The%20Pianist/",
-    "notes": "4K"
+    "notes": "4K",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589985sqazc1r9re",
@@ -1685,7 +1895,9 @@
     "country": "United States of America",
     "director": "Charlie Chaplin",
     "tmdb_id": 3082,
-    "lb": "https://letterboxd.com/search/Modern%20Times/"
+    "lb": "https://letterboxd.com/search/Modern%20Times/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "17753635899855xp0c0614w",
@@ -1701,7 +1913,9 @@
     "country": "France",
     "director": "Jean-Pierre Melville",
     "tmdb_id": 15383,
-    "lb": "https://letterboxd.com/search/Army%20of%20Shadows/"
+    "lb": "https://letterboxd.com/search/Army%20of%20Shadows/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589985f9jsub71b8",
@@ -1715,10 +1929,12 @@
     "runtime": 101,
     "genre": "Comedy, Drama",
     "country": "Spain",
-    "director": "Pedro Almodóvar",
+    "director": "Pedro Almod\u00f3var",
     "tmdb_id": 99,
     "lb": "https://letterboxd.com/search/All%20About%20My%20Mother/",
-    "notes": "Criterion"
+    "notes": "Criterion",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589985crerbmkmc4",
@@ -1734,7 +1950,9 @@
     "country": "United States of America",
     "director": "Paul Thomas Anderson",
     "tmdb_id": 7345,
-    "lb": "https://letterboxd.com/search/There%20Will%20Be%20Blood/"
+    "lb": "https://letterboxd.com/search/There%20Will%20Be%20Blood/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "17753635899856b4ux3jm27r",
@@ -1750,7 +1968,9 @@
     "country": "Japan",
     "director": "Hirokazu Kore-eda",
     "tmdb_id": 505192,
-    "lb": "https://letterboxd.com/search/Shoplifters/"
+    "lb": "https://letterboxd.com/search/Shoplifters/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589985rstiihcjugn",
@@ -1764,9 +1984,11 @@
     "runtime": 90,
     "genre": "Drama",
     "country": "France",
-    "director": "Agnès Varda",
+    "director": "Agn\u00e8s Varda",
     "tmdb_id": 499,
-    "lb": "https://letterboxd.com/search/Cleo%20from%205%20to%207/"
+    "lb": "https://letterboxd.com/search/Cleo%20from%205%20to%207/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "1775363589985zhdqbtgri7a",
@@ -1780,9 +2002,11 @@
     "runtime": 121,
     "genre": "Drama, Romance",
     "country": "France",
-    "director": "Céline Sciamma",
+    "director": "C\u00e9line Sciamma",
     "tmdb_id": 531428,
-    "lb": "https://letterboxd.com/search/Portrait%20of%20a%20Lady%20on%20Fire/"
+    "lb": "https://letterboxd.com/search/Portrait%20of%20a%20Lady%20on%20Fire/",
+    "has4k": false,
+    "distributor": null
   },
   {
     "id": "17753632946879ox9abiknus",
@@ -1799,6 +2023,8 @@
     "owned": false,
     "added": 1775363294687,
     "tmdb_id": 405,
-    "lb": "https://letterboxd.com/search/La%20Strada/"
+    "lb": "https://letterboxd.com/search/La%20Strada/",
+    "has4k": false,
+    "distributor": null
   }
 ]
