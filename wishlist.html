@@ -98,6 +98,8 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 .pri-low{background:rgba(126,184,247,.85);color:#03111f}
 .owned-badge{position:absolute;top:4px;right:4px;background:rgba(92,206,160,.9);border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:10px}
 .archive-badge{position:absolute;top:4px;right:4px;background:rgba(92,206,160,.88);border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:#fff}
+.badge-4k{position:absolute;bottom:4px;right:4px;background:rgba(10,13,18,.82);border:1px solid rgba(126,184,247,.55);border-radius:3px;font-size:7px;font-weight:900;letter-spacing:.08em;color:var(--acc);padding:2px 4px;backdrop-filter:blur(4px)}
+.hunt-badge-4k{display:inline-block;background:rgba(10,13,18,.85);border:1px solid rgba(126,184,247,.5);border-radius:3px;font-size:9px;font-weight:900;letter-spacing:.06em;color:var(--acc);padding:1px 5px;vertical-align:middle;margin-left:4px}
 
 /* ── OVERLAY / SHEET ── */
 .ov{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:200;opacity:0;pointer-events:none;transition:opacity .2s}
@@ -229,6 +231,9 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
       <div class="chip" id="chip-low" onclick="setPriFilter('Someday',this)">🔵 Someday</div>
       <div class="chip" id="chip-4k" onclick="toggle4kFilter(this)">4K</div>
     </div>
+    <div class="frow" id="country-filter-row" style="display:none">
+      <div class="frow" id="country-chip-row"></div>
+    </div>
     <div class="sortrow">
       <span class="sortlabel">Sort</span>
       <div class="sortchip" id="sk-added" onclick="setSort('added',this)">Date added<span class="sd"></span></div>
@@ -290,8 +295,15 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
     </div>
 
     <div class="import-card">
+      <h3>🔍 Fetch missing metadata</h3>
+      <p>For any film that has an IMDb ID but is missing director, country, genre, or runtime, this will look up the data from OMDB and fill in the gaps automatically.</p>
+      <button class="import-btn" id="fetch-meta-btn" onclick="fetchMissingMetadata()">Fetch missing metadata</button>
+      <div class="import-success" id="fetch-meta-result"></div>
+    </div>
+
+    <div class="import-card">
       <h3>💾 Backup &amp; restore</h3>
-      <p>Export your wishlist as JSON to back it up or transfer to another device.</p>
+      <p>Export your wishlist as JSON to back it up or transfer to another device. <strong style="color:var(--txt)">To keep mobile &amp; desktop in sync</strong>, export then replace <code style="font-size:11px;background:var(--surf2);padding:2px 5px;border-radius:4px">wishlist.json</code> on your server — both devices will pick it up automatically on next load.</p>
       <div style="display:flex;gap:8px">
         <button class="import-btn" onclick="exportJSON()" style="flex:1">Export JSON</button>
         <div style="position:relative;flex:1">
@@ -398,6 +410,7 @@ let WL=load();
 let ARCHIVE_TITLES=loadArchive();
 let filterPri="all";
 let filter4k=false;
+let filterCountry="all";
 let sortKey="title";
 let sortDir=1; // 1=asc, -1=desc
 let openItem=null;
@@ -416,7 +429,8 @@ function getFiltered(){
   let list=WL.filter(f=>{
     if(filterPri!=="all"&&f.priority!==filterPri)return false;
     if(filter4k&&!f.has4k)return false;
-    if(q&&!(f.title+" "+(f.director||"")+" "+(f.genre||"")+" "+(f.distributor||"")).toLowerCase().includes(q))return false;
+    if(filterCountry!=="all"&&(f.country||"").toLowerCase()!==filterCountry)return false;
+    if(q&&!(f.title+" "+(f.director||"")+" "+(f.genre||"")+" "+(f.distributor||"")+" "+(f.country||"")).toLowerCase().includes(q))return false;
     return true;
   });
   list.sort((a,b)=>{
@@ -444,9 +458,10 @@ function render(){
   document.getElementById("st-low").textContent=WL.filter(f=>f.priority==="Someday").length;
   document.getElementById("st-own").textContent=WL.filter(f=>f.owned).length;
 
-  if(!list.length){grid.innerHTML="";empty.style.display="block";return;}
+  if(!list.length){grid.innerHTML="";empty.style.display="block";renderCountryChips();return;}
   empty.style.display="none";
   grid.innerHTML=list.map(f=>cardHtml(f)).join("");
+  renderCountryChips();
 }
 
 function cardHtml(f){
@@ -456,7 +471,8 @@ function cardHtml(f){
   const fb=f.poster?`<div class="fb2" style="display:none"><div class="ft">${ex(f.title)}</div><div class="fy">${f.year||""}</div></div>`
     :`<div class="fb2"><div class="ft">${ex(f.title)}</div><div class="fy">${f.year||""}</div></div>`;
   const owned=isOwned?`<div class="archive-badge">✓</div>`:"";
-  return`<div class="card" onclick="openSheet('${ex(f.id)}')">${img}${fb}<div class="pri-badge pri-${pc}">${PRI_LABEL[f.priority]}</div>${owned}</div>`;
+  const badge4k=f.has4k?`<div class="badge-4k">4K</div>`:"";
+  return`<div class="card" onclick="openSheet('${ex(f.id)}')">${img}${fb}<div class="pri-badge pri-${pc}">${PRI_LABEL[f.priority]}</div>${owned}${badge4k}</div>`;
 }
 
 function filterWishlist(){render();renderHunt();}
@@ -490,6 +506,24 @@ function toggle4kFilter(el){
   render();
 }
 
+function renderCountryChips(){
+  const row=document.getElementById("country-chip-row");
+  const wrap=document.getElementById("country-filter-row");
+  if(!row||!wrap)return;
+  const countries=[...new Set(WL.map(f=>(f.country||"").trim()).filter(c=>c))].sort();
+  if(!countries.length){wrap.style.display="none";return;}
+  wrap.style.display="";
+  row.innerHTML=`<div class="chip ${filterCountry==="all"?"active-all":""}" onclick="setCountryFilter('all',this)">🌍 All</div>`
+    +countries.map(c=>`<div class="chip ${filterCountry===c.toLowerCase()?"active-all":""}" onclick="setCountryFilter(${JSON.stringify(c.toLowerCase())},this)">${ex(c)}</div>`).join("");
+}
+
+function setCountryFilter(c,el){
+  filterCountry=c;
+  document.querySelectorAll("#country-chip-row .chip").forEach(ch=>ch.className="chip");
+  el.className="chip active-all";
+  render();
+}
+
 // ── SHEET ───────────────────────────────────────────────────────────────────
 function openSheet(id){
   const f=WL.find(x=>x.id===id);if(!f)return;
@@ -498,8 +532,9 @@ function openSheet(id){
   const isOwned=f.owned||ARCHIVE_TITLES.has(f.title.toLowerCase());
   const poster=f.poster?`<img src="${ex(f.poster)}" alt="${ex(f.title)}">`:`<div class="fb2"><div class="ft">${ex(f.title)}</div></div>`;
   const ownedTag=isOwned?`<span class="tag tag-owned">✓ In Archive</span>`:"";
-  const imdbBtn=f.imdb_id?`<a href="https://www.imdb.com/title/${f.imdb_id}/" target="_blank" class="extlink">IMDb</a>`:"";
+  const imdbBtn=f.imdb_id?`<a href="https://www.imdb.com/title/${f.imdb_id}/" target="_blank" class="extlink">IMDb ↗</a>`:"";
   const lbBtn=f.title?`<a href="https://letterboxd.com/search/${encodeURIComponent(f.title)}/" target="_blank" class="extlink">Letterboxd</a>`:"";
+  const k4tag=f.has4k?`<span class="tag" style="background:rgba(126,184,247,.15);border-color:var(--acc);color:var(--acc);font-weight:700">4K</span>`:"";
 
   document.getElementById("shi").innerHTML=`
     <div class="shh">
@@ -509,13 +544,14 @@ function openSheet(id){
         <div class="shd">${f.director?ex(f.director):""}${f.year?` · ${f.year}`:""}</div>
         <div class="tags">
           <span class="tag tag-${pc}">${["Must Own","High","Someday"].includes(f.priority)?{Must:"🔴 Must Own",High:"🟡 High",Someday:"🔵 Someday"}[f.priority.replace(" Own","")]||"🔵 "+f.priority:"🔵 "+f.priority}</span>
-          ${ownedTag}
+          ${ownedTag}${k4tag}
         </div>
       </div>
     </div>
     ${f.genre?`<div class="tags" style="margin-bottom:12px">${f.genre.split(",").slice(0,4).map(g=>`<span class="tag">${g.trim()}</span>`).join("")}</div>`:""}
     ${f.runtime?`<div class="dr"><span class="lb">Runtime</span><span class="vl">${f.runtime} min</span></div>`:""}
-    ${f.country?`<div class="dr"><span class="lb">Country</span><span class="vl">${f.country}</span></div>`:""}
+    ${f.country?`<div class="dr"><span class="lb">Country</span><span class="vl">${ex(f.country)}</span></div>`:""}
+    ${f.distributor?`<div class="dr"><span class="lb">Distributor</span><span class="vl">${ex(f.distributor)}</span></div>`:""}
     ${f.notes?`<div class="dr"><span class="lb">Notes</span><span class="vl" style="white-space:pre-wrap">${ex(f.notes)}</span></div>`:""}
     <hr class="divl">
     <div class="field">
@@ -525,6 +561,13 @@ function openSheet(id){
         <option value="High"${f.priority==="High"?" selected":""}>🟡 High</option>
         <option value="Someday"${f.priority==="Someday"?" selected":""}>🔵 Someday</option>
       </select>
+    </div>
+    <div class="field">
+      <label style="display:flex;align-items:center;gap:8px;cursor:pointer">
+        <span>4K available</span>
+        <span style="flex:1"></span>
+        <span onclick="toggle4kFilm('${f.id}')" style="display:inline-flex;align-items:center;gap:6px;background:${f.has4k?"var(--acc-dim)":"var(--surf2)"};border:1px solid ${f.has4k?"var(--acc)":"var(--bdr2)"};border-radius:20px;padding:4px 12px;font-size:12px;font-weight:600;color:${f.has4k?"var(--acc)":"var(--mut)"};cursor:pointer;user-select:none">${f.has4k?"✓ Yes":"No"}</span>
+      </label>
     </div>
     <div class="field">
       <label>Notes</label>
@@ -561,6 +604,12 @@ function markOwned(id,remove){
   f.owned=!remove;save(WL);
   closeSheet();
   showToast(remove?"Removed owned flag":"Marked as owned ✓");
+}
+function toggle4kFilm(id){
+  const f=WL.find(x=>x.id===id);if(!f)return;
+  f.has4k=!f.has4k;save(WL);
+  // re-open sheet to refresh the toggle state
+  openSheet(id);
 }
 function deleteFilm(id){
   if(!confirm("Remove this film from your wishlist?"))return;
@@ -672,17 +721,48 @@ function renderHunt(){
   const owned=WL.filter(f=>f.owned||ARCHIVE_TITLES.has(f.title.toLowerCase()));
   const container=document.getElementById("hunt-content");
   let html="";
-  groups.forEach(g=>{
-    const films=WL.filter(f=>f.priority===g.key&&!(f.owned||ARCHIVE_TITLES.has(f.title.toLowerCase())));
-    if(!films.length)return;
-    html+=`<div class="hunt-group">
-      <div class="hunt-group-head"><h3>${g.icon} ${g.label}</h3><span>${films.length} film${films.length!==1?"s":""} · ${g.desc}</span></div>
-      <div class="hunt-list">${films.map(f=>{
-        const pc=PRI_CLASS[f.priority]||"low";
-        const img=f.poster?`<img class="hunt-poster" src="${ex(f.poster)}" loading="lazy">`:`<div class="hunt-poster"></div>`;
-        return`<div class="hunt-item" onclick="openSheet('${ex(f.id)}')">${img}<div class="hunt-info"><div class="hunt-title">${ex(f.title)}</div><div class="hunt-meta">${f.director?ex(f.director):""}${f.year?" · "+f.year:""}${f.notes?' · <em style="color:var(--mut)">'+ex(f.notes.slice(0,40))+(f.notes.length>40?"…":"")+"</em>":""}</div></div></div>`;
-      }).join("")}</div></div>`;
-  });
+
+  // Hunt mode toggle state
+  const groupByDist=container.dataset.groupDist==="1";
+
+  // Toggle button bar
+  html+=`<div style="display:flex;gap:8px;padding:0 12px 16px;align-items:center">
+    <span style="font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;font-weight:600">Group by</span>
+    <button onclick="toggleHuntGroup()" style="background:${!groupByDist?"var(--acc-dim)":"var(--surf2)"};border:1px solid ${!groupByDist?"var(--acc)":"var(--bdr)"};color:${!groupByDist?"var(--acc)":"var(--mut)"};border-radius:6px;padding:4px 12px;font-size:11px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif">Priority</button>
+    <button onclick="toggleHuntGroup()" style="background:${groupByDist?"var(--acc-dim)":"var(--surf2)"};border:1px solid ${groupByDist?"var(--acc)":"var(--bdr)"};color:${groupByDist?"var(--acc)":"var(--mut)"};border-radius:6px;padding:4px 12px;font-size:11px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif">Distributor</button>
+  </div>`;
+
+  const unwanted=f=>!(f.owned||ARCHIVE_TITLES.has(f.title.toLowerCase()));
+
+  if(groupByDist){
+    // Build distributor groups
+    const distMap={};
+    WL.filter(unwanted).forEach(f=>{
+      const d=f.distributor&&f.distributor.trim()?f.distributor.trim():"Unknown / Unset";
+      if(!distMap[d])distMap[d]=[];
+      distMap[d].push(f);
+    });
+    const sortedDists=Object.keys(distMap).sort((a,b)=>{
+      if(a==="Unknown / Unset")return 1;
+      if(b==="Unknown / Unset")return -1;
+      return a.localeCompare(b);
+    });
+    sortedDists.forEach(d=>{
+      const films=distMap[d].sort((a,b)=>(PRI_ORDER[a.priority]??2)-(PRI_ORDER[b.priority]??2));
+      html+=`<div class="hunt-group">
+        <div class="hunt-group-head"><h3>📦 ${ex(d)}</h3><span>${films.length} film${films.length!==1?"s":""}</span></div>
+        <div class="hunt-list">${films.map(f=>huntItemHtml(f)).join("")}</div></div>`;
+    });
+  } else {
+    groups.forEach(g=>{
+      const films=WL.filter(f=>f.priority===g.key&&unwanted(f));
+      if(!films.length)return;
+      html+=`<div class="hunt-group">
+        <div class="hunt-group-head"><h3>${g.icon} ${g.label}</h3><span>${films.length} film${films.length!==1?"s":""} · ${g.desc}</span></div>
+        <div class="hunt-list">${films.map(f=>huntItemHtml(f)).join("")}</div></div>`;
+    });
+  }
+
   if(owned.length){
     html+=`<div class="hunt-group">
       <div class="hunt-group-head"><h3>✓ Owned</h3><span>${owned.length} film${owned.length!==1?"s":""} · Already in your collection</span></div>
@@ -691,8 +771,68 @@ function renderHunt(){
         return`<div class="hunt-item" onclick="openSheet('${ex(f.id)}')" style="opacity:.6">${img}<div class="hunt-info"><div class="hunt-title">${ex(f.title)}</div><div class="hunt-meta">${f.director?ex(f.director):""}${f.year?" · "+f.year:""}</div></div></div>`;
       }).join("")}</div></div>`;
   }
-  if(!html)html=`<div class="empty"><h2>Nothing to hunt yet</h2><p>Add films to your wishlist and they'll appear here sorted by priority.</p></div>`;
+
+  if(!html||html.indexOf("hunt-item")===-1){
+    if(!owned.length)html=`<div class="empty"><h2>Nothing to hunt yet</h2><p>Add films to your wishlist and they'll appear here sorted by priority.</p></div>`;
+  }
   container.innerHTML=html;
+}
+
+function huntItemHtml(f){
+  const img=f.poster?`<img class="hunt-poster" src="${ex(f.poster)}" loading="lazy">`:`<div class="hunt-poster"></div>`;
+  const badge4k=f.has4k?`<span class="hunt-badge-4k">4K</span>`:"";
+  const imdbLink=f.imdb_id?`<a href="https://www.imdb.com/title/${ex(f.imdb_id)}/" target="_blank" onclick="event.stopPropagation()" style="font-size:11px;color:var(--acc);text-decoration:none;flex-shrink:0;padding:4px 8px;border:1px solid var(--bdr2);border-radius:12px;white-space:nowrap">IMDb ↗</a>`:"";
+  const dist=f.distributor?`<span style="font-size:11px;color:var(--mut2);background:var(--surf2);border:1px solid var(--bdr);border-radius:10px;padding:2px 7px;white-space:nowrap;flex-shrink:0">${ex(f.distributor)}</span>`:"";
+  const pc=PRI_CLASS[f.priority]||"low";
+  return`<div class="hunt-item" onclick="openSheet('${ex(f.id)}')">${img}<div class="hunt-info"><div class="hunt-title">${ex(f.title)}${badge4k}</div><div class="hunt-meta">${f.director?ex(f.director):""}${f.year?" · "+f.year:""}${f.country?" · "+ex(f.country):""}</div></div>${dist}${imdbLink}<div class="hunt-pri" style="background:var(--${pc}-dim);color:var(--${pc})">${PRI_LABEL[f.priority]}</div></div>`;
+}
+
+function toggleHuntGroup(){
+  const c=document.getElementById("hunt-content");
+  c.dataset.groupDist=c.dataset.groupDist==="1"?"0":"1";
+  renderHunt();
+}
+
+// ── FETCH MISSING METADATA ───────────────────────────────────────────────────
+async function fetchMissingMetadata(){
+  const btn=document.getElementById("fetch-meta-btn");
+  const result=document.getElementById("fetch-meta-result");
+  // Films that have an imdb_id but are missing at least one field
+  const candidates=WL.filter(f=>f.imdb_id&&(!f.director||!f.country||!f.genre||!f.runtime));
+  if(!candidates.length){
+    result.style.display="block";
+    result.style.background="var(--acc-dim)";result.style.borderColor="var(--acc)";result.style.color="var(--acc)";
+    result.textContent="No films need metadata — everything looks complete!";
+    return;
+  }
+  btn.disabled=true;btn.textContent=`Fetching 0 / ${candidates.length}…`;
+  result.style.display="none";
+  let updated=0,failed=0;
+  for(let i=0;i<candidates.length;i++){
+    const f=candidates[i];
+    btn.textContent=`Fetching ${i+1} / ${candidates.length}…`;
+    try{
+      const r=await fetch(`https://www.omdbapi.com/?i=${encodeURIComponent(f.imdb_id)}&apikey=trilogy`);
+      const d=await r.json();
+      if(d.Response==="True"){
+        let changed=false;
+        if(!f.director&&d.Director&&d.Director!=="N/A"){f.director=d.Director;changed=true;}
+        if(!f.country&&d.Country&&d.Country!=="N/A"){f.country=d.Country.split(",")[0].trim();changed=true;}
+        if(!f.genre&&d.Genre&&d.Genre!=="N/A"){f.genre=d.Genre;changed=true;}
+        if(!f.runtime&&d.Runtime&&d.Runtime!=="N/A"){f.runtime=parseInt(d.Runtime)||null;if(f.runtime)changed=true;}
+        if(!f.year&&d.Year&&d.Year!=="N/A"){f.year=parseInt(d.Year)||null;if(f.year)changed=true;}
+        if(!f.poster&&d.Poster&&d.Poster!=="N/A"){f.poster=d.Poster;changed=true;}
+        if(changed)updated++;
+      } else {failed++;}
+    }catch(e){failed++;}
+    await new Promise(res=>setTimeout(res,120)); // gentle rate limiting
+  }
+  save(WL);render();renderHunt();
+  btn.disabled=false;btn.textContent="Fetch missing metadata";
+  result.style.display="block";
+  result.style.background="var(--grn-dim)";result.style.borderColor="var(--grn)";result.style.color="var(--grn)";
+  result.textContent=`Done! Updated ${updated} film${updated!==1?"s":""}${failed?` · ${failed} failed (no OMDB data)`:""}`;
+  showToast(`Metadata updated for ${updated} films`);
 }
 
 // ── IMPORT ──────────────────────────────────────────────────────────────────
@@ -797,24 +937,58 @@ document.addEventListener("keydown",e=>{
 });
 
 // ── INIT ─────────────────────────────────────────────────────────────────────
-async function init() {
-  // If localStorage already has data, just render it
-  if (WL.length > 0) { render(); renderHunt(); return; }
+// Merge strategy: wishlist.json is the canonical source.
+// For each film in the JSON, if it doesn't exist locally (by id), add it.
+// For fields: the JSON value wins unless the local copy has a *newer* added
+// timestamp AND a non-null value — this lets local edits (priority, notes,
+// owned, has4k) survive a sync as long as the JSON hasn't overwritten them.
+// Films that exist only in localStorage are kept (local-only additions).
+function mergeWithJson(local, remote) {
+  const byId = {};
+  local.forEach(f => { byId[f.id] = f; });
+  remote.forEach(rf => {
+    if (!byId[rf.id]) {
+      // New film from JSON — add it
+      byId[rf.id] = rf;
+    } else {
+      const lf = byId[rf.id];
+      // JSON wins on metadata fields; local wins on user-preference fields
+      const META = ['title','year','director','poster','imdb_id','genre','country','runtime'];
+      const USER = ['priority','notes','owned','has4k','added'];
+      META.forEach(k => { if (rf[k] != null) lf[k] = rf[k]; });
+      // For user fields, keep local unless local is null/undefined
+      USER.forEach(k => { if (lf[k] == null && rf[k] != null) lf[k] = rf[k]; });
+    }
+  });
+  return Object.values(byId);
+}
 
-  // Otherwise try to seed from wishlist.json (works on GitHub Pages)
+async function init() {
+  // Always render local data immediately so the app feels instant
+  if (WL.length > 0) { render(); renderHunt(); }
+
+  // Always fetch wishlist.json (cache-busted) and merge — this keeps
+  // mobile and desktop in sync whenever the file is updated on the server
   try {
-    const resp = await fetch('wishlist.json');
+    const resp = await fetch('wishlist.json?v=' + Date.now());
     if (!resp.ok) throw new Error('not found');
     const data = await resp.json();
     if (Array.isArray(data) && data.length) {
-      WL = data;
-      save(WL); // persist to localStorage so future loads are instant
+      const before = WL.length;
+      WL = mergeWithJson(WL, data);
+      save(WL);
+      // Only re-render if something actually changed
+      if (WL.length !== before) {
+        render(); renderHunt();
+        showToast(`Synced — ${WL.length - before > 0 ? '+' + (WL.length - before) + ' new film' + (WL.length - before !== 1 ? 's' : '') : 'up to date'}`);
+      }
     }
   } catch (e) {
-    // No JSON file or fetch failed — start with empty list, that's fine
+    // No JSON file or offline — local data is fine as-is
   }
-  render();
-  renderHunt();
+
+  // First load with no local data and no JSON
+  if (WL.length === 0) { render(); renderHunt(); }
 }
 init();
 </script>
