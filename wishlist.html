@@ -750,9 +750,7 @@ function openSheet(id){
       ${f.runtime?`<div class="dr"><span class="lb">Runtime</span><span class="vl">${f.runtime} min</span></div>`:""}
       ${f.country?`<div class="dr"><span class="lb">Country</span><span class="vl">${ex(f.country)}</span></div>`:""}
       ${f.distributor?`<div class="dr"><span class="lb">Distributor</span><span class="vl">${ex(f.distributor)}</span></div>`:""}
-      ${f.imdb_id?`<div class="dr"><span class="lb">IMDb ID</span><span class="vl" style="font-family:monospace;font-size:12px">${ex(f.imdb_id)}</span></div>`:""}
       ${f.added?`<div class="dr"><span class="lb">Added</span><span class="vl">${new Date(f.added).toLocaleDateString(undefined,{year:"numeric",month:"short",day:"numeric"})}</span></div>`:""}
-      ${f.notes?`<div class="dr"><span class="lb">Notes</span><span class="vl" style="white-space:pre-wrap">${ex(f.notes)}</span></div>`:""}
     </div>
     <hr class="divl">
     <div class="field">
