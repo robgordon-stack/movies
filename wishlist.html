@@ -144,6 +144,23 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 .sh-btn-del{background:rgba(247,110,126,.1);border:1px solid var(--hot);color:var(--hot)}
 .sh-btn-owned{background:var(--grn-dim);border:1px solid var(--grn);color:var(--grn)}
 .extlink{display:inline-block;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;text-decoration:none;margin-right:6px;margin-top:4px;border:1px solid var(--bdr2);color:var(--acc)}
+
+/* ── SCORE DISPLAY ── */
+.sh-score-block{display:flex;align-items:baseline;gap:8px;margin:6px 0 4px}
+.sh-agg-score{font-family:'DM Serif Display',serif;font-size:30px;font-weight:700;color:var(--acc);line-height:1}
+.sh-agg-denom{font-size:13px;color:var(--mut);font-weight:400}
+.score-pills{display:flex;flex-wrap:wrap;gap:5px;margin:4px 0 6px}
+.score-pill{background:var(--surf2);border:1px solid var(--bdr2);border-radius:5px;padding:3px 8px;font-size:11px;color:var(--mut);white-space:nowrap}
+.score-pill b{font-weight:600}
+.score-pill.sp-imdb{border-color:rgba(245,197,24,.35);color:#c9a419}
+.score-pill.sp-imdb b{color:#f5c518}
+.score-pill.sp-lb{border-color:rgba(0,229,160,.3);color:#3db88b}
+.score-pill.sp-lb b{color:#00e5a0}
+.score-pill.sp-rt{border-color:rgba(250,90,0,.3);color:#c96232}
+.score-pill.sp-rt b{color:#fa5a00}
+.score-pill.sp-mc{border-color:rgba(126,184,247,.35);color:var(--mut)}
+.score-pill.sp-mc b{color:var(--acc)}
+.card-score{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.82));padding:14px 6px 5px;font-size:11px;font-weight:700;color:var(--acc);text-align:right;font-family:'DM Serif Display',serif;letter-spacing:.02em}
 .pri-select{background:var(--surf2);border:1px solid var(--bdr2);color:var(--txt);border-radius:8px;padding:8px 12px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;width:100%;cursor:pointer;margin-top:4px}
 .notes-area{background:var(--surf2);border:1px solid var(--bdr);color:var(--txt);border-radius:8px;padding:10px 12px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;width:100%;resize:none;margin-top:4px;min-height:70px;line-height:1.5}
 .notes-area:focus,.pri-select:focus{border-color:rgba(126,184,247,.35)}
@@ -297,6 +314,7 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
       <div class="sortchip" id="sk-year" data-s="year" data-asc="0"><span class="sortdir">Year</span> <span class="arr">↕</span></div>
       <div class="sortchip" id="sk-pri" data-s="priority" data-asc="1"><span class="sortdir">Priority</span> <span class="arr">↕</span></div>
       <div class="sortchip" id="sk-dist" data-s="distributor" data-asc="1"><span class="sortdir">Distributor</span> <span class="arr">↕</span></div>
+      <div class="sortchip" id="sk-score" data-s="score" data-asc="-1"><span class="sortdir">Score</span> <span class="arr">↕</span></div>
     </div>
     <div class="statsbar">
       <div class="sstat hot"><div class="n" id="st-hot">0</div><div class="l">Must Own</div></div>
@@ -507,6 +525,7 @@ function getFiltered(){
       case "year": r=(a.year||0)-(b.year||0); break;
       case "priority": r=(PRI_ORDER[a.priority]??2)-(PRI_ORDER[b.priority]??2); break;
       case "distributor": r=(a.distributor||"zzz").localeCompare(b.distributor||"zzz"); break;
+      case "score": r=(b.score||0)-(a.score||0); break;
       default: r=(a.added||0)-(b.added||0);
     }
     return r*sortDir;
@@ -538,7 +557,8 @@ function cardHtml(f){
     :`<div class="fb2"><div class="ft">${ex(f.title)}</div><div class="fy">${f.year||""}</div></div>`;
   const owned=isOwned?`<div class="archive-badge">✓</div>`:"";
   const badge4k=f.has4k?`<div class="badge-4k">4K</div>`:"";
-  return`<div class="card" onclick="openSheet('${ex(f.id)}')">${img}${fb}<div class="pri-badge pri-${pc}">${PRI_LABEL[f.priority]}</div>${owned}${badge4k}</div>`;
+  const scoreBadge=f.score?`<div class="card-score">${parseFloat(f.score).toFixed(1)}</div>`:"";
+  return`<div class="card" onclick="openSheet('${ex(f.id)}')">${img}${fb}<div class="pri-badge pri-${pc}">${PRI_LABEL[f.priority]}</div>${owned}${badge4k}${scoreBadge}</div>`;
 }
 
 function filterWishlist(){render();renderHunt();}
@@ -610,7 +630,8 @@ const SORT_LABELS={
   added:{base:"Date added",asc:"Oldest",desc:"Newest"},
   year:{base:"Year",asc:"Oldest",desc:"Newest"},
   priority:{base:"Priority",asc:"High→Low",desc:"Low→High"},
-  distributor:{base:"Distributor",asc:"A→Z",desc:"Z→A"}
+  distributor:{base:"Distributor",asc:"A→Z",desc:"Z→A"},
+  score:{base:"Score",asc:"Low→High",desc:"High→Low"}
 };
 function updateSortChips(){
   document.querySelectorAll(".sortchip").forEach(c=>{
@@ -679,11 +700,27 @@ function openSheet(id){
   const poster=f.poster?`<img src="${ex(f.poster)}" alt="${ex(f.title)}">`:`<div class="fb2"><div class="ft">${ex(f.title)}</div></div>`;
   const ownedTag=isOwned?`<span class="tag tag-owned">✓ In Archive</span>`:"";
   const imdbBtn=f.imdb_id?`<a href="https://www.imdb.com/title/${f.imdb_id}/" target="_blank" class="extlink">IMDb ↗</a>`:"";
-  const lbBtn=f.title?`<a href="https://letterboxd.com/search/${encodeURIComponent(f.title)}/" target="_blank" class="extlink">Letterboxd</a>`:"";
+  const lbBtn=f.lb?`<a href="${ex(f.lb)}" target="_blank" class="extlink">Letterboxd ↗</a>`
+    :(f.title?`<a href="https://letterboxd.com/search/${encodeURIComponent(f.title)}/" target="_blank" class="extlink">Letterboxd</a>`:"");
   const k4tag=f.has4k?`<span class="tag" style="background:rgba(126,184,247,.15);border-color:var(--acc);color:var(--acc);font-weight:700">4K</span>`:"";
 
   const PRI_TAG={"Must Own":"🔴 Must Own","High":"🟡 High","Someday":"🔵 Someday"};
   const priLabel=PRI_TAG[f.priority]||("🔵 "+f.priority);
+
+  // Score pills
+  const scorePills=(()=>{
+    const pills=[];
+    if(f.imdb_score!=null) pills.push(`<span class="score-pill sp-imdb">IMDb&nbsp;<b>${parseFloat(f.imdb_score).toFixed(1)}</b></span>`);
+    if(f.lb_score!=null)   pills.push(`<span class="score-pill sp-lb">LB&nbsp;<b>${parseFloat(f.lb_score).toFixed(2)}</b></span>`);
+    if(f.rt_score!=null)   pills.push(`<span class="score-pill sp-rt">RT&nbsp;<b>${Math.round(parseFloat(f.rt_score)*100)}%</b></span>`);
+    if(f.mc_score!=null)   pills.push(`<span class="score-pill sp-mc">MC&nbsp;<b>${f.mc_score}</b></span>`);
+    return pills.join("");
+  })();
+  const scoreBlock=f.score?`
+    <div class="sh-score-block">
+      <span class="sh-agg-score">${parseFloat(f.score).toFixed(1)}</span><span class="sh-agg-denom">&thinsp;/ 10</span>
+    </div>
+    ${scorePills?`<div class="score-pills">${scorePills}</div>`:""}`:"";
 
   document.getElementById("shi").innerHTML=`
     <div class="shh">
@@ -691,6 +728,7 @@ function openSheet(id){
       <div class="shm">
         <div class="sht">${ex(f.title)}</div>
         <div class="shd">${f.director?ex(f.director):"Unknown director"}${f.year?` · ${f.year}`:""}</div>
+        ${scoreBlock}
         <div class="tags">
           <span class="tag tag-${pc}">${priLabel}</span>
           ${ownedTag}${k4tag}
@@ -1161,7 +1199,7 @@ function mergeWithJson(local, remote) {
     } else {
       const lf = byId[rf.id];
       // JSON wins on metadata fields; local wins on user-preference fields
-      const META = ['title','year','director','poster','imdb_id','genre','country','runtime','distributor'];
+      const META = ['title','year','director','poster','imdb_id','genre','country','runtime','distributor','lb','score','imdb_score','lb_score','rt_score','mc_score'];
       const USER = ['priority','notes','owned','has4k','added'];
       META.forEach(k => { if (rf[k] != null) lf[k] = rf[k]; });
       // For user fields, keep local unless local is null/undefined

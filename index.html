@@ -151,7 +151,7 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 .tag.a{border-color:rgba(232,185,79,.4);color:var(--acc)}
 .divl{border:none;border-top:1px solid var(--bdr);margin:14px 0}
 .dr{display:flex;justify-content:space-between;align-items:center;padding:5px 0;font-size:13px}
-.dr .lb{color:var(--mut)}.dr .vl{font-weight:500;text-align:right;max-width:65%}
+.dr .lb{color:var(--mut)}.dr .vl{font-weight:500;max-width:65%}
 .dr .vl.dir-link{color:var(--blu);cursor:pointer;text-decoration:underline}
 .syn{font-size:13px;color:#ccc;line-height:1.7;margin:12px 0;font-style:italic;font-family:'DM Serif Display',serif}
 .extlinks{display:flex;gap:8px;margin-top:10px}
@@ -592,7 +592,7 @@ function renderSheet(f,arr){
     ${syn}<hr class="divl">
     ${gs?`<div class="tags" style="margin-bottom:12px">${gs}</div>`:""}
     ${rw("Distributor",f.distributor)}
-    <div class="dr"><span class="lb">Director</span><span class="vl dir-link" onclick="openDirector('${ex(f.director)}')">${ex(f.director)}</span><span style="margin-left:8px;font-size:11px;color:var(--mut);cursor:pointer;text-decoration:underline;text-decoration-style:dotted" onclick="searchByDirector('${ex(f.director)}')">filter</span></div>
+    <div class="dr"><span class="lb">Director</span><span class="vl dir-link" onclick="openDirector('${ex(f.director)}')">${ex(f.director)}</span></div>
     ${f.cast&&f.cast.length?`<div class="dr"><span class="lb">Cast</span><span class="vl">${f.cast.map(n=>`<span class="dir-link" style="cursor:pointer;text-decoration:underline;color:var(--blu)" onclick="searchByCast('${n.replace(/'/g,"\\'")}')">${ex(n)}</span>`).join(', ')}</span></div>`:""}
     ${rw("Country",flag?flag+" "+f.country:f.country)}
     ${rw("Runtime",f.runtime?f.runtime+" min":"")}

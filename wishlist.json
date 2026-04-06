@@ -12,7 +12,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775440300023
+    "added": 1775440300023,
+    "tmdb_id": 968,
+    "lb": "https://letterboxd.com/film/godzilla/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.6,
+    "lb_score": 3.8,
+    "rt_score": 0.93,
+    "mc_score": 78,
+    "score": 8.0
   },
   {
     "id": "1775440144290gy00vxxnpkl",
@@ -27,7 +36,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775440144290
+    "added": 1775440144290,
+    "tmdb_id": 10272,
+    "lb": "https://letterboxd.com/film/king-kong/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.9,
+    "lb_score": 3.6,
+    "rt_score": 0.98,
+    "mc_score": null,
+    "score": 8.1
   },
   {
     "id": "1775440084674gmeaazl3lve",
@@ -42,7 +60,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775440084674
+    "added": 1775440084674,
+    "tmdb_id": 9340,
+    "lb": "https://letterboxd.com/film/commando/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 6.7,
+    "lb_score": 3.5,
+    "rt_score": 0.71,
+    "mc_score": null,
+    "score": 6.9
   },
   {
     "id": "1775439968258tmgduaroygk",
@@ -57,7 +84,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775439968258
+    "added": 1775439968258,
+    "tmdb_id": 16869,
+    "lb": "https://letterboxd.com/film/all-about-lily-chou-chou/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.5,
+    "lb_score": 4.1,
+    "rt_score": 0.87,
+    "mc_score": 79,
+    "score": 8.0
   },
   {
     "id": "1775439916725f39pkxnotmg",
@@ -72,7 +108,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775439916725
+    "added": 1775439916725,
+    "tmdb_id": 11879,
+    "lb": "https://letterboxd.com/film/the-verdict/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.5,
+    "lb_score": 3.9,
+    "rt_score": 0.92,
+    "mc_score": 85,
+    "score": 8.1
   },
   {
     "id": "1775439874692grcejzpj6bm",
@@ -87,7 +132,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775439874692
+    "added": 1775439874692,
+    "tmdb_id": 40220,
+    "lb": "https://letterboxd.com/film/teorema/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.1,
+    "lb_score": 3.7,
+    "rt_score": 0.85,
+    "mc_score": null,
+    "score": 7.5
   },
   {
     "id": "1775439797443e1474lzeue4",
@@ -102,7 +156,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775439797443
+    "added": 1775439797443,
+    "tmdb_id": 14899,
+    "lb": "https://letterboxd.com/film/the-taking-of-pelham-one-two-three/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.6,
+    "lb_score": 3.8,
+    "rt_score": 0.88,
+    "mc_score": null,
+    "score": 7.9
   },
   {
     "id": "177543973342621rzzmzq9kt",
@@ -117,7 +180,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775439733426
+    "added": 1775439733426,
+    "tmdb_id": 12536,
+    "lb": "https://letterboxd.com/film/the-fly/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.5,
+    "lb_score": 3.9,
+    "rt_score": 0.91,
+    "mc_score": 79,
+    "score": 8.0
   },
   {
     "id": "17754396750604e7oeh1c7e3",
@@ -132,7 +204,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775439675060
+    "added": 1775439675060,
+    "tmdb_id": 9050,
+    "lb": "https://letterboxd.com/film/dogville/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 8.0,
+    "lb_score": 4.0,
+    "rt_score": 0.84,
+    "mc_score": 75,
+    "score": 8.0
   },
   {
     "id": "1775439666010bwji8qqn6gn",
@@ -142,12 +223,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/iUekaw96QLInZpsNwRTlRKrZgwm.jpg",
     "imdb_id": "tt0408306",
     "genre": "Drama, History, Thriller",
-    "country": "France",
+    "country": "United States",
     "runtime": 164,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775439666010
+    "added": 1775439666010,
+    "tmdb_id": 9062,
+    "lb": "https://letterboxd.com/film/munich/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.6,
+    "lb_score": 3.8,
+    "rt_score": 0.78,
+    "mc_score": 74,
+    "score": 7.6
   },
   {
     "id": "1775439535878w8nkmjkracn",
@@ -163,7 +253,15 @@
     "notes": null,
     "owned": false,
     "added": 1775439535878,
-    "has4k": true
+    "has4k": false,
+    "tmdb_id": 16074,
+    "lb": "https://letterboxd.com/film/witness/",
+    "distributor": null,
+    "imdb_score": 7.6,
+    "lb_score": 3.8,
+    "rt_score": 0.79,
+    "mc_score": 78,
+    "score": 7.7
   },
   {
     "id": "1775439498011pxh0k3fc03",
@@ -178,7 +276,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775439498011
+    "added": 1775439498011,
+    "tmdb_id": 10630,
+    "lb": "https://letterboxd.com/film/the-blade/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.1,
+    "lb_score": 3.7,
+    "rt_score": 0.8,
+    "mc_score": null,
+    "score": 7.4
   },
   {
     "id": "17754394498444mx31bju5dm",
@@ -193,7 +300,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775439449844
+    "added": 1775439449844,
+    "tmdb_id": 9377,
+    "lb": "https://letterboxd.com/film/dazed-and-confused/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.6,
+    "lb_score": 3.8,
+    "rt_score": 0.93,
+    "mc_score": 79,
+    "score": 8.0
   },
   {
     "id": "1775439410944qyrrb8fcl2",
@@ -208,7 +324,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775439410944
+    "added": 1775439410944,
+    "tmdb_id": 153,
+    "lb": "https://letterboxd.com/film/lost-in-translation/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.7,
+    "lb_score": 3.8,
+    "rt_score": 0.95,
+    "mc_score": 89,
+    "score": 8.2
   },
   {
     "id": "1775439378277vp2v0a2msqq",
@@ -223,7 +348,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775439378278
+    "added": 1775439378278,
+    "tmdb_id": 11385,
+    "lb": "https://letterboxd.com/film/the-insider/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.8,
+    "lb_score": 3.9,
+    "rt_score": 0.96,
+    "mc_score": 84,
+    "score": 8.2
   },
   {
     "id": "1775439303611kxi0117x09",
@@ -238,7 +372,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775439303611
+    "added": 1775439303611,
+    "tmdb_id": 9659,
+    "lb": "https://letterboxd.com/film/mad-max/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 6.8,
+    "lb_score": 3.6,
+    "rt_score": 0.95,
+    "mc_score": null,
+    "score": 7.6
   },
   {
     "id": "177543901776205lyb58jge3",
@@ -253,7 +396,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775439017762
+    "added": 1775439017762,
+    "tmdb_id": 149870,
+    "lb": "https://letterboxd.com/film/the-great-beauty/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.3,
+    "lb_score": 3.9,
+    "rt_score": 0.87,
+    "mc_score": 85,
+    "score": 7.9
   },
   {
     "id": "1775438976263cj8ox4i9nq",
@@ -268,7 +420,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775438976263
+    "added": 1775438976263,
+    "tmdb_id": 4574,
+    "lb": "https://letterboxd.com/film/synecdoche-new-york/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.5,
+    "lb_score": 4.0,
+    "rt_score": 0.77,
+    "mc_score": 67,
+    "score": 7.6
   },
   {
     "id": "1775438793795uz24zz598nc",
@@ -283,7 +444,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775438793795
+    "added": 1775438793795,
+    "tmdb_id": 770,
+    "lb": "https://letterboxd.com/film/gone-with-the-wind/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 8.1,
+    "lb_score": 3.6,
+    "rt_score": 0.89,
+    "mc_score": null,
+    "score": 8.0
   },
   {
     "id": "1775438709129rff4d4kt9q",
@@ -298,7 +468,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775438709129
+    "added": 1775438709129,
+    "tmdb_id": 826,
+    "lb": "https://letterboxd.com/film/edward-scissorhands/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.9,
+    "lb_score": 4.0,
+    "rt_score": 0.9,
+    "mc_score": 73,
+    "score": 8.1
   },
   {
     "id": "1775438694345ugkwhdlrh3m",
@@ -313,7 +492,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775438694345
+    "added": 1775438694345,
+    "tmdb_id": 629,
+    "lb": "https://letterboxd.com/film/the-usual-suspects/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 8.5,
+    "lb_score": 4.1,
+    "rt_score": 0.89,
+    "mc_score": 77,
+    "score": 8.4
   },
   {
     "id": "1775438675230pguq6ssxvik",
@@ -329,7 +517,15 @@
     "notes": null,
     "owned": false,
     "added": 1775438675230,
-    "has4k": true
+    "has4k": true,
+    "tmdb_id": 621,
+    "lb": "https://letterboxd.com/film/the-graduate/",
+    "distributor": null,
+    "imdb_score": 8.0,
+    "lb_score": 4.1,
+    "rt_score": 0.86,
+    "mc_score": null,
+    "score": 8.2
   },
   {
     "id": "1775438643696pnol3esaoqg",
@@ -344,7 +540,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775438643696
+    "added": 1775438643696,
+    "tmdb_id": 1800,
+    "lb": "https://letterboxd.com/film/la-confidential/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 8.2,
+    "lb_score": 4.1,
+    "rt_score": 0.99,
+    "mc_score": 90,
+    "score": 8.7
   },
   {
     "id": "1775438621429xl4i08jcjc",
@@ -360,7 +565,15 @@
     "notes": null,
     "owned": false,
     "added": 1775438621429,
-    "has4k": true
+    "has4k": true,
+    "tmdb_id": 15023,
+    "lb": "https://letterboxd.com/film/the-great-escape/",
+    "distributor": null,
+    "imdb_score": 8.2,
+    "lb_score": 4.1,
+    "rt_score": 0.97,
+    "mc_score": null,
+    "score": 8.6
   },
   {
     "id": "1775438554047tqd0hpu026m",
@@ -375,22 +588,40 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775438554047
+    "added": 1775438554047,
+    "tmdb_id": 9289,
+    "lb": "https://letterboxd.com/film/the-wild-bunch/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.9,
+    "lb_score": 4.1,
+    "rt_score": 0.93,
+    "mc_score": null,
+    "score": 8.3
   },
   {
     "id": "1775438527596jtqv286wy",
     "title": "Evil Dead 2",
     "year": 1987,
-    "director": null,
+    "director": "Sam Raimi",
     "poster": "https://www.themoviedb.org/t/p/w1280/4zqCKJVHUolGs6C5AZwAZqLWixW.jpg",
-    "imdb_id": "tt3297314",
+    "imdb_id": "tt0092991",
     "genre": "Horror",
-    "country": "USA",
+    "country": "United States",
     "runtime": 85,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775438527596
+    "added": 1775438527596,
+    "tmdb_id": 10584,
+    "lb": "https://letterboxd.com/film/evil-dead-2/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.8,
+    "lb_score": 4.0,
+    "rt_score": 0.97,
+    "mc_score": null,
+    "score": 8.3
   },
   {
     "id": "1775428803597ln6zek822os",
@@ -409,7 +640,12 @@
     "owned": false,
     "added": 1775428803597,
     "has4k": false,
-    "distributor": null
+    "distributor": null,
+    "imdb_score": 7.4,
+    "lb_score": 4.0,
+    "rt_score": 0.87,
+    "mc_score": 82,
+    "score": 8.0
   },
   {
     "id": "1775428736582ffrbesgx4ij",
@@ -428,7 +664,12 @@
     "owned": false,
     "added": 1775428736582,
     "has4k": false,
-    "distributor": null
+    "distributor": null,
+    "imdb_score": 7.5,
+    "lb_score": 4.0,
+    "rt_score": 0.91,
+    "mc_score": null,
+    "score": 8.1
   },
   {
     "id": "1775428055988shur4ggx0m9",
@@ -440,14 +681,19 @@
     "tmdb_id": null,
     "lb": "https://letterboxd.com/film/imitation-of-life-1959/",
     "genre": "Drama",
-    "country": "USA",
+    "country": "United States",
     "runtime": 125,
     "priority": "Someday",
     "notes": null,
     "owned": false,
     "added": 1775428055988,
     "has4k": false,
-    "distributor": null
+    "distributor": null,
+    "imdb_score": 7.6,
+    "lb_score": 3.9,
+    "rt_score": 0.88,
+    "mc_score": null,
+    "score": 8.0
   },
   {
     "id": "177542801878537zewtshgv5",
@@ -466,7 +712,12 @@
     "owned": false,
     "added": 1775428018786,
     "has4k": false,
-    "distributor": null
+    "distributor": null,
+    "imdb_score": 7.3,
+    "lb_score": 4.0,
+    "rt_score": 0.94,
+    "mc_score": null,
+    "score": 8.0
   },
   {
     "id": "17754278757182r5fbxw41hl",
@@ -485,7 +736,12 @@
     "owned": false,
     "added": 1775427875718,
     "has4k": false,
-    "distributor": null
+    "distributor": null,
+    "imdb_score": 7.5,
+    "lb_score": 4.1,
+    "rt_score": 0.97,
+    "mc_score": null,
+    "score": 8.3
   },
   {
     "id": "1775427840044f83wjox5la",
@@ -504,7 +760,12 @@
     "owned": false,
     "added": 1775427840045,
     "has4k": false,
-    "distributor": null
+    "distributor": null,
+    "imdb_score": 7.9,
+    "lb_score": 4.1,
+    "rt_score": 0.98,
+    "mc_score": null,
+    "score": 8.5
   },
   {
     "id": "1775427791606ldyv8h81e88",
@@ -523,7 +784,12 @@
     "owned": false,
     "added": 1775427791606,
     "has4k": false,
-    "distributor": null
+    "distributor": null,
+    "imdb_score": 7.2,
+    "lb_score": 3.9,
+    "rt_score": 0.91,
+    "mc_score": null,
+    "score": 7.9
   },
   {
     "id": "17754276841962fptn0nxtt5",
@@ -542,7 +808,12 @@
     "owned": false,
     "added": 1775427684196,
     "has4k": false,
-    "distributor": null
+    "distributor": null,
+    "imdb_score": 8.6,
+    "lb_score": 4.3,
+    "rt_score": 0.97,
+    "mc_score": null,
+    "score": 8.9
   },
   {
     "id": "17753640833188k5tezc05vp",
@@ -554,14 +825,19 @@
     "tmdb_id": 10681,
     "lb": "https://letterboxd.com/film/wall-e/",
     "genre": "Animation, Sci-Fi, Adventure",
-    "country": "USA",
+    "country": "United States",
     "runtime": 97,
     "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1775364083318,
     "has4k": true,
-    "distributor": "Disney"
+    "distributor": "Disney",
+    "imdb_score": 8.4,
+    "lb_score": 4.2,
+    "rt_score": 0.95,
+    "mc_score": 95,
+    "score": 8.8
   },
   {
     "id": "17753640833180ma06opdv8xl",
@@ -578,7 +854,14 @@
     "director": "Ettore Scola",
     "tmdb_id": 42269,
     "lb": "https://letterboxd.com/search/We%20All%20Loved%20Each%20Other%20So%20Much/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 7.7,
+    "lb_score": 4.0,
+    "rt_score": 0.88,
+    "mc_score": null,
+    "score": 8.1
   },
   {
     "id": "1775364083318xrbl3m8rqy",
@@ -597,7 +880,12 @@
     "owned": false,
     "added": 1775364083318,
     "has4k": true,
-    "distributor": null
+    "distributor": null,
+    "imdb_score": 7.6,
+    "lb_score": 4.1,
+    "rt_score": 0.92,
+    "mc_score": null,
+    "score": 8.2
   },
   {
     "id": "1775364083318t9ciojlhvxf",
@@ -616,7 +904,12 @@
     "owned": false,
     "added": 1775364083318,
     "has4k": false,
-    "distributor": null
+    "distributor": null,
+    "imdb_score": 8.3,
+    "lb_score": 4.1,
+    "rt_score": 0.93,
+    "mc_score": 77,
+    "score": 8.4
   },
   {
     "id": "1775364083318lkou51klxhd",
@@ -635,7 +928,12 @@
     "owned": false,
     "added": 1775364083318,
     "has4k": true,
-    "distributor": null
+    "distributor": null,
+    "imdb_score": 8.1,
+    "lb_score": 4.2,
+    "rt_score": 0.95,
+    "mc_score": null,
+    "score": 8.5
   },
   {
     "id": "1775364083318o3obu8inwnd",
@@ -652,7 +950,14 @@
     "director": "Florian Henckel von Donnersmarck",
     "tmdb_id": 582,
     "lb": "https://letterboxd.com/search/The%20Lives%20of%20Others/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.4,
+    "lb_score": 4.2,
+    "rt_score": 0.98,
+    "mc_score": 89,
+    "score": 8.8
   },
   {
     "id": "17753640833187x20vxed2bb",
@@ -669,7 +974,14 @@
     "director": "Marcel Carné",
     "tmdb_id": 2457,
     "lb": "https://letterboxd.com/search/Children%20of%20Paradise/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.2,
+    "lb_score": 4.3,
+    "rt_score": 1.0,
+    "mc_score": null,
+    "score": 8.8
   },
   {
     "id": "177536408331870ba5ekgioe",
@@ -686,7 +998,14 @@
     "director": "Juraj Herz",
     "tmdb_id": 18352,
     "lb": "https://letterboxd.com/search/The%20Cremator/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 7.7,
+    "lb_score": 4.0,
+    "rt_score": 0.96,
+    "mc_score": null,
+    "score": 8.3
   },
   {
     "id": "17753640833181f8t6jjg3du",
@@ -699,13 +1018,18 @@
     "year": 2009,
     "runtime": 87,
     "genre": "Adventure, Animation, Comedy, Family",
-    "country": "USA",
+    "country": "United States",
     "director": "Wes Anderson",
     "tmdb_id": 10315,
     "lb": "https://letterboxd.com/search/Fantastic%20Mr.%20Fox/",
     "notes": "Criterion",
     "has4k": false,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "imdb_score": 7.9,
+    "lb_score": 4.0,
+    "rt_score": 0.93,
+    "mc_score": 83,
+    "score": 8.3
   },
   {
     "id": "17753640833189s8zvmbze3m",
@@ -722,7 +1046,14 @@
     "director": "Béla Tarr",
     "tmdb_id": 23160,
     "lb": "https://letterboxd.com/search/Werckmeister%20Harmonies/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 7.9,
+    "lb_score": 4.2,
+    "rt_score": 0.95,
+    "mc_score": null,
+    "score": 8.5
   },
   {
     "id": "1775364083318cz9t6cq6dwo",
@@ -739,7 +1070,14 @@
     "director": "Toshio Matsumoto",
     "tmdb_id": 1556,
     "lb": "https://letterboxd.com/search/Funeral%20Parade%20of%20Roses/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 7.6,
+    "lb_score": 4.0,
+    "rt_score": 0.92,
+    "mc_score": null,
+    "score": 8.1
   },
   {
     "id": "17753640833184yvczavxcd5",
@@ -752,11 +1090,18 @@
     "year": 1942,
     "runtime": 99,
     "genre": "Comedy, War, Romance",
-    "country": "USA",
+    "country": "United States",
     "director": "Ernst Lubitsch",
     "tmdb_id": 198,
     "lb": "https://letterboxd.com/search/To%20Be%20or%20Not%20to%20Be/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.1,
+    "lb_score": 4.1,
+    "rt_score": 0.96,
+    "mc_score": null,
+    "score": 8.5
   },
   {
     "id": "1775364083318i1ilmqr4cp",
@@ -773,7 +1118,14 @@
     "director": "Carl Theodor Dreyer",
     "tmdb_id": 621,
     "lb": "https://letterboxd.com/search/Ordet/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.3,
+    "lb_score": 4.4,
+    "rt_score": 0.98,
+    "mc_score": null,
+    "score": 8.8
   },
   {
     "id": "1775364083318rkn35st264",
@@ -790,7 +1142,14 @@
     "director": "Theo Angelopoulos",
     "tmdb_id": 47795,
     "lb": "https://letterboxd.com/search/Landscape%20in%20the%20Mist/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 7.9,
+    "lb_score": 4.1,
+    "rt_score": 0.93,
+    "mc_score": null,
+    "score": 8.3
   },
   {
     "id": "17753640833185pwsv7inyqd",
@@ -807,7 +1166,14 @@
     "director": "Asghar Farhadi",
     "tmdb_id": 60243,
     "lb": "https://letterboxd.com/search/A%20Separation/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.3,
+    "lb_score": 4.2,
+    "rt_score": 0.99,
+    "mc_score": 95,
+    "score": 8.8
   },
   {
     "id": "177536408331875nvdur17q5",
@@ -826,7 +1192,12 @@
     "owned": false,
     "added": 1775364083318,
     "has4k": false,
-    "distributor": null
+    "distributor": null,
+    "imdb_score": 8.0,
+    "lb_score": 4.3,
+    "rt_score": 0.97,
+    "mc_score": 89,
+    "score": 8.7
   },
   {
     "id": "17753640833176v3cfc40ii9",
@@ -843,7 +1214,14 @@
     "director": "Satoshi Kon",
     "tmdb_id": 10494,
     "lb": "https://letterboxd.com/search/Perfect%20Blue/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.0,
+    "lb_score": 4.3,
+    "rt_score": 0.82,
+    "mc_score": null,
+    "score": 8.3
   },
   {
     "id": "1775364083317qt6i0kugl6s",
@@ -860,7 +1238,14 @@
     "director": "Hayao Miyazaki",
     "tmdb_id": 128,
     "lb": "https://letterboxd.com/search/Princess%20Mononoke/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.4,
+    "lb_score": 4.4,
+    "rt_score": 0.97,
+    "mc_score": 76,
+    "score": 8.7
   },
   {
     "id": "1775364083317w5ulmdoqxv",
@@ -877,7 +1262,14 @@
     "director": "Hirokazu Kore-eda",
     "tmdb_id": 2517,
     "lb": "https://letterboxd.com/search/Nobody%20Knows/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.0,
+    "lb_score": 4.2,
+    "rt_score": 0.87,
+    "mc_score": 83,
+    "score": 8.3
   },
   {
     "id": "177536385586906ulpitei45h",
@@ -895,7 +1287,13 @@
     "tmdb_id": 1100988,
     "lb": "https://letterboxd.com/search/28%20Days%20Later/",
     "has4k": true,
-    "notes": "Sony Pictures"
+    "notes": "Sony Pictures",
+    "distributor": null,
+    "imdb_score": 7.6,
+    "lb_score": 3.9,
+    "rt_score": 0.87,
+    "mc_score": 73,
+    "score": 7.8
   },
   {
     "id": "1775363855869chovj2v2qvd",
@@ -908,12 +1306,18 @@
     "year": 2011,
     "runtime": 139,
     "genre": "Drama, Fantasy",
-    "country": "USA",
+    "country": "United States",
     "director": "Terrence Malick",
     "tmdb_id": 8967,
     "lb": "https://letterboxd.com/search/The%20Tree%20of%20Life/",
     "has4k": false,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "notes": null,
+    "imdb_score": 6.7,
+    "lb_score": 3.9,
+    "rt_score": 0.84,
+    "mc_score": 85,
+    "score": 7.6
   },
   {
     "id": "177536385586972vtk0ejktl",
@@ -926,11 +1330,18 @@
     "year": 1997,
     "runtime": 127,
     "genre": "Drama",
-    "country": "USA",
+    "country": "United States",
     "director": "Gus Van Sant",
     "tmdb_id": 489,
     "lb": "https://letterboxd.com/search/Good%20Will%20Hunting/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.3,
+    "lb_score": 4.0,
+    "rt_score": 0.97,
+    "mc_score": 70,
+    "score": 8.3
   },
   {
     "id": "1775363855869v06aohojjvg",
@@ -947,7 +1358,14 @@
     "director": "Akira Kurosawa",
     "tmdb_id": 3777,
     "lb": "https://letterboxd.com/search/Throne%20of%20Blood/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.1,
+    "lb_score": 4.2,
+    "rt_score": 0.97,
+    "mc_score": null,
+    "score": 8.6
   },
   {
     "id": "1775363855869l683eznh8k",
@@ -959,14 +1377,19 @@
     "tmdb_id": 10774,
     "lb": "https://letterboxd.com/film/network/",
     "genre": "Drama",
-    "country": "USA",
+    "country": "United States",
     "runtime": 121,
     "priority": "Someday",
     "notes": null,
     "owned": false,
     "added": 1775363855869,
     "has4k": false,
-    "distributor": null
+    "distributor": null,
+    "imdb_score": 8.1,
+    "lb_score": 4.2,
+    "rt_score": 0.92,
+    "mc_score": 83,
+    "score": 8.4
   },
   {
     "id": "1775363855869wt6kbjr5krf",
@@ -979,12 +1402,18 @@
     "year": 1997,
     "runtime": 129,
     "genre": "Adventure, Action, Thriller, Science Fiction",
-    "country": "USA",
+    "country": "United States",
     "director": "Paul Verhoeven",
     "tmdb_id": 563,
     "lb": "https://letterboxd.com/search/Starship%20Troopers/",
     "notes": "4K",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "imdb_score": 7.3,
+    "lb_score": 4.0,
+    "rt_score": 0.72,
+    "mc_score": 64,
+    "score": 7.4
   },
   {
     "id": "1775363855869mhlk0kgw5x",
@@ -997,11 +1426,18 @@
     "year": 1989,
     "runtime": 129,
     "genre": "Drama",
-    "country": "USA",
+    "country": "United States",
     "director": "Peter Weir",
     "tmdb_id": 207,
     "lb": "https://letterboxd.com/search/Dead%20Poets%20Society/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.1,
+    "lb_score": 4.1,
+    "rt_score": 0.85,
+    "mc_score": 79,
+    "score": 8.2
   },
   {
     "id": "1775363855869gvw8u1mxvcq",
@@ -1014,11 +1450,18 @@
     "year": 1999,
     "runtime": 189,
     "genre": "Fantasy, Drama, Crime",
-    "country": "USA",
+    "country": "United States",
     "director": "Frank Darabont",
     "tmdb_id": 497,
     "lb": "https://letterboxd.com/search/The%20Green%20Mile/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.6,
+    "lb_score": 4.2,
+    "rt_score": 0.78,
+    "mc_score": 61,
+    "score": 8.0
   },
   {
     "id": "1775363855869w7mogtrf41",
@@ -1031,11 +1474,18 @@
     "year": 1983,
     "runtime": 170,
     "genre": "Action, Crime, Drama",
-    "country": "USA",
+    "country": "United States",
     "director": "Brian De Palma",
     "tmdb_id": 111,
     "lb": "https://letterboxd.com/search/Scarface/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.3,
+    "lb_score": 3.9,
+    "rt_score": 0.83,
+    "mc_score": 65,
+    "score": 7.9
   },
   {
     "id": "1775363855869n71n1wzf2us",
@@ -1048,11 +1498,18 @@
     "year": 2010,
     "runtime": 138,
     "genre": "Drama, Thriller, Mystery",
-    "country": "USA",
+    "country": "United States",
     "director": "Martin Scorsese",
     "tmdb_id": 11324,
     "lb": "https://letterboxd.com/search/Shutter%20Island/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.2,
+    "lb_score": 3.9,
+    "rt_score": 0.68,
+    "mc_score": 63,
+    "score": 7.5
   },
   {
     "id": "1775363855869rsjkbb9bh0a",
@@ -1065,11 +1522,18 @@
     "year": 2015,
     "runtime": 188,
     "genre": "Drama, Mystery, Western",
-    "country": "USA",
+    "country": "United States",
     "director": "Quentin Tarantino",
     "tmdb_id": 273248,
     "lb": "https://letterboxd.com/search/The%20Hateful%20Eight/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 7.8,
+    "lb_score": 3.8,
+    "rt_score": 0.74,
+    "mc_score": 68,
+    "score": 7.5
   },
   {
     "id": "1775363855869en9evv7xd9",
@@ -1088,7 +1552,12 @@
     "lb": "https://letterboxd.com/search/The%20Power%20of%20the%20Dog/",
     "notes": "Criterion 4K",
     "has4k": true,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "imdb_score": 6.8,
+    "lb_score": 3.8,
+    "rt_score": 0.89,
+    "mc_score": 89,
+    "score": 7.8
   },
   {
     "id": "1775363855869m563tc4q2ob",
@@ -1101,11 +1570,18 @@
     "year": 1984,
     "runtime": 229,
     "genre": "Drama, Crime",
-    "country": "USA",
+    "country": "United States",
     "director": "Sergio Leone",
     "tmdb_id": 311,
     "lb": "https://letterboxd.com/search/Once%20Upon%20a%20Time%20in%20America/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.3,
+    "lb_score": 4.2,
+    "rt_score": 0.86,
+    "mc_score": null,
+    "score": 8.4
   },
   {
     "id": "17753638558693nxmruzyljr",
@@ -1118,11 +1594,18 @@
     "year": 1984,
     "runtime": 118,
     "genre": "Adventure, Action",
-    "country": "USA",
+    "country": "United States",
     "director": "Steven Spielberg",
     "tmdb_id": 87,
     "lb": "https://letterboxd.com/search/Indiana%20Jones%20and%20the%20Temple%20of%20Doom/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 7.5,
+    "lb_score": 3.8,
+    "rt_score": 0.85,
+    "mc_score": 57,
+    "score": 7.5
   },
   {
     "id": "1775363855869cazsynrg2x",
@@ -1135,11 +1618,18 @@
     "year": 2010,
     "runtime": 108,
     "genre": "Drama, Thriller, Horror",
-    "country": "USA",
+    "country": "United States",
     "director": "Darren Aronofsky",
     "tmdb_id": 44214,
     "lb": "https://letterboxd.com/search/Black%20Swan/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.0,
+    "lb_score": 4.0,
+    "rt_score": 0.88,
+    "mc_score": 79,
+    "score": 8.1
   },
   {
     "id": "1775363855869dp7cd1m6k2q",
@@ -1156,7 +1646,14 @@
     "director": "Ang Lee",
     "tmdb_id": 142,
     "lb": "https://letterboxd.com/search/Brokeback%20Mountain/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 7.7,
+    "lb_score": 4.1,
+    "rt_score": 0.87,
+    "mc_score": 87,
+    "score": 8.2
   },
   {
     "id": "1775363855868nw52ffxuyum",
@@ -1169,11 +1666,18 @@
     "year": 1994,
     "runtime": 142,
     "genre": "Comedy, Drama, Romance",
-    "country": "USA",
+    "country": "United States",
     "director": "Robert Zemeckis",
     "tmdb_id": 13,
     "lb": "https://letterboxd.com/search/Forrest%20Gump/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.8,
+    "lb_score": 3.9,
+    "rt_score": 0.71,
+    "mc_score": 82,
+    "score": 8.1
   },
   {
     "id": "1775363855868jmfcm2u3edj",
@@ -1186,13 +1690,18 @@
     "year": 2019,
     "runtime": 136,
     "genre": "Drama, Thriller, Crime",
-    "country": "USA",
+    "country": "United States",
     "director": "Benny Safdie, Josh Safdie",
     "tmdb_id": 473033,
     "lb": "https://letterboxd.com/search/Uncut%20Gems/",
     "notes": "Criterion 4K",
     "has4k": true,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "imdb_score": 7.4,
+    "lb_score": 4.1,
+    "rt_score": 0.91,
+    "mc_score": 90,
+    "score": 8.2
   },
   {
     "id": "17753637107522lhva4egqmt",
@@ -1210,7 +1719,13 @@
     "tmdb_id": 1391,
     "lb": "https://letterboxd.com/search/Y%20Tu%20Mam%C3%A1%20Tambi%C3%A9n/",
     "has4k": false,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "notes": null,
+    "imdb_score": 7.7,
+    "lb_score": 4.1,
+    "rt_score": 0.92,
+    "mc_score": 89,
+    "score": 8.3
   },
   {
     "id": "177536371075278av6jlpnc6",
@@ -1223,12 +1738,18 @@
     "year": 1965,
     "runtime": 174,
     "genre": "Drama, Family, Music, Romance",
-    "country": "USA",
+    "country": "United States",
     "director": "Robert Wise",
     "tmdb_id": 15121,
     "lb": "https://letterboxd.com/search/The%20Sound%20of%20Music/",
     "notes": "4K",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "imdb_score": 8.0,
+    "lb_score": 3.9,
+    "rt_score": 0.87,
+    "mc_score": null,
+    "score": 8.1
   },
   {
     "id": "1775363710752glfyzn774ul",
@@ -1241,11 +1762,18 @@
     "year": 1987,
     "runtime": 94,
     "genre": "Comedy, Crime",
-    "country": "USA",
+    "country": "United States",
     "director": "Joel Coen",
     "tmdb_id": 378,
     "lb": "https://letterboxd.com/search/Raising%20Arizona/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 7.4,
+    "lb_score": 3.9,
+    "rt_score": 0.9,
+    "mc_score": 73,
+    "score": 7.8
   },
   {
     "id": "1775363710752pkmwphbvku",
@@ -1258,11 +1786,18 @@
     "year": 2017,
     "runtime": 94,
     "genre": "Drama, Comedy",
-    "country": "USA",
+    "country": "United States",
     "director": "Greta Gerwig",
     "tmdb_id": 391713,
     "lb": "https://letterboxd.com/search/Lady%20Bird/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 7.4,
+    "lb_score": 3.9,
+    "rt_score": 0.99,
+    "mc_score": 89,
+    "score": 8.2
   },
   {
     "id": "1775363710752tgb70ouxdw",
@@ -1281,7 +1816,12 @@
     "lb": "https://letterboxd.com/search/Autumn%20Sonata/",
     "notes": "Criterion Bluray",
     "has4k": false,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "imdb_score": 8.1,
+    "lb_score": 4.3,
+    "rt_score": 0.95,
+    "mc_score": null,
+    "score": 8.6
   },
   {
     "id": "17753637107521n4znt8b1mv",
@@ -1298,7 +1838,14 @@
     "director": "Terry Jones, Terry Gilliam",
     "tmdb_id": 762,
     "lb": "https://letterboxd.com/search/Monty%20Python%20and%20the%20Holy%20Grail/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.2,
+    "lb_score": 4.1,
+    "rt_score": 0.97,
+    "mc_score": null,
+    "score": 8.6
   },
   {
     "id": "1775363710752j3ubsg683rp",
@@ -1311,11 +1858,18 @@
     "year": 1940,
     "runtime": 125,
     "genre": "Comedy, War",
-    "country": "USA",
+    "country": "United States",
     "director": "Charlie Chaplin",
     "tmdb_id": 914,
     "lb": "https://letterboxd.com/search/The%20Great%20Dictator/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.4,
+    "lb_score": 4.2,
+    "rt_score": 0.93,
+    "mc_score": null,
+    "score": 8.6
   },
   {
     "id": "1775363710752gomuc3m0qiw",
@@ -1324,16 +1878,22 @@
     "added": 1775363710752,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/ArKEdvJesIktFX8OAhcdKAOLl6I.jpg",
-    "imdb_id": "tt6725014",
+    "imdb_id": "tt0071659",
     "year": 1974,
     "runtime": 169,
     "genre": "Drama, Romance",
     "country": "Sweden",
     "director": "Ingmar Bergman",
-    "tmdb_id": 133919,
-    "lb": "https://letterboxd.com/search/Scenes%20from%20a%20Marriage/",
+    "tmdb_id": 27585,
+    "lb": "https://letterboxd.com/film/scenes-from-a-marriage/",
     "has4k": false,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "notes": null,
+    "imdb_score": 8.2,
+    "lb_score": 4.3,
+    "rt_score": 0.97,
+    "mc_score": null,
+    "score": 8.7
   },
   {
     "id": "1775363710752op45th2royl",
@@ -1351,7 +1911,13 @@
     "tmdb_id": 11216,
     "lb": "https://letterboxd.com/search/Cinema%20Paradiso/",
     "has4k": true,
-    "distributor": "Arrow"
+    "distributor": "Arrow",
+    "notes": null,
+    "imdb_score": 8.5,
+    "lb_score": 4.3,
+    "rt_score": 0.9,
+    "mc_score": 79,
+    "score": 8.5
   },
   {
     "id": "1775363710752m8cnd2l7g8m",
@@ -1364,12 +1930,18 @@
     "year": 2004,
     "runtime": 80,
     "genre": "Drama, Romance",
-    "country": "USA",
+    "country": "United States",
     "director": "Richard Linklater",
     "tmdb_id": 80,
     "lb": "https://letterboxd.com/search/Before%20Sunset/",
     "has4k": true,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "notes": null,
+    "imdb_score": 8.1,
+    "lb_score": 4.3,
+    "rt_score": 0.95,
+    "mc_score": 80,
+    "score": 8.5
   },
   {
     "id": "1775363710752bwrau27f6j",
@@ -1382,12 +1954,18 @@
     "year": 1950,
     "runtime": 139,
     "genre": "Drama",
-    "country": "USA",
+    "country": "United States",
     "director": "Joseph L. Mankiewicz",
     "tmdb_id": 705,
     "lb": "https://letterboxd.com/search/All%20About%20Eve/",
     "notes": "Criterion",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 8.1,
+    "lb_score": 4.3,
+    "rt_score": 0.99,
+    "mc_score": null,
+    "score": 8.7
   },
   {
     "id": "17753637107510zydx1iw6rjg",
@@ -1400,12 +1978,18 @@
     "year": 1959,
     "runtime": 123,
     "genre": "Comedy, Romance, Crime",
-    "country": "USA",
+    "country": "United States",
     "director": "Billy Wilder",
     "tmdb_id": 239,
     "lb": "https://letterboxd.com/search/Some%20Like%20It%20Hot/",
     "notes": "4K",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "imdb_score": 8.2,
+    "lb_score": 4.2,
+    "rt_score": 0.95,
+    "mc_score": null,
+    "score": 8.6
   },
   {
     "id": "177536371075180vc972vgje",
@@ -1423,7 +2007,13 @@
     "tmdb_id": 98,
     "lb": "https://letterboxd.com/search/Gladiator/",
     "notes": "4k",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "imdb_score": 8.5,
+    "lb_score": 4.0,
+    "rt_score": 0.8,
+    "mc_score": 67,
+    "score": 8.0
   },
   {
     "id": "17753635899860b5zq1t06lgp",
@@ -1436,11 +2026,18 @@
     "year": 2012,
     "runtime": 165,
     "genre": "Drama, Western",
-    "country": "USA",
+    "country": "United States",
     "director": "Quentin Tarantino",
     "tmdb_id": 68718,
     "lb": "https://letterboxd.com/search/Django%20Unchained/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.4,
+    "lb_score": 4.1,
+    "rt_score": 0.87,
+    "mc_score": 81,
+    "score": 8.4
   },
   {
     "id": "1775363589986qxf06l9aawq",
@@ -1453,11 +2050,18 @@
     "year": 2010,
     "runtime": 121,
     "genre": "Drama",
-    "country": "USA",
+    "country": "United States",
     "director": "David Fincher",
     "tmdb_id": 37799,
     "lb": "https://letterboxd.com/search/The%20Social%20Network/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 7.7,
+    "lb_score": 4.2,
+    "rt_score": 0.96,
+    "mc_score": 95,
+    "score": 8.6
   },
   {
     "id": "1775363589986q8r12s7svoj",
@@ -1474,7 +2078,14 @@
     "director": "Joel Coen",
     "tmdb_id": 275,
     "lb": "https://letterboxd.com/search/Fargo/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.1,
+    "lb_score": 4.2,
+    "rt_score": 0.94,
+    "mc_score": 85,
+    "score": 8.5
   },
   {
     "id": "1775363589986poenamztics",
@@ -1487,11 +2098,18 @@
     "year": 1988,
     "runtime": 132,
     "genre": "Action, Thriller",
-    "country": "USA",
+    "country": "United States",
     "director": "John McTiernan",
     "tmdb_id": 562,
     "lb": "https://letterboxd.com/search/Die%20Hard/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.2,
+    "lb_score": 3.9,
+    "rt_score": 0.94,
+    "mc_score": 72,
+    "score": 8.2
   },
   {
     "id": "1775363589986hsd70m1sx5",
@@ -1504,11 +2122,18 @@
     "year": 2000,
     "runtime": 113,
     "genre": "Mystery, Thriller",
-    "country": "USA",
+    "country": "United States",
     "director": "Christopher Nolan",
     "tmdb_id": 77,
     "lb": "https://letterboxd.com/search/Memento/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.4,
+    "lb_score": 4.2,
+    "rt_score": 0.93,
+    "mc_score": 80,
+    "score": 8.5
   },
   {
     "id": "1775363589986ghqh0h73ctc",
@@ -1525,7 +2150,14 @@
     "director": "Christopher Nolan",
     "tmdb_id": 27205,
     "lb": "https://letterboxd.com/search/Inception/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.8,
+    "lb_score": 4.1,
+    "rt_score": 0.87,
+    "mc_score": 74,
+    "score": 8.4
   },
   {
     "id": "177536358998636jfh2v1xna",
@@ -1538,11 +2170,18 @@
     "year": 1981,
     "runtime": 115,
     "genre": "Adventure, Action",
-    "country": "USA",
+    "country": "United States",
     "director": "Steven Spielberg",
     "tmdb_id": 85,
     "lb": "https://letterboxd.com/search/Raiders%20of%20the%20Lost%20Ark/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.4,
+    "lb_score": 4.2,
+    "rt_score": 0.95,
+    "mc_score": null,
+    "score": 8.7
   },
   {
     "id": "17753635899869keba4ku8b",
@@ -1559,7 +2198,14 @@
     "director": "James Cameron",
     "tmdb_id": 280,
     "lb": "https://letterboxd.com/search/Terminator%202%3A%20Judgment%20Day/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.5,
+    "lb_score": 4.3,
+    "rt_score": 0.91,
+    "mc_score": null,
+    "score": 8.7
   },
   {
     "id": "177536358998611lazodq3qlb",
@@ -1576,7 +2222,14 @@
     "director": "James Cameron",
     "tmdb_id": 218,
     "lb": "https://letterboxd.com/search/The%20Terminator/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.0,
+    "lb_score": 4.1,
+    "rt_score": 1.0,
+    "mc_score": null,
+    "score": 8.5
   },
   {
     "id": "1775363589986g3p1wdhzib",
@@ -1589,11 +2242,18 @@
     "year": 1998,
     "runtime": 169,
     "genre": "War, Drama, History",
-    "country": "USA",
+    "country": "United States",
     "director": "Steven Spielberg",
     "tmdb_id": 857,
     "lb": "https://letterboxd.com/search/Saving%20Private%20Ryan/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.6,
+    "lb_score": 4.3,
+    "rt_score": 0.93,
+    "mc_score": 91,
+    "score": 8.8
   },
   {
     "id": "17753635899866ii5ko2ogvm",
@@ -1611,7 +2271,13 @@
     "tmdb_id": 120,
     "lb": "https://letterboxd.com/search/The%20Lord%20of%20the%20Rings%3A%20The%20Fellowship%20of%20the%20Ring/",
     "notes": "4K",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "imdb_score": 8.8,
+    "lb_score": 4.4,
+    "rt_score": 0.91,
+    "mc_score": 92,
+    "score": 8.9
   },
   {
     "id": "1775363589986iyceng33ntq",
@@ -1628,7 +2294,14 @@
     "director": "Peter Jackson",
     "tmdb_id": 122,
     "lb": "https://letterboxd.com/search/The%20Lord%20of%20the%20Rings%3A%20The%20Return%20of%20the%20King/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 9.0,
+    "lb_score": 4.5,
+    "rt_score": 0.93,
+    "mc_score": 94,
+    "score": 9.1
   },
   {
     "id": "1775363589986bt0wr659nc5",
@@ -1645,7 +2318,14 @@
     "director": "Peter Jackson",
     "tmdb_id": 121,
     "lb": "https://letterboxd.com/search/The%20Lord%20of%20the%20Rings%3A%20The%20Two%20Towers/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.7,
+    "lb_score": 4.4,
+    "rt_score": 0.95,
+    "mc_score": 87,
+    "score": 8.9
   },
   {
     "id": "17753635899860ynfg4m8oy5g",
@@ -1658,12 +2338,18 @@
     "year": 1990,
     "runtime": 145,
     "genre": "Drama, Crime",
-    "country": "USA",
+    "country": "United States",
     "director": "Martin Scorsese",
     "tmdb_id": 769,
     "lb": "https://letterboxd.com/search/Goodfellas/",
     "notes": "4K",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "imdb_score": 8.7,
+    "lb_score": 4.4,
+    "rt_score": 0.96,
+    "mc_score": 90,
+    "score": 9.0
   },
   {
     "id": "1775363589986curtr4o4y6k",
@@ -1672,15 +2358,22 @@
     "added": 1775363589986,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/im6u58cPa9HlH5DqSnZGy0O37l5.jpg",
-    "imdb_id": "tt0491652",
-    "year": 2005,
-    "runtime": 148,
+    "imdb_id": "tt0095327",
+    "year": 1988,
+    "runtime": 88,
     "genre": "Drama",
     "country": "Japan",
-    "director": "Tōya Satō",
-    "tmdb_id": 76826,
-    "lb": "https://letterboxd.com/search/Grave%20of%20the%20Fireflies/",
-    "has4k": false
+    "director": "Isao Takahata",
+    "tmdb_id": 12477,
+    "lb": "https://letterboxd.com/film/grave-of-the-fireflies/",
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.5,
+    "lb_score": 4.5,
+    "rt_score": 0.97,
+    "mc_score": null,
+    "score": 9.0
   },
   {
     "id": "1775363589986drfuuazm5pt",
@@ -1697,7 +2390,14 @@
     "director": "Hayao Miyazaki",
     "tmdb_id": 129,
     "lb": "https://letterboxd.com/search/Spirited%20Away/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.6,
+    "lb_score": 4.5,
+    "rt_score": 0.97,
+    "mc_score": 96,
+    "score": 9.1
   },
   {
     "id": "1775363589986hm15ib2qh9g",
@@ -1715,7 +2415,13 @@
     "tmdb_id": 55,
     "lb": "https://letterboxd.com/search/Amores%20Perros/",
     "notes": "Criterion\n",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 8.1,
+    "lb_score": 4.2,
+    "rt_score": 0.92,
+    "mc_score": 83,
+    "score": 8.4
   },
   {
     "id": "1775363589986ygphtg1hotp",
@@ -1732,7 +2438,14 @@
     "director": "Víctor Erice",
     "tmdb_id": 4495,
     "lb": "https://letterboxd.com/search/The%20Spirit%20of%20the%20Beehive/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.0,
+    "lb_score": 4.2,
+    "rt_score": 0.97,
+    "mc_score": null,
+    "score": 8.5
   },
   {
     "id": "1775363589986ug5z8lx5vo",
@@ -1750,7 +2463,13 @@
     "tmdb_id": 10997,
     "lb": "https://letterboxd.com/search/Farewell%20My%20Concubine/",
     "notes": "Criterion 4K",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "imdb_score": 8.1,
+    "lb_score": 4.3,
+    "rt_score": 0.96,
+    "mc_score": 75,
+    "score": 8.5
   },
   {
     "id": "17753635899862i5xvqcq0f1",
@@ -1763,11 +2482,18 @@
     "year": 1978,
     "runtime": 80,
     "genre": "Drama, Psychological Drama",
-    "country": "USA",
+    "country": "United States",
     "director": "Charles Burnett",
     "tmdb_id": 638210,
     "lb": "https://letterboxd.com/search/Killer%20of%20Sheep/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 7.7,
+    "lb_score": 4.1,
+    "rt_score": 0.94,
+    "mc_score": null,
+    "score": 8.3
   },
   {
     "id": "1775363589986fpcpt5k2ic7",
@@ -1784,7 +2510,14 @@
     "director": "Bernardo Bertolucci",
     "tmdb_id": 8416,
     "lb": "https://letterboxd.com/search/The%20Conformist/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 7.9,
+    "lb_score": 4.1,
+    "rt_score": 0.95,
+    "mc_score": null,
+    "score": 8.4
   },
   {
     "id": "1775363589985tj4nam3pbd",
@@ -1801,7 +2534,14 @@
     "director": "Jacques Rivette",
     "tmdb_id": 27019,
     "lb": "https://letterboxd.com/search/C%C3%A9line%20and%20Julie%20Go%20Boating/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 7.8,
+    "lb_score": 4.1,
+    "rt_score": 0.96,
+    "mc_score": null,
+    "score": 8.4
   },
   {
     "id": "1775363589985j7pc6p2yx3a",
@@ -1818,7 +2558,14 @@
     "director": "François Truffaut",
     "tmdb_id": 1628,
     "lb": "https://letterboxd.com/search/Jules%20and%20Jim/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 7.8,
+    "lb_score": 4.0,
+    "rt_score": 0.95,
+    "mc_score": null,
+    "score": 8.3
   },
   {
     "id": "17753635899857d567191xnp",
@@ -1835,7 +2582,14 @@
     "director": "Akira Kurosawa",
     "tmdb_id": 3780,
     "lb": "https://letterboxd.com/search/Red%20Beard/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.3,
+    "lb_score": 4.3,
+    "rt_score": 0.96,
+    "mc_score": null,
+    "score": 8.7
   },
   {
     "id": "1775363589985r0d9s82r3g",
@@ -1853,7 +2607,13 @@
     "tmdb_id": 11878,
     "lb": "https://letterboxd.com/search/Yojimbo/",
     "notes": "BFI 4K",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "imdb_score": 8.2,
+    "lb_score": 4.3,
+    "rt_score": 0.97,
+    "mc_score": null,
+    "score": 8.7
   },
   {
     "id": "1775363589985wp0lb8sa139",
@@ -1870,7 +2630,14 @@
     "director": "Roberto Benigni",
     "tmdb_id": 637,
     "lb": "https://letterboxd.com/search/Life%20Is%20Beautiful/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.6,
+    "lb_score": 4.1,
+    "rt_score": 0.8,
+    "mc_score": 59,
+    "score": 8.0
   },
   {
     "id": "1775363589985xf4vq1aoblq",
@@ -1888,7 +2655,13 @@
     "tmdb_id": 965150,
     "lb": "https://letterboxd.com/search/Aftersun/",
     "notes": "",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.6,
+    "lb_score": 4.2,
+    "rt_score": 0.96,
+    "mc_score": 96,
+    "score": 8.5
   },
   {
     "id": "1775363589985khfxw1e5ltr",
@@ -1901,12 +2674,18 @@
     "year": 2023,
     "runtime": 106,
     "genre": "Drama, Romance",
-    "country": "USA",
+    "country": "United States",
     "director": "Celine Song",
     "tmdb_id": 666277,
     "lb": "https://letterboxd.com/search/Past%20Lives/",
     "notes": "4K",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "imdb_score": 7.9,
+    "lb_score": 4.2,
+    "rt_score": 0.98,
+    "mc_score": 98,
+    "score": 8.7
   },
   {
     "id": "177536358998524ycdlt9b1a",
@@ -1923,7 +2702,14 @@
     "director": "Alain Resnais",
     "tmdb_id": 5544,
     "lb": "https://letterboxd.com/search/Hiroshima%20Mon%20Amour/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.0,
+    "lb_score": 4.1,
+    "rt_score": 0.98,
+    "mc_score": null,
+    "score": 8.5
   },
   {
     "id": "17753635899859028ivfg7v5",
@@ -1941,7 +2727,13 @@
     "tmdb_id": 11712,
     "lb": "https://letterboxd.com/search/Sanjuro/",
     "notes": "BFI 4K",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "imdb_score": 8.1,
+    "lb_score": 4.2,
+    "rt_score": 0.97,
+    "mc_score": null,
+    "score": 8.6
   },
   {
     "id": "17753635899858ag3d93ketn",
@@ -1959,7 +2751,13 @@
     "tmdb_id": 423,
     "lb": "https://letterboxd.com/search/The%20Pianist/",
     "notes": "4K",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "imdb_score": 8.5,
+    "lb_score": 4.3,
+    "rt_score": 0.96,
+    "mc_score": 85,
+    "score": 8.8
   },
   {
     "id": "1775363589985sqazc1r9re",
@@ -1972,11 +2770,18 @@
     "year": 1936,
     "runtime": 87,
     "genre": "Comedy, Drama, Romance",
-    "country": "USA",
+    "country": "United States",
     "director": "Charlie Chaplin",
     "tmdb_id": 3082,
     "lb": "https://letterboxd.com/search/Modern%20Times/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.5,
+    "lb_score": 4.3,
+    "rt_score": 0.98,
+    "mc_score": null,
+    "score": 8.8
   },
   {
     "id": "17753635899855xp0c0614w",
@@ -1993,7 +2798,14 @@
     "director": "Jean-Pierre Melville",
     "tmdb_id": 15383,
     "lb": "https://letterboxd.com/search/Army%20of%20Shadows/",
-    "has4k": true
+    "has4k": true,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.3,
+    "lb_score": 4.3,
+    "rt_score": 0.99,
+    "mc_score": null,
+    "score": 8.8
   },
   {
     "id": "1775363589985f9jsub71b8",
@@ -2011,7 +2823,13 @@
     "tmdb_id": 99,
     "lb": "https://letterboxd.com/search/All%20About%20My%20Mother/",
     "notes": "Criterion",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.8,
+    "lb_score": 4.0,
+    "rt_score": 0.96,
+    "mc_score": 87,
+    "score": 8.4
   },
   {
     "id": "1775363589985crerbmkmc4",
@@ -2024,11 +2842,18 @@
     "year": 2007,
     "runtime": 158,
     "genre": "Drama",
-    "country": "USA",
+    "country": "United States",
     "director": "Paul Thomas Anderson",
     "tmdb_id": 7345,
     "lb": "https://letterboxd.com/search/There%20Will%20Be%20Blood/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.2,
+    "lb_score": 4.4,
+    "rt_score": 0.91,
+    "mc_score": 93,
+    "score": 8.7
   },
   {
     "id": "17753635899856b4ux3jm27r",
@@ -2045,7 +2870,14 @@
     "director": "Hirokazu Kore-eda",
     "tmdb_id": 505192,
     "lb": "https://letterboxd.com/search/Shoplifters/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 7.9,
+    "lb_score": 4.2,
+    "rt_score": 0.98,
+    "mc_score": 81,
+    "score": 8.5
   },
   {
     "id": "1775363589985rstiihcjugn",
@@ -2062,7 +2894,14 @@
     "director": "Agnès Varda",
     "tmdb_id": 499,
     "lb": "https://letterboxd.com/search/Cleo%20from%205%20to%207/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 7.9,
+    "lb_score": 4.2,
+    "rt_score": 0.97,
+    "mc_score": null,
+    "score": 8.5
   },
   {
     "id": "1775363589985zhdqbtgri7a",
@@ -2079,7 +2918,14 @@
     "director": "Céline Sciamma",
     "tmdb_id": 531428,
     "lb": "https://letterboxd.com/search/Portrait%20of%20a%20Lady%20on%20Fire/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "notes": null,
+    "imdb_score": 8.1,
+    "lb_score": 4.5,
+    "rt_score": 0.98,
+    "mc_score": 91,
+    "score": 8.9
   },
   {
     "id": "17753632946879ox9abiknus",
@@ -2097,7 +2943,13 @@
     "added": 1775363294687,
     "tmdb_id": 405,
     "lb": "https://letterboxd.com/search/La%20Strada/",
-    "has4k": false
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 8.1,
+    "lb_score": 4.3,
+    "rt_score": 0.97,
+    "mc_score": null,
+    "score": 8.7
   },
   {
     "id": "1775392611262o1i2czhhj5n",
@@ -2107,12 +2959,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/k5WBAgKrI8OytCSxMd4oau5KXzn.jpg",
     "imdb_id": "tt0051818",
     "genre": "Crime, Drama, Musical",
-    "country": "USA",
+    "country": "United States",
     "runtime": 116,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775392611262
+    "added": 1775392611262,
+    "tmdb_id": 75364,
+    "lb": "https://letterboxd.com/film/king-creole/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.4,
+    "lb_score": 3.7,
+    "rt_score": 0.84,
+    "mc_score": null,
+    "score": 7.6
   },
   {
     "id": "1775391551451f5eydj2l5x",
@@ -2127,7 +2988,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775391551451
+    "added": 1775391551451,
+    "tmdb_id": 8392,
+    "lb": "https://letterboxd.com/film/my-neighbor-totoro/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 8.2,
+    "lb_score": 4.3,
+    "rt_score": 0.94,
+    "mc_score": 86,
+    "score": 8.6
   },
   {
     "id": "1775391533485toythy4mky",
@@ -2143,7 +3013,15 @@
     "notes": null,
     "owned": false,
     "added": 1775391533485,
-    "has4k": true
+    "has4k": true,
+    "tmdb_id": 149,
+    "lb": "https://letterboxd.com/film/akira/",
+    "distributor": null,
+    "imdb_score": 8.0,
+    "lb_score": 4.2,
+    "rt_score": 0.9,
+    "mc_score": 67,
+    "score": 8.1
   },
   {
     "id": "1775391497635svszusfidgk",
@@ -2158,7 +3036,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775391497635
+    "added": 1775391497635,
+    "tmdb_id": 84892,
+    "lb": "https://letterboxd.com/film/amour-2012/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 8.2,
+    "lb_score": 4.3,
+    "rt_score": 0.96,
+    "mc_score": 94,
+    "score": 8.8
   },
   {
     "id": "1775391480369rhcfs4fq44m",
@@ -2168,12 +3055,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/vbdgtwzLOpE6MppZlyYChMagvQq.jpg",
     "imdb_id": "tt0042593",
     "genre": "Drama, Film-Noir, Mystery",
-    "country": "USA",
+    "country": "United States",
     "runtime": 94,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775391480369
+    "added": 1775391480369,
+    "tmdb_id": 6653,
+    "lb": "https://letterboxd.com/film/in-a-lonely-place/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 8.0,
+    "lb_score": 4.2,
+    "rt_score": 0.98,
+    "mc_score": null,
+    "score": 8.6
   },
   {
     "id": "1775391463019r11mon4pj5k",
@@ -2188,7 +3084,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775391463019
+    "added": 1775391463019,
+    "tmdb_id": 5279,
+    "lb": "https://letterboxd.com/film/vagabond/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.8,
+    "lb_score": 4.1,
+    "rt_score": 0.94,
+    "mc_score": null,
+    "score": 8.3
   },
   {
     "id": "1775391436136unz64wzk7m",
@@ -2203,7 +3108,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775391436136
+    "added": 1775391436136,
+    "tmdb_id": 762430,
+    "lb": "https://letterboxd.com/film/drive-my-car/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.6,
+    "lb_score": 4.3,
+    "rt_score": 0.98,
+    "mc_score": 91,
+    "score": 8.6
   },
   {
     "id": "1775391409269dogevmt0xq9",
@@ -2218,7 +3132,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775391409269
+    "added": 1775391409269,
+    "tmdb_id": 8338,
+    "lb": "https://letterboxd.com/film/a-man-escaped/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 8.1,
+    "lb_score": 4.4,
+    "rt_score": 1.0,
+    "mc_score": null,
+    "score": 8.8
   },
   {
     "id": "177539139451966087vr0hz9",
@@ -2233,7 +3156,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775391394519
+    "added": 1775391394519,
+    "tmdb_id": 4145,
+    "lb": "https://letterboxd.com/film/the-grand-illusion/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 8.1,
+    "lb_score": 4.3,
+    "rt_score": 0.97,
+    "mc_score": null,
+    "score": 8.7
   },
   {
     "id": "1775391366452yce77nwmjlq",
@@ -2243,12 +3175,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/mavrhr0ig2aCRR8d48yaxtD5aMQ.jpg",
     "imdb_id": "tt0072890",
     "genre": "Biography, Crime, Drama",
-    "country": "USA",
+    "country": "United States",
     "runtime": 125,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775391366452
+    "added": 1775391366452,
+    "tmdb_id": 16399,
+    "lb": "https://letterboxd.com/film/dog-day-afternoon/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 8.0,
+    "lb_score": 4.2,
+    "rt_score": 0.98,
+    "mc_score": null,
+    "score": 8.6
   },
   {
     "id": "1775391344020ba64ghk3bxk",
@@ -2263,7 +3204,16 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775391344020
+    "added": 1775391344020,
+    "tmdb_id": 30620,
+    "lb": "https://letterboxd.com/film/brief-encounter/",
+    "has4k": false,
+    "distributor": null,
+    "imdb_score": 7.8,
+    "lb_score": 4.0,
+    "rt_score": 0.96,
+    "mc_score": null,
+    "score": 8.3
   },
   {
     "id": "1775390728602ff8miyr43jn",
@@ -2279,7 +3229,15 @@
     "notes": null,
     "owned": false,
     "added": 1775390728602,
-    "has4k": true
+    "has4k": true,
+    "tmdb_id": 115,
+    "lb": "https://letterboxd.com/film/the-big-lebowski/",
+    "distributor": null,
+    "imdb_score": 8.1,
+    "lb_score": 4.1,
+    "rt_score": 0.83,
+    "mc_score": 71,
+    "score": 8.0
   },
   {
     "id": "1775371723640ww49gz5goyj",
@@ -2289,14 +3247,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/mZ4gBdfkhP9tvLH1DO4m4HYtiyi.jpg",
     "imdb_id": "tt5726616",
     "genre": "Drama, Romance",
-    "country": "Brazil",
+    "country": "Italy",
     "runtime": 132,
     "priority": "Someday",
     "notes": null,
     "owned": false,
     "added": 1775371723640,
     "has4k": true,
-    "distributor": null
+    "distributor": null,
+    "tmdb_id": 397422,
+    "lb": "https://letterboxd.com/film/call-me-by-your-name/",
+    "imdb_score": 7.9,
+    "lb_score": 4.2,
+    "rt_score": 0.95,
+    "mc_score": 93,
+    "score": 8.6
   },
   {
     "id": "1775371684024m8um357g34",
@@ -2306,14 +3271,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/tpfC325Jk6S38VTe5dDWjWtoyxr.jpg",
     "imdb_id": "tt0175880",
     "genre": "Drama",
-    "country": "USA",
+    "country": "United States",
     "runtime": 188,
     "priority": "Someday",
     "notes": null,
     "owned": false,
     "added": 1775371684024,
     "has4k": false,
-    "distributor": null
+    "distributor": null,
+    "tmdb_id": 334,
+    "lb": "https://letterboxd.com/film/magnolia/",
+    "imdb_score": 7.8,
+    "lb_score": 4.1,
+    "rt_score": 0.83,
+    "mc_score": 78,
+    "score": 8.0
   },
   {
     "id": "1775371673725w1gn52pc3i",
@@ -2323,14 +3295,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/9msfwOeGc9uL1iRRTBdEf15XonC.jpg",
     "imdb_id": "tt0070379",
     "genre": "Crime, Drama, Thriller",
-    "country": "USA",
+    "country": "United States",
     "runtime": 112,
     "priority": "Someday",
     "notes": null,
     "owned": false,
     "added": 1775371673725,
     "has4k": true,
-    "distributor": "Second Sight, Criterion"
+    "distributor": "Second Sight, Criterion",
+    "tmdb_id": 11778,
+    "lb": "https://letterboxd.com/film/mean-streets/",
+    "imdb_score": 7.4,
+    "lb_score": 4.0,
+    "rt_score": 0.97,
+    "mc_score": null,
+    "score": 8.2
   },
   {
     "id": "1775371657973pnqzf049mkr",
@@ -2340,14 +3319,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/9gztZXuHLG6AJ0fgqGd7Q43cWRI.jpg",
     "imdb_id": "tt0099077",
     "genre": "Biography, Drama",
-    "country": "USA",
+    "country": "United States",
     "runtime": 121,
     "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1775371657973,
     "has4k": true,
-    "distributor": null
+    "distributor": null,
+    "tmdb_id": 11202,
+    "lb": "https://letterboxd.com/film/awakenings/",
+    "imdb_score": 7.8,
+    "lb_score": 3.8,
+    "rt_score": 0.86,
+    "mc_score": 73,
+    "score": 7.8
   },
   {
     "id": "1775371647974cf3xxxpl6sc",
@@ -2357,14 +3343,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/l39TlELomwysfsr37vrvCV6rmaQ.jpg",
     "imdb_id": "tt31434639",
     "genre": "Action, Drama, War",
-    "country": "USA",
+    "country": "United States",
     "runtime": 95,
     "priority": "Someday",
     "notes": "A24",
     "owned": false,
     "added": 1775371647974,
     "has4k": true,
-    "distributor": "A24"
+    "distributor": "A24",
+    "tmdb_id": 1096721,
+    "lb": "https://letterboxd.com/film/warfare-2025/",
+    "imdb_score": 7.8,
+    "lb_score": 4.0,
+    "rt_score": 0.9,
+    "mc_score": 81,
+    "score": 8.1
   },
   {
     "id": "1775371625207eoz1h8ix8ru",
@@ -2374,14 +3367,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/ji3ecJphATlVgWNY0B0RVXZizdf.jpg",
     "imdb_id": "tt1663202",
     "genre": "Adventure, Drama, Western",
-    "country": "USA",
+    "country": "United States",
     "runtime": 156,
     "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1775371625207,
     "has4k": true,
-    "distributor": null
+    "distributor": null,
+    "tmdb_id": 281957,
+    "lb": "https://letterboxd.com/film/the-revenant-2015/",
+    "imdb_score": 8.0,
+    "lb_score": 3.9,
+    "rt_score": 0.78,
+    "mc_score": 76,
+    "score": 7.8
   },
   {
     "id": "17753716133406gnpzt8kahf",
@@ -2391,14 +3391,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/zOsaxYLgvZVU7cJBpPn8CuE0MrP.jpg",
     "imdb_id": "tt0375063",
     "genre": "Comedy, Drama, Romance",
-    "country": "USA",
+    "country": "United States",
     "runtime": 127,
     "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1775371613340,
     "has4k": false,
-    "distributor": null
+    "distributor": null,
+    "tmdb_id": 9675,
+    "lb": "https://letterboxd.com/film/sideways/",
+    "imdb_score": 7.8,
+    "lb_score": 4.0,
+    "rt_score": 0.96,
+    "mc_score": 90,
+    "score": 8.4
   },
   {
     "id": "1775371605424747e4u09fil",
@@ -2408,14 +3415,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/VHSzNBTwxV8vh7wylo7O9CLdac.jpg",
     "imdb_id": "tt14849194",
     "genre": "Comedy, Drama",
-    "country": "USA",
+    "country": "United States",
     "runtime": 133,
     "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1775371605424,
     "has4k": true,
-    "distributor": null
+    "distributor": null,
+    "tmdb_id": 840430,
+    "lb": "https://letterboxd.com/film/the-holdovers/",
+    "imdb_score": 7.9,
+    "lb_score": 4.2,
+    "rt_score": 0.98,
+    "mc_score": 90,
+    "score": 8.6
   },
   {
     "id": "1775371594107n44ungk2i6k",
@@ -2432,7 +3446,14 @@
     "owned": false,
     "added": 1775371594107,
     "has4k": true,
-    "distributor": "Second Sight"
+    "distributor": "Second Sight",
+    "tmdb_id": 302336,
+    "lb": "https://letterboxd.com/film/the-nice-guys/",
+    "imdb_score": 7.4,
+    "lb_score": 4.0,
+    "rt_score": 0.91,
+    "mc_score": 70,
+    "score": 7.9
   },
   {
     "id": "1775371582007sg1j8ev1rgs",
@@ -2442,14 +3463,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/lVpejjxzBujSjLpxQ7hGe1s0wP2.jpg",
     "imdb_id": "tt0116778",
     "genre": "Comedy, Sport",
-    "country": "USA",
+    "country": "United States",
     "runtime": 114,
     "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1775371582007,
     "has4k": true,
-    "distributor": "Kino Lorber"
+    "distributor": "Kino Lorber",
+    "tmdb_id": 12220,
+    "lb": "https://letterboxd.com/film/kingpin/",
+    "imdb_score": 7.1,
+    "lb_score": 3.9,
+    "rt_score": 0.63,
+    "mc_score": 55,
+    "score": 6.9
   },
   {
     "id": "1775371570590nupx8lx1ioq",
@@ -2459,14 +3487,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/ccqpHq5tk5W4ymbSbuoy4uYOxFI.jpg",
     "imdb_id": "tt0181689",
     "genre": "Action, Crime, Mystery",
-    "country": "USA",
+    "country": "United States",
     "runtime": 145,
     "priority": "Someday",
     "notes": null,
     "owned": false,
     "added": 1775371570590,
     "has4k": true,
-    "distributor": null
+    "distributor": null,
+    "tmdb_id": 180,
+    "lb": "https://letterboxd.com/film/minority-report/",
+    "imdb_score": 7.6,
+    "lb_score": 3.7,
+    "rt_score": 0.9,
+    "mc_score": 80,
+    "score": 7.9
   },
   {
     "id": "177537155579129ijzhk054x",
@@ -2476,14 +3511,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/rOUx7qg4KmEh1juEDwqzbDSL1Nr.jpg",
     "imdb_id": "tt0119396",
     "genre": "Crime, Drama, Thriller",
-    "country": "USA",
+    "country": "United States",
     "runtime": 154,
     "priority": "Someday",
     "notes": null,
     "owned": false,
     "added": 1775371555792,
     "has4k": true,
-    "distributor": null
+    "distributor": null,
+    "tmdb_id": 628,
+    "lb": "https://letterboxd.com/film/jackie-brown/",
+    "imdb_score": 7.5,
+    "lb_score": 3.9,
+    "rt_score": 0.87,
+    "mc_score": 71,
+    "score": 7.8
   },
   {
     "id": "1775371542557j7c3c79i5wk",
@@ -2493,14 +3535,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/tyV8Bgf2huCIbGUxTdGgnzdIRKZ.jpg",
     "imdb_id": "tt0070077",
     "genre": "Crime, Drama",
-    "country": "USA",
+    "country": "United States",
     "runtime": 102,
     "priority": "Someday",
     "notes": null,
     "owned": false,
     "added": 1775371542557,
     "has4k": false,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "tmdb_id": 30229,
+    "lb": "https://letterboxd.com/film/the-friends-of-eddie-coyle/",
+    "imdb_score": 7.3,
+    "lb_score": 4.0,
+    "rt_score": 0.97,
+    "mc_score": null,
+    "score": 8.1
   },
   {
     "id": "1775371530608mmgqpey1dym",
@@ -2510,14 +3559,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/oN0o3owobFjePDc5vMdLRAd0jkd.jpg",
     "imdb_id": "tt28607951",
     "genre": "Comedy, Drama, Romance",
-    "country": "USA",
+    "country": "United States",
     "runtime": 139,
     "priority": "Someday",
     "notes": null,
     "owned": false,
     "added": 1775371530608,
     "has4k": true,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "tmdb_id": 1274098,
+    "lb": "https://letterboxd.com/film/anora/",
+    "imdb_score": 8.0,
+    "lb_score": 4.4,
+    "rt_score": 0.96,
+    "mc_score": 89,
+    "score": 8.7
   },
   {
     "id": "1775371513524dur9q0gdn7u",
@@ -2527,14 +3583,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/lBxY8znsRoqa9Dy2NCe8I6GPsRm.jpg",
     "imdb_id": "tt0116905",
     "genre": "Drama, Mystery, Western",
-    "country": "USA",
+    "country": "United States",
     "runtime": 135,
     "priority": "Someday",
     "notes": "Criterion 4K",
     "owned": false,
     "added": 1775371513524,
     "has4k": true,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "tmdb_id": 11699,
+    "lb": "https://letterboxd.com/film/lone-star/",
+    "imdb_score": 7.6,
+    "lb_score": 4.0,
+    "rt_score": 0.97,
+    "mc_score": 82,
+    "score": 8.2
   },
   {
     "id": "1775371492857ndgtur5e9jr",
@@ -2544,14 +3607,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/9qAy6UWVw44dGrsyKrdEMt5qIUM.jpg",
     "imdb_id": "tt0115736",
     "genre": "Crime, Thriller",
-    "country": "USA",
+    "country": "United States",
     "runtime": 109,
     "priority": "Someday",
     "notes": "Criterion 4K",
     "owned": false,
     "added": 1775371492857,
     "has4k": true,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "tmdb_id": 10912,
+    "lb": "https://letterboxd.com/film/bound/",
+    "imdb_score": 7.3,
+    "lb_score": 3.8,
+    "rt_score": 0.88,
+    "mc_score": 70,
+    "score": 7.6
   },
   {
     "id": "17753714747914whsuu5empr",
@@ -2561,14 +3631,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/414IUXc54mrhX88ZUQiRDLXn01i.jpg",
     "imdb_id": "tt0089791",
     "genre": "Adventure, Comedy, Family",
-    "country": "USA",
+    "country": "United States",
     "runtime": 91,
     "priority": "Someday",
     "notes": "Criterion 4K",
     "owned": false,
     "added": 1775371474791,
     "has4k": true,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "tmdb_id": 13401,
+    "lb": "https://letterboxd.com/film/pee-wees-big-adventure/",
+    "imdb_score": 7.4,
+    "lb_score": 3.9,
+    "rt_score": 0.86,
+    "mc_score": 55,
+    "score": 7.5
   },
   {
     "id": "17753714485577inbzhhv6dx",
@@ -2585,7 +3662,14 @@
     "owned": false,
     "added": 1775371448557,
     "has4k": true,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "tmdb_id": 1052,
+    "lb": "https://letterboxd.com/film/eyes-wide-shut/",
+    "imdb_score": 7.5,
+    "lb_score": 4.1,
+    "rt_score": 0.76,
+    "mc_score": 68,
+    "score": 7.6
   },
   {
     "id": "1775371437274qdgqjk7djf",
@@ -2595,14 +3679,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/io2dfBJhasvGbgkCX9cCGVOiA99.jpg",
     "imdb_id": "tt0887912",
     "genre": "Drama, Thriller, War",
-    "country": "USA",
+    "country": "United States",
     "runtime": 131,
     "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1775371437274,
     "has4k": true,
-    "distributor": null
+    "distributor": null,
+    "tmdb_id": 12162,
+    "lb": "https://letterboxd.com/film/the-hurt-locker/",
+    "imdb_score": 7.6,
+    "lb_score": 4.0,
+    "rt_score": 0.97,
+    "mc_score": 94,
+    "score": 8.4
   },
   {
     "id": "1775371424124nxuqflt15xo",
@@ -2612,14 +3703,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/oxhHl2YokTqcP44QK5tiTgjgLgk.jpg",
     "imdb_id": "tt0120655",
     "genre": "Adventure, Comedy, Drama",
-    "country": "USA",
+    "country": "United States",
     "runtime": 130,
     "priority": "Someday",
     "notes": null,
     "owned": false,
     "added": 1775371424124,
     "has4k": true,
-    "distributor": "Umbrella"
+    "distributor": "Umbrella",
+    "tmdb_id": 2667,
+    "lb": "https://letterboxd.com/film/dogma/",
+    "imdb_score": 7.5,
+    "lb_score": 3.7,
+    "rt_score": 0.67,
+    "mc_score": 59,
+    "score": 7.1
   },
   {
     "id": "17753714094419j7ecwynwtt",
@@ -2636,7 +3734,14 @@
     "owned": false,
     "added": 1775371409441,
     "has4k": false,
-    "distributor": null
+    "distributor": null,
+    "tmdb_id": 29368,
+    "lb": "https://letterboxd.com/film/the-white-balloon/",
+    "imdb_score": 7.5,
+    "lb_score": 3.9,
+    "rt_score": 0.95,
+    "mc_score": null,
+    "score": 8.1
   },
   {
     "id": "1775371378476wv5pwwnlysc",
@@ -2646,14 +3751,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/wjOHjWCUE0YzDiEzKv8AfqHj3ir.jpg",
     "imdb_id": "tt10640346",
     "genre": "Comedy, Drama",
-    "country": "USA",
+    "country": "United States",
     "runtime": 189,
     "priority": "Someday",
     "notes": null,
     "owned": false,
     "added": 1775371378476,
     "has4k": true,
-    "distributor": null
+    "distributor": null,
+    "tmdb_id": 592350,
+    "lb": "https://letterboxd.com/film/babylon-2022/",
+    "imdb_score": 6.8,
+    "lb_score": 3.5,
+    "rt_score": 0.55,
+    "mc_score": 52,
+    "score": 6.4
   },
   {
     "id": "1775371251892h8158xno6pn",
@@ -2670,7 +3782,14 @@
     "owned": false,
     "added": 1775371251892,
     "has4k": true,
-    "distributor": null
+    "distributor": null,
+    "tmdb_id": 1701,
+    "lb": "https://letterboxd.com/film/shaun-of-the-dead/",
+    "imdb_score": 8.0,
+    "lb_score": 4.1,
+    "rt_score": 0.92,
+    "mc_score": 76,
+    "score": 8.2
   },
   {
     "id": "1775369564988i3ewoak8ml",
@@ -2680,13 +3799,20 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/klPO5oh1LOxiPpdDXZo1ADgpKcw.jpg",
     "imdb_id": "tt0100157",
     "genre": "Drama, Thriller",
-    "country": "USA",
+    "country": "United States",
     "runtime": 107,
     "priority": "High",
     "notes": "Kino Lorber 4K",
     "owned": false,
     "added": 1775369564988,
     "has4k": true,
-    "distributor": "Kino Lorber"
+    "distributor": "Kino Lorber",
+    "tmdb_id": 1700,
+    "lb": "https://letterboxd.com/film/misery/",
+    "imdb_score": 7.8,
+    "lb_score": 4.0,
+    "rt_score": 0.9,
+    "mc_score": 74,
+    "score": 8.0
   }
 ]
