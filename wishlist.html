@@ -289,7 +289,7 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
       <div class="frow">
         <span class="flabel">Country</span>
         <div class="chip active" data-country="all">All</div>
-        <div class="chip" data-country="USA">🇺🇸 USA</div>
+        <div class="chip" data-country="United States">🇺🇸 USA</div>
         <div class="chip" data-country="France">🇫🇷 France</div>
         <div class="chip" data-country="Japan">🇯🇵 Japan</div>
         <div class="chip" data-country="United Kingdom">🇬🇧 UK</div>
@@ -301,10 +301,14 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
         <div class="chip active" data-director="all">All</div>
         <div class="chip" data-director="Steven Spielberg">Spielberg</div>
         <div class="chip" data-director="Akira Kurosawa">Kurosawa</div>
+        <div class="chip" data-director="Sidney Lumet">Lumet</div>
+        <div class="chip" data-director="Agnès Varda">Varda</div>
         <div class="chip" data-director="Hayao Miyazaki">Miyazaki</div>
         <div class="chip" data-director="Martin Scorsese">Scorsese</div>
         <div class="chip" data-director="Quentin Tarantino">Tarantino</div>
         <div class="chip" data-director="Peter Jackson">P. Jackson</div>
+        <div class="chip" data-director="Andrei Tarkovsky">Tarkovsky</div>
+        <div class="chip" data-director="Ingmar Bergman">Bergman</div>
       </div>
     </div>
     <div class="sortrow">
@@ -525,7 +529,7 @@ function getFiltered(){
       case "year": r=(a.year||0)-(b.year||0); break;
       case "priority": r=(PRI_ORDER[a.priority]??2)-(PRI_ORDER[b.priority]??2); break;
       case "distributor": r=(a.distributor||"zzz").localeCompare(b.distributor||"zzz"); break;
-      case "score": r=(b.score||0)-(a.score||0); break;
+      case "score": r=(a.score||0)-(b.score||0); break;
       default: r=(a.added||0)-(b.added||0);
     }
     return r*sortDir;
@@ -631,7 +635,7 @@ const SORT_LABELS={
   year:{base:"Year",asc:"Oldest",desc:"Newest"},
   priority:{base:"Priority",asc:"High→Low",desc:"Low→High"},
   distributor:{base:"Distributor",asc:"A→Z",desc:"Z→A"},
-  score:{base:"Score",asc:"Low→High",desc:"High→Low"}
+  score:{base:"Score",asc:"High→Low",desc:"Low→High"}
 };
 function updateSortChips(){
   document.querySelectorAll(".sortchip").forEach(c=>{
