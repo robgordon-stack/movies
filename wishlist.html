@@ -321,10 +321,10 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
       <div class="sortchip" id="sk-score" data-s="score" data-asc="-1"><span class="sortdir">Score</span> <span class="arr">↕</span></div>
     </div>
     <div class="statsbar">
+      <div class="sstat"><div class="n" id="st-showing">0</div><div class="l" id="st-showing-label">Films</div></div>
       <div class="sstat hot"><div class="n" id="st-hot">0</div><div class="l">Must Own</div></div>
       <div class="sstat med"><div class="n" id="st-med">0</div><div class="l">High</div></div>
       <div class="sstat low"><div class="n" id="st-low">0</div><div class="l">Someday</div></div>
-      <div class="sstat owned"><div class="n" id="st-own">0</div><div class="l">Owned</div></div>
     </div>
   </header>
   <div class="gw">
@@ -541,12 +541,16 @@ function render(){
   const list=getFiltered();
   const grid=document.getElementById("wl-grid");
   const empty=document.getElementById("wl-empty");
-  document.getElementById("wl-count").textContent=WL.length+" film"+(WL.length!==1?"s":"");
+  const total=WL.length;
+  const showing=list.length;
+  document.getElementById("wl-count").textContent=total+" film"+(total!==1?"s":"");
   // Stats
-  document.getElementById("st-hot").textContent=WL.filter(f=>f.priority==="Must Own").length;
-  document.getElementById("st-med").textContent=WL.filter(f=>f.priority==="High").length;
-  document.getElementById("st-low").textContent=WL.filter(f=>f.priority==="Someday").length;
-  document.getElementById("st-own").textContent=WL.filter(f=>f.owned).length;
+  const isFiltered=showing!==total;
+  document.getElementById("st-showing").textContent=isFiltered?showing+" of "+total:total;
+  document.getElementById("st-showing-label").textContent=isFiltered?"Showing":"Films";
+  document.getElementById("st-hot").textContent=list.filter(f=>f.priority==="Must Own").length;
+  document.getElementById("st-med").textContent=list.filter(f=>f.priority==="High").length;
+  document.getElementById("st-low").textContent=list.filter(f=>f.priority==="Someday").length;
 
   if(!list.length){grid.innerHTML="";empty.style.display="block";return;}
   empty.style.display="none";
