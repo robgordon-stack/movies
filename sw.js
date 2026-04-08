@@ -1,6 +1,6 @@
 // Service Worker for My Movie Collection
 // To update: bump the version number below, then redeploy
-const VERSION = 'v75';
+const VERSION = 'v76';
 const CACHE   = 'my-films-' + VERSION;
 const ASSETS  = [
   '/movies/',
