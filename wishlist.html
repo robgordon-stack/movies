@@ -238,6 +238,43 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
 /* ── TOAST ── */
 .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--surf3);color:var(--txt);padding:10px 20px;border-radius:20px;font-size:13px;font-weight:500;z-index:600;opacity:0;transition:all .25s;pointer-events:none;white-space:nowrap;border:1px solid var(--bdr2)}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ── RECOMMENDATIONS ── */
+.recs-section{padding:12px 8px 4px}
+.recs-header{display:flex;align-items:center;gap:8px;margin-bottom:12px;padding:0 4px}
+.recs-header h2{font-family:'DM Serif Display',serif;font-style:italic;font-size:17px;flex:1}
+.recs-refresh{background:none;border:1px solid var(--bdr2);color:var(--mut);border-radius:20px;padding:4px 12px;font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;white-space:nowrap}
+.recs-refresh:hover{color:var(--acc);border-color:var(--acc)}
+.recs-scroll{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.recs-scroll::-webkit-scrollbar{display:none}
+.rec-card{flex-shrink:0;width:90px;cursor:pointer;position:relative}
+.rec-card:active{opacity:.75}
+.rec-poster{width:90px;height:135px;border-radius:var(--r);overflow:hidden;background:var(--surf2);border:1px solid var(--bdr);position:relative;margin-bottom:5px}
+.rec-poster img{width:100%;height:100%;object-fit:cover;display:block}
+.rec-poster-fb{width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:6px;text-align:center;font-size:10px;color:var(--mut);line-height:1.3}
+.rec-add-btn{position:absolute;bottom:4px;right:4px;width:24px;height:24px;border-radius:50%;background:var(--acc);border:none;color:#03111f;font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700;opacity:0;transition:opacity .15s}
+.rec-card:hover .rec-add-btn{opacity:1}
+.rec-title{font-size:11px;font-weight:600;color:var(--txt);line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;margin-bottom:2px}
+.rec-meta{font-size:10px;color:var(--mut)}
+.recs-loading{display:flex;gap:8px;padding:0 4px 8px;overflow:hidden}
+.rec-skel{flex-shrink:0;width:90px}
+.rec-skel-img{width:90px;height:135px;border-radius:var(--r);background:linear-gradient(90deg,var(--surf2) 25%,var(--surf3) 50%,var(--surf2) 75%);background-size:200% 100%;animation:shimmer 1.6s ease-in-out infinite;margin-bottom:6px}
+.rec-skel-txt{height:10px;border-radius:4px;background:linear-gradient(90deg,var(--surf2) 25%,var(--surf3) 50%,var(--surf2) 75%);background-size:200% 100%;animation:shimmer 1.6s ease-in-out infinite;margin-bottom:4px}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* ── SHARE MODAL ── */
+.share-modal-wrap{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:600;display:none;align-items:center;justify-content:center;padding:20px}
+.share-modal-wrap.open{display:flex}
+.share-modal{background:var(--surf);border-radius:16px;width:100%;max-width:480px;padding:24px;position:relative}
+.share-modal h2{font-family:'DM Serif Display',serif;font-style:italic;font-size:20px;margin-bottom:6px}
+.share-modal p{font-size:13px;color:var(--mut);line-height:1.6;margin-bottom:16px}
+.share-close{position:absolute;top:14px;right:14px;background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:50%;width:32px;height:32px;font-size:18px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.share-option{background:var(--surf2);border:1px solid var(--bdr2);border-radius:10px;padding:14px 16px;margin-bottom:10px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:border-color .2s}
+.share-option:hover{border-color:var(--acc)}
+.share-option .so-icon{font-size:22px;flex-shrink:0}
+.share-option .so-info{flex:1}
+.share-option .so-title{font-size:14px;font-weight:600;margin-bottom:2px}
+.share-option .so-desc{font-size:12px;color:var(--mut)}
 </style>
 </head>
 <body>
@@ -249,6 +286,7 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
       <a href="index.html" style="font-size:11px;color:var(--mut);text-decoration:none;display:block;margin-bottom:2px;letter-spacing:.04em">&#8592; The Archive</a>
       <h1>Wish List</h1>
       <span class="cnt" id="wl-count">0 films</span>
+      <button class="add-btn" onclick="openShareModal()" style="background:var(--surf2);border:1px solid var(--bdr2);color:var(--acc);margin-right:4px">↗ Share</button>
       <button class="add-btn" onclick="openAddModal()">+ Add</button>
     </div>
     <div class="sw">
@@ -333,6 +371,51 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
       <h2>Nothing here yet</h2>
       <p>Start building your want list.<br>Tap <strong>+ Add</strong> to search for a film.</p>
       <button class="empty-btn" onclick="openAddModal()">+ Add your first film</button>
+    </div>
+  </div>
+  <!-- ── RECOMMENDATIONS ── -->
+  <div class="recs-section" id="recs-section" style="display:none">
+    <div class="recs-header">
+      <h2>✨ Recommended for You</h2>
+      <button class="recs-refresh" id="recs-refresh-btn" onclick="loadRecommendations(true)">↻ Refresh</button>
+    </div>
+    <div id="recs-loading" class="recs-loading" style="display:none">
+      <div class="rec-skel"><div class="rec-skel-img"></div><div class="rec-skel-txt"></div><div class="rec-skel-txt" style="width:60%"></div></div>
+      <div class="rec-skel"><div class="rec-skel-img"></div><div class="rec-skel-txt"></div><div class="rec-skel-txt" style="width:50%"></div></div>
+      <div class="rec-skel"><div class="rec-skel-img"></div><div class="rec-skel-txt"></div><div class="rec-skel-txt" style="width:70%"></div></div>
+      <div class="rec-skel"><div class="rec-skel-img"></div><div class="rec-skel-txt"></div><div class="rec-skel-txt" style="width:55%"></div></div>
+    </div>
+    <div id="recs-scroll" class="recs-scroll"></div>
+    <p id="recs-note" style="font-size:11px;color:var(--mut2);padding:0 4px 8px;display:none">Based on your wishlist genres & directors · Not already in your collection or wishlist</p>
+  </div>
+</div>
+
+<!-- ── SHARE MODAL ── -->
+<div class="share-modal-wrap" id="share-modal">
+  <div class="share-modal">
+    <button class="share-close" onclick="closeShareModal()">×</button>
+    <h2>Share Your Wishlist</h2>
+    <p>Export a read-only snapshot of your wishlist that anyone can browse — no login needed.</p>
+    <div class="share-option" onclick="exportShareableHTML()">
+      <span class="so-icon">🌐</span>
+      <div class="so-info">
+        <div class="so-title">Download as HTML</div>
+        <div class="so-desc">A self-contained page you can host anywhere or send as a file</div>
+      </div>
+    </div>
+    <div class="share-option" onclick="copyShareableJSON()">
+      <span class="so-icon">📋</span>
+      <div class="so-info">
+        <div class="so-title">Copy as JSON</div>
+        <div class="so-desc">Raw data for importing into another device or sharing with devs</div>
+      </div>
+    </div>
+    <div class="share-option" onclick="exportShareableText()">
+      <span class="so-icon">📝</span>
+      <div class="so-info">
+        <div class="so-title">Export as text list</div>
+        <div class="so-desc">Plain text — title, year, director, priority — for sharing anywhere</div>
+      </div>
     </div>
   </div>
 </div>
@@ -708,8 +791,9 @@ function openSheet(id){
   const poster=f.poster?`<img src="${ex(f.poster)}" alt="${ex(f.title)}">`:`<div class="fb2"><div class="ft">${ex(f.title)}</div></div>`;
   const ownedTag=isOwned?`<span class="tag tag-owned">✓ In Archive</span>`:"";
   const imdbBtn=f.imdb_id?`<a href="https://www.imdb.com/title/${f.imdb_id}/" target="_blank" class="extlink">IMDb ↗</a>`:"";
-  const lbBtn=f.lb?`<a href="${ex(f.lb)}" target="_blank" class="extlink">Letterboxd ↗</a>`
-    :(f.title?`<a href="https://letterboxd.com/search/${encodeURIComponent(f.title)}/" target="_blank" class="extlink">Letterboxd</a>`:"");
+  const lbBtn=f.lb
+    ?`<a href="${ex(f.lb)}" target="_blank" class="extlink" style="background:rgba(0,229,160,.08);border-color:rgba(0,229,160,.4);color:#00e5a0">Letterboxd ↗</a>`
+    :(f.title?`<a href="https://letterboxd.com/search/films/${encodeURIComponent(f.title)}/" target="_blank" class="extlink">Search Letterboxd ↗</a>`:"");
   const k4tag=f.has4k?`<span class="tag" style="background:rgba(126,184,247,.15);border-color:var(--acc);color:var(--acc);font-weight:700">4K</span>`:"";
 
   const PRI_TAG={"Must Own":"🔴 Must Own","High":"🟡 High","Someday":"🔵 Someday"};
@@ -1183,7 +1267,8 @@ function showToast(msg){
 // ── KEYBOARD ─────────────────────────────────────────────────────────────────
 document.addEventListener("keydown",e=>{
   if(e.key==="Escape"){
-    if(document.getElementById("add-modal").classList.contains("open"))closeAddModal();
+    if(document.getElementById("share-modal").classList.contains("open"))closeShareModal();
+    else if(document.getElementById("add-modal").classList.contains("open"))closeAddModal();
     else if(document.getElementById("sh").classList.contains("open"))closeSheet();
   }
 });
@@ -1245,8 +1330,315 @@ async function init() {
 
   // First load with no local data and no JSON
   if (WL.length === 0) { render(); renderHunt(); }
+
+  // Load recommendations after data is ready (if wishlist has films)
+  if (WL.length >= 3) loadRecommendations(false);
 }
 init();
+
+// ── RECOMMENDATIONS ──────────────────────────────────────────────────────────
+// Uses Claude API to suggest films not already in the wishlist or archive.
+// Cache key stores results + the wishlist fingerprint so refresh is smart.
+const RECS_CACHE_KEY = 'cinewishlist_recs_v1';
+
+function getWishlistFingerprint() {
+  // A simple hash of titles to detect if wishlist changed significantly
+  return WL.map(f=>f.title).sort().join('|').slice(0,200);
+}
+
+function getExcludedTitles() {
+  // All titles the user already has — wishlist + archive
+  const titles = new Set();
+  WL.forEach(f => titles.add(f.title.toLowerCase().trim()));
+  ARCHIVE_TITLES.forEach(t => titles.add(t.toLowerCase().trim()));
+  return titles;
+}
+
+async function loadRecommendations(forceRefresh = false) {
+  if (WL.length < 3) return; // Need enough signal
+
+  const section = document.getElementById('recs-section');
+  const scroll = document.getElementById('recs-scroll');
+  const loading = document.getElementById('recs-loading');
+  const note = document.getElementById('recs-note');
+  const refreshBtn = document.getElementById('recs-refresh-btn');
+
+  section.style.display = 'block';
+
+  // Check cache
+  const fingerprint = getWishlistFingerprint();
+  if (!forceRefresh) {
+    try {
+      const cached = JSON.parse(localStorage.getItem(RECS_CACHE_KEY) || 'null');
+      if (cached && cached.fingerprint === fingerprint && cached.recs && cached.recs.length) {
+        renderRecs(cached.recs);
+        return;
+      }
+    } catch(e) {}
+  }
+
+  // Show skeletons
+  scroll.innerHTML = '';
+  loading.style.display = 'flex';
+  note.style.display = 'none';
+  refreshBtn.textContent = '…';
+  refreshBtn.disabled = true;
+
+  // Build a concise taste profile from wishlist metadata
+  const genres = {};
+  const directors = {};
+  const decades = {};
+  WL.forEach(f => {
+    if (f.genre) f.genre.split(',').forEach(g => { g = g.trim(); if(g) genres[g] = (genres[g]||0)+1; });
+    if (f.director) directors[f.director] = (directors[f.director]||0)+1;
+    if (f.year) { const d = Math.floor(f.year/10)*10; decades[d] = (decades[d]||0)+1; }
+  });
+
+  const topGenres = Object.entries(genres).sort((a,b)=>b[1]-a[1]).slice(0,6).map(([g])=>g);
+  const topDirectors = Object.entries(directors).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([d])=>d);
+  const topDecades = Object.entries(decades).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([d])=>d+'s');
+  const sampleTitles = WL.slice(0,12).map(f=>f.title);
+  const excludedList = [...getExcludedTitles()].slice(0,60).join(', ');
+
+  const prompt = `You are a film recommendation expert. Based on this collector's taste profile, suggest 8 films they would love to own on physical media (Blu-ray/4K).
+
+TASTE PROFILE:
+- Wishlist genres: ${topGenres.join(', ') || 'varied'}
+- Favourite directors: ${topDirectors.join(', ') || 'varied'}
+- Preferred eras: ${topDecades.join(', ') || 'varied'}
+- Sample titles from their wishlist: ${sampleTitles.join(', ')}
+
+STRICT RULES:
+- Do NOT recommend any of these titles (already owned or on wishlist): ${excludedList}
+- Recommend films that are available on physical media (Blu-ray or 4K UHD)
+- Mix well-known classics with slightly more obscure gems
+- Prioritise films with strong cult/collector appeal
+
+Respond ONLY with a valid JSON array, no markdown, no explanation. Format:
+[{"title":"Film Title","year":1985,"director":"Director Name","reason":"One short sentence why they'd love it"}]`;
+
+  try {
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+
+    const data = await resp.json();
+    const text = (data.content || []).map(b => b.text || '').join('');
+    const clean = text.replace(/```json|```/g, '').trim();
+    let recs = JSON.parse(clean);
+
+    // Filter out anything that slipped through exclusion
+    const excluded = getExcludedTitles();
+    recs = recs.filter(r => !excluded.has((r.title||'').toLowerCase().trim()));
+
+    // Cache results with fingerprint
+    localStorage.setItem(RECS_CACHE_KEY, JSON.stringify({ fingerprint, recs, ts: Date.now() }));
+
+    // Fetch posters from OMDB for each rec
+    recs = await enrichRecsWithPosters(recs);
+
+    loading.style.display = 'none';
+    renderRecs(recs);
+    note.style.display = 'block';
+
+  } catch(e) {
+    loading.style.display = 'none';
+    scroll.innerHTML = '<p style="font-size:12px;color:var(--mut);padding:4px">Could not load recommendations right now.</p>';
+  }
+
+  refreshBtn.textContent = '↻ Refresh';
+  refreshBtn.disabled = false;
+}
+
+async function enrichRecsWithPosters(recs) {
+  const enriched = [];
+  for (const r of recs) {
+    try {
+      const q = encodeURIComponent(r.title + (r.year ? ' ' + r.year : ''));
+      const res = await fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(r.title)}&y=${r.year||''}&apikey=trilogy`);
+      const d = await res.json();
+      if (d.Response === 'True') {
+        r.poster = d.Poster && d.Poster !== 'N/A' ? d.Poster : null;
+        r.imdb_id = d.imdbID || null;
+        if (!r.year && d.Year) r.year = parseInt(d.Year);
+      }
+    } catch(e) { /* no poster, that's fine */ }
+    enriched.push(r);
+  }
+  return enriched;
+}
+
+function renderRecs(recs) {
+  const scroll = document.getElementById('recs-scroll');
+  const excluded = getExcludedTitles();
+  // Final filter in case cache is stale
+  const filtered = recs.filter(r => !excluded.has((r.title||'').toLowerCase().trim()));
+
+  scroll.innerHTML = filtered.map((r, i) => {
+    const posterHtml = r.poster
+      ? `<img src="${ex(r.poster)}" alt="${ex(r.title)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`+
+        `<div class="rec-poster-fb" style="display:none">${ex(r.title)}</div>`
+      : `<div class="rec-poster-fb">${ex(r.title)}</div>`;
+    const imdbLink = r.imdb_id ? ` · <a href="https://www.imdb.com/title/${r.imdb_id}/" target="_blank" onclick="event.stopPropagation()" style="color:var(--acc);text-decoration:none">IMDb</a>` : '';
+    return `<div class="rec-card" onclick="recAddToWishlist(${i})" title="${ex(r.reason||'')}">
+      <div class="rec-poster">
+        ${posterHtml}
+        <button class="rec-add-btn" onclick="event.stopPropagation();recAddToWishlist(${i})">+</button>
+      </div>
+      <div class="rec-title">${ex(r.title)}</div>
+      <div class="rec-meta">${r.year||''}${r.director?' · '+ex(r.director):''}${imdbLink}</div>
+    </div>`;
+  }).join('');
+
+  // Store recs in a scoped variable for the add handler
+  scroll._recData = filtered;
+  document.getElementById('recs-note').style.display = 'block';
+}
+
+function recAddToWishlist(i) {
+  const scroll = document.getElementById('recs-scroll');
+  const recs = scroll._recData;
+  if (!recs || !recs[i]) return;
+  const r = recs[i];
+
+  // Check not already added
+  const exists = WL.find(f => f.title.toLowerCase() === (r.title||'').toLowerCase());
+  if (exists) { showToast('Already on your wishlist!'); return; }
+
+  const film = {
+    id: Date.now() + Math.random().toString(36).slice(2),
+    title: r.title,
+    year: r.year || null,
+    director: r.director || null,
+    poster: r.poster || null,
+    imdb_id: r.imdb_id || null,
+    genre: null, country: null, runtime: null,
+    priority: 'Someday',
+    notes: r.reason ? `Recommended: ${r.reason}` : null,
+    owned: false,
+    added: Date.now()
+  };
+  WL.unshift(film);
+  save(WL);
+  render();
+  renderHunt();
+  showToast(`"${r.title}" added to wishlist`);
+
+  // Remove from recs display
+  recs.splice(i, 1);
+  scroll._recData = recs;
+  renderRecs(recs);
+}
+
+// ── SHARE / EXPORT ────────────────────────────────────────────────────────────
+function openShareModal() {
+  document.getElementById('share-modal').classList.add('open');
+}
+function closeShareModal() {
+  document.getElementById('share-modal').classList.remove('open');
+}
+document.getElementById('share-modal').addEventListener('click', e => {
+  if (e.target === document.getElementById('share-modal')) closeShareModal();
+});
+
+function exportShareableHTML() {
+  const films = WL.filter(f => !f.owned && !ARCHIVE_TITLES.has(f.title.toLowerCase()));
+  const PRI_COLOR = { 'Must Own': '#f76e7e', 'High': '#f7c47e', 'Someday': '#7eb8f7' };
+  const now = new Date().toLocaleDateString(undefined, { year:'numeric', month:'long', day:'numeric' });
+
+  const cards = films.map(f => {
+    const color = PRI_COLOR[f.priority] || '#7eb8f7';
+    const poster = f.poster
+      ? `<img src="${ex(f.poster)}" style="width:100%;height:100%;object-fit:cover;display:block" loading="lazy">`
+      : `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:8px;text-align:center;font-size:11px;color:#6b7799">${ex(f.title)}</div>`;
+    return `<div style="break-inside:avoid;cursor:default">
+      <div style="position:relative;aspect-ratio:2/3;border-radius:6px;overflow:hidden;background:#1c2130;border:1px solid rgba(130,160,255,0.1);margin-bottom:6px">
+        ${poster}
+        <div style="position:absolute;top:4px;left:4px;background:${color};color:#000;font-size:8px;font-weight:800;padding:2px 5px;border-radius:3px;opacity:.9">${ex(f.priority)}</div>
+        ${f.score ? `<div style="position:absolute;bottom:4px;left:5px;font-size:11px;font-weight:700;color:#7eb8f7;text-shadow:0 1px 4px rgba(0,0,0,.9)">${parseFloat(f.score).toFixed(1)}</div>` : ''}
+      </div>
+      <div style="font-size:11px;font-weight:600;color:#e8eaf2;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">${ex(f.title)}</div>
+      <div style="font-size:10px;color:#6b7799;margin-top:2px">${f.year||''}${f.director?' · '+ex(f.director):''}</div>
+    </div>`;
+  }).join('');
+
+  const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My Film Wishlist</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0a0d12;color:#e8eaf2;font-family:'DM Sans',-apple-system,sans-serif;min-height:100vh;padding:24px 16px 48px}
+.top{max-width:900px;margin:0 auto 24px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+h1{font-family:'DM Serif Display',serif;font-style:italic;font-size:28px}
+.meta{font-size:13px;color:#6b7799}
+.grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media(min-width:480px){.grid{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:640px){.grid{grid-template-columns:repeat(5,1fr)}}
+@media(min-width:900px){.grid{grid-template-columns:repeat(7,1fr)}}
+</style>
+</head>
+<body>
+<div class="top">
+  <h1>My Film Wishlist</h1>
+  <span class="meta">${films.length} films · ${now}</span>
+</div>
+<div class="grid">${cards}</div>
+</body>
+</html>`;
+
+  const blob = new Blob([html], { type: 'text/html' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'my-film-wishlist.html';
+  a.click();
+  closeShareModal();
+  showToast('Wishlist exported as HTML ✓');
+}
+
+function copyShareableJSON() {
+  const data = WL.map(f => ({
+    title: f.title,
+    year: f.year,
+    director: f.director,
+    priority: f.priority,
+    genre: f.genre,
+    score: f.score,
+    owned: f.owned
+  }));
+  navigator.clipboard.writeText(JSON.stringify(data, null, 2))
+    .then(() => { closeShareModal(); showToast('JSON copied to clipboard ✓'); })
+    .catch(() => showToast('Could not copy — try exporting as HTML'));
+}
+
+function exportShareableText() {
+  const PRI_ICON = { 'Must Own': '🔴', 'High': '🟡', 'Someday': '🔵' };
+  const lines = WL
+    .filter(f => !f.owned && !ARCHIVE_TITLES.has(f.title.toLowerCase()))
+    .map(f => {
+      const icon = PRI_ICON[f.priority] || '•';
+      const meta = [f.year, f.director].filter(Boolean).join(', ');
+      return `${icon} ${f.title}${meta ? ' ('+meta+')' : ''}`;
+    });
+
+  const text = `My Film Wishlist — ${lines.length} films\n${'─'.repeat(40)}\n\n` + lines.join('\n');
+  const blob = new Blob([text], { type: 'text/plain' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'my-film-wishlist.txt';
+  a.click();
+  closeShareModal();
+  showToast('Text list downloaded ✓');
+}
 </script>
 </body>
 </html>
