@@ -1354,6 +1354,14 @@ function getExcludedTitles() {
   return titles;
 }
 
+// Runtime API key — stored in memory only, never persisted
+let _apiKey = null;
+function getApiKey() {
+  if (_apiKey) return _apiKey;
+  _apiKey = prompt('Enter your Anthropic API key to load recommendations:\n(stays in memory only — never saved to disk)');
+  return _apiKey;
+}
+
 async function loadRecommendations(forceRefresh = false) {
   if (WL.length < 3) return; // Need enough signal
 
@@ -1418,9 +1426,11 @@ Respond ONLY with a valid JSON array, no markdown, no explanation. Format:
 [{"title":"Film Title","year":1985,"director":"Director Name","reason":"One short sentence why they'd love it"}]`;
 
   try {
+    const key = getApiKey();
+    if (!key) { loading.style.display='none'; scroll.innerHTML='<p style="font-size:12px;color:var(--mut);padding:4px">API key required — click Refresh to try again.</p>'; refreshBtn.textContent='↻ Refresh'; refreshBtn.disabled=false; return; }
     const resp = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514',
         max_tokens: 1000,
