@@ -1337,474 +1337,25 @@ async function init() {
 init();
 
 // ── RECOMMENDATIONS ──────────────────────────────────────────────────────────
-// Fully local scoring — no API key needed.
-// Scores a curated catalogue against your wishlist taste profile.
+// Uses Claude API to suggest films not already in the wishlist or archive.
+// Cache key stores results + the wishlist fingerprint so refresh is smart.
 const RECS_CACHE_KEY = 'cinewishlist_recs_v1';
 
-// Curated catalogue: [title, year, director, genres, imdb_id]
-const REC_CATALOGUE = [
-  ["Mulholland Drive",2001,"David Lynch","Drama,Mystery,Thriller","tt0166924"],
-  ["In the Mood for Love",2000,"Wong Kar-wai","Drama,Romance","tt0118694"],
-  ["The Royal Tenenbaums",2001,"Wes Anderson","Comedy,Drama","tt0265666"],
-  ["Eternal Sunshine of the Spotless Mind",2004,"Michel Gondry","Drama,Romance,Sci-Fi","tt0338013"],
-  ["There Will Be Blood",2007,"Paul Thomas Anderson","Drama","tt0469494"],
-  ["No Country for Old Men",2007,"Joel Coen","Crime,Drama,Thriller","tt0477348"],
-  ["The Master",2012,"Paul Thomas Anderson","Drama","tt1560747"],
-  ["Moonlight",2016,"Barry Jenkins","Drama","tt4975722"],
-  ["Portrait of a Lady on Fire",2019,"Céline Sciamma","Drama,Romance","tt8613070"],
-  ["The Tree of Life",2011,"Terrence Malick","Drama","tt0478304"],
-  ["A Separation",2011,"Asghar Farhadi","Drama","tt1832382"],
-  ["Drive",2011,"Nicolas Winding Refn","Crime,Drama,Thriller","tt0780504"],
-  ["Hereditary",2018,"Ari Aster","Drama,Horror,Mystery","tt7784604"],
-  ["Midsommar",2019,"Ari Aster","Drama,Horror,Mystery","tt8772262"],
-  ["The Witch",2015,"Robert Eggers","Drama,Horror,Mystery","tt4263482"],
-  ["The Lighthouse",2019,"Robert Eggers","Drama,Fantasy,Horror","tt7126948"],
-  ["Parasite",2019,"Bong Joon-ho","Comedy,Drama,Thriller","tt6751668"],
-  ["Burning",2018,"Lee Chang-dong","Drama,Mystery,Thriller","tt7282468"],
-  ["Shoplifters",2018,"Hirokazu Kore-eda","Crime,Drama","tt8075192"],
-  ["Still Walking",2008,"Hirokazu Kore-eda","Drama","tt1087578"],
-  ["Yi Yi",2000,"Edward Yang","Drama","tt0244316"],
-  ["A Brighter Summer Day",1991,"Edward Yang","Crime,Drama","tt0101985"],
-  ["Chungking Express",1994,"Wong Kar-wai","Drama,Romance","tt0109424"],
-  ["Happy Together",1997,"Wong Kar-wai","Drama,Romance","tt0118899"],
-  ["The Handmaiden",2016,"Park Chan-wook","Drama,Mystery,Romance","tt4016934"],
-  ["Oldboy",2003,"Park Chan-wook","Action,Drama,Mystery","tt0364569"],
-  ["Memories of Murder",2003,"Bong Joon-ho","Crime,Drama,Mystery","tt0353969"],
-  ["Mother",2009,"Bong Joon-ho","Crime,Drama,Mystery","tt1189340"],
-  ["Secret Sunshine",2007,"Lee Chang-dong","Drama","tt0817225"],
-  ["Poetry",2010,"Lee Chang-dong","Crime,Drama","tt1287878"],
-  ["Certified Copy",2010,"Abbas Kiarostami","Drama,Romance","tt1518733"],
-  ["Close-Up",1990,"Abbas Kiarostami","Drama","tt0100234"],
-  ["A Taste of Cherry",1997,"Abbas Kiarostami","Drama","tt0120263"],
-  ["The White Ribbon",2009,"Michael Haneke","Drama,Mystery,Thriller","tt1149362"],
-  ["Cache",2005,"Michael Haneke","Drama,Mystery,Thriller","tt0387898"],
-  ["Amour",2012,"Michael Haneke","Drama,Romance","tt1602620"],
-  ["4 Months 3 Weeks and 2 Days",2007,"Cristian Mungiu","Drama","tt1032846"],
-  ["The Death of Mr. Lazarescu",2005,"Cristi Puiu","Drama","tt0456781"],
-  ["Wild Tales",2014,"Damián Szifron","Comedy,Drama,Thriller","tt3011894"],
-  ["The Club",2015,"Pablo Larraín","Drama","tt3725530"],
-  ["A Fantastic Woman",2017,"Sebastián Lelio","Drama","tt5639354"],
-  ["Toni Erdmann",2016,"Maren Ade","Comedy,Drama","tt4048272"],
-  ["The Lives of Others",2006,"Florian Henckel von Donnersmarck","Drama,Thriller","tt0408306"],
-  ["Son of Saul",2015,"László Nemes","Drama,War","tt3808342"],
-  ["Ida",2013,"Pawel Pawlikowski","Drama","tt2718492"],
-  ["Cold War",2018,"Pawel Pawlikowski","Drama,Romance","tt6449170"],
-  ["Force Majeure",2014,"Ruben Östlund","Comedy,Drama","tt3067184"],
-  ["The Square",2017,"Ruben Östlund","Comedy,Drama","tt4985051"],
-  ["Triangle of Sadness",2022,"Ruben Östlund","Comedy,Drama","tt7322224"],
-  ["Holy Motors",2012,"Leos Carax","Drama,Fantasy","tt2076220"],
-  ["Annette",2021,"Leos Carax","Drama,Musical,Romance","tt6217926"],
-  ["Leviathan",2014,"Andrey Zvyagintsev","Drama","tt2802154"],
-  ["Loveless",2017,"Andrey Zvyagintsev","Drama,Mystery","tt6304162"],
-  ["The Turin Horse",2011,"Béla Tarr","Drama","tt1316540"],
-  ["Satantango",1994,"Béla Tarr","Drama","tt0111341"],
-  ["The Mirror",1975,"Andrei Tarkovsky","Drama","tt0072443"],
-  ["Stalker",1979,"Andrei Tarkovsky","Drama,Sci-Fi","tt0079944"],
-  ["Solaris",1972,"Andrei Tarkovsky","Drama,Sci-Fi","tt0069293"],
-  ["Andrei Rublev",1966,"Andrei Tarkovsky","Biography,Drama","tt0060107"],
-  ["Come and See",1985,"Elem Klimov","Drama,War","tt0091251"],
-  ["Au Hasard Balthazar",1966,"Robert Bresson","Drama","tt0060138"],
-  ["Pickpocket",1959,"Robert Bresson","Crime,Drama","tt0053168"],
-  ["A Man Escaped",1956,"Robert Bresson","Drama,Thriller","tt0049456"],
-  ["L'Avventura",1960,"Michelangelo Antonioni","Drama,Mystery","tt0053619"],
-  ["Blow-Up",1966,"Michelangelo Antonioni","Mystery,Thriller","tt0060176"],
-  ["The Passenger",1975,"Michelangelo Antonioni","Drama,Thriller","tt0073580"],
-  ["8½",1963,"Federico Fellini","Drama","tt0056801"],
-  ["La Dolce Vita",1960,"Federico Fellini","Drama","tt0053779"],
-  ["Amarcord",1973,"Federico Fellini","Comedy,Drama","tt0071129"],
-  ["Bicycle Thieves",1948,"Vittorio De Sica","Drama","tt0040522"],
-  ["Umberto D.",1952,"Vittorio De Sica","Drama","tt0045274"],
-  ["Rome, Open City",1945,"Roberto Rossellini","Drama,War","tt0038890"],
-  ["The Battle of Algiers",1966,"Gillo Pontecorvo","Drama,History,War","tt0058946"],
-  ["Contempt",1963,"Jean-Luc Godard","Drama","tt0057345"],
-  ["Pierrot le Fou",1965,"Jean-Luc Godard","Crime,Drama,Romance","tt0059592"],
-  ["Breathless",1960,"Jean-Luc Godard","Crime,Drama","tt0053472"],
-  ["The 400 Blows",1959,"François Truffaut","Crime,Drama","tt0053198"],
-  ["Jules and Jim",1962,"François Truffaut","Drama,Romance","tt0055032"],
-  ["Day for Night",1973,"François Truffaut","Comedy,Drama","tt0070460"],
-  ["The Umbrellas of Cherbourg",1964,"Jacques Demy","Drama,Musical,Romance","tt0058450"],
-  ["Cleo from 5 to 7",1962,"Agnès Varda","Drama","tt0055093"],
-  ["Vagabond",1985,"Agnès Varda","Drama","tt0090717"],
-  ["My Neighbor Totoro",1988,"Hayao Miyazaki","Animation,Family,Fantasy","tt0096283"],
-  ["Princess Mononoke",1997,"Hayao Miyazaki","Animation,Action,Adventure","tt0119698"],
-  ["Nausicaä of the Valley of the Wind",1984,"Hayao Miyazaki","Animation,Action,Adventure","tt0087544"],
-  ["Grave of the Fireflies",1988,"Isao Takahata","Animation,Drama,War","tt0095327"],
-  ["Akira",1988,"Katsuhiro Otomo","Animation,Action,Sci-Fi","tt0094625"],
-  ["Ghost in the Shell",1995,"Mamoru Oshii","Animation,Action,Sci-Fi","tt0113568"],
-  ["Perfect Blue",1997,"Satoshi Kon","Animation,Drama,Thriller","tt0156887"],
-  ["Millennium Actress",2001,"Satoshi Kon","Animation,Drama,Fantasy","tt0291350"],
-  ["Ran",1985,"Akira Kurosawa","Drama,War","tt0089881"],
-  ["Seven Samurai",1954,"Akira Kurosawa","Action,Drama","tt0047478"],
-  ["Rashomon",1950,"Akira Kurosawa","Crime,Drama,Mystery","tt0042876"],
-  ["High and Low",1963,"Akira Kurosawa","Crime,Drama,Thriller","tt0057565"],
-  ["Ikiru",1952,"Akira Kurosawa","Drama","tt0044741"],
-  ["Tokyo Story",1953,"Yasujirō Ozu","Drama","tt0046438"],
-  ["Late Spring",1949,"Yasujirō Ozu","Drama","tt0041854"],
-  ["Sansho the Bailiff",1954,"Kenji Mizoguchi","Drama","tt0047478"],
-  ["Ugetsu",1953,"Kenji Mizoguchi","Drama,Fantasy","tt0046478"],
-  ["Harakiri",1962,"Masaki Kobayashi","Action,Drama","tt0056058"],
-  ["Kwaidan",1964,"Masaki Kobayashi","Drama,Fantasy,Horror","tt0058279"],
-  ["In the Realm of the Senses",1976,"Nagisa Oshima","Drama","tt0074130"],
-  ["Vengeance Is Mine",1979,"Shohei Imamura","Biography,Crime,Drama","tt0079698"],
-  ["Fireworks",1997,"Takeshi Kitano","Crime,Drama","tt0119250"],
-  ["Hana-bi",1997,"Takeshi Kitano","Crime,Drama,Romance","tt0119250"],
-  ["Rififi",1955,"Jules Dassin","Crime,Drama,Thriller","tt0048021"],
-  ["Le Samouraï",1967,"Jean-Pierre Melville","Crime,Drama,Thriller","tt0062229"],
-  ["Army of Shadows",1969,"Jean-Pierre Melville","Drama,Thriller,War","tt0065466"],
-  ["Bob le Flambeur",1956,"Jean-Pierre Melville","Crime,Drama","tt0048777"],
-  ["Eyes Without a Face",1960,"Georges Franju","Horror","tt0053459"],
-  ["Diabolique",1955,"Henri-Georges Clouzot","Drama,Horror,Mystery","tt0046911"],
-  ["The Wages of Fear",1953,"Henri-Georges Clouzot","Drama,Thriller","tt0046268"],
-  ["Playtime",1967,"Jacques Tati","Comedy","tt0062136"],
-  ["Mon Oncle",1958,"Jacques Tati","Comedy","tt0050706"],
-  ["Mon Uncle",1958,"Jacques Tati","Comedy","tt0050706"],
-  ["The Conversation",1974,"Francis Ford Coppola","Drama,Mystery,Thriller","tt0071360"],
-  ["Apocalypse Now",1979,"Francis Ford Coppola","Drama,Mystery,War","tt0078788"],
-  ["McCabe & Mrs. Miller",1971,"Robert Altman","Drama,Romance,Western","tt0067318"],
-  ["Nashville",1975,"Robert Altman","Drama,Music","tt0073198"],
-  ["Short Cuts",1993,"Robert Altman","Drama","tt0108122"],
-  ["Chinatown",1974,"Roman Polanski","Drama,Mystery,Thriller","tt0071315"],
-  ["Rosemary's Baby",1968,"Roman Polanski","Drama,Horror","tt0063522"],
-  ["The Tenant",1976,"Roman Polanski","Drama,Horror,Mystery","tt0075402"],
-  ["Taxi Driver",1976,"Martin Scorsese","Crime,Drama","tt0075314"],
-  ["Raging Bull",1980,"Martin Scorsese","Biography,Drama,Sport","tt0081398"],
-  ["The King of Comedy",1982,"Martin Scorsese","Comedy,Crime,Drama","tt0085794"],
-  ["After Hours",1985,"Martin Scorsese","Comedy,Crime,Thriller","tt0088680"],
-  ["GoodFellas",1990,"Martin Scorsese","Biography,Crime,Drama","tt0099685"],
-  ["Mean Streets",1973,"Martin Scorsese","Crime,Drama","tt0070379"],
-  ["Blue Velvet",1986,"David Lynch","Drama,Mystery,Thriller","tt0090756"],
-  ["Eraserhead",1977,"David Lynch","Fantasy,Horror","tt0074486"],
-  ["Lost Highway",1997,"David Lynch","Crime,Drama,Mystery","tt0116922"],
-  ["Wild at Heart",1990,"David Lynch","Crime,Romance,Thriller","tt0100935"],
-  ["Blood Simple",1984,"Joel Coen","Crime,Drama,Thriller","tt0086979"],
-  ["Barton Fink",1991,"Joel Coen","Drama,Mystery,Thriller","tt0101410"],
-  ["Fargo",1996,"Joel Coen","Crime,Drama,Thriller","tt0116282"],
-  ["The Big Lebowski",1998,"Joel Coen","Comedy,Crime","tt0118715"],
-  ["A Serious Man",2009,"Joel Coen","Comedy,Drama","tt1019452"],
-  ["Miller's Crossing",1990,"Joel Coen","Crime,Drama,Thriller","tt0100150"],
-  ["There Will Be Blood",2007,"Paul Thomas Anderson","Drama","tt0469494"],
-  ["Boogie Nights",1997,"Paul Thomas Anderson","Drama","tt0118749"],
-  ["Magnolia",1999,"Paul Thomas Anderson","Drama","tt0175880"],
-  ["Punch-Drunk Love",2002,"Paul Thomas Anderson","Comedy,Drama,Romance","tt0272338"],
-  ["Phantom Thread",2017,"Paul Thomas Anderson","Drama,Romance","tt5776858"],
-  ["Licorice Pizza",2021,"Paul Thomas Anderson","Comedy,Drama,Romance","tt11271038"],
-  ["Badlands",1973,"Terrence Malick","Crime,Drama","tt0069762"],
-  ["Days of Heaven",1978,"Terrence Malick","Drama,Romance","tt0077405"],
-  ["The Thin Red Line",1998,"Terrence Malick","Drama,History,War","tt0120863"],
-  ["The New World",2005,"Terrence Malick","Adventure,Drama,History","tt0402399"],
-  ["Pi",1998,"Darren Aronofsky","Drama,Sci-Fi,Thriller","tt0138524"],
-  ["Requiem for a Dream",2000,"Darren Aronofsky","Drama","tt0180093"],
-  ["Black Swan",2010,"Darren Aronofsky","Drama,Thriller","tt1374989"],
-  ["The Wrestler",2008,"Darren Aronofsky","Drama","tt1125849"],
-  ["Synecdoche New York",2008,"Charlie Kaufman","Comedy,Drama,Fantasy","tt0383028"],
-  ["Adaptation",2002,"Spike Jonze","Comedy,Drama","tt0268126"],
-  ["Being John Malkovich",1999,"Spike Jonze","Comedy,Drama,Fantasy","tt0120601"],
-  ["Her",2013,"Spike Jonze","Drama,Romance,Sci-Fi","tt1798709"],
-  ["Lost in Translation",2003,"Sofia Coppola","Drama,Romance","tt0335266"],
-  ["The Virgin Suicides",1999,"Sofia Coppola","Drama","tt0159097"],
-  ["Marie Antoinette",2006,"Sofia Coppola","Biography,Drama,History","tt0456372"],
-  ["Y Tu Mamá También",2001,"Alfonso Cuarón","Drama,Road","tt0245574"],
-  ["Roma",2018,"Alfonso Cuarón","Drama","tt6155172"],
-  ["Pan's Labyrinth",2006,"Guillermo del Toro","Drama,Fantasy,War","tt0457430"],
-  ["The Devil's Backbone",2001,"Guillermo del Toro","Drama,Fantasy,Horror","tt0256009"],
-  ["Amores Perros",2000,"Alejandro González Iñárritu","Drama,Thriller","tt0245712"],
-  ["Babel",2006,"Alejandro González Iñárritu","Drama","tt0449467"],
-  ["21 Grams",2003,"Alejandro González Iñárritu","Crime,Drama,Thriller","tt0340
-
-96"],
-  ["City of God",2002,"Fernando Meirelles","Crime,Drama","tt0317248"],
-  ["Caché",2005,"Michael Haneke","Drama,Mystery,Thriller","tt0387898"],
-  ["Funny Games",1997,"Michael Haneke","Crime,Drama,Thriller","tt0119167"],
-  ["Time of the Wolf",2003,"Michael Haneke","Drama","tt0324597"],
-  ["Code Unknown",2000,"Michael Haneke","Drama","tt0243803"],
-  ["The Piano Teacher",2001,"Michael Haneke","Drama","tt0254686"],
-  ["Waltz with Bashir",2008,"Ari Folman","Animation,Biography,Documentary","tt1185616"],
-  ["Persepolis",2007,"Vincent Paronnaud","Animation,Biography,Drama","tt0808417"],
-  ["The Act of Killing",2012,"Joshua Oppenheimer","Documentary","tt2375605"],
-  ["Stories We Tell",2012,"Sarah Polley","Documentary","tt2366450"],
-  ["Man with a Movie Camera",1929,"Dziga Vertov","Documentary","tt0019760"],
-  ["Sans Soleil",1983,"Chris Marker","Documentary","tt0085481"],
-  ["F for Fake",1973,"Orson Welles","Documentary","tt0072962"],
-  ["Touch of Evil",1958,"Orson Welles","Crime,Drama,Film-Noir","tt0052311"],
-  ["The Magnificent Ambersons",1942,"Orson Welles","Drama","tt0035015"],
-  ["Citizen Kane",1941,"Orson Welles","Drama,Mystery","tt0033467"],
-  ["Vertigo",1958,"Alfred Hitchcock","Mystery,Romance,Thriller","tt0052357"],
-  ["Rear Window",1954,"Alfred Hitchcock","Mystery,Thriller","tt0047396"],
-  ["Psycho",1960,"Alfred Hitchcock","Horror,Mystery,Thriller","tt0054215"],
-  ["The Birds",1963,"Alfred Hitchcock","Horror,Mystery,Thriller","tt0056869"],
-  ["Rope",1948,"Alfred Hitchcock","Crime,Drama,Mystery","tt0040746"],
-  ["Shadow of a Doubt",1943,"Alfred Hitchcock","Film-Noir,Mystery,Thriller","tt0036342"],
-  ["North by Northwest",1959,"Alfred Hitchcock","Action,Adventure,Mystery","tt0053125"],
-  ["Double Indemnity",1944,"Billy Wilder","Crime,Drama,Film-Noir","tt0036775"],
-  ["Sunset Boulevard",1950,"Billy Wilder","Drama,Film-Noir","tt0043014"],
-  ["The Apartment",1960,"Billy Wilder","Comedy,Drama,Romance","tt0053604"],
-  ["Some Like It Hot",1959,"Billy Wilder","Comedy,Romance","tt0053291"],
-  ["Ace in the Hole",1951,"Billy Wilder","Drama,Film-Noir","tt0043338"],
-  ["Laura",1944,"Otto Preminger","Drama,Film-Noir,Mystery","tt0037008"],
-  ["Anatomy of a Murder",1959,"Otto Preminger","Crime,Drama,Mystery","tt0052561"],
-  ["Out of the Past",1947,"Jacques Tourneur","Crime,Drama,Film-Noir","tt0039588"],
-  ["Night of the Hunter",1955,"Charles Laughton","Drama,Film-Noir,Thriller","tt0048424"],
-  ["The Searchers",1956,"John Ford","Adventure,Drama,Western","tt0049730"],
-  ["Rio Bravo",1959,"Howard Hawks","Western","tt0053221"],
-  ["His Girl Friday",1940,"Howard Hawks","Comedy,Drama,Romance","tt0032599"],
-  ["The Big Sleep",1946,"Howard Hawks","Crime,Film-Noir,Mystery","tt0038355"],
-  ["Bringing Up Baby",1938,"Howard Hawks","Comedy,Romance","tt0029947"],
-  ["The General",1926,"Buster Keaton","Action,Adventure,Comedy","tt0017925"],
-  ["Sherlock Jr.",1924,"Buster Keaton","Comedy,Romance","tt0015324"],
-  ["City Lights",1931,"Charles Chaplin","Comedy,Drama,Romance","tt0021749"],
-  ["Modern Times",1936,"Charles Chaplin","Comedy,Drama,Romance","tt0027977"],
-  ["The Gold Rush",1925,"Charles Chaplin","Adventure,Comedy,Drama","tt0015864"],
-  ["A Woman Under the Influence",1974,"John Cassavetes","Drama","tt0072417"],
-  ["Faces",1968,"John Cassavetes","Drama","tt0062952"],
-  ["Opening Night",1977,"John Cassavetes","Drama","tt0076256"],
-  ["The Killing of a Chinese Bookie",1976,"John Cassavetes","Crime,Drama","tt0074749"],
-  ["Husbands",1970,"John Cassavetes","Comedy,Drama","tt0065867"],
-  ["Shadows",1958,"John Cassavetes","Drama,Romance","tt0053270"],
-  ["Safe",1995,"Todd Haynes","Drama","tt0114323"],
-  ["Far from Heaven",2002,"Todd Haynes","Drama,Romance","tt0288001"],
-  ["Carol",2015,"Todd Haynes","Drama,Romance","tt2402927"],
-  ["I'm Not There",2007,"Todd Haynes","Biography,Drama,Music","tt0368794"],
-  ["Boyhood",2014,"Richard Linklater","Drama","tt1065073"],
-  ["Before Sunrise",1995,"Richard Linklater","Drama,Romance","tt0112471"],
-  ["Before Sunset",2004,"Richard Linklater","Drama,Romance","tt0381681"],
-  ["Before Midnight",2013,"Richard Linklater","Drama,Romance","tt2209418"],
-  ["Slacker",1990,"Richard Linklater","Comedy,Drama","tt0102943"],
-  ["Waking Life",2001,"Richard Linklater","Animation,Drama,Fantasy","tt0243017"],
-  ["Fish Tank",2009,"Andrea Arnold","Drama","tt1232776"],
-  ["American Honey",2016,"Andrea Arnold","Adventure,Drama","tt3774694"],
-  ["We Need to Talk About Kevin",2011,"Lynne Ramsay","Drama,Thriller","tt1242460"],
-  ["Ratcatcher",1999,"Lynne Ramsay","Drama","tt0171685"],
-  ["Morvern Callar",2002,"Lynne Ramsay","Drama","tt0300140"],
-  ["You Were Never Really Here",2017,"Lynne Ramsay","Crime,Drama,Thriller","tt5742374"],
-  ["4 Months 3 Weeks 2 Days",2007,"Cristian Mungiu","Drama","tt1032846"],
-  ["Beyond the Hills",2012,"Cristian Mungiu","Drama","tt2192947"],
-  ["Graduation",2016,"Cristian Mungiu","Drama","tt4826674"],
-  ["The Death of Stalin",2017,"Armando Iannucci","Comedy,Drama,History","tt5886416"],
-  ["In Bruges",2008,"Martin McDonagh","Comedy,Crime,Drama","tt0780536"],
-  ["Three Billboards Outside Ebbing Missouri",2017,"Martin McDonagh","Crime,Drama","tt5027774"],
-  ["Whiplash",2014,"Damien Chazelle","Drama,Music","tt2582802"],
-  ["La La Land",2016,"Damien Chazelle","Comedy,Drama,Musical","tt3783958"],
-  ["First Man",2018,"Damien Chazelle","Biography,Drama,History","tt1213641"],
-  ["Beasts of the Southern Wild",2012,"Benh Zeitlin","Adventure,Drama,Fantasy","tt2125435"],
-  ["Moonrise Kingdom",2012,"Wes Anderson","Adventure,Comedy,Drama","tt1748122"],
-  ["The Grand Budapest Hotel",2014,"Wes Anderson","Adventure,Comedy,Crime","tt2278388"],
-  ["Rushmore",1998,"Wes Anderson","Comedy,Drama","tt0128445"],
-  ["Bottle Rocket",1996,"Wes Anderson","Comedy,Crime","tt0115734"],
-  ["The Life Aquatic",2004,"Wes Anderson","Adventure,Comedy,Drama","tt0362270"],
-  ["Short Cuts",1993,"Robert Altman","Drama","tt0108122"],
-  ["Funny Ha Ha",2002,"Andrew Bujalski","Comedy,Drama","tt0365797"],
-  ["Frances Ha",2012,"Noah Baumbach","Comedy,Drama","tt2347569"],
-  ["The Squid and the Whale",2005,"Noah Baumbach","Comedy,Drama","tt0367089"],
-  ["Marriage Story",2019,"Noah Baumbach","Drama,Romance","tt7653254"],
-  ["Greenberg",2010,"Noah Baumbach","Comedy,Drama,Romance","tt1234654"],
-  ["Spring Breakers",2012,"Harmony Korine","Crime,Drama","tt2101441"],
-  ["Kids",1995,"Larry Clark","Drama","tt0113540"],
-  ["Gummo",1997,"Harmony Korine","Drama","tt0119237"],
-  ["Tangerine",2015,"Sean Baker","Comedy,Drama","tt3824458"],
-  ["The Florida Project",2017,"Sean Baker","Drama","tt5649144"],
-  ["Moonlight",2016,"Barry Jenkins","Drama","tt4975722"],
-  ["Medicine for Melancholy",2008,"Barry Jenkins","Drama,Romance","tt1159462"],
-  ["If Beale Street Could Talk",2018,"Barry Jenkins","Drama,Romance","tt6978860"],
-  ["Waves",2019,"Trey Edward Shults","Drama","tt8106254"],
-  ["It Comes at Night",2017,"Trey Edward Shults","Drama,Horror,Mystery","tt5968394"],
-  ["A Ghost Story",2017,"David Lowery","Drama,Fantasy,Romance","tt6265828"],
-  ["The Witch",2015,"Robert Eggers","Drama,Horror,Mystery","tt4263482"],
-  ["First Reformed",2017,"Paul Schrader","Drama,Mystery,Thriller","tt5649108"],
-  ["The Card Counter",2021,"Paul Schrader","Crime,Drama,Thriller","tt11196036"],
-  ["Minari",2020,"Lee Isaac Chung","Drama","tt10633456"],
-  ["The Farewell",2019,"Lulu Wang","Comedy,Drama","tt8637428"],
-  ["Eighth Grade",2018,"Bo Burnham","Drama","tt7014006"],
-  ["Uncut Gems",2019,"Josh Safdie","Crime,Drama,Thriller","tt5727208"],
-  ["Good Time",2017,"Josh Safdie","Crime,Drama,Thriller","tt4846232"],
-  ["Heaven Knows What",2014,"Josh Safdie","Crime,Drama","tt3503754"],
-  ["The Lighthouse",2019,"Robert Eggers","Drama,Fantasy,Horror","tt7126948"],
-  ["Possessor",2020,"Brandon Cronenberg","Horror,Sci-Fi,Thriller","tt9698510"],
-  ["Titane",2021,"Julia Ducournau","Crime,Drama,Horror","tt11688238"],
-  ["Raw",2016,"Julia Ducournau","Drama,Horror","tt4954522"],
-  ["Climax",2018,"Gaspar Noé","Drama,Horror,Music","tt7342838"],
-  ["Enter the Void",2009,"Gaspar Noé","Drama,Sci-Fi,Thriller","tt1191111"],
-  ["Irreversible",2002,"Gaspar Noé","Crime,Drama","tt0290673"],
-  ["Caché",2005,"Michael Haneke","Drama,Mystery,Thriller","tt0387898"],
-  ["The Killing",1956,"Stanley Kubrick","Crime,Film-Noir,Thriller","tt0049406"],
-  ["Paths of Glory",1957,"Stanley Kubrick","Drama,War","tt0050825"],
-  ["Spartacus",1960,"Stanley Kubrick","Action,Adventure,Biography","tt0054331"],
-  ["Lolita",1962,"Stanley Kubrick","Comedy,Drama","tt0056193"],
-  ["Dr. Strangelove",1964,"Stanley Kubrick","Comedy,Sci-Fi,War","tt0057012"],
-  ["2001: A Space Odyssey",1968,"Stanley Kubrick","Mystery,Sci-Fi","tt0062622"],
-  ["A Clockwork Orange",1971,"Stanley Kubrick","Crime,Drama,Sci-Fi","tt0066921"],
-  ["Barry Lyndon",1975,"Stanley Kubrick","Adventure,Drama","tt0072684"],
-  ["The Shining",1980,"Stanley Kubrick","Drama,Horror","tt0081505"],
-  ["Full Metal Jacket",1987,"Stanley Kubrick","Drama,War","tt0093058"],
-  ["Eyes Wide Shut",1999,"Stanley Kubrick","Drama,Mystery,Thriller","tt0120663"],
-  ["Ingmar Bergman's The Seventh Seal",1957,"Ingmar Bergman","Drama,Fantasy","tt0050976"],
-  ["Wild Strawberries",1957,"Ingmar Bergman","Drama","tt0050986"],
-  ["The Virgin Spring",1960,"Ingmar Bergman","Drama,History","tt0053272"],
-  ["Through a Glass Darkly",1961,"Ingmar Bergman","Drama","tt0055499"],
-  ["Persona",1966,"Ingmar Bergman","Drama","tt0060827"],
-  ["Shame",1968,"Ingmar Bergman","Drama,War","tt0063590"],
-  ["Cries and Whispers",1972,"Ingmar Bergman","Drama","tt0069467"],
-  ["Scenes from a Marriage",1973,"Ingmar Bergman","Drama,Romance","tt0070298"],
-  ["Autumn Sonata",1978,"Ingmar Bergman","Drama","tt0077711"],
-  ["Fanny and Alexander",1982,"Ingmar Bergman","Drama","tt0083922"],
-  ["Ali: Fear Eats the Soul",1974,"Rainer Werner Fassbinder","Drama,Romance","tt0071141"],
-  ["The Marriage of Maria Braun",1979,"Rainer Werner Fassbinder","Drama,War","tt0079191"],
-  ["Fox and His Friends",1975,"Rainer Werner Fassbinder","Drama","tt0072976"],
-  ["Aguirre the Wrath of God",1972,"Werner Herzog","Adventure,Drama,History","tt0068182"],
-  ["Fitzcarraldo",1982,"Werner Herzog","Adventure,Drama","tt0083946"],
-  ["Nosferatu the Vampyre",1979,"Werner Herzog","Fantasy,Horror","tt0079641"],
-  ["Stroszek",1977,"Werner Herzog","Drama","tt0076318"],
-  ["Woyzeck",1979,"Werner Herzog","Drama","tt0080149"],
-  ["Wings of Desire",1987,"Wim Wenders","Drama,Fantasy,Romance","tt0093191"],
-  ["Paris Texas",1984,"Wim Wenders","Drama","tt0087884"],
-  ["The American Friend",1977,"Wim Wenders","Crime,Drama,Thriller","tt0075612"],
-  ["Kings of the Road",1976,"Wim Wenders","Drama","tt0074312"],
-  ["Querelle",1982,"Rainer Werner Fassbinder","Drama","tt0084408"],
-  ["In a Year with 13 Moons",1978,"Rainer Werner Fassbinder","Drama","tt0077779"],
-  ["Tokyo Drifter",1966,"Seijun Suzuki","Action,Crime,Thriller","tt0061883"],
-  ["Branded to Kill",1967,"Seijun Suzuki","Action,Crime,Thriller","tt0061882"],
-  ["Gate of Flesh",1964,"Seijun Suzuki","Crime,Drama","tt0058182"],
-  ["Sword of Doom",1966,"Kihachi Okamoto","Action,Drama","tt0060277"],
-  ["Harakiri",1962,"Masaki Kobayashi","Action,Drama,History","tt0056058"],
-  ["Onibaba",1964,"Kaneto Shindo","Drama,Horror","tt0058385"],
-  ["Kuroneko",1968,"Kaneto Shindo","Drama,Fantasy,Horror","tt0063198"],
-  ["Woman in the Dunes",1964,"Hiroshi Teshigahara","Drama,Mystery","tt0058625"],
-  ["The Face of Another",1966,"Hiroshi Teshigahara","Drama,Sci-Fi","tt0060538"],
-  ["Pitfall",1962,"Hiroshi Teshigahara","Drama,Mystery","tt0056327"],
-  ["Dodes'ka-den",1970,"Akira Kurosawa","Drama","tt0065499"],
-  ["Kagemusha",1980,"Akira Kurosawa","Drama,History,War","tt0080979"],
-  ["Yojimbo",1961,"Akira Kurosawa","Action,Adventure,Thriller","tt0055630"],
-  ["Sanjuro",1962,"Akira Kurosawa","Action,Adventure","tt0056443"],
-  ["Hidden Fortress",1958,"Akira Kurosawa","Action,Adventure","tt0051765"],
-  ["Stray Dog",1949,"Akira Kurosawa","Crime,Drama,Film-Noir","tt0041154"],
-  ["Late Autumn",1960,"Yasujirō Ozu","Drama","tt0053134"],
-  ["An Autumn Afternoon",1962,"Yasujirō Ozu","Drama","tt0055233"],
-  ["Early Summer",1951,"Yasujirō Ozu","Drama","tt0044982"],
-  ["The Flavor of Green Tea over Rice",1952,"Yasujirō Ozu","Comedy,Drama","tt0044706"],
-  ["Street of Shame",1956,"Kenji Mizoguchi","Drama","tt0045112"],
-  ["The Life of Oharu",1952,"Kenji Mizoguchi","Drama","tt0044982"],
-  ["Sisters of the Gion",1936,"Kenji Mizoguchi","Drama","tt0028073"],
-  ["Floating Weeds",1959,"Yasujirō Ozu","Drama","tt0052887"],
-  ["Intentions of Murder",1964,"Shohei Imamura","Crime,Drama","tt0058279"],
-  ["The Ballad of Narayama",1983,"Shohei Imamura","Drama","tt0084740"],
-  ["Black Rain",1989,"Shohei Imamura","Drama,War","tt0096969"],
-  ["The Eel",1997,"Shohei Imamura","Drama","tt0120408"],
-  ["Warm Water Under a Red Bridge",2001,"Shohei Imamura","Comedy,Drama,Romance","tt0244964"],
-  ["Funeral Parade of Roses",1969,"Toshio Matsumoto","Drama","tt0064647"],
-  ["Double Suicide",1969,"Masahiro Shinoda","Drama,Romance","tt0064118"],
-  ["Pale Flower",1964,"Masahiro Shinoda","Crime,Drama","tt0058567"],
-  ["Tetsuo the Iron Man",1989,"Shinya Tsukamoto","Horror,Sci-Fi","tt0096251"],
-  ["Tokyo Fist",1995,"Shinya Tsukamoto","Action,Drama,Horror","tt0114746"],
-  ["Bullet Ballet",1998,"Shinya Tsukamoto","Action,Crime,Drama","tt0163563"],
-  ["Vital",2004,"Shinya Tsukamoto","Drama","tt0417243"],
-  ["Nightmare Detective",2006,"Shinya Tsukamoto","Horror,Thriller","tt0491399"],
-  ["Audition",1999,"Takashi Miike","Drama,Horror,Mystery","tt0235198"],
-  ["Ichi the Killer",2001,"Takashi Miike","Action,Crime,Horror","tt0296042"],
-  ["Visitor Q",2001,"Takashi Miike","Drama,Horror","tt0304219"],
-  ["Gozu",2003,"Takashi Miike","Horror,Mystery","tt0379537"],
-  ["13 Assassins",2010,"Takashi Miike","Action,Drama,History","tt1436045"],
-  ["Hara-Kiri Death of a Samurai",2011,"Takashi Miike","Action,Drama","tt1687247"],
-  ["Cure",1997,"Kiyoshi Kurosawa","Horror,Mystery,Thriller","tt0123802"],
-  ["Pulse",2001,"Kiyoshi Kurosawa","Horror,Mystery,Sci-Fi","tt0330904"],
-  ["Charisma",1999,"Kiyoshi Kurosawa","Drama,Thriller","tt0165798"],
-  ["Doppelganger",2003,"Kiyoshi Kurosawa","Comedy,Horror,Thriller","tt0363220"],
-  ["Tokyo Sonata",2008,"Kiyoshi Kurosawa","Drama","tt1087578"],
-  ["Shoplifters",2018,"Hirokazu Kore-eda","Crime,Drama","tt8075192"],
-  ["Like Father Like Son",2013,"Hirokazu Kore-eda","Drama","tt2331143"],
-  ["Nobody Knows",2004,"Hirokazu Kore-eda","Drama","tt0362271"],
-  ["After Life",1998,"Hirokazu Kore-eda","Drama,Fantasy","tt0165078"],
-  ["Distance",2001,"Hirokazu Kore-eda","Drama","tt0251934"],
-  ["Air Doll",2009,"Hirokazu Kore-eda","Drama,Fantasy,Romance","tt1371630"],
-  ["Our Little Sister",2015,"Hirokazu Kore-eda","Drama","tt3826382"],
-  ["The Third Murder",2017,"Hirokazu Kore-eda","Crime,Drama,Mystery","tt6410564"],
-  ["The Truth",2019,"Hirokazu Kore-eda","Drama","tt9243804"],
-  ["Wheel of Fortune and Fantasy",2021,"Ryusuke Hamaguchi","Drama,Romance","tt13452180"],
-  ["Drive My Car",2021,"Ryusuke Hamaguchi","Drama","tt14039582"],
-  ["Asako I and II",2018,"Ryusuke Hamaguchi","Drama,Romance","tt8051012"],
-  ["Happy Hour",2015,"Ryusuke Hamaguchi","Drama","tt5074306"],
-  ["The Handmaiden",2016,"Park Chan-wook","Drama,Mystery,Romance","tt4016934"],
-  ["Sympathy for Mr Vengeance",2002,"Park Chan-wook","Crime,Drama,Thriller","tt0310775"],
-  ["Lady Vengeance",2005,"Park Chan-wook","Crime,Drama,Thriller","tt0451094"],
-  ["JSA Joint Security Area",2000,"Park Chan-wook","Action,Drama,Mystery","tt0260991"],
-  ["I Saw the Devil",2010,"Kim Jee-woon","Action,Crime,Horror","tt1588170"],
-  ["A Tale of Two Sisters",2003,"Kim Jee-woon","Drama,Horror,Mystery","tt0365376"],
-  ["The Good the Bad the Weird",2008,"Kim Jee-woon","Action,Adventure,Comedy","tt0901487"],
-  ["Save the Green Planet",2003,"Jang Jun-hwan","Comedy,Crime,Drama","tt0353969"],
-  ["Peppermint Candy",1999,"Lee Chang-dong","Drama","tt0247613"],
-  ["Oasis",2002,"Lee Chang-dong","Drama,Romance","tt0320193"],
-  ["Lee Chang-dong's Green Fish",1997,"Lee Chang-dong","Crime,Drama","tt0119138"],
-  ["The Wailing",2016,"Na Hong-jin","Horror,Mystery,Thriller","tt5215952"],
-  ["The Chaser",2008,"Na Hong-jin","Crime,Drama,Thriller","tt1190539"],
-  ["The Yellow Sea",2010,"Na Hong-jin","Action,Crime,Drama","tt1823813"],
-  ["A Man from Nowhere",2010,"Lee Jeong-beom","Action,Crime,Drama","tt1527788"],
-  ["Bedevilled",2010,"Jang Cheol-soo","Crime,Drama,Thriller","tt1735536"],
-  ["House of Hummingbird",2018,"Kim Bora","Drama","tt8874474"],
-  ["The Handmaiden",2016,"Park Chan-wook","Drama,Mystery,Romance","tt4016934"],
-  ["Spring Summer Fall Winter and Spring",2003,"Kim Ki-duk","Drama","tt0374546"],
-  ["3-Iron",2004,"Kim Ki-duk","Drama,Romance","tt0404364"],
-  ["The Isle",2000,"Kim Ki-duk","Drama,Romance,Thriller","tt0235423"],
-  ["Pieta",2012,"Kim Ki-duk","Crime,Drama,Thriller","tt2347999"],
-];
-
 function getWishlistFingerprint() {
+  // A simple hash of titles to detect if wishlist changed significantly
   return WL.map(f=>f.title).sort().join('|').slice(0,200);
 }
 
 function getExcludedTitles() {
+  // All titles the user already has — wishlist + archive
   const titles = new Set();
   WL.forEach(f => titles.add(f.title.toLowerCase().trim()));
   ARCHIVE_TITLES.forEach(t => titles.add(t.toLowerCase().trim()));
   return titles;
 }
 
-function buildTasteProfile() {
-  const genres = {}, directors = {}, decades = {};
-  WL.forEach(f => {
-    if (f.genre) f.genre.split(',').forEach(g => { g=g.trim(); if(g) genres[g]=(genres[g]||0)+1; });
-    if (f.director) directors[f.director] = (directors[f.director]||0)+1;
-    if (f.year) { const d=Math.floor(f.year/10)*10; decades[d]=(decades[d]||0)+1; }
-  });
-  return { genres, directors, decades };
-}
-
-function scoreFilm(entry, profile, excluded) {
-  const [title, year, director, genreStr, imdb_id] = entry;
-  if (excluded.has(title.toLowerCase().trim())) return -1;
-  const genres = genreStr.split(',').map(g=>g.trim());
-  let score = 0;
-  // Genre match
-  genres.forEach(g => { if (profile.genres[g]) score += profile.genres[g] * 3; });
-  // Director match
-  if (profile.directors[director]) score += profile.directors[director] * 10;
-  // Decade match
-  if (year) {
-    const d = Math.floor(year/10)*10;
-    if (profile.decades[d]) score += profile.decades[d] * 2;
-  }
-  // Add small random factor so refresh gives variety
-  score += Math.random() * 4;
-  return score;
-}
-
-function getLocalRecommendations() {
-  const excluded = getExcludedTitles();
-  const profile = buildTasteProfile();
-  // Score every catalogue entry
-  const scored = REC_CATALOGUE
-    .map(entry => ({ entry, score: scoreFilm(entry, profile, excluded) }))
-    .filter(x => x.score >= 0)
-    .sort((a,b) => b.score - a.score);
-  // Take top 24, shuffle top half slightly, pick 8 for variety
-  const pool = scored.slice(0, 24);
-  // Fisher-Yates shuffle of pool
-  for (let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
-  return pool.slice(0,8).map(({entry}) => ({
-    title: entry[0], year: entry[1], director: entry[2], imdb_id: entry[4],
-    reason: `Matches your taste in ${entry[3].split(',')[0].trim().toLowerCase()}`
-  }));
-}
-
 async function loadRecommendations(forceRefresh = false) {
-  if (WL.length < 3) return;
+  if (WL.length < 3) return; // Need enough signal
 
   const section = document.getElementById('recs-section');
   const scroll = document.getElementById('recs-scroll');
@@ -1814,38 +1365,175 @@ async function loadRecommendations(forceRefresh = false) {
 
   section.style.display = 'block';
 
+  // Check cache
   const fingerprint = getWishlistFingerprint();
   if (!forceRefresh) {
     try {
       const cached = JSON.parse(localStorage.getItem(RECS_CACHE_KEY) || 'null');
       if (cached && cached.fingerprint === fingerprint && cached.recs && cached.recs.length) {
-        renderRecs(cached.recs); return;
+        renderRecs(cached.recs);
+        return;
       }
     } catch(e) {}
   }
 
+  // Show skeletons
   scroll.innerHTML = '';
   loading.style.display = 'flex';
   note.style.display = 'none';
   refreshBtn.textContent = '…';
   refreshBtn.disabled = true;
 
+  // Build a concise taste profile from wishlist metadata
+  const genres = {};
+  const directors = {};
+  const decades = {};
+  WL.forEach(f => {
+    if (f.genre) f.genre.split(',').forEach(g => { g = g.trim(); if(g) genres[g] = (genres[g]||0)+1; });
+    if (f.director) directors[f.director] = (directors[f.director]||0)+1;
+    if (f.year) { const d = Math.floor(f.year/10)*10; decades[d] = (decades[d]||0)+1; }
+  });
+
+  const topGenres = Object.entries(genres).sort((a,b)=>b[1]-a[1]).slice(0,6).map(([g])=>g);
+  const topDirectors = Object.entries(directors).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([d])=>d);
+  const topDecades = Object.entries(decades).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([d])=>d+'s');
+  const sampleTitles = WL.slice(0,12).map(f=>f.title);
+  const excludedList = [...getExcludedTitles()].slice(0,60).join(', ');
+
+  const prompt = `You are a film recommendation expert. Based on this collector's taste profile, suggest 8 films they would love to own on physical media (Blu-ray/4K).
+
+TASTE PROFILE:
+- Wishlist genres: ${topGenres.join(', ') || 'varied'}
+- Favourite directors: ${topDirectors.join(', ') || 'varied'}
+- Preferred eras: ${topDecades.join(', ') || 'varied'}
+- Sample titles from their wishlist: ${sampleTitles.join(', ')}
+
+STRICT RULES:
+- Do NOT recommend any of these titles (already owned or on wishlist): ${excludedList}
+- Recommend films that are available on physical media (Blu-ray or 4K UHD)
+- Mix well-known classics with slightly more obscure gems
+- Prioritise films with strong cult/collector appeal
+
+Respond ONLY with a valid JSON array, no markdown, no explanation. Format:
+[{"title":"Film Title","year":1985,"director":"Director Name","reason":"One short sentence why they'd love it"}]`;
+
   try {
-    let recs = getLocalRecommendations();
-    // Cache with fingerprint
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+
+    const data = await resp.json();
+    const text = (data.content || []).map(b => b.text || '').join('');
+    const clean = text.replace(/```json|```/g, '').trim();
+    let recs = JSON.parse(clean);
+
+    // Filter out anything that slipped through exclusion
+    const excluded = getExcludedTitles();
+    recs = recs.filter(r => !excluded.has((r.title||'').toLowerCase().trim()));
+
+    // Cache results with fingerprint
     localStorage.setItem(RECS_CACHE_KEY, JSON.stringify({ fingerprint, recs, ts: Date.now() }));
-    // Enrich with posters from OMDB
+
+    // Fetch posters from OMDB for each rec
     recs = await enrichRecsWithPosters(recs);
+
     loading.style.display = 'none';
     renderRecs(recs);
     note.style.display = 'block';
+
   } catch(e) {
     loading.style.display = 'none';
-    scroll.innerHTML = '<p style="font-size:12px;color:var(--mut);padding:4px">Could not load recommendations.</p>';
+    scroll.innerHTML = '<p style="font-size:12px;color:var(--mut);padding:4px">Could not load recommendations right now.</p>';
   }
 
   refreshBtn.textContent = '↻ Refresh';
   refreshBtn.disabled = false;
+}
+
+async function enrichRecsWithPosters(recs) {
+  const enriched = [];
+  for (const r of recs) {
+    try {
+      const q = encodeURIComponent(r.title + (r.year ? ' ' + r.year : ''));
+      const res = await fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(r.title)}&y=${r.year||''}&apikey=trilogy`);
+      const d = await res.json();
+      if (d.Response === 'True') {
+        r.poster = d.Poster && d.Poster !== 'N/A' ? d.Poster : null;
+        r.imdb_id = d.imdbID || null;
+        if (!r.year && d.Year) r.year = parseInt(d.Year);
+      }
+    } catch(e) { /* no poster, that's fine */ }
+    enriched.push(r);
+  }
+  return enriched;
+}
+
+function renderRecs(recs) {
+  const scroll = document.getElementById('recs-scroll');
+  const excluded = getExcludedTitles();
+  // Final filter in case cache is stale
+  const filtered = recs.filter(r => !excluded.has((r.title||'').toLowerCase().trim()));
+
+  scroll.innerHTML = filtered.map((r, i) => {
+    const posterHtml = r.poster
+      ? `<img src="${ex(r.poster)}" alt="${ex(r.title)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`+
+        `<div class="rec-poster-fb" style="display:none">${ex(r.title)}</div>`
+      : `<div class="rec-poster-fb">${ex(r.title)}</div>`;
+    const imdbLink = r.imdb_id ? ` · <a href="https://www.imdb.com/title/${r.imdb_id}/" target="_blank" onclick="event.stopPropagation()" style="color:var(--acc);text-decoration:none">IMDb</a>` : '';
+    return `<div class="rec-card" onclick="recAddToWishlist(${i})" title="${ex(r.reason||'')}">
+      <div class="rec-poster">
+        ${posterHtml}
+        <button class="rec-add-btn" onclick="event.stopPropagation();recAddToWishlist(${i})">+</button>
+      </div>
+      <div class="rec-title">${ex(r.title)}</div>
+      <div class="rec-meta">${r.year||''}${r.director?' · '+ex(r.director):''}${imdbLink}</div>
+    </div>`;
+  }).join('');
+
+  // Store recs in a scoped variable for the add handler
+  scroll._recData = filtered;
+  document.getElementById('recs-note').style.display = 'block';
+}
+
+function recAddToWishlist(i) {
+  const scroll = document.getElementById('recs-scroll');
+  const recs = scroll._recData;
+  if (!recs || !recs[i]) return;
+  const r = recs[i];
+
+  // Check not already added
+  const exists = WL.find(f => f.title.toLowerCase() === (r.title||'').toLowerCase());
+  if (exists) { showToast('Already on your wishlist!'); return; }
+
+  const film = {
+    id: Date.now() + Math.random().toString(36).slice(2),
+    title: r.title,
+    year: r.year || null,
+    director: r.director || null,
+    poster: r.poster || null,
+    imdb_id: r.imdb_id || null,
+    genre: null, country: null, runtime: null,
+    priority: 'Someday',
+    notes: r.reason ? `Recommended: ${r.reason}` : null,
+    owned: false,
+    added: Date.now()
+  };
+  WL.unshift(film);
+  save(WL);
+  render();
+  renderHunt();
+  showToast(`"${r.title}" added to wishlist`);
+
+  // Remove from recs display
+  recs.splice(i, 1);
+  scroll._recData = recs;
+  renderRecs(recs);
 }
 
 // ── SHARE / EXPORT ────────────────────────────────────────────────────────────
