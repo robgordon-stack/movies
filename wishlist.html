@@ -248,32 +248,24 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
 .similar-link.imdb{color:#c9a419;border-color:rgba(245,197,24,.3);background:rgba(245,197,24,.07)}
 .similar-link.lb{color:#00e5a0;border-color:rgba(0,229,160,.3);background:rgba(0,229,160,.06)}
 
+/* ── SIMILAR FILMS ── */
+.similar-section{margin-top:16px}
+.similar-label{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;font-weight:600;margin-bottom:8px}
+.similar-list{display:flex;flex-direction:column;gap:4px}
+.similar-item{display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;background:var(--surf2);border:1px solid var(--bdr)}
+.similar-item:hover{border-color:var(--bdr2);background:var(--surf3)}
+.similar-title{flex:1;font-size:12px;font-weight:600;color:var(--txt);min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.similar-year{font-size:11px;color:var(--mut);flex-shrink:0}
+.similar-links{display:flex;gap:5px;flex-shrink:0}
+.similar-link{font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;text-decoration:none;border:1px solid}
+.similar-link.imdb{color:#c9a419;border-color:rgba(245,197,24,.3);background:rgba(245,197,24,.07)}
+.similar-link.lb{color:#00e5a0;border-color:rgba(0,229,160,.3);background:rgba(0,229,160,.06)}
+
 /* ── TOAST ── */
 .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--surf3);color:var(--txt);padding:10px 20px;border-radius:20px;font-size:13px;font-weight:500;z-index:600;opacity:0;transition:all .25s;pointer-events:none;white-space:nowrap;border:1px solid var(--bdr2)}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
-/* ── RECOMMENDATIONS ── */
-.recs-section{padding:12px 8px 4px}
-.recs-header{display:flex;align-items:center;gap:8px;margin-bottom:12px;padding:0 4px}
-.recs-header h2{font-family:'DM Serif Display',serif;font-style:italic;font-size:17px;flex:1}
-.recs-refresh{background:none;border:1px solid var(--bdr2);color:var(--mut);border-radius:20px;padding:4px 12px;font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;white-space:nowrap}
-.recs-refresh:hover{color:var(--acc);border-color:var(--acc)}
-.recs-scroll{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.recs-scroll::-webkit-scrollbar{display:none}
-.rec-card{flex-shrink:0;width:90px;cursor:pointer;position:relative}
-.rec-card:active{opacity:.75}
-.rec-poster{width:90px;height:135px;border-radius:var(--r);overflow:hidden;background:var(--surf2);border:1px solid var(--bdr);position:relative;margin-bottom:5px}
-.rec-poster img{width:100%;height:100%;object-fit:cover;display:block}
-.rec-poster-fb{width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:6px;text-align:center;font-size:10px;color:var(--mut);line-height:1.3}
-.rec-add-btn{position:absolute;bottom:4px;right:4px;width:24px;height:24px;border-radius:50%;background:var(--acc);border:none;color:#03111f;font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700;opacity:0;transition:opacity .15s}
-.rec-card:hover .rec-add-btn{opacity:1}
-.rec-title{font-size:11px;font-weight:600;color:var(--txt);line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;margin-bottom:2px}
-.rec-meta{font-size:10px;color:var(--mut)}
-.recs-loading{display:flex;gap:8px;padding:0 4px 8px;overflow:hidden}
-.rec-skel{flex-shrink:0;width:90px}
-.rec-skel-img{width:90px;height:135px;border-radius:var(--r);background:linear-gradient(90deg,var(--surf2) 25%,var(--surf3) 50%,var(--surf2) 75%);background-size:200% 100%;animation:shimmer 1.6s ease-in-out infinite;margin-bottom:6px}
-.rec-skel-txt{height:10px;border-radius:4px;background:linear-gradient(90deg,var(--surf2) 25%,var(--surf3) 50%,var(--surf2) 75%);background-size:200% 100%;animation:shimmer 1.6s ease-in-out infinite;margin-bottom:4px}
-@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
 
 /* ── SHARE MODAL ── */
 .share-modal-wrap{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:600;display:none;align-items:center;justify-content:center;padding:20px}
@@ -348,6 +340,21 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
         <div class="chip" data-country="Germany">🇩🇪 Germany</div>
       </div>
       <div class="frow">
+        <span class="flabel">Decade</span>
+        <div class="chip active" data-decade="all">All</div>
+        <div class="chip" data-decade="1920">1920s</div>
+        <div class="chip" data-decade="1930">1930s</div>
+        <div class="chip" data-decade="1940">1940s</div>
+        <div class="chip" data-decade="1950">1950s</div>
+        <div class="chip" data-decade="1960">1960s</div>
+        <div class="chip" data-decade="1970">1970s</div>
+        <div class="chip" data-decade="1980">1980s</div>
+        <div class="chip" data-decade="1990">1990s</div>
+        <div class="chip" data-decade="2000">2000s</div>
+        <div class="chip" data-decade="2010">2010s</div>
+        <div class="chip" data-decade="2020">2020s</div>
+      </div>
+      <div class="frow">
         <span class="flabel">Director</span>
         <div class="chip active" data-director="all">All</div>
         <div class="chip" data-director="Steven Spielberg">Spielberg</div>
@@ -370,6 +377,7 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
       <div class="sortchip" id="sk-pri" data-s="priority" data-asc="1"><span class="sortdir">Priority</span> <span class="arr">↕</span></div>
       <div class="sortchip" id="sk-dist" data-s="distributor" data-asc="1"><span class="sortdir">Distributor</span> <span class="arr">↕</span></div>
       <div class="sortchip" id="sk-score" data-s="score" data-asc="-1"><span class="sortdir">Score</span> <span class="arr">↕</span></div>
+      <div class="sortchip" id="sk-random" data-s="random"><span class="sortdir">🎲 Surprise</span></div>
     </div>
     <div class="statsbar">
       <div class="sstat"><div class="n" id="st-showing">0</div><div class="l" id="st-showing-label">Films</div></div>
@@ -386,21 +394,7 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
       <button class="empty-btn" onclick="openAddModal()">+ Add your first film</button>
     </div>
   </div>
-  <!-- ── RECOMMENDATIONS ── -->
-  <div class="recs-section" id="recs-section" style="display:none">
-    <div class="recs-header">
-      <h2>✨ Recommended for You</h2>
-      <button class="recs-refresh" id="recs-refresh-btn" onclick="loadRecommendations(true)">↻ Refresh</button>
-    </div>
-    <div id="recs-loading" class="recs-loading" style="display:none">
-      <div class="rec-skel"><div class="rec-skel-img"></div><div class="rec-skel-txt"></div><div class="rec-skel-txt" style="width:60%"></div></div>
-      <div class="rec-skel"><div class="rec-skel-img"></div><div class="rec-skel-txt"></div><div class="rec-skel-txt" style="width:50%"></div></div>
-      <div class="rec-skel"><div class="rec-skel-img"></div><div class="rec-skel-txt"></div><div class="rec-skel-txt" style="width:70%"></div></div>
-      <div class="rec-skel"><div class="rec-skel-img"></div><div class="rec-skel-txt"></div><div class="rec-skel-txt" style="width:55%"></div></div>
-    </div>
-    <div id="recs-scroll" class="recs-scroll"></div>
-    <p id="recs-note" style="font-size:11px;color:var(--mut2);padding:0 4px 8px;display:none">Based on your wishlist genres & directors · Not already in your collection or wishlist</p>
-  </div>
+
 </div>
 
 <!-- ── SHARE MODAL ── -->
@@ -589,6 +583,7 @@ let filterPri="all";
 let filterFmt="all";   // "all" | "bluray" | "4k"
 let filterDist="all";
 let filterCountry="all";
+let filterDecade="all";
 let filterDirector="all";
 let sortKey="title";
 let sortDir=1; // 1=asc, -1=desc
@@ -614,10 +609,19 @@ function getFiltered(){
       if(!dArr.some(d=>d===filterDist))return false;
     }
     if(filterCountry!=="all"&&(f.country||"")!==filterCountry)return false;
+    if(filterDecade!=="all"){
+      const dec=f.year?Math.floor(f.year/10)*10:null;
+      if(dec!==parseInt(filterDecade))return false;
+    }
     if(filterDirector!=="all"&&(f.director||"")!==filterDirector)return false;
     if(q&&!(f.title+" "+(f.director||"")+" "+(f.genre||"")+" "+(Array.isArray(f.distributor)?f.distributor.join(" "):f.distributor||"")+" "+(f.country||"")).toLowerCase().includes(q))return false;
     return true;
   });
+  if(sortKey==="random"){
+    // Fisher-Yates shuffle
+    for(let i=list.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[list[i],list[j]]=[list[j],list[i]];}
+    return list;
+  }
   list.sort((a,b)=>{
     let r=0;
     switch(sortKey){
@@ -648,9 +652,10 @@ function render(){
   document.getElementById("st-med").textContent=list.filter(f=>f.priority==="High").length;
   document.getElementById("st-low").textContent=list.filter(f=>f.priority==="Someday").length;
 
-  if(!list.length){grid.innerHTML="";empty.style.display="block";return;}
+  if(!list.length){grid.innerHTML="";empty.style.display="block";renderDirectorChips();return;}
   empty.style.display="none";
   grid.innerHTML=list.map(f=>cardHtml(f)).join("");
+  renderDirectorChips();
 }
 
 function cardHtml(f){
@@ -704,17 +709,24 @@ document.getElementById("filterPanel").addEventListener("click",e=>{
     cc.classList.add("active");
     render();renderHunt();updateSummary();return;
   }
-  const dc=e.target.closest("[data-director]");
-  if(dc){
-    filterDirector=dc.dataset.director;
+  const dec=e.target.closest("[data-decade]");
+  if(dec){
+    filterDecade=dec.dataset.decade;
+    document.querySelectorAll("[data-decade]").forEach(c=>c.classList.remove("active"));
+    dec.classList.add("active");
+    render();renderHunt();updateSummary();return;
+  }
+  const drc=e.target.closest("[data-director]");
+  if(drc){
+    filterDirector=drc.dataset.director;
     document.querySelectorAll("[data-director]").forEach(c=>c.classList.remove("active"));
-    dc.classList.add("active");
+    drc.classList.add("active");
     render();renderHunt();updateSummary();
   }
 });
 
 document.getElementById("clearAllBtn").addEventListener("click",()=>{
-  filterPri="all";filterFmt="all";filterDist="all";filterCountry="all";filterDirector="all";
+  filterPri="all";filterFmt="all";filterDist="all";filterCountry="all";filterDecade="all";filterDirector="all";
   document.querySelectorAll("[data-pri]").forEach(c=>c.classList.remove("active"));
   document.getElementById("fc-all").classList.add("active");
   document.querySelectorAll("[data-fmt]").forEach(c=>c.classList.remove("active"));
@@ -723,19 +735,22 @@ document.getElementById("clearAllBtn").addEventListener("click",()=>{
   document.querySelector("[data-dist='all']").classList.add("active");
   document.querySelectorAll("[data-country]").forEach(c=>c.classList.remove("active"));
   document.querySelector("[data-country='all']").classList.add("active");
+  document.querySelectorAll("[data-decade]").forEach(c=>c.classList.remove("active"));
+  document.querySelector("[data-decade='all']").classList.add("active");
   document.querySelectorAll("[data-director]").forEach(c=>c.classList.remove("active"));
   document.querySelector("[data-director='all']").classList.add("active");
   render();renderHunt();updateSummary();
 });
 
-// Sort chips — index.html pattern
+// Sort chips
 const SORT_LABELS={
   title:{base:"Title",asc:"A→Z",desc:"Z→A"},
   added:{base:"Date added",asc:"Oldest",desc:"Newest"},
   year:{base:"Year",asc:"Oldest",desc:"Newest"},
   priority:{base:"Priority",asc:"High→Low",desc:"Low→High"},
   distributor:{base:"Distributor",asc:"A→Z",desc:"Z→A"},
-  score:{base:"Score",asc:"High→Low",desc:"Low→High"}
+  score:{base:"Score",asc:"High→Low",desc:"Low→High"},
+  random:{base:"🎲 Surprise",asc:"🎲 Surprise",desc:"🎲 Surprise"}
 };
 function updateSortChips(){
   document.querySelectorAll(".sortchip").forEach(c=>{
@@ -754,6 +769,12 @@ function updateSortChips(){
 document.querySelectorAll(".sortchip").forEach(chip=>{
   chip.addEventListener("click",()=>{
     const s=chip.dataset.s;if(!s)return;
+    if(s==="random"){
+      sortKey="random";sortDir=1;
+      document.querySelectorAll(".sortchip").forEach(c=>c.classList.remove("active"));
+      chip.classList.add("active");
+      updateSortChips();render();return;
+    }
     if(sortKey===s){sortDir*=-1;}
     else{sortKey=s;sortDir=chip.dataset.asc==="1"?1:-1;}
     document.querySelectorAll(".sortchip").forEach(c=>c.classList.remove("active"));
@@ -773,6 +794,7 @@ function updateSummary(){
   if(filterFmt==="bluray")parts.push("Blu-ray only");
   if(filterDist!=="all")parts.push(filterDist);
   if(filterCountry!=="all")parts.push(filterCountry);
+  if(filterDecade!=="all")parts.push(filterDecade+"s");
   if(filterDirector!=="all")parts.push(filterDirector);
   const s=document.getElementById("activeSummary");
   const ca=document.getElementById("clearAllBtn");
@@ -791,9 +813,26 @@ function updateSummary(){
   }
 }
 
-function renderCountryChips(){}  // country chips are now static HTML
-function handleCountryClick(){}
-function setSort(k){sortKey=k;render();}
+// Dynamic director chips — built from actual wishlist data
+function renderDirectorChips(){
+  const counts={};
+  WL.forEach(f=>{if(f.director)counts[f.director]=(counts[f.director]||0)+1;});
+  // Directors with 2+ films on the wishlist, sorted by count then alpha
+  const multi=Object.entries(counts).filter(([,n])=>n>=2).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0])).map(([d])=>d);
+  const row=document.querySelector("[data-director='all']")?.parentElement;
+  if(!row)return;
+  // Remove old dynamic chips (keep the "All" chip)
+  row.querySelectorAll("[data-director]:not([data-director='all'])").forEach(c=>c.remove());
+  multi.forEach(d=>{
+    const chip=document.createElement("div");
+    chip.className="chip"+(filterDirector===d?" active":"");
+    chip.dataset.director=d;
+    // Short display name: last name only
+    const short=d.split(/[\s,]+/).filter(Boolean).slice(-1)[0]||d;
+    chip.textContent=short;
+    row.appendChild(chip);
+  });
+}
 
 // ── SHEET ───────────────────────────────────────────────────────────────────
 function openSheet(id){
@@ -874,7 +913,8 @@ function openSheet(id){
       const sims=(f.similar||[]).filter(s=>s&&s.title);
       if(!sims.length) return "";
       const items=sims.map(s=>{
-        const imdb=s.imdb_id?`<a class="similar-link imdb" href="https://www.imdb.com/title/${s.imdb_id}/" target="_blank">IMDb</a>`:"";
+        const q=encodeURIComponent(s.title+(s.year?' '+s.year:''));
+        const imdb=`<a class="similar-link imdb" href="https://www.imdb.com/search/title/?title=${encodeURIComponent(s.title)}" target="_blank">IMDb</a>`;
         const lb=`<a class="similar-link lb" href="https://letterboxd.com/search/films/${encodeURIComponent(s.title)}/" target="_blank">LB</a>`;
         return `<div class="similar-item">
           <span class="similar-title">${ex(s.title)}</span>
@@ -975,7 +1015,16 @@ function toggle4kFilm(id){
   openSheet(id);
 }
 function deleteFilm(id){
-  if(!confirm("Remove this film from your wishlist?"))return;
+  const f=WL.find(x=>x.id===id);if(!f)return;
+  // Replace the Remove button with an inline confirm
+  const btn=document.querySelector(`.sh-btn-del[onclick="deleteFilm('${id}')"]`);
+  if(btn&&btn.dataset.confirming!=="1"){
+    btn.dataset.confirming="1";
+    btn.textContent="Tap again to confirm";
+    btn.style.opacity=".7";
+    setTimeout(()=>{if(btn){btn.dataset.confirming="";btn.textContent="Remove";btn.style.opacity="";}},3000);
+    return;
+  }
   WL=WL.filter(x=>x.id!==id);save(WL);
   closeSheet();
   showToast("Removed from wishlist");
@@ -1051,7 +1100,7 @@ function selectFilm(i){
 
 function saveFilm(){
   const title=document.getElementById("f-title").value.trim();
-  if(!title){alert("Please enter a title.");return;}
+  if(!title){showToast("Please enter a title.");return;}
   const exists=WL.find(f=>f.title.toLowerCase()===title.toLowerCase());
   if(exists){showToast("Already on your wishlist!");closeAddModal();return;}
   const film={
@@ -1144,7 +1193,7 @@ function renderHunt(){
 function huntItemHtml(f){
   const img=f.poster?`<img class="hunt-poster" src="${ex(f.poster)}" loading="lazy">`:`<div class="hunt-poster"></div>`;
   const badge4k=f.has4k?`<span class="hunt-badge-4k">4K</span>`:"";
-  const imdbLink=f.imdb_id?`<a href="https://www.imdb.com/title/${ex(f.imdb_id)}/" target="_blank" onclick="event.stopPropagation()" style="font-size:11px;color:var(--acc);text-decoration:none;flex-shrink:0;padding:4px 8px;border:1px solid var(--bdr2);border-radius:12px;white-space:nowrap">IMDb ↗</a>`:"";
+  const imdbLink=`<a href="https://www.imdb.com/search/title/?title=${encodeURIComponent(f.title)}" target="_blank" onclick="event.stopPropagation()" style="font-size:11px;color:var(--acc);text-decoration:none;flex-shrink:0;padding:4px 8px;border:1px solid var(--bdr2);border-radius:12px;white-space:nowrap">IMDb ↗</a>`;
   const dist=f.distributor?`<span style="font-size:11px;color:var(--mut2);background:var(--surf2);border:1px solid var(--bdr);border-radius:10px;padding:2px 7px;white-space:nowrap;flex-shrink:0">${ex(f.distributor)}</span>`:"";
   const pc=PRI_CLASS[f.priority]||"low";
   return`<div class="hunt-item" onclick="openSheet('${ex(f.id)}')">${img}<div class="hunt-info"><div class="hunt-title">${ex(f.title)}${badge4k}</div><div class="hunt-meta">${f.director?ex(f.director):""}${f.year?" · "+f.year:""}${f.country?" · "+ex(f.country):""}</div></div>${dist}${imdbLink}<div class="hunt-pri" style="background:var(--${pc}-dim);color:var(--${pc})">${PRI_LABEL[f.priority]}</div></div>`;
@@ -1240,7 +1289,7 @@ function handleArchiveImport(input){
 function bulkImport(){
   const raw=document.getElementById("paste-list").value;
   const lines=raw.split("\n").map(l=>l.trim()).filter(l=>l.length>2);
-  if(!lines.length){alert("No titles found.");return;}
+  if(!lines.length){showToast("No titles found.");return;}
   let added=0;
   lines.forEach(title=>{
     if(!WL.find(f=>f.title.toLowerCase()===title.toLowerCase())){
@@ -1268,7 +1317,7 @@ function importJSON(input){
       if(!Array.isArray(data))throw new Error();
       WL=data;save(WL);render();renderHunt();
       showToast(`Imported ${WL.length} films`);
-    }catch(err){alert("Invalid JSON file.");}
+    }catch(err){showToast("Invalid JSON file — could not import.");}
   };
   reader.readAsText(file);
 }
@@ -1317,7 +1366,7 @@ function mergeWithJson(local, remote) {
     } else {
       const lf = byId[rf.id];
       // JSON wins on metadata fields; local wins on user-preference fields
-      const META = ['title','year','director','poster','imdb_id','genre','country','runtime','distributor','lb','score','imdb_score','lb_score','rt_score','mc_score'];
+      const META = ['title','year','director','poster','imdb_id','genre','country','runtime','distributor','lb','score','imdb_score','lb_score','rt_score','mc_score','similar'];
       const USER = ['priority','notes','owned','has4k','added'];
       META.forEach(k => { if (rf[k] != null) lf[k] = rf[k]; });
       // For user fields, keep local unless local is null/undefined
@@ -1357,211 +1406,8 @@ async function init() {
 
   // First load with no local data and no JSON
   if (WL.length === 0) { render(); renderHunt(); }
-
-  // Load recommendations after data is ready (if wishlist has films)
-  if (WL.length >= 3) loadRecommendations(false);
 }
 init();
-
-// ── RECOMMENDATIONS ──────────────────────────────────────────────────────────
-// Uses Claude API to suggest films not already in the wishlist or archive.
-// Cache key stores results + the wishlist fingerprint so refresh is smart.
-const RECS_CACHE_KEY = 'cinewishlist_recs_v1';
-
-function getWishlistFingerprint() {
-  // A simple hash of titles to detect if wishlist changed significantly
-  return WL.map(f=>f.title).sort().join('|').slice(0,200);
-}
-
-function getExcludedTitles() {
-  // All titles the user already has — wishlist + archive
-  const titles = new Set();
-  WL.forEach(f => titles.add(f.title.toLowerCase().trim()));
-  ARCHIVE_TITLES.forEach(t => titles.add(t.toLowerCase().trim()));
-  return titles;
-}
-
-async function loadRecommendations(forceRefresh = false) {
-  if (WL.length < 3) return; // Need enough signal
-
-  const section = document.getElementById('recs-section');
-  const scroll = document.getElementById('recs-scroll');
-  const loading = document.getElementById('recs-loading');
-  const note = document.getElementById('recs-note');
-  const refreshBtn = document.getElementById('recs-refresh-btn');
-
-  section.style.display = 'block';
-
-  // Check cache
-  const fingerprint = getWishlistFingerprint();
-  if (!forceRefresh) {
-    try {
-      const cached = JSON.parse(localStorage.getItem(RECS_CACHE_KEY) || 'null');
-      if (cached && cached.fingerprint === fingerprint && cached.recs && cached.recs.length) {
-        renderRecs(cached.recs);
-        return;
-      }
-    } catch(e) {}
-  }
-
-  // Show skeletons
-  scroll.innerHTML = '';
-  loading.style.display = 'flex';
-  note.style.display = 'none';
-  refreshBtn.textContent = '…';
-  refreshBtn.disabled = true;
-
-  // Build a concise taste profile from wishlist metadata
-  const genres = {};
-  const directors = {};
-  const decades = {};
-  WL.forEach(f => {
-    if (f.genre) f.genre.split(',').forEach(g => { g = g.trim(); if(g) genres[g] = (genres[g]||0)+1; });
-    if (f.director) directors[f.director] = (directors[f.director]||0)+1;
-    if (f.year) { const d = Math.floor(f.year/10)*10; decades[d] = (decades[d]||0)+1; }
-  });
-
-  const topGenres = Object.entries(genres).sort((a,b)=>b[1]-a[1]).slice(0,6).map(([g])=>g);
-  const topDirectors = Object.entries(directors).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([d])=>d);
-  const topDecades = Object.entries(decades).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([d])=>d+'s');
-  const sampleTitles = WL.slice(0,12).map(f=>f.title);
-  const excludedList = [...getExcludedTitles()].slice(0,60).join(', ');
-
-  const prompt = `You are a film recommendation expert. Based on this collector's taste profile, suggest 8 films they would love to own on physical media (Blu-ray/4K).
-
-TASTE PROFILE:
-- Wishlist genres: ${topGenres.join(', ') || 'varied'}
-- Favourite directors: ${topDirectors.join(', ') || 'varied'}
-- Preferred eras: ${topDecades.join(', ') || 'varied'}
-- Sample titles from their wishlist: ${sampleTitles.join(', ')}
-
-STRICT RULES:
-- Do NOT recommend any of these titles (already owned or on wishlist): ${excludedList}
-- Recommend films that are available on physical media (Blu-ray or 4K UHD)
-- Mix well-known classics with slightly more obscure gems
-- Prioritise films with strong cult/collector appeal
-
-Respond ONLY with a valid JSON array, no markdown, no explanation. Format:
-[{"title":"Film Title","year":1985,"director":"Director Name","reason":"One short sentence why they'd love it"}]`;
-
-  try {
-    const resp = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        messages: [{ role: 'user', content: prompt }]
-      })
-    });
-
-    const data = await resp.json();
-    const text = (data.content || []).map(b => b.text || '').join('');
-    const clean = text.replace(/```json|```/g, '').trim();
-    let recs = JSON.parse(clean);
-
-    // Filter out anything that slipped through exclusion
-    const excluded = getExcludedTitles();
-    recs = recs.filter(r => !excluded.has((r.title||'').toLowerCase().trim()));
-
-    // Cache results with fingerprint
-    localStorage.setItem(RECS_CACHE_KEY, JSON.stringify({ fingerprint, recs, ts: Date.now() }));
-
-    // Fetch posters from OMDB for each rec
-    recs = await enrichRecsWithPosters(recs);
-
-    loading.style.display = 'none';
-    renderRecs(recs);
-    note.style.display = 'block';
-
-  } catch(e) {
-    loading.style.display = 'none';
-    scroll.innerHTML = '<p style="font-size:12px;color:var(--mut);padding:4px">Could not load recommendations right now.</p>';
-  }
-
-  refreshBtn.textContent = '↻ Refresh';
-  refreshBtn.disabled = false;
-}
-
-async function enrichRecsWithPosters(recs) {
-  const enriched = [];
-  for (const r of recs) {
-    try {
-      const q = encodeURIComponent(r.title + (r.year ? ' ' + r.year : ''));
-      const res = await fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(r.title)}&y=${r.year||''}&apikey=trilogy`);
-      const d = await res.json();
-      if (d.Response === 'True') {
-        r.poster = d.Poster && d.Poster !== 'N/A' ? d.Poster : null;
-        r.imdb_id = d.imdbID || null;
-        if (!r.year && d.Year) r.year = parseInt(d.Year);
-      }
-    } catch(e) { /* no poster, that's fine */ }
-    enriched.push(r);
-  }
-  return enriched;
-}
-
-function renderRecs(recs) {
-  const scroll = document.getElementById('recs-scroll');
-  const excluded = getExcludedTitles();
-  // Final filter in case cache is stale
-  const filtered = recs.filter(r => !excluded.has((r.title||'').toLowerCase().trim()));
-
-  scroll.innerHTML = filtered.map((r, i) => {
-    const posterHtml = r.poster
-      ? `<img src="${ex(r.poster)}" alt="${ex(r.title)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`+
-        `<div class="rec-poster-fb" style="display:none">${ex(r.title)}</div>`
-      : `<div class="rec-poster-fb">${ex(r.title)}</div>`;
-    const imdbLink = r.imdb_id ? ` · <a href="https://www.imdb.com/title/${r.imdb_id}/" target="_blank" onclick="event.stopPropagation()" style="color:var(--acc);text-decoration:none">IMDb</a>` : '';
-    return `<div class="rec-card" onclick="recAddToWishlist(${i})" title="${ex(r.reason||'')}">
-      <div class="rec-poster">
-        ${posterHtml}
-        <button class="rec-add-btn" onclick="event.stopPropagation();recAddToWishlist(${i})">+</button>
-      </div>
-      <div class="rec-title">${ex(r.title)}</div>
-      <div class="rec-meta">${r.year||''}${r.director?' · '+ex(r.director):''}${imdbLink}</div>
-    </div>`;
-  }).join('');
-
-  // Store recs in a scoped variable for the add handler
-  scroll._recData = filtered;
-  document.getElementById('recs-note').style.display = 'block';
-}
-
-function recAddToWishlist(i) {
-  const scroll = document.getElementById('recs-scroll');
-  const recs = scroll._recData;
-  if (!recs || !recs[i]) return;
-  const r = recs[i];
-
-  // Check not already added
-  const exists = WL.find(f => f.title.toLowerCase() === (r.title||'').toLowerCase());
-  if (exists) { showToast('Already on your wishlist!'); return; }
-
-  const film = {
-    id: Date.now() + Math.random().toString(36).slice(2),
-    title: r.title,
-    year: r.year || null,
-    director: r.director || null,
-    poster: r.poster || null,
-    imdb_id: r.imdb_id || null,
-    genre: null, country: null, runtime: null,
-    priority: 'Someday',
-    notes: r.reason ? `Recommended: ${r.reason}` : null,
-    owned: false,
-    added: Date.now()
-  };
-  WL.unshift(film);
-  save(WL);
-  render();
-  renderHunt();
-  showToast(`"${r.title}" added to wishlist`);
-
-  // Remove from recs display
-  recs.splice(i, 1);
-  scroll._recData = recs;
-  renderRecs(recs);
-}
 
 // ── SHARE / EXPORT ────────────────────────────────────────────────────────────
 function openShareModal() {
