@@ -12,7 +12,19 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775468716369
+    "added": 1775468716369,
+    "similar": [
+      {
+        "title": "The Upside",
+        "year": 2017,
+        "imdb_id": "tt4937664"
+      },
+      {
+        "title": "Pelle the Conqueror",
+        "year": 1987,
+        "imdb_id": "tt0093756"
+      }
+    ]
   },
   {
     "id": "1775468676456cn9ix60lt0t",
@@ -27,7 +39,24 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775468676456
+    "added": 1775468676456,
+    "similar": [
+      {
+        "title": "Romper Stomper",
+        "year": 1992,
+        "imdb_id": "tt0105323"
+      },
+      {
+        "title": "This Is England",
+        "year": 2006,
+        "imdb_id": "tt0480025"
+      },
+      {
+        "title": "Higher Learning",
+        "year": 1995,
+        "imdb_id": "tt0113279"
+      }
+    ]
   },
   {
     "id": "17754686426368njjcatuyb9",
@@ -43,7 +72,19 @@
     "notes": null,
     "owned": false,
     "added": 1775468642636,
-    "has4k": true
+    "has4k": true,
+    "similar": [
+      {
+        "title": "Nikita",
+        "year": 1990,
+        "imdb_id": "tt0100263"
+      },
+      {
+        "title": "Colombiana",
+        "year": 2011,
+        "imdb_id": "tt1657507"
+      }
+    ]
   },
   {
     "id": "1775428803597ln6zek822os",
@@ -65,7 +106,24 @@
     "imdb_score": 7.4,
     "lb_score": 4,
     "rt_score": 0.87,
-    "mc_score": 82
+    "mc_score": 82,
+    "similar": [
+      {
+        "title": "Cemetery of Splendour",
+        "year": 2015,
+        "imdb_id": "tt4549576"
+      },
+      {
+        "title": "Uncle Boonmee Who Can Recall His Past Lives",
+        "year": 2010,
+        "imdb_id": "tt1588895"
+      },
+      {
+        "title": "Mekong Hotel",
+        "year": 2012,
+        "imdb_id": "tt2328879"
+      }
+    ]
   },
   {
     "id": "1775428736582ffrbesgx4ij",
@@ -87,7 +145,24 @@
     "imdb_score": 7.5,
     "lb_score": 4,
     "rt_score": 0.91,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Band of Outsiders",
+        "year": 1964,
+        "imdb_id": "tt0057869"
+      },
+      {
+        "title": "Weekend",
+        "year": 1967,
+        "imdb_id": "tt0063417"
+      },
+      {
+        "title": "Made in U.S.A.",
+        "year": 1966,
+        "imdb_id": "tt0060665"
+      }
+    ]
   },
   {
     "id": "1775428055988shur4ggx0m9",
@@ -109,7 +184,24 @@
     "imdb_score": 7.6,
     "lb_score": 3.9,
     "rt_score": 0.88,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Written on the Wind",
+        "year": 1956,
+        "imdb_id": "tt0049966"
+      },
+      {
+        "title": "All That Heaven Allows",
+        "year": 1955,
+        "imdb_id": "tt0047811"
+      },
+      {
+        "title": "Magnificent Obsession",
+        "year": 1954,
+        "imdb_id": "tt0047113"
+      }
+    ]
   },
   {
     "id": "177542801878537zewtshgv5",
@@ -131,7 +223,24 @@
     "imdb_score": 7.3,
     "lb_score": 4,
     "rt_score": 0.94,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Viaggio in Italia",
+        "year": 1954,
+        "imdb_id": "tt0046511"
+      },
+      {
+        "title": "Le Amiche",
+        "year": 1955,
+        "imdb_id": "tt0048255"
+      },
+      {
+        "title": "Stromboli",
+        "year": 1950,
+        "imdb_id": "tt0042814"
+      }
+    ]
   },
   {
     "id": "17754278757182r5fbxw41hl",
@@ -153,7 +262,24 @@
     "imdb_score": 7.5,
     "lb_score": 4.1,
     "rt_score": 0.97,
-    "distributor": "Curzon"
+    "distributor": "Curzon",
+    "similar": [
+      {
+        "title": "Faces Places",
+        "year": 2017,
+        "imdb_id": "tt6099498"
+      },
+      {
+        "title": "Daguerréotypes",
+        "year": 1976,
+        "imdb_id": "tt0194669"
+      },
+      {
+        "title": "The Beaches of Agnès",
+        "year": 2008,
+        "imdb_id": "tt1271188"
+      }
+    ]
   },
   {
     "id": "1775427840044f83wjox5la",
@@ -175,7 +301,24 @@
     "imdb_score": 7.9,
     "lb_score": 4.1,
     "rt_score": 0.98,
-    "distributor": "BFI"
+    "distributor": "BFI",
+    "similar": [
+      {
+        "title": "October: Ten Days That Shook the World",
+        "year": 1928,
+        "imdb_id": "tt0019254"
+      },
+      {
+        "title": "Strike",
+        "year": 1925,
+        "imdb_id": "tt0016058"
+      },
+      {
+        "title": "Arsenal",
+        "year": 1929,
+        "imdb_id": "tt0019649"
+      }
+    ]
   },
   {
     "id": "1775427791606ldyv8h81e88",
@@ -197,7 +340,24 @@
     "imdb_score": 7.2,
     "lb_score": 3.9,
     "rt_score": 0.91,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Letters from Home",
+        "year": 1977,
+        "imdb_id": "tt0283533"
+      },
+      {
+        "title": "From the Other Side",
+        "year": 2002,
+        "imdb_id": "tt0341407"
+      },
+      {
+        "title": "D'Est",
+        "year": 1993,
+        "imdb_id": "tt0106594"
+      }
+    ]
   },
   {
     "id": "17754276841962fptn0nxtt5",
@@ -219,7 +379,24 @@
     "imdb_score": 8.6,
     "lb_score": 4.3,
     "rt_score": 0.97,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Night and Fog",
+        "year": 1956,
+        "imdb_id": "tt0049420"
+      },
+      {
+        "title": "The Sorrow and the Pity",
+        "year": 1969,
+        "imdb_id": "tt0065786"
+      },
+      {
+        "title": "Austerlitz",
+        "year": 2016,
+        "imdb_id": "tt5714132"
+      }
+    ]
   },
   {
     "id": "17753640833188k5tezc05vp",
@@ -242,7 +419,19 @@
     "imdb_score": 8.4,
     "lb_score": 4.2,
     "rt_score": 0.95,
-    "mc_score": 95
+    "mc_score": 95,
+    "similar": [
+      {
+        "title": "Luxo Jr.",
+        "year": 1986,
+        "imdb_id": "tt0091455"
+      },
+      {
+        "title": "The Iron Giant",
+        "year": 1999,
+        "imdb_id": "tt0129167"
+      }
+    ]
   },
   {
     "id": "17753640833180ma06opdv8xl",
@@ -263,7 +452,24 @@
     "score": 8.1,
     "imdb_score": 7.7,
     "lb_score": 4,
-    "rt_score": 0.88
+    "rt_score": 0.88,
+    "similar": [
+      {
+        "title": "The Best of Youth",
+        "year": 2003,
+        "imdb_id": "tt0346336"
+      },
+      {
+        "title": "Amici Miei",
+        "year": 1975,
+        "imdb_id": "tt0072576"
+      },
+      {
+        "title": "Bread and Chocolate",
+        "year": 1974,
+        "imdb_id": "tt0071336"
+      }
+    ]
   },
   {
     "id": "1775364083318xrbl3m8rqy",
@@ -285,7 +491,19 @@
     "imdb_score": 7.6,
     "lb_score": 4.1,
     "rt_score": 0.92,
-    "distributor": "Kino Lorber"
+    "distributor": "Kino Lorber",
+    "similar": [
+      {
+        "title": "The Mirror",
+        "year": 1975,
+        "imdb_id": "tt0072443"
+      },
+      {
+        "title": "Sacrifice",
+        "year": 1986,
+        "imdb_id": "tt0091670"
+      }
+    ]
   },
   {
     "id": "1775364083318t9ciojlhvxf",
@@ -308,7 +526,19 @@
     "lb_score": 4.1,
     "rt_score": 0.93,
     "mc_score": 77,
-    "distributor": "Arrow"
+    "distributor": "Arrow",
+    "similar": [
+      {
+        "title": "Force Majeure",
+        "year": 2014,
+        "imdb_id": "tt2121382"
+      },
+      {
+        "title": "Jagten",
+        "year": 2012,
+        "imdb_id": "tt2106476"
+      }
+    ]
   },
   {
     "id": "1775364083318lkou51klxhd",
@@ -330,7 +560,24 @@
     "imdb_score": 8.1,
     "lb_score": 4.2,
     "rt_score": 0.95,
-    "distributor": "Kino Lorber"
+    "distributor": "Kino Lorber",
+    "similar": [
+      {
+        "title": "The Mirror",
+        "year": 1975,
+        "imdb_id": "tt0072443"
+      },
+      {
+        "title": "Winter Light",
+        "year": 1963,
+        "imdb_id": "tt0057687"
+      },
+      {
+        "title": "Through a Glass Darkly",
+        "year": 1961,
+        "imdb_id": "tt0055499"
+      }
+    ]
   },
   {
     "id": "1775364083318o3obu8inwnd",
@@ -353,7 +600,24 @@
     "lb_score": 4.2,
     "rt_score": 0.98,
     "mc_score": 89,
-    "distributor": "Sony"
+    "distributor": "Sony",
+    "similar": [
+      {
+        "title": "13 Minutes",
+        "year": 2015,
+        "imdb_id": "tt3182620"
+      },
+      {
+        "title": "Barbara",
+        "year": 2012,
+        "imdb_id": "tt1954497"
+      },
+      {
+        "title": "The Captain",
+        "year": 2017,
+        "imdb_id": "tt6763252"
+      }
+    ]
   },
   {
     "id": "17753640833187x20vxed2bb",
@@ -375,7 +639,24 @@
     "imdb_score": 8.2,
     "lb_score": 4.3,
     "rt_score": 1,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "La Règle du Jeu",
+        "year": 1939,
+        "imdb_id": "tt0031885"
+      },
+      {
+        "title": "Orpheus",
+        "year": 1950,
+        "imdb_id": "tt0042814"
+      },
+      {
+        "title": "La Ronde",
+        "year": 1950,
+        "imdb_id": "tt0042878"
+      }
+    ]
   },
   {
     "id": "177536408331870ba5ekgioe",
@@ -397,7 +678,14 @@
     "imdb_score": 7.7,
     "lb_score": 4,
     "rt_score": 0.96,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Closely Watched Trains",
+        "year": 1966,
+        "imdb_id": "tt0060959"
+      }
+    ]
   },
   {
     "id": "17753640833181f8t6jjg3du",
@@ -421,7 +709,19 @@
     "imdb_score": 7.9,
     "lb_score": 4,
     "rt_score": 0.93,
-    "mc_score": 83
+    "mc_score": 83,
+    "similar": [
+      {
+        "title": "Isle of Dogs",
+        "year": 2018,
+        "imdb_id": "tt5104604"
+      },
+      {
+        "title": "James and the Giant Peach",
+        "year": 1996,
+        "imdb_id": "tt0116683"
+      }
+    ]
   },
   {
     "id": "17753640833189s8zvmbze3m",
@@ -442,7 +742,19 @@
     "score": 8.5,
     "imdb_score": 7.9,
     "lb_score": 4.2,
-    "rt_score": 0.95
+    "rt_score": 0.95,
+    "similar": [
+      {
+        "title": "The Turin Horse",
+        "year": 2011,
+        "imdb_id": "tt1316540"
+      },
+      {
+        "title": "Damnation",
+        "year": 1988,
+        "imdb_id": "tt0094849"
+      }
+    ]
   },
   {
     "id": "1775364083318cz9t6cq6dwo",
@@ -464,7 +776,14 @@
     "imdb_score": 7.6,
     "lb_score": 4,
     "rt_score": 0.92,
-    "distributor": "BFI"
+    "distributor": "BFI",
+    "similar": [
+      {
+        "title": "Throw Away Your Books, Rally in the Streets",
+        "year": 1971,
+        "imdb_id": "tt0067665"
+      }
+    ]
   },
   {
     "id": "17753640833184yvczavxcd5",
@@ -486,7 +805,19 @@
     "imdb_score": 8.1,
     "lb_score": 4.1,
     "rt_score": 0.96,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Ernst Lubitsch's Cluny Brown",
+        "year": 1946,
+        "imdb_id": "tt0038484"
+      },
+      {
+        "title": "Heaven Can Wait",
+        "year": 1943,
+        "imdb_id": "tt0036166"
+      }
+    ]
   },
   {
     "id": "1775364083318i1ilmqr4cp",
@@ -508,7 +839,19 @@
     "imdb_score": 8.3,
     "lb_score": 4.4,
     "rt_score": 0.98,
-    "distributor": "BFI"
+    "distributor": "BFI",
+    "similar": [
+      {
+        "title": "Dreyer's Day of Wrath",
+        "year": 1943,
+        "imdb_id": "tt0035827"
+      },
+      {
+        "title": "Gertrud",
+        "year": 1964,
+        "imdb_id": "tt0058097"
+      }
+    ]
   },
   {
     "id": "1775364083318rkn35st264",
@@ -529,7 +872,24 @@
     "score": 8.3,
     "imdb_score": 7.9,
     "lb_score": 4.1,
-    "rt_score": 0.93
+    "rt_score": 0.93,
+    "similar": [
+      {
+        "title": "Eternity and a Day",
+        "year": 1998,
+        "imdb_id": "tt0120893"
+      },
+      {
+        "title": "The Weeping Meadow",
+        "year": 2004,
+        "imdb_id": "tt0376606"
+      },
+      {
+        "title": "Ulysses' Gaze",
+        "year": 1995,
+        "imdb_id": "tt0114839"
+      }
+    ]
   },
   {
     "id": "17753640833185pwsv7inyqd",
@@ -552,7 +912,24 @@
     "lb_score": 4.2,
     "rt_score": 0.99,
     "mc_score": 95,
-    "distributor": "Artificial Eye"
+    "distributor": "Artificial Eye",
+    "similar": [
+      {
+        "title": "The Salesman",
+        "year": 2016,
+        "imdb_id": "tt5664326"
+      },
+      {
+        "title": "About Elly",
+        "year": 2009,
+        "imdb_id": "tt1258528"
+      },
+      {
+        "title": "Capernaum",
+        "year": 2018,
+        "imdb_id": "tt8267604"
+      }
+    ]
   },
   {
     "id": "177536408331875nvdur17q5",
@@ -575,7 +952,24 @@
     "lb_score": 4.3,
     "rt_score": 0.97,
     "mc_score": 89,
-    "distributor": "KimStim"
+    "distributor": "KimStim",
+    "similar": [
+      {
+        "title": "So Long, My Son",
+        "year": 2019,
+        "imdb_id": "tt8071358"
+      },
+      {
+        "title": "A Touch of Sin",
+        "year": 2013,
+        "imdb_id": "tt2852400"
+      },
+      {
+        "title": "Blind Shaft",
+        "year": 2003,
+        "imdb_id": "tt0372703"
+      }
+    ]
   },
   {
     "id": "17753640833176v3cfc40ii9",
@@ -596,7 +990,24 @@
     "score": 8.3,
     "imdb_score": 8,
     "lb_score": 4.3,
-    "rt_score": 0.82
+    "rt_score": 0.82,
+    "similar": [
+      {
+        "title": "Millennium Actress",
+        "year": 2001,
+        "imdb_id": "tt0291350"
+      },
+      {
+        "title": "Paprika",
+        "year": 2006,
+        "imdb_id": "tt0851578"
+      },
+      {
+        "title": "Tokyo Godfathers",
+        "year": 2003,
+        "imdb_id": "tt0388473"
+      }
+    ]
   },
   {
     "id": "1775364083317qt6i0kugl6s",
@@ -618,7 +1029,24 @@
     "imdb_score": 8.4,
     "lb_score": 4.4,
     "rt_score": 0.97,
-    "mc_score": 76
+    "mc_score": 76,
+    "similar": [
+      {
+        "title": "Nausicaä of the Valley of the Wind",
+        "year": 1984,
+        "imdb_id": "tt0087544"
+      },
+      {
+        "title": "Castle in the Sky",
+        "year": 1986,
+        "imdb_id": "tt0092067"
+      },
+      {
+        "title": "Porco Rosso",
+        "year": 1992,
+        "imdb_id": "tt0104652"
+      }
+    ]
   },
   {
     "id": "1775364083317w5ulmdoqxv",
@@ -640,7 +1068,19 @@
     "imdb_score": 8,
     "lb_score": 4.2,
     "rt_score": 0.87,
-    "mc_score": 83
+    "mc_score": 83,
+    "similar": [
+      {
+        "title": "I Wish",
+        "year": 2011,
+        "imdb_id": "tt1650453"
+      },
+      {
+        "title": "Our Little Sister",
+        "year": 2015,
+        "imdb_id": "tt3757574"
+      }
+    ]
   },
   {
     "id": "177536385586906ulpitei45h",
@@ -663,7 +1103,24 @@
     "imdb_score": 7.6,
     "lb_score": 3.9,
     "rt_score": 0.87,
-    "mc_score": 73
+    "mc_score": 73,
+    "similar": [
+      {
+        "title": "28 Weeks Later",
+        "year": 2007,
+        "imdb_id": "tt0463854"
+      },
+      {
+        "title": "Pontypool",
+        "year": 2008,
+        "imdb_id": "tt1226681"
+      },
+      {
+        "title": "Carriers",
+        "year": 2009,
+        "imdb_id": "tt0844471"
+      }
+    ]
   },
   {
     "id": "1775363855869chovj2v2qvd",
@@ -686,7 +1143,14 @@
     "imdb_score": 6.7,
     "lb_score": 3.9,
     "rt_score": 0.84,
-    "mc_score": 85
+    "mc_score": 85,
+    "similar": [
+      {
+        "title": "A Hidden Life",
+        "year": 2019,
+        "imdb_id": "tt6828390"
+      }
+    ]
   },
   {
     "id": "177536385586972vtk0ejktl",
@@ -708,7 +1172,19 @@
     "imdb_score": 8.3,
     "lb_score": 4,
     "rt_score": 0.97,
-    "mc_score": 70
+    "mc_score": 70,
+    "similar": [
+      {
+        "title": "Finding Forrester",
+        "year": 2000,
+        "imdb_id": "tt0181536"
+      },
+      {
+        "title": "Little Man Tate",
+        "year": 1991,
+        "imdb_id": "tt0102312"
+      }
+    ]
   },
   {
     "id": "1775363855869v06aohojjvg",
@@ -730,7 +1206,19 @@
     "imdb_score": 8.1,
     "lb_score": 4.2,
     "rt_score": 0.97,
-    "distributor": "BFI"
+    "distributor": "BFI",
+    "similar": [
+      {
+        "title": "Kagemusha",
+        "year": 1980,
+        "imdb_id": "tt0080979"
+      },
+      {
+        "title": "The Bad Sleep Well",
+        "year": 1960,
+        "imdb_id": "tt0053590"
+      }
+    ]
   },
   {
     "id": "1775363855869l683eznh8k",
@@ -753,7 +1241,19 @@
     "lb_score": 4.2,
     "rt_score": 0.92,
     "mc_score": 83,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Broadcast News",
+        "year": 1987,
+        "imdb_id": "tt0092699"
+      },
+      {
+        "title": "Quiz Show",
+        "year": 1994,
+        "imdb_id": "tt0110932"
+      }
+    ]
   },
   {
     "id": "1775363855869wt6kbjr5krf",
@@ -777,7 +1277,19 @@
     "lb_score": 4,
     "rt_score": 0.72,
     "mc_score": 64,
-    "distributor": "Sony"
+    "distributor": "Sony",
+    "similar": [
+      {
+        "title": "Total Recall",
+        "year": 1990,
+        "imdb_id": "tt0100802"
+      },
+      {
+        "title": "Paul Verhoeven's Basic Instinct",
+        "year": 1992,
+        "imdb_id": "tt0103772"
+      }
+    ]
   },
   {
     "id": "1775363855869mhlk0kgw5x",
@@ -799,7 +1311,24 @@
     "imdb_score": 8.1,
     "lb_score": 4.1,
     "rt_score": 0.85,
-    "mc_score": 79
+    "mc_score": 79,
+    "similar": [
+      {
+        "title": "The Emperor's Club",
+        "year": 2002,
+        "imdb_id": "tt0264946"
+      },
+      {
+        "title": "Mr. Holland's Opus",
+        "year": 1995,
+        "imdb_id": "tt0113862"
+      },
+      {
+        "title": "Spring, Summer, Fall, Winter... and Spring",
+        "year": 2003,
+        "imdb_id": "tt0374546"
+      }
+    ]
   },
   {
     "id": "1775363855869gvw8u1mxvcq",
@@ -821,7 +1350,19 @@
     "imdb_score": 8.6,
     "lb_score": 4.2,
     "rt_score": 0.78,
-    "mc_score": 61
+    "mc_score": 61,
+    "similar": [
+      {
+        "title": "Mystic River",
+        "year": 2003,
+        "imdb_id": "tt0327056"
+      },
+      {
+        "title": "Million Dollar Baby",
+        "year": 2004,
+        "imdb_id": "tt0405159"
+      }
+    ]
   },
   {
     "id": "1775363855869w7mogtrf41",
@@ -843,7 +1384,19 @@
     "imdb_score": 8.3,
     "lb_score": 3.9,
     "rt_score": 0.83,
-    "mc_score": 65
+    "mc_score": 65,
+    "similar": [
+      {
+        "title": "Carlito's Way",
+        "year": 1993,
+        "imdb_id": "tt0106519"
+      },
+      {
+        "title": "Blow",
+        "year": 2001,
+        "imdb_id": "tt0207201"
+      }
+    ]
   },
   {
     "id": "1775363855869n71n1wzf2us",
@@ -865,7 +1418,24 @@
     "imdb_score": 8.2,
     "lb_score": 3.9,
     "rt_score": 0.68,
-    "mc_score": 63
+    "mc_score": 63,
+    "similar": [
+      {
+        "title": "Session 9",
+        "year": 2001,
+        "imdb_id": "tt0261983"
+      },
+      {
+        "title": "Identity",
+        "year": 2003,
+        "imdb_id": "tt0298203"
+      },
+      {
+        "title": "The Ward",
+        "year": 2010,
+        "imdb_id": "tt1313920"
+      }
+    ]
   },
   {
     "id": "1775363855869rsjkbb9bh0a",
@@ -887,7 +1457,19 @@
     "imdb_score": 7.8,
     "lb_score": 3.8,
     "rt_score": 0.74,
-    "mc_score": 68
+    "mc_score": 68,
+    "similar": [
+      {
+        "title": "Bone Tomahawk",
+        "year": 2015,
+        "imdb_id": "tt2494280"
+      },
+      {
+        "title": "Barquero",
+        "year": 1970,
+        "imdb_id": "tt0065424"
+      }
+    ]
   },
   {
     "id": "1775363855869en9evv7xd9",
@@ -911,7 +1493,19 @@
     "imdb_score": 6.8,
     "lb_score": 3.8,
     "rt_score": 0.89,
-    "mc_score": 89
+    "mc_score": 89,
+    "similar": [
+      {
+        "title": "Meek's Cutoff",
+        "year": 2010,
+        "imdb_id": "tt1469304"
+      },
+      {
+        "title": "McCabe & Mrs. Miller",
+        "year": 1971,
+        "imdb_id": "tt0067334"
+      }
+    ]
   },
   {
     "id": "1775363855869m563tc4q2ob",
@@ -932,7 +1526,19 @@
     "score": 8.4,
     "imdb_score": 8.3,
     "lb_score": 4.2,
-    "rt_score": 0.86
+    "rt_score": 0.86,
+    "similar": [
+      {
+        "title": "Miller's Crossing",
+        "year": 1990,
+        "imdb_id": "tt0100150"
+      },
+      {
+        "title": "Sergio Leone's Duck, You Sucker",
+        "year": 1971,
+        "imdb_id": "tt0066473"
+      }
+    ]
   },
   {
     "id": "17753638558693nxmruzyljr",
@@ -954,7 +1560,24 @@
     "imdb_score": 7.5,
     "lb_score": 3.8,
     "rt_score": 0.85,
-    "mc_score": 57
+    "mc_score": 57,
+    "similar": [
+      {
+        "title": "The Raiders of the Lost Ark",
+        "year": 1981,
+        "imdb_id": "tt0082971"
+      },
+      {
+        "title": "Indiana Jones and the Last Crusade",
+        "year": 1989,
+        "imdb_id": "tt0097576"
+      },
+      {
+        "title": "The Mummy",
+        "year": 1999,
+        "imdb_id": "tt0120616"
+      }
+    ]
   },
   {
     "id": "1775363855869cazsynrg2x",
@@ -976,7 +1599,8 @@
     "imdb_score": 8,
     "lb_score": 4,
     "rt_score": 0.88,
-    "mc_score": 79
+    "mc_score": 79,
+    "similar": []
   },
   {
     "id": "1775363855869dp7cd1m6k2q",
@@ -998,7 +1622,14 @@
     "imdb_score": 7.7,
     "lb_score": 4.1,
     "rt_score": 0.87,
-    "mc_score": 87
+    "mc_score": 87,
+    "similar": [
+      {
+        "title": "Ang Lee's The Wedding Banquet",
+        "year": 1993,
+        "imdb_id": "tt0108065"
+      }
+    ]
   },
   {
     "id": "1775363855868nw52ffxuyum",
@@ -1020,7 +1651,19 @@
     "imdb_score": 8.8,
     "lb_score": 3.9,
     "rt_score": 0.71,
-    "mc_score": 82
+    "mc_score": 82,
+    "similar": [
+      {
+        "title": "Big Fish",
+        "year": 2003,
+        "imdb_id": "tt0313972"
+      },
+      {
+        "title": "Cast Away",
+        "year": 2000,
+        "imdb_id": "tt0162222"
+      }
+    ]
   },
   {
     "id": "1775363855868jmfcm2u3edj",
@@ -1044,7 +1687,24 @@
     "imdb_score": 7.4,
     "lb_score": 4.1,
     "rt_score": 0.91,
-    "mc_score": 90
+    "mc_score": 90,
+    "similar": [
+      {
+        "title": "Good Time",
+        "year": 2017,
+        "imdb_id": "tt4574334"
+      },
+      {
+        "title": "Heaven Knows What",
+        "year": 2014,
+        "imdb_id": "tt3520470"
+      },
+      {
+        "title": "Hustle & Flow",
+        "year": 2005,
+        "imdb_id": "tt0416565"
+      }
+    ]
   },
   {
     "id": "17753637107522lhva4egqmt",
@@ -1067,7 +1727,19 @@
     "imdb_score": 7.7,
     "lb_score": 4.1,
     "rt_score": 0.92,
-    "mc_score": 89
+    "mc_score": 89,
+    "similar": [
+      {
+        "title": "Nostalgia de la Luz",
+        "year": 2010,
+        "imdb_id": "tt1556592"
+      },
+      {
+        "title": "A Cop Movie",
+        "year": 2021,
+        "imdb_id": "tt11816996"
+      }
+    ]
   },
   {
     "id": "177536371075278av6jlpnc6",
@@ -1089,7 +1761,19 @@
     "score": 8.1,
     "imdb_score": 8,
     "lb_score": 3.9,
-    "rt_score": 0.87
+    "rt_score": 0.87,
+    "similar": [
+      {
+        "title": "Oliver!",
+        "year": 1968,
+        "imdb_id": "tt0063385"
+      },
+      {
+        "title": "Fiddler on the Roof",
+        "year": 1971,
+        "imdb_id": "tt0067093"
+      }
+    ]
   },
   {
     "id": "1775363710752glfyzn774ul",
@@ -1111,7 +1795,19 @@
     "imdb_score": 7.4,
     "lb_score": 3.9,
     "rt_score": 0.9,
-    "mc_score": 73
+    "mc_score": 73,
+    "similar": [
+      {
+        "title": "Miller's Crossing",
+        "year": 1990,
+        "imdb_id": "tt0100150"
+      },
+      {
+        "title": "Arizona Dream",
+        "year": 1993,
+        "imdb_id": "tt0103777"
+      }
+    ]
   },
   {
     "id": "1775363710752pkmwphbvku",
@@ -1133,7 +1829,24 @@
     "imdb_score": 7.4,
     "lb_score": 3.9,
     "rt_score": 0.99,
-    "mc_score": 89
+    "mc_score": 89,
+    "similar": [
+      {
+        "title": "Eighth Grade",
+        "year": 2018,
+        "imdb_id": "tt7014006"
+      },
+      {
+        "title": "The Edge of Seventeen",
+        "year": 2016,
+        "imdb_id": "tt1878870"
+      },
+      {
+        "title": "20th Century Women",
+        "year": 2016,
+        "imdb_id": "tt4385888"
+      }
+    ]
   },
   {
     "id": "1775363710752tgb70ouxdw",
@@ -1156,7 +1869,19 @@
     "score": 8.6,
     "imdb_score": 8.1,
     "lb_score": 4.3,
-    "rt_score": 0.95
+    "rt_score": 0.95,
+    "similar": [
+      {
+        "title": "Saraband",
+        "year": 2003,
+        "imdb_id": "tt0376706"
+      },
+      {
+        "title": "The Emigrants",
+        "year": 1971,
+        "imdb_id": "tt0067152"
+      }
+    ]
   },
   {
     "id": "17753637107521n4znt8b1mv",
@@ -1177,7 +1902,24 @@
     "score": 8.6,
     "imdb_score": 8.2,
     "lb_score": 4.1,
-    "rt_score": 0.97
+    "rt_score": 0.97,
+    "similar": [
+      {
+        "title": "Life of Brian",
+        "year": 1979,
+        "imdb_id": "tt0079470"
+      },
+      {
+        "title": "Jabberwocky",
+        "year": 1977,
+        "imdb_id": "tt0076022"
+      },
+      {
+        "title": "The Meaning of Life",
+        "year": 1983,
+        "imdb_id": "tt0085959"
+      }
+    ]
   },
   {
     "id": "1775363710752j3ubsg683rp",
@@ -1199,7 +1941,14 @@
     "imdb_score": 8.4,
     "lb_score": 4.2,
     "rt_score": 0.93,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "The Gold Rush",
+        "year": 1925,
+        "imdb_id": "tt0015864"
+      }
+    ]
   },
   {
     "id": "1775363710752gomuc3m0qiw",
@@ -1221,7 +1970,24 @@
     "score": 8.7,
     "imdb_score": 8.2,
     "lb_score": 4.3,
-    "rt_score": 0.97
+    "rt_score": 0.97,
+    "similar": [
+      {
+        "title": "Saraband",
+        "year": 2003,
+        "imdb_id": "tt0376706"
+      },
+      {
+        "title": "The Passion of Anna",
+        "year": 1969,
+        "imdb_id": "tt0064757"
+      },
+      {
+        "title": "Face to Face",
+        "year": 1976,
+        "imdb_id": "tt0074428"
+      }
+    ]
   },
   {
     "id": "1775363710752op45th2royl",
@@ -1244,7 +2010,19 @@
     "imdb_score": 8.5,
     "lb_score": 4.3,
     "rt_score": 0.9,
-    "mc_score": 79
+    "mc_score": 79,
+    "similar": [
+      {
+        "title": "Nuovo Cinema Paradiso: Extended Version",
+        "year": 1988,
+        "imdb_id": "tt0095765"
+      },
+      {
+        "title": "Malèna",
+        "year": 2000,
+        "imdb_id": "tt0213847"
+      }
+    ]
   },
   {
     "id": "1775363710752m8cnd2l7g8m",
@@ -1267,7 +2045,24 @@
     "imdb_score": 8.1,
     "lb_score": 4.3,
     "rt_score": 0.95,
-    "mc_score": 80
+    "mc_score": 80,
+    "similar": [
+      {
+        "title": "Before Sunrise",
+        "year": 1995,
+        "imdb_id": "tt0112471"
+      },
+      {
+        "title": "Before Midnight",
+        "year": 2013,
+        "imdb_id": "tt2hidden"
+      },
+      {
+        "title": "Certified Copy",
+        "year": 2010,
+        "imdb_id": "tt1020773"
+      }
+    ]
   },
   {
     "id": "1775363710752bwrau27f6j",
@@ -1289,7 +2084,14 @@
     "score": 8.7,
     "imdb_score": 8.1,
     "lb_score": 4.3,
-    "rt_score": 0.99
+    "rt_score": 0.99,
+    "similar": [
+      {
+        "title": "Stage Fright",
+        "year": 1950,
+        "imdb_id": "tt0042975"
+      }
+    ]
   },
   {
     "id": "17753637107510zydx1iw6rjg",
@@ -1312,7 +2114,8 @@
     "imdb_score": 8.2,
     "lb_score": 4.2,
     "rt_score": 0.95,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": []
   },
   {
     "id": "177536371075180vc972vgje",
@@ -1335,7 +2138,8 @@
     "imdb_score": 8.5,
     "lb_score": 4,
     "rt_score": 0.8,
-    "mc_score": 67
+    "mc_score": 67,
+    "similar": []
   },
   {
     "id": "17753635899860b5zq1t06lgp",
@@ -1357,7 +2161,14 @@
     "imdb_score": 8.4,
     "lb_score": 4.1,
     "rt_score": 0.87,
-    "mc_score": 81
+    "mc_score": 81,
+    "similar": [
+      {
+        "title": "12 Years a Slave",
+        "year": 2013,
+        "imdb_id": "tt2024544"
+      }
+    ]
   },
   {
     "id": "1775363589986qxf06l9aawq",
@@ -1379,7 +2190,19 @@
     "imdb_score": 7.7,
     "lb_score": 4.2,
     "rt_score": 0.96,
-    "mc_score": 95
+    "mc_score": 95,
+    "similar": [
+      {
+        "title": "Steve Jobs",
+        "year": 2015,
+        "imdb_id": "tt2080374"
+      },
+      {
+        "title": "Moneyball",
+        "year": 2011,
+        "imdb_id": "tt1210166"
+      }
+    ]
   },
   {
     "id": "1775363589986q8r12s7svoj",
@@ -1402,7 +2225,19 @@
     "lb_score": 4.2,
     "rt_score": 0.94,
     "mc_score": 85,
-    "distributor": "Shout Select"
+    "distributor": "Shout Select",
+    "similar": [
+      {
+        "title": "A Simple Plan",
+        "year": 1998,
+        "imdb_id": "tt0120660"
+      },
+      {
+        "title": "Winter's Bone",
+        "year": 2010,
+        "imdb_id": "tt1399683"
+      }
+    ]
   },
   {
     "id": "1775363589986poenamztics",
@@ -1424,7 +2259,14 @@
     "imdb_score": 8.2,
     "lb_score": 3.9,
     "rt_score": 0.94,
-    "mc_score": 72
+    "mc_score": 72,
+    "similar": [
+      {
+        "title": "Die Hard with a Vengeance",
+        "year": 1995,
+        "imdb_id": "tt0112864"
+      }
+    ]
   },
   {
     "id": "1775363589986hsd70m1sx5",
@@ -1447,7 +2289,19 @@
     "lb_score": 4.2,
     "rt_score": 0.93,
     "mc_score": 80,
-    "distributor": "Umbrella"
+    "distributor": "Umbrella",
+    "similar": [
+      {
+        "title": "The Machinist",
+        "year": 2004,
+        "imdb_id": "tt0361862"
+      },
+      {
+        "title": "Primer",
+        "year": 2004,
+        "imdb_id": "tt0390384"
+      }
+    ]
   },
   {
     "id": "1775363589986ghqh0h73ctc",
@@ -1469,7 +2323,24 @@
     "imdb_score": 8.8,
     "lb_score": 4.1,
     "rt_score": 0.87,
-    "mc_score": 74
+    "mc_score": 74,
+    "similar": [
+      {
+        "title": "Paprika",
+        "year": 2006,
+        "imdb_id": "tt0851578"
+      },
+      {
+        "title": "The Cell",
+        "year": 2000,
+        "imdb_id": "tt0209958"
+      },
+      {
+        "title": "Existenz",
+        "year": 1999,
+        "imdb_id": "tt0120907"
+      }
+    ]
   },
   {
     "id": "177536358998636jfh2v1xna",
@@ -1490,7 +2361,24 @@
     "score": 8.7,
     "imdb_score": 8.4,
     "lb_score": 4.2,
-    "rt_score": 0.95
+    "rt_score": 0.95,
+    "similar": [
+      {
+        "title": "Indiana Jones and the Last Crusade",
+        "year": 1989,
+        "imdb_id": "tt0097576"
+      },
+      {
+        "title": "The Mummy",
+        "year": 1999,
+        "imdb_id": "tt0120616"
+      },
+      {
+        "title": "Romancing the Stone",
+        "year": 1984,
+        "imdb_id": "tt0088011"
+      }
+    ]
   },
   {
     "id": "17753635899869keba4ku8b",
@@ -1511,7 +2399,24 @@
     "score": 8.7,
     "imdb_score": 8.5,
     "lb_score": 4.3,
-    "rt_score": 0.91
+    "rt_score": 0.91,
+    "similar": [
+      {
+        "title": "Total Recall",
+        "year": 1990,
+        "imdb_id": "tt0100802"
+      },
+      {
+        "title": "RoboCop 2",
+        "year": 1990,
+        "imdb_id": "tt0100502"
+      },
+      {
+        "title": "Predator",
+        "year": 1987,
+        "imdb_id": "tt0093773"
+      }
+    ]
   },
   {
     "id": "177536358998611lazodq3qlb",
@@ -1532,7 +2437,24 @@
     "score": 8.5,
     "imdb_score": 8,
     "lb_score": 4.1,
-    "rt_score": 1
+    "rt_score": 1,
+    "similar": [
+      {
+        "title": "Predator",
+        "year": 1987,
+        "imdb_id": "tt0093773"
+      },
+      {
+        "title": "Total Recall",
+        "year": 1990,
+        "imdb_id": "tt0100802"
+      },
+      {
+        "title": "Hardware",
+        "year": 1990,
+        "imdb_id": "tt0099740"
+      }
+    ]
   },
   {
     "id": "1775363589986g3p1wdhzib",
@@ -1554,7 +2476,14 @@
     "imdb_score": 8.6,
     "lb_score": 4.3,
     "rt_score": 0.93,
-    "mc_score": 91
+    "mc_score": 91,
+    "similar": [
+      {
+        "title": "Fury",
+        "year": 2014,
+        "imdb_id": "tt2713180"
+      }
+    ]
   },
   {
     "id": "17753635899866ii5ko2ogvm",
@@ -1577,7 +2506,19 @@
     "imdb_score": 8.8,
     "lb_score": 4.4,
     "rt_score": 0.91,
-    "mc_score": 92
+    "mc_score": 92,
+    "similar": [
+      {
+        "title": "Willow",
+        "year": 1988,
+        "imdb_id": "tt0096446"
+      },
+      {
+        "title": "Dragonslayer",
+        "year": 1981,
+        "imdb_id": "tt0082288"
+      }
+    ]
   },
   {
     "id": "1775363589986iyceng33ntq",
@@ -1599,7 +2540,19 @@
     "imdb_score": 9,
     "lb_score": 4.5,
     "rt_score": 0.93,
-    "mc_score": 94
+    "mc_score": 94,
+    "similar": [
+      {
+        "title": "Willow",
+        "year": 1988,
+        "imdb_id": "tt0096446"
+      },
+      {
+        "title": "Conan the Barbarian",
+        "year": 1982,
+        "imdb_id": "tt0082198"
+      }
+    ]
   },
   {
     "id": "1775363589986bt0wr659nc5",
@@ -1621,7 +2574,19 @@
     "imdb_score": 8.7,
     "lb_score": 4.4,
     "rt_score": 0.95,
-    "mc_score": 87
+    "mc_score": 87,
+    "similar": [
+      {
+        "title": "Willow",
+        "year": 1988,
+        "imdb_id": "tt0096446"
+      },
+      {
+        "title": "Jason and the Argonauts",
+        "year": 1963,
+        "imdb_id": "tt0057197"
+      }
+    ]
   },
   {
     "id": "17753635899860ynfg4m8oy5g",
@@ -1644,7 +2609,14 @@
     "imdb_score": 8.7,
     "lb_score": 4.4,
     "rt_score": 0.96,
-    "mc_score": 90
+    "mc_score": 90,
+    "similar": [
+      {
+        "title": "Donnie Brasco",
+        "year": 1997,
+        "imdb_id": "tt0119008"
+      }
+    ]
   },
   {
     "id": "1775363589986curtr4o4y6k",
@@ -1665,7 +2637,24 @@
     "score": 9,
     "imdb_score": 8.5,
     "lb_score": 4.5,
-    "rt_score": 0.97
+    "rt_score": 0.97,
+    "similar": [
+      {
+        "title": "In This Corner of the World",
+        "year": 2016,
+        "imdb_id": "tt5013056"
+      },
+      {
+        "title": "Barefoot Gen",
+        "year": 1983,
+        "imdb_id": "tt0085636"
+      },
+      {
+        "title": "The Wind Rises",
+        "year": 2013,
+        "imdb_id": "tt2013232"
+      }
+    ]
   },
   {
     "id": "1775363589986drfuuazm5pt",
@@ -1687,7 +2676,19 @@
     "imdb_score": 8.6,
     "lb_score": 4.5,
     "rt_score": 0.97,
-    "mc_score": 96
+    "mc_score": 96,
+    "similar": [
+      {
+        "title": "Howl's Moving Castle",
+        "year": 2004,
+        "imdb_id": "tt0347149"
+      },
+      {
+        "title": "The Tale of Princess Kaguya",
+        "year": 2013,
+        "imdb_id": "tt2576852"
+      }
+    ]
   },
   {
     "id": "1775363589986hm15ib2qh9g",
@@ -1711,7 +2712,14 @@
     "lb_score": 4.2,
     "rt_score": 0.92,
     "mc_score": 83,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Babel",
+        "year": 2006,
+        "imdb_id": "tt0449467"
+      }
+    ]
   },
   {
     "id": "1775363589986ygphtg1hotp",
@@ -1732,7 +2740,19 @@
     "score": 8.5,
     "imdb_score": 8,
     "lb_score": 4.2,
-    "rt_score": 0.97
+    "rt_score": 0.97,
+    "similar": [
+      {
+        "title": "Cría Cuervos",
+        "year": 1976,
+        "imdb_id": "tt0074367"
+      },
+      {
+        "title": "Peppermint Frappé",
+        "year": 1967,
+        "imdb_id": "tt0062292"
+      }
+    ]
   },
   {
     "id": "1775363589986ug5z8lx5vo",
@@ -1756,7 +2776,14 @@
     "lb_score": 4.3,
     "rt_score": 0.96,
     "mc_score": 75,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "The Blue Kite",
+        "year": 1993,
+        "imdb_id": "tt0106332"
+      }
+    ]
   },
   {
     "id": "17753635899862i5xvqcq0f1",
@@ -1778,7 +2805,14 @@
     "imdb_score": 7.7,
     "lb_score": 4.1,
     "rt_score": 0.94,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Passing",
+        "year": 2021,
+        "imdb_id": "tt10344928"
+      }
+    ]
   },
   {
     "id": "1775363589986fpcpt5k2ic7",
@@ -1800,7 +2834,19 @@
     "imdb_score": 7.9,
     "lb_score": 4.1,
     "rt_score": 0.95,
-    "distributor": "Kino lorber"
+    "distributor": "Kino lorber",
+    "similar": [
+      {
+        "title": "Last Tango in Paris",
+        "year": 1972,
+        "imdb_id": "tt0070849"
+      },
+      {
+        "title": "The Garden of the Finzi-Continis",
+        "year": 1970,
+        "imdb_id": "tt0066619"
+      }
+    ]
   },
   {
     "id": "1775363589985tj4nam3pbd",
@@ -1822,7 +2868,14 @@
     "imdb_score": 7.8,
     "lb_score": 4.1,
     "rt_score": 0.96,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Out 1",
+        "year": 1971,
+        "imdb_id": "tt0067292"
+      }
+    ]
   },
   {
     "id": "1775363589985j7pc6p2yx3a",
@@ -1844,7 +2897,24 @@
     "imdb_score": 7.8,
     "lb_score": 4,
     "rt_score": 0.95,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Mississippi Mermaid",
+        "year": 1969,
+        "imdb_id": "tt0064784"
+      },
+      {
+        "title": "Two English Girls",
+        "year": 1971,
+        "imdb_id": "tt0068180"
+      },
+      {
+        "title": "The Soft Skin",
+        "year": 1964,
+        "imdb_id": "tt0058536"
+      }
+    ]
   },
   {
     "id": "17753635899857d567191xnp",
@@ -1865,7 +2935,19 @@
     "score": 8.7,
     "imdb_score": 8.3,
     "lb_score": 4.3,
-    "rt_score": 0.96
+    "rt_score": 0.96,
+    "similar": [
+      {
+        "title": "Dodes'ka-den",
+        "year": 1970,
+        "imdb_id": "tt0065619"
+      },
+      {
+        "title": "The Quiet Duel",
+        "year": 1949,
+        "imdb_id": "tt0041745"
+      }
+    ]
   },
   {
     "id": "1775363589985r0d9s82r3g",
@@ -1888,7 +2970,14 @@
     "imdb_score": 8.2,
     "lb_score": 4.3,
     "rt_score": 0.97,
-    "distributor": "BFI"
+    "distributor": "BFI",
+    "similar": [
+      {
+        "title": "The Hidden Fortress",
+        "year": 1958,
+        "imdb_id": "tt0051808"
+      }
+    ]
   },
   {
     "id": "1775363589985wp0lb8sa139",
@@ -1910,7 +2999,19 @@
     "imdb_score": 8.6,
     "lb_score": 4.1,
     "rt_score": 0.8,
-    "mc_score": 59
+    "mc_score": 59,
+    "similar": [
+      {
+        "title": "Mediterraneo",
+        "year": 1991,
+        "imdb_id": "tt0102426"
+      },
+      {
+        "title": "Il Postino: The Postman",
+        "year": 1994,
+        "imdb_id": "tt0110554"
+      }
+    ]
   },
   {
     "id": "1775363589985xf4vq1aoblq",
@@ -1934,7 +3035,24 @@
     "lb_score": 4.2,
     "rt_score": 0.96,
     "mc_score": 96,
-    "distributor": "MUBI"
+    "distributor": "MUBI",
+    "similar": [
+      {
+        "title": "Beach Rats",
+        "year": 2017,
+        "imdb_id": "tt4677700"
+      },
+      {
+        "title": "The Florida Project",
+        "year": 2017,
+        "imdb_id": "tt5649144"
+      },
+      {
+        "title": "Summer 1993",
+        "year": 2017,
+        "imdb_id": "tt5761008"
+      }
+    ]
   },
   {
     "id": "1775363589985khfxw1e5ltr",
@@ -1957,7 +3075,14 @@
     "imdb_score": 7.9,
     "lb_score": 4.2,
     "rt_score": 0.98,
-    "mc_score": 98
+    "mc_score": 98,
+    "similar": [
+      {
+        "title": "Burning",
+        "year": 2018,
+        "imdb_id": "tt7282468"
+      }
+    ]
   },
   {
     "id": "177536358998524ycdlt9b1a",
@@ -1979,7 +3104,19 @@
     "imdb_score": 8,
     "lb_score": 4.1,
     "rt_score": 0.98,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Night and Fog",
+        "year": 1956,
+        "imdb_id": "tt0049420"
+      },
+      {
+        "title": "Muriel, or the Time of Return",
+        "year": 1963,
+        "imdb_id": "tt0057343"
+      }
+    ]
   },
   {
     "id": "17753635899859028ivfg7v5",
@@ -2002,7 +3139,14 @@
     "imdb_score": 8.1,
     "lb_score": 4.2,
     "rt_score": 0.97,
-    "distributor": "BFI"
+    "distributor": "BFI",
+    "similar": [
+      {
+        "title": "The Hidden Fortress",
+        "year": 1958,
+        "imdb_id": "tt0051808"
+      }
+    ]
   },
   {
     "id": "17753635899858ag3d93ketn",
@@ -2025,7 +3169,24 @@
     "imdb_score": 8.5,
     "lb_score": 4.3,
     "rt_score": 0.96,
-    "mc_score": 85
+    "mc_score": 85,
+    "similar": [
+      {
+        "title": "The Zone of Interest",
+        "year": 2023,
+        "imdb_id": "tt7160372"
+      },
+      {
+        "title": "Son of Saul",
+        "year": 2015,
+        "imdb_id": "tt3808342"
+      },
+      {
+        "title": "The Reader",
+        "year": 2008,
+        "imdb_id": "tt0976051"
+      }
+    ]
   },
   {
     "id": "1775363589985sqazc1r9re",
@@ -2047,7 +3208,14 @@
     "imdb_score": 8.5,
     "lb_score": 4.3,
     "rt_score": 0.98,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "The Kid",
+        "year": 1921,
+        "imdb_id": "tt0012349"
+      }
+    ]
   },
   {
     "id": "17753635899855xp0c0614w",
@@ -2069,7 +3237,14 @@
     "imdb_score": 8.3,
     "lb_score": 4.3,
     "rt_score": 0.99,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Bob le Flambeur",
+        "year": 1956,
+        "imdb_id": "tt0048728"
+      }
+    ]
   },
   {
     "id": "1775363589985f9jsub71b8",
@@ -2093,7 +3268,24 @@
     "lb_score": 4,
     "rt_score": 0.96,
     "mc_score": 87,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Talk to Her",
+        "year": 2002,
+        "imdb_id": "tt0287839"
+      },
+      {
+        "title": "Women on the Verge of a Nervous Breakdown",
+        "year": 1988,
+        "imdb_id": "tt0096332"
+      },
+      {
+        "title": "Volver",
+        "year": 2006,
+        "imdb_id": "tt0441909"
+      }
+    ]
   },
   {
     "id": "1775363589985crerbmkmc4",
@@ -2115,7 +3307,14 @@
     "imdb_score": 8.2,
     "lb_score": 4.4,
     "rt_score": 0.91,
-    "mc_score": 93
+    "mc_score": 93,
+    "similar": [
+      {
+        "title": "The Assassination of Jesse James by the Coward Robert Ford",
+        "year": 2007,
+        "imdb_id": "tt0443680"
+      }
+    ]
   },
   {
     "id": "17753635899856b4ux3jm27r",
@@ -2137,7 +3336,14 @@
     "imdb_score": 7.9,
     "lb_score": 4.2,
     "rt_score": 0.98,
-    "mc_score": 81
+    "mc_score": 81,
+    "similar": [
+      {
+        "title": "After the Storm",
+        "year": 2016,
+        "imdb_id": "tt5456574"
+      }
+    ]
   },
   {
     "id": "1775363589985rstiihcjugn",
@@ -2159,7 +3365,19 @@
     "imdb_score": 7.9,
     "lb_score": 4.2,
     "rt_score": 0.97,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "One Sings, the Other Doesn't",
+        "year": 1977,
+        "imdb_id": "tt0076567"
+      },
+      {
+        "title": "Le Bonheur",
+        "year": 1965,
+        "imdb_id": "tt0058937"
+      }
+    ]
   },
   {
     "id": "1775363589985zhdqbtgri7a",
@@ -2182,7 +3400,24 @@
     "lb_score": 4.5,
     "rt_score": 0.98,
     "mc_score": 91,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Mustang",
+        "year": 2015,
+        "imdb_id": "tt4388296"
+      },
+      {
+        "title": "Water Lilies",
+        "year": 2007,
+        "imdb_id": "tt0974554"
+      },
+      {
+        "title": "Girlhood",
+        "year": 2014,
+        "imdb_id": "tt3655510"
+      }
+    ]
   },
   {
     "id": "17753632946879ox9abiknus",
@@ -2205,7 +3440,19 @@
     "imdb_score": 8.1,
     "lb_score": 4.3,
     "rt_score": 0.97,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Il Bidone",
+        "year": 1955,
+        "imdb_id": "tt0047988"
+      },
+      {
+        "title": "I Vitelloni",
+        "year": 1953,
+        "imdb_id": "tt0046521"
+      }
+    ]
   },
   {
     "id": "1775392611262o1i2czhhj5n",
@@ -2226,7 +3473,24 @@
     "imdb_score": 7.4,
     "lb_score": 3.7,
     "rt_score": 0.84,
-    "has4k": false
+    "has4k": false,
+    "similar": [
+      {
+        "title": "Jailhouse Rock",
+        "year": 1957,
+        "imdb_id": "tt0050556"
+      },
+      {
+        "title": "Loving You",
+        "year": 1957,
+        "imdb_id": "tt0050665"
+      },
+      {
+        "title": "Flaming Star",
+        "year": 1960,
+        "imdb_id": "tt0053844"
+      }
+    ]
   },
   {
     "id": "1775391551451f5eydj2l5x",
@@ -2248,7 +3512,24 @@
     "lb_score": 4.3,
     "rt_score": 0.94,
     "mc_score": 86,
-    "has4k": false
+    "has4k": false,
+    "similar": [
+      {
+        "title": "Kiki's Delivery Service",
+        "year": 1989,
+        "imdb_id": "tt0097814"
+      },
+      {
+        "title": "Castle in the Sky",
+        "year": 1986,
+        "imdb_id": "tt0092067"
+      },
+      {
+        "title": "The Secret World of Arrietty",
+        "year": 2010,
+        "imdb_id": "tt1568921"
+      }
+    ]
   },
   {
     "id": "1775391533485toythy4mky",
@@ -2270,7 +3551,24 @@
     "imdb_score": 8,
     "lb_score": 4.2,
     "rt_score": 0.9,
-    "mc_score": 67
+    "mc_score": 67,
+    "similar": [
+      {
+        "title": "Ghost in the Shell",
+        "year": 1995,
+        "imdb_id": "tt0113568"
+      },
+      {
+        "title": "Metropolis",
+        "year": 2001,
+        "imdb_id": "tt0291325"
+      },
+      {
+        "title": "Redline",
+        "year": 2009,
+        "imdb_id": "tt1483797"
+      }
+    ]
   },
   {
     "id": "1775391497635svszusfidgk",
@@ -2292,7 +3590,24 @@
     "lb_score": 4.3,
     "rt_score": 0.96,
     "mc_score": 94,
-    "has4k": false
+    "has4k": false,
+    "similar": [
+      {
+        "title": "The Straight Story",
+        "year": 1999,
+        "imdb_id": "tt0166896"
+      },
+      {
+        "title": "45 Years",
+        "year": 2015,
+        "imdb_id": "tt3655292"
+      },
+      {
+        "title": "Nebraska",
+        "year": 2013,
+        "imdb_id": "tt1821549"
+      }
+    ]
   },
   {
     "id": "1775391480369rhcfs4fq44m",
@@ -2314,7 +3629,14 @@
     "lb_score": 4.2,
     "rt_score": 0.98,
     "has4k": false,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Caught",
+        "year": 1949,
+        "imdb_id": "tt0041237"
+      }
+    ]
   },
   {
     "id": "1775391463019r11mon4pj5k",
@@ -2336,7 +3658,14 @@
     "lb_score": 4.1,
     "rt_score": 0.94,
     "has4k": false,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Rosetta",
+        "year": 1999,
+        "imdb_id": "tt0200071"
+      }
+    ]
   },
   {
     "id": "1775391436136unz64wzk7m",
@@ -2359,7 +3688,19 @@
     "rt_score": 0.98,
     "mc_score": 91,
     "has4k": false,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Happy Hour",
+        "year": 2015,
+        "imdb_id": "tt4632850"
+      },
+      {
+        "title": "Asako I & II",
+        "year": 2018,
+        "imdb_id": "tt7568814"
+      }
+    ]
   },
   {
     "id": "1775391409269dogevmt0xq9",
@@ -2381,7 +3722,8 @@
     "lb_score": 4.4,
     "rt_score": 1,
     "has4k": false,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": []
   },
   {
     "id": "177539139451966087vr0hz9",
@@ -2402,7 +3744,19 @@
     "imdb_score": 8.1,
     "lb_score": 4.3,
     "rt_score": 0.97,
-    "has4k": false
+    "has4k": false,
+    "similar": [
+      {
+        "title": "La Règle du Jeu",
+        "year": 1939,
+        "imdb_id": "tt0031885"
+      },
+      {
+        "title": "The Bridge on the Drina",
+        "year": 1960,
+        "imdb_id": "tt0053577"
+      }
+    ]
   },
   {
     "id": "1775391366452yce77nwmjlq",
@@ -2423,7 +3777,14 @@
     "imdb_score": 8,
     "lb_score": 4.2,
     "rt_score": 0.98,
-    "has4k": false
+    "has4k": false,
+    "similar": [
+      {
+        "title": "Sidney Lumet's Prince of the City",
+        "year": 1981,
+        "imdb_id": "tt0083026"
+      }
+    ]
   },
   {
     "id": "1775391344020ba64ghk3bxk",
@@ -2445,7 +3806,19 @@
     "lb_score": 4,
     "rt_score": 0.96,
     "has4k": false,
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "The Remains of the Day",
+        "year": 1993,
+        "imdb_id": "tt0107943"
+      },
+      {
+        "title": "45 Years",
+        "year": 2015,
+        "imdb_id": "tt3655292"
+      }
+    ]
   },
   {
     "id": "1775390728602ff8miyr43jn",
@@ -2467,7 +3840,14 @@
     "imdb_score": 8.1,
     "lb_score": 4.1,
     "rt_score": 0.83,
-    "mc_score": 71
+    "mc_score": 71,
+    "similar": [
+      {
+        "title": "Inherent Vice",
+        "year": 2014,
+        "imdb_id": "tt1791528"
+      }
+    ]
   },
   {
     "id": "1775371723640ww49gz5goyj",
@@ -2490,7 +3870,19 @@
     "imdb_score": 7.9,
     "lb_score": 4.2,
     "rt_score": 0.95,
-    "mc_score": 93
+    "mc_score": 93,
+    "similar": [
+      {
+        "title": "Maurice",
+        "year": 1987,
+        "imdb_id": "tt0093456"
+      },
+      {
+        "title": "Weekend",
+        "year": 2011,
+        "imdb_id": "tt1714210"
+      }
+    ]
   },
   {
     "id": "1775371684024m8um357g34",
@@ -2513,7 +3905,14 @@
     "imdb_score": 7.8,
     "lb_score": 4.1,
     "rt_score": 0.83,
-    "mc_score": 78
+    "mc_score": 78,
+    "similar": [
+      {
+        "title": "Short Cuts",
+        "year": 1993,
+        "imdb_id": "tt0108122"
+      }
+    ]
   },
   {
     "id": "1775371673725w1gn52pc3i",
@@ -2535,7 +3934,24 @@
     "score": 8.2,
     "imdb_score": 7.4,
     "lb_score": 4,
-    "rt_score": 0.97
+    "rt_score": 0.97,
+    "similar": [
+      {
+        "title": "Who's That Knocking at My Door",
+        "year": 1967,
+        "imdb_id": "tt0063669"
+      },
+      {
+        "title": "Boxcar Bertha",
+        "year": 1972,
+        "imdb_id": "tt0068399"
+      },
+      {
+        "title": "Italianamerican",
+        "year": 1974,
+        "imdb_id": "tt0073399"
+      }
+    ]
   },
   {
     "id": "1775371657973pnqzf049mkr",
@@ -2558,7 +3974,24 @@
     "imdb_score": 7.8,
     "lb_score": 3.8,
     "rt_score": 0.86,
-    "mc_score": 73
+    "mc_score": 73,
+    "similar": [
+      {
+        "title": "The Other Side of Hope",
+        "year": 2017,
+        "imdb_id": "tt5276818"
+      },
+      {
+        "title": "Lorenzo's Oil",
+        "year": 1992,
+        "imdb_id": "tt0104756"
+      },
+      {
+        "title": "My Left Foot",
+        "year": 1989,
+        "imdb_id": "tt0097937"
+      }
+    ]
   },
   {
     "id": "1775371647974cf3xxxpl6sc",
@@ -2581,7 +4014,24 @@
     "imdb_score": 7.8,
     "lb_score": 4,
     "rt_score": 0.9,
-    "mc_score": 81
+    "mc_score": 81,
+    "similar": [
+      {
+        "title": "Restrepo",
+        "year": 2010,
+        "imdb_id": "tt1559549"
+      },
+      {
+        "title": "Zero Dark Thirty",
+        "year": 2012,
+        "imdb_id": "tt1790885"
+      },
+      {
+        "title": "Lone Survivor",
+        "year": 2013,
+        "imdb_id": "tt1091191"
+      }
+    ]
   },
   {
     "id": "1775371625207eoz1h8ix8ru",
@@ -2604,7 +4054,24 @@
     "imdb_score": 8,
     "lb_score": 3.9,
     "rt_score": 0.78,
-    "mc_score": 76
+    "mc_score": 76,
+    "similar": [
+      {
+        "title": "Jeremiah Johnson",
+        "year": 1972,
+        "imdb_id": "tt0068762"
+      },
+      {
+        "title": "Wind River",
+        "year": 2017,
+        "imdb_id": "tt5362988"
+      },
+      {
+        "title": "Bone Tomahawk",
+        "year": 2015,
+        "imdb_id": "tt2494280"
+      }
+    ]
   },
   {
     "id": "17753716133406gnpzt8kahf",
@@ -2627,7 +4094,14 @@
     "imdb_score": 7.8,
     "lb_score": 4,
     "rt_score": 0.96,
-    "mc_score": 90
+    "mc_score": 90,
+    "similar": [
+      {
+        "title": "About Schmidt",
+        "year": 2002,
+        "imdb_id": "tt0257360"
+      }
+    ]
   },
   {
     "id": "1775371605424747e4u09fil",
@@ -2650,7 +4124,19 @@
     "imdb_score": 7.9,
     "lb_score": 4.2,
     "rt_score": 0.98,
-    "mc_score": 90
+    "mc_score": 90,
+    "similar": [
+      {
+        "title": "About Schmidt",
+        "year": 2002,
+        "imdb_id": "tt0257360"
+      },
+      {
+        "title": "A Separate Peace",
+        "year": 1972,
+        "imdb_id": "tt0069155"
+      }
+    ]
   },
   {
     "id": "1775371594107n44ungk2i6k",
@@ -2673,7 +4159,14 @@
     "imdb_score": 7.4,
     "lb_score": 4,
     "rt_score": 0.91,
-    "mc_score": 70
+    "mc_score": 70,
+    "similar": [
+      {
+        "title": "Kiss Kiss Bang Bang",
+        "year": 2005,
+        "imdb_id": "tt0373469"
+      }
+    ]
   },
   {
     "id": "1775371582007sg1j8ev1rgs",
@@ -2696,7 +4189,24 @@
     "imdb_score": 7.1,
     "lb_score": 3.9,
     "rt_score": 0.63,
-    "mc_score": 55
+    "mc_score": 55,
+    "similar": [
+      {
+        "title": "Fletch",
+        "year": 1985,
+        "imdb_id": "tt0089155"
+      },
+      {
+        "title": "There's Something About Mary",
+        "year": 1998,
+        "imdb_id": "tt0129387"
+      },
+      {
+        "title": "BASEketball",
+        "year": 1998,
+        "imdb_id": "tt0131325"
+      }
+    ]
   },
   {
     "id": "1775371570590nupx8lx1ioq",
@@ -2719,7 +4229,14 @@
     "imdb_score": 7.6,
     "lb_score": 3.7,
     "rt_score": 0.9,
-    "mc_score": 80
+    "mc_score": 80,
+    "similar": [
+      {
+        "title": "A Scanner Darkly",
+        "year": 2006,
+        "imdb_id": "tt0405296"
+      }
+    ]
   },
   {
     "id": "177537155579129ijzhk054x",
@@ -2742,7 +4259,19 @@
     "imdb_score": 7.5,
     "lb_score": 3.9,
     "rt_score": 0.87,
-    "mc_score": 71
+    "mc_score": 71,
+    "similar": [
+      {
+        "title": "Foxy Brown",
+        "year": 1974,
+        "imdb_id": "tt0071517"
+      },
+      {
+        "title": "Friday Foster",
+        "year": 1975,
+        "imdb_id": "tt0073078"
+      }
+    ]
   },
   {
     "id": "1775371542557j7c3c79i5wk",
@@ -2764,7 +4293,14 @@
     "score": 8.1,
     "imdb_score": 7.3,
     "lb_score": 4,
-    "rt_score": 0.97
+    "rt_score": 0.97,
+    "similar": [
+      {
+        "title": "The Outfit",
+        "year": 1973,
+        "imdb_id": "tt0070530"
+      }
+    ]
   },
   {
     "id": "1775371530608mmgqpey1dym",
@@ -2787,7 +4323,14 @@
     "imdb_score": 8,
     "lb_score": 4.4,
     "rt_score": 0.96,
-    "mc_score": 89
+    "mc_score": 89,
+    "similar": [
+      {
+        "title": "Tangerine",
+        "year": 2015,
+        "imdb_id": "tt3824458"
+      }
+    ]
   },
   {
     "id": "1775371513524dur9q0gdn7u",
@@ -2810,7 +4353,24 @@
     "imdb_score": 7.6,
     "lb_score": 4,
     "rt_score": 0.97,
-    "mc_score": 82
+    "mc_score": 82,
+    "similar": [
+      {
+        "title": "Lone Star State of Mind",
+        "year": 2002,
+        "imdb_id": "tt0280713"
+      },
+      {
+        "title": "Limbo",
+        "year": 1999,
+        "imdb_id": "tt0171886"
+      },
+      {
+        "title": "City of Hope",
+        "year": 1991,
+        "imdb_id": "tt0101572"
+      }
+    ]
   },
   {
     "id": "1775371492857ndgtur5e9jr",
@@ -2833,7 +4393,24 @@
     "imdb_score": 7.3,
     "lb_score": 3.8,
     "rt_score": 0.88,
-    "mc_score": 70
+    "mc_score": 70,
+    "similar": [
+      {
+        "title": "Basic Instinct",
+        "year": 1992,
+        "imdb_id": "tt0103772"
+      },
+      {
+        "title": "Body Heat",
+        "year": 1981,
+        "imdb_id": "tt0082089"
+      },
+      {
+        "title": "The Last Seduction",
+        "year": 1994,
+        "imdb_id": "tt0110308"
+      }
+    ]
   },
   {
     "id": "17753714747914whsuu5empr",
@@ -2856,7 +4433,19 @@
     "imdb_score": 7.4,
     "lb_score": 3.9,
     "rt_score": 0.86,
-    "mc_score": 55
+    "mc_score": 55,
+    "similar": [
+      {
+        "title": "Elvira: Mistress of the Dark",
+        "year": 1988,
+        "imdb_id": "tt0095088"
+      },
+      {
+        "title": "UHF",
+        "year": 1989,
+        "imdb_id": "tt0098546"
+      }
+    ]
   },
   {
     "id": "17753714485577inbzhhv6dx",
@@ -2879,7 +4468,19 @@
     "imdb_score": 7.5,
     "lb_score": 4.1,
     "rt_score": 0.76,
-    "mc_score": 68
+    "mc_score": 68,
+    "similar": [
+      {
+        "title": "Belle de Jour",
+        "year": 1967,
+        "imdb_id": "tt0061722"
+      },
+      {
+        "title": "Liliana Cavani's The Night Porter",
+        "year": 1974,
+        "imdb_id": "tt0071947"
+      }
+    ]
   },
   {
     "id": "1775371437274qdgqjk7djf",
@@ -2902,7 +4503,24 @@
     "imdb_score": 7.6,
     "lb_score": 4,
     "rt_score": 0.97,
-    "mc_score": 94
+    "mc_score": 94,
+    "similar": [
+      {
+        "title": "Zero Dark Thirty",
+        "year": 2012,
+        "imdb_id": "tt1790885"
+      },
+      {
+        "title": "Three Kings",
+        "year": 1999,
+        "imdb_id": "tt0120188"
+      },
+      {
+        "title": "Jarhead",
+        "year": 2005,
+        "imdb_id": "tt0418763"
+      }
+    ]
   },
   {
     "id": "1775371424124nxuqflt15xo",
@@ -2925,7 +4543,24 @@
     "imdb_score": 7.5,
     "lb_score": 3.7,
     "rt_score": 0.67,
-    "mc_score": 59
+    "mc_score": 59,
+    "similar": [
+      {
+        "title": "Clerks",
+        "year": 1994,
+        "imdb_id": "tt0109445"
+      },
+      {
+        "title": "Mallrats",
+        "year": 1995,
+        "imdb_id": "tt0113749"
+      },
+      {
+        "title": "Chasing Amy",
+        "year": 1997,
+        "imdb_id": "tt0118842"
+      }
+    ]
   },
   {
     "id": "17753714094419j7ecwynwtt",
@@ -2947,7 +4582,19 @@
     "score": 8.1,
     "imdb_score": 7.5,
     "lb_score": 3.9,
-    "rt_score": 0.95
+    "rt_score": 0.95,
+    "similar": [
+      {
+        "title": "The Apple",
+        "year": 1998,
+        "imdb_id": "tt0171241"
+      },
+      {
+        "title": "The Wind Will Carry Us",
+        "year": 1999,
+        "imdb_id": "tt0200859"
+      }
+    ]
   },
   {
     "id": "1775371378476wv5pwwnlysc",
@@ -2970,7 +4617,8 @@
     "imdb_score": 6.8,
     "lb_score": 3.5,
     "rt_score": 0.55,
-    "mc_score": 52
+    "mc_score": 52,
+    "similar": []
   },
   {
     "id": "1775371251892h8158xno6pn",
@@ -2993,7 +4641,24 @@
     "imdb_score": 8,
     "lb_score": 4.1,
     "rt_score": 0.92,
-    "mc_score": 76
+    "mc_score": 76,
+    "similar": [
+      {
+        "title": "Hot Fuzz",
+        "year": 2007,
+        "imdb_id": "tt0425112"
+      },
+      {
+        "title": "The World's End",
+        "year": 2013,
+        "imdb_id": "tt1674771"
+      },
+      {
+        "title": "Tucker and Dale vs Evil",
+        "year": 2010,
+        "imdb_id": "tt1465522"
+      }
+    ]
   },
   {
     "id": "1775369564988i3ewoak8ml",
@@ -3016,7 +4681,19 @@
     "imdb_score": 7.8,
     "lb_score": 4,
     "rt_score": 0.9,
-    "mc_score": 74
+    "mc_score": 74,
+    "similar": [
+      {
+        "title": "Gerald's Game",
+        "year": 2017,
+        "imdb_id": "tt3748172"
+      },
+      {
+        "title": "Dolores Claiborne",
+        "year": 1995,
+        "imdb_id": "tt0109642"
+      }
+    ]
   },
   {
     "id": "1775440300023exofn9t7e4",
@@ -3040,7 +4717,24 @@
     "lb_score": 3.8,
     "rt_score": 0.93,
     "mc_score": 78,
-    "score": 8
+    "score": 8,
+    "similar": [
+      {
+        "title": "Godzilla Minus One",
+        "year": 2023,
+        "imdb_id": "tt23289160"
+      },
+      {
+        "title": "Mothra vs. Godzilla",
+        "year": 1964,
+        "imdb_id": "tt0058544"
+      },
+      {
+        "title": "King Kong vs. Godzilla",
+        "year": 1962,
+        "imdb_id": "tt0056222"
+      }
+    ]
   },
   {
     "id": "1775440144290gy00vxxnpkl",
@@ -3064,7 +4758,24 @@
     "lb_score": 3.6,
     "rt_score": 0.98,
     "mc_score": null,
-    "score": 8.1
+    "score": 8.1,
+    "similar": [
+      {
+        "title": "Mighty Joe Young",
+        "year": 1949,
+        "imdb_id": "tt0041637"
+      },
+      {
+        "title": "Them!",
+        "year": 1954,
+        "imdb_id": "tt0047573"
+      },
+      {
+        "title": "The Beast from 20,000 Fathoms",
+        "year": 1953,
+        "imdb_id": "tt0045546"
+      }
+    ]
   },
   {
     "id": "1775440084674gmeaazl3lve",
@@ -3088,7 +4799,24 @@
     "lb_score": 3.5,
     "rt_score": 0.71,
     "mc_score": null,
-    "score": 6.9
+    "score": 6.9,
+    "similar": [
+      {
+        "title": "Predator",
+        "year": 1987,
+        "imdb_id": "tt0093773"
+      },
+      {
+        "title": "Raw Deal",
+        "year": 1986,
+        "imdb_id": "tt0091895"
+      },
+      {
+        "title": "Red Heat",
+        "year": 1988,
+        "imdb_id": "tt0095963"
+      }
+    ]
   },
   {
     "id": "1775439968258tmgduaroygk",
@@ -3112,7 +4840,19 @@
     "lb_score": 4.1,
     "rt_score": 0.87,
     "mc_score": 79,
-    "score": 8
+    "score": 8,
+    "similar": [
+      {
+        "title": "Swallowtail Butterfly",
+        "year": 1996,
+        "imdb_id": "tt0117824"
+      },
+      {
+        "title": "Eureka",
+        "year": 2000,
+        "imdb_id": "tt0264782"
+      }
+    ]
   },
   {
     "id": "1775439916725f39pkxnotmg",
@@ -3136,7 +4876,19 @@
     "lb_score": 3.9,
     "rt_score": 0.92,
     "mc_score": 85,
-    "score": 8.1
+    "score": 8.1,
+    "similar": [
+      {
+        "title": "Anatomy of a Murder",
+        "year": 1959,
+        "imdb_id": "tt0052561"
+      },
+      {
+        "title": "Presumed Innocent",
+        "year": 1990,
+        "imdb_id": "tt0100404"
+      }
+    ]
   },
   {
     "id": "1775439874692grcejzpj6bm",
@@ -3160,7 +4912,24 @@
     "lb_score": 3.7,
     "rt_score": 0.85,
     "mc_score": null,
-    "score": 7.5
+    "score": 7.5,
+    "similar": [
+      {
+        "title": "Theorem",
+        "year": 1968,
+        "imdb_id": "tt0063765"
+      },
+      {
+        "title": "Salo, or the 120 Days of Sodom",
+        "year": 1975,
+        "imdb_id": "tt0073650"
+      },
+      {
+        "title": "The Gospel According to St. Matthew",
+        "year": 1964,
+        "imdb_id": "tt0058715"
+      }
+    ]
   },
   {
     "id": "1775439797443e1474lzeue4",
@@ -3184,7 +4953,8 @@
     "lb_score": 3.8,
     "rt_score": 0.88,
     "mc_score": null,
-    "score": 7.9
+    "score": 7.9,
+    "similar": []
   },
   {
     "id": "177543973342621rzzmzq9kt",
@@ -3208,7 +4978,19 @@
     "lb_score": 3.9,
     "rt_score": 0.91,
     "mc_score": 79,
-    "score": 8
+    "score": 8,
+    "similar": [
+      {
+        "title": "Naked Lunch",
+        "year": 1991,
+        "imdb_id": "tt0102526"
+      },
+      {
+        "title": "Shivers",
+        "year": 1975,
+        "imdb_id": "tt0073705"
+      }
+    ]
   },
   {
     "id": "17754396750604e7oeh1c7e3",
@@ -3232,7 +5014,24 @@
     "lb_score": 4,
     "rt_score": 0.84,
     "mc_score": 75,
-    "score": 8
+    "score": 8,
+    "similar": [
+      {
+        "title": "Melancholia",
+        "year": 2011,
+        "imdb_id": "tt1527186"
+      },
+      {
+        "title": "Dancer in the Dark",
+        "year": 2000,
+        "imdb_id": "tt0168629"
+      },
+      {
+        "title": "The House That Jack Built",
+        "year": 2018,
+        "imdb_id": "tt4003440"
+      }
+    ]
   },
   {
     "id": "1775439666010bwji8qqn6gn",
@@ -3256,7 +5055,14 @@
     "lb_score": 3.8,
     "rt_score": 0.78,
     "mc_score": 74,
-    "score": 7.6
+    "score": 7.6,
+    "similar": [
+      {
+        "title": "Three Days of the Condor",
+        "year": 1975,
+        "imdb_id": "tt0073341"
+      }
+    ]
   },
   {
     "id": "1775439535878w8nkmjkracn",
@@ -3280,7 +5086,19 @@
     "lb_score": 3.8,
     "rt_score": 0.79,
     "mc_score": 78,
-    "score": 7.7
+    "score": 7.7,
+    "similar": [
+      {
+        "title": "Dead Calm",
+        "year": 1989,
+        "imdb_id": "tt0097162"
+      },
+      {
+        "title": "Jagged Edge",
+        "year": 1985,
+        "imdb_id": "tt0089360"
+      }
+    ]
   },
   {
     "id": "1775439498011pxh0k3fc03",
@@ -3304,7 +5122,24 @@
     "lb_score": 3.7,
     "rt_score": 0.8,
     "mc_score": null,
-    "score": 7.4
+    "score": 7.4,
+    "similar": [
+      {
+        "title": "Five Deadly Venoms",
+        "year": 1978,
+        "imdb_id": "tt0077723"
+      },
+      {
+        "title": "The Sword",
+        "year": 1980,
+        "imdb_id": "tt0081633"
+      },
+      {
+        "title": "The Swordsman",
+        "year": 1990,
+        "imdb_id": "tt0100685"
+      }
+    ]
   },
   {
     "id": "17754394498444mx31bju5dm",
@@ -3328,7 +5163,19 @@
     "lb_score": 3.8,
     "rt_score": 0.93,
     "mc_score": 79,
-    "score": 8
+    "score": 8,
+    "similar": [
+      {
+        "title": "American Graffiti",
+        "year": 1973,
+        "imdb_id": "tt0069704"
+      },
+      {
+        "title": "Everybody Wants Some!!",
+        "year": 2016,
+        "imdb_id": "tt2937696"
+      }
+    ]
   },
   {
     "id": "1775439410944qyrrb8fcl2",
@@ -3352,7 +5199,19 @@
     "lb_score": 3.8,
     "rt_score": 0.95,
     "mc_score": 89,
-    "score": 8.2
+    "score": 8.2,
+    "similar": [
+      {
+        "title": "Somewhere",
+        "year": 2010,
+        "imdb_id": "tt1519524"
+      },
+      {
+        "title": "Broken Flowers",
+        "year": 2005,
+        "imdb_id": "tt0412019"
+      }
+    ]
   },
   {
     "id": "1775439378277vp2v0a2msqq",
@@ -3376,7 +5235,24 @@
     "lb_score": 3.9,
     "rt_score": 0.96,
     "mc_score": 84,
-    "score": 8.2
+    "score": 8.2,
+    "similar": [
+      {
+        "title": "All the President's Men",
+        "year": 1976,
+        "imdb_id": "tt0074119"
+      },
+      {
+        "title": "Spotlight",
+        "year": 2015,
+        "imdb_id": "tt1895587"
+      },
+      {
+        "title": "Michael Clayton",
+        "year": 2007,
+        "imdb_id": "tt0465538"
+      }
+    ]
   },
   {
     "id": "1775439303611kxi0117x09",
@@ -3400,7 +5276,24 @@
     "lb_score": 3.6,
     "rt_score": 0.95,
     "mc_score": null,
-    "score": 7.6
+    "score": 7.6,
+    "similar": [
+      {
+        "title": "The Road Warrior",
+        "year": 1981,
+        "imdb_id": "tt0082694"
+      },
+      {
+        "title": "Beyond Thunderdome",
+        "year": 1985,
+        "imdb_id": "tt0089530"
+      },
+      {
+        "title": "Fury Road",
+        "year": 2015,
+        "imdb_id": "tt1392190"
+      }
+    ]
   },
   {
     "id": "177543901776205lyb58jge3",
@@ -3424,7 +5317,14 @@
     "lb_score": 3.9,
     "rt_score": 0.87,
     "mc_score": 85,
-    "score": 7.9
+    "score": 7.9,
+    "similar": [
+      {
+        "title": "The Consequences of Love",
+        "year": 2004,
+        "imdb_id": "tt0398492"
+      }
+    ]
   },
   {
     "id": "1775438976263cj8ox4i9nq",
@@ -3448,7 +5348,14 @@
     "lb_score": 4,
     "rt_score": 0.77,
     "mc_score": 67,
-    "score": 7.6
+    "score": 7.6,
+    "similar": [
+      {
+        "title": "Adaptation",
+        "year": 2002,
+        "imdb_id": "tt0268126"
+      }
+    ]
   },
   {
     "id": "1775438793795uz24zz598nc",
@@ -3472,7 +5379,14 @@
     "lb_score": 3.6,
     "rt_score": 0.89,
     "mc_score": null,
-    "score": 8
+    "score": 8,
+    "similar": [
+      {
+        "title": "Doctor Zhivago",
+        "year": 1965,
+        "imdb_id": "tt0059113"
+      }
+    ]
   },
   {
     "id": "1775438709129rff4d4kt9q",
@@ -3496,7 +5410,24 @@
     "lb_score": 4,
     "rt_score": 0.9,
     "mc_score": 73,
-    "score": 8.1
+    "score": 8.1,
+    "similar": [
+      {
+        "title": "Big Eyes",
+        "year": 2014,
+        "imdb_id": "tt1020680"
+      },
+      {
+        "title": "Ed Wood",
+        "year": 1994,
+        "imdb_id": "tt0109592"
+      },
+      {
+        "title": "Big Fish",
+        "year": 2003,
+        "imdb_id": "tt0313972"
+      }
+    ]
   },
   {
     "id": "1775438694345ugkwhdlrh3m",
@@ -3520,7 +5451,14 @@
     "lb_score": 4.1,
     "rt_score": 0.89,
     "mc_score": 77,
-    "score": 8.4
+    "score": 8.4,
+    "similar": [
+      {
+        "title": "Primal Fear",
+        "year": 1996,
+        "imdb_id": "tt0117381"
+      }
+    ]
   },
   {
     "id": "1775438675230pguq6ssxvik",
@@ -3544,7 +5482,24 @@
     "lb_score": 4.1,
     "rt_score": 0.86,
     "mc_score": null,
-    "score": 8.2
+    "score": 8.2,
+    "similar": [
+      {
+        "title": "The Heartbreak Kid",
+        "year": 1972,
+        "imdb_id": "tt0068755"
+      },
+      {
+        "title": "Harold and Maude",
+        "year": 1971,
+        "imdb_id": "tt0067185"
+      },
+      {
+        "title": "Starting Over",
+        "year": 1979,
+        "imdb_id": "tt0079840"
+      }
+    ]
   },
   {
     "id": "1775438643696pnol3esaoqg",
@@ -3568,7 +5523,19 @@
     "lb_score": 4.1,
     "rt_score": 0.99,
     "mc_score": 90,
-    "score": 8.7
+    "score": 8.7,
+    "similar": [
+      {
+        "title": "The Black Dahlia",
+        "year": 2006,
+        "imdb_id": "tt0414993"
+      },
+      {
+        "title": "Devil in a Blue Dress",
+        "year": 1995,
+        "imdb_id": "tt0112857"
+      }
+    ]
   },
   {
     "id": "1775438621429xl4i08jcjc",
@@ -3592,7 +5559,24 @@
     "lb_score": 4.1,
     "rt_score": 0.97,
     "mc_score": null,
-    "score": 8.6
+    "score": 8.6,
+    "similar": [
+      {
+        "title": "Stalag 17",
+        "year": 1953,
+        "imdb_id": "tt0046359"
+      },
+      {
+        "title": "Von Ryan's Express",
+        "year": 1965,
+        "imdb_id": "tt0059825"
+      },
+      {
+        "title": "The Bridge on the River Kwai",
+        "year": 1957,
+        "imdb_id": "tt0050212"
+      }
+    ]
   },
   {
     "id": "1775438554047tqd0hpu026m",
@@ -3616,7 +5600,24 @@
     "lb_score": 4.1,
     "rt_score": 0.93,
     "mc_score": null,
-    "score": 8.3
+    "score": 8.3,
+    "similar": [
+      {
+        "title": "Ride the High Country",
+        "year": 1962,
+        "imdb_id": "tt0056397"
+      },
+      {
+        "title": "Pat Garrett and Billy the Kid",
+        "year": 1973,
+        "imdb_id": "tt0070719"
+      },
+      {
+        "title": "The Ballad of Cable Hogue",
+        "year": 1970,
+        "imdb_id": "tt0065466"
+      }
+    ]
   },
   {
     "id": "1775438527596jtqv286wy",
@@ -3640,6 +5641,18 @@
     "lb_score": 4,
     "rt_score": 0.97,
     "mc_score": null,
-    "score": 8.3
+    "score": 8.3,
+    "similar": [
+      {
+        "title": "Army of Darkness",
+        "year": 1992,
+        "imdb_id": "tt0106308"
+      },
+      {
+        "title": "Brain Dead",
+        "year": 1992,
+        "imdb_id": "tt0103873"
+      }
+    ]
   }
 ]
