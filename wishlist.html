@@ -1449,7 +1449,23 @@ Respond ONLY with a valid JSON array, no markdown, no explanation. Format:
 
   } catch(e) {
     loading.style.display = 'none';
-    scroll.innerHTML = '<p style="font-size:12px;color:var(--mut);padding:4px">Could not load recommendations right now.</p>';
+    const fallbackRecs = [
+      { title: "Mulholland Drive", year: 2001, director: "David Lynch", reason: "A hypnotic neo-noir dream — essential for any serious collector." },
+      { title: "The Lighthouse", year: 2019, director: "Robert Eggers", reason: "Stunning black-and-white psychological horror with incredible performances." },
+      { title: "In the Mood for Love", year: 2000, director: "Wong Kar-wai", reason: "Ravishingly beautiful — a must-own on 4K for its gorgeous cinematography." },
+      { title: "Stalker", year: 1979, director: "Andrei Tarkovsky", reason: "A meditative masterpiece — a landmark of world cinema available on Criterion." },
+      { title: "Come and See", year: 1985, director: "Elem Klimov", reason: "One of the greatest war films ever made — harrowing and unforgettable." },
+      { title: "The Turin Horse", year: 2011, director: "Béla Tarr", reason: "Hypnotic minimalism — a Tarr essential for the serious arthouse collector." },
+      { title: "Jeanne Dielman", year: 1975, director: "Chantal Akerman", reason: "A landmark of feminist cinema, recently restored and available on Criterion." },
+      { title: "Fallen Angels", year: 1995, director: "Wong Kar-wai", reason: "Kinetic neo-noir companion to Chungking Express — brilliant on Blu-ray." }
+    ];
+    const excluded = getExcludedTitles();
+    const filtered = fallbackRecs.filter(r => !excluded.has(r.title.toLowerCase().trim()));
+    if (filtered.length > 0) {
+      renderRecs(filtered);
+    } else {
+      scroll.innerHTML = '<p style="font-size:12px;color:var(--mut);padding:4px">Could not load recommendations right now.</p>';
+    }
   }
 
   refreshBtn.textContent = '↻ Refresh';
