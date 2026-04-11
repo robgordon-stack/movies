@@ -4,7 +4,7 @@
     "title": "Hereditary",
     "year": 2018,
     "director": "Ari Aster",
-    "poster": "https://m.media-amazon.com/images/M/MV5BNTEyZGQwODctYWJjZi00NjFmLTg3YmEtMzlhNjljOGZhMWMyXkEyXkFqcGc@._V1_SX300.jpg",
+    "poster": "https://www.themoviedb.org/t/p/w1280/hjlZSXM86wJrfCv5VKfR5DI2VeU.jpg",
     "imdb_id": "tt7784604",
     "genre": "Drama, Horror, Mystery",
     "country": "United States",
@@ -25,7 +25,7 @@
     "title": "Marie Antoinette",
     "year": 2006,
     "director": "Sofia Coppola",
-    "poster": "https://m.media-amazon.com/images/M/MV5BMmE4NzQzNGItNTY4My00ZTBhLTk2ZjItZDJkMjRlYTE2MGRiXkEyXkFqcGc@._V1_SX300.jpg",
+    "poster": "https://www.themoviedb.org/t/p/w1280/cybXGmv8Rjd5Os8Xml6YxMBQ0Zt.jpg",
     "imdb_id": "tt0422720",
     "genre": "Biography, Drama, History",
     "country": "United States",
@@ -46,7 +46,7 @@
     "title": "Manon of the Spring",
     "year": 1986,
     "director": "Claude Berri",
-    "poster": "https://m.media-amazon.com/images/M/MV5BYTQwZWUyNTgtYTU5My00YjdiLTg5NGQtN2JhMjE4MzY4NjAzXkEyXkFqcGc@._V1_SX300.jpg",
+    "poster": "https://www.themoviedb.org/t/p/w1280/1qpu6Zc1PSDL3UbDNIZJ6YuhJDW.jpg",
     "imdb_id": "tt0091480",
     "genre": "Drama",
     "country": "France",
@@ -66,7 +66,7 @@
     "title": "Harlan County U.S.A.",
     "year": 1976,
     "director": "Barbara Kopple",
-    "poster": "https://m.media-amazon.com/images/M/MV5BNDEzMDJlMDgtZTIzMi00YjViLTkxMDgtNmYxZjIzM2FjNDVjXkEyXkFqcGc@._V1_SX300.jpg",
+    "poster": "https://www.themoviedb.org/t/p/w1280/p0cyMNsoP5ap0omfhakhImBWTRw.jpg",
     "imdb_id": "tt0074605",
     "genre": "Documentary",
     "country": "United States",
@@ -86,7 +86,7 @@
     "title": "In Bruges",
     "year": 2008,
     "director": "Martin McDonagh",
-    "poster": "https://m.media-amazon.com/images/M/MV5BNjliZjBlNDItOWUyZC00ZTExLTg5NmUtNzE5ZmQyZWVmZmE5XkEyXkFqcGc@._V1_SX300.jpg",
+    "poster": "https://www.themoviedb.org/t/p/w1280/vz3Vd6nfq9YZrVvyYx5RHFaYKV3.jpg",
     "imdb_id": "tt0780536",
     "genre": "Comedy, Crime, Drama",
     "country": "United Kingdom",
@@ -107,7 +107,7 @@
     "title": "Godzilla Minus One",
     "year": 2023,
     "director": "Takashi Yamazaki",
-    "poster": "https://m.media-amazon.com/images/M/MV5BMjc5MjllMGUtMDIwMS00ZDVkLWEzODQtM2NlMTMwMTZhNThmXkEyXkFqcGc@._V1_SX300.jpg",
+    "poster": "https://www.themoviedb.org/t/p/w1280/2E2WTX0TJEflAged6kzErwqX1kt.jpg",
     "imdb_id": "tt23289160",
     "genre": "Action, Adventure, Drama",
     "country": "Japan",
@@ -128,7 +128,7 @@
     "title": "Champion",
     "year": 1949,
     "director": "Mark Robson",
-    "poster": "https://m.media-amazon.com/images/M/MV5BYTY0ZGE2OTUtNjkzOC00ZDUzLWE3Y2QtNWFkYTdkMmNjNmJjXkEyXkFqcGc@._V1_SX300.jpg",
+    "poster": "https://www.themoviedb.org/t/p/w1280/luBAS7aD9Iu6RwEumfXbQewjO1g.jpg",
     "imdb_id": "tt0041239",
     "genre": "Drama, Film-Noir, Sport",
     "country": "United States",
@@ -388,11 +388,6 @@
     "rt_score": 0.94,
     "distributor": "Criterion",
     "similar": [
-      {
-        "title": "Viaggio in Italia",
-        "year": 1954,
-        "imdb_id": "tt0046511"
-      },
       {
         "title": "Le Amiche",
         "year": 1955,
@@ -662,7 +657,7 @@
         "imdb_id": "tt0072443"
       },
       {
-        "title": "Sacrifice",
+        "title": "The Sacrifice",
         "year": 1986,
         "imdb_id": "tt0091670"
       }
@@ -695,11 +690,6 @@
         "title": "Force Majeure",
         "year": 2014,
         "imdb_id": "tt2121382"
-      },
-      {
-        "title": "Jagten",
-        "year": 2012,
-        "imdb_id": "tt2106476"
       }
     ]
   },
@@ -1449,7 +1439,7 @@
         "imdb_id": "tt0100802"
       },
       {
-        "title": "Paul Verhoeven's Basic Instinct",
+        "title": "Basic Instinct",
         "year": 1992,
         "imdb_id": "tt0103772"
       }
@@ -1727,7 +1717,7 @@
     "mc_score": 57,
     "similar": [
       {
-        "title": "The Raiders of the Lost Ark",
+        "title": "Raiders of the Lost Ark",
         "year": 1981,
         "imdb_id": "tt0082971"
       },
@@ -1789,7 +1779,7 @@
     "mc_score": 87,
     "similar": [
       {
-        "title": "Ang Lee's The Wedding Banquet",
+        "title": "The Wedding Banquet",
         "year": 1993,
         "imdb_id": "tt0108065"
       }
@@ -2176,11 +2166,6 @@
     "rt_score": 0.9,
     "mc_score": 79,
     "similar": [
-      {
-        "title": "Nuovo Cinema Paradiso: Extended Version",
-        "year": 1988,
-        "imdb_id": "tt0095765"
-      },
       {
         "title": "Malèna",
         "year": 2000,
@@ -2946,7 +2931,7 @@
       {
         "title": "The Blue Kite",
         "year": 1993,
-        "imdb_id": "tt0106332"
+        "imdb_id": "tt0107468"
       }
     ]
   },
@@ -3945,7 +3930,7 @@
     "has4k": false,
     "similar": [
       {
-        "title": "Sidney Lumet's Prince of the City",
+        "title": "Prince of the City",
         "year": 1981,
         "imdb_id": "tt0083026"
       }
