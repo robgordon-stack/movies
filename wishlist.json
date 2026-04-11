@@ -18,7 +18,24 @@
     "imdb_score": 7.3,
     "lb_score": 4.1,
     "rt_score": 0.92,
-    "mc_score": 87
+    "mc_score": 87,
+    "similar": [
+      {
+        "title": "Midsommar",
+        "year": 2019,
+        "imdb_id": "tt8772262"
+      },
+      {
+        "title": "The Witch",
+        "year": 2015,
+        "imdb_id": "tt4263482"
+      },
+      {
+        "title": "Rosemary's Baby",
+        "year": 1968,
+        "imdb_id": "tt0063522"
+      }
+    ]
   },
   {
     "id": "1775877681936om6j8oh5opf",
@@ -39,7 +56,24 @@
     "imdb_score": 6.5,
     "lb_score": 3.7,
     "rt_score": 0.74,
-    "mc_score": 61
+    "mc_score": 61,
+    "similar": [
+      {
+        "title": "The Favourite",
+        "year": 2018,
+        "imdb_id": "tt5765446"
+      },
+      {
+        "title": "Barry Lyndon",
+        "year": 1975,
+        "imdb_id": "tt0072684"
+      },
+      {
+        "title": "Ridicule",
+        "year": 1996,
+        "imdb_id": "tt0117477"
+      }
+    ]
   },
   {
     "id": "17758776274173x7z6swi8xk",
@@ -59,7 +93,19 @@
     "score": 8.1,
     "imdb_score": 7.8,
     "lb_score": 4.0,
-    "rt_score": 0.92
+    "rt_score": 0.92,
+    "similar": [
+      {
+        "title": "Jean de Florette",
+        "year": 1986,
+        "imdb_id": "tt0091334"
+      },
+      {
+        "title": "The Well-Digger's Daughter",
+        "year": 2011,
+        "imdb_id": "tt1568222"
+      }
+    ]
   },
   {
     "id": "177587734153015rd5x4ghs5",
@@ -79,7 +125,24 @@
     "score": 8.3,
     "imdb_score": 8.1,
     "lb_score": 4.2,
-    "rt_score": 1.0
+    "rt_score": 1.0,
+    "similar": [
+      {
+        "title": "Roger & Me",
+        "year": 1989,
+        "imdb_id": "tt0098213"
+      },
+      {
+        "title": "Hoop Dreams",
+        "year": 1994,
+        "imdb_id": "tt0110057"
+      },
+      {
+        "title": "The Gleaners and I",
+        "year": 2000,
+        "imdb_id": "tt0247258"
+      }
+    ]
   },
   {
     "id": "17758772346498g88ri6njse",
@@ -100,7 +163,24 @@
     "imdb_score": 7.9,
     "lb_score": 4.0,
     "rt_score": 0.82,
-    "mc_score": 67
+    "mc_score": 67,
+    "similar": [
+      {
+        "title": "Seven Psychopaths",
+        "year": 2012,
+        "imdb_id": "tt1931533"
+      },
+      {
+        "title": "The Guard",
+        "year": 2011,
+        "imdb_id": "tt1540133"
+      },
+      {
+        "title": "Calvary",
+        "year": 2014,
+        "imdb_id": "tt2234222"
+      }
+    ]
   },
   {
     "id": "17758766329870gd9mfmcvb4m",
@@ -121,7 +201,24 @@
     "imdb_score": 7.9,
     "lb_score": 4.0,
     "rt_score": 0.98,
-    "mc_score": 78
+    "mc_score": 78,
+    "similar": [
+      {
+        "title": "Shin Godzilla",
+        "year": 2016,
+        "imdb_id": "tt4262980"
+      },
+      {
+        "title": "The Host",
+        "year": 2006,
+        "imdb_id": "tt0468492"
+      },
+      {
+        "title": "Cloverfield",
+        "year": 2008,
+        "imdb_id": "tt1060277"
+      }
+    ]
   },
   {
     "id": "1775874263968vgrmc7l35wl",
@@ -142,7 +239,24 @@
     "score": 7.8,
     "imdb_score": 7.5,
     "lb_score": 3.8,
-    "rt_score": 0.96
+    "rt_score": 0.96,
+    "similar": [
+      {
+        "title": "Body and Soul",
+        "year": 1947,
+        "imdb_id": "tt0039219"
+      },
+      {
+        "title": "The Set-Up",
+        "year": 1949,
+        "imdb_id": "tt0041865"
+      },
+      {
+        "title": "Somebody Up There Likes Me",
+        "year": 1956,
+        "imdb_id": "tt0049735"
+      }
+    ]
   },
   {
     "id": "1775468716369d6poip55fzj",
@@ -690,6 +804,16 @@
         "title": "Force Majeure",
         "year": 2014,
         "imdb_id": "tt2121382"
+      },
+      {
+        "title": "Doubt",
+        "year": 2008,
+        "imdb_id": "tt0918927"
+      },
+      {
+        "title": "Prisoners",
+        "year": 2013,
+        "imdb_id": "tt1392214"
       }
     ]
   },
@@ -837,6 +961,16 @@
         "title": "Closely Watched Trains",
         "year": 1966,
         "imdb_id": "tt0060959"
+      },
+      {
+        "title": "The Shop on Main Street",
+        "year": 1965,
+        "imdb_id": "tt0059527"
+      },
+      {
+        "title": "The Firemen's Ball",
+        "year": 1967,
+        "imdb_id": "tt0061781"
       }
     ]
   },
@@ -935,6 +1069,16 @@
         "title": "Throw Away Your Books, Rally in the Streets",
         "year": 1971,
         "imdb_id": "tt0067665"
+      },
+      {
+        "title": "Branded to Kill",
+        "year": 1967,
+        "imdb_id": "tt0061585"
+      },
+      {
+        "title": "Ai no corrida",
+        "year": 1976,
+        "imdb_id": "tt0074102"
       }
     ]
   },
@@ -1303,6 +1447,16 @@
         "title": "A Hidden Life",
         "year": 2019,
         "imdb_id": "tt6828390"
+      },
+      {
+        "title": "Badlands",
+        "year": 1973,
+        "imdb_id": "tt0069762"
+      },
+      {
+        "title": "The New World",
+        "year": 2005,
+        "imdb_id": "tt0382488"
       }
     ]
   },
@@ -1754,7 +1908,18 @@
     "lb_score": 4,
     "rt_score": 0.88,
     "mc_score": 79,
-    "similar": []
+    "similar": [
+      {
+        "title": "Requiem for a Dream",
+        "year": 2000,
+        "imdb_id": "tt0180093"
+      },
+      {
+        "title": "Suspiria",
+        "year": 1977,
+        "imdb_id": "tt0076786"
+      }
+    ]
   },
   {
     "id": "1775363855869dp7cd1m6k2q",
@@ -1782,6 +1947,11 @@
         "title": "The Wedding Banquet",
         "year": 1993,
         "imdb_id": "tt0108065"
+      },
+      {
+        "title": "Moonlight",
+        "year": 2016,
+        "imdb_id": "tt4975722"
       }
     ]
   },
@@ -2101,6 +2271,11 @@
         "title": "The Gold Rush",
         "year": 1925,
         "imdb_id": "tt0015864"
+      },
+      {
+        "title": "City Lights",
+        "year": 1931,
+        "imdb_id": "tt0021749"
       }
     ]
   },
@@ -2170,6 +2345,16 @@
         "title": "Malèna",
         "year": 2000,
         "imdb_id": "tt0213847"
+      },
+      {
+        "title": "Amarcord",
+        "year": 1973,
+        "imdb_id": "tt0071129"
+      },
+      {
+        "title": "The Legend of 1900",
+        "year": 1998,
+        "imdb_id": "tt0120731"
       }
     ]
   },
@@ -2239,6 +2424,16 @@
         "title": "Stage Fright",
         "year": 1950,
         "imdb_id": "tt0042975"
+      },
+      {
+        "title": "Sunset Boulevard",
+        "year": 1950,
+        "imdb_id": "tt0043014"
+      },
+      {
+        "title": "Opening Night",
+        "year": 1977,
+        "imdb_id": "tt0076649"
       }
     ],
     "distributor": "Criterion"
@@ -2265,7 +2460,23 @@
     "lb_score": 4.2,
     "rt_score": 0.95,
     "distributor": "Criterion",
-    "similar": []
+    "similar": [
+      {
+        "title": "The Apartment",
+        "year": 1960,
+        "imdb_id": "tt0053604"
+      },
+      {
+        "title": "Tootsie",
+        "year": 1982,
+        "imdb_id": "tt0084805"
+      },
+      {
+        "title": "His Girl Friday",
+        "year": 1940,
+        "imdb_id": "tt0032599"
+      }
+    ]
   },
   {
     "id": "177536371075180vc972vgje",
@@ -2289,7 +2500,23 @@
     "lb_score": 4,
     "rt_score": 0.8,
     "mc_score": 67,
-    "similar": []
+    "similar": [
+      {
+        "title": "Ben-Hur",
+        "year": 1959,
+        "imdb_id": "tt0052618"
+      },
+      {
+        "title": "Spartacus",
+        "year": 1960,
+        "imdb_id": "tt0054331"
+      },
+      {
+        "title": "The Last Samurai",
+        "year": 2003,
+        "imdb_id": "tt0325710"
+      }
+    ]
   },
   {
     "id": "17753635899860b5zq1t06lgp",
@@ -2317,6 +2544,16 @@
         "title": "12 Years a Slave",
         "year": 2013,
         "imdb_id": "tt2024544"
+      },
+      {
+        "title": "The Good, the Bad and the Ugly",
+        "year": 1966,
+        "imdb_id": "tt0060196"
+      },
+      {
+        "title": "Inglourious Basterds",
+        "year": 2009,
+        "imdb_id": "tt0361748"
       }
     ]
   },
@@ -2415,6 +2652,16 @@
         "title": "Die Hard with a Vengeance",
         "year": 1995,
         "imdb_id": "tt0112864"
+      },
+      {
+        "title": "Lethal Weapon",
+        "year": 1987,
+        "imdb_id": "tt0093409"
+      },
+      {
+        "title": "Speed",
+        "year": 1994,
+        "imdb_id": "tt0111257"
       }
     ]
   },
@@ -2632,6 +2879,16 @@
         "title": "Fury",
         "year": 2014,
         "imdb_id": "tt2713180"
+      },
+      {
+        "title": "Full Metal Jacket",
+        "year": 1987,
+        "imdb_id": "tt0093058"
+      },
+      {
+        "title": "Come and See",
+        "year": 1985,
+        "imdb_id": "tt0091251"
       }
     ]
   },
@@ -2765,6 +3022,11 @@
         "title": "Donnie Brasco",
         "year": 1997,
         "imdb_id": "tt0119008"
+      },
+      {
+        "title": "Casino",
+        "year": 1995,
+        "imdb_id": "tt0112641"
       }
     ]
   },
@@ -2868,6 +3130,16 @@
         "title": "Babel",
         "year": 2006,
         "imdb_id": "tt0449467"
+      },
+      {
+        "title": "21 Grams",
+        "year": 2003,
+        "imdb_id": "tt0315733"
+      },
+      {
+        "title": "City of God",
+        "year": 2002,
+        "imdb_id": "tt0317248"
       }
     ]
   },
@@ -2932,6 +3204,11 @@
         "title": "The Blue Kite",
         "year": 1993,
         "imdb_id": "tt0107468"
+      },
+      {
+        "title": "Raise the Red Lantern",
+        "year": 1991,
+        "imdb_id": "tt0101640"
       }
     ]
   },
@@ -2961,6 +3238,16 @@
         "title": "Passing",
         "year": 2021,
         "imdb_id": "tt10344928"
+      },
+      {
+        "title": "Faces",
+        "year": 1968,
+        "imdb_id": "tt0061955"
+      },
+      {
+        "title": "My Dinner with Andre",
+        "year": 1981,
+        "imdb_id": "tt0082736"
       }
     ]
   },
@@ -3024,6 +3311,11 @@
         "title": "Out 1",
         "year": 1971,
         "imdb_id": "tt0067292"
+      },
+      {
+        "title": "Paris Belongs to Us",
+        "year": 1961,
+        "imdb_id": "tt0054173"
       }
     ]
   },
@@ -3126,6 +3418,16 @@
         "title": "The Hidden Fortress",
         "year": 1958,
         "imdb_id": "tt0051808"
+      },
+      {
+        "title": "Sanjuro",
+        "year": 1962,
+        "imdb_id": "tt0056461"
+      },
+      {
+        "title": "A Fistful of Dollars",
+        "year": 1964,
+        "imdb_id": "tt0058461"
       }
     ]
   },
@@ -3231,6 +3533,16 @@
         "title": "Burning",
         "year": 2018,
         "imdb_id": "tt7282468"
+      },
+      {
+        "title": "In the Mood for Love",
+        "year": 2000,
+        "imdb_id": "tt0118694"
+      },
+      {
+        "title": "Minari",
+        "year": 2020,
+        "imdb_id": "tt10633456"
       }
     ]
   },
@@ -3295,6 +3607,11 @@
         "title": "The Hidden Fortress",
         "year": 1958,
         "imdb_id": "tt0051808"
+      },
+      {
+        "title": "Seven Samurai",
+        "year": 1954,
+        "imdb_id": "tt0047478"
       }
     ]
   },
@@ -3364,6 +3681,16 @@
         "title": "The Kid",
         "year": 1921,
         "imdb_id": "tt0012349"
+      },
+      {
+        "title": "City Lights",
+        "year": 1931,
+        "imdb_id": "tt0021749"
+      },
+      {
+        "title": "Metropolis",
+        "year": 1927,
+        "imdb_id": "tt0017136"
       }
     ]
   },
@@ -3393,6 +3720,16 @@
         "title": "Bob le Flambeur",
         "year": 1956,
         "imdb_id": "tt0048728"
+      },
+      {
+        "title": "The Battle of Algiers",
+        "year": 1966,
+        "imdb_id": "tt0058946"
+      },
+      {
+        "title": "Le Samouraï",
+        "year": 1967,
+        "imdb_id": "tt0062229"
       }
     ]
   },
@@ -3463,6 +3800,16 @@
         "title": "The Assassination of Jesse James by the Coward Robert Ford",
         "year": 2007,
         "imdb_id": "tt0443680"
+      },
+      {
+        "title": "No Country for Old Men",
+        "year": 2007,
+        "imdb_id": "tt0477348"
+      },
+      {
+        "title": "Citizen Kane",
+        "year": 1941,
+        "imdb_id": "tt0033467"
       }
     ]
   },
@@ -3492,6 +3839,16 @@
         "title": "After the Storm",
         "year": 2016,
         "imdb_id": "tt5456574"
+      },
+      {
+        "title": "Nobody Knows",
+        "year": 2004,
+        "imdb_id": "tt0403685"
+      },
+      {
+        "title": "Our Little Sister",
+        "year": 2015,
+        "imdb_id": "tt3829750"
       }
     ]
   },
@@ -3785,6 +4142,16 @@
         "title": "Caught",
         "year": 1949,
         "imdb_id": "tt0041237"
+      },
+      {
+        "title": "Laura",
+        "year": 1944,
+        "imdb_id": "tt0037008"
+      },
+      {
+        "title": "The Big Heat",
+        "year": 1953,
+        "imdb_id": "tt0045555"
       }
     ]
   },
@@ -3814,6 +4181,16 @@
         "title": "Rosetta",
         "year": 1999,
         "imdb_id": "tt0200071"
+      },
+      {
+        "title": "The 400 Blows",
+        "year": 1959,
+        "imdb_id": "tt0053198"
+      },
+      {
+        "title": "Wendy and Lucy",
+        "year": 2008,
+        "imdb_id": "tt1152850"
       }
     ]
   },
@@ -3873,7 +4250,18 @@
     "rt_score": 1,
     "has4k": false,
     "distributor": "Criterion",
-    "similar": []
+    "similar": [
+      {
+        "title": "Pickpocket",
+        "year": 1959,
+        "imdb_id": "tt0053168"
+      },
+      {
+        "title": "Au Hasard Balthazar",
+        "year": 1966,
+        "imdb_id": "tt0060327"
+      }
+    ]
   },
   {
     "id": "177539139451966087vr0hz9",
@@ -3933,6 +4321,11 @@
         "title": "Prince of the City",
         "year": 1981,
         "imdb_id": "tt0083026"
+      },
+      {
+        "title": "Serpico",
+        "year": 1973,
+        "imdb_id": "tt0070666"
       }
     ]
   },
@@ -3996,6 +4389,16 @@
         "title": "Inherent Vice",
         "year": 2014,
         "imdb_id": "tt1791528"
+      },
+      {
+        "title": "Burn After Reading",
+        "year": 2008,
+        "imdb_id": "tt0887264"
+      },
+      {
+        "title": "The Long Goodbye",
+        "year": 1973,
+        "imdb_id": "tt0070334"
       }
     ]
   },
@@ -4061,6 +4464,16 @@
         "title": "Short Cuts",
         "year": 1993,
         "imdb_id": "tt0108122"
+      },
+      {
+        "title": "Boogie Nights",
+        "year": 1997,
+        "imdb_id": "tt0118749"
+      },
+      {
+        "title": "Nashville",
+        "year": 1975,
+        "imdb_id": "tt0073440"
       }
     ]
   },
@@ -4250,6 +4663,16 @@
         "title": "About Schmidt",
         "year": 2002,
         "imdb_id": "tt0257360"
+      },
+      {
+        "title": "The Descendants",
+        "year": 2011,
+        "imdb_id": "tt1033575"
+      },
+      {
+        "title": "Nebraska",
+        "year": 2013,
+        "imdb_id": "tt1821549"
       }
     ]
   },
@@ -4315,6 +4738,16 @@
         "title": "Kiss Kiss Bang Bang",
         "year": 2005,
         "imdb_id": "tt0373469"
+      },
+      {
+        "title": "The Long Goodbye",
+        "year": 1973,
+        "imdb_id": "tt0070334"
+      },
+      {
+        "title": "Chinatown",
+        "year": 1974,
+        "imdb_id": "tt0071315"
       }
     ]
   },
@@ -4385,6 +4818,16 @@
         "title": "A Scanner Darkly",
         "year": 2006,
         "imdb_id": "tt0405296"
+      },
+      {
+        "title": "Blade Runner",
+        "year": 1982,
+        "imdb_id": "tt0083658"
+      },
+      {
+        "title": "Twelve Monkeys",
+        "year": 1995,
+        "imdb_id": "tt0114746"
       }
     ]
   },
@@ -4449,6 +4892,16 @@
         "title": "The Outfit",
         "year": 1973,
         "imdb_id": "tt0070530"
+      },
+      {
+        "title": "Charley Varrick",
+        "year": 1973,
+        "imdb_id": "tt0069886"
+      },
+      {
+        "title": "Heat",
+        "year": 1995,
+        "imdb_id": "tt0113277"
       }
     ]
   },
@@ -4479,6 +4932,11 @@
         "title": "Tangerine",
         "year": 2015,
         "imdb_id": "tt3824458"
+      },
+      {
+        "title": "The Florida Project",
+        "year": 2017,
+        "imdb_id": "tt5649144"
       }
     ]
   },
@@ -4768,7 +5226,23 @@
     "lb_score": 3.5,
     "rt_score": 0.55,
     "mc_score": 52,
-    "similar": []
+    "similar": [
+      {
+        "title": "Boogie Nights",
+        "year": 1997,
+        "imdb_id": "tt0118749"
+      },
+      {
+        "title": "Singin' in the Rain",
+        "year": 1952,
+        "imdb_id": "tt0045152"
+      },
+      {
+        "title": "Sunset Boulevard",
+        "year": 1950,
+        "imdb_id": "tt0043014"
+      }
+    ]
   },
   {
     "id": "1775371251892h8158xno6pn",
@@ -5104,7 +5578,18 @@
     "rt_score": 0.88,
     "mc_score": null,
     "score": 7.9,
-    "similar": []
+    "similar": [
+      {
+        "title": "The Anderson Tapes",
+        "year": 1971,
+        "imdb_id": "tt0066506"
+      },
+      {
+        "title": "The French Connection",
+        "year": 1971,
+        "imdb_id": "tt0067116"
+      }
+    ]
   },
   {
     "id": "177543973342621rzzmzq9kt",
@@ -5211,6 +5696,16 @@
         "title": "Three Days of the Condor",
         "year": 1975,
         "imdb_id": "tt0073341"
+      },
+      {
+        "title": "Munich: The Edge of War",
+        "year": 2021,
+        "imdb_id": "tt11031948"
+      },
+      {
+        "title": "The Day of the Jackal",
+        "year": 1973,
+        "imdb_id": "tt0069947"
       }
     ]
   },
@@ -5473,6 +5968,16 @@
         "title": "The Consequences of Love",
         "year": 2004,
         "imdb_id": "tt0398492"
+      },
+      {
+        "title": "La Dolce Vita",
+        "year": 1960,
+        "imdb_id": "tt0053779"
+      },
+      {
+        "title": "8½",
+        "year": 1963,
+        "imdb_id": "tt0056801"
       }
     ]
   },
@@ -5504,6 +6009,16 @@
         "title": "Adaptation",
         "year": 2002,
         "imdb_id": "tt0268126"
+      },
+      {
+        "title": "Anomalisa",
+        "year": 2015,
+        "imdb_id": "tt2401878"
+      },
+      {
+        "title": "Being John Malkovich",
+        "year": 1999,
+        "imdb_id": "tt0120601"
       }
     ]
   },
@@ -5535,6 +6050,16 @@
         "title": "Doctor Zhivago",
         "year": 1965,
         "imdb_id": "tt0059113"
+      },
+      {
+        "title": "Ben-Hur",
+        "year": 1959,
+        "imdb_id": "tt0052618"
+      },
+      {
+        "title": "Giant",
+        "year": 1956,
+        "imdb_id": "tt0049261"
       }
     ]
   },
@@ -5607,6 +6132,11 @@
         "title": "Primal Fear",
         "year": 1996,
         "imdb_id": "tt0117381"
+      },
+      {
+        "title": "The Big Short",
+        "year": 2015,
+        "imdb_id": "tt1596363"
       }
     ]
   },
