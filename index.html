@@ -231,10 +231,7 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
       </div>
     </div>
     <div style="display:flex;align-items:center;gap:6px;flex-shrink:0">
-      <a href="wishlist.html" title="Wish List" style="display:flex;align-items:center;gap:5px;background:none;border:1px solid rgba(232,185,79,.25);color:var(--acc);border-radius:8px;padding:6px 10px;font-size:12px;font-weight:600;text-decoration:none;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:border-color .15s,background .15s" onmouseover="this.style.borderColor='rgba(232,185,79,.5)'" onmouseout="this.style.borderColor='rgba(232,185,79,.25)'">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        List
-      </a>
+      <a href="wishlist.html" title="Wish List" style="display:none" aria-hidden="true"></a>
       <button onclick="openShareModal()" title="Share collection" style="display:flex;align-items:center;gap:5px;background:none;border:1px solid rgba(232,185,79,.25);color:var(--acc);border-radius:8px;padding:6px 10px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:border-color .15s" onmouseover="this.style.borderColor='rgba(232,185,79,.5)'" onmouseout="this.style.borderColor='rgba(232,185,79,.25)'">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
         Share
@@ -357,7 +354,6 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
   </div>
 </header>
 <div class="gw">
-  <div id="cinemaQuote" style="font-size:11px;color:var(--mut);font-family:'DM Serif Display',serif;font-style:italic;text-align:center;padding:8px 12px 10px;line-height:1.5;transition:opacity .6s;border-bottom:1px solid var(--bdr);margin-bottom:var(--gap)"></div>
   <div class="skeleton-grid" id="skeletonGrid">
     <!-- skeleton cards generated dynamically by JS based on collection size -->
   </div>
@@ -426,6 +422,10 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
     <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
     Watch Next
   </div>
+  <a class="tabitem" href="wishlist.html" style="text-decoration:none">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    Wishlist
+  </a>
 </nav>
 
 <script>
@@ -533,6 +533,7 @@ function sortFil(){
   });
   render();
   document.getElementById("sT").textContent=fil.length===C.length?C.length+" films":fil.length+" of "+C.length;
+  document.querySelector("#sT~.l").textContent=fil.length===C.length?"Films":"Showing";
 }
 // Keep srt as alias so sort-chip click handlers continue to work
 function srt(){sortFil();}
@@ -636,6 +637,7 @@ function renderSheet(f,arr){
     ${rw("Country",flag?flag+" "+f.country:f.country)}
     ${rw("Runtime",f.runtime?f.runtime+" min":"")}
     ${rw("Decade",f.decade)}
+    <hr class="divl">
     ${ext}
     ${moreDir}
     <button class="${wclass}" onclick="toggleWatched('${arrKey}')">${wlbl}</button>
@@ -995,43 +997,7 @@ function ex(s){return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").r
 loadOverrides();
 sts();filt();
 
-// ── Rotating cinema quotes ─────────────────────────────────────────────────────
-(function(){
-  const QUOTES=[
-    ["Cinema is a mirror by which we often see ourselves.","Ingmar Bergman"],
-    ["A film is never really good unless the camera is an eye in the head of a poet.","Orson Welles"],
-    ["Every film should have a beginning, a middle and an end, but not necessarily in that order.","Jean-Luc Godard"],
-    ["Cinema is the most beautiful fraud in the world.","Jean-Luc Godard"],
-    ["Film is a disease. When it infects your bloodstream, you never recover.","Frank Capra"],
-    ["The cinema is not a slice of life, it is a piece of cake.","Alfred Hitchcock"],
-    ["I steal from every movie ever made.","Quentin Tarantino"],
-    ["The camera is an instrument that teaches people how to see without a camera.","Dorothea Lange"],
-    ["Cinema is a matter of what's in the frame and what's out.","Martin Scorsese"],
-    ["To make a great film you need three things: the script, the script and the script.","Alfred Hitchcock"],
-    ["Film as dream, film as music. No art passes our conscience in the way film does.","Ingmar Bergman"],
-    ["I don't make films to make money. I make money to make films.","Stanley Kubrick"],
-    ["A story should have a beginning, a middle and an end, but not necessarily in that order.","Jean-Luc Godard"],
-    ["The most honest form of filmmaking is to make a film for yourself.","Peter Jackson"],
-    ["Cinema is a collective dream.","Jean Cocteau"],
-  ];
-  const el=document.getElementById("cinemaQuote");
-  if(!el)return;
-  let i=Math.floor(Math.random()*QUOTES.length);
-  const show=()=>{
-    const [quote,author]=QUOTES[i];
-    el.innerHTML=`${quote} <span style="opacity:.5;font-style:normal;font-family:'DM Sans',sans-serif">— ${author}</span>`;
-  };
-  show();
-  setInterval(()=>{
-    el.style.opacity="0";
-    setTimeout(()=>{
-      i=(i+1)%QUOTES.length;
-      show();
-      el.style.opacity="1";
-    },600);
-  },15000);
-})();
-// wnFilmMap: flat array of unique film objects across all WN groups.
+// ── Watch Next film map flat array of unique film objects across all WN groups.
 // Films that appear in multiple groups are deduplicated here so that
 // wnSurprise() always finds a valid index regardless of duplicates.
 const wnFilmMap=[];

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0a0d12">
+<meta name="theme-color" content="#0f0f0f">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="The List">
@@ -13,21 +13,21 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0a0d12;--surf:#13171f;--surf2:#1c2130;--surf3:#252d40;
-  --bdr:rgba(130,160,255,0.08);--bdr2:rgba(130,160,255,0.14);
-  --txt:#e8eaf2;--mut:#6b7799;--mut2:#4a5470;
-  --acc:#7eb8f7;--acc2:#4a8fd4;--acc-dim:rgba(126,184,247,0.12);
+  --bg:#0d0d0d;--surf:#171717;--surf2:#202020;--surf3:#2a2a2a;
+  --bdr:rgba(255,255,255,0.07);--bdr2:rgba(255,255,255,0.12);
+  --txt:#efefef;--mut:#999;--mut2:#666;
+  --acc:#e8b94f;--acc2:#c49a30;--acc-dim:rgba(232,185,79,0.12);
   --hot:#f76e7e;--hot-dim:rgba(247,110,126,0.12);
   --med:#f7c47e;--med-dim:rgba(247,196,126,0.10);
-  --low:#7eb8f7;--low-dim:rgba(126,184,247,0.08);
-  --grn:#5ccea0;--grn-dim:rgba(92,206,160,0.12);
+  --low:#5b9bd5;--low-dim:rgba(91,155,213,0.10);
+  --grn:#4caf7d;--grn-dim:rgba(76,175,125,0.12);
   --r:6px;--gap:8px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:var(--bg);color:var(--txt);font-family:'DM Sans',-apple-system,sans-serif;min-height:100vh;overscroll-behavior:none}
 
 /* ── NAV ── */
-.tabnav{position:fixed;bottom:0;left:0;right:0;background:rgba(19,23,31,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid var(--bdr);display:flex;z-index:300;padding-bottom:env(safe-area-inset-bottom)}
+.tabnav{position:fixed;bottom:0;left:0;right:0;background:rgba(23,23,23,.95);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid var(--bdr);display:flex;z-index:300;padding-bottom:env(safe-area-inset-bottom)}
 .tabitem{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 4px 6px;cursor:pointer;color:var(--mut);font-size:9px;letter-spacing:.05em;text-transform:uppercase;gap:3px;transition:color .2s;position:relative;font-family:'DM Sans',sans-serif;font-weight:500}
 .tabitem svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
 .tabitem.active{color:var(--acc)}
@@ -39,11 +39,11 @@ html,body{background:var(--bg);color:var(--txt);font-family:'DM Sans',-apple-sys
 .page.active{display:flex}
 
 /* ── HEADER ── */
-header{background:rgba(19,23,31,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr);position:sticky;top:0;z-index:250;padding:12px 16px 0;padding-top:calc(12px + env(safe-area-inset-top))}
+header{background:rgba(23,23,23,.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--bdr);position:sticky;top:0;z-index:250;padding:12px 16px 0;padding-top:calc(12px + env(safe-area-inset-top))}
 .hrow{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family:'DM Serif Display',serif;font-style:italic}
 .cnt{font-size:11px;color:var(--mut);white-space:nowrap}
-.add-btn{background:var(--acc);border:none;color:#03111f;border-radius:20px;padding:5px 14px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;font-family:'DM Sans',sans-serif;transition:transform .15s,opacity .15s}
+.add-btn{background:var(--acc);border:none;color:#000;border-radius:20px;padding:5px 14px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;font-family:'DM Sans',sans-serif;transition:transform .15s,opacity .15s}
 .add-btn:active{opacity:.8;transform:scale(.95)}
 
 /* ── SEARCH ── */
@@ -56,7 +56,7 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 .frow{display:flex;gap:6px;overflow-x:auto;padding:0 0 8px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .frow::-webkit-scrollbar{display:none}
 .chip{flex-shrink:0;background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:20px;padding:6px 12px;font-size:11px;cursor:pointer;white-space:nowrap;user-select:none;transition:all .15s}
-.chip.active{background:var(--acc);border-color:var(--acc);color:#03111f;font-weight:700}
+.chip.active{background:var(--acc);border-color:var(--acc);color:#000;font-weight:700}
 .chip.active-hot{background:var(--hot-dim);border-color:var(--hot);color:var(--hot);font-weight:700}
 .chip.active-med{background:var(--med-dim);border-color:var(--med);color:var(--med);font-weight:700}
 .chip.active-low{background:var(--low-dim);border-color:var(--low);color:var(--low);font-weight:700}
@@ -248,19 +248,6 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
 .similar-link.imdb{color:#c9a419;border-color:rgba(245,197,24,.3);background:rgba(245,197,24,.07)}
 .similar-link.lb{color:#00e5a0;border-color:rgba(0,229,160,.3);background:rgba(0,229,160,.06)}
 
-/* ── SIMILAR FILMS ── */
-.similar-section{margin-top:16px}
-.similar-label{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;font-weight:600;margin-bottom:8px}
-.similar-list{display:flex;flex-direction:column;gap:4px}
-.similar-item{display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;background:var(--surf2);border:1px solid var(--bdr)}
-.similar-item:hover{border-color:var(--bdr2);background:var(--surf3)}
-.similar-title{flex:1;font-size:12px;font-weight:600;color:var(--txt);min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.similar-year{font-size:11px;color:var(--mut);flex-shrink:0}
-.similar-links{display:flex;gap:5px;flex-shrink:0}
-.similar-link{font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;text-decoration:none;border:1px solid}
-.similar-link.imdb{color:#c9a419;border-color:rgba(245,197,24,.3);background:rgba(245,197,24,.07)}
-.similar-link.lb{color:#00e5a0;border-color:rgba(0,229,160,.3);background:rgba(0,229,160,.06)}
-
 /* ── TOAST ── */
 .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--surf3);color:var(--txt);padding:10px 20px;border-radius:20px;font-size:13px;font-weight:500;z-index:600;opacity:0;transition:all .25s;pointer-events:none;white-space:nowrap;border:1px solid var(--bdr2)}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
@@ -288,7 +275,6 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
 <div class="page active" id="page-wishlist">
   <header>
     <div class="hrow">
-      <a href="index.html" style="font-size:11px;color:var(--mut);text-decoration:none;display:block;margin-bottom:2px;letter-spacing:.04em">&#8592; The Archive</a>
       <h1>Wish List</h1>
       <span class="cnt" id="wl-count">0 films</span>
       <button class="add-btn" onclick="openShareModal()" style="background:var(--surf2);border:1px solid var(--bdr2);color:var(--acc);margin-right:4px">↗ Share</button>
@@ -553,6 +539,10 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
 
 <!-- ── NAV ── -->
 <nav class="tabnav">
+  <a class="tabitem" href="index.html" style="text-decoration:none">
+    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+    Collection
+  </a>
   <div class="tabitem active" data-page="wishlist" onclick="switchTab('wishlist')">
     <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
     Wishlist
@@ -562,8 +552,8 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
     Hunt
   </div>
   <div class="tabitem" data-page="import" onclick="switchTab('import')">
-    <svg viewBox="0 0 24 24"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>
-    Import
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/></svg>
+    Settings
   </div>
 </nav>
 
