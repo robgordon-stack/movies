@@ -1024,6 +1024,9 @@ function renderWatchNext(){
   const pg=document.getElementById('page-watchnext');
   wnFilmMap.length=0;
 
+  // Filter state: default to unwatched only
+  const showAll=pg.dataset.showAll==='true';
+
   // Build a Set to deduplicate films across groups; the first occurrence
   // owns the globalIdx used by posters in every group.
   const seenTitles=new Map(); // title+year → globalIdx
@@ -1033,28 +1036,36 @@ function renderWatchNext(){
 
   // Header row
   const header=document.createElement('div');
-  header.innerHTML='<div style="display:flex;align-items:center;gap:10px;padding:4px 0 16px"><p style="font-size:13px;color:var(--mut);margin:0;flex:1">All films you own · grouped by mood · tap any poster to open</p><button onclick="wnSurprise()" style="flex-shrink:0;background:var(--surf2);border:1px solid var(--bdr);color:var(--acc);border-radius:8px;padding:6px 12px;font-size:12px;cursor:pointer;white-space:nowrap">&#9825; Surprise me</button></div>';
+  header.innerHTML=`<div style="display:flex;align-items:center;gap:8px;padding:4px 0 16px;flex-wrap:wrap">
+    <p style="font-size:13px;color:var(--mut);margin:0;flex:1">All films you own · grouped by mood · tap any poster to open</p>
+    <button onclick="wnToggleWatched()" style="flex-shrink:0;background:${showAll?'var(--surf3)':'var(--surf2)'};border:1px solid ${showAll?'var(--bdr2)':'var(--bdr)'};color:${showAll?'var(--txt)':'var(--mut)'};border-radius:8px;padding:6px 12px;font-size:12px;cursor:pointer;white-space:nowrap">${showAll?'Showing all':'Unwatched only'}</button>
+    <button onclick="wnSurprise()" style="flex-shrink:0;background:var(--surf2);border:1px solid var(--bdr);color:var(--acc);border-radius:8px;padding:6px 12px;font-size:12px;cursor:pointer;white-space:nowrap">&#9825; Surprise me</button></div>`;
   frag.appendChild(header.firstElementChild);
 
   WN.forEach(g=>{
     const all=g.films;
     const unwatched=all.filter(f=>!f.watched);
+    const display=showAll?all:unwatched;
 
-    // Resolve global indices for each film in this group
-    const groupSlots=all.map(f=>{
+    // Skip groups with nothing to show
+    if(!display.length) return;
+
+    // Resolve global indices for ALL films (so watched films still have valid indices for detail sheet)
+    all.forEach(f=>{
       const key=f.title+"|"+(f.year||"");
       if(!seenTitles.has(key)){
         seenTitles.set(key,wnFilmMap.length);
         wnFilmMap.push(f);
       }
-      return{idx:seenTitles.get(key),f};
     });
 
     const section=document.createElement('div');
     section.style.marginBottom='28px';
 
     let postersHtml='';
-    groupSlots.forEach(({idx,f})=>{
+    display.forEach(f=>{
+      const key=f.title+"|"+(f.year||"");
+      const idx=seenTitles.get(key);
       const watched=f.watched;
       const poster=f.poster||'';
       postersHtml+=`<div onclick="openWnFilm(${idx})" class="wn-poster" style="opacity:${watched?0.45:1}">
@@ -1067,10 +1078,15 @@ function renderWatchNext(){
       </div>`;
     });
 
+    const watchedCount=all.length-unwatched.length;
+    const groupLabel=showAll
+      ? `${unwatched.length} unwatched of ${all.length}`
+      : (watchedCount>0?`${display.length} film${display.length!==1?'s':''}  · ${watchedCount} already watched`:`${display.length} film${display.length!==1?'s':''}`);
+
     section.innerHTML=`
       <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px">
         <span style="font-size:17px;font-weight:600;color:var(--txt)">${g.icon} ${ex(g.name)}</span>
-        <span style="font-size:11px;color:var(--mut)">${unwatched.length} unwatched of ${all.length}</span>
+        <span style="font-size:11px;color:var(--mut)">${groupLabel}</span>
       </div>
       <div style="font-size:12px;color:var(--mut);margin-bottom:10px">${ex(g.desc)}</div>
       <div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none">${postersHtml}</div>`;
@@ -1079,6 +1095,12 @@ function renderWatchNext(){
 
   pg.innerHTML='';
   pg.appendChild(frag);
+}
+
+function wnToggleWatched(){
+  const pg=document.getElementById('page-watchnext');
+  pg.dataset.showAll=pg.dataset.showAll==='true'?'false':'true';
+  renderWatchNext();
 }
 
 // ── SHARE / EXPORT ────────────────────────────────────────────────────────────
