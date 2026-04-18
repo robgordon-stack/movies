@@ -4,7 +4,7 @@
     "title": "Being John Malkovich",
     "year": 1999,
     "director": "Spike Jonze",
-    "poster": "https://www.themoviedb.org/t/p/w1280/xVSvIwRNzwXSs0CLefiiG6A96m4.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/xVSvIwRNzwXSs0CLefiiG6A96m4.jpg",
     "imdb_id": "tt0120601",
     "genre": "Comedy, Drama, Fantasy",
     "country": "United States",
@@ -12,14 +12,37 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776490185970
+    "added": 1776490185970,
+    "score": 8.2,
+    "imdb_score": 7.8,
+    "lb_score": 4.0,
+    "rt_score": 0.94,
+    "mc_score": 90,
+    "lb": "https://letterboxd.com/film/being-john-malkovich/",
+    "similar": [
+      {
+        "title": "Adaptation.",
+        "year": 2002,
+        "imdb_id": "tt0268126"
+      },
+      {
+        "title": "Eternal Sunshine of the Spotless Mind",
+        "year": 2004,
+        "imdb_id": "tt0338013"
+      },
+      {
+        "title": "Synecdoche, New York",
+        "year": 2008,
+        "imdb_id": "tt0383028"
+      }
+    ]
   },
   {
     "id": "17764901274868qqferkj32k",
     "title": "Adaptation.",
     "year": 2002,
     "director": "Spike Jonze",
-    "poster": "https://www.themoviedb.org/t/p/w1280/ffEmHQAiD0m5dEQ6rlsuA9vlllW.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/ffEmHQAiD0m5dEQ6rlsuA9vlllW.jpg",
     "imdb_id": "tt0268126",
     "genre": "Comedy, Drama",
     "country": "United States",
@@ -27,29 +50,64 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776490127486
+    "added": 1776490127486,
+    "score": 8.1,
+    "imdb_score": 7.7,
+    "lb_score": 4.0,
+    "rt_score": 0.91,
+    "mc_score": 83,
+    "lb": "https://letterboxd.com/film/adaptation/",
+    "similar": [
+      {
+        "title": "Being John Malkovich",
+        "year": 1999,
+        "imdb_id": "tt0120601"
+      },
+      {
+        "title": "Synecdoche, New York",
+        "year": 2008,
+        "imdb_id": "tt0383028"
+      }
+    ]
   },
   {
     "id": "17764900345045buouoi9y0r",
     "title": "Belly",
     "year": 1998,
     "director": "Hype Williams",
-    "poster": "https://www.themoviedb.org/t/p/w1280/i4QhjdZXxdOpKOhc9kh4qqWjRWr.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/i4QhjdZXxdOpKOhc9kh4qqWjRWr.jpg",
     "imdb_id": "tt0158493",
-    "genre": "Crime, Drama",
+    "genre": "Crime, Drama, Music",
     "country": "United States",
     "runtime": 96,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776490034504
+    "added": 1776490034504,
+    "score": 6.5,
+    "imdb_score": 6.2,
+    "lb_score": 3.5,
+    "rt_score": 0.18,
+    "lb": "https://letterboxd.com/film/belly/",
+    "similar": [
+      {
+        "title": "Paid in Full",
+        "year": 2002,
+        "imdb_id": "tt0280477"
+      },
+      {
+        "title": "Shottas",
+        "year": 2002,
+        "imdb_id": "tt0351409"
+      }
+    ]
   },
   {
     "id": "1776489826188o2dhxe3rtb8",
     "title": "Swordfish",
     "year": 2001,
     "director": "Dominic Sena",
-    "poster": "https://www.themoviedb.org/t/p/w1280/mM6h4jMqC4q5IaFgBIGKQDLnRU.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/mM6h4jMqC4q5IaFgBIGKQDLnRU.jpg",
     "imdb_id": "tt0244244",
     "genre": "Action, Crime, Thriller",
     "country": "United States",
@@ -57,14 +115,32 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776489826188
+    "added": 1776489826188,
+    "score": 6.5,
+    "imdb_score": 6.5,
+    "lb_score": 3.1,
+    "rt_score": 0.26,
+    "mc_score": 26,
+    "lb": "https://letterboxd.com/film/swordfish/",
+    "similar": [
+      {
+        "title": "The Italian Job",
+        "year": 2003,
+        "imdb_id": "tt0317740"
+      },
+      {
+        "title": "Hackers",
+        "year": 1995,
+        "imdb_id": "tt0113243"
+      }
+    ]
   },
   {
     "id": "1776489815238h0yca5usxor",
     "title": "The Rock",
     "year": 1996,
     "director": "Michael Bay",
-    "poster": "https://www.themoviedb.org/t/p/w1280/eBcoxveWzzXQrCrwWMGAROcqgpP.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/eBcoxveWzzXQrCrwWMGAROcqgpP.jpg",
     "imdb_id": "tt0117500",
     "genre": "Action, Adventure, Thriller",
     "country": "United States",
@@ -72,14 +148,32 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776489815238
+    "added": 1776489815238,
+    "score": 7.5,
+    "imdb_score": 7.4,
+    "lb_score": 3.7,
+    "rt_score": 0.68,
+    "mc_score": 58,
+    "lb": "https://letterboxd.com/film/the-rock/",
+    "similar": [
+      {
+        "title": "Con Air",
+        "year": 1997,
+        "imdb_id": "tt0118880"
+      },
+      {
+        "title": "The Peacemaker",
+        "year": 1997,
+        "imdb_id": "tt0119695"
+      }
+    ]
   },
   {
     "id": "1776489802122f1xvclyzoig",
     "title": "Con Air",
     "year": 1997,
     "director": "Simon West",
-    "poster": "https://www.themoviedb.org/t/p/w1280/kOKjgrEzGOP92rVQ6srA9jtp60l.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/kOKjgrEzGOP92rVQ6srA9jtp60l.jpg",
     "imdb_id": "tt0118880",
     "genre": "Action, Crime, Thriller",
     "country": "United States",
@@ -87,14 +181,32 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776489802122
+    "added": 1776489802122,
+    "score": 7.1,
+    "imdb_score": 6.9,
+    "lb_score": 3.6,
+    "rt_score": 0.56,
+    "mc_score": 49,
+    "lb": "https://letterboxd.com/film/con-air/",
+    "similar": [
+      {
+        "title": "The Rock",
+        "year": 1996,
+        "imdb_id": "tt0117500"
+      },
+      {
+        "title": "Face/Off",
+        "year": 1997,
+        "imdb_id": "tt0119094"
+      }
+    ]
   },
   {
     "id": "1776489497240yg2nk7sboqg",
     "title": "Mike Bassett: England Manager",
     "year": 2001,
     "director": "Steve Barron",
-    "poster": "https://www.themoviedb.org/t/p/w1280/vfbWbgkF5jFOqytHIVnq2eH3Gy5.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/vfbWbgkF5jFOqytHIVnq2eH3Gy5.jpg",
     "imdb_id": "tt0282744",
     "genre": "Comedy, Sport",
     "country": "United Kingdom",
@@ -102,14 +214,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776489497240
+    "added": 1776489497240,
+    "score": 7.1,
+    "imdb_score": 7.0,
+    "lb_score": 3.6,
+    "rt_score": 0.67,
+    "lb": "https://letterboxd.com/film/mike-bassett-england-manager/",
+    "similar": [
+      {
+        "title": "The Full Monty",
+        "year": 1997,
+        "imdb_id": "tt0119083"
+      },
+      {
+        "title": "When Saturday Comes",
+        "year": 1996,
+        "imdb_id": "tt0118157"
+      }
+    ]
   },
   {
     "id": "1776479540018wpe28z2lbl",
     "title": "Too Late for Tears",
     "year": 1949,
     "director": "Byron Haskin",
-    "poster": "https://www.themoviedb.org/t/p/w1280/7lCWILDGzk8EjFILNO9Xy96DsKT.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/7lCWILDGzk8EjFILNO9Xy96DsKT.jpg",
     "imdb_id": "tt0041968",
     "genre": "Crime, Drama, Film-Noir",
     "country": "United States",
@@ -117,14 +246,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776479540018
+    "added": 1776479540018,
+    "score": 8.4,
+    "imdb_score": 7.7,
+    "lb_score": 4.1,
+    "rt_score": 0.96,
+    "lb": "https://letterboxd.com/film/too-late-for-tears/",
+    "similar": [
+      {
+        "title": "Detour",
+        "year": 1945,
+        "imdb_id": "tt0037638"
+      },
+      {
+        "title": "Double Indemnity",
+        "year": 1944,
+        "imdb_id": "tt0036775"
+      }
+    ]
   },
   {
     "id": "1776479314435xo7s9ujyidp",
     "title": "They Live by Night",
     "year": 1948,
     "director": "Nicholas Ray",
-    "poster": "https://www.themoviedb.org/t/p/w1280/p9ifSgroa8eoh13OLFUAMwiFByV.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/p9ifSgroa8eoh13OLFUAMwiFByV.jpg",
     "imdb_id": "tt0040872",
     "genre": "Crime, Drama, Film-Noir",
     "country": "United States",
@@ -132,14 +278,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776479314436
+    "added": 1776479314436,
+    "score": 8.1,
+    "imdb_score": 7.7,
+    "lb_score": 4.0,
+    "rt_score": 0.96,
+    "lb": "https://letterboxd.com/film/they-live-by-night/",
+    "similar": [
+      {
+        "title": "Gun Crazy",
+        "year": 1950,
+        "imdb_id": "tt0042530"
+      },
+      {
+        "title": "Bonnie and Clyde",
+        "year": 1967,
+        "imdb_id": "tt0061418"
+      }
+    ]
   },
   {
     "id": "17764792883690u0ypcofasqn",
     "title": "The Tenant",
     "year": 1976,
     "director": "Roman Polanski",
-    "poster": "https://www.themoviedb.org/t/p/w1280/4Qhzb1ICFMqE3isWoln497qSH7n.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/4Qhzb1ICFMqE3isWoln497qSH7n.jpg",
     "imdb_id": "tt0074811",
     "genre": "Drama, Thriller",
     "country": "France",
@@ -147,29 +310,64 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776479288369
+    "added": 1776479288369,
+    "score": 8.2,
+    "imdb_score": 7.7,
+    "lb_score": 4.1,
+    "rt_score": 0.87,
+    "lb": "https://letterboxd.com/film/the-tenant/",
+    "similar": [
+      {
+        "title": "Repulsion",
+        "year": 1965,
+        "imdb_id": "tt0059643"
+      },
+      {
+        "title": "Rosemary's Baby",
+        "year": 1968,
+        "imdb_id": "tt0063522"
+      }
+    ]
   },
   {
     "id": "1776479241469n5zrh2c0nsg",
     "title": "Schindler's List",
     "year": 1993,
     "director": "Steven Spielberg",
-    "poster": "https://www.themoviedb.org/t/p/w1280/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
     "imdb_id": "tt0108052",
     "genre": "Biography, Drama, History",
     "country": "United States",
     "runtime": 195,
-    "priority": "Someday",
+    "priority": "High",
     "notes": null,
     "owned": false,
-    "added": 1776479241469
+    "added": 1776479241469,
+    "score": 9.2,
+    "imdb_score": 9.0,
+    "lb_score": 4.5,
+    "rt_score": 0.98,
+    "mc_score": 94,
+    "lb": "https://letterboxd.com/film/schindlers-list/",
+    "similar": [
+      {
+        "title": "The Pianist",
+        "year": 2002,
+        "imdb_id": "tt0253474"
+      },
+      {
+        "title": "Son of Saul",
+        "year": 2015,
+        "imdb_id": "tt3808342"
+      }
+    ]
   },
   {
     "id": "1776479212453s6vb6jhesdq",
     "title": "Scarlet Street",
     "year": 1945,
     "director": "Fritz Lang",
-    "poster": "https://www.themoviedb.org/t/p/w1280/eGEDor1BWSQGaLtOntPHUSqNzRC.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/eGEDor1BWSQGaLtOntPHUSqNzRC.jpg",
     "imdb_id": "tt0038057",
     "genre": "Crime, Drama, Film-Noir",
     "country": "United States",
@@ -177,14 +375,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776479212453
+    "added": 1776479212453,
+    "score": 8.1,
+    "imdb_score": 7.8,
+    "lb_score": 4.1,
+    "rt_score": 0.94,
+    "lb": "https://letterboxd.com/film/scarlet-street/",
+    "similar": [
+      {
+        "title": "The Woman in the Window",
+        "year": 1944,
+        "imdb_id": "tt0037383"
+      },
+      {
+        "title": "Double Indemnity",
+        "year": 1944,
+        "imdb_id": "tt0036775"
+      }
+    ]
   },
   {
     "id": "17764791877864mktfz9bz4m",
     "title": "Rosetta",
     "year": 1999,
     "director": "Jean-Pierre Dardenne, Luc Dardenne",
-    "poster": "https://www.themoviedb.org/t/p/w1280/buwLjQPPA9FaATvKzeAppLXiGMB.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/buwLjQPPA9FaATvKzeAppLXiGMB.jpg",
     "imdb_id": "tt0200071",
     "genre": "Drama",
     "country": "France",
@@ -192,14 +407,32 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776479187786
+    "added": 1776479187786,
+    "score": 8.0,
+    "imdb_score": 7.6,
+    "lb_score": 3.9,
+    "rt_score": 0.89,
+    "mc_score": 82,
+    "lb": "https://letterboxd.com/film/rosetta/",
+    "similar": [
+      {
+        "title": "L'Enfant",
+        "year": 2005,
+        "imdb_id": "tt0415310"
+      },
+      {
+        "title": "The Son",
+        "year": 2002,
+        "imdb_id": "tt0299992"
+      }
+    ]
   },
   {
     "id": "1776479167803hyniby62a5h",
     "title": "Red Desert",
     "year": 1964,
     "director": "Michelangelo Antonioni",
-    "poster": "https://www.themoviedb.org/t/p/w1280/rGcTVdyhaGzMxPPRVApXre6F7SD.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/rGcTVdyhaGzMxPPRVApXre6F7SD.jpg",
     "imdb_id": "tt0058003",
     "genre": "Drama",
     "country": "Italy",
@@ -207,14 +440,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776479167803
+    "added": 1776479167803,
+    "score": 8.0,
+    "imdb_score": 7.6,
+    "lb_score": 4.0,
+    "rt_score": 0.88,
+    "lb": "https://letterboxd.com/film/red-desert/",
+    "similar": [
+      {
+        "title": "L'Avventura",
+        "year": 1960,
+        "imdb_id": "tt0053619"
+      },
+      {
+        "title": "Blow-Up",
+        "year": 1966,
+        "imdb_id": "tt0060176"
+      }
+    ]
   },
   {
     "id": "1776479138020m3erkirdfj9",
     "title": "Pandora's Box",
     "year": 1929,
     "director": "Georg Wilhelm Pabst",
-    "poster": "https://www.themoviedb.org/t/p/w1280/3B2A5g8t3HZltKp1fplNn2xW4us.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/3B2A5g8t3HZltKp1fplNn2xW4us.jpg",
     "imdb_id": "tt0018737",
     "genre": "Crime, Drama, Romance",
     "country": "Germany",
@@ -222,14 +472,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776479138020
+    "added": 1776479138020,
+    "score": 8.4,
+    "imdb_score": 8.0,
+    "lb_score": 4.2,
+    "rt_score": 0.97,
+    "lb": "https://letterboxd.com/film/pandoras-box/",
+    "similar": [
+      {
+        "title": "The Joyless Street",
+        "year": 1925,
+        "imdb_id": "tt0015927"
+      },
+      {
+        "title": "Diary of a Lost Girl",
+        "year": 1929,
+        "imdb_id": "tt0019949"
+      }
+    ]
   },
   {
     "id": "1776479102655m855lhpcr",
     "title": "The Most Dangerous Game",
     "year": 1932,
     "director": "Irving Pichel, Ernest B. Schoedsack",
-    "poster": "https://www.themoviedb.org/t/p/w1280/3aNlOIFlGOnIzxqvAWpgm5Sly1H.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/3aNlOIFlGOnIzxqvAWpgm5Sly1H.jpg",
     "imdb_id": "tt0023238",
     "genre": "Action, Adventure, Horror",
     "country": "United States",
@@ -237,14 +504,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776479102655
+    "added": 1776479102655,
+    "score": 7.8,
+    "imdb_score": 7.3,
+    "lb_score": 3.7,
+    "rt_score": 0.87,
+    "lb": "https://letterboxd.com/film/the-most-dangerous-game/",
+    "similar": [
+      {
+        "title": "King Kong",
+        "year": 1933,
+        "imdb_id": "tt0024216"
+      },
+      {
+        "title": "The Beach",
+        "year": 2000,
+        "imdb_id": "tt0163978"
+      }
+    ]
   },
   {
     "id": "1776478993872d42ys8142us",
     "title": "Invasion of the Body Snatchers",
     "year": 1956,
     "director": "Don Siegel",
-    "poster": "https://www.themoviedb.org/t/p/w1280/8BrMQmgwGzIHSyBjCDOLOdi79fJ.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/8BrMQmgwGzIHSyBjCDOLOdi79fJ.jpg",
     "imdb_id": "tt0049366",
     "genre": "Drama, Horror, Sci-Fi",
     "country": "United States",
@@ -252,14 +536,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776478993872
+    "added": 1776478993872,
+    "score": 8.1,
+    "imdb_score": 7.7,
+    "lb_score": 3.9,
+    "rt_score": 0.98,
+    "lb": "https://letterboxd.com/film/invasion-of-the-body-snatchers/",
+    "similar": [
+      {
+        "title": "The Thing from Another World",
+        "year": 1951,
+        "imdb_id": "tt0044121"
+      },
+      {
+        "title": "It Came from Outer Space",
+        "year": 1953,
+        "imdb_id": "tt0045917"
+      }
+    ]
   },
   {
     "id": "1776478928988canfi05ika5",
     "title": "L'Eclisse",
     "year": 1962,
     "director": "Michelangelo Antonioni",
-    "poster": "https://www.themoviedb.org/t/p/w1280/oXoe0Fp92Yw3mMJ9Vq0hPlaMELg.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/oXoe0Fp92Yw3mMJ9Vq0hPlaMELg.jpg",
     "imdb_id": "tt0056736",
     "genre": "Drama, Romance",
     "country": "Italy",
@@ -267,14 +568,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776478928989
+    "added": 1776478928989,
+    "score": 8.2,
+    "imdb_score": 7.7,
+    "lb_score": 4.1,
+    "rt_score": 0.95,
+    "lb": "https://letterboxd.com/film/leclisse/",
+    "similar": [
+      {
+        "title": "L'Avventura",
+        "year": 1960,
+        "imdb_id": "tt0053619"
+      },
+      {
+        "title": "La Notte",
+        "year": 1961,
+        "imdb_id": "tt0055103"
+      }
+    ]
   },
   {
     "id": "1776478887789mnonwkqnpm",
     "title": "The Deer Hunter",
     "year": 1978,
     "director": "Michael Cimino",
-    "poster": "https://www.themoviedb.org/t/p/w1280/bbGtogDZOg09bm42KIpCXUXICkh.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/bbGtogDZOg09bm42KIpCXUXICkh.jpg",
     "imdb_id": "tt0077416",
     "genre": "Drama, War",
     "country": "United States",
@@ -282,14 +600,32 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776478887789
+    "added": 1776478887789,
+    "score": 9.0,
+    "imdb_score": 8.1,
+    "lb_score": 4.3,
+    "rt_score": 0.93,
+    "mc_score": 89,
+    "lb": "https://letterboxd.com/film/the-deer-hunter/",
+    "similar": [
+      {
+        "title": "Coming Home",
+        "year": 1978,
+        "imdb_id": "tt0077362"
+      },
+      {
+        "title": "Apocalypse Now",
+        "year": 1979,
+        "imdb_id": "tt0078788"
+      }
+    ]
   },
   {
     "id": "17764788349446om030larkg",
     "title": "Black Narcissus",
     "year": 1947,
     "director": "Michael Powell, Emeric Pressburger",
-    "poster": "https://www.themoviedb.org/t/p/w1280/jSbFWWbkUq5N5ikewJHNATcWnxS.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/jSbFWWbkUq5N5ikewJHNATcWnxS.jpg",
     "imdb_id": "tt0039192",
     "genre": "Drama",
     "country": "United Kingdom",
@@ -297,14 +633,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776478834944
+    "added": 1776478834944,
+    "score": 8.5,
+    "imdb_score": 7.8,
+    "lb_score": 4.1,
+    "rt_score": 0.96,
+    "lb": "https://letterboxd.com/film/black-narcissus/",
+    "similar": [
+      {
+        "title": "The Red Shoes",
+        "year": 1948,
+        "imdb_id": "tt0040525"
+      },
+      {
+        "title": "A Canterbury Tale",
+        "year": 1944,
+        "imdb_id": "tt0036681"
+      }
+    ]
   },
   {
     "id": "1776478770806wq19uk8v6qe",
     "title": "Bride of Frankenstein",
     "year": 1935,
     "director": "James Whale",
-    "poster": "https://www.themoviedb.org/t/p/w1280/5241zUwe7rC17MNc2QpCBKKdp1N.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/5241zUwe7rC17MNc2QpCBKKdp1N.jpg",
     "imdb_id": "tt0026138",
     "genre": "Drama, Horror, Sci-Fi",
     "country": "United States",
@@ -312,14 +665,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776478770806
+    "added": 1776478770806,
+    "score": 8.1,
+    "imdb_score": 7.8,
+    "lb_score": 4.0,
+    "rt_score": 1.0,
+    "lb": "https://letterboxd.com/film/bride-of-frankenstein/",
+    "similar": [
+      {
+        "title": "Frankenstein",
+        "year": 1931,
+        "imdb_id": "tt0021884"
+      },
+      {
+        "title": "Son of Frankenstein",
+        "year": 1939,
+        "imdb_id": "tt0031503"
+      }
+    ]
   },
   {
     "id": "1776478715357k5kgjxdxl3",
     "title": "The Best Years of Our Lives",
     "year": 1946,
     "director": "William Wyler",
-    "poster": "https://www.themoviedb.org/t/p/w1280/gd5EoAU4MM57sW3vlWxJ0NMM8cV.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/gd5EoAU4MM57sW3vlWxJ0NMM8cV.jpg",
     "imdb_id": "tt0036868",
     "genre": "Drama, Romance, War",
     "country": "United States",
@@ -327,14 +697,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776478715357
+    "added": 1776478715357,
+    "score": 8.8,
+    "imdb_score": 8.1,
+    "lb_score": 4.2,
+    "rt_score": 1.0,
+    "lb": "https://letterboxd.com/film/the-best-years-of-our-lives/",
+    "similar": [
+      {
+        "title": "Since You Went Away",
+        "year": 1944,
+        "imdb_id": "tt0037337"
+      },
+      {
+        "title": "The Men",
+        "year": 1950,
+        "imdb_id": "tt0042709"
+      }
+    ]
   },
   {
     "id": "1775440300023exofn9t7e4",
     "title": "Godzilla",
     "year": 1954,
     "director": "Ishirō Honda",
-    "poster": "https://www.themoviedb.org/t/p/w1280/2W0Yw0qrgVMgdsSCZRKtfvaAh0i.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/2W0Yw0qrgVMgdsSCZRKtfvaAh0i.jpg",
     "imdb_id": "tt0047034",
     "genre": "Action, Adventure, Sci-Fi",
     "country": "Japan",
@@ -374,7 +761,7 @@
     "title": "King Kong",
     "year": 1933,
     "director": "Merian C. Cooper, Ernest B. Schoedsack",
-    "poster": "https://www.themoviedb.org/t/p/w1280/lHlnxKL5GbgRibyRFI7n1Ey850i.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/lHlnxKL5GbgRibyRFI7n1Ey850i.jpg",
     "imdb_id": "tt0024216",
     "genre": "Adventure, Horror",
     "country": "United States",
@@ -413,7 +800,7 @@
     "title": "Commando",
     "year": 1985,
     "director": "Mark L. Lester",
-    "poster": "https://www.themoviedb.org/t/p/w1280/ollPAAAgZ7euU8VisfqU3cuXhZ6.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/ollPAAAgZ7euU8VisfqU3cuXhZ6.jpg",
     "imdb_id": "tt0088944",
     "genre": "Action, Adventure, Thriller",
     "country": "United States",
@@ -451,7 +838,7 @@
     "title": "All About Lily Chou-Chou",
     "year": 2001,
     "director": "Shunji Iwai",
-    "poster": "https://www.themoviedb.org/t/p/w1280/pLBNmJUH9JYRCRsh349PJ22WpkS.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/pLBNmJUH9JYRCRsh349PJ22WpkS.jpg",
     "imdb_id": "tt0297721",
     "genre": "Crime, Drama, Music",
     "country": "Japan",
@@ -486,7 +873,7 @@
     "title": "The Verdict",
     "year": 1982,
     "director": "Sidney Lumet",
-    "poster": "https://www.themoviedb.org/t/p/w1280/iYEuFP1bpj5yOenKliiRFcNO3VE.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/iYEuFP1bpj5yOenKliiRFcNO3VE.jpg",
     "imdb_id": "tt0084855",
     "genre": "Drama",
     "country": "United States",
@@ -521,7 +908,7 @@
     "title": "Teorema",
     "year": 1968,
     "director": "Pier Paolo Pasolini",
-    "poster": "https://www.themoviedb.org/t/p/w1280/k7rEBaYUTgdxVqYl9aZm5ZcoB41.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/k7rEBaYUTgdxVqYl9aZm5ZcoB41.jpg",
     "imdb_id": "tt0063678",
     "genre": "Drama, Mystery",
     "country": "Italy",
@@ -538,11 +925,6 @@
     "rt_score": 0.85,
     "similar": [
       {
-        "title": "Theorem",
-        "year": 1968,
-        "imdb_id": "tt0063765"
-      },
-      {
         "title": "Salo, or the 120 Days of Sodom",
         "year": 1975,
         "imdb_id": "tt0073650"
@@ -551,6 +933,11 @@
         "title": "The Gospel According to St. Matthew",
         "year": 1964,
         "imdb_id": "tt0058715"
+      },
+      {
+        "title": "Accattone",
+        "year": 1961,
+        "imdb_id": "tt0053619"
       }
     ],
     "has4k": false
@@ -560,7 +947,7 @@
     "title": "The Taking of Pelham One Two Three",
     "year": 1974,
     "director": "Joseph Sargent",
-    "poster": "https://www.themoviedb.org/t/p/w1280/vNhywp9w1DVG6BytxKp4kjtaaGC.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/vNhywp9w1DVG6BytxKp4kjtaaGC.jpg",
     "imdb_id": "tt0072251",
     "genre": "Action, Crime, Thriller",
     "country": "United States",
@@ -594,7 +981,7 @@
     "title": "The Fly",
     "year": 1986,
     "director": "David Cronenberg",
-    "poster": "https://www.themoviedb.org/t/p/w1280/8gZWMhJHRvaXdXsNhERtqNHYpH3.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/8gZWMhJHRvaXdXsNhERtqNHYpH3.jpg",
     "imdb_id": "tt0091064",
     "genre": "Drama, Horror, Sci-Fi",
     "country": "United States",
@@ -629,7 +1016,7 @@
     "title": "Dogville",
     "year": 2003,
     "director": "Lars von Trier",
-    "poster": "https://www.themoviedb.org/t/p/w1280/lraVawavIXh5geMlVjpzCw9TGwR.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/lraVawavIXh5geMlVjpzCw9TGwR.jpg",
     "imdb_id": "tt0276919",
     "genre": "Crime, Drama",
     "country": "Denmark",
@@ -669,7 +1056,7 @@
     "title": "Munich",
     "year": 2005,
     "director": "Steven Spielberg",
-    "poster": "https://www.themoviedb.org/t/p/w1280/iUekaw96QLInZpsNwRTlRKrZgwm.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/iUekaw96QLInZpsNwRTlRKrZgwm.jpg",
     "imdb_id": "tt0408306",
     "genre": "Drama, History, Thriller",
     "country": "United States",
@@ -708,7 +1095,7 @@
     "title": "Witness",
     "year": 1985,
     "director": "Peter Weir",
-    "poster": "https://www.themoviedb.org/t/p/w1280/kOymD1rChAMykmDVEzJpIh4OYS7.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/kOymD1rChAMykmDVEzJpIh4OYS7.jpg",
     "imdb_id": "tt0090329",
     "genre": "Crime, Drama, Romance",
     "country": "United States",
@@ -743,7 +1130,7 @@
     "title": "The Blade",
     "year": 1995,
     "director": "Hark Tsui",
-    "poster": "https://www.themoviedb.org/t/p/w1280/h7i92qvq7o443pGbmK6zIl7kVU2.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/h7i92qvq7o443pGbmK6zIl7kVU2.jpg",
     "imdb_id": "tt0112800",
     "genre": "Action",
     "country": "Hong Kong",
@@ -782,7 +1169,7 @@
     "title": "Dazed and Confused",
     "year": 1993,
     "director": "Richard Linklater",
-    "poster": "https://www.themoviedb.org/t/p/w1280/msG9awbLhVZwv1Eh9Ge7SofMexW.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/msG9awbLhVZwv1Eh9Ge7SofMexW.jpg",
     "imdb_id": "tt0106677",
     "genre": "Comedy",
     "country": "United States",
@@ -817,7 +1204,7 @@
     "title": "Lost in Translation",
     "year": 2003,
     "director": "Sofia Coppola",
-    "poster": "https://www.themoviedb.org/t/p/w1280/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg",
     "imdb_id": "tt0335266",
     "genre": "Comedy, Drama",
     "country": "United States",
@@ -851,7 +1238,7 @@
     "title": "The Insider",
     "year": 1999,
     "director": "Michael Mann",
-    "poster": "https://www.themoviedb.org/t/p/w1280/jJCyIBPfvk41uETq6K6u4upyGO8.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/jJCyIBPfvk41uETq6K6u4upyGO8.jpg",
     "imdb_id": "tt0140352",
     "genre": "Biography, Drama, History",
     "country": "United States",
@@ -890,7 +1277,7 @@
     "title": "Mad Max",
     "year": 1979,
     "director": "George Miller",
-    "poster": "https://www.themoviedb.org/t/p/w1280/5LrI4GiCSrChgkdskVZiwv643Kg.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/5LrI4GiCSrChgkdskVZiwv643Kg.jpg",
     "imdb_id": "tt0079501",
     "genre": "Action, Adventure, Sci-Fi",
     "country": "Australia",
@@ -928,7 +1315,7 @@
     "title": "The Great Beauty",
     "year": 2013,
     "director": "Paolo Sorrentino",
-    "poster": "https://www.themoviedb.org/t/p/w1280/7suf0vaQfv5E7X1GVh4HJwK90yo.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/7suf0vaQfv5E7X1GVh4HJwK90yo.jpg",
     "imdb_id": "tt2358891",
     "genre": "Drama",
     "country": "Italy",
@@ -968,7 +1355,7 @@
     "title": "Synecdoche, New York",
     "year": 2008,
     "director": "Charlie Kaufman",
-    "poster": "https://www.themoviedb.org/t/p/w1280/5UwdhrjXhUgsiDhe1dpS9z4yj7q.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/5UwdhrjXhUgsiDhe1dpS9z4yj7q.jpg",
     "imdb_id": "tt0383028",
     "genre": "Drama",
     "country": "United States",
@@ -1007,7 +1394,7 @@
     "title": "Gone with the Wind",
     "year": 1939,
     "director": "Victor Fleming",
-    "poster": "https://www.themoviedb.org/t/p/w1280/lNz2Ow0wGCAvzckW7EOjE03KcYv.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/lNz2Ow0wGCAvzckW7EOjE03KcYv.jpg",
     "imdb_id": "tt0031381",
     "genre": "Drama, Romance, War",
     "country": "United States",
@@ -1045,7 +1432,7 @@
     "title": "Edward Scissorhands",
     "year": 1990,
     "director": "Tim Burton",
-    "poster": "https://www.themoviedb.org/t/p/w1280/e0FqKFvGPdQNWG8tF9cZBtev9Em.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/e0FqKFvGPdQNWG8tF9cZBtev9Em.jpg",
     "imdb_id": "tt0099487",
     "genre": "Drama, Fantasy, Romance",
     "country": "United States",
@@ -1084,7 +1471,7 @@
     "title": "The Usual Suspects",
     "year": 1995,
     "director": "Bryan Singer",
-    "poster": "https://www.themoviedb.org/t/p/w1280/99X2SgyFunJFXGAYnDv3sb9pnUD.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/99X2SgyFunJFXGAYnDv3sb9pnUD.jpg",
     "imdb_id": "tt0114814",
     "genre": "Crime, Drama, Mystery",
     "country": "United States",
@@ -1119,7 +1506,7 @@
     "title": "The Graduate",
     "year": 1967,
     "director": "Mike Nichols",
-    "poster": "https://www.themoviedb.org/t/p/w1280/z1Z1tZMR66RxcNeHbwoEhYeqOlP.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/z1Z1tZMR66RxcNeHbwoEhYeqOlP.jpg",
     "imdb_id": "tt0061722",
     "genre": "Comedy, Drama, Romance",
     "country": "United States",
@@ -1158,7 +1545,7 @@
     "title": "L.A. Confidential",
     "year": 1997,
     "director": "Curtis Hanson",
-    "poster": "https://www.themoviedb.org/t/p/w1280/lWCgf5sD5FpMljjpkRhcC8pXcch.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/lWCgf5sD5FpMljjpkRhcC8pXcch.jpg",
     "imdb_id": "tt0119488",
     "genre": "Crime, Drama, Mystery",
     "country": "United States",
@@ -1192,7 +1579,7 @@
     "title": "The Great Escape",
     "year": 1963,
     "director": "John Sturges",
-    "poster": "https://www.themoviedb.org/t/p/w1280/gBH4H8UMFxl139HaLz6lRuvsel8.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/gBH4H8UMFxl139HaLz6lRuvsel8.jpg",
     "imdb_id": "tt0057115",
     "genre": "Adventure, Drama, Thriller",
     "country": "United States",
@@ -1231,7 +1618,7 @@
     "title": "The Wild Bunch",
     "year": 1969,
     "director": "Sam Peckinpah",
-    "poster": "https://www.themoviedb.org/t/p/w1280/8j9yEC3xjy1PJDSizIbaxcHaSph.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/8j9yEC3xjy1PJDSizIbaxcHaSph.jpg",
     "imdb_id": "tt0065214",
     "genre": "Action, Adventure, Drama",
     "country": "United States",
@@ -1269,7 +1656,7 @@
     "title": "Evil Dead 2",
     "year": 1987,
     "director": "Sam Raimi",
-    "poster": "https://www.themoviedb.org/t/p/w1280/4zqCKJVHUolGs6C5AZwAZqLWixW.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/4zqCKJVHUolGs6C5AZwAZqLWixW.jpg",
     "imdb_id": "tt0092991",
     "genre": "Horror",
     "country": "United States",
@@ -1520,7 +1907,7 @@
       {
         "title": "October: Ten Days That Shook the World",
         "year": 1928,
-        "imdb_id": "tt0019254"
+        "imdb_id": "tt0019125"
       },
       {
         "title": "Strike",
@@ -1631,7 +2018,7 @@
     "owned": false,
     "added": 1775364083318,
     "has4k": true,
-    "distributor": "Criterion",
+    "distributor": "Disney",
     "score": 8.8,
     "imdb_score": 8.4,
     "lb_score": 4.2,
@@ -1698,13 +2085,13 @@
     "tmdb_id": 442709,
     "lb": "https://letterboxd.com/film/nostalghia/",
     "genre": "Drama, Romance",
-    "country": "Soviet Union",
+    "country": "Italy",
     "runtime": 125,
     "priority": "Someday",
     "notes": null,
     "owned": false,
     "added": 1775364083318,
-    "has4k": true,
+    "has4k": false,
     "distributor": "Kino Lorber",
     "score": 8.2,
     "imdb_score": 7.6,
@@ -1773,7 +2160,7 @@
     "imdb_id": "tt0091670",
     "tmdb_id": 748685,
     "lb": "https://letterboxd.com/film/the-sacrifice/",
-    "genre": "Tragedy, Drama, Psychological Drama",
+    "genre": "Drama",
     "country": "Sweden",
     "runtime": 149,
     "priority": "Someday",
@@ -1937,7 +2324,7 @@
     "director": "Wes Anderson",
     "tmdb_id": 10315,
     "lb": "https://letterboxd.com/search/Fantastic%20Mr.%20Fox/",
-    "notes": "Criterion",
+    "notes": null,
     "has4k": false,
     "distributor": "Criterion",
     "score": 8.3,
@@ -2070,7 +2457,7 @@
     "priority": "Someday",
     "added": 1775364083318,
     "owned": false,
-    "poster": "https://www.themoviedb.org/t/p/w1280/c9Oef9uQEuadZlnvv8hphRmTIgx.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/c9Oef9uQEuadZlnvv8hphRmTIgx.jpg",
     "imdb_id": "tt0048452",
     "year": 1955,
     "runtime": 125,
@@ -2344,7 +2731,7 @@
     "tmdb_id": 1100988,
     "lb": "https://letterboxd.com/search/28%20Days%20Later/",
     "has4k": true,
-    "notes": "Sony Pictures",
+    "notes": null,
     "distributor": "Sony Pictures",
     "score": 7.8,
     "imdb_score": 7.6,
@@ -2740,7 +3127,7 @@
     "year": 2021,
     "runtime": 127,
     "genre": "Drama, Western",
-    "country": "Australia",
+    "country": "New Zealand",
     "director": "Jane Campion",
     "tmdb_id": 600583,
     "lb": "https://letterboxd.com/search/The%20Power%20of%20the%20Dog/",
@@ -3047,7 +3434,8 @@
         "year": 1971,
         "imdb_id": "tt0067093"
       }
-    ]
+    ],
+    "distributor": "Disney"
   },
   {
     "id": "1775363710752glfyzn774ul",
@@ -3061,7 +3449,7 @@
     "runtime": 94,
     "genre": "Comedy, Crime",
     "country": "United States",
-    "director": "Joel Coen",
+    "director": "Joel Coen, Ethan Coen",
     "tmdb_id": 378,
     "lb": "https://letterboxd.com/search/Raising%20Arizona/",
     "has4k": false,
@@ -3339,7 +3727,7 @@
       {
         "title": "Before Midnight",
         "year": 2013,
-        "imdb_id": "tt2hidden"
+        "imdb_id": "tt2209418"
       },
       {
         "title": "Certified Copy",
@@ -4067,7 +4455,7 @@
     "director": "Alejandro González Iñárritu",
     "tmdb_id": 55,
     "lb": "https://letterboxd.com/search/Amores%20Perros/",
-    "notes": "Criterion\n",
+    "notes": null,
     "has4k": false,
     "distributor": "Criterion",
     "score": 8.4,
@@ -4168,7 +4556,7 @@
     "priority": "Someday",
     "added": 1775363589986,
     "owned": false,
-    "poster": "https://www.themoviedb.org/t/p/w1280/z1CqJKI6gmdAMprD1NOYSCHVXEv.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/z1CqJKI6gmdAMprD1NOYSCHVXEv.jpg",
     "imdb_id": "tt0076263",
     "year": 1978,
     "runtime": 80,
@@ -4430,7 +4818,7 @@
     "director": "Charlotte Wells",
     "tmdb_id": 965150,
     "lb": "https://letterboxd.com/search/Aftersun/",
-    "notes": "",
+    "notes": null,
     "has4k": false,
     "distributor": "MUBI",
     "score": 8.5,
@@ -4793,12 +5181,12 @@
       {
         "title": "Nobody Knows",
         "year": 2004,
-        "imdb_id": "tt0403685"
+        "imdb_id": "tt0408664"
       },
       {
         "title": "Our Little Sister",
         "year": 2015,
-        "imdb_id": "tt3829750"
+        "imdb_id": "tt3757574"
       }
     ]
   },
@@ -4916,7 +5304,7 @@
     "title": "King Creole",
     "year": 1958,
     "director": "Michael Curtiz",
-    "poster": "https://www.themoviedb.org/t/p/w1280/k5WBAgKrI8OytCSxMd4oau5KXzn.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/k5WBAgKrI8OytCSxMd4oau5KXzn.jpg",
     "imdb_id": "tt0051818",
     "genre": "Crime, Drama, Musical",
     "country": "United States",
@@ -4954,7 +5342,7 @@
     "title": "My Neighbor Totoro",
     "year": 1988,
     "director": "Hayao Miyazaki",
-    "poster": "https://www.themoviedb.org/t/p/w1280/rtGDOeG9LzoerkDGZF9dnVeLppL.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/rtGDOeG9LzoerkDGZF9dnVeLppL.jpg",
     "imdb_id": "tt0096283",
     "genre": "Animation, Adventure, Comedy",
     "country": "Japan",
@@ -4992,8 +5380,8 @@
     "id": "1775391533485toythy4mky",
     "title": "Akira",
     "year": 1988,
-    "director": "Katsuhiro Ôtomo",
-    "poster": "https://www.themoviedb.org/t/p/w1280/neZ0ykEsPqxamsX6o5QNUFILQrz.jpg",
+    "director": "Katsuhiro Otomo",
+    "poster": "https://image.tmdb.org/t/p/w1280/neZ0ykEsPqxamsX6o5QNUFILQrz.jpg",
     "imdb_id": "tt0094625",
     "genre": "Animation, Action, Drama",
     "country": "Japan",
@@ -5032,7 +5420,7 @@
     "title": "Amour",
     "year": 2012,
     "director": "Michael Haneke",
-    "poster": "https://www.themoviedb.org/t/p/w1280/19hyCudualHxCD0GrEngqsi0wBF.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/19hyCudualHxCD0GrEngqsi0wBF.jpg",
     "imdb_id": "tt1602620",
     "genre": "Drama",
     "country": "France",
@@ -5071,7 +5459,7 @@
     "title": "In a Lonely Place",
     "year": 1950,
     "director": "Nicholas Ray",
-    "poster": "https://www.themoviedb.org/t/p/w1280/vbdgtwzLOpE6MppZlyYChMagvQq.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/vbdgtwzLOpE6MppZlyYChMagvQq.jpg",
     "imdb_id": "tt0042593",
     "genre": "Drama, Film-Noir, Mystery",
     "country": "United States",
@@ -5110,7 +5498,7 @@
     "title": "Vagabond",
     "year": 1985,
     "director": "Agnès Varda",
-    "poster": "https://www.themoviedb.org/t/p/w1280/2KFfwiPct1hwqi9dkKqoom0BenC.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/2KFfwiPct1hwqi9dkKqoom0BenC.jpg",
     "imdb_id": "tt0089960",
     "genre": "Drama",
     "country": "France",
@@ -5149,7 +5537,7 @@
     "title": "Drive My Car",
     "year": 2021,
     "director": "Ryûsuke Hamaguchi",
-    "poster": "https://www.themoviedb.org/t/p/w1280/a2lxHS6Au35k5XtFQEQW44yWHeH.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/a2lxHS6Au35k5XtFQEQW44yWHeH.jpg",
     "imdb_id": "tt14039582",
     "genre": "Drama",
     "country": "Japan",
@@ -5184,7 +5572,7 @@
     "title": "A Man Escaped",
     "year": 1956,
     "director": "Robert Bresson",
-    "poster": "https://www.themoviedb.org/t/p/w1280/gkoZ8fFib24zhB2DKpjQ09SK9FU.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/gkoZ8fFib24zhB2DKpjQ09SK9FU.jpg",
     "imdb_id": "tt0049902",
     "genre": "Drama, Thriller, War",
     "country": "France",
@@ -5218,7 +5606,7 @@
     "title": "The Grand Illusion",
     "year": 1937,
     "director": "Jean Renoir",
-    "poster": "https://www.themoviedb.org/t/p/w1280/lWg41zE0FVixkNsFgxnlRyvDYv9.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/lWg41zE0FVixkNsFgxnlRyvDYv9.jpg",
     "imdb_id": "tt0028950",
     "genre": "Drama, War",
     "country": "France",
@@ -5251,7 +5639,7 @@
     "title": "Dog Day Afternoon",
     "year": 1975,
     "director": "Sidney Lumet",
-    "poster": "https://www.themoviedb.org/t/p/w1280/mavrhr0ig2aCRR8d48yaxtD5aMQ.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/mavrhr0ig2aCRR8d48yaxtD5aMQ.jpg",
     "imdb_id": "tt0072890",
     "genre": "Biography, Crime, Drama",
     "country": "United States",
@@ -5284,7 +5672,7 @@
     "title": "Brief Encounter",
     "year": 1945,
     "director": "David Lean",
-    "poster": "https://www.themoviedb.org/t/p/w1280/jC9EwLJcGhYMSQAHu2LxkKN5v7O.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/jC9EwLJcGhYMSQAHu2LxkKN5v7O.jpg",
     "imdb_id": "tt0037558",
     "genre": "Drama, Romance",
     "country": "United Kingdom",
@@ -5318,7 +5706,7 @@
     "title": "The Big Lebowski",
     "year": 1998,
     "director": "Joel Coen, Ethan Coen",
-    "poster": "https://www.themoviedb.org/t/p/w1280/3bv6WAp6BSxxYvB5ozKFUYuRA8C.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/3bv6WAp6BSxxYvB5ozKFUYuRA8C.jpg",
     "imdb_id": "tt0118715",
     "genre": "Comedy, Crime",
     "country": "United States",
@@ -5357,7 +5745,7 @@
     "title": "Call Me by Your Name",
     "year": 2017,
     "director": "Luca Guadagnino",
-    "poster": "https://www.themoviedb.org/t/p/w1280/mZ4gBdfkhP9tvLH1DO4m4HYtiyi.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/mZ4gBdfkhP9tvLH1DO4m4HYtiyi.jpg",
     "imdb_id": "tt5726616",
     "genre": "Drama, Romance",
     "country": "Italy",
@@ -5392,7 +5780,7 @@
     "title": "Magnolia",
     "year": 1999,
     "director": "Paul Thomas Anderson",
-    "poster": "https://www.themoviedb.org/t/p/w1280/tpfC325Jk6S38VTe5dDWjWtoyxr.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/tpfC325Jk6S38VTe5dDWjWtoyxr.jpg",
     "imdb_id": "tt0175880",
     "genre": "Drama",
     "country": "United States",
@@ -5432,7 +5820,7 @@
     "title": "Mean Streets",
     "year": 1973,
     "director": "Martin Scorsese",
-    "poster": "https://www.themoviedb.org/t/p/w1280/9msfwOeGc9uL1iRRTBdEf15XonC.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/9msfwOeGc9uL1iRRTBdEf15XonC.jpg",
     "imdb_id": "tt0070379",
     "genre": "Crime, Drama, Thriller",
     "country": "United States",
@@ -5471,7 +5859,7 @@
     "title": "Awakenings",
     "year": 1990,
     "director": "Penny Marshall",
-    "poster": "https://www.themoviedb.org/t/p/w1280/9gztZXuHLG6AJ0fgqGd7Q43cWRI.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/9gztZXuHLG6AJ0fgqGd7Q43cWRI.jpg",
     "imdb_id": "tt0099077",
     "genre": "Biography, Drama",
     "country": "United States",
@@ -5511,7 +5899,7 @@
     "title": "Warfare",
     "year": 2025,
     "director": "Alex Garland, Ray Mendoza",
-    "poster": "https://www.themoviedb.org/t/p/w1280/l39TlELomwysfsr37vrvCV6rmaQ.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/l39TlELomwysfsr37vrvCV6rmaQ.jpg",
     "imdb_id": "tt31434639",
     "genre": "Action, Drama, War",
     "country": "United States",
@@ -5551,7 +5939,7 @@
     "title": "The Revenant",
     "year": 2015,
     "director": "Alejandro G. Iñárritu",
-    "poster": "https://www.themoviedb.org/t/p/w1280/ji3ecJphATlVgWNY0B0RVXZizdf.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/ji3ecJphATlVgWNY0B0RVXZizdf.jpg",
     "imdb_id": "tt1663202",
     "genre": "Adventure, Drama, Western",
     "country": "United States",
@@ -5591,7 +5979,7 @@
     "title": "Sideways",
     "year": 2004,
     "director": "Alexander Payne",
-    "poster": "https://www.themoviedb.org/t/p/w1280/zOsaxYLgvZVU7cJBpPn8CuE0MrP.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/zOsaxYLgvZVU7cJBpPn8CuE0MrP.jpg",
     "imdb_id": "tt0375063",
     "genre": "Comedy, Drama, Romance",
     "country": "United States",
@@ -5631,7 +6019,7 @@
     "title": "The Holdovers",
     "year": 2023,
     "director": "Alexander Payne",
-    "poster": "https://www.themoviedb.org/t/p/w1280/VHSzNBTwxV8vh7wylo7O9CLdac.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/VHSzNBTwxV8vh7wylo7O9CLdac.jpg",
     "imdb_id": "tt14849194",
     "genre": "Comedy, Drama",
     "country": "United States",
@@ -5666,7 +6054,7 @@
     "title": "The Nice Guys",
     "year": 2016,
     "director": "Shane Black",
-    "poster": "https://www.themoviedb.org/t/p/w1280/clq4So9spa9cXk3MZy2iMdqkxP2.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/clq4So9spa9cXk3MZy2iMdqkxP2.jpg",
     "imdb_id": "tt3799694",
     "genre": "Action, Comedy, Crime",
     "country": "United States",
@@ -5706,7 +6094,7 @@
     "title": "Kingpin",
     "year": 1996,
     "director": "Bobby Farrelly, Peter Farrelly",
-    "poster": "https://www.themoviedb.org/t/p/w1280/lVpejjxzBujSjLpxQ7hGe1s0wP2.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/lVpejjxzBujSjLpxQ7hGe1s0wP2.jpg",
     "imdb_id": "tt0116778",
     "genre": "Comedy, Sport",
     "country": "United States",
@@ -5746,7 +6134,7 @@
     "title": "Minority Report",
     "year": 2002,
     "director": "Steven Spielberg",
-    "poster": "https://www.themoviedb.org/t/p/w1280/ccqpHq5tk5W4ymbSbuoy4uYOxFI.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/ccqpHq5tk5W4ymbSbuoy4uYOxFI.jpg",
     "imdb_id": "tt0181689",
     "genre": "Action, Crime, Mystery",
     "country": "United States",
@@ -5786,7 +6174,7 @@
     "title": "Jackie Brown",
     "year": 1997,
     "director": "Quentin Tarantino",
-    "poster": "https://www.themoviedb.org/t/p/w1280/rOUx7qg4KmEh1juEDwqzbDSL1Nr.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/rOUx7qg4KmEh1juEDwqzbDSL1Nr.jpg",
     "imdb_id": "tt0119396",
     "genre": "Crime, Drama, Thriller",
     "country": "United States",
@@ -5821,7 +6209,7 @@
     "title": "The Friends of Eddie Coyle",
     "year": 1973,
     "director": "Peter Yates",
-    "poster": "https://www.themoviedb.org/t/p/w1280/tyV8Bgf2huCIbGUxTdGgnzdIRKZ.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/tyV8Bgf2huCIbGUxTdGgnzdIRKZ.jpg",
     "imdb_id": "tt0070077",
     "genre": "Crime, Drama",
     "country": "United States",
@@ -5860,7 +6248,7 @@
     "title": "Anora",
     "year": 2024,
     "director": "Sean Baker",
-    "poster": "https://www.themoviedb.org/t/p/w1280/oN0o3owobFjePDc5vMdLRAd0jkd.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/oN0o3owobFjePDc5vMdLRAd0jkd.jpg",
     "imdb_id": "tt28607951",
     "genre": "Comedy, Drama, Romance",
     "country": "United States",
@@ -5895,7 +6283,7 @@
     "title": "Lone Star",
     "year": 1996,
     "director": "John Sayles",
-    "poster": "https://www.themoviedb.org/t/p/w1280/lBxY8znsRoqa9Dy2NCe8I6GPsRm.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/lBxY8znsRoqa9Dy2NCe8I6GPsRm.jpg",
     "imdb_id": "tt0116905",
     "genre": "Drama, Mystery, Western",
     "country": "United States",
@@ -5914,11 +6302,6 @@
     "mc_score": 82,
     "similar": [
       {
-        "title": "Lone Star State of Mind",
-        "year": 2002,
-        "imdb_id": "tt0280713"
-      },
-      {
         "title": "Limbo",
         "year": 1999,
         "imdb_id": "tt0171886"
@@ -5927,6 +6310,11 @@
         "title": "City of Hope",
         "year": 1991,
         "imdb_id": "tt0101572"
+      },
+      {
+        "title": "Return of the Secaucus 7",
+        "year": 1980,
+        "imdb_id": "tt0081507"
       }
     ]
   },
@@ -5935,7 +6323,7 @@
     "title": "Bound",
     "year": 1996,
     "director": "Lana Wachowski, Lilly Wachowski",
-    "poster": "https://www.themoviedb.org/t/p/w1280/9qAy6UWVw44dGrsyKrdEMt5qIUM.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/9qAy6UWVw44dGrsyKrdEMt5qIUM.jpg",
     "imdb_id": "tt0115736",
     "genre": "Crime, Thriller",
     "country": "United States",
@@ -5975,7 +6363,7 @@
     "title": "Pee-wee's Big Adventure",
     "year": 1985,
     "director": "Tim Burton",
-    "poster": "https://www.themoviedb.org/t/p/w1280/414IUXc54mrhX88ZUQiRDLXn01i.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/414IUXc54mrhX88ZUQiRDLXn01i.jpg",
     "imdb_id": "tt0089791",
     "genre": "Adventure, Comedy, Family",
     "country": "United States",
@@ -6010,7 +6398,7 @@
     "title": "Eyes Wide Shut",
     "year": 1999,
     "director": "Stanley Kubrick",
-    "poster": "https://www.themoviedb.org/t/p/w1280/knEIz1eNGl5MQDbrEAVWA7iRqF9.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/knEIz1eNGl5MQDbrEAVWA7iRqF9.jpg",
     "imdb_id": "tt0120663",
     "genre": "Drama, Mystery, Thriller",
     "country": "United States",
@@ -6031,10 +6419,10 @@
       {
         "title": "Belle de Jour",
         "year": 1967,
-        "imdb_id": "tt0061722"
+        "imdb_id": "tt0061762"
       },
       {
-        "title": "Liliana Cavani's The Night Porter",
+        "title": "The Night Porter",
         "year": 1974,
         "imdb_id": "tt0071947"
       }
@@ -6045,7 +6433,7 @@
     "title": "The Hurt Locker",
     "year": 2008,
     "director": "Kathryn Bigelow",
-    "poster": "https://www.themoviedb.org/t/p/w1280/io2dfBJhasvGbgkCX9cCGVOiA99.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/io2dfBJhasvGbgkCX9cCGVOiA99.jpg",
     "imdb_id": "tt0887912",
     "genre": "Drama, Thriller, War",
     "country": "United States",
@@ -6085,7 +6473,7 @@
     "title": "Dogma",
     "year": 1999,
     "director": "Kevin Smith",
-    "poster": "https://www.themoviedb.org/t/p/w1280/oxhHl2YokTqcP44QK5tiTgjgLgk.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/oxhHl2YokTqcP44QK5tiTgjgLgk.jpg",
     "imdb_id": "tt0120655",
     "genre": "Adventure, Comedy, Drama",
     "country": "United States",
@@ -6125,7 +6513,7 @@
     "title": "The White Balloon",
     "year": 1995,
     "director": "Jafar Panahi",
-    "poster": "https://www.themoviedb.org/t/p/w1280/u6jrlgZZx3zSFPDPTVOYpueljgH.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/u6jrlgZZx3zSFPDPTVOYpueljgH.jpg",
     "imdb_id": "tt0112445",
     "genre": "Drama, Family",
     "country": "Iran",
@@ -6159,7 +6547,7 @@
     "title": "Babylon",
     "year": 2022,
     "director": "Damien Chazelle",
-    "poster": "https://www.themoviedb.org/t/p/w1280/wjOHjWCUE0YzDiEzKv8AfqHj3ir.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/wjOHjWCUE0YzDiEzKv8AfqHj3ir.jpg",
     "imdb_id": "tt10640346",
     "genre": "Comedy, Drama",
     "country": "United States",
@@ -6199,7 +6587,7 @@
     "title": "Shaun of the Dead",
     "year": 2004,
     "director": "Edgar Wright",
-    "poster": "https://www.themoviedb.org/t/p/w1280/dgXPhzNJH8HFTBjXPB177yNx6RI.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/dgXPhzNJH8HFTBjXPB177yNx6RI.jpg",
     "imdb_id": "tt0365748",
     "genre": "Comedy, Horror",
     "country": "United Kingdom",
@@ -6239,7 +6627,7 @@
     "title": "Misery",
     "year": 1990,
     "director": "Rob Reiner",
-    "poster": "https://www.themoviedb.org/t/p/w1280/klPO5oh1LOxiPpdDXZo1ADgpKcw.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/klPO5oh1LOxiPpdDXZo1ADgpKcw.jpg",
     "imdb_id": "tt0100157",
     "genre": "Drama, Thriller",
     "country": "United States",
@@ -6274,7 +6662,7 @@
     "title": "Joe Versus the Volcano",
     "year": 1990,
     "director": "John Patrick Shanley",
-    "poster": "https://www.themoviedb.org/t/p/w1280/fwjMUuDZUxedfsUpVQKQN8cYfzB.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/fwjMUuDZUxedfsUpVQKQN8cYfzB.jpg",
     "imdb_id": "tt0099892",
     "genre": "Comedy, Romance",
     "country": "United States",
@@ -6282,14 +6670,32 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775999459701
+    "added": 1775999459701,
+    "score": 6.9,
+    "imdb_score": 6.4,
+    "lb_score": 3.3,
+    "rt_score": 0.61,
+    "mc_score": 52,
+    "lb": "https://letterboxd.com/film/joe-versus-the-volcano/",
+    "similar": [
+      {
+        "title": "The Truman Show",
+        "year": 1998,
+        "imdb_id": "tt0120382"
+      },
+      {
+        "title": "Defending Your Life",
+        "year": 1991,
+        "imdb_id": "tt0101698"
+      }
+    ]
   },
   {
     "id": "1775998783399caoupie9q1q",
     "title": "Clue",
     "year": 1985,
     "director": "Jonathan Lynn",
-    "poster": "https://www.themoviedb.org/t/p/w1280/aRxbYOYHS8T73nzR8hsLousoplR.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/aRxbYOYHS8T73nzR8hsLousoplR.jpg",
     "imdb_id": "tt0088930",
     "genre": "Comedy, Crime, Mystery",
     "country": "United States",
@@ -6297,14 +6703,32 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775998783400
+    "added": 1775998783400,
+    "score": 7.7,
+    "imdb_score": 7.3,
+    "lb_score": 3.9,
+    "rt_score": 0.68,
+    "mc_score": 52,
+    "lb": "https://letterboxd.com/film/clue/",
+    "similar": [
+      {
+        "title": "Knives Out",
+        "year": 2019,
+        "imdb_id": "tt8946378"
+      },
+      {
+        "title": "Murder by Death",
+        "year": 1976,
+        "imdb_id": "tt0074958"
+      }
+    ]
   },
   {
     "id": "1775998583282dbs19s31khm",
     "title": "Hard Target",
     "year": 1993,
     "director": "John Woo",
-    "poster": "https://www.themoviedb.org/t/p/w1280/mXCM7pmUFUGp7QzSmare3RITe6n.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/mXCM7pmUFUGp7QzSmare3RITe6n.jpg",
     "imdb_id": "tt0107076",
     "genre": "Action, Crime, Thriller",
     "country": "United States",
@@ -6312,14 +6736,32 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775998583282
+    "added": 1775998583282,
+    "score": 6.7,
+    "imdb_score": 6.3,
+    "lb_score": 3.3,
+    "rt_score": 0.37,
+    "mc_score": 34,
+    "lb": "https://letterboxd.com/film/hard-target/",
+    "similar": [
+      {
+        "title": "Face/Off",
+        "year": 1997,
+        "imdb_id": "tt0119094"
+      },
+      {
+        "title": "Broken Arrow",
+        "year": 1996,
+        "imdb_id": "tt0115681"
+      }
+    ]
   },
   {
     "id": "1775998429785ky5jnoa7r8",
     "title": "Bloodsport",
     "year": 1988,
     "director": "Newt Arnold",
-    "poster": "https://www.themoviedb.org/t/p/w1280/kndxR9TRK0kJ5hxzDprRSS80F2W.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/kndxR9TRK0kJ5hxzDprRSS80F2W.jpg",
     "imdb_id": "tt0092675",
     "genre": "Action, Biography, Drama",
     "country": "United States",
@@ -6327,14 +6769,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775998429785
+    "added": 1775998429785,
+    "score": 6.7,
+    "imdb_score": 6.8,
+    "lb_score": 3.4,
+    "rt_score": 0.34,
+    "lb": "https://letterboxd.com/film/bloodsport/",
+    "similar": [
+      {
+        "title": "Kickboxer",
+        "year": 1989,
+        "imdb_id": "tt0097654"
+      },
+      {
+        "title": "Enter the Dragon",
+        "year": 1973,
+        "imdb_id": "tt0070034"
+      }
+    ]
   },
   {
     "id": "1775997929904atbr20doefo",
     "title": "So I Married an Axe Murderer",
     "year": 1993,
     "director": "Thomas Schlamme",
-    "poster": "https://www.themoviedb.org/t/p/w1280/zQlpQDKDADKlgqfMs1E191ofDJU.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/zQlpQDKDADKlgqfMs1E191ofDJU.jpg",
     "imdb_id": "tt0108174",
     "genre": "Comedy, Romance",
     "country": "United States",
@@ -6342,29 +6801,64 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775997929904
+    "added": 1775997929904,
+    "score": 7.1,
+    "imdb_score": 6.6,
+    "lb_score": 3.5,
+    "rt_score": 0.52,
+    "lb": "https://letterboxd.com/film/so-i-married-an-axe-murderer/",
+    "similar": [
+      {
+        "title": "Wayne's World",
+        "year": 1992,
+        "imdb_id": "tt0105793"
+      },
+      {
+        "title": "The Man Who Knew Too Little",
+        "year": 1997,
+        "imdb_id": "tt0119535"
+      }
+    ]
   },
   {
     "id": "1775997906621qu02xg63bpl",
     "title": "Austin Powers: International Man of Mystery",
     "year": 1997,
     "director": "Jay Roach",
-    "poster": "https://www.themoviedb.org/t/p/w1280/5uD4dxNX8JKFjWKYMHyOsqhi5pN.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/5uD4dxNX8JKFjWKYMHyOsqhi5pN.jpg",
     "imdb_id": "tt0118655",
     "genre": "Adventure, Comedy",
-    "country": "Germany",
+    "country": "United States",
     "runtime": 89,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1775997906622
+    "added": 1775997906622,
+    "score": 7.0,
+    "imdb_score": 7.0,
+    "lb_score": 3.5,
+    "rt_score": 0.72,
+    "mc_score": 55,
+    "lb": "https://letterboxd.com/film/austin-powers-international-man-of-mystery/",
+    "similar": [
+      {
+        "title": "Austin Powers: The Spy Who Shagged Me",
+        "year": 1999,
+        "imdb_id": "tt0175142"
+      },
+      {
+        "title": "Johnny English",
+        "year": 2003,
+        "imdb_id": "tt0274166"
+      }
+    ]
   },
   {
     "id": "1775877872638dswzwzr85p6",
     "title": "Hereditary",
     "year": 2018,
     "director": "Ari Aster",
-    "poster": "https://www.themoviedb.org/t/p/w1280/hjlZSXM86wJrfCv5VKfR5DI2VeU.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/hjlZSXM86wJrfCv5VKfR5DI2VeU.jpg",
     "imdb_id": "tt7784604",
     "genre": "Drama, Horror, Mystery",
     "country": "United States",
@@ -6402,7 +6896,7 @@
     "title": "Marie Antoinette",
     "year": 2006,
     "director": "Sofia Coppola",
-    "poster": "https://www.themoviedb.org/t/p/w1280/cybXGmv8Rjd5Os8Xml6YxMBQ0Zt.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/cybXGmv8Rjd5Os8Xml6YxMBQ0Zt.jpg",
     "imdb_id": "tt0422720",
     "genre": "Biography, Drama, History",
     "country": "United States",
@@ -6440,7 +6934,7 @@
     "title": "Manon of the Spring",
     "year": 1986,
     "director": "Claude Berri",
-    "poster": "https://www.themoviedb.org/t/p/w1280/1qpu6Zc1PSDL3UbDNIZJ6YuhJDW.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/1qpu6Zc1PSDL3UbDNIZJ6YuhJDW.jpg",
     "imdb_id": "tt0091480",
     "genre": "Drama",
     "country": "France",
@@ -6472,7 +6966,7 @@
     "title": "Harlan County U.S.A.",
     "year": 1976,
     "director": "Barbara Kopple",
-    "poster": "https://www.themoviedb.org/t/p/w1280/p0cyMNsoP5ap0omfhakhImBWTRw.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/p0cyMNsoP5ap0omfhakhImBWTRw.jpg",
     "imdb_id": "tt0074605",
     "genre": "Documentary",
     "country": "United States",
@@ -6509,7 +7003,7 @@
     "title": "In Bruges",
     "year": 2008,
     "director": "Martin McDonagh",
-    "poster": "https://www.themoviedb.org/t/p/w1280/vz3Vd6nfq9YZrVvyYx5RHFaYKV3.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/vz3Vd6nfq9YZrVvyYx5RHFaYKV3.jpg",
     "imdb_id": "tt0780536",
     "genre": "Comedy, Crime, Drama",
     "country": "United Kingdom",
@@ -6547,7 +7041,7 @@
     "title": "Godzilla Minus One",
     "year": 2023,
     "director": "Takashi Yamazaki",
-    "poster": "https://www.themoviedb.org/t/p/w1280/2E2WTX0TJEflAged6kzErwqX1kt.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/2E2WTX0TJEflAged6kzErwqX1kt.jpg",
     "imdb_id": "tt23289160",
     "genre": "Action, Adventure, Drama",
     "country": "Japan",
@@ -6578,14 +7072,15 @@
         "year": 2008,
         "imdb_id": "tt1060277"
       }
-    ]
+    ],
+    "has4k": true
   },
   {
     "id": "1775874263968vgrmc7l35wl",
     "title": "Champion",
     "year": 1949,
     "director": "Mark Robson",
-    "poster": "https://www.themoviedb.org/t/p/w1280/luBAS7aD9Iu6RwEumfXbQewjO1g.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/luBAS7aD9Iu6RwEumfXbQewjO1g.jpg",
     "imdb_id": "tt0041239",
     "genre": "Drama, Film-Noir, Sport",
     "country": "United States",
@@ -6623,7 +7118,7 @@
     "title": "The Intouchables",
     "year": 2011,
     "director": "Olivier Nakache, Éric Toledano",
-    "poster": "https://www.themoviedb.org/t/p/w1280/1QU7HKgsQbGpzsJbJK4pAVQV9F5.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/1QU7HKgsQbGpzsJbJK4pAVQV9F5.jpg",
     "imdb_id": "tt1675434",
     "genre": "Comedy, Drama",
     "country": "France",
@@ -6656,7 +7151,7 @@
     "title": "American History X",
     "year": 1998,
     "director": "Tony Kaye",
-    "poster": "https://www.themoviedb.org/t/p/w1280/x2drgoXYZ8484lqyDj7L1CEVR4T.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/x2drgoXYZ8484lqyDj7L1CEVR4T.jpg",
     "imdb_id": "tt0120586",
     "genre": "Crime, Drama",
     "country": "United States",
@@ -6694,7 +7189,7 @@
     "title": "Léon: The Professional",
     "year": 1994,
     "director": "Luc Besson",
-    "poster": "https://www.themoviedb.org/t/p/w1280/bxB2q91nKYp8JNzqE7t7TWBVupB.jpg",
+    "poster": "https://image.tmdb.org/t/p/w1280/bxB2q91nKYp8JNzqE7t7TWBVupB.jpg",
     "imdb_id": "tt0110413",
     "genre": "Action, Crime, Drama",
     "country": "France",
