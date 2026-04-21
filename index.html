@@ -1646,6 +1646,49 @@ function afmCopyEntry(){
   });
 }
 
+
+// ── WISHLIST → COLLECTION PREFILL ────────────────────────────────────────
+(function(){
+  const params=new URLSearchParams(window.location.search);
+  const raw=params.get('addfilm');
+  if(!raw)return;
+  try{
+    const f=JSON.parse(decodeURIComponent(escape(atob(raw))));
+    // Wait for DOM to be ready, then open and prefill
+    function prefill(){
+      afmClearForm();
+      const set=(id,val)=>{const el=document.getElementById(id);if(el&&val!=null)el.value=val;};
+      set('afm-title', f.title);
+      set('afm-year',  f.year);
+      set('afm-director', f.director);
+      set('afm-runtime', f.runtime);
+      set('afm-genre', f.genre);
+      set('afm-country', f.country);
+      set('afm-distributor', f.distributor);
+      set('afm-imdb-id', f.imdb_id);
+      set('afm-poster', f.poster);
+      set('afm-lb', f.lb);
+      set('afm-synopsis', f.synopsis);
+      if(f.imdb_score) set('afm-score', parseFloat(f.imdb_score).toFixed(1));
+      // Auto-calc decade from year
+      if(f.year&&!f.decade){
+        const d=Math.floor(parseInt(f.year)/10)*10+'s';
+        const decEl=document.getElementById('afm-decade');
+        if(decEl)decEl.value=d;
+      }
+      // Open modal
+      document.getElementById('add-film-modal').classList.add('open');
+      document.body.style.overflow='hidden';
+      // Clean URL without reloading
+      history.replaceState({},'',window.location.pathname);
+    }
+    if(document.readyState==='loading'){
+      document.addEventListener('DOMContentLoaded', prefill);
+    } else {
+      setTimeout(prefill, 100);
+    }
+  }catch(e){ console.warn('addfilm param error:',e); }
+})();
 </script>
 
 <script>
