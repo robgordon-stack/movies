@@ -210,6 +210,55 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 .share-option .so-title{font-size:14px;font-weight:600;margin-bottom:2px}
 .share-option .so-desc{font-size:12px;color:var(--mut)}
 
+
+/* ── ADD FILM MODAL ── */
+.add-film-modal-wrap{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:500;display:none;align-items:flex-end;justify-content:center;padding:0}
+.add-film-modal-wrap.open{display:flex}
+@media(min-width:600px){.add-film-modal-wrap{align-items:center;padding:20px}}
+.add-film-modal{background:var(--surf);border-radius:16px 16px 0 0;width:100%;max-width:520px;max-height:92vh;overflow-y:auto;position:relative;padding-bottom:env(safe-area-inset-bottom)}
+@media(min-width:600px){.add-film-modal{border-radius:16px}}
+.afm-handle{width:36px;height:4px;background:var(--surf3);border-radius:2px;margin:12px auto 0}
+.afm-inner{padding:16px 20px 32px}
+.afm-inner h2{font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:4px}
+.afm-inner .afm-sub{font-size:12px;color:var(--mut);margin-bottom:16px}
+.afm-close{position:absolute;top:14px;right:14px;background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:50%;width:32px;height:32px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:color .15s}
+.afm-close:hover{color:var(--txt)}
+.afm-field{margin-bottom:12px}
+.afm-field label{display:block;font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px}
+.afm-field input,.afm-field select,.afm-field textarea{width:100%;background:var(--surf2);border:1px solid var(--bdr);color:var(--txt);border-radius:8px;padding:9px 12px;font-size:14px;outline:none;font-family:'DM Sans',sans-serif;transition:border-color .2s;-webkit-appearance:none}
+.afm-field input:focus,.afm-field select:focus,.afm-field textarea:focus{border-color:rgba(232,185,79,.35)}
+.afm-field select{cursor:pointer}
+.afm-field textarea{resize:none;height:72px;line-height:1.5}
+.afm-row{display:flex;gap:10px}
+.afm-row .afm-field{flex:1}
+.afm-search-wrap{position:relative;margin-bottom:14px}
+.afm-search-wrap label{display:block;font-size:10px;font-weight:700;color:var(--acc);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px}
+.afm-search-wrap input{width:100%;background:var(--surf2);border:1px solid rgba(232,185,79,.3);color:var(--txt);border-radius:8px;padding:10px 12px;font-size:14px;outline:none;font-family:'DM Sans',sans-serif;transition:border-color .2s}
+.afm-search-wrap input:focus{border-color:rgba(232,185,79,.6)}
+.afm-results{position:absolute;top:100%;left:0;right:0;background:var(--surf2);border:1px solid var(--bdr);border-radius:8px;overflow:hidden;z-index:10;max-height:200px;overflow-y:auto;display:none;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.afm-result-item{display:flex;align-items:center;gap:10px;padding:10px 12px;cursor:pointer;transition:background .15s;border-bottom:1px solid var(--bdr)}
+.afm-result-item:last-child{border-bottom:none}
+.afm-result-item:hover{background:var(--surf3)}
+.afm-result-item img{width:36px;height:54px;object-fit:cover;border-radius:4px;flex-shrink:0;background:var(--surf3)}
+.afm-result-item .afm-ri-noimg{width:36px;height:54px;flex-shrink:0;background:var(--surf3);border-radius:4px}
+.afm-result-item .afm-ri-title{font-size:13px;font-weight:600;line-height:1.3;color:var(--txt)}
+.afm-result-item .afm-ri-meta{font-size:11px;color:var(--mut);margin-top:2px}
+.afm-searching{padding:12px;font-size:12px;color:var(--mut);text-align:center}
+.afm-divider{border:none;border-top:1px solid var(--bdr);margin:16px 0 14px}
+.afm-section-label{font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.afm-section-label::after{content:'';flex:1;height:1px;background:var(--bdr)}
+.afm-output{background:var(--surf2);border:1px solid var(--bdr);border-radius:8px;padding:12px;font-size:11px;font-family:monospace;color:var(--txt);line-height:1.6;white-space:pre-wrap;word-break:break-all;margin-top:14px;display:none;max-height:180px;overflow-y:auto}
+.afm-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.afm-btn{flex:1;min-width:120px;padding:11px 12px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;text-align:center;border:none;font-family:'DM Sans',sans-serif;transition:opacity .15s,transform .1s}
+.afm-btn:active{opacity:.8;transform:scale(.97)}
+.afm-btn-primary{background:var(--acc);color:#000}
+.afm-btn-secondary{background:var(--surf2);border:1px solid var(--bdr);color:var(--txt)}
+.afm-btn-copy{background:rgba(76,175,125,.15);border:1px solid rgba(76,175,125,.5);color:var(--grn)}
+.afm-btn-copy.copied{background:rgba(76,175,125,.3);border-color:var(--grn)}
+.afm-notice{font-size:11px;color:var(--mut);line-height:1.6;padding:10px 12px;background:var(--surf2);border-radius:8px;border-left:3px solid var(--acc);margin-top:10px}
+.add-film-btn{background:none;border:1px solid rgba(232,185,79,.25);color:var(--acc);border-radius:8px;padding:6px 10px;font-size:12px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:5px;font-family:'DM Sans',sans-serif;transition:border-color .15s}
+.add-film-btn:hover{border-color:rgba(232,185,79,.5)}
+
 </style>
 <body>
 
@@ -232,6 +281,10 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
     </div>
     <div style="display:flex;align-items:center;gap:6px;flex-shrink:0">
       <a href="wishlist.html" title="Wish List" style="display:none" aria-hidden="true"></a>
+      <button onclick="openAddFilmModal()" class="add-film-btn" title="Add a new film to the collection">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Add Film
+      </button>
       <button onclick="openShareModal()" title="Share collection" style="display:flex;align-items:center;gap:5px;background:none;border:1px solid rgba(232,185,79,.25);color:var(--acc);border-radius:8px;padding:6px 10px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:border-color .15s" onmouseover="this.style.borderColor='rgba(232,185,79,.5)'" onmouseout="this.style.borderColor='rgba(232,185,79,.25)'">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
         Share
@@ -1190,6 +1243,176 @@ h1{font-family:'DM Serif Display',serif;font-size:26px;color:#e8b94f}
   <span class="meta">${C.length} films · ${watched} watched · ${now}</span>
 </div>
 <div class="grid">${cards}</div>
+
+<div class="add-film-modal-wrap" id="add-film-modal" onclick="if(event.target===this)closeAddFilmModal()">
+  <div class="add-film-modal">
+    <div class="afm-handle"></div>
+    <div class="afm-inner">
+      <button class="afm-close" onclick="closeAddFilmModal()">×</button>
+      <h2>Add to Collection</h2>
+      <p class="afm-sub">Search OMDB to autofill, or enter manually. Copy the generated entry and paste it into the C array in your HTML file.</p>
+
+      <div class="afm-search-wrap">
+        <label>🔍 Search OMDB to autofill</label>
+        <input type="search" id="afm-search" placeholder="Type a film title…" autocomplete="off" autocorrect="off" spellcheck="false" oninput="afmSearch()">
+        <div class="afm-results" id="afm-results"></div>
+      </div>
+
+      <div class="afm-section-label">Film details</div>
+
+      <div class="afm-row">
+        <div class="afm-field" style="flex:2">
+          <label>Title *</label>
+          <input type="text" id="afm-title" placeholder="Film title">
+        </div>
+        <div class="afm-field" style="flex:1">
+          <label>Year</label>
+          <input type="number" id="afm-year" placeholder="1984" min="1888" max="2030">
+        </div>
+      </div>
+
+      <div class="afm-row">
+        <div class="afm-field" style="flex:2">
+          <label>Director</label>
+          <input type="text" id="afm-director" placeholder="e.g. Stanley Kubrick">
+        </div>
+        <div class="afm-field" style="flex:1">
+          <label>Runtime (min)</label>
+          <input type="number" id="afm-runtime" placeholder="142">
+        </div>
+      </div>
+
+      <div class="afm-row">
+        <div class="afm-field">
+          <label>Country</label>
+          <select id="afm-country">
+            <option value="">— select —</option>
+            <option>Usa</option><option>Uk</option><option>France</option><option>Italy</option>
+            <option>Germany</option><option>Japan</option><option>South Korea</option><option>Sweden</option>
+            <option>Hong Kong</option><option>Australia</option><option>Russia</option><option>China</option>
+            <option>Taiwan</option><option>Denmark</option><option>Poland</option><option>Spain</option>
+            <option>Hungary</option><option>Iran</option><option>Ireland</option><option>Belgium</option>
+            <option>Netherlands</option><option>Canada</option><option>Brazil</option><option>Argentina</option>
+            <option>Finland</option><option>Norway</option><option>Austria</option><option>Switzerland</option>
+            <option>Portugal</option><option>Greece</option><option>Turkey</option><option>India</option>
+            <option>Mexico</option><option>Algeria</option><option>Cuba</option><option>Senegal</option>
+            <option>Yugoslavia</option><option>Soviet Union</option><option>Czechoslovakia</option>
+            <option>New Zealand</option><option>Colombia</option><option>Lebanon</option>
+            <option>Romania</option><option>Thailand</option>
+          </select>
+        </div>
+        <div class="afm-field">
+          <label>Decade</label>
+          <select id="afm-decade">
+            <option value="">— auto —</option>
+            <option>1920s</option><option>1930s</option><option>1940s</option><option>1950s</option>
+            <option>1960s</option><option>1970s</option><option>1980s</option><option>1990s</option>
+            <option>2000s</option><option>2010s</option><option>2020s</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="afm-field">
+        <label>Genre (comma-separated)</label>
+        <input type="text" id="afm-genre" placeholder="e.g. Drama, Thriller">
+      </div>
+
+      <div class="afm-section-label">Physical copy details</div>
+
+      <div class="afm-row">
+        <div class="afm-field">
+          <label>Format</label>
+          <select id="afm-format">
+            <option value="Blu-ray">Blu-ray</option>
+            <option value="4K Blu-ray">4K Blu-ray</option>
+            <option value="4K Blu-ray + Blu-ray">4K Blu-ray + Blu-ray</option>
+            <option value="DVD">DVD</option>
+            <option value="3D Blu-ray">3D Blu-ray</option>
+          </select>
+        </div>
+        <div class="afm-field">
+          <label>Distributor</label>
+          <input type="text" id="afm-distributor" placeholder="e.g. Criterion Collection">
+        </div>
+      </div>
+
+      <div class="afm-row">
+        <div class="afm-field">
+          <label>Score (0–10)</label>
+          <input type="number" id="afm-score" placeholder="8.5" min="0" max="10" step="0.1">
+        </div>
+        <div class="afm-field">
+          <label>Criterion Spine #</label>
+          <input type="text" id="afm-spine" placeholder="e.g. 392">
+        </div>
+      </div>
+
+      <div class="afm-row">
+        <div class="afm-field">
+          <label>Watched?</label>
+          <select id="afm-watched">
+            <option value="false">No</option>
+            <option value="true">Yes</option>
+          </select>
+        </div>
+        <div class="afm-field">
+          <label>IMDB ID</label>
+          <input type="text" id="afm-imdb-id" placeholder="tt1234567">
+        </div>
+      </div>
+
+      <div class="afm-field">
+        <label>Poster URL</label>
+        <input type="url" id="afm-poster" placeholder="https://...">
+      </div>
+
+      <div class="afm-field">
+        <label>Letterboxd URL</label>
+        <input type="url" id="afm-lb" placeholder="https://boxd.it/...">
+      </div>
+
+      <div class="afm-field">
+        <label>Synopsis</label>
+        <textarea id="afm-synopsis" placeholder="Brief plot description…"></textarea>
+      </div>
+
+      <div class="afm-btn-row">
+        <button class="afm-btn afm-btn-primary" onclick="afmGenerate()">Generate Entry</button>
+        <button class="afm-btn afm-btn-secondary" onclick="afmClearForm()">Clear</button>
+      </div>
+
+      <div class="afm-output" id="afm-output"></div>
+      <div class="afm-btn-row" id="afm-copy-row" style="display:none">
+        <button class="afm-btn afm-btn-copy" id="afm-copy-btn" onclick="afmCopyEntry()">📋 Copy entry JSON</button>
+      </div>
+      <div class="afm-notice" id="afm-notice" style="display:none">
+        ✅ Copy the JSON above, then open your <code>index.html</code> file, find the <code>const C=[</code> line,
+        and paste the entry before the closing <code>]</code>. Save and reload.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── TAB NAV ── -->
+<nav class="tabnav">
+  <div class="tabitem active" data-page="collection" onclick="switchTab('collection')">
+    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+    Collection
+  </div>
+  <div class="tabitem" data-page="stats" onclick="switchTab('stats')">
+    <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+    Stats
+  </div>
+  <div class="tabitem" data-page="watchnext" onclick="switchTab('watchnext')">
+    <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+    Watch Next
+  </div>
+  <a class="tabitem" href="wishlist.html" style="text-decoration:none">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    Wishlist
+  </a>
+</nav>
+
 </body>
 </html>`;
 
@@ -1228,6 +1451,199 @@ function copyCollectionJSON(){
   navigator.clipboard.writeText(JSON.stringify(data,null,2))
     .then(()=>{ closeShareModal(); })
     .catch(()=>alert('Could not copy — try the HTML export instead.'));
+}
+
+
+let afmSearchTimer=null;
+let afmResultCache=[];
+
+function openAddFilmModal(){
+  afmClearForm();
+  document.getElementById('add-film-modal').classList.add('open');
+  document.body.style.overflow='hidden';
+  setTimeout(()=>document.getElementById('afm-search').focus(),200);
+}
+
+function closeAddFilmModal(){
+  document.getElementById('add-film-modal').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'&&document.getElementById('add-film-modal').classList.contains('open'))closeAddFilmModal();
+});
+
+function afmSearch(){
+  clearTimeout(afmSearchTimer);
+  const q=document.getElementById('afm-search').value.trim();
+  const res=document.getElementById('afm-results');
+  if(q.length<2){res.style.display='none';return;}
+  afmSearchTimer=setTimeout(async()=>{
+    res.style.display='block';
+    res.innerHTML=`<div class="afm-searching">Searching…</div>`;
+    try{
+      const r=await fetch(`https://www.omdbapi.com/?s=${encodeURIComponent(q)}&type=movie&apikey=trilogy`);
+      const d=await r.json();
+      if(d.Search&&d.Search.length){
+        afmResultCache=d.Search.slice(0,6).map(m=>({
+          title:m.Title,year:m.Year?parseInt(m.Year):null,
+          poster:m.Poster&&m.Poster!=='N/A'?m.Poster:'',imdb_id:m.imdbID
+        }));
+        res.innerHTML=afmResultCache.map((m,i)=>`
+          <div class="afm-result-item" onclick="afmSelectFilm(${i})">
+            ${m.poster?`<img src="${ex(m.poster)}" loading="lazy">`:`<div class="afm-ri-noimg"></div>`}
+            <div><div class="afm-ri-title">${ex(m.title)}</div><div class="afm-ri-meta">${m.year||''} · tap to select</div></div>
+          </div>`).join('');
+      } else {
+        res.innerHTML=`<div class="afm-searching">No results — fill in manually below</div>`;
+      }
+    }catch(e){
+      res.innerHTML=`<div class="afm-searching">Search unavailable — fill in manually</div>`;
+    }
+  },400);
+}
+
+async function afmSelectFilm(i){
+  const f=afmResultCache[i];if(!f)return;
+  const res=document.getElementById('afm-results');
+  res.style.display='none';
+  document.getElementById('afm-search').value=f.title;
+  document.getElementById('afm-title').value=f.title||'';
+  document.getElementById('afm-year').value=f.year||'';
+  document.getElementById('afm-poster').value=f.poster||'';
+  document.getElementById('afm-imdb-id').value=f.imdb_id||'';
+  // Auto-set decade from year
+  if(f.year){
+    const decade=Math.floor(f.year/10)*10+'s';
+    const sel=document.getElementById('afm-decade');
+    for(let opt of sel.options){if(opt.value===decade){sel.value=decade;break;}}
+  }
+  // Fetch extra details from OMDB
+  if(f.imdb_id){
+    try{
+      const r2=await fetch(`https://www.omdbapi.com/?i=${f.imdb_id}&apikey=trilogy`);
+      const d2=await r2.json();
+      if(d2.Response==='True'){
+        if(d2.Director&&d2.Director!=='N/A'&&!document.getElementById('afm-director').value)
+          document.getElementById('afm-director').value=d2.Director;
+        if(d2.Runtime&&d2.Runtime!=='N/A')
+          document.getElementById('afm-runtime').value=parseInt(d2.Runtime)||'';
+        if(d2.Genre&&d2.Genre!=='N/A'&&!document.getElementById('afm-genre').value)
+          document.getElementById('afm-genre').value=d2.Genre;
+        if(d2.Plot&&d2.Plot!=='N/A'&&!document.getElementById('afm-synopsis').value)
+          document.getElementById('afm-synopsis').value=d2.Plot;
+        // country mapping
+        if(d2.Country&&d2.Country!=='N/A'){
+          const rawC=d2.Country.split(',')[0].trim();
+          const countryMap={'United States':'Usa','UK':'Uk','United Kingdom':'Uk','France':'France',
+            'Italy':'Italy','Germany':'Germany','Japan':'Japan','South Korea':'South Korea',
+            'Sweden':'Sweden','Hong Kong':'Hong Kong','Australia':'Australia','Russia':'Russia',
+            'China':'China','Taiwan':'Taiwan','Denmark':'Denmark','Poland':'Poland','Spain':'Spain',
+            'Hungary':'Hungary','Iran':'Iran','Ireland':'Ireland','Belgium':'Belgium',
+            'Netherlands':'Netherlands','Canada':'Canada','Brazil':'Brazil','Argentina':'Argentina',
+            'Finland':'Finland','Norway':'Norway','Austria':'Austria','Switzerland':'Switzerland',
+            'Portugal':'Portugal','Greece':'Greece','Turkey':'Turkey','India':'India',
+            'Mexico':'Mexico','Algeria':'Algeria','Cuba':'Cuba','Senegal':'Senegal',
+            'New Zealand':'New Zealand','Colombia':'Colombia','Lebanon':'Lebanon',
+            'Romania':'Romania','Thailand':'Thailand'};
+          const mapped=countryMap[rawC]||rawC;
+          const cSel=document.getElementById('afm-country');
+          for(let opt of cSel.options){if(opt.value===mapped){cSel.value=mapped;break;}}
+        }
+        if(d2.imdbRating&&d2.imdbRating!=='N/A'){
+          const iScore=parseFloat(d2.imdbRating);
+          // Auto-suggest score as IMDB rating if not set
+          if(!document.getElementById('afm-score').value){
+            document.getElementById('afm-score').value=iScore.toFixed(1);
+          }
+        }
+      }
+    }catch(e){}
+  }
+  document.getElementById('afm-title').focus();
+}
+
+function afmClearForm(){
+  ['afm-search','afm-title','afm-year','afm-director','afm-runtime','afm-genre',
+   'afm-distributor','afm-score','afm-spine','afm-imdb-id','afm-poster','afm-lb','afm-synopsis']
+    .forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  document.getElementById('afm-format').value='Blu-ray';
+  document.getElementById('afm-watched').value='false';
+  document.getElementById('afm-country').value='';
+  document.getElementById('afm-decade').value='';
+  document.getElementById('afm-results').style.display='none';
+  document.getElementById('afm-output').style.display='none';
+  const cr=document.getElementById('afm-copy-row');
+  if(cr)cr.style.display='none';
+  const notice=document.getElementById('afm-notice');
+  if(notice)notice.style.display='none';
+}
+
+function afmGenerate(){
+  const title=document.getElementById('afm-title').value.trim();
+  if(!title){alert('Please enter a title.');return;}
+  const year=parseInt(document.getElementById('afm-year').value)||null;
+  let decade=document.getElementById('afm-decade').value||null;
+  if(!decade&&year) decade=Math.floor(year/10)*10+'s';
+  const director=document.getElementById('afm-director').value.trim()||null;
+  const runtime=parseInt(document.getElementById('afm-runtime').value)||null;
+  const country=document.getElementById('afm-country').value||null;
+  const genre=document.getElementById('afm-genre').value.trim()||null;
+  const format=document.getElementById('afm-format').value||'Blu-ray';
+  const distributor=document.getElementById('afm-distributor').value.trim()||null;
+  const score=parseFloat(document.getElementById('afm-score').value)||null;
+  const spine=document.getElementById('afm-spine').value.trim()||'';
+  const watched=document.getElementById('afm-watched').value==='true';
+  const imdb_id=document.getElementById('afm-imdb-id').value.trim()||null;
+  const poster=document.getElementById('afm-poster').value.trim()||null;
+  const lb=document.getElementById('afm-lb').value.trim()||null;
+  const synopsis=document.getElementById('afm-synopsis').value.trim()||null;
+
+  const entry={title};
+  if(year!==null)entry.year=year;
+  if(decade)entry.decade=decade;
+  if(director)entry.director=director;
+  if(country)entry.country=country;
+  if(genre)entry.genre=genre;
+  if(runtime!==null)entry.runtime=runtime;
+  if(score!==null)entry.score=score;
+  if(distributor)entry.distributor=distributor;
+  entry.format=format;
+  entry.watched=watched;
+  entry.spine=spine;
+  if(lb)entry.lb=lb;
+  if(poster)entry.poster=poster;
+  if(imdb_id)entry.imdb_id=imdb_id;
+  if(synopsis)entry.synopsis=synopsis;
+
+  const json=JSON.stringify(entry,null,2);
+  const out=document.getElementById('afm-output');
+  out.textContent=json;
+  out.style.display='block';
+  const cr=document.getElementById('afm-copy-row');
+  cr.style.display='flex';
+  const notice=document.getElementById('afm-notice');
+  notice.style.display='block';
+  // Also add to runtime C array so it shows immediately
+  C.push(entry);
+  filt();
+  sts();
+  const btn=document.getElementById('afm-copy-btn');
+  btn.classList.remove('copied');
+  btn.textContent='📋 Copy entry JSON';
+}
+
+function afmCopyEntry(){
+  const text=document.getElementById('afm-output').textContent;
+  navigator.clipboard.writeText(text).then(()=>{
+    const btn=document.getElementById('afm-copy-btn');
+    btn.textContent='✓ Copied!';
+    btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='📋 Copy entry JSON';btn.classList.remove('copied');},2500);
+  }).catch(()=>{
+    document.getElementById('afm-output').select?.();
+    alert('Copy failed — please select and copy manually.');
+  });
 }
 
 </script>
