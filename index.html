@@ -35,6 +35,12 @@ header{background:rgba(23,23,23,.97);backdrop-filter:blur(16px);-webkit-backdrop
 .hrow{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family:'DM Serif Display',serif}
 .cnt{font-size:11px;color:var(--mut);white-space:nowrap}
+/* ── HEADER ICON BUTTONS (mobile = icon only, wider = labelled) ── */
+.hdr-icon-btn{display:flex;align-items:center;justify-content:center;gap:5px;border-radius:8px;padding:7px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:all .15s;flex-shrink:0}
+.hdr-icon-btn:not(.surprise-btn){background:none;border:1px solid rgba(232,185,79,.25);color:var(--acc)}
+.hdr-icon-btn:not(.surprise-btn):hover{border-color:rgba(232,185,79,.5)}
+.hdr-btn-label{display:none}
+@media(min-width:420px){.hdr-btn-label{display:inline}.hdr-icon-btn{padding:6px 10px}}
 .surprise-btn{background:var(--acc);border:none;color:#000;border-radius:20px;padding:5px 12px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;font-family:'DM Sans',sans-serif;transition:transform .15s,box-shadow .15s;will-change:transform}
 .surprise-btn:hover{box-shadow:0 0 16px rgba(232,185,79,.4)}
 .surprise-btn:active{opacity:.8;transform:scale(.95)}
@@ -307,16 +313,20 @@ button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
       </div>
     </div>
     <div style="display:flex;align-items:center;gap:6px;flex-shrink:0">
+      <!-- Share — icon-only on mobile, labelled on wider screens -->
+      <button onclick="openShareModal()" title="Share collection" class="hdr-icon-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+        <span class="hdr-btn-label">Share</span>
+      </button>
+      <!-- Surprise — icon-only on mobile, labelled on wider screens -->
+      <button class="surprise-btn hdr-icon-btn" id="surpriseBtn" title="Pick a random unwatched film for me">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 8v4l3 3"/></svg>
+        <span class="hdr-btn-label">Surprise</span>
+      </button>
+      <!-- Add Film — always shows label as primary CTA -->
       <button onclick="openAddFilmModal()" class="add-film-btn" title="Add a new film to the collection">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         Add Film
-      </button>
-      <button onclick="openShareModal()" title="Share collection" style="display:flex;align-items:center;gap:5px;background:none;border:1px solid rgba(232,185,79,.25);color:var(--acc);border-radius:8px;padding:6px 10px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:border-color .15s">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
-        Share
-      </button>
-      <button class="surprise-btn" id="surpriseBtn" title="Pick a random unwatched film for me" style="padding:6px 10px;font-size:12px;border-radius:8px">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:3px"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 8v4l3 3"/></svg>Surprise
       </button>
     </div>
   </div>
