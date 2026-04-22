@@ -678,6 +678,7 @@ async function loadCollection(){
       injectCast();
       loadOverrides();
       sts();
+      restoreFilterState();
       filt();
     }
   }catch(e){
@@ -702,6 +703,7 @@ function injectCast(){
 const FLAGS={"Usa": "🇺🇸", "Uk": "🇬🇧", "Japan": "🇯🇵", "France": "🇫🇷", "Italy": "🇮🇹", "Germany": "🇩🇪", "Sweden": "🇸🇪", "Hong Kong": "🇭🇰", "Australia": "🇦🇺", "South Korea": "🇰🇷", "Russia": "🇷🇺", "China": "🇨🇳", "Mexico": "🇲🇽", "Taiwan": "🇹🇼", "Denmark": "🇩🇰", "Poland": "🇵🇱", "Spain": "🇪🇸", "Hungary": "🇭🇺", "Iran": "🇮🇷", "Ireland": "🇮🇪", "Belgium": "🇧🇪", "Netherlands": "🇳🇱", "Canada": "🇨🇦", "Brazil": "🇧🇷", "Argentina": "🇦🇷", "Finland": "🇫🇮", "Norway": "🇳🇴", "Austria": "🇦🇹", "Switzerland": "🇨🇭", "Portugal": "🇵🇹", "Greece": "🇬🇷", "Turkey": "🇹🇷", "India": "🇮🇳", "Algeria": "🇩🇿", "Cuba": "🇨🇺", "Senegal": "🇸🇳", "Yugoslavia": "🇷🇸", "Soviet Union": "🇷🇺", "Czechoslovakia": "🇨🇿", "New Zealand": "🇳🇿", "Colombia": "🇨🇴", "Lebanon": "🇱🇧", "Romania": "🇷🇴", "Thailand": "🇹🇭"};
 const DIST_MAP={criterion:"Criterion Collection",arrow:"Arrow Films",indicator:"Indicator",bfi:"BFI",masters:"Masters of Cinema",umbrella:"Umbrella Entertainment",imprint:"Imprint",radiance:"Radiance Films"};
 const LS_KEY="watched_overrides_v2";
+const FS_KEY="filter_state_v1";
 
 // openFilm holds a direct reference to the film object currently shown in the
 // detail sheet. This avoids the stale-index bug where openIdx pointed into
@@ -772,6 +774,7 @@ function filt(){
   // Sort the freshly-filtered array and render
   sortFil();
   updateSummary();
+  saveFilterState();
 }
 
 // sortFil() sorts fil[] in-place and renders — no re-filter.
@@ -926,6 +929,7 @@ function applyFilter(type, value){
   document.getElementById("scoreSlider").value=5;
   document.getElementById("scoreVal").textContent="Any";
   document.querySelectorAll(".chip").forEach(c=>c.classList.remove("active"));
+  saveFilterState();
   document.querySelectorAll("[data-f='all'],[data-d='all'],[data-decade='all'],[data-g='all'],[data-c='all'],[data-rt='all']").forEach(c=>c.classList.add("active"));
 
   if(type==="decade"){
@@ -1175,6 +1179,56 @@ document.getElementById("surpriseBtn").addEventListener("click",()=>{
   if(!pool.length)return;
   opn(fil.indexOf(pool[Math.floor(Math.random()*pool.length)]));
 });
+
+
+// ── Filter state persistence ──────────────────────────────────────────────
+function saveFilterState(){
+  try{
+    localStorage.setItem(FS_KEY,JSON.stringify({af,ad,adecade,ag,ac,art,minScore,sq,sk,sa}));
+  }catch(e){}
+}
+
+function restoreFilterState(){
+  try{
+    const raw=localStorage.getItem(FS_KEY);
+    if(!raw)return;
+    const s=JSON.parse(raw);
+    af=s.af||"all";ad=s.ad||"all";adecade=s.adecade||"all";
+    ag=s.ag||"all";ac=s.ac||"all";art=s.art||"all";
+    minScore=s.minScore!=null?s.minScore:5;
+    sq=s.sq||"";sk=s.sk||"title";sa=s.sa!=null?s.sa:true;
+    // Restore UI to match
+    // Search box
+    const qEl=document.getElementById("q");
+    if(qEl){qEl.value=sq;document.getElementById("qc").style.display=sq?"block":"none";}
+    // Score slider
+    const slider=document.getElementById("scoreSlider");
+    if(slider){slider.value=minScore;document.getElementById("scoreVal").textContent=minScore<=5?"Any":minScore.toFixed(1)+"+";}
+    // Chips — mark the active one for each filter bank
+    const chipMap=[
+      ["[data-f]",af,"data-f"],
+      ["[data-d]",ad,"data-d"],
+      ["[data-decade]",adecade,"data-decade"],
+      ["[data-g]",ag,"data-g"],
+      ["[data-c]",ac,"data-c"],
+      ["[data-rt]",art,"data-rt"],
+    ];
+    chipMap.forEach(([sel,val,attr])=>{
+      document.querySelectorAll(sel).forEach(c=>{
+        c.classList.toggle("active",c.dataset[attr.replace("data-","")]===val);
+      });
+    });
+    // Sort chips
+    document.querySelectorAll(".sort-chip").forEach(c=>{
+      const isActive=c.dataset.sk===sk;
+      c.classList.toggle("active",isActive);
+      if(isActive){
+        const labels=SORT_LABELS[sk];
+        if(labels)c.textContent=sa?labels.asc:labels.desc;
+      }
+    });
+  }catch(e){}
+}
 
 // ── Search ────────────────────────────────────────────────────────────────────
 document.getElementById("q").addEventListener("input",e=>{
@@ -1723,6 +1777,65 @@ function afmCopyEntry(){
     }
   }catch(e){ console.warn('addfilm param error:',e); }
 })();
+
+// ── Keyboard shortcuts ────────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  // Ignore if typing in an input/textarea
+  const tag = document.activeElement.tagName;
+  const inInput = tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
+
+  // Escape — close whatever is open (priority order)
+  if (e.key === 'Escape') {
+    if (document.getElementById('add-film-modal').classList.contains('open')) {
+      closeAddFilmModal(); return;
+    }
+    if (document.getElementById('share-modal').classList.contains('open')) {
+      closeShareModal(); return;
+    }
+    if (openIdx !== -1) {
+      cls(); return;
+    }
+    // Close filter panel if open
+    const fp = document.getElementById('filterPanel');
+    if (fp && fp.classList.contains('open')) {
+      fp.classList.remove('open');
+      document.getElementById('ftbtn').innerHTML='&#x25BC; Filters';
+      return;
+    }
+    // Clear search if active
+    if (sq) {
+      document.getElementById('q').value=''; sq='';
+      document.getElementById('qc').style.display='none'; filt();
+      return;
+    }
+    return;
+  }
+
+  // Arrow navigation — only when sheet is open
+  if (openIdx !== -1) {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      const next = fil[openIdx + 1];
+      if (next) opn(openIdx + 1);
+      return;
+    }
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      const prev = fil[openIdx - 1];
+      if (prev) opn(openIdx - 1);
+      return;
+    }
+  }
+
+  // / — focus search (only when not in input)
+  if (e.key === '/' && !inInput) {
+    e.preventDefault();
+    const q = document.getElementById('q');
+    if (q) { q.focus(); q.select(); }
+    return;
+  }
+});
+
 </script>
 
 <script>

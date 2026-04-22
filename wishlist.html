@@ -1585,6 +1585,50 @@ function moveToCollection(id){
   window.open('index.html?addfilm='+encoded,'_self');
 }
 
+
+// ── Keyboard shortcuts ────────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  const tag = document.activeElement.tagName;
+  const inInput = tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
+
+  // Escape — close whatever is open (priority order)
+  if (e.key === 'Escape') {
+    if (document.getElementById('share-modal').classList.contains('open')) {
+      closeShareModal(); return;
+    }
+    if (document.getElementById('add-modal').classList.contains('open')) {
+      closeAddModal(); return;
+    }
+    if (document.getElementById('sh').classList.contains('open')) {
+      closeSheet(); return;
+    }
+    // Close filter panel if open
+    const fp = document.getElementById('filterPanel');
+    if (fp && fp.classList.contains('open')) {
+      fp.classList.remove('open');
+      const ftbtn = document.getElementById('ftbtn');
+      if (ftbtn) ftbtn.innerHTML = '&#x25BC; Filters';
+      return;
+    }
+    // Clear search if active
+    const searchEl = document.getElementById('wl-search');
+    if (searchEl && searchEl.value) {
+      searchEl.value = '';
+      searchEl.dispatchEvent(new Event('input'));
+      return;
+    }
+    return;
+  }
+
+  // / — focus search
+  if (e.key === '/' && !inInput) {
+    e.preventDefault();
+    const q = document.getElementById('wl-search');
+    if (q) { q.focus(); q.select(); }
+    return;
+  }
+});
+
 </script>
 </body>
 </html>
