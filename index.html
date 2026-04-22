@@ -408,7 +408,7 @@ button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
     <div class="sortchip" data-s="score" data-asc="1"><span class="sortdir">Score</span> <span class="arr">&#x2195;</span></div>
     <div class="sortchip" data-s="year" data-asc="0"><span class="sortdir">Year</span> <span class="arr">&#x2195;</span></div>
     <div class="sortchip" data-s="director" data-asc="1"><span class="sortdir">Director</span> <span class="arr">&#x2195;</span></div>
-    <div class="sortchip" data-s="runtime" data-asc="0"><span class="sortdir">Runtime</span> <span class="arr">&#x2195;</span></div>
+    <div class="sortchip" data-s="runtime" data-asc="1"><span class="sortdir">Runtime</span> <span class="arr">&#x2195;</span></div>
   </div>
   <div class="progress-wrap"><div class="progress-bar" id="progressBar" style="width:0%"></div></div>
   <div class="statsrow">
@@ -1287,7 +1287,7 @@ const SORT_LABELS={
   score:{base:"Score",asc:"High→Low",desc:"Low→High"},
   year:{base:"Year",asc:"Oldest",desc:"Newest"},
   director:{base:"Director",asc:"A→Z",desc:"Z→A"},
-  runtime:{base:"Runtime",asc:"Shortest",desc:"Longest"}
+  runtime:{base:"Runtime",asc:"Longest",desc:"Shortest"}
 };
 function updateSortChips(){
   document.querySelectorAll(".sortchip").forEach(c=>{
