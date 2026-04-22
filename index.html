@@ -44,7 +44,7 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 /* ── SEARCH ── */
 .sw{position:relative;margin-bottom:8px}
 .sw input{width:100%;background:var(--surf2);border:1px solid var(--bdr);color:var(--txt);border-radius:8px;padding:9px 36px 9px 36px;font-size:15px;outline:none;-webkit-appearance:none;font-family:'DM Sans',sans-serif;transition:border-color .2s}
-.sw input:focus{border-color:rgba(232,185,79,.35)}
+.sw input:focus{outline:none}:focus-visible{outline:2px solid rgba(232,185,79,.7);outline-offset:2px;border-color:rgba(232,185,79,.5)}
 .si{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--mut);font-size:15px;pointer-events:none}
 .scl{position:absolute;right:6px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--mut);font-size:20px;cursor:pointer;display:none;line-height:1;padding:8px;min-width:44px;min-height:44px;display:none;align-items:center;justify-content:center}
 
@@ -259,6 +259,17 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 .add-film-btn{background:none;border:1px solid rgba(232,185,79,.25);color:var(--acc);border-radius:8px;padding:6px 10px;font-size:12px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:5px;font-family:'DM Sans',sans-serif;transition:border-color .15s}
 .add-film-btn:hover{border-color:rgba(232,185,79,.5)}
 
+
+/* ── Content fade-in ── */
+@keyframes gridFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.grid.loaded{animation:gridFadeIn .25s ease both}
+
+/* ── Focus-visible for interactive elements ── */
+.card:focus-visible,.chip:focus-visible,.tabitem:focus-visible,
+button:focus-visible,.scl:focus-visible,.sort-chip:focus-visible{
+  outline:2px solid rgba(232,185,79,.7);outline-offset:2px;
+}
+.card:focus,.chip:focus,.tabitem:focus,button:focus,.scl:focus,.sort-chip:focus{outline:none}
 </style>
 <body>
 
@@ -793,6 +804,8 @@ function render(){
   if(!fil.length){g.innerHTML="";g.style.display="none";e.style.display="block";return;}
   e.style.display="none";
   g.innerHTML=fil.map((f,i)=>cardHtml(f,i)).join("");
+  g.classList.remove("loaded");
+  requestAnimationFrame(()=>g.classList.add("loaded"));
 }
 
 function cardHtml(f,i,onclick){
@@ -803,7 +816,7 @@ function cardHtml(f,i,onclick){
   const img=f.poster?`<img src="${f.poster}" alt="${ex(f.title)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`:""
   const fb=`<div class="fb2" ${f.poster?'style="display:none"':""}><div class="ft">${ex(f.title)}</div><div class="fy">${f.year||""}</div></div>`;
   const spine=f.spine&&f.distributor==="Criterion Collection"?`<div class="spine-badge">C${f.spine}</div>`:"";
-  return`<div class="card ${W} ${K} ${isCrit}" onclick="${cb}">${img}${fb}<div class="wb">&#x2713;</div>${K?`<div class="kb">4K</div>`:""}${sc?`<div class="sb">${sc}</div>`:""}${spine}</div>`;
+  return`<div class="card ${W} ${K} ${isCrit}" onclick="${cb}" onkeydown="if(event.key==='Enter'||event.key===' ')event.target.click()" tabindex="0" role="button">${img}${fb}<div class="wb">&#x2713;</div>${K?`<div class="kb">4K</div>`:""}${sc?`<div class="sb">${sc}</div>`:""}${spine}</div>`;
 }
 
 // ── Detail sheet ──────────────────────────────────────────────────────────────
@@ -819,7 +832,7 @@ function opn(i,arr){
 }
 
 function renderSheet(f,arr){
-  const p=f.poster?`<img src="${f.poster}" alt="${ex(f.title)}">`:`<div class="fb2"><div class="ft">${ex(f.title)}</div></div>`;
+  const p=f.poster?`<img src="${f.poster}" alt="${ex(f.title)}" loading="lazy">`:`<div class="fb2"><div class="ft">${ex(f.title)}</div></div>`;
   const gs=f.genre?f.genre.split(",").slice(0,4).map(g=>`<span class="tag">${g.trim()}</span>`).join(""):"";
   const wt=f.watched?`<span class="tag g">&#x2713; Watched</span>`:`<span class="tag">Unwatched</span>`;
   const ft=f.multi_format

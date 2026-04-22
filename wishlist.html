@@ -270,6 +270,20 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
 
 /* ── MOVE TO COLLECTION BUTTON ── */
 .sh-btn-collect{background:rgba(232,185,79,.12);border:1px solid var(--acc);color:var(--acc);}
+
+/* ── Content fade-in ── */
+@keyframes gridFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.grid.loaded{animation:gridFadeIn .25s ease both}
+
+/* ── Focus-visible for interactive elements ── */
+.card:focus-visible,.chip:focus-visible,.tabitem:focus-visible,
+button:focus-visible,.scl:focus-visible,.sort-chip:focus-visible{
+  outline:2px solid rgba(232,185,79,.7);outline-offset:2px;
+}
+.card:focus,.chip:focus,.tabitem:focus,button:focus,.scl:focus,.sort-chip:focus{outline:none}
+
+/* ── MOVE TO COLLECTION BUTTON ── */
+.sh-btn-collect{background:rgba(232,185,79,.12);border:1px solid var(--acc);color:var(--acc);}
 </style>
 </head>
 <body>
@@ -648,6 +662,8 @@ function render(){
   if(!list.length){grid.innerHTML="";empty.style.display="block";renderDirectorChips();return;}
   empty.style.display="none";
   grid.innerHTML=list.map(f=>cardHtml(f)).join("");
+  g.classList.remove("loaded");
+  requestAnimationFrame(()=>g.classList.add("loaded"));
   renderDirectorChips();
 }
 
@@ -660,7 +676,7 @@ function cardHtml(f){
   const owned=isOwned?`<div class="archive-badge">✓</div>`:"";
   const badge4k=f.has4k?`<div class="badge-4k">4K</div>`:"";
   const scoreBadge=f.score?`<div class="card-score">${parseFloat(f.score).toFixed(1)}</div>`:"";
-  return`<div class="card" onclick="openSheet('${ex(f.id)}')">${img}${fb}<div class="pri-badge pri-${pc}">${PRI_LABEL[f.priority]}</div>${owned}${badge4k}${scoreBadge}</div>`;
+  return`<div class="card" onclick="openSheet('${ex(f.id)}')" onkeydown="if(event.key==='Enter'||event.key===' ')event.target.click()" tabindex="0" role="button">${img}${fb}<div class="pri-badge pri-${pc}">${PRI_LABEL[f.priority]}</div>${owned}${badge4k}${scoreBadge}</div>`;
 }
 
 function filterWishlist(){render();renderHunt();}
@@ -833,7 +849,7 @@ function openSheet(id){
   openItem=f;
   const pc=PRI_CLASS[f.priority]||"low";
   const isOwned=f.owned||ARCHIVE_TITLES.has(f.title.toLowerCase());
-  const poster=f.poster?`<img src="${ex(f.poster)}" alt="${ex(f.title)}">`:`<div class="fb2"><div class="ft">${ex(f.title)}</div></div>`;
+  const poster=f.poster?`<img src="${ex(f.poster)}" alt="${ex(f.title)}" loading="lazy">`:`<div class="fb2"><div class="ft">${ex(f.title)}</div></div>`;
   const ownedTag=isOwned?`<span class="tag tag-owned">✓ In Archive</span>`:"";
   const imdbBtn=f.imdb_id?`<a href="https://www.imdb.com/title/${f.imdb_id}/" target="_blank" class="extlink">IMDb ↗</a>`:"";
   const lbBtn=f.lb
@@ -919,6 +935,7 @@ function openSheet(id){
     })()}
     <div class="sh-actions">
       ${!isOwned?`<button class="sh-btn sh-btn-owned" onclick="markOwned('${f.id}')">✓ Mark as owned</button>`:`<button class="sh-btn sh-btn-pri" onclick="markOwned('${f.id}',true)">Remove from Archive</button>`}
+      <button class="sh-btn sh-btn-collect" onclick="moveToCollection('${f.id}')">➕ Add to Collection</button>
       <button class="sh-btn sh-btn-collect" onclick="moveToCollection('${f.id}')">➕ Add to Collection</button>
       <button class="sh-btn sh-btn-del" onclick="deleteFilm('${f.id}')">Remove</button>
     </div>
@@ -1539,6 +1556,30 @@ function moveToCollection(id){
     imdb_score:f.imdb_score||null
   };
   // Strip nulls
+  Object.keys(payload).forEach(k=>{ if(payload[k]===null||payload[k]==='')delete payload[k]; });
+  const encoded=btoa(unescape(encodeURIComponent(JSON.stringify(payload))));
+  window.open('index.html?addfilm='+encoded,'_self');
+}
+
+
+// ── MOVE TO COLLECTION ───────────────────────────────────────────────────
+function moveToCollection(id){
+  const f=WL.find(x=>x.id===id);
+  if(!f)return;
+  const payload={
+    title:f.title||'',
+    year:f.year||null,
+    director:f.director||null,
+    country:f.country||null,
+    genre:f.genre||null,
+    runtime:f.runtime||null,
+    distributor:f.distributor||null,
+    imdb_id:f.imdb_id||null,
+    poster:f.poster||null,
+    lb:f.lb||null,
+    synopsis:f.synopsis||null,
+    imdb_score:f.imdb_score||null
+  };
   Object.keys(payload).forEach(k=>{ if(payload[k]===null||payload[k]==='')delete payload[k]; });
   const encoded=btoa(unescape(encodeURIComponent(JSON.stringify(payload))));
   window.open('index.html?addfilm='+encoded,'_self');
