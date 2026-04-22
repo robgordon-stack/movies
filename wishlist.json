@@ -4,7 +4,7 @@
     "title": "Annihilation",
     "year": 2018,
     "director": "Alex Garland",
-    "poster": "https://www.themoviedb.org/t/p/w1280/4YRplSk6BhH6PRuE9gfyw9byUJ6.jpg",
+    "poster": "https://image.tmdb.org/t/p/w342/4YRplSk6BhH6PRuE9gfyw9byUJ6.jpg",
     "imdb_id": "tt2798920",
     "genre": "Adventure, Drama, Horror",
     "country": "United Kingdom",
@@ -12,14 +12,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776580933239
+    "added": 1776580933239,
+    "lb": "https://letterboxd.com/imdb/tt2798920/",
+    "score": 7.5,
+    "imdb_score": 6.8,
+    "similar": [
+      {
+        "title": "Ex Machina",
+        "imdb_id": "tt0470752"
+      },
+      {
+        "title": "Arrival",
+        "imdb_id": "tt2543164"
+      },
+      {
+        "title": "Under the Skin",
+        "imdb_id": "tt1441395"
+      }
+    ]
   },
   {
     "id": "1776564824071zi6fthwgs7a",
     "title": "First Cow",
     "year": 2019,
     "director": "Kelly Reichardt",
-    "poster": "https://www.themoviedb.org/t/p/w1280/yS41crZ1i0fFxCQbuL7I1Y1VBwm.jpg",
+    "poster": "https://image.tmdb.org/t/p/w342/yS41crZ1i0fFxCQbuL7I1Y1VBwm.jpg",
     "imdb_id": "tt9231040",
     "genre": "Drama, Western",
     "country": "United States",
@@ -27,14 +44,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776564824073
+    "added": 1776564824073,
+    "lb": "https://letterboxd.com/imdb/tt9231040/",
+    "score": 7.8,
+    "imdb_score": 7,
+    "similar": [
+      {
+        "title": "Meek's Cutoff",
+        "imdb_id": "tt1469304"
+      },
+      {
+        "title": "Wendy and Lucy",
+        "imdb_id": "tt1173510"
+      },
+      {
+        "title": "Old Joy",
+        "imdb_id": "tt0477371"
+      }
+    ]
   },
   {
     "id": "1776564736206udsdheqdsni",
     "title": "The Zone of Interest",
     "year": 2023,
     "director": "Jonathan Glazer",
-    "poster": "https://www.themoviedb.org/t/p/w1280/hUu9zyZmDd8VZegKi1iK1Vk0RYS.jpg",
+    "poster": "https://image.tmdb.org/t/p/w342/hUu9zyZmDd8VZegKi1iK1Vk0RYS.jpg",
     "imdb_id": "tt7160372",
     "genre": "Drama, History, War",
     "country": "United Kingdom",
@@ -42,14 +76,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776564736206
+    "added": 1776564736206,
+    "lb": "https://letterboxd.com/imdb/tt7160372/",
+    "score": 8.2,
+    "imdb_score": 7.4,
+    "similar": [
+      {
+        "title": "Son of Saul",
+        "imdb_id": "tt3808342"
+      },
+      {
+        "title": "The Reader",
+        "imdb_id": "tt0976051"
+      },
+      {
+        "title": "Shoah",
+        "imdb_id": "tt0090015"
+      }
+    ]
   },
   {
     "id": "17765647011598pfh0t9za3c",
     "title": "20th Century Women",
     "year": 2016,
     "director": "Mike Mills",
-    "poster": "https://www.themoviedb.org/t/p/w1280/mso2rEr9i0MilRIOao5HaWFipS9.jpg",
+    "poster": "https://image.tmdb.org/t/p/w342/mso2rEr9i0MilRIOao5HaWFipS9.jpg",
     "imdb_id": "tt4385888",
     "genre": "Comedy, Drama",
     "country": "United States",
@@ -57,14 +108,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776564701160
+    "added": 1776564701160,
+    "lb": "https://letterboxd.com/imdb/tt4385888/",
+    "score": 7.8,
+    "imdb_score": 7.4,
+    "similar": [
+      {
+        "title": "Lady Bird",
+        "imdb_id": "tt4925292"
+      },
+      {
+        "title": "The Squid and the Whale",
+        "imdb_id": "tt0416494"
+      },
+      {
+        "title": "Beginners",
+        "imdb_id": "tt1532503"
+      }
+    ]
   },
   {
     "id": "1776564667786yolazm79yfn",
     "title": "The Florida Project",
     "year": 2017,
     "director": "Sean Baker",
-    "poster": "https://www.themoviedb.org/t/p/w1280/5QnDxdJg1fi6uMSkSi4x8tHsltm.jpg",
+    "poster": "https://image.tmdb.org/t/p/w342/5QnDxdJg1fi6uMSkSi4x8tHsltm.jpg",
     "imdb_id": "tt5649144",
     "genre": "Drama",
     "country": "United States",
@@ -72,14 +140,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776564667787
+    "added": 1776564667787,
+    "lb": "https://letterboxd.com/imdb/tt5649144/",
+    "score": 8.1,
+    "imdb_score": 7.6,
+    "similar": [
+      {
+        "title": "Tangerine",
+        "imdb_id": "tt3824458"
+      },
+      {
+        "title": "Beasts of the Southern Wild",
+        "imdb_id": "tt2125435"
+      },
+      {
+        "title": "Moonlight",
+        "imdb_id": "tt4975722"
+      }
+    ]
   },
   {
     "id": "1776564645375yi5vgbpr8s",
     "title": "The Lighthouse",
     "year": 2019,
     "director": "Robert Eggers",
-    "poster": "https://www.themoviedb.org/t/p/w1280/f1tIYarTbkBdIT1aW0gzelDwknv.jpg",
+    "poster": "https://image.tmdb.org/t/p/w342/f1tIYarTbkBdIT1aW0gzelDwknv.jpg",
     "imdb_id": "tt7984734",
     "genre": "Drama, Fantasy, Horror",
     "country": "Canada",
@@ -87,14 +172,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776564645375
+    "added": 1776564645375,
+    "lb": "https://letterboxd.com/imdb/tt7984734/",
+    "score": 7.9,
+    "imdb_score": 7.4,
+    "similar": [
+      {
+        "title": "The VVitch",
+        "imdb_id": "tt4263482"
+      },
+      {
+        "title": "Shutter Island",
+        "imdb_id": "tt1130884"
+      },
+      {
+        "title": "The Wicker Man",
+        "imdb_id": "tt0070917"
+      }
+    ]
   },
   {
     "id": "1776564539079ad2vg9ahuuj",
     "title": "Good Time",
     "year": 2017,
     "director": "Benny Safdie, Josh Safdie",
-    "poster": "https://www.themoviedb.org/t/p/w1280/yE1c9hj5Hf8a9KplAdRdhADqUro.jpg",
+    "poster": "https://image.tmdb.org/t/p/w342/yE1c9hj5Hf8a9KplAdRdhADqUro.jpg",
     "imdb_id": "tt4846232",
     "genre": "Crime, Drama, Thriller",
     "country": "United States",
@@ -102,14 +204,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776564539079
+    "added": 1776564539079,
+    "lb": "https://letterboxd.com/imdb/tt4846232/",
+    "score": 7.8,
+    "imdb_score": 7.4,
+    "similar": [
+      {
+        "title": "Uncut Gems",
+        "imdb_id": "tt5727208"
+      },
+      {
+        "title": "Heaven Knows What",
+        "imdb_id": "tt3390648"
+      },
+      {
+        "title": "After Hours",
+        "imdb_id": "tt0088680"
+      }
+    ]
   },
   {
     "id": "1776564498256zo9frg6oer",
     "title": "A Ghost Story",
     "year": 2017,
     "director": "David Lowery",
-    "poster": "https://www.themoviedb.org/t/p/w1280/rp5JPIyZi9sMob15l46zNQLe5cO.jpg",
+    "poster": "https://image.tmdb.org/t/p/w342/rp5JPIyZi9sMob15l46zNQLe5cO.jpg",
     "imdb_id": "tt6265828",
     "genre": "Drama, Fantasy, Mystery",
     "country": "United States",
@@ -117,14 +236,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776564498258
+    "added": 1776564498258,
+    "lb": "https://letterboxd.com/imdb/tt6265828/",
+    "score": 7.5,
+    "imdb_score": 6.8,
+    "similar": [
+      {
+        "title": "Upstream Color",
+        "imdb_id": "tt2308687"
+      },
+      {
+        "title": "Melancholia",
+        "imdb_id": "tt1527186"
+      },
+      {
+        "title": "Under the Skin",
+        "imdb_id": "tt1441395"
+      }
+    ]
   },
   {
     "id": "1776343205845y5dpzlg0ewl",
     "title": "Collateral",
     "year": 2004,
     "director": "Michael Mann",
-    "poster": "https://www.themoviedb.org/t/p/w1280/nV5316WUsVij8sVXLCF1g7TFitg.jpg",
+    "poster": "https://image.tmdb.org/t/p/w342/nV5316WUsVij8sVXLCF1g7TFitg.jpg",
     "imdb_id": "tt0369339",
     "genre": "Action, Crime, Drama",
     "country": "United States",
@@ -132,14 +268,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776343205845
+    "added": 1776343205845,
+    "lb": "https://letterboxd.com/imdb/tt0369339/",
+    "score": 7.8,
+    "imdb_score": 7.5,
+    "similar": [
+      {
+        "title": "Heat",
+        "imdb_id": "tt0113277"
+      },
+      {
+        "title": "Drive",
+        "imdb_id": "tt0780504"
+      },
+      {
+        "title": "Thief",
+        "imdb_id": "tt0083190"
+      }
+    ]
   },
   {
     "id": "1776343157572vnkfut612xo",
     "title": "Traffic",
     "year": 2000,
     "director": "Steven Soderbergh",
-    "poster": "https://www.themoviedb.org/t/p/w1280/jbccmnqE4oAPI67bApgt2JiRPz8.jpg",
+    "poster": "https://image.tmdb.org/t/p/w342/jbccmnqE4oAPI67bApgt2JiRPz8.jpg",
     "imdb_id": "tt0181865",
     "genre": "Crime, Drama, Thriller",
     "country": "Germany",
@@ -147,14 +300,31 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776343157572
+    "added": 1776343157572,
+    "lb": "https://letterboxd.com/imdb/tt0181865/",
+    "score": 8,
+    "imdb_score": 7.6,
+    "similar": [
+      {
+        "title": "Sicario",
+        "imdb_id": "tt3397884"
+      },
+      {
+        "title": "The Wire",
+        "imdb_id": "tt0306414"
+      },
+      {
+        "title": "Babel",
+        "imdb_id": "tt0449467"
+      }
+    ]
   },
   {
     "id": "1776343115333xbw7x2sjprh",
     "title": "Das Boot",
     "year": 1981,
     "director": "Wolfgang Petersen",
-    "poster": "https://www.themoviedb.org/t/p/w1280/lWBQ1Z6MBuiPAfubWjxytKirQco.jpg",
+    "poster": "https://image.tmdb.org/t/p/w342/lWBQ1Z6MBuiPAfubWjxytKirQco.jpg",
     "imdb_id": "tt0082096",
     "genre": "Drama, War",
     "country": "West Germany",
@@ -162,7 +332,24 @@
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1776343115333
+    "added": 1776343115333,
+    "lb": "https://letterboxd.com/imdb/tt0082096/",
+    "score": 8.5,
+    "imdb_score": 8.4,
+    "similar": [
+      {
+        "title": "U-571",
+        "imdb_id": "tt0141926"
+      },
+      {
+        "title": "The Enemy Below",
+        "imdb_id": "tt0050505"
+      },
+      {
+        "title": "Run Silent Run Deep",
+        "imdb_id": "tt0052151"
+      }
+    ]
   },
   {
     "id": "1775999459701yeuxa6o5w3",
@@ -503,7 +690,8 @@
         "year": 2000,
         "imdb_id": "tt0247258"
       }
-    ]
+    ],
+    "has4k": false
   },
   {
     "id": "17758772346498g88ri6njse",
@@ -618,7 +806,8 @@
         "year": 1956,
         "imdb_id": "tt0049735"
       }
-    ]
+    ],
+    "has4k": false
   },
   {
     "id": "1775468716369d6poip55fzj",
@@ -1488,7 +1677,7 @@
     "imdb_id": "tt0048452",
     "year": 1955,
     "runtime": 125,
-    "genre": "Drama, Religion",
+    "genre": "Drama",
     "country": "Denmark",
     "director": "Carl Theodor Dreyer",
     "tmdb_id": 621,
@@ -1751,7 +1940,7 @@
     "imdb_id": "tt0289043",
     "year": 2002,
     "runtime": 115,
-    "genre": "Horror, Thriller, Science Fiction",
+    "genre": "Horror, Thriller, Sci-Fi",
     "country": "United Kingdom",
     "director": "Danny Boyle",
     "tmdb_id": 1100988,
@@ -1935,7 +2124,7 @@
     "imdb_id": "tt0120201",
     "year": 1997,
     "runtime": 129,
-    "genre": "Adventure, Action, Thriller, Science Fiction",
+    "genre": "Adventure, Action, Thriller, Sci-Fi",
     "country": "United States",
     "director": "Paul Verhoeven",
     "tmdb_id": 563,
@@ -3073,7 +3262,7 @@
     "imdb_id": "tt1375666",
     "year": 2010,
     "runtime": 148,
-    "genre": "Action, Science Fiction, Adventure",
+    "genre": "Action, Sci-Fi, Adventure",
     "country": "United States",
     "director": "Christopher Nolan",
     "tmdb_id": 27205,
@@ -3150,7 +3339,7 @@
     "imdb_id": "tt0103064",
     "year": 1991,
     "runtime": 137,
-    "genre": "Action, Thriller, Science Fiction",
+    "genre": "Action, Thriller, Sci-Fi",
     "country": "United States",
     "director": "James Cameron",
     "tmdb_id": 280,
@@ -3188,7 +3377,7 @@
     "imdb_id": "tt0088247",
     "year": 1984,
     "runtime": 108,
-    "genre": "Action, Thriller, Science Fiction",
+    "genre": "Action, Thriller, Sci-Fi",
     "country": "United States",
     "director": "James Cameron",
     "tmdb_id": 218,
@@ -3585,7 +3774,7 @@
     "imdb_id": "tt0076263",
     "year": 1978,
     "runtime": 80,
-    "genre": "Drama, Psychological Drama",
+    "genre": "Drama",
     "country": "United States",
     "director": "Charles Burnett",
     "tmdb_id": 638210,
@@ -6962,7 +7151,8 @@
         "year": 1944,
         "imdb_id": "tt0036775"
       }
-    ]
+    ],
+    "has4k": false
   },
   {
     "id": "1776479314435xo7s9ujyidp",
@@ -6994,7 +7184,8 @@
         "year": 1967,
         "imdb_id": "tt0061418"
       }
-    ]
+    ],
+    "has4k": false
   },
   {
     "id": "17764792883690u0ypcofasqn",
@@ -7026,7 +7217,8 @@
         "year": 1968,
         "imdb_id": "tt0063522"
       }
-    ]
+    ],
+    "has4k": false
   },
   {
     "id": "1776479241469n5zrh2c0nsg",
@@ -7091,7 +7283,8 @@
         "year": 1944,
         "imdb_id": "tt0036775"
       }
-    ]
+    ],
+    "has4k": false
   },
   {
     "id": "17764791877864mktfz9bz4m",
@@ -7156,7 +7349,8 @@
         "year": 1966,
         "imdb_id": "tt0060176"
       }
-    ]
+    ],
+    "has4k": false
   },
   {
     "id": "1776479138020m3erkirdfj9",
@@ -7188,7 +7382,8 @@
         "year": 1929,
         "imdb_id": "tt0019949"
       }
-    ]
+    ],
+    "has4k": false
   },
   {
     "id": "1776479102655m855lhpcr",
@@ -7220,7 +7415,8 @@
         "year": 2000,
         "imdb_id": "tt0163978"
       }
-    ]
+    ],
+    "has4k": false
   },
   {
     "id": "1776478993872d42ys8142us",
@@ -7252,7 +7448,8 @@
         "year": 1953,
         "imdb_id": "tt0045917"
       }
-    ]
+    ],
+    "has4k": false
   },
   {
     "id": "1776478928988canfi05ika5",
@@ -7284,7 +7481,8 @@
         "year": 1961,
         "imdb_id": "tt0055103"
       }
-    ]
+    ],
+    "has4k": false
   },
   {
     "id": "1776478887789mnonwkqnpm",
@@ -7317,7 +7515,8 @@
         "year": 1979,
         "imdb_id": "tt0078788"
       }
-    ]
+    ],
+    "has4k": false
   },
   {
     "id": "17764788349446om030larkg",
@@ -7349,7 +7548,8 @@
         "year": 1944,
         "imdb_id": "tt0036681"
       }
-    ]
+    ],
+    "has4k": false
   },
   {
     "id": "1776478770806wq19uk8v6qe",
@@ -7381,7 +7581,8 @@
         "year": 1939,
         "imdb_id": "tt0031503"
       }
-    ]
+    ],
+    "has4k": false
   },
   {
     "id": "1776478715357k5kgjxdxl3",
@@ -7413,6 +7614,7 @@
         "year": 1950,
         "imdb_id": "tt0042709"
       }
-    ]
+    ],
+    "has4k": false
   }
 ]
