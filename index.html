@@ -35,6 +35,12 @@ header{background:rgba(23,23,23,.97);backdrop-filter:blur(16px);-webkit-backdrop
 .hrow{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family:'DM Serif Display',serif}
 .cnt{font-size:11px;color:var(--mut);white-space:nowrap}
+/* ── LOGO WORDMARK (hidden on small mobile, shown wider) ── */
+.logo-wordmark{display:none;flex-direction:column;line-height:1;min-width:0;gap:1px}
+.logo-title{font-size:17px;font-weight:400;color:#f0e6cc;letter-spacing:.12em;font-family:'DM Serif Display',serif;text-transform:uppercase;font-style:italic;white-space:nowrap;text-shadow:0 0 20px rgba(232,185,79,.2)}
+.logo-sub{font-size:7.5px;letter-spacing:.25em;text-transform:uppercase;color:#e8b94f;opacity:.55;font-family:'DM Sans',sans-serif;font-weight:600;white-space:nowrap}
+@media(min-width:400px){.logo-wordmark{display:flex}}
+
 /* ── HEADER ICON BUTTONS (mobile = icon only, wider = labelled) ── */
 .hdr-icon-btn{display:flex;align-items:center;justify-content:center;gap:5px;border-radius:8px;padding:7px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:all .15s;flex-shrink:0}
 .hdr-icon-btn:not(.surprise-btn){background:none;border:1px solid rgba(232,185,79,.25);color:var(--acc)}
@@ -307,9 +313,9 @@ button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
         <rect x="13.5" y="1.5" width="5" height="3" rx=".6" fill="#e8b94f" opacity=".5"/>
         <rect x="13.5" y="27.5" width="5" height="3" rx=".6" fill="#e8b94f" opacity=".5"/>
       </svg>
-      <div style="display:flex;flex-direction:column;line-height:1;min-width:0;gap:1px">
-        <span style="font-size:17px;font-weight:400;color:#f0e6cc;letter-spacing:.12em;font-family:'DM Serif Display',serif;text-transform:uppercase;font-style:italic;white-space:nowrap;text-shadow:0 0 20px rgba(232,185,79,.2)">The Archive</span>
-        <span style="font-size:7.5px;letter-spacing:.25em;text-transform:uppercase;color:#e8b94f;opacity:.55;font-family:'DM Sans',sans-serif;font-weight:600;white-space:nowrap">Film Collection</span>
+      <div class="logo-wordmark">
+        <span class="logo-title">The Archive</span>
+        <span class="logo-sub">Film Collection</span>
       </div>
     </div>
     <div style="display:flex;align-items:center;gap:6px;flex-shrink:0">
