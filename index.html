@@ -279,17 +279,31 @@ button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
 <div class="page active" id="page-collection">
 <header>
   <div class="hrow">
-    <div style="display:flex;align-items:center;gap:8px;flex:1;min-width:0">
-      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
-        <rect x="2" y="6" width="22" height="16" rx="1.5" stroke="#e8b94f" stroke-width="1.5" fill="none"/>
-        <rect x="5" y="3" width="16" height="3" rx="1" fill="#e8b94f" opacity=".5"/>
-        <rect x="7" y="1" width="12" height="2" rx="1" fill="#e8b94f" opacity=".25"/>
-        <line x1="6" y1="11" x2="20" y2="11" stroke="#e8b94f" stroke-width="1" opacity=".4"/>
-        <line x1="6" y1="15" x2="16" y2="15" stroke="#e8b94f" stroke-width="1" opacity=".4"/>
-        <line x1="6" y1="19" x2="13" y2="19" stroke="#e8b94f" stroke-width="1" opacity=".4"/>
+    <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0">
+      <!-- Cinematic aperture/filmstrip logo mark -->
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;filter:drop-shadow(0 0 6px rgba(232,185,79,.35))">
+        <!-- Outer ring -->
+        <circle cx="16" cy="16" r="14" stroke="#e8b94f" stroke-width="1.2" fill="none" opacity=".9"/>
+        <!-- Inner aperture shape -->
+        <circle cx="16" cy="16" r="6" fill="none" stroke="#e8b94f" stroke-width="1.2" opacity=".6"/>
+        <!-- Aperture blades — 6 rotated rects creating iris effect -->
+        <g opacity=".85">
+          <rect x="15.2" y="8" width="1.6" height="5" rx=".8" fill="#e8b94f" transform="rotate(0 16 16)"/>
+          <rect x="15.2" y="8" width="1.6" height="5" rx=".8" fill="#e8b94f" transform="rotate(60 16 16)"/>
+          <rect x="15.2" y="8" width="1.6" height="5" rx=".8" fill="#e8b94f" transform="rotate(120 16 16)"/>
+          <rect x="15.2" y="8" width="1.6" height="5" rx=".8" fill="#e8b94f" transform="rotate(180 16 16)"/>
+          <rect x="15.2" y="8" width="1.6" height="5" rx=".8" fill="#e8b94f" transform="rotate(240 16 16)"/>
+          <rect x="15.2" y="8" width="1.6" height="5" rx=".8" fill="#e8b94f" transform="rotate(300 16 16)"/>
+        </g>
+        <!-- Filmstrip perforations on the ring -->
+        <rect x="1.5" y="13.5" width="3" height="5" rx=".6" fill="#e8b94f" opacity=".5"/>
+        <rect x="27.5" y="13.5" width="3" height="5" rx=".6" fill="#e8b94f" opacity=".5"/>
+        <rect x="13.5" y="1.5" width="5" height="3" rx=".6" fill="#e8b94f" opacity=".5"/>
+        <rect x="13.5" y="27.5" width="5" height="3" rx=".6" fill="#e8b94f" opacity=".5"/>
       </svg>
-      <div style="display:flex;flex-direction:column;line-height:1;min-width:0">
-        <span style="font-size:16px;font-weight:400;color:var(--txt);letter-spacing:.02em;font-family:'DM Serif Display',serif">The Archive</span>
+      <div style="display:flex;flex-direction:column;line-height:1;min-width:0;gap:1px">
+        <span style="font-size:17px;font-weight:400;color:#f0e6cc;letter-spacing:.12em;font-family:'DM Serif Display',serif;text-transform:uppercase;font-style:italic;white-space:nowrap;text-shadow:0 0 20px rgba(232,185,79,.2)">The Archive</span>
+        <span style="font-size:7.5px;letter-spacing:.25em;text-transform:uppercase;color:#e8b94f;opacity:.55;font-family:'DM Sans',sans-serif;font-weight:600;white-space:nowrap">Film Collection</span>
       </div>
     </div>
     <div style="display:flex;align-items:center;gap:6px;flex-shrink:0">

@@ -292,7 +292,26 @@ button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
 <div class="page active" id="page-wishlist">
   <header>
     <div class="hrow">
-      <h1>Wish List</h1>
+      <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0">
+        <!-- Star/bookmark hybrid icon for wishlist -->
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;filter:drop-shadow(0 0 6px rgba(247,110,126,.3))">
+          <!-- Outer ring -->
+          <circle cx="16" cy="16" r="14" stroke="#f76e7e" stroke-width="1.2" fill="none" opacity=".8"/>
+          <!-- Star shape -->
+          <polygon points="16,7 18.2,13.2 24.8,13.2 19.6,17.2 21.8,23.4 16,19.4 10.2,23.4 12.4,17.2 7.2,13.2 13.8,13.2" fill="none" stroke="#f76e7e" stroke-width="1.3" stroke-linejoin="round" opacity=".9"/>
+          <!-- Inner dot -->
+          <circle cx="16" cy="16" r="2" fill="#f76e7e" opacity=".7"/>
+          <!-- Tick marks on ring -->
+          <rect x="1.5" y="13.5" width="3" height="5" rx=".6" fill="#f76e7e" opacity=".45"/>
+          <rect x="27.5" y="13.5" width="3" height="5" rx=".6" fill="#f76e7e" opacity=".45"/>
+          <rect x="13.5" y="1.5" width="5" height="3" rx=".6" fill="#f76e7e" opacity=".45"/>
+          <rect x="13.5" y="27.5" width="5" height="3" rx=".6" fill="#f76e7e" opacity=".45"/>
+        </svg>
+        <div style="display:flex;flex-direction:column;line-height:1;gap:1px">
+          <span style="font-size:17px;font-weight:400;color:#f9dde0;letter-spacing:.12em;font-family:'DM Serif Display',serif;text-transform:uppercase;font-style:italic;white-space:nowrap;text-shadow:0 0 20px rgba(247,110,126,.2)">The List</span>
+          <span style="font-size:7.5px;letter-spacing:.25em;text-transform:uppercase;color:#f76e7e;opacity:.55;font-family:'DM Sans',sans-serif;font-weight:600;white-space:nowrap">Wish List</span>
+        </div>
+      </div>
       <span class="cnt" id="wl-count">0 films</span>
       <button class="add-btn" onclick="openShareModal()" style="background:var(--surf2);border:1px solid var(--bdr2);color:var(--acc);margin-right:4px">↗ Share</button>
       <button class="add-btn" onclick="openAddModal()">+ Add</button>
