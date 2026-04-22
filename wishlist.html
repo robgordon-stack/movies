@@ -45,6 +45,16 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 .cnt{font-size:11px;color:var(--mut);white-space:nowrap}
 .add-btn{background:var(--acc);border:none;color:#000;border-radius:20px;padding:5px 14px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;font-family:'DM Sans',sans-serif;transition:transform .15s,opacity .15s}
 .add-btn:active{opacity:.8;transform:scale(.95)}
+/* ── LOGO WORDMARK ── */
+.logo-wordmark{display:none;flex-direction:column;line-height:1;gap:1px}
+.logo-title{font-size:17px;font-weight:400;color:#f9dde0;letter-spacing:.12em;font-family:'DM Serif Display',serif;text-transform:uppercase;font-style:italic;white-space:nowrap;text-shadow:0 0 20px rgba(247,110,126,.2)}
+.logo-sub{font-size:7.5px;letter-spacing:.25em;text-transform:uppercase;color:#f76e7e;opacity:.55;font-family:'DM Sans',sans-serif;font-weight:600;white-space:nowrap}
+@media(min-width:600px){.logo-wordmark{display:flex}}
+/* ── HEADER ICON BUTTONS ── */
+.hdr-icon-btn{display:flex;align-items:center;justify-content:center;gap:5px;border-radius:8px;padding:7px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:all .15s;flex-shrink:0;background:none;border:1px solid rgba(247,110,126,.25);color:var(--hot)}
+.hdr-icon-btn:hover{border-color:rgba(247,110,126,.5)}
+.hdr-btn-label{display:none}
+@media(min-width:600px){.hdr-btn-label{display:inline}.hdr-icon-btn{padding:6px 10px}}
 
 /* ── SEARCH ── */
 .sw{position:relative;margin-bottom:8px}
@@ -307,14 +317,19 @@ button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
           <rect x="13.5" y="1.5" width="5" height="3" rx=".6" fill="#f76e7e" opacity=".45"/>
           <rect x="13.5" y="27.5" width="5" height="3" rx=".6" fill="#f76e7e" opacity=".45"/>
         </svg>
-        <div style="display:flex;flex-direction:column;line-height:1;gap:1px">
-          <span style="font-size:17px;font-weight:400;color:#f9dde0;letter-spacing:.12em;font-family:'DM Serif Display',serif;text-transform:uppercase;font-style:italic;white-space:nowrap;text-shadow:0 0 20px rgba(247,110,126,.2)">The List</span>
-          <span style="font-size:7.5px;letter-spacing:.25em;text-transform:uppercase;color:#f76e7e;opacity:.55;font-family:'DM Sans',sans-serif;font-weight:600;white-space:nowrap">Wish List</span>
+        <div class="logo-wordmark">
+          <span class="logo-title">The List</span>
+          <span class="logo-sub">Wish List</span>
         </div>
       </div>
       <span class="cnt" id="wl-count">0 films</span>
-      <button class="add-btn" onclick="openShareModal()" style="background:var(--surf2);border:1px solid var(--bdr2);color:var(--acc);margin-right:4px">↗ Share</button>
-      <button class="add-btn" onclick="openAddModal()">+ Add</button>
+      <button onclick="openShareModal()" title="Share wishlist" class="hdr-icon-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+        <span class="hdr-btn-label">Share</span>
+      </button>
+      <button class="add-btn" onclick="openAddModal()" title="Add a film to your wishlist">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:3px"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Add Film
+      </button>
     </div>
     <div class="sw">
       <span class="si">
