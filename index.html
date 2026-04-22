@@ -405,7 +405,7 @@ button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
   <div class="sortrow">
     <span class="flabel" style="width:44px;font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;flex-shrink:0;font-weight:600">Sort</span>
     <div class="sortchip active" data-s="title" data-asc="1"><span class="sortdir">A→Z</span> <span class="arr">&#x25B2;</span></div>
-    <div class="sortchip" data-s="score" data-asc="0"><span class="sortdir">Score</span> <span class="arr">&#x2195;</span></div>
+    <div class="sortchip" data-s="score" data-asc="1"><span class="sortdir">Score</span> <span class="arr">&#x2195;</span></div>
     <div class="sortchip" data-s="year" data-asc="0"><span class="sortdir">Year</span> <span class="arr">&#x2195;</span></div>
     <div class="sortchip" data-s="director" data-asc="1"><span class="sortdir">Director</span> <span class="arr">&#x2195;</span></div>
     <div class="sortchip" data-s="runtime" data-asc="0"><span class="sortdir">Runtime</span> <span class="arr">&#x2195;</span></div>
@@ -787,7 +787,7 @@ function sortFil(){
       case "score":   return a*((y.score||0)-(x.score||0));
       case "title":   return a*x.title.localeCompare(y.title);
       case "year":    return a*((x.year||0)-(y.year||0));
-      case "director":return a*(x.director||"").localeCompare(y.director||"");
+      case "director":{const sn=n=>{if(!n)return"";const p=n.trim().split(" ");return(p[p.length-1]+" "+p.slice(0,-1).join(" ")).trim();};return a*sn(x.director).localeCompare(sn(y.director));}
       case "runtime": return a*((y.runtime||0)-(x.runtime||0));
       default:        return 0;
     }
@@ -1284,7 +1284,7 @@ document.getElementById("scoreSlider").addEventListener("input",e=>{
 // ── Sort ──────────────────────────────────────────────────────────────────────
 const SORT_LABELS={
   title:{base:"A–Z",asc:"A→Z",desc:"Z→A"},
-  score:{base:"Score",asc:"Low→High",desc:"High→Low"},
+  score:{base:"Score",asc:"High→Low",desc:"Low→High"},
   year:{base:"Year",asc:"Oldest",desc:"Newest"},
   director:{base:"Director",asc:"A→Z",desc:"Z→A"},
   runtime:{base:"Runtime",asc:"Shortest",desc:"Longest"}
