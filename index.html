@@ -26,7 +26,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:'DM Sans',-apple-sys
 .tabitem.active::after{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:32px;height:2px;background:var(--acc);border-radius:0 0 2px 2px}
 
 /* ── PAGES ── */
-.page{display:none;flex-direction:column;min-height:100vh;padding-bottom:60px}
+.page{display:none;flex-direction:column;min-height:100vh;padding-bottom:calc(60px + env(safe-area-inset-bottom))}
 .page.active{display:flex}
 
 /* ── HEADER ── */
@@ -44,9 +44,9 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 /* ── SEARCH ── */
 .sw{position:relative;margin-bottom:8px}
 .sw input{width:100%;background:var(--surf2);border:1px solid var(--bdr);color:var(--txt);border-radius:8px;padding:9px 36px 9px 36px;font-size:15px;outline:none;-webkit-appearance:none;font-family:'DM Sans',sans-serif;transition:border-color .2s}
-.sw input:focus{outline:none}:focus-visible{outline:2px solid rgba(232,185,79,.7);outline-offset:2px;border-color:rgba(232,185,79,.5)}
+.sw input:focus{outline:none}.sw input:focus-visible{outline:2px solid rgba(232,185,79,.7);outline-offset:2px;border-color:rgba(232,185,79,.5)}
 .si{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--mut);font-size:15px;pointer-events:none}
-.scl{position:absolute;right:6px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--mut);font-size:20px;cursor:pointer;display:none;line-height:1;padding:8px;min-width:44px;min-height:44px;display:none;align-items:center;justify-content:center}
+.scl{position:absolute;right:6px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--mut);font-size:20px;cursor:pointer;display:none;line-height:1;padding:8px;min-width:44px;min-height:44px;align-items:center;justify-content:center}
 
 /* ── FILTER TOGGLE ── */
 .filter-toggle{display:flex;align-items:center;gap:8px;margin-bottom:8px}
@@ -55,7 +55,7 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 .filter-badge{display:none;position:absolute;top:-6px;right:-6px;background:var(--acc);color:#000;font-size:9px;font-weight:800;border-radius:10px;min-width:16px;height:16px;padding:0 4px;align-items:center;justify-content:center;line-height:1}
 .filter-badge.visible{display:flex}
 .active-summary{font-size:11px;color:var(--acc);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.clear-all{background:none;border:none;color:var(--mut);font-size:20px;cursor:pointer;padding:8px;line-height:1;flex-shrink:0;display:none;transition:color .15s;min-width:44px;min-height:44px;display:none;align-items:center;justify-content:center}
+.clear-all{background:none;border:none;color:var(--mut);font-size:20px;cursor:pointer;padding:8px;line-height:1;flex-shrink:0;display:none;transition:color .15s;min-width:44px;min-height:44px;align-items:center;justify-content:center}
 .clear-all:hover{color:var(--txt)}
 
 /* ── FILTER PANEL ── */
@@ -266,10 +266,12 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 
 /* ── Focus-visible for interactive elements ── */
 .card:focus-visible,.chip:focus-visible,.tabitem:focus-visible,
-button:focus-visible,.scl:focus-visible,.sort-chip:focus-visible{
+button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
   outline:2px solid rgba(232,185,79,.7);outline-offset:2px;
 }
-.card:focus,.chip:focus,.tabitem:focus,button:focus,.scl:focus,.sort-chip:focus{outline:none}
+.card:focus,.chip:focus,.tabitem:focus,button:focus,.scl:focus,.sortchip:focus{outline:none}
+
+.add-film-btn:hover{border-color:rgba(232,185,79,.5)!important}
 </style>
 <body>
 
@@ -291,12 +293,11 @@ button:focus-visible,.scl:focus-visible,.sort-chip:focus-visible{
       </div>
     </div>
     <div style="display:flex;align-items:center;gap:6px;flex-shrink:0">
-      <a href="wishlist.html" title="Wish List" style="display:none" aria-hidden="true"></a>
       <button onclick="openAddFilmModal()" class="add-film-btn" title="Add a new film to the collection">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         Add Film
       </button>
-      <button onclick="openShareModal()" title="Share collection" style="display:flex;align-items:center;gap:5px;background:none;border:1px solid rgba(232,185,79,.25);color:var(--acc);border-radius:8px;padding:6px 10px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:border-color .15s" onmouseover="this.style.borderColor='rgba(232,185,79,.5)'" onmouseout="this.style.borderColor='rgba(232,185,79,.25)'">
+      <button onclick="openShareModal()" title="Share collection" style="display:flex;align-items:center;gap:5px;background:none;border:1px solid rgba(232,185,79,.25);color:var(--acc);border-radius:8px;padding:6px 10px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:border-color .15s">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
         Share
       </button>

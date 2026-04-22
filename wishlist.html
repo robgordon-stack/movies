@@ -35,7 +35,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:'DM Sans',-apple-sys
 .tabitem.active::after{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:32px;height:2px;background:var(--acc);border-radius:0 0 2px 2px}
 
 /* ── PAGES ── */
-.page{display:none;flex-direction:column;min-height:100vh;padding-bottom:68px}
+.page{display:none;flex-direction:column;min-height:100vh;padding-bottom:calc(68px + env(safe-area-inset-bottom))}
 .page.active{display:flex}
 
 /* ── HEADER ── */
@@ -277,10 +277,10 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
 
 /* ── Focus-visible for interactive elements ── */
 .card:focus-visible,.chip:focus-visible,.tabitem:focus-visible,
-button:focus-visible,.scl:focus-visible,.sort-chip:focus-visible{
+button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
   outline:2px solid rgba(232,185,79,.7);outline-offset:2px;
 }
-.card:focus,.chip:focus,.tabitem:focus,button:focus,.scl:focus,.sort-chip:focus{outline:none}
+.card:focus,.chip:focus,.tabitem:focus,button:focus,.scl:focus,.sortchip:focus{outline:none}
 
 /* ── MOVE TO COLLECTION BUTTON ── */
 .sh-btn-collect{background:rgba(232,185,79,.12);border:1px solid var(--acc);color:var(--acc);}
