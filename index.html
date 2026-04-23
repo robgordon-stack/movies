@@ -953,6 +953,19 @@ function cls(){
 
 // ── Director page ─────────────────────────────────────────────────────────────
 let currentDirFilms=[];
+function filterByDistributor(name){
+  // Find the DIST_MAP key for this distributor name
+  const key=Object.entries(DIST_MAP).find(([k,v])=>v===name);
+  if(key){ad=key[0];}
+  else{ad='all';}
+  document.querySelectorAll("[data-d]").forEach(c=>c.classList.remove("active"));
+  const chip=document.querySelector(`[data-d="${ad}"]`);
+  if(chip)chip.classList.add("active");
+  saveFilterState();
+  switchTab('collection');
+  filt();
+}
+
 function applyFilter(type, value){
   // Reset all filters then apply the chosen one
   af="all";ad="all";adecade="all";ag="all";ac="all";art="all";minScore=5;
@@ -1023,47 +1036,84 @@ document.getElementById("dirBack").addEventListener("click",()=>{
 // ── Stats page ────────────────────────────────────────────────────────────────
 function renderStats(){
   const el=document.getElementById("statsScroll");
-  const total=C.length,watched=C.filter(f=>f.watched).length;
+  const total=C.length;
+  const watchedFilms=C.filter(f=>f.watched);
+  const unwatchedFilms=C.filter(f=>!f.watched);
+  const watched=watchedFilms.length;
   const fourk=C.filter(f=>f.format&&f.format.includes("4K")).length;
-  const scores=C.map(f=>f.score).filter(Boolean);
-  const avg=scores.reduce((a,b)=>a+b,0)/scores.length;
+  const allScores=C.map(f=>f.score).filter(Boolean);
+  const avg=allScores.length?allScores.reduce((a,b)=>a+b,0)/allScores.length:0;
   const crit=C.filter(f=>f.distributor==="Criterion Collection").length;
 
   // Decades
   const decades=["1920s","1930s","1940s","1950s","1960s","1970s","1980s","1990s","2000s","2010s","2020s"];
   const decMap={};decades.forEach(d=>{decMap[d]=C.filter(f=>f.decade===d).length;});
-  const maxDec=Math.max(...Object.values(decMap));
 
-  // Top directors
+  // Top directors — with watched split
   const dirMap={};
-  C.forEach(f=>{if(f.director)dirMap[f.director]=(dirMap[f.director]||0)+1;});
-  const topDirs=Object.entries(dirMap).sort((a,b)=>b[1]-a[1]).slice(0,12);
+  C.forEach(f=>{if(f.director){
+    if(!dirMap[f.director])dirMap[f.director]={total:0,watched:0};
+    dirMap[f.director].total++;
+    if(f.watched)dirMap[f.director].watched++;
+  }});
+  const topDirs=Object.entries(dirMap).sort((a,b)=>b[1].total-a[1].total).slice(0,12);
 
-  // Top countries
+  // Top countries — with watched split
   const ctyMap={};
-  C.forEach(f=>{if(f.country)ctyMap[f.country]=(ctyMap[f.country]||0)+1;});
-  const topCtys=Object.entries(ctyMap).sort((a,b)=>b[1]-a[1]).slice(0,10);
+  C.forEach(f=>{if(f.country){
+    if(!ctyMap[f.country])ctyMap[f.country]={total:0,watched:0};
+    ctyMap[f.country].total++;
+    if(f.watched)ctyMap[f.country].watched++;
+  }});
+  const topCtys=Object.entries(ctyMap).sort((a,b)=>b[1].total-a[1].total).slice(0,10);
 
-  // Score distribution
-  const scoreBuckets={"5-6":0,"6-7":0,"7-8":0,"8-9":0,"9-10":0};
-  scores.forEach(s=>{
-    if(s<6)scoreBuckets["5-6"]++;
-    else if(s<7)scoreBuckets["6-7"]++;
-    else if(s<8)scoreBuckets["7-8"]++;
-    else if(s<9)scoreBuckets["8-9"]++;
-    else scoreBuckets["9-10"]++;
-  });
-  const maxScore=Math.max(...Object.values(scoreBuckets));
-
-  // Top genres
+  // Top genres — with watched split
   const genMap={};
-  C.forEach(f=>{(f.genre||"").split(",").forEach(g=>{g=g.trim();if(g&&g!=="nan")genMap[g]=(genMap[g]||0)+1;});});
-  const topGens=Object.entries(genMap).sort((a,b)=>b[1]-a[1]).slice(0,10);
+  C.forEach(f=>{(f.genre||"").split(",").forEach(g=>{
+    g=g.trim();if(!g||g==="nan")return;
+    if(!genMap[g])genMap[g]={total:0,watched:0};
+    genMap[g].total++;
+    if(f.watched)genMap[g].watched++;
+  });});
+  const topGens=Object.entries(genMap).sort((a,b)=>b[1].total-a[1].total).slice(0,10);
 
-  // Top cast
+  // Top cast — with watched split
   const castMap={};
-  C.forEach(f=>{(f.cast||[]).forEach(n=>{n=n.trim();if(n)castMap[n]=(castMap[n]||0)+1;});});
-  const topCast=Object.entries(castMap).sort((a,b)=>b[1]-a[1]).slice(0,12);
+  C.forEach(f=>{(f.cast||[]).forEach(n=>{
+    n=n.trim();if(!n)return;
+    if(!castMap[n])castMap[n]={total:0,watched:0};
+    castMap[n].total++;
+    if(f.watched)castMap[n].watched++;
+  });});
+  const topCast=Object.entries(castMap).sort((a,b)=>b[1].total-a[1].total).slice(0,12);
+
+  // Score distribution — split watched vs unwatched
+  const bucketKeys=["5–6","6–7","7–8","8–9","9–10"];
+  const scoreBucketsW={"5–6":0,"6–7":0,"7–8":0,"8–9":0,"9–10":0};
+  const scoreBucketsU={"5–6":0,"6–7":0,"7–8":0,"8–9":0,"9–10":0};
+  function scoreBucket(s){
+    if(s<6)return"5–6";if(s<7)return"6–7";if(s<8)return"7–8";if(s<9)return"8–9";return"9–10";
+  }
+  C.forEach(f=>{if(!f.score)return;const b=scoreBucket(f.score);if(f.watched)scoreBucketsW[b]++;else scoreBucketsU[b]++;});
+  const maxScoreBucket=Math.max(...bucketKeys.map(k=>scoreBucketsW[k]+scoreBucketsU[k]),1);
+
+  // Distributor breakdown
+  const distNames=["Criterion Collection","Arrow Films","BFI","Masters of Cinema","Indicator","Umbrella Entertainment","Imprint","Radiance Films"];
+  const distData=distNames.map(name=>{
+    const films=C.filter(f=>f.distributor===name);
+    const w=films.filter(f=>f.watched).length;
+    return{name,total:films.length,watched:w};
+  }).filter(d=>d.total>0).sort((a,b)=>b.total-a.total);
+
+  // Helper: split bar (watched green + unwatched muted)
+  function splitBar(watched,total,maxTotal){
+    const wPct=Math.round(watched/maxTotal*100);
+    const uPct=Math.round((total-watched)/maxTotal*100);
+    return`<div class="bar-wrap" style="position:relative">
+      <div style="position:absolute;left:0;top:0;height:100%;width:${wPct+uPct}%;border-radius:3px;background:var(--surf3)"></div>
+      <div style="position:absolute;left:0;top:0;height:100%;width:${wPct}%;border-radius:3px;background:var(--grn)"></div>
+    </div>`;
+  }
 
   el.innerHTML=`
     <div class="stat-card">
@@ -1079,86 +1129,128 @@ function renderStats(){
         <div class="stat-box"><div class="sn">${Object.keys(dirMap).length}</div><div class="sl">Directors</div></div>
       </div>
     </div>
+
     <div class="stat-card" id="decades-card"></div>
+
     <div class="stat-card">
       <h3>Score Distribution</h3>
-      ${Object.entries(scoreBuckets).map(([k,v])=>`<div class="bar-row">
-        <span class="bar-label">${k}</span>
-        <div class="bar-wrap"><div class="bar-fill" style="width:${Math.round(v/maxScore*100)}%"></div></div>
-        <span class="bar-count">${v}</span>
-      </div>`).join("")}
+      <div style="display:flex;gap:10px;margin-bottom:10px;font-size:10px;color:var(--mut)">
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--grn);display:inline-block"></span>Watched</span>
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--surf3);display:inline-block"></span>Unwatched</span>
+      </div>
+      ${bucketKeys.map(k=>{
+        const w=scoreBucketsW[k],u=scoreBucketsU[k],tot=w+u;
+        return`<div class="bar-row">
+          <span class="bar-label">${k}</span>
+          <div class="bar-wrap" style="position:relative;overflow:visible">
+            <div style="height:100%;width:${Math.round((w+u)/maxScoreBucket*100)}%;border-radius:3px;background:var(--surf3);position:absolute;left:0;top:0"></div>
+            <div style="height:100%;width:${Math.round(w/maxScoreBucket*100)}%;border-radius:3px;background:var(--grn);position:absolute;left:0;top:0"></div>
+          </div>
+          <span class="bar-count">${tot}</span>
+        </div>`;
+      }).join("")}
     </div>
+
+    <div class="stat-card">
+      <h3>By Label</h3>
+      <div style="display:flex;gap:10px;margin-bottom:10px;font-size:10px;color:var(--mut)">
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--grn);display:inline-block"></span>Watched</span>
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--surf3);display:inline-block"></span>Unwatched</span>
+      </div>
+      ${distData.map(d=>{
+        const pct=Math.round(d.watched/d.total*100);
+        const maxT=distData[0].total;
+        return`<div class="bar-row">
+          <span class="bar-label wide" style="cursor:pointer;color:var(--blu);text-decoration:underline" onclick="filterByDistributor('${d.name}')">${d.name.replace(' Collection','').replace(' Films','').replace(' Entertainment','')}</span>
+          <div class="bar-wrap" style="position:relative;overflow:visible">
+            <div style="height:100%;width:${Math.round(d.total/maxT*100)}%;border-radius:3px;background:var(--surf3);position:absolute;left:0;top:0"></div>
+            <div style="height:100%;width:${Math.round(d.watched/maxT*100)}%;border-radius:3px;background:var(--grn);position:absolute;left:0;top:0"></div>
+          </div>
+          <span class="bar-count" style="color:var(--mut);font-size:10px">${d.watched}/${d.total} <span style="color:var(--acc)">${pct}%</span></span>
+        </div>`;
+      }).join("")}
+    </div>
+
     <div class="stat-card">
       <h3>Top Directors</h3>
-      ${topDirs.map(([d,n])=>`<div class="bar-row">
-        <span class="bar-label wide" style="cursor:pointer;color:var(--blu);text-decoration:underline" onclick="openDirector('${ex(d)}')">${ex(d)}</span>
-        <div class="bar-wrap"><div class="bar-fill grn" style="width:${Math.round(n/topDirs[0][1]*100)}%"></div></div>
-        <span class="bar-count">${n}</span>
-      </div>`).join("")}
+      <div style="display:flex;gap:10px;margin-bottom:10px;font-size:10px;color:var(--mut)">
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--grn);display:inline-block"></span>Watched</span>
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--surf3);display:inline-block"></span>Unwatched</span>
+      </div>
+      ${topDirs.map(([d,v])=>{
+        const maxT=topDirs[0][1].total;
+        return`<div class="bar-row">
+          <span class="bar-label wide" style="cursor:pointer;color:var(--blu);text-decoration:underline" onclick="openDirector('${ex(d)}')">${ex(d)}</span>
+          <div class="bar-wrap" style="position:relative;overflow:visible">
+            <div style="height:100%;width:${Math.round(v.total/maxT*100)}%;border-radius:3px;background:var(--surf3);position:absolute;left:0;top:0"></div>
+            <div style="height:100%;width:${Math.round(v.watched/maxT*100)}%;border-radius:3px;background:var(--grn);position:absolute;left:0;top:0"></div>
+          </div>
+          <span class="bar-count" style="font-size:10px;color:var(--mut)">${v.watched}/${v.total}</span>
+        </div>`;
+      }).join("")}
     </div>
+
     ${topCast.length?`<div class="stat-card">
       <h3>Top Cast Members</h3>
-      ${topCast.map(([n,c])=>`<div class="bar-row">
-        <span class="bar-label wide" style="cursor:pointer;color:var(--blu);text-decoration:underline" onclick="searchByCast('${n.replace(/'/g,"\\'")}')">${ex(n)}</span>
-        <div class="bar-wrap"><div class="bar-fill grn" style="width:${Math.round(c/topCast[0][1]*100)}%"></div></div>
-        <span class="bar-count">${c}</span>
-      </div>`).join("")}
+      <div style="display:flex;gap:10px;margin-bottom:10px;font-size:10px;color:var(--mut)">
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--grn);display:inline-block"></span>Watched</span>
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--surf3);display:inline-block"></span>Unwatched</span>
+      </div>
+      ${topCast.map(([n,v])=>{
+        const maxT=topCast[0][1].total;
+        return`<div class="bar-row">
+          <span class="bar-label wide" style="cursor:pointer;color:var(--blu);text-decoration:underline" onclick="searchByCast('${n.replace(/'/g,"\\'")}')">${ex(n)}</span>
+          <div class="bar-wrap" style="position:relative;overflow:visible">
+            <div style="height:100%;width:${Math.round(v.total/maxT*100)}%;border-radius:3px;background:var(--surf3);position:absolute;left:0;top:0"></div>
+            <div style="height:100%;width:${Math.round(v.watched/maxT*100)}%;border-radius:3px;background:var(--grn);position:absolute;left:0;top:0"></div>
+          </div>
+          <span class="bar-count" style="font-size:10px;color:var(--mut)">${v.watched}/${v.total}</span>
+        </div>`;
+      }).join("")}
     </div>`:""}
+
     <div class="stat-card">
       <h3>By Country</h3>
-      ${topCtys.map(([c,n])=>`<div class="bar-row">
-        <span class="bar-label wide" style="cursor:pointer;color:var(--blu);text-decoration:underline" onclick="applyFilter('country','${c}')">${(FLAGS[c]||"")} ${c}</span>
-        <div class="bar-wrap"><div class="bar-fill pur" style="width:${Math.round(n/topCtys[0][1]*100)}%"></div></div>
-        <span class="bar-count">${n}</span>
-      </div>`).join("")}
+      <div style="display:flex;gap:10px;margin-bottom:10px;font-size:10px;color:var(--mut)">
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--pur);display:inline-block"></span>Watched</span>
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--surf3);display:inline-block"></span>Unwatched</span>
+      </div>
+      ${topCtys.map(([c,v])=>{
+        const maxT=topCtys[0][1].total;
+        return`<div class="bar-row">
+          <span class="bar-label wide" style="cursor:pointer;color:var(--blu);text-decoration:underline" onclick="applyFilter('country','${c}')">${(FLAGS[c]||"")} ${c}</span>
+          <div class="bar-wrap" style="position:relative;overflow:visible">
+            <div style="height:100%;width:${Math.round(v.total/maxT*100)}%;border-radius:3px;background:var(--surf3);position:absolute;left:0;top:0"></div>
+            <div style="height:100%;width:${Math.round(v.watched/maxT*100)}%;border-radius:3px;background:var(--pur);position:absolute;left:0;top:0"></div>
+          </div>
+          <span class="bar-count" style="font-size:10px;color:var(--mut)">${v.watched}/${v.total}</span>
+        </div>`;
+      }).join("")}
     </div>
+
     <div class="stat-card">
       <h3>Top Genres</h3>
-      ${topGens.map(([g,n])=>`<div class="bar-row">
-        <span class="bar-label wide" style="cursor:pointer;color:var(--blu);text-decoration:underline" onclick="applyFilter('genre','${g}')">${g}</span>
-        <div class="bar-wrap"><div class="bar-fill" style="width:${Math.round(n/topGens[0][1]*100)}%"></div></div>
-        <span class="bar-count">${n}</span>
-      </div>`).join("")}
+      <div style="display:flex;gap:10px;margin-bottom:10px;font-size:10px;color:var(--mut)">
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--acc);display:inline-block"></span>Watched</span>
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--surf3);display:inline-block"></span>Unwatched</span>
+      </div>
+      ${topGens.map(([g,v])=>{
+        const maxT=topGens[0][1].total;
+        return`<div class="bar-row">
+          <span class="bar-label wide" style="cursor:pointer;color:var(--blu);text-decoration:underline" onclick="applyFilter('genre','${g}')">${g}</span>
+          <div class="bar-wrap" style="position:relative;overflow:visible">
+            <div style="height:100%;width:${Math.round(v.total/maxT*100)}%;border-radius:3px;background:var(--surf3);position:absolute;left:0;top:0"></div>
+            <div style="height:100%;width:${Math.round(v.watched/maxT*100)}%;border-radius:3px;background:var(--acc);position:absolute;left:0;top:0"></div>
+          </div>
+          <span class="bar-count" style="font-size:10px;color:var(--mut)">${v.watched}/${v.total}</span>
+        </div>`;
+      }).join("")}
     </div>
   `;
   renderDecadesCard(decades, decMap);
 }
 
-function renderDecadesCard(decades, decMap){
-  const card=document.getElementById('decades-card');
-  if(!card)return;
-  let html='<h3>Decades</h3><div style="display:flex;flex-direction:column;gap:10px;margin-top:4px">';
-  decades.filter(function(d){return decMap[d]>0;}).forEach(function(d){
-    const total=decMap[d];
-    const watchedD=C.filter(function(f){return f.decade===d&&f.watched;}).length;
-    const scoresD=C.filter(function(f){return f.decade===d&&f.score;}).map(function(f){return f.score;});
-    const avgD=scoresD.length?scoresD.reduce(function(a,b){return a+b;},0)/scoresD.length:0;
-    const pct=Math.round(watchedD/total*100);
-    const radius=Math.round(8+Math.sqrt(total)*3.2);
-    const circ=Math.round(2*Math.PI*radius);
-    const dash=Math.round(circ*pct/100);
-    const r3=radius+3;
-    html+='<div onclick="applyFilter(\'decade\',\''+d+'\')" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:6px 8px;border-radius:8px;border:1px solid var(--bdr);background:var(--surf);transition:background .15s" onmouseover="this.style.background=\'var(--surf2)\'" onmouseout="this.style.background=\'var(--surf)\'">'
-      +'<svg width="'+(radius*2+6)+'" height="'+(radius*2+6)+'" viewBox="0 0 '+(radius*2+6)+' '+(radius*2+6)+'" style="flex-shrink:0">'
-      +'<circle cx="'+r3+'" cy="'+r3+'" r="'+radius+'" fill="none" stroke="var(--surf3)" stroke-width="3"/>'
-      +'<circle cx="'+r3+'" cy="'+r3+'" r="'+radius+'" fill="none" stroke="var(--grn)" stroke-width="3" stroke-dasharray="'+dash+' '+circ+'" stroke-dashoffset="'+(circ/4)+'" stroke-linecap="round"/>'
-      +'<text x="'+r3+'" y="'+r3+'" text-anchor="middle" dominant-baseline="central" fill="var(--txt)" style="font-size:'+(radius>14?11:9)+'px;font-weight:700;font-family:\'DM Sans\',sans-serif">'+total+'</text>'
-      +'</svg>'
-      +'<div style="flex:1;min-width:0">'
-      +'<div style="display:flex;align-items:baseline;gap:6px;margin-bottom:3px">'
-      +'<span style="font-size:14px;font-weight:700;color:var(--txt)">'+d+'</span>'
-      +(avgD?'<span style="font-size:11px;color:var(--mut)">avg '+avgD.toFixed(1)+'</span>':'')
-      +'</div>'
-      +'<div style="height:4px;border-radius:2px;background:var(--surf3);overflow:hidden">'
-      +'<div style="height:100%;width:'+pct+'%;background:var(--grn);border-radius:2px"></div>'
-      +'</div>'
-      +'<div style="font-size:10px;color:var(--mut);margin-top:3px">'+watchedD+' watched · '+(total-watchedD)+' to go</div>'
-      +'</div></div>';
-  });
-  html+='</div>';
-  card.innerHTML=html;
-}
-
+// ── Stats bar ─────────────────────────────────────────────────────────────────
 // ── Stats bar ─────────────────────────────────────────────────────────────────
 function sts(){
   const w=C.filter(f=>f.watched).length;
@@ -1394,66 +1486,158 @@ function wnSurprise(){
 function renderWatchNext(){
   const pg=document.getElementById('page-watchnext');
   wnFilmMap.length=0;
-
-  // Filter state: default to unwatched only
   const showAll=pg.dataset.showAll==='true';
-
-  // Build a Set to deduplicate films across groups; the first occurrence
-  // owns the globalIdx used by posters in every group.
-  const seenTitles=new Map(); // title+year → globalIdx
-
-  // Use a DocumentFragment for efficient DOM insertion
+  const seenTitles=new Map();
   const frag=document.createDocumentFragment();
+  const unwatchedAll=C.filter(f=>!f.watched);
 
-  // Header row
-  const header=document.createElement('div');
-  header.innerHTML=`<div style="display:flex;align-items:center;gap:8px;padding:4px 0 16px;flex-wrap:wrap">
-    <p style="font-size:13px;color:var(--mut);margin:0;flex:1">All films you own · grouped by mood · tap any poster to open</p>
+  // ── HERO PICK ──────────────────────────────────────────────────────────────
+  // Rotate daily through top-scored unwatched films (≤150 min preferred)
+  const heroPool=unwatchedAll.filter(f=>f.score&&f.poster).sort((a,b)=>b.score-a.score);
+  const shortHero=heroPool.filter(f=>f.runtime&&f.runtime<=150);
+  const heroSrc=shortHero.length>=5?shortHero:heroPool;
+  const heroOffset=parseInt(pg.dataset.heroOffset||'0');
+  const heroDayIdx=(Math.floor(Date.now()/86400000)+heroOffset)%Math.max(heroSrc.length,1);
+  const hero=heroSrc[heroDayIdx];
+
+  if(hero){
+    const heroEl=document.createElement('div');
+    const heroIdx=C.indexOf(hero);
+    heroEl.innerHTML=`
+      <div onclick="openWnFilm(${wnFilmMap.length})" style="position:relative;border-radius:12px;overflow:hidden;margin-bottom:24px;cursor:pointer;background:var(--surf2);min-height:160px;display:flex;align-items:flex-end" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
+        ${hero.poster?`<img src="${ex(hero.poster)}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35" loading="lazy">`:''}
+        <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(13,13,13,.95) 40%, rgba(13,13,13,.3))"></div>
+        <div style="position:relative;padding:20px;flex:1;min-width:0">
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:6px">🎬 Tonight's Pick</div>
+          <div style="font-size:20px;font-weight:700;font-family:'DM Serif Display',serif;color:var(--txt);line-height:1.2;margin-bottom:4px">${ex(hero.title)}</div>
+          <div style="font-size:12px;color:var(--mut);margin-bottom:8px">${ex(hero.director||'')}${hero.year?' · '+hero.year:''}${hero.runtime?' · '+hero.runtime+' min':''}</div>
+          ${hero.synopsis?`<div style="font-size:12px;color:#bbb;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">${ex(hero.synopsis)}</div>`:''}
+          <div style="margin-top:10px;display:flex;align-items:center;gap:8px">
+            ${hero.score?`<span style="font-size:18px;font-weight:700;color:var(--acc);font-family:'DM Serif Display',serif">${hero.score.toFixed(1)}</span>`:''}
+            <button onclick="event.stopPropagation();wnRotateHero()" style="background:none;border:1px solid rgba(255,255,255,.15);color:var(--mut);border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif">Different film ↻</button>
+          </div>
+        </div>
+        ${hero.poster?`<img src="${ex(hero.poster)}" style="position:relative;width:80px;height:120px;object-fit:cover;border-radius:6px;margin:16px;flex-shrink:0" loading="lazy">`:''}
+      </div>`;
+    seenTitles.set(hero.title+'|'+(hero.year||''), wnFilmMap.length);
+    wnFilmMap.push(hero);
+    frag.appendChild(heroEl.firstElementChild);
+  }
+
+  // ── CONTROLS ───────────────────────────────────────────────────────────────
+  const ctrl=document.createElement('div');
+  ctrl.innerHTML=`<div style="display:flex;align-items:center;gap:8px;margin-bottom:20px;flex-wrap:wrap">
+    <p style="font-size:13px;color:var(--mut);margin:0;flex:1">Grouped by mood · tap any poster to open</p>
     <button onclick="wnToggleWatched()" style="flex-shrink:0;background:${showAll?'var(--surf3)':'var(--surf2)'};border:1px solid ${showAll?'var(--bdr2)':'var(--bdr)'};color:${showAll?'var(--txt)':'var(--mut)'};border-radius:8px;padding:6px 12px;font-size:12px;cursor:pointer;white-space:nowrap">${showAll?'Showing all':'Unwatched only'}</button>
-    <button onclick="wnSurprise()" style="flex-shrink:0;background:var(--surf2);border:1px solid var(--bdr);color:var(--acc);border-radius:8px;padding:6px 12px;font-size:12px;cursor:pointer;white-space:nowrap">&#9825; Surprise me</button></div>`;
-  frag.appendChild(header.firstElementChild);
+    <button onclick="wnSurprise()" style="flex-shrink:0;background:var(--surf2);border:1px solid var(--bdr);color:var(--acc);border-radius:8px;padding:6px 12px;font-size:12px;cursor:pointer;white-space:nowrap">? Surprise me</button>
+  </div>`;
+  frag.appendChild(ctrl.firstElementChild);
 
-  WN.forEach(g=>{
-    const all=g.films;
-    const unwatched=all.filter(f=>!f.watched);
-    const display=showAll?all:unwatched;
+  // ── BUILD DYNAMIC GROUPS FROM LIVE COLLECTION ──────────────────────────────
+  function wnGroup(films){ return showAll?films:films.filter(f=>!f.watched); }
 
-    // Skip groups with nothing to show
-    if(!display.length) return;
+  const dynGroups=[];
 
-    // Resolve global indices for ALL films (so watched films still have valid indices for detail sheet)
-    all.forEach(f=>{
-      const key=f.title+"|"+(f.year||"");
-      if(!seenTitles.has(key)){
-        seenTitles.set(key,wnFilmMap.length);
-        wnFilmMap.push(f);
-      }
+  // Something light — under 100 min, score 8+, comedy/romance/animation genres
+  const light=C.filter(f=>f.runtime&&f.runtime<100&&f.score&&f.score>=8&&
+    (f.genre||'').match(/Comedy|Romance|Animation|Family/i)).sort((a,b)=>b.score-a.score).slice(0,15);
+  if(wnGroup(light).length)dynGroups.push({icon:'☀️',name:'Something light',desc:'Under 100 min · easy watching',films:light});
+
+  // Something challenging — slow cinema, art house, 8.5+ score, long runtime or known challenging genres
+  const challenging=C.filter(f=>f.score&&f.score>=8.5&&
+    ((f.runtime&&f.runtime>=140)||(f.genre||'').match(/Documentary|Art House|Biography|History/i)||
+    ['Andrei Tarkovsky','Béla Tarr','Chantal Akerman','Robert Bresson','Carl Theodor Dreyer','Jean-Luc Godard','Alain Resnais'].some(d=>f.director&&f.director.includes(d.split(' ').pop()))))
+    .sort((a,b)=>b.score-a.score).slice(0,15);
+  if(wnGroup(challenging).length)dynGroups.push({icon:'🧠',name:'Something challenging',desc:'Demanding · rewarding · essential',films:challenging});
+
+  // Tonight — quick wins, under 100 min, score 8.5+
+  const tonight=C.filter(f=>f.runtime&&f.runtime<=100&&f.score&&f.score>=8.5)
+    .sort((a,b)=>b.score-a.score).slice(0,12);
+  if(wnGroup(tonight).length)dynGroups.push({icon:'🌙',name:'Tonight',desc:'Under 100 min · score 8.5+',films:tonight});
+
+  // Saturday afternoon — 95–140 min, score 8.6+
+  const saturday=C.filter(f=>f.runtime&&f.runtime>=95&&f.runtime<=140&&f.score&&f.score>=8.6)
+    .sort((a,b)=>b.score-a.score).slice(0,15);
+  if(wnGroup(saturday).length)dynGroups.push({icon:'🛋️',name:'Saturday afternoon',desc:'95–140 min · score 8.6+',films:saturday});
+
+  // Commit to the sofa — 150+ min, score 8.7+
+  const sofa=C.filter(f=>f.runtime&&f.runtime>=150&&f.score&&f.score>=8.7)
+    .sort((a,b)=>b.score-a.score).slice(0,12);
+  if(wnGroup(sofa).length)dynGroups.push({icon:'🎭',name:'Commit to the sofa',desc:'150+ min · score 8.7+',films:sofa});
+
+  // Blind spots — directors with 3+ films where you've watched fewer than half
+  const dirBlindMap={};
+  C.forEach(f=>{if(!f.director)return;if(!dirBlindMap[f.director])dirBlindMap[f.director]={films:[],watched:0};dirBlindMap[f.director].films.push(f);if(f.watched)dirBlindMap[f.director].watched++;});
+  const blindDirs=Object.entries(dirBlindMap)
+    .filter(([d,v])=>v.films.length>=3&&v.watched<v.films.length/2)
+    .sort((a,b)=>{const avgA=a[1].films.reduce((s,f)=>s+(f.score||0),0)/a[1].films.length;const avgB=b[1].films.reduce((s,f)=>s+(f.score||0),0)/b[1].films.length;return avgB-avgA;})
+    .slice(0,4);
+  const blindFilms=[];const seenBlind=new Set();
+  blindDirs.forEach(([d,v])=>{v.films.filter(f=>!f.watched).slice(0,3).forEach(f=>{if(!seenBlind.has(f.title)){seenBlind.add(f.title);blindFilms.push(f);}});});
+  if(blindFilms.length>=3)dynGroups.push({icon:'🔍',name:'Blind spots',desc:'Directors you own but rarely watch',films:blindFilms});
+
+  // Crime & noir — dynamically from collection
+  const crime=C.filter(f=>f.score&&f.score>=8&&(f.genre||'').match(/Crime|Film-Noir|Noir|Thriller/i))
+    .sort((a,b)=>b.score-a.score).slice(0,15);
+  if(wnGroup(crime).length)dynGroups.push({icon:'🔦',name:'Crime & noir',desc:'Double crosses · shadows · moral ambiguity',films:crime});
+
+  // World cinema — non-English countries, score 8.5+
+  const world=C.filter(f=>f.score&&f.score>=8.5&&f.country&&!['Usa','Uk','Australia','New Zealand','Canada'].includes(f.country))
+    .sort((a,b)=>b.score-a.score).slice(0,15);
+  if(wnGroup(world).length)dynGroups.push({icon:'🌍',name:'World cinema',desc:'Non-English · essential international films',films:world});
+
+  // Horror & dread
+  const horror=C.filter(f=>f.score&&f.score>=7.5&&(f.genre||'').match(/Horror/i))
+    .sort((a,b)=>b.score-a.score).slice(0,12);
+  if(wnGroup(horror).length)dynGroups.push({icon:'👁️',name:'Dread & horror',desc:'When you want to be unsettled',films:horror});
+
+  // War
+  const war=C.filter(f=>f.score&&f.score>=8.5&&(f.genre||'').match(/War/i))
+    .sort((a,b)=>b.score-a.score).slice(0,12);
+  if(wnGroup(war).length)dynGroups.push({icon:'⚔️',name:'War & human cost',desc:'Conflict on an epic and intimate scale',films:war});
+
+  // Top directors (most films owned) — one group per top director
+  const topDirEntries=Object.entries(dirBlindMap)
+    .filter(([d,v])=>v.films.length>=4)
+    .sort((a,b)=>b[1].films.length-a[1].films.length)
+    .slice(0,3);
+  topDirEntries.forEach(([d,v])=>{
+    const sorted=v.films.slice().sort((a,b)=>(b.score||0)-(a.score||0));
+    if(wnGroup(sorted).length)dynGroups.push({icon:'🎬',name:d,desc:`${v.films.length} films in your collection`,films:sorted});
+  });
+
+  // ── RENDER GROUPS ──────────────────────────────────────────────────────────
+  dynGroups.forEach(g=>{
+    const display=wnGroup(g.films);
+    if(!display.length)return;
+
+    // Register all films in wnFilmMap
+    g.films.forEach(f=>{
+      const key=f.title+'|'+(f.year||'');
+      if(!seenTitles.has(key)){seenTitles.set(key,wnFilmMap.length);wnFilmMap.push(f);}
+    });
+
+    const unwatchedCount=g.films.filter(f=>!f.watched).length;
+    const groupLabel=showAll
+      ?`${unwatchedCount} unwatched of ${g.films.length}`
+      :`${display.length} film${display.length!==1?'s':''}`;
+
+    let postersHtml='';
+    display.forEach(f=>{
+      const key=f.title+'|'+(f.year||'');
+      const idx=seenTitles.get(key);
+      postersHtml+=`<div onclick="openWnFilm(${idx})" class="wn-poster" style="opacity:${f.watched?.45:1}">
+        <div class="wn-poster-img">
+          ${f.poster?`<img src="${ex(f.poster)}" style="width:100%;height:100%;object-fit:cover" loading="lazy">`:`<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--mut);padding:4px;text-align:center">${ex(f.title)}</div>`}
+        </div>
+        ${f.watched?'<div style="position:absolute;top:4px;right:4px;width:16px;height:16px;border-radius:50%;background:var(--grn);display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff">✓</div>':''}
+        <div style="font-size:10px;color:var(--txt);margin-top:4px;line-height:1.3;max-width:80px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">${ex(f.title)}</div>
+        <div style="font-size:10px;color:var(--mut)">${f.score?f.score.toFixed(1):''}</div>
+      </div>`;
     });
 
     const section=document.createElement('div');
     section.style.marginBottom='28px';
-
-    let postersHtml='';
-    display.forEach(f=>{
-      const key=f.title+"|"+(f.year||"");
-      const idx=seenTitles.get(key);
-      const watched=f.watched;
-      const poster=f.poster||'';
-      postersHtml+=`<div onclick="openWnFilm(${idx})" class="wn-poster" style="opacity:${watched?0.45:1}">
-        <div class="wn-poster-img">
-          ${poster?`<img src="${ex(poster)}" style="width:100%;height:100%;object-fit:cover" loading="lazy">`:`<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--mut);padding:4px;text-align:center">${ex(f.title)}</div>`}
-        </div>
-        ${watched?'<div style="position:absolute;top:4px;right:4px;width:16px;height:16px;border-radius:50%;background:var(--grn);display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff">✓</div>':''}
-        <div style="font-size:10px;color:var(--txt);margin-top:4px;line-height:1.3;max-width:80px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">${ex(f.title)}</div>
-        <div style="font-size:10px;color:var(--mut)">${f.score||''}</div>
-      </div>`;
-    });
-
-    const watchedCount=all.length-unwatched.length;
-    const groupLabel=showAll
-      ? `${unwatched.length} unwatched of ${all.length}`
-      : (watchedCount>0?`${display.length} film${display.length!==1?'s':''}  · ${watchedCount} already watched`:`${display.length} film${display.length!==1?'s':''}`);
-
     section.innerHTML=`
       <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px">
         <span style="font-size:17px;font-weight:600;color:var(--txt)">${g.icon} ${ex(g.name)}</span>
@@ -1468,6 +1652,16 @@ function renderWatchNext(){
   pg.appendChild(frag);
 }
 
+// Hero rotation — pick a different film from pool on demand
+function wnRotateHero(){
+  const pg=document.getElementById('page-watchnext');
+  // Increment offset stored on element
+  const offset=parseInt(pg.dataset.heroOffset||'0')+1;
+  pg.dataset.heroOffset=offset;
+  renderWatchNext();
+}
+
+function wnToggleWatched(){
 function wnToggleWatched(){
   const pg=document.getElementById('page-watchnext');
   pg.dataset.showAll=pg.dataset.showAll==='true'?'false':'true';
