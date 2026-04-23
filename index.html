@@ -1136,14 +1136,14 @@ function renderStats(){
       <h3>Score Distribution</h3>
       <div style="display:flex;gap:10px;margin-bottom:10px;font-size:10px;color:var(--mut)">
         <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--grn);display:inline-block"></span>Watched</span>
-        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--surf3);display:inline-block"></span>Unwatched</span>
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:rgba(255,255,255,.13);display:inline-block"></span>Unwatched</span>
       </div>
       ${bucketKeys.map(k=>{
         const w=scoreBucketsW[k],u=scoreBucketsU[k],tot=w+u;
         return`<div class="bar-row">
           <span class="bar-label">${k}</span>
           <div class="bar-wrap" style="position:relative;overflow:visible">
-            <div style="height:100%;width:${Math.round((w+u)/maxScoreBucket*100)}%;border-radius:3px;background:var(--surf3);position:absolute;left:0;top:0"></div>
+            <div style="height:100%;width:${Math.round((w+u)/maxScoreBucket*100)}%;border-radius:3px;background:rgba(255,255,255,.13);position:absolute;left:0;top:0"></div>
             <div style="height:100%;width:${Math.round(w/maxScoreBucket*100)}%;border-radius:3px;background:var(--grn);position:absolute;left:0;top:0"></div>
           </div>
           <span class="bar-count">${tot}</span>
@@ -1155,7 +1155,7 @@ function renderStats(){
       <h3>By Label</h3>
       <div style="display:flex;gap:10px;margin-bottom:10px;font-size:10px;color:var(--mut)">
         <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--grn);display:inline-block"></span>Watched</span>
-        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--surf3);display:inline-block"></span>Unwatched</span>
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:rgba(255,255,255,.13);display:inline-block"></span>Unwatched</span>
       </div>
       ${distData.map(d=>{
         const pct=Math.round(d.watched/d.total*100);
@@ -1163,7 +1163,7 @@ function renderStats(){
         return`<div class="bar-row">
           <span class="bar-label wide" style="cursor:pointer;color:var(--blu);text-decoration:underline" onclick="filterByDistributor('${d.name}')">${d.name.replace(' Collection','').replace(' Films','').replace(' Entertainment','')}</span>
           <div class="bar-wrap" style="position:relative;overflow:visible">
-            <div style="height:100%;width:${Math.round(d.total/maxT*100)}%;border-radius:3px;background:var(--surf3);position:absolute;left:0;top:0"></div>
+            <div style="height:100%;width:${Math.round(d.total/maxT*100)}%;border-radius:3px;background:rgba(255,255,255,.13);position:absolute;left:0;top:0"></div>
             <div style="height:100%;width:${Math.round(d.watched/maxT*100)}%;border-radius:3px;background:var(--grn);position:absolute;left:0;top:0"></div>
           </div>
           <span class="bar-count" style="color:var(--mut);font-size:10px">${d.watched}/${d.total} <span style="color:var(--acc)">${pct}%</span></span>
@@ -1175,14 +1175,14 @@ function renderStats(){
       <h3>Top Directors</h3>
       <div style="display:flex;gap:10px;margin-bottom:10px;font-size:10px;color:var(--mut)">
         <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--grn);display:inline-block"></span>Watched</span>
-        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--surf3);display:inline-block"></span>Unwatched</span>
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:rgba(255,255,255,.13);display:inline-block"></span>Unwatched</span>
       </div>
       ${topDirs.map(([d,v])=>{
         const maxT=topDirs[0][1].total;
         return`<div class="bar-row">
           <span class="bar-label wide" style="cursor:pointer;color:var(--blu);text-decoration:underline" onclick="openDirector('${ex(d)}')">${ex(d)}</span>
           <div class="bar-wrap" style="position:relative;overflow:visible">
-            <div style="height:100%;width:${Math.round(v.total/maxT*100)}%;border-radius:3px;background:var(--surf3);position:absolute;left:0;top:0"></div>
+            <div style="height:100%;width:${Math.round(v.total/maxT*100)}%;border-radius:3px;background:rgba(255,255,255,.13);position:absolute;left:0;top:0"></div>
             <div style="height:100%;width:${Math.round(v.watched/maxT*100)}%;border-radius:3px;background:var(--grn);position:absolute;left:0;top:0"></div>
           </div>
           <span class="bar-count" style="font-size:10px;color:var(--mut)">${v.watched}/${v.total}</span>
@@ -1194,14 +1194,14 @@ function renderStats(){
       <h3>Top Cast Members</h3>
       <div style="display:flex;gap:10px;margin-bottom:10px;font-size:10px;color:var(--mut)">
         <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--grn);display:inline-block"></span>Watched</span>
-        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--surf3);display:inline-block"></span>Unwatched</span>
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:rgba(255,255,255,.13);display:inline-block"></span>Unwatched</span>
       </div>
       ${topCast.map(([n,v])=>{
         const maxT=topCast[0][1].total;
         return`<div class="bar-row">
           <span class="bar-label wide" style="cursor:pointer;color:var(--blu);text-decoration:underline" onclick="searchByCast('${n.replace(/'/g,"\\'")}')">${ex(n)}</span>
           <div class="bar-wrap" style="position:relative;overflow:visible">
-            <div style="height:100%;width:${Math.round(v.total/maxT*100)}%;border-radius:3px;background:var(--surf3);position:absolute;left:0;top:0"></div>
+            <div style="height:100%;width:${Math.round(v.total/maxT*100)}%;border-radius:3px;background:rgba(255,255,255,.13);position:absolute;left:0;top:0"></div>
             <div style="height:100%;width:${Math.round(v.watched/maxT*100)}%;border-radius:3px;background:var(--grn);position:absolute;left:0;top:0"></div>
           </div>
           <span class="bar-count" style="font-size:10px;color:var(--mut)">${v.watched}/${v.total}</span>
@@ -1213,14 +1213,14 @@ function renderStats(){
       <h3>By Country</h3>
       <div style="display:flex;gap:10px;margin-bottom:10px;font-size:10px;color:var(--mut)">
         <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--pur);display:inline-block"></span>Watched</span>
-        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--surf3);display:inline-block"></span>Unwatched</span>
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:rgba(255,255,255,.13);display:inline-block"></span>Unwatched</span>
       </div>
       ${topCtys.map(([c,v])=>{
         const maxT=topCtys[0][1].total;
         return`<div class="bar-row">
           <span class="bar-label wide" style="cursor:pointer;color:var(--blu);text-decoration:underline" onclick="applyFilter('country','${c}')">${(FLAGS[c]||"")} ${c}</span>
           <div class="bar-wrap" style="position:relative;overflow:visible">
-            <div style="height:100%;width:${Math.round(v.total/maxT*100)}%;border-radius:3px;background:var(--surf3);position:absolute;left:0;top:0"></div>
+            <div style="height:100%;width:${Math.round(v.total/maxT*100)}%;border-radius:3px;background:rgba(255,255,255,.13);position:absolute;left:0;top:0"></div>
             <div style="height:100%;width:${Math.round(v.watched/maxT*100)}%;border-radius:3px;background:var(--pur);position:absolute;left:0;top:0"></div>
           </div>
           <span class="bar-count" style="font-size:10px;color:var(--mut)">${v.watched}/${v.total}</span>
@@ -1232,14 +1232,14 @@ function renderStats(){
       <h3>Top Genres</h3>
       <div style="display:flex;gap:10px;margin-bottom:10px;font-size:10px;color:var(--mut)">
         <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--acc);display:inline-block"></span>Watched</span>
-        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--surf3);display:inline-block"></span>Unwatched</span>
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:rgba(255,255,255,.13);display:inline-block"></span>Unwatched</span>
       </div>
       ${topGens.map(([g,v])=>{
         const maxT=topGens[0][1].total;
         return`<div class="bar-row">
           <span class="bar-label wide" style="cursor:pointer;color:var(--blu);text-decoration:underline" onclick="applyFilter('genre','${g}')">${g}</span>
           <div class="bar-wrap" style="position:relative;overflow:visible">
-            <div style="height:100%;width:${Math.round(v.total/maxT*100)}%;border-radius:3px;background:var(--surf3);position:absolute;left:0;top:0"></div>
+            <div style="height:100%;width:${Math.round(v.total/maxT*100)}%;border-radius:3px;background:rgba(255,255,255,.13);position:absolute;left:0;top:0"></div>
             <div style="height:100%;width:${Math.round(v.watched/maxT*100)}%;border-radius:3px;background:var(--acc);position:absolute;left:0;top:0"></div>
           </div>
           <span class="bar-count" style="font-size:10px;color:var(--mut)">${v.watched}/${v.total}</span>
@@ -1504,9 +1504,9 @@ function renderWatchNext(){
     const heroEl=document.createElement('div');
     const heroIdx=C.indexOf(hero);
     heroEl.innerHTML=`
-      <div onclick="openWnFilm(${wnFilmMap.length})" style="position:relative;border-radius:12px;overflow:hidden;margin-bottom:24px;cursor:pointer;background:var(--surf2);min-height:160px;display:flex;align-items:flex-end" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
-        ${hero.poster?`<img src="${ex(hero.poster)}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35" loading="lazy">`:''}
-        <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(13,13,13,.95) 40%, rgba(13,13,13,.3))"></div>
+      <div onclick="openWnFilm(${wnFilmMap.length})" style="position:relative;border-radius:12px;overflow:hidden;margin-bottom:24px;cursor:pointer;background:var(--surf2);min-height:190px;display:flex;align-items:flex-end" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
+        ${hero.poster?`<img src="${ex(hero.poster)}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55" loading="lazy">`:''}
+        <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(13,13,13,.96) 35%, rgba(13,13,13,.2))"></div>
         <div style="position:relative;padding:20px;flex:1;min-width:0">
           <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:6px">🎬 Tonight's Pick</div>
           <div style="font-size:20px;font-weight:700;font-family:'DM Serif Display',serif;color:var(--txt);line-height:1.2;margin-bottom:4px">${ex(hero.title)}</div>
@@ -1517,7 +1517,7 @@ function renderWatchNext(){
             <button onclick="event.stopPropagation();wnRotateHero()" style="background:none;border:1px solid rgba(255,255,255,.15);color:var(--mut);border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif">Different film ↻</button>
           </div>
         </div>
-        ${hero.poster?`<img src="${ex(hero.poster)}" style="position:relative;width:80px;height:120px;object-fit:cover;border-radius:6px;margin:16px;flex-shrink:0" loading="lazy">`:''}
+        ${hero.poster?`<img src="${ex(hero.poster)}" style="position:relative;width:100px;height:150px;object-fit:cover;border-radius:8px;margin:16px;flex-shrink:0;box-shadow:0 8px 32px rgba(0,0,0,.7)" loading="lazy">`:''}
       </div>`;
     seenTitles.set(hero.title+'|'+(hero.year||''), wnFilmMap.length);
     wnFilmMap.push(hero);
