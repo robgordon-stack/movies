@@ -29,12 +29,14 @@
         "title": "Under the Skin",
         "imdb_id": "tt1441395"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776564824071zi6fthwgs7a",
     "title": "First Cow",
-    "year": 2019,
+    "year": 2020,
     "director": "Kelly Reichardt",
     "poster": "https://image.tmdb.org/t/p/w342/yS41crZ1i0fFxCQbuL7I1Y1VBwm.jpg",
     "imdb_id": "tt9231040",
@@ -61,7 +63,9 @@
         "title": "Old Joy",
         "imdb_id": "tt0477371"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776564736206udsdheqdsni",
@@ -93,7 +97,9 @@
         "title": "Shoah",
         "imdb_id": "tt0090015"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "17765647011598pfh0t9za3c",
@@ -125,7 +131,9 @@
         "title": "Beginners",
         "imdb_id": "tt1532503"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776564667786yolazm79yfn",
@@ -157,7 +165,9 @@
         "title": "Moonlight",
         "imdb_id": "tt4975722"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776564645375yi5vgbpr8s",
@@ -189,7 +199,9 @@
         "title": "The Wicker Man",
         "imdb_id": "tt0070917"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776564539079ad2vg9ahuuj",
@@ -221,7 +233,9 @@
         "title": "After Hours",
         "imdb_id": "tt0088680"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776564498256zo9frg6oer",
@@ -253,7 +267,9 @@
         "title": "Under the Skin",
         "imdb_id": "tt1441395"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776343205845y5dpzlg0ewl",
@@ -285,7 +301,9 @@
         "title": "Thief",
         "imdb_id": "tt0083190"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776343157572vnkfut612xo",
@@ -295,7 +313,7 @@
     "poster": "https://image.tmdb.org/t/p/w342/jbccmnqE4oAPI67bApgt2JiRPz8.jpg",
     "imdb_id": "tt0181865",
     "genre": "Crime, Drama, Thriller",
-    "country": "Germany",
+    "country": "United States",
     "runtime": 147,
     "priority": "Someday",
     "notes": null,
@@ -317,7 +335,9 @@
         "title": "Babel",
         "imdb_id": "tt0449467"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776343115333xbw7x2sjprh",
@@ -349,7 +369,9 @@
         "title": "Run Silent Run Deep",
         "imdb_id": "tt0052151"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1775999459701yeuxa6o5w3",
@@ -382,7 +404,9 @@
         "year": 1991,
         "imdb_id": "tt0101698"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1775998783399caoupie9q1q",
@@ -415,7 +439,9 @@
         "year": 1976,
         "imdb_id": "tt0074958"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1775998583282dbs19s31khm",
@@ -448,7 +474,9 @@
         "year": 1996,
         "imdb_id": "tt0115681"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1775998429785ky5jnoa7r8",
@@ -480,7 +508,9 @@
         "year": 1973,
         "imdb_id": "tt0070034"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1775997929904atbr20doefo",
@@ -512,7 +542,9 @@
         "year": 1997,
         "imdb_id": "tt0119535"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1775997906621qu02xg63bpl",
@@ -545,7 +577,9 @@
         "year": 2003,
         "imdb_id": "tt0274166"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1775877872638dswzwzr85p6",
@@ -583,7 +617,9 @@
         "year": 1968,
         "imdb_id": "tt0063522"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1775877681936om6j8oh5opf",
@@ -621,7 +657,9 @@
         "year": 1996,
         "imdb_id": "tt0117477"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "17758776274173x7z6swi8xk",
@@ -653,7 +691,9 @@
         "year": 2011,
         "imdb_id": "tt1568222"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "177587734153015rd5x4ghs5",
@@ -691,7 +731,8 @@
         "imdb_id": "tt0247258"
       }
     ],
-    "has4k": false
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "17758772346498g88ri6njse",
@@ -729,7 +770,9 @@
         "year": 2014,
         "imdb_id": "tt2234222"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "17758766329870gd9mfmcvb4m",
@@ -768,7 +811,8 @@
         "imdb_id": "tt1060277"
       }
     ],
-    "has4k": true
+    "has4k": true,
+    "tmdb_id": null
   },
   {
     "id": "1775874263968vgrmc7l35wl",
@@ -807,7 +851,8 @@
         "imdb_id": "tt0049735"
       }
     ],
-    "has4k": false
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1775468716369d6poip55fzj",
@@ -840,7 +885,9 @@
     "imdb_score": 8.5,
     "lb_score": 4.1,
     "rt_score": 0.75,
-    "mc_score": 57
+    "mc_score": 57,
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1775468676456cn9ix60lt0t",
@@ -878,7 +925,9 @@
     "imdb_score": 8.5,
     "lb_score": 4.2,
     "rt_score": 0.83,
-    "mc_score": 62
+    "mc_score": 62,
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "17754686426368njjcatuyb9",
@@ -912,7 +961,8 @@
     "imdb_score": 8.5,
     "lb_score": 4.2,
     "rt_score": 0.73,
-    "mc_score": 64
+    "mc_score": 64,
+    "tmdb_id": null
   },
   {
     "id": "1775428803597ln6zek822os",
@@ -951,7 +1001,8 @@
         "year": 2012,
         "imdb_id": "tt2328879"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775428736582ffrbesgx4ij",
@@ -990,7 +1041,8 @@
         "year": 1966,
         "imdb_id": "tt0060665"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775428055988shur4ggx0m9",
@@ -1029,7 +1081,8 @@
         "year": 1954,
         "imdb_id": "tt0047113"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "177542801878537zewtshgv5",
@@ -1063,7 +1116,8 @@
         "year": 1950,
         "imdb_id": "tt0042814"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "17754278757182r5fbxw41hl",
@@ -1102,7 +1156,8 @@
         "year": 2008,
         "imdb_id": "tt1271188"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775427840044f83wjox5la",
@@ -1141,7 +1196,8 @@
         "year": 1929,
         "imdb_id": "tt0019649"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775427791606ldyv8h81e88",
@@ -1180,7 +1236,8 @@
         "year": 1993,
         "imdb_id": "tt0106594"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "17754276841962fptn0nxtt5",
@@ -1219,7 +1276,8 @@
         "year": 2016,
         "imdb_id": "tt5714132"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "17753640833188k5tezc05vp",
@@ -1296,7 +1354,7 @@
   },
   {
     "id": "1775364083318xrbl3m8rqy",
-    "title": "Nostalgia",
+    "title": "Nostalghia",
     "priority": "Someday",
     "added": 1775364083318,
     "owned": false,
@@ -1477,7 +1535,7 @@
       {
         "title": "Orpheus",
         "year": 1950,
-        "imdb_id": "tt0042814"
+        "imdb_id": "tt0042391"
       },
       {
         "title": "La Ronde",
@@ -2567,7 +2625,7 @@
       {
         "title": "Good Time",
         "year": 2017,
-        "imdb_id": "tt4574334"
+        "imdb_id": "tt4846232"
       },
       {
         "title": "Heaven Knows What",
@@ -3122,7 +3180,7 @@
     "genre": "Drama",
     "country": "United States",
     "director": "David Fincher",
-    "tmdb_id": 37799,
+    "tmdb_id": 12221,
     "lb": "https://letterboxd.com/search/The%20Social%20Network/",
     "has4k": true,
     "score": 8.6,
@@ -3669,7 +3727,7 @@
     "director": "Alejandro González Iñárritu",
     "tmdb_id": 55,
     "lb": "https://letterboxd.com/search/Amores%20Perros/",
-    "notes": "Criterion\n",
+    "notes": "Criterion",
     "has4k": false,
     "score": 8.4,
     "imdb_score": 8.1,
@@ -4032,7 +4090,7 @@
     "director": "Charlotte Wells",
     "tmdb_id": 965150,
     "lb": "https://letterboxd.com/search/Aftersun/",
-    "notes": "",
+    "notes": null,
     "has4k": false,
     "score": 8.5,
     "imdb_score": 7.6,
@@ -4139,7 +4197,7 @@
     "added": 1775363589985,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/zW47oIH3bc3ggmmmzTvKqM4Fqjk.jpg",
-    "imdb_id": "tt0056443",
+    "imdb_id": "tt0056461",
     "year": 1962,
     "runtime": 96,
     "genre": "Drama, Action, Comedy",
@@ -4549,7 +4607,8 @@
         "year": 1960,
         "imdb_id": "tt0053844"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775391551451f5eydj2l5x",
@@ -4588,7 +4647,8 @@
         "year": 2010,
         "imdb_id": "tt1568921"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775391533485toythy4mky",
@@ -4627,7 +4687,8 @@
         "year": 2009,
         "imdb_id": "tt1483797"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775391497635svszusfidgk",
@@ -4666,7 +4727,8 @@
         "year": 2013,
         "imdb_id": "tt1821549"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775391480369rhcfs4fq44m",
@@ -4705,7 +4767,8 @@
         "year": 1953,
         "imdb_id": "tt0045555"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775391463019r11mon4pj5k",
@@ -4744,7 +4807,8 @@
         "year": 2008,
         "imdb_id": "tt1152850"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775391436136unz64wzk7m",
@@ -4779,7 +4843,8 @@
         "year": 2018,
         "imdb_id": "tt7568814"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775391409269dogevmt0xq9",
@@ -4813,7 +4878,8 @@
         "year": 1966,
         "imdb_id": "tt0060327"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "177539139451966087vr0hz9",
@@ -4846,7 +4912,8 @@
         "year": 1960,
         "imdb_id": "tt0053577"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775391366452yce77nwmjlq",
@@ -4879,7 +4946,8 @@
         "year": 1973,
         "imdb_id": "tt0070666"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775391344020ba64ghk3bxk",
@@ -4913,46 +4981,8 @@
         "year": 2015,
         "imdb_id": "tt3655292"
       }
-    ]
-  },
-  {
-    "id": "1775390728602ff8miyr43jn",
-    "title": "The Big Lebowski",
-    "year": 1998,
-    "director": "Joel Coen, Ethan Coen",
-    "poster": "https://image.tmdb.org/t/p/w1280/3bv6WAp6BSxxYvB5ozKFUYuRA8C.jpg",
-    "imdb_id": "tt0118715",
-    "genre": "Comedy, Crime",
-    "country": "United States",
-    "runtime": 117,
-    "priority": "High",
-    "notes": null,
-    "owned": false,
-    "added": 1775390728602,
-    "has4k": true,
-    "lb": "https://letterboxd.com/film/the-big-lebowski/",
-    "score": 8,
-    "imdb_score": 8.1,
-    "lb_score": 4.1,
-    "rt_score": 0.83,
-    "mc_score": 71,
-    "similar": [
-      {
-        "title": "Inherent Vice",
-        "year": 2014,
-        "imdb_id": "tt1791528"
-      },
-      {
-        "title": "Burn After Reading",
-        "year": 2008,
-        "imdb_id": "tt0887264"
-      },
-      {
-        "title": "The Long Goodbye",
-        "year": 1973,
-        "imdb_id": "tt0070334"
-      }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775371723640ww49gz5goyj",
@@ -4987,7 +5017,8 @@
         "year": 2011,
         "imdb_id": "tt1714210"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775371684024m8um357g34",
@@ -5027,7 +5058,8 @@
         "year": 1975,
         "imdb_id": "tt0073440"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775371673725w1gn52pc3i",
@@ -5066,7 +5098,8 @@
         "year": 1974,
         "imdb_id": "tt0073399"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775371657973pnqzf049mkr",
@@ -5106,7 +5139,8 @@
         "year": 1989,
         "imdb_id": "tt0097937"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775371647974cf3xxxpl6sc",
@@ -5146,7 +5180,8 @@
         "year": 2013,
         "imdb_id": "tt1091191"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775371625207eoz1h8ix8ru",
@@ -5186,7 +5221,8 @@
         "year": 2015,
         "imdb_id": "tt2494280"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "17753716133406gnpzt8kahf",
@@ -5226,7 +5262,8 @@
         "year": 2013,
         "imdb_id": "tt1821549"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775371605424747e4u09fil",
@@ -5261,7 +5298,8 @@
         "year": 1972,
         "imdb_id": "tt0069155"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775371594107n44ungk2i6k",
@@ -5301,7 +5339,8 @@
         "year": 1974,
         "imdb_id": "tt0071315"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775371582007sg1j8ev1rgs",
@@ -5341,7 +5380,8 @@
         "year": 1998,
         "imdb_id": "tt0131325"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775371570590nupx8lx1ioq",
@@ -5381,7 +5421,8 @@
         "year": 1995,
         "imdb_id": "tt0114746"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "177537155579129ijzhk054x",
@@ -5416,7 +5457,8 @@
         "year": 1975,
         "imdb_id": "tt0073078"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775371542557j7c3c79i5wk",
@@ -5455,7 +5497,8 @@
         "year": 1995,
         "imdb_id": "tt0113277"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775371530608mmgqpey1dym",
@@ -5490,7 +5533,8 @@
         "year": 2017,
         "imdb_id": "tt5649144"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775371513524dur9q0gdn7u",
@@ -5530,7 +5574,8 @@
         "year": 1980,
         "imdb_id": "tt0081507"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775371492857ndgtur5e9jr",
@@ -5570,7 +5615,8 @@
         "year": 1994,
         "imdb_id": "tt0110308"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "17753714747914whsuu5empr",
@@ -5605,7 +5651,8 @@
         "year": 1989,
         "imdb_id": "tt0098546"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "17753714485577inbzhhv6dx",
@@ -5640,7 +5687,8 @@
         "year": 1974,
         "imdb_id": "tt0071947"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775371437274qdgqjk7djf",
@@ -5680,7 +5728,8 @@
         "year": 2005,
         "imdb_id": "tt0418763"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775371424124nxuqflt15xo",
@@ -5720,7 +5769,8 @@
         "year": 1997,
         "imdb_id": "tt0118842"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "17753714094419j7ecwynwtt",
@@ -5754,7 +5804,8 @@
         "year": 1999,
         "imdb_id": "tt0200859"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775371378476wv5pwwnlysc",
@@ -5794,7 +5845,8 @@
         "year": 1950,
         "imdb_id": "tt0043014"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775371251892h8158xno6pn",
@@ -5834,7 +5886,8 @@
         "year": 2010,
         "imdb_id": "tt1465522"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775369564988i3ewoak8ml",
@@ -5869,7 +5922,8 @@
         "year": 1995,
         "imdb_id": "tt0109642"
       }
-    ]
+    ],
+    "tmdb_id": null
   },
   {
     "id": "1775440300023exofn9t7e4",
@@ -6707,7 +6761,7 @@
     "owned": false,
     "added": 1775438675230,
     "has4k": true,
-    "tmdb_id": 621,
+    "tmdb_id": 3130,
     "lb": "https://letterboxd.com/film/the-graduate/",
     "distributor": "Studio Canal",
     "imdb_score": 8,
@@ -6888,44 +6942,6 @@
     ]
   },
   {
-    "id": "1776490185970dr7kbjwmsqi",
-    "title": "Being John Malkovich",
-    "year": 1999,
-    "director": "Spike Jonze",
-    "poster": "https://image.tmdb.org/t/p/w1280/xVSvIwRNzwXSs0CLefiiG6A96m4.jpg",
-    "imdb_id": "tt0120601",
-    "genre": "Comedy, Drama, Fantasy",
-    "country": "United States",
-    "runtime": 113,
-    "priority": "Someday",
-    "notes": null,
-    "owned": false,
-    "added": 1776490185970,
-    "score": 8.2,
-    "imdb_score": 7.8,
-    "lb_score": 4,
-    "rt_score": 0.94,
-    "mc_score": 90,
-    "lb": "https://letterboxd.com/film/being-john-malkovich/",
-    "similar": [
-      {
-        "title": "Adaptation.",
-        "year": 2002,
-        "imdb_id": "tt0268126"
-      },
-      {
-        "title": "Eternal Sunshine of the Spotless Mind",
-        "year": 2004,
-        "imdb_id": "tt0338013"
-      },
-      {
-        "title": "Synecdoche, New York",
-        "year": 2008,
-        "imdb_id": "tt0383028"
-      }
-    ]
-  },
-  {
     "id": "17764901274868qqferkj32k",
     "title": "Adaptation.",
     "year": 2002,
@@ -6956,7 +6972,9 @@
         "year": 2008,
         "imdb_id": "tt0383028"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "17764900345045buouoi9y0r",
@@ -6988,7 +7006,9 @@
         "year": 2002,
         "imdb_id": "tt0351409"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776489826188o2dhxe3rtb8",
@@ -7021,7 +7041,9 @@
         "year": 1995,
         "imdb_id": "tt0113243"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776489815238h0yca5usxor",
@@ -7054,7 +7076,9 @@
         "year": 1997,
         "imdb_id": "tt0119695"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776489802122f1xvclyzoig",
@@ -7087,7 +7111,9 @@
         "year": 1997,
         "imdb_id": "tt0119094"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776489497240yg2nk7sboqg",
@@ -7119,7 +7145,9 @@
         "year": 1996,
         "imdb_id": "tt0118157"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776479540018wpe28z2lbl",
@@ -7152,7 +7180,8 @@
         "imdb_id": "tt0036775"
       }
     ],
-    "has4k": false
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776479314435xo7s9ujyidp",
@@ -7185,7 +7214,8 @@
         "imdb_id": "tt0061418"
       }
     ],
-    "has4k": false
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "17764792883690u0ypcofasqn",
@@ -7218,40 +7248,8 @@
         "imdb_id": "tt0063522"
       }
     ],
-    "has4k": false
-  },
-  {
-    "id": "1776479241469n5zrh2c0nsg",
-    "title": "Schindler's List",
-    "year": 1993,
-    "director": "Steven Spielberg",
-    "poster": "https://image.tmdb.org/t/p/w1280/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
-    "imdb_id": "tt0108052",
-    "genre": "Biography, Drama, History",
-    "country": "United States",
-    "runtime": 195,
-    "priority": "High",
-    "notes": null,
-    "owned": false,
-    "added": 1776479241469,
-    "score": 9.2,
-    "imdb_score": 9,
-    "lb_score": 4.5,
-    "rt_score": 0.98,
-    "mc_score": 94,
-    "lb": "https://letterboxd.com/film/schindlers-list/",
-    "similar": [
-      {
-        "title": "The Pianist",
-        "year": 2002,
-        "imdb_id": "tt0253474"
-      },
-      {
-        "title": "Son of Saul",
-        "year": 2015,
-        "imdb_id": "tt3808342"
-      }
-    ]
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776479212453s6vb6jhesdq",
@@ -7284,7 +7282,8 @@
         "imdb_id": "tt0036775"
       }
     ],
-    "has4k": false
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "17764791877864mktfz9bz4m",
@@ -7317,7 +7316,9 @@
         "year": 2002,
         "imdb_id": "tt0299992"
       }
-    ]
+    ],
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776479167803hyniby62a5h",
@@ -7350,7 +7351,8 @@
         "imdb_id": "tt0060176"
       }
     ],
-    "has4k": false
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776479138020m3erkirdfj9",
@@ -7383,7 +7385,8 @@
         "imdb_id": "tt0019949"
       }
     ],
-    "has4k": false
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776479102655m855lhpcr",
@@ -7416,7 +7419,8 @@
         "imdb_id": "tt0163978"
       }
     ],
-    "has4k": false
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776478993872d42ys8142us",
@@ -7449,7 +7453,8 @@
         "imdb_id": "tt0045917"
       }
     ],
-    "has4k": false
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776478928988canfi05ika5",
@@ -7482,7 +7487,8 @@
         "imdb_id": "tt0055103"
       }
     ],
-    "has4k": false
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776478887789mnonwkqnpm",
@@ -7516,7 +7522,8 @@
         "imdb_id": "tt0078788"
       }
     ],
-    "has4k": false
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "17764788349446om030larkg",
@@ -7549,7 +7556,8 @@
         "imdb_id": "tt0036681"
       }
     ],
-    "has4k": false
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776478770806wq19uk8v6qe",
@@ -7582,7 +7590,8 @@
         "imdb_id": "tt0031503"
       }
     ],
-    "has4k": false
+    "has4k": false,
+    "tmdb_id": null
   },
   {
     "id": "1776478715357k5kgjxdxl3",
@@ -7615,6 +7624,669 @@
         "imdb_id": "tt0042709"
       }
     ],
-    "has4k": false
+    "has4k": false,
+    "tmdb_id": null
+  },
+  {
+    "title": "Sansho the Bailiff",
+    "year": 1954,
+    "director": "Kenji Mizoguchi",
+    "poster": "https://image.tmdb.org/t/p/w342/1Nwsn4NyoSPMXdVT0q5hfXELSKd.jpg",
+    "imdb_id": "tt0047548",
+    "genre": "Drama, History",
+    "country": "Japan",
+    "runtime": 124,
+    "priority": "Someday",
+    "notes": null,
+    "owned": false,
+    "has4k": false,
+    "tmdb_id": 14534,
+    "lb": "https://letterboxd.com/film/sansho-the-bailiff/",
+    "score": 8.8,
+    "imdb_score": 8.4,
+    "lb_score": 4.4,
+    "rt_score": 0.98,
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Ugetsu",
+        "year": 1953,
+        "imdb_id": "tt0046478"
+      },
+      {
+        "title": "The Life of Oharu",
+        "year": 1952,
+        "imdb_id": "tt0045112"
+      }
+    ],
+    "id": "17771999991879saaezgkib",
+    "added": 1777199999187
+  },
+  {
+    "title": "Certified Copy",
+    "year": 2010,
+    "director": "Abbas Kiarostami",
+    "poster": "https://image.tmdb.org/t/p/w342/qlDzGomM4J1D2bTJZ1Uy1DgtJeV.jpg",
+    "imdb_id": "tt1020773",
+    "genre": "Drama, Romance",
+    "country": "France",
+    "runtime": 106,
+    "priority": "Someday",
+    "notes": null,
+    "owned": false,
+    "has4k": false,
+    "tmdb_id": 38987,
+    "lb": "https://letterboxd.com/film/certified-copy/",
+    "score": 8.2,
+    "imdb_score": 7.5,
+    "lb_score": 4.0,
+    "rt_score": 0.92,
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Before Sunset",
+        "year": 2004,
+        "imdb_id": "tt0381681"
+      },
+      {
+        "title": "Journey to Italy",
+        "year": 1954,
+        "imdb_id": "tt0046511"
+      }
+    ],
+    "id": "1777199999187fsg1zuamom",
+    "added": 1777199999187
+  },
+  {
+    "title": "Day of Wrath",
+    "year": 1943,
+    "director": "Carl Theodor Dreyer",
+    "poster": "https://image.tmdb.org/t/p/w342/5GFGQqjCNz3QeGaHe8gFXFHCmKQ.jpg",
+    "imdb_id": "tt0035827",
+    "genre": "Drama, History",
+    "country": "Denmark",
+    "runtime": 97,
+    "priority": "Someday",
+    "notes": null,
+    "owned": false,
+    "has4k": false,
+    "tmdb_id": 10518,
+    "lb": "https://letterboxd.com/film/day-of-wrath/",
+    "score": 8.5,
+    "imdb_score": 8.0,
+    "lb_score": 4.2,
+    "rt_score": 0.97,
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Ordet",
+        "year": 1955,
+        "imdb_id": "tt0048452"
+      },
+      {
+        "title": "Gertrud",
+        "year": 1964,
+        "imdb_id": "tt0058097"
+      }
+    ],
+    "id": "1777199999187adpp857s9s",
+    "added": 1777199999187
+  },
+  {
+    "title": "Vengeance Is Mine",
+    "year": 1979,
+    "director": "Shohei Imamura",
+    "poster": "https://image.tmdb.org/t/p/w342/g19OQQXUbIQOTwRVFsNHfr3A3cS.jpg",
+    "imdb_id": "tt0079680",
+    "genre": "Crime, Drama, Thriller",
+    "country": "Japan",
+    "runtime": 140,
+    "priority": "Someday",
+    "notes": null,
+    "owned": false,
+    "has4k": false,
+    "tmdb_id": 34482,
+    "lb": "https://letterboxd.com/film/vengeance-is-mine/",
+    "score": 8.4,
+    "imdb_score": 8.0,
+    "lb_score": 4.2,
+    "rt_score": 0.98,
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Branded to Kill",
+        "year": 1967,
+        "imdb_id": "tt0061585"
+      },
+      {
+        "title": "Intentions of Murder",
+        "year": 1964,
+        "imdb_id": "tt0058222"
+      }
+    ],
+    "id": "1777199999187xf66fp0oaw",
+    "added": 1777199999187
+  },
+  {
+    "title": "Talk to Her",
+    "year": 2002,
+    "director": "Pedro Almodóvar",
+    "poster": "https://image.tmdb.org/t/p/w342/lXPSQoX7OFfcvFhkoBJEMfpVuWP.jpg",
+    "imdb_id": "tt0287839",
+    "genre": "Drama, Romance",
+    "country": "Spain",
+    "runtime": 112,
+    "priority": "Someday",
+    "notes": null,
+    "owned": false,
+    "has4k": false,
+    "tmdb_id": 763,
+    "lb": "https://letterboxd.com/film/talk-to-her/",
+    "score": 8.5,
+    "imdb_score": 8.0,
+    "lb_score": 4.2,
+    "rt_score": 0.96,
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "All About My Mother",
+        "year": 1999,
+        "imdb_id": "tt0185125"
+      },
+      {
+        "title": "Volver",
+        "year": 2006,
+        "imdb_id": "tt0441909"
+      }
+    ],
+    "id": "17771999991874y6rfmcsgl",
+    "added": 1777199999187
+  },
+  {
+    "title": "Rocco and His Brothers",
+    "year": 1960,
+    "director": "Luchino Visconti",
+    "poster": "https://image.tmdb.org/t/p/w342/txQpqE3A4xWqSfxMjHibJTSYfNJ.jpg",
+    "imdb_id": "tt0054173",
+    "genre": "Drama",
+    "country": "Italy",
+    "runtime": 177,
+    "priority": "Someday",
+    "notes": null,
+    "owned": false,
+    "has4k": false,
+    "tmdb_id": 33305,
+    "lb": "https://letterboxd.com/film/rocco-and-his-brothers/",
+    "score": 8.7,
+    "imdb_score": 8.1,
+    "lb_score": 4.3,
+    "rt_score": 0.97,
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "The Leopard",
+        "year": 1963,
+        "imdb_id": "tt0057091"
+      },
+      {
+        "title": "Ossessione",
+        "year": 1943,
+        "imdb_id": "tt0036241"
+      }
+    ],
+    "id": "17771999991876e0wkv4m0e",
+    "added": 1777199999187
+  },
+  {
+    "title": "Burning",
+    "year": 2018,
+    "director": "Lee Chang-dong",
+    "poster": "https://image.tmdb.org/t/p/w342/7ec1Fz2GOfBHovbhroGCxWtpFvB.jpg",
+    "imdb_id": "tt7282468",
+    "genre": "Drama, Mystery, Thriller",
+    "country": "South Korea",
+    "runtime": 148,
+    "priority": "High",
+    "notes": null,
+    "owned": false,
+    "has4k": false,
+    "tmdb_id": 473465,
+    "lb": "https://letterboxd.com/film/burning-2018/",
+    "score": 8.5,
+    "imdb_score": 7.5,
+    "lb_score": 4.2,
+    "rt_score": 0.93,
+    "mc_score": 90,
+    "similar": [
+      {
+        "title": "Past Lives",
+        "year": 2023,
+        "imdb_id": "tt13238346"
+      },
+      {
+        "title": "Poetry",
+        "year": 2010,
+        "imdb_id": "tt1567337"
+      },
+      {
+        "title": "Parasite",
+        "year": 2019,
+        "imdb_id": "tt6751668"
+      }
+    ],
+    "id": "17771999991875hb84nnmj8",
+    "added": 1777199999187
+  },
+  {
+    "title": "A Touch of Sin",
+    "year": 2013,
+    "director": "Jia Zhangke",
+    "poster": "https://image.tmdb.org/t/p/w342/sBR0ahlShqvSgGatXApeMlrqMxV.jpg",
+    "imdb_id": "tt2852400",
+    "genre": "Crime, Drama",
+    "country": "China",
+    "runtime": 129,
+    "priority": "Someday",
+    "notes": null,
+    "owned": false,
+    "has4k": false,
+    "tmdb_id": 180371,
+    "lb": "https://letterboxd.com/film/a-touch-of-sin/",
+    "score": 8.3,
+    "imdb_score": 7.5,
+    "lb_score": 4.1,
+    "rt_score": 0.92,
+    "mc_score": 88,
+    "similar": [
+      {
+        "title": "An Elephant Sitting Still",
+        "year": 2018,
+        "imdb_id": "tt8020896"
+      },
+      {
+        "title": "Still Life",
+        "year": 2006,
+        "imdb_id": "tt0799934"
+      }
+    ],
+    "id": "1777199999187e9cox0tskk",
+    "added": 1777199999187
+  },
+  {
+    "title": "Milestones",
+    "year": 1975,
+    "director": "Robert Kramer, John Douglas",
+    "poster": "https://image.tmdb.org/t/p/w342/placeholder.jpg",
+    "imdb_id": "tt0073363",
+    "genre": "Documentary, Drama",
+    "country": "United States",
+    "runtime": 195,
+    "priority": "Someday",
+    "notes": null,
+    "owned": false,
+    "has4k": false,
+    "tmdb_id": null,
+    "lb": "https://letterboxd.com/film/milestones/",
+    "score": 7.8,
+    "imdb_score": 7.2,
+    "lb_score": 3.9,
+    "rt_score": 0.85,
+    "similar": [
+      {
+        "title": "Harlan County U.S.A.",
+        "year": 1976,
+        "imdb_id": "tt0074605"
+      },
+      {
+        "title": "Roger & Me",
+        "year": 1989,
+        "imdb_id": "tt0098213"
+      }
+    ],
+    "id": "1777199999187o2cgkghqo4",
+    "added": 1777199999187
+  },
+  {
+    "title": "Crimes and Misdemeanors",
+    "year": 1989,
+    "director": "Woody Allen",
+    "poster": "https://image.tmdb.org/t/p/w342/9tU3gPJ0e14G6B2e2eGVLq30zBT.jpg",
+    "imdb_id": "tt0097123",
+    "genre": "Drama, Comedy",
+    "country": "United States",
+    "runtime": 104,
+    "priority": "Someday",
+    "notes": null,
+    "owned": false,
+    "has4k": false,
+    "tmdb_id": 4688,
+    "lb": "https://letterboxd.com/film/crimes-and-misdemeanors/",
+    "score": 8.3,
+    "imdb_score": 8.1,
+    "lb_score": 4.2,
+    "rt_score": 0.95,
+    "similar": [
+      {
+        "title": "Manhattan",
+        "year": 1979,
+        "imdb_id": "tt0079522"
+      },
+      {
+        "title": "Hannah and Her Sisters",
+        "year": 1986,
+        "imdb_id": "tt0091167"
+      },
+      {
+        "title": "Stardust Memories",
+        "year": 1980,
+        "imdb_id": "tt0081513"
+      }
+    ],
+    "id": "1777199999187ewn2f70nrv",
+    "added": 1777199999187
+  },
+  {
+    "title": "Elevator to the Gallows",
+    "year": 1958,
+    "director": "Louis Malle",
+    "poster": "https://image.tmdb.org/t/p/w342/8lLwqVJnLXF3WMUjGBIIBq9A09T.jpg",
+    "imdb_id": "tt0051747",
+    "genre": "Crime, Drama, Film-Noir, Thriller",
+    "country": "France",
+    "runtime": 88,
+    "priority": "Someday",
+    "notes": null,
+    "owned": false,
+    "has4k": false,
+    "tmdb_id": 6952,
+    "lb": "https://letterboxd.com/film/elevator-to-the-gallows/",
+    "score": 8.4,
+    "imdb_score": 7.9,
+    "lb_score": 4.2,
+    "rt_score": 0.98,
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Le Samouraï",
+        "year": 1967,
+        "imdb_id": "tt0062229"
+      },
+      {
+        "title": "Bob le Flambeur",
+        "year": 1956,
+        "imdb_id": "tt0048728"
+      },
+      {
+        "title": "Army of Shadows",
+        "year": 1969,
+        "imdb_id": "tt0064040"
+      }
+    ],
+    "id": "177719999918709cwy2qwm5",
+    "added": 1777199999187
+  },
+  {
+    "title": "Mouchette",
+    "year": 1967,
+    "director": "Robert Bresson",
+    "poster": "https://image.tmdb.org/t/p/w342/3iT3LT9pnwXxpvDWp3vqpwXlbHZ.jpg",
+    "imdb_id": "tt0061935",
+    "genre": "Drama",
+    "country": "France",
+    "runtime": 78,
+    "priority": "Someday",
+    "notes": null,
+    "owned": false,
+    "has4k": false,
+    "tmdb_id": 8923,
+    "lb": "https://letterboxd.com/film/mouchette/",
+    "score": 8.5,
+    "imdb_score": 7.9,
+    "lb_score": 4.2,
+    "rt_score": 0.97,
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Au Hasard Balthazar",
+        "year": 1966,
+        "imdb_id": "tt0060327"
+      },
+      {
+        "title": "Pickpocket",
+        "year": 1959,
+        "imdb_id": "tt0053168"
+      }
+    ],
+    "id": "1777199999187pt7sel3amp",
+    "added": 1777199999187
+  },
+  {
+    "title": "Close-Up",
+    "year": 1990,
+    "director": "Abbas Kiarostami",
+    "poster": "https://image.tmdb.org/t/p/w342/6VtaqKHPlTdPeUTdT7c4e9GZWF2.jpg",
+    "imdb_id": "tt0097576",
+    "genre": "Drama",
+    "country": "Iran",
+    "runtime": 98,
+    "priority": "Someday",
+    "notes": null,
+    "owned": false,
+    "has4k": false,
+    "tmdb_id": 16436,
+    "lb": "https://letterboxd.com/film/close-up/",
+    "score": 8.8,
+    "imdb_score": 8.4,
+    "lb_score": 4.5,
+    "rt_score": 0.97,
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Where Is the Friend's House?",
+        "year": 1987,
+        "imdb_id": "tt0093342"
+      },
+      {
+        "title": "A Separation",
+        "year": 2011,
+        "imdb_id": "tt1832382"
+      },
+      {
+        "title": "The White Balloon",
+        "year": 1995,
+        "imdb_id": "tt0112445"
+      }
+    ],
+    "id": "17771999991877w6401qy5x",
+    "added": 1777199999187
+  },
+  {
+    "title": "Blow-Up",
+    "year": 1966,
+    "director": "Michelangelo Antonioni",
+    "poster": "https://image.tmdb.org/t/p/w342/vQz5ZR0YQXI7b7LIQK9FDnEKu0P.jpg",
+    "imdb_id": "tt0060176",
+    "genre": "Drama, Mystery, Thriller",
+    "country": "United Kingdom",
+    "runtime": 111,
+    "priority": "Someday",
+    "notes": null,
+    "owned": false,
+    "has4k": false,
+    "tmdb_id": 3513,
+    "lb": "https://letterboxd.com/film/blowup/",
+    "score": 8.3,
+    "imdb_score": 7.5,
+    "lb_score": 4.0,
+    "rt_score": 0.95,
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Red Desert",
+        "year": 1964,
+        "imdb_id": "tt0058003"
+      },
+      {
+        "title": "L'Eclisse",
+        "year": 1962,
+        "imdb_id": "tt0056736"
+      },
+      {
+        "title": "The Conversation",
+        "year": 1974,
+        "imdb_id": "tt0071360"
+      }
+    ],
+    "id": "1777199999187syesqwvw0z",
+    "added": 1777199999187
+  },
+  {
+    "title": "A Woman Under the Influence",
+    "year": 1974,
+    "director": "John Cassavetes",
+    "poster": "https://image.tmdb.org/t/p/w342/nGO8E3pPsDilYUlN4fWVqBQ85Wn.jpg",
+    "imdb_id": "tt0072285",
+    "genre": "Drama",
+    "country": "United States",
+    "runtime": 155,
+    "priority": "Someday",
+    "notes": null,
+    "owned": false,
+    "has4k": false,
+    "tmdb_id": 35623,
+    "lb": "https://letterboxd.com/film/a-woman-under-the-influence/",
+    "score": 8.5,
+    "imdb_score": 8.1,
+    "lb_score": 4.3,
+    "rt_score": 0.98,
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Faces",
+        "year": 1968,
+        "imdb_id": "tt0062622"
+      },
+      {
+        "title": "Minnie and Moskowitz",
+        "year": 1971,
+        "imdb_id": "tt0067398"
+      },
+      {
+        "title": "Love Streams",
+        "year": 1984,
+        "imdb_id": "tt0087733"
+      }
+    ],
+    "id": "1777199999187fpl5pk651w",
+    "added": 1777199999187
+  },
+  {
+    "title": "The Double Life of Véronique",
+    "year": 1991,
+    "director": "Krzysztof Kieślowski",
+    "poster": "https://image.tmdb.org/t/p/w342/1u6oPRliZfMf3A9EcqBUXk4tY6Z.jpg",
+    "imdb_id": "tt0101765",
+    "genre": "Drama, Mystery, Romance",
+    "country": "France",
+    "runtime": 98,
+    "priority": "Someday",
+    "notes": null,
+    "owned": false,
+    "has4k": false,
+    "tmdb_id": 10529,
+    "lb": "https://letterboxd.com/film/the-double-life-of-veronique/",
+    "score": 8.6,
+    "imdb_score": 8.1,
+    "lb_score": 4.3,
+    "rt_score": 0.93,
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Three Colors: Blue",
+        "year": 1993,
+        "imdb_id": "tt0108394"
+      },
+      {
+        "title": "Blind Chance",
+        "year": 1987,
+        "imdb_id": "tt0093061"
+      }
+    ],
+    "id": "1777199999187xf9wd7mcqi",
+    "added": 1777199999187
+  },
+  {
+    "title": "My Dinner with Andre",
+    "year": 1981,
+    "director": "Louis Malle",
+    "poster": "https://image.tmdb.org/t/p/w342/e6sSBPb6lTBLDhKlOz0DKSg8yOC.jpg",
+    "imdb_id": "tt0082736",
+    "genre": "Drama",
+    "country": "United States",
+    "runtime": 110,
+    "priority": "Someday",
+    "notes": null,
+    "owned": false,
+    "has4k": false,
+    "tmdb_id": 28178,
+    "lb": "https://letterboxd.com/film/my-dinner-with-andre/",
+    "score": 8.2,
+    "imdb_score": 7.9,
+    "lb_score": 4.1,
+    "rt_score": 0.91,
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Before Sunset",
+        "year": 2004,
+        "imdb_id": "tt0381681"
+      },
+      {
+        "title": "Certified Copy",
+        "year": 2010,
+        "imdb_id": "tt1020773"
+      }
+    ],
+    "id": "1777199999187foq4db7lnr",
+    "added": 1777199999187
+  },
+  {
+    "title": "The Parallax View",
+    "year": 1974,
+    "director": "Alan J. Pakula",
+    "poster": "https://image.tmdb.org/t/p/w342/f4V1BxRXKuURqpVlFPRcuFmLYVz.jpg",
+    "imdb_id": "tt0071944",
+    "genre": "Drama, Mystery, Thriller",
+    "country": "United States",
+    "runtime": 102,
+    "priority": "Someday",
+    "notes": null,
+    "owned": false,
+    "has4k": false,
+    "tmdb_id": 5938,
+    "lb": "https://letterboxd.com/film/the-parallax-view/",
+    "score": 8.2,
+    "imdb_score": 7.5,
+    "lb_score": 4.0,
+    "rt_score": 0.86,
+    "similar": [
+      {
+        "title": "All the President's Men",
+        "year": 1976,
+        "imdb_id": "tt0074119"
+      },
+      {
+        "title": "The Conversation",
+        "year": 1974,
+        "imdb_id": "tt0071360"
+      },
+      {
+        "title": "Three Days of the Condor",
+        "year": 1975,
+        "imdb_id": "tt0073341"
+      }
+    ],
+    "id": "1777199999187n1kzrxxnto",
+    "added": 1777199999187
   }
 ]
