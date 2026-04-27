@@ -7849,7 +7849,7 @@
     "lb": "https://letterboxd.com/film/certified-copy/",
     "score": 8.2,
     "imdb_score": 7.5,
-    "lb_score": 4.0,
+    "lb_score": 4,
     "rt_score": 0.92,
     "distributor": "Criterion",
     "similar": [
@@ -7884,7 +7884,7 @@
     "tmdb_id": 10518,
     "lb": "https://letterboxd.com/film/day-of-wrath/",
     "score": 8.5,
-    "imdb_score": 8.0,
+    "imdb_score": 8,
     "lb_score": 4.2,
     "rt_score": 0.97,
     "distributor": "Criterion",
@@ -7920,7 +7920,7 @@
     "tmdb_id": 34482,
     "lb": "https://letterboxd.com/film/vengeance-is-mine/",
     "score": 8.4,
-    "imdb_score": 8.0,
+    "imdb_score": 8,
     "lb_score": 4.2,
     "rt_score": 0.98,
     "distributor": "Criterion",
@@ -7956,7 +7956,7 @@
     "tmdb_id": 763,
     "lb": "https://letterboxd.com/film/talk-to-her/",
     "score": 8.5,
-    "imdb_score": 8.0,
+    "imdb_score": 8,
     "lb_score": 4.2,
     "rt_score": 0.96,
     "distributor": "Criterion",
@@ -8186,7 +8186,7 @@
     "lb": "https://letterboxd.com/film/blowup/",
     "score": 8.3,
     "imdb_score": 7.5,
-    "lb_score": 4.0,
+    "lb_score": 4,
     "rt_score": 0.95,
     "distributor": "Criterion",
     "similar": [
@@ -8299,7 +8299,7 @@
     "lb": "https://letterboxd.com/film/the-parallax-view/",
     "score": 8.2,
     "imdb_score": 7.5,
-    "lb_score": 4.0,
+    "lb_score": 4,
     "rt_score": 0.86,
     "similar": [
       {
