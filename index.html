@@ -797,34 +797,35 @@ const FS_KEY="filter_state_v1";
 // fil[] but fil[] could be re-sorted/re-filtered while the sheet was open.
 let fil=[],af="all",ad="all",adecade="all",ag="all",ac="all",art="all",minScore=5,sq="",sk="title",sa=true,openIdx=-1,openFilm=null;
 
-// ── Female directors known to be in typical collections ──────────────────────
-const FEMALE_DIRECTORS=new Set([
-  // Classic / arthouse
-  'Agnès Varda','Chantal Akerman','Leni Riefenstahl','Dorothy Arzner','Ida Lupino',
-  'Věra Chytilová','Larisa Shepitko','Márta Mészáros','Lina Wertmüller',
-  'Margarethe von Trotta','Yvonne Rainer','Barbara Loden','Elaine May',
-  // Contemporary arthouse & prestige
-  'Sofia Coppola','Andrea Arnold','Kelly Reichardt','Lynne Ramsay','Kathryn Bigelow',
-  'Jane Campion','Claire Denis','Céline Sciamma','Mia Hansen-Løve','Alice Rohrwacher',
-  'Lucrecia Martel','Claudia Llosa','Lucile Hadzihalilovic','Jessica Hausner',
-  'Joanna Hogg','Rose Glass','Chloe Zhao','Greta Gerwig','Miranda July',
-  'Debra Granik','Karyn Kusama','Ana Lily Amirpour','Jennifer Kent',
-  'Coralie Fargeat','Julia Ducournau','Jasmila Žbanić','Susanne Bier',
-  'Lone Scherfig','May el-Toukhy','Haifaa al-Mansour','Maren Ade',
-  // Mainstream & genre
-  'Patty Jenkins','Ava DuVernay','Penny Marshall','Nora Ephron',
-  'Amy Heckerling','Martha Coolidge','Mary Harron','Allison Anders',
-  'Nicole Holofcener','Lisa Cholodenko','Kimberly Peirce','Catherine Hardwicke',
-  'Dee Rees','Marielle Heller','Eliza Hittman','Saoirse Ronan',
-  // International
-  'Naomi Kawase','Nao Kubota','Yoko Ogawa','Park Chan-ok',
-  'Mati Diop','Dea Kulumbegashvili','Rungano Nyoni',
-  'Marianne Khoury','Annemarie Jacir','Hiam Abbass',
-  'Nadine Labaki','Yamina Benguigui',
-  // Documentary
-  'Barbara Kopple','Agnès Varda','Kim Longinotto','Kirby Dick',
-  'Laura Poitras','Alma Har\'el',
-]);
+// ── Female directors — matched against actual director strings in this collection
+// Uses substring matching so co-director credits (e.g. "Fernando Meirelles, Kátia Lund")
+// and name variants are all caught correctly.
+const FEMALE_DIRECTORS=[
+  // Confirmed in this collection
+  'Allison Anders','Amy Heckerling','Andrea Arnold','Barbara Loden',
+  'Chantal Akerman','Claire Denis','Claudia Weill','Coralie Fargeat',
+  'Donna Deitch','Elaine May','Gillian Armstrong','Gina Prince-Bythewood',
+  'Greta Gerwig','Jane Campion','Julie Dash','Kátia Lund','Kira Muratova',
+  'Lana Wachowski','Larisa Shepitko','Lynne Ramsay','Maya Deren',
+  'Alexander Hammid','Nadia Tass','Sofia Coppola','Vera Chytilova',
+  'Věra Chytilová','The Wachowskis',
+  // Broader set for future additions
+  'Agnès Varda','Céline Sciamma','Kelly Reichardt','Kathryn Bigelow',
+  'Mia Hansen-Løve','Alice Rohrwacher','Lucrecia Martel','Joanna Hogg',
+  'Rose Glass','Chloe Zhao','Miranda July','Debra Granik','Karyn Kusama',
+  'Jennifer Kent','Julia Ducournau','Ida Lupino','Dorothy Arzner',
+  'Márta Mészáros','Lina Wertmüller','Margarethe von Trotta','Yvonne Rainer',
+  'Patty Jenkins','Ava DuVernay','Penny Marshall','Mary Harron',
+  'Nicole Holofcener','Lisa Cholodenko','Kimberly Peirce','Dee Rees',
+  'Marielle Heller','Eliza Hittman','Barbara Kopple','Mati Diop',
+  'Nadine Labaki','Naomi Kawase','Charlotte Wells','Celine Song',
+  'Ana Lily Amirpour','Lilly Wachowski',
+];
+// Substring match so co-director strings like "Fernando Meirelles, Kátia Lund" still match
+function isFemaleDirected(director){
+  if(!director) return false;
+  return FEMALE_DIRECTORS.some(fd=>director.includes(fd));
+}
 
 // ── localStorage ─────────────────────────────────────────────────────────────
 function loadOverrides(){
@@ -869,7 +870,7 @@ function filt(){
       case "unwatched":if(f.watched)return false;break;
       case "watched":if(!f.watched)return false;break;
       case "4k":if(!f.format||!f.format.includes("4K"))return false;break;
-      case "female":if(!FEMALE_DIRECTORS.has(f.director))return false;break;
+      case "female":if(!isFemaleDirected(f.director))return false;break;
     }
     if(ad!=="all"&&f.distributor!==DIST_MAP[ad])return false;
     if(adecade!=="all"&&f.decade!==adecade)return false;
