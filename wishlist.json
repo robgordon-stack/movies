@@ -6,7 +6,7 @@
     "director": "Alex Garland",
     "poster": "https://image.tmdb.org/t/p/w342/4YRplSk6BhH6PRuE9gfyw9byUJ6.jpg",
     "imdb_id": "tt2798920",
-    "genre": "Adventure, Drama, Horror",
+    "genre": "Drama, Horror, Sci-Fi",
     "country": "United Kingdom",
     "runtime": 115,
     "priority": "Someday",
@@ -31,7 +31,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776564824071zi6fthwgs7a",
@@ -65,7 +66,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": true
   },
   {
     "id": "1776564736206udsdheqdsni",
@@ -99,7 +101,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "17765647011598pfh0t9za3c",
@@ -133,7 +136,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776564667786yolazm79yfn",
@@ -167,7 +171,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776564645375yi5vgbpr8s",
@@ -201,7 +206,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776564539079ad2vg9ahuuj",
@@ -235,7 +241,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776564498256zo9frg6oer",
@@ -269,7 +276,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776343205845y5dpzlg0ewl",
@@ -303,7 +311,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776343157572vnkfut612xo",
@@ -337,7 +346,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776343115333xbw7x2sjprh",
@@ -371,7 +381,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775999459701yeuxa6o5w3",
@@ -406,7 +417,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775998783399caoupie9q1q",
@@ -441,7 +453,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775998583282dbs19s31khm",
@@ -476,7 +489,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775998429785ky5jnoa7r8",
@@ -510,7 +524,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775997929904atbr20doefo",
@@ -544,7 +559,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775997906621qu02xg63bpl",
@@ -579,7 +595,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775877872638dswzwzr85p6",
@@ -619,7 +636,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775877681936om6j8oh5opf",
@@ -659,7 +677,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": true
   },
   {
     "id": "17758776274173x7z6swi8xk",
@@ -693,7 +712,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "177587734153015rd5x4ghs5",
@@ -732,7 +752,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": true
   },
   {
     "id": "17758772346498g88ri6njse",
@@ -772,7 +793,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "17758766329870gd9mfmcvb4m",
@@ -812,7 +834,8 @@
       }
     ],
     "has4k": true,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775874263968vgrmc7l35wl",
@@ -852,7 +875,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775468716369d6poip55fzj",
@@ -887,7 +911,8 @@
     "rt_score": 0.75,
     "mc_score": 57,
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775468676456cn9ix60lt0t",
@@ -927,7 +952,8 @@
     "rt_score": 0.83,
     "mc_score": 62,
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "17754686426368njjcatuyb9",
@@ -962,7 +988,8 @@
     "lb_score": 4.2,
     "rt_score": 0.73,
     "mc_score": 64,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775428803597ln6zek822os",
@@ -1002,7 +1029,8 @@
         "imdb_id": "tt2328879"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775428736582ffrbesgx4ij",
@@ -1042,7 +1070,8 @@
         "imdb_id": "tt0060665"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775428055988shur4ggx0m9",
@@ -1082,7 +1111,8 @@
         "imdb_id": "tt0047113"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "177542801878537zewtshgv5",
@@ -1117,7 +1147,8 @@
         "imdb_id": "tt0042814"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "17754278757182r5fbxw41hl",
@@ -1157,7 +1188,8 @@
         "imdb_id": "tt1271188"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": true
   },
   {
     "id": "1775427840044f83wjox5la",
@@ -1168,7 +1200,7 @@
     "imdb_id": "tt0015648",
     "genre": "Drama, History, Thriller",
     "country": "Soviet Union",
-    "runtime": 66,
+    "runtime": 75,
     "priority": "Someday",
     "notes": null,
     "owned": false,
@@ -1197,7 +1229,8 @@
         "imdb_id": "tt0019649"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775427791606ldyv8h81e88",
@@ -1237,7 +1270,8 @@
         "imdb_id": "tt0106594"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": true
   },
   {
     "id": "17754276841962fptn0nxtt5",
@@ -1277,7 +1311,8 @@
         "imdb_id": "tt5714132"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "17753640833188k5tezc05vp",
@@ -1292,7 +1327,7 @@
     "genre": "Animation, Sci-Fi, Adventure",
     "country": "United States",
     "director": "Andrew Stanton",
-    "tmdb_id": 1398911,
+    "tmdb_id": 10681,
     "lb": "https://letterboxd.com/film/wall-e/",
     "has4k": true,
     "distributor": "Disney",
@@ -1312,7 +1347,8 @@
         "year": 1999,
         "imdb_id": "tt0129167"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17753640833180ma06opdv8xl",
@@ -1350,7 +1386,8 @@
         "year": 1974,
         "imdb_id": "tt0071336"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775364083318xrbl3m8rqy",
@@ -1384,7 +1421,8 @@
         "year": 1986,
         "imdb_id": "tt0091670"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775364083318t9ciojlhvxf",
@@ -1424,7 +1462,8 @@
         "year": 2013,
         "imdb_id": "tt1392214"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775364083318lkou51klxhd",
@@ -1463,7 +1502,8 @@
         "year": 1961,
         "imdb_id": "tt0055499"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775364083318o3obu8inwnd",
@@ -1503,7 +1543,8 @@
         "year": 2017,
         "imdb_id": "tt6763252"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17753640833187x20vxed2bb",
@@ -1542,7 +1583,8 @@
         "year": 1950,
         "imdb_id": "tt0042878"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "177536408331870ba5ekgioe",
@@ -1581,7 +1623,8 @@
         "year": 1967,
         "imdb_id": "tt0061781"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17753640833181f8t6jjg3du",
@@ -1617,7 +1660,8 @@
         "year": 1996,
         "imdb_id": "tt0116683"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17753640833189s8zvmbze3m",
@@ -1650,7 +1694,8 @@
         "year": 1988,
         "imdb_id": "tt0094849"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775364083318cz9t6cq6dwo",
@@ -1689,7 +1734,8 @@
         "year": 1976,
         "imdb_id": "tt0074102"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17753640833184yvczavxcd5",
@@ -1723,7 +1769,8 @@
         "year": 1943,
         "imdb_id": "tt0036166"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775364083318i1ilmqr4cp",
@@ -1757,7 +1804,8 @@
         "year": 1964,
         "imdb_id": "tt0058097"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775364083318rkn35st264",
@@ -1795,7 +1843,8 @@
         "year": 1995,
         "imdb_id": "tt0114839"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17753640833185pwsv7inyqd",
@@ -1835,7 +1884,8 @@
         "year": 2018,
         "imdb_id": "tt8267604"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "177536408331875nvdur17q5",
@@ -1875,7 +1925,8 @@
         "year": 2003,
         "imdb_id": "tt0372703"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17753640833176v3cfc40ii9",
@@ -1913,7 +1964,8 @@
         "year": 2003,
         "imdb_id": "tt0388473"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775364083317qt6i0kugl6s",
@@ -1952,7 +2004,8 @@
         "year": 1992,
         "imdb_id": "tt0104652"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775364083317w5ulmdoqxv",
@@ -1986,7 +2039,8 @@
         "year": 2015,
         "imdb_id": "tt3757574"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "177536385586906ulpitei45h",
@@ -2027,7 +2081,8 @@
         "imdb_id": "tt0844471"
       }
     ],
-    "distributor": "Sony Pictures"
+    "distributor": "Sony Pictures",
+    "female_director": false
   },
   {
     "id": "1775363855869chovj2v2qvd",
@@ -2067,7 +2122,8 @@
         "year": 2005,
         "imdb_id": "tt0382488"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "177536385586972vtk0ejktl",
@@ -2101,7 +2157,8 @@
         "year": 1991,
         "imdb_id": "tt0102312"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363855869v06aohojjvg",
@@ -2135,7 +2192,8 @@
         "year": 1960,
         "imdb_id": "tt0053590"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363855869l683eznh8k",
@@ -2170,7 +2228,8 @@
         "year": 1994,
         "imdb_id": "tt0110932"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363855869wt6kbjr5krf",
@@ -2206,7 +2265,8 @@
         "year": 1992,
         "imdb_id": "tt0103772"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363855869mhlk0kgw5x",
@@ -2245,7 +2305,8 @@
         "year": 2003,
         "imdb_id": "tt0374546"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363855869gvw8u1mxvcq",
@@ -2279,7 +2340,8 @@
         "year": 2004,
         "imdb_id": "tt0405159"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363855869w7mogtrf41",
@@ -2313,7 +2375,8 @@
         "year": 2001,
         "imdb_id": "tt0207201"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363855869n71n1wzf2us",
@@ -2352,7 +2415,8 @@
         "year": 2010,
         "imdb_id": "tt1313920"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363855869rsjkbb9bh0a",
@@ -2386,7 +2450,8 @@
         "year": 1970,
         "imdb_id": "tt0065424"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363855869en9evv7xd9",
@@ -2422,7 +2487,8 @@
         "year": 1971,
         "imdb_id": "tt0067334"
       }
-    ]
+    ],
+    "female_director": true
   },
   {
     "id": "1775363855869m563tc4q2ob",
@@ -2455,7 +2521,8 @@
         "year": 1971,
         "imdb_id": "tt0066473"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17753638558693nxmruzyljr",
@@ -2494,7 +2561,8 @@
         "year": 1999,
         "imdb_id": "tt0120616"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363855869cazsynrg2x",
@@ -2528,7 +2596,8 @@
         "year": 1977,
         "imdb_id": "tt0076786"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363855869dp7cd1m6k2q",
@@ -2562,7 +2631,8 @@
         "year": 2016,
         "imdb_id": "tt4975722"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363855868nw52ffxuyum",
@@ -2596,7 +2666,8 @@
         "year": 2000,
         "imdb_id": "tt0162222"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363855868jmfcm2u3edj",
@@ -2637,7 +2708,8 @@
         "year": 2005,
         "imdb_id": "tt0416565"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17753637107522lhva4egqmt",
@@ -2672,7 +2744,8 @@
         "year": 2021,
         "imdb_id": "tt11816996"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "177536371075278av6jlpnc6",
@@ -2707,7 +2780,8 @@
         "imdb_id": "tt0067093"
       }
     ],
-    "distributor": "Disney"
+    "distributor": "Disney",
+    "female_director": false
   },
   {
     "id": "1775363710752glfyzn774ul",
@@ -2741,7 +2815,8 @@
         "year": 1993,
         "imdb_id": "tt0103777"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363710752pkmwphbvku",
@@ -2780,7 +2855,8 @@
         "year": 2016,
         "imdb_id": "tt4385888"
       }
-    ]
+    ],
+    "female_director": true
   },
   {
     "id": "1775363710752tgb70ouxdw",
@@ -2815,7 +2891,8 @@
         "year": 1971,
         "imdb_id": "tt0067152"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17753637107521n4znt8b1mv",
@@ -2853,7 +2930,8 @@
         "year": 1983,
         "imdb_id": "tt0085959"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363710752j3ubsg683rp",
@@ -2887,7 +2965,8 @@
         "year": 1931,
         "imdb_id": "tt0021749"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363710752gomuc3m0qiw",
@@ -2926,7 +3005,8 @@
         "year": 1976,
         "imdb_id": "tt0074428"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363710752op45th2royl",
@@ -2966,7 +3046,8 @@
         "year": 1998,
         "imdb_id": "tt0120731"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363710752m8cnd2l7g8m",
@@ -3006,7 +3087,8 @@
         "year": 2010,
         "imdb_id": "tt1020773"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363710752bwrau27f6j",
@@ -3046,7 +3128,8 @@
         "imdb_id": "tt0076649"
       }
     ],
-    "distributor": "Criterion"
+    "distributor": "Criterion",
+    "female_director": false
   },
   {
     "id": "17753637107510zydx1iw6rjg",
@@ -3086,7 +3169,8 @@
         "year": 1940,
         "imdb_id": "tt0032599"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "177536371075180vc972vgje",
@@ -3126,7 +3210,8 @@
         "year": 2003,
         "imdb_id": "tt0325710"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17753635899860b5zq1t06lgp",
@@ -3165,7 +3250,8 @@
         "year": 2009,
         "imdb_id": "tt0361748"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589986qxf06l9aawq",
@@ -3199,7 +3285,8 @@
         "year": 2011,
         "imdb_id": "tt1210166"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589986q8r12s7svoj",
@@ -3234,7 +3321,8 @@
         "year": 2010,
         "imdb_id": "tt1399683"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589986poenamztics",
@@ -3273,7 +3361,8 @@
         "year": 1994,
         "imdb_id": "tt0111257"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589986hsd70m1sx5",
@@ -3308,7 +3397,8 @@
         "year": 2004,
         "imdb_id": "tt0390384"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589986ghqh0h73ctc",
@@ -3347,7 +3437,8 @@
         "year": 1999,
         "imdb_id": "tt0120907"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "177536358998636jfh2v1xna",
@@ -3385,7 +3476,8 @@
         "year": 1984,
         "imdb_id": "tt0088011"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17753635899869keba4ku8b",
@@ -3423,7 +3515,8 @@
         "year": 1987,
         "imdb_id": "tt0093773"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "177536358998611lazodq3qlb",
@@ -3461,7 +3554,8 @@
         "year": 1990,
         "imdb_id": "tt0099740"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589986g3p1wdhzib",
@@ -3500,7 +3594,8 @@
         "year": 1985,
         "imdb_id": "tt0091251"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17753635899866ii5ko2ogvm",
@@ -3535,7 +3630,8 @@
         "year": 1981,
         "imdb_id": "tt0082288"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589986iyceng33ntq",
@@ -3569,7 +3665,8 @@
         "year": 1982,
         "imdb_id": "tt0082198"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589986bt0wr659nc5",
@@ -3603,7 +3700,8 @@
         "year": 1963,
         "imdb_id": "tt0057197"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17753635899860ynfg4m8oy5g",
@@ -3638,7 +3736,8 @@
         "year": 1995,
         "imdb_id": "tt0112641"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589986curtr4o4y6k",
@@ -3656,7 +3755,7 @@
     "tmdb_id": 76826,
     "lb": "https://letterboxd.com/film/grave-of-the-fireflies/",
     "has4k": false,
-    "score": 9,
+    "score": 8.7,
     "imdb_score": 8.5,
     "lb_score": 4.5,
     "rt_score": 0.97,
@@ -3676,7 +3775,8 @@
         "year": 2013,
         "imdb_id": "tt2013232"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589986drfuuazm5pt",
@@ -3710,7 +3810,8 @@
         "year": 2013,
         "imdb_id": "tt2576852"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589986hm15ib2qh9g",
@@ -3751,7 +3852,8 @@
         "year": 2002,
         "imdb_id": "tt0317248"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589986ygphtg1hotp",
@@ -3784,7 +3886,8 @@
         "year": 1967,
         "imdb_id": "tt0062292"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589986ug5z8lx5vo",
@@ -3820,7 +3923,8 @@
         "year": 1991,
         "imdb_id": "tt0101640"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17753635899862i5xvqcq0f1",
@@ -3859,7 +3963,8 @@
         "year": 1981,
         "imdb_id": "tt0082736"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589986fpcpt5k2ic7",
@@ -3893,7 +3998,8 @@
         "year": 1970,
         "imdb_id": "tt0066619"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589985tj4nam3pbd",
@@ -3927,7 +4033,8 @@
         "year": 1961,
         "imdb_id": "tt0054173"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589985j7pc6p2yx3a",
@@ -3966,7 +4073,8 @@
         "year": 1964,
         "imdb_id": "tt0058536"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17753635899857d567191xnp",
@@ -3999,7 +4107,8 @@
         "year": 1949,
         "imdb_id": "tt0041745"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589985r0d9s82r3g",
@@ -4039,7 +4148,8 @@
         "year": 1964,
         "imdb_id": "tt0058461"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589985wp0lb8sa139",
@@ -4073,7 +4183,8 @@
         "year": 1994,
         "imdb_id": "tt0110554"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589985xf4vq1aoblq",
@@ -4114,7 +4225,8 @@
         "year": 2017,
         "imdb_id": "tt5761008"
       }
-    ]
+    ],
+    "female_director": true
   },
   {
     "id": "1775363589985khfxw1e5ltr",
@@ -4154,7 +4266,8 @@
         "year": 2020,
         "imdb_id": "tt10633456"
       }
-    ]
+    ],
+    "female_director": true
   },
   {
     "id": "177536358998524ycdlt9b1a",
@@ -4188,7 +4301,8 @@
         "year": 1963,
         "imdb_id": "tt0057343"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17753635899859028ivfg7v5",
@@ -4223,7 +4337,8 @@
         "year": 1954,
         "imdb_id": "tt0047478"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17753635899858ag3d93ketn",
@@ -4263,7 +4378,8 @@
         "year": 2008,
         "imdb_id": "tt0976051"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589985sqazc1r9re",
@@ -4302,7 +4418,8 @@
         "year": 1927,
         "imdb_id": "tt0017136"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17753635899855xp0c0614w",
@@ -4341,7 +4458,8 @@
         "year": 1967,
         "imdb_id": "tt0062229"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589985f9jsub71b8",
@@ -4382,7 +4500,8 @@
         "year": 2006,
         "imdb_id": "tt0441909"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589985crerbmkmc4",
@@ -4421,7 +4540,8 @@
         "year": 1941,
         "imdb_id": "tt0033467"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17753635899856b4ux3jm27r",
@@ -4460,7 +4580,8 @@
         "year": 2015,
         "imdb_id": "tt3757574"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775363589985rstiihcjugn",
@@ -4494,7 +4615,8 @@
         "year": 1965,
         "imdb_id": "tt0058937"
       }
-    ]
+    ],
+    "female_director": true
   },
   {
     "id": "1775363589985zhdqbtgri7a",
@@ -4534,7 +4656,8 @@
         "year": 2014,
         "imdb_id": "tt3655510"
       }
-    ]
+    ],
+    "female_director": true
   },
   {
     "id": "17753632946879ox9abiknus",
@@ -4569,7 +4692,8 @@
         "year": 1953,
         "imdb_id": "tt0046521"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775392611262o1i2czhhj5n",
@@ -4608,7 +4732,8 @@
         "imdb_id": "tt0053844"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775391551451f5eydj2l5x",
@@ -4648,7 +4773,8 @@
         "imdb_id": "tt1568921"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775391533485toythy4mky",
@@ -4688,7 +4814,8 @@
         "imdb_id": "tt1483797"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775391497635svszusfidgk",
@@ -4728,7 +4855,8 @@
         "imdb_id": "tt1821549"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775391480369rhcfs4fq44m",
@@ -4768,7 +4896,8 @@
         "imdb_id": "tt0045555"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775391463019r11mon4pj5k",
@@ -4808,7 +4937,8 @@
         "imdb_id": "tt1152850"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": true
   },
   {
     "id": "1775391436136unz64wzk7m",
@@ -4844,7 +4974,8 @@
         "imdb_id": "tt7568814"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775391409269dogevmt0xq9",
@@ -4879,7 +5010,8 @@
         "imdb_id": "tt0060327"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "177539139451966087vr0hz9",
@@ -4913,7 +5045,8 @@
         "imdb_id": "tt0053577"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775391366452yce77nwmjlq",
@@ -4947,7 +5080,8 @@
         "imdb_id": "tt0070666"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775391344020ba64ghk3bxk",
@@ -4982,7 +5116,8 @@
         "imdb_id": "tt3655292"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775371723640ww49gz5goyj",
@@ -5018,7 +5153,8 @@
         "imdb_id": "tt1714210"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775371684024m8um357g34",
@@ -5059,7 +5195,8 @@
         "imdb_id": "tt0073440"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775371673725w1gn52pc3i",
@@ -5099,7 +5236,8 @@
         "imdb_id": "tt0073399"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775371657973pnqzf049mkr",
@@ -5140,7 +5278,8 @@
         "imdb_id": "tt0097937"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": true
   },
   {
     "id": "1775371647974cf3xxxpl6sc",
@@ -5181,7 +5320,8 @@
         "imdb_id": "tt1091191"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775371625207eoz1h8ix8ru",
@@ -5222,7 +5362,8 @@
         "imdb_id": "tt2494280"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "17753716133406gnpzt8kahf",
@@ -5263,7 +5404,8 @@
         "imdb_id": "tt1821549"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775371605424747e4u09fil",
@@ -5299,7 +5441,8 @@
         "imdb_id": "tt0069155"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775371594107n44ungk2i6k",
@@ -5340,7 +5483,8 @@
         "imdb_id": "tt0071315"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775371582007sg1j8ev1rgs",
@@ -5381,7 +5525,8 @@
         "imdb_id": "tt0131325"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775371570590nupx8lx1ioq",
@@ -5422,7 +5567,8 @@
         "imdb_id": "tt0114746"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "177537155579129ijzhk054x",
@@ -5458,7 +5604,8 @@
         "imdb_id": "tt0073078"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775371542557j7c3c79i5wk",
@@ -5498,7 +5645,8 @@
         "imdb_id": "tt0113277"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775371530608mmgqpey1dym",
@@ -5534,7 +5682,8 @@
         "imdb_id": "tt5649144"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775371513524dur9q0gdn7u",
@@ -5575,7 +5724,8 @@
         "imdb_id": "tt0081507"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775371492857ndgtur5e9jr",
@@ -5616,7 +5766,8 @@
         "imdb_id": "tt0110308"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": true
   },
   {
     "id": "17753714747914whsuu5empr",
@@ -5652,7 +5803,8 @@
         "imdb_id": "tt0098546"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "17753714485577inbzhhv6dx",
@@ -5688,7 +5840,8 @@
         "imdb_id": "tt0071947"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775371437274qdgqjk7djf",
@@ -5729,7 +5882,8 @@
         "imdb_id": "tt0418763"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": true
   },
   {
     "id": "1775371424124nxuqflt15xo",
@@ -5770,7 +5924,8 @@
         "imdb_id": "tt0118842"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "17753714094419j7ecwynwtt",
@@ -5805,7 +5960,8 @@
         "imdb_id": "tt0200859"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775371378476wv5pwwnlysc",
@@ -5846,7 +6002,8 @@
         "imdb_id": "tt0043014"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775371251892h8158xno6pn",
@@ -5887,7 +6044,8 @@
         "imdb_id": "tt1465522"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775369564988i3ewoak8ml",
@@ -5923,7 +6081,8 @@
         "imdb_id": "tt0109642"
       }
     ],
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1775440300023exofn9t7e4",
@@ -5964,7 +6123,8 @@
         "year": 1962,
         "imdb_id": "tt0056222"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775440144290gy00vxxnpkl",
@@ -6005,7 +6165,8 @@
         "year": 1953,
         "imdb_id": "tt0045546"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775440084674gmeaazl3lve",
@@ -6046,7 +6207,8 @@
         "year": 1988,
         "imdb_id": "tt0095963"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775439968258tmgduaroygk",
@@ -6055,7 +6217,7 @@
     "director": "Shunji Iwai",
     "poster": "https://image.tmdb.org/t/p/w1280/pLBNmJUH9JYRCRsh349PJ22WpkS.jpg",
     "imdb_id": "tt0297721",
-    "genre": "Crime, Drama, Music",
+    "genre": "Drama, Music",
     "country": "Japan",
     "runtime": 146,
     "priority": "Someday",
@@ -6082,7 +6244,8 @@
         "year": 2000,
         "imdb_id": "tt0264782"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775439916725f39pkxnotmg",
@@ -6118,7 +6281,8 @@
         "year": 1990,
         "imdb_id": "tt0100404"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775439874692grcejzpj6bm",
@@ -6159,7 +6323,8 @@
         "year": 1961,
         "imdb_id": "tt0053619"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775439797443e1474lzeue4",
@@ -6195,7 +6360,8 @@
         "year": 1971,
         "imdb_id": "tt0067116"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "177543973342621rzzmzq9kt",
@@ -6231,7 +6397,8 @@
         "year": 1975,
         "imdb_id": "tt0073705"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17754396750604e7oeh1c7e3",
@@ -6272,7 +6439,8 @@
         "year": 2018,
         "imdb_id": "tt4003440"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775439666010bwji8qqn6gn",
@@ -6313,7 +6481,8 @@
         "year": 1973,
         "imdb_id": "tt0069947"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775439535878w8nkmjkracn",
@@ -6349,7 +6518,8 @@
         "year": 1985,
         "imdb_id": "tt0089360"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775439498011pxh0k3fc03",
@@ -6390,7 +6560,8 @@
         "year": 1990,
         "imdb_id": "tt0100685"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17754394498444mx31bju5dm",
@@ -6399,7 +6570,7 @@
     "director": "Richard Linklater",
     "poster": "https://image.tmdb.org/t/p/w1280/msG9awbLhVZwv1Eh9Ge7SofMexW.jpg",
     "imdb_id": "tt0106677",
-    "genre": "Comedy",
+    "genre": "Comedy, Drama",
     "country": "United States",
     "runtime": 103,
     "priority": "Someday",
@@ -6426,7 +6597,8 @@
         "year": 2016,
         "imdb_id": "tt2937696"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775439410944qyrrb8fcl2",
@@ -6462,7 +6634,8 @@
         "year": 2005,
         "imdb_id": "tt0412019"
       }
-    ]
+    ],
+    "female_director": true
   },
   {
     "id": "1775439378277vp2v0a2msqq",
@@ -6503,7 +6676,8 @@
         "year": 2007,
         "imdb_id": "tt0465538"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775439303611kxi0117x09",
@@ -6544,7 +6718,8 @@
         "year": 2015,
         "imdb_id": "tt1392190"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "177543901776205lyb58jge3",
@@ -6585,7 +6760,8 @@
         "year": 1963,
         "imdb_id": "tt0056801"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775438976263cj8ox4i9nq",
@@ -6626,7 +6802,8 @@
         "year": 1999,
         "imdb_id": "tt0120601"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775438793795uz24zz598nc",
@@ -6667,7 +6844,8 @@
         "year": 1956,
         "imdb_id": "tt0049261"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775438709129rff4d4kt9q",
@@ -6708,7 +6886,8 @@
         "year": 2003,
         "imdb_id": "tt0313972"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775438694345ugkwhdlrh3m",
@@ -6744,7 +6923,8 @@
         "year": 2015,
         "imdb_id": "tt1596363"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775438675230pguq6ssxvik",
@@ -6785,7 +6965,8 @@
         "year": 1979,
         "imdb_id": "tt0079840"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775438643696pnol3esaoqg",
@@ -6821,7 +7002,8 @@
         "year": 1995,
         "imdb_id": "tt0112857"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775438621429xl4i08jcjc",
@@ -6862,7 +7044,8 @@
         "year": 1957,
         "imdb_id": "tt0050212"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775438554047tqd0hpu026m",
@@ -6903,7 +7086,8 @@
         "year": 1970,
         "imdb_id": "tt0065466"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "1775438527596jtqv286wy",
@@ -6939,7 +7123,8 @@
         "year": 1992,
         "imdb_id": "tt0103873"
       }
-    ]
+    ],
+    "female_director": false
   },
   {
     "id": "17764901274868qqferkj32k",
@@ -6974,7 +7159,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "17764900345045buouoi9y0r",
@@ -7008,7 +7194,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776489826188o2dhxe3rtb8",
@@ -7043,7 +7230,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776489815238h0yca5usxor",
@@ -7078,7 +7266,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776489802122f1xvclyzoig",
@@ -7113,7 +7302,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776489497240yg2nk7sboqg",
@@ -7147,7 +7337,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776479540018wpe28z2lbl",
@@ -7181,7 +7372,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776479314435xo7s9ujyidp",
@@ -7215,7 +7407,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "17764792883690u0ypcofasqn",
@@ -7249,7 +7442,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776479212453s6vb6jhesdq",
@@ -7283,7 +7477,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "17764791877864mktfz9bz4m",
@@ -7318,7 +7513,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776479167803hyniby62a5h",
@@ -7352,7 +7548,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776479138020m3erkirdfj9",
@@ -7386,7 +7583,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776479102655m855lhpcr",
@@ -7420,7 +7618,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776478993872d42ys8142us",
@@ -7454,7 +7653,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776478928988canfi05ika5",
@@ -7488,7 +7688,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776478887789mnonwkqnpm",
@@ -7504,7 +7705,7 @@
     "notes": null,
     "owned": false,
     "added": 1776478887789,
-    "score": 9,
+    "score": 8.6,
     "imdb_score": 8.1,
     "lb_score": 4.3,
     "rt_score": 0.93,
@@ -7523,7 +7724,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "17764788349446om030larkg",
@@ -7557,7 +7759,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776478770806wq19uk8v6qe",
@@ -7591,7 +7794,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "id": "1776478715357k5kgjxdxl3",
@@ -7625,7 +7829,8 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null
+    "tmdb_id": null,
+    "female_director": false
   },
   {
     "title": "Certified Copy",
@@ -7660,7 +7865,8 @@
       }
     ],
     "id": "1777199999187fsg1zuamom",
-    "added": 1777199999187
+    "added": 1777199999187,
+    "female_director": false
   },
   {
     "title": "Day of Wrath",
@@ -7695,7 +7901,8 @@
       }
     ],
     "id": "1777199999187adpp857s9s",
-    "added": 1777199999187
+    "added": 1777199999187,
+    "female_director": false
   },
   {
     "title": "Vengeance Is Mine",
@@ -7730,7 +7937,8 @@
       }
     ],
     "id": "1777199999187xf66fp0oaw",
-    "added": 1777199999187
+    "added": 1777199999187,
+    "female_director": false
   },
   {
     "title": "Talk to Her",
@@ -7765,7 +7973,8 @@
       }
     ],
     "id": "17771999991874y6rfmcsgl",
-    "added": 1777199999187
+    "added": 1777199999187,
+    "female_director": false
   },
   {
     "title": "Burning",
@@ -7805,7 +8014,8 @@
       }
     ],
     "id": "17771999991875hb84nnmj8",
-    "added": 1777199999187
+    "added": 1777199999187,
+    "female_director": false
   },
   {
     "title": "A Touch of Sin",
@@ -7840,7 +8050,8 @@
       }
     ],
     "id": "1777199999187e9cox0tskk",
-    "added": 1777199999187
+    "added": 1777199999187,
+    "female_director": false
   },
   {
     "title": "Milestones",
@@ -7848,7 +8059,7 @@
     "director": "Robert Kramer, John Douglas",
     "poster": "https://www.themoviedb.org/t/p/w1280/1cM1JQE8RDdsGEijsB9QZHEcXxh.jpg",
     "imdb_id": "tt0073363",
-    "genre": "Documentary, Drama",
+    "genre": "Drama",
     "country": "United States",
     "runtime": 195,
     "priority": "Someday",
@@ -7874,7 +8085,8 @@
       }
     ],
     "id": "1777199999187o2cgkghqo4",
-    "added": 1777199999187
+    "added": 1777199999187,
+    "female_director": false
   },
   {
     "title": "Crimes and Misdemeanors",
@@ -7913,7 +8125,8 @@
       }
     ],
     "id": "1777199999187ewn2f70nrv",
-    "added": 1777199999187
+    "added": 1777199999187,
+    "female_director": false
   },
   {
     "title": "Elevator to the Gallows",
@@ -7953,7 +8166,8 @@
       }
     ],
     "id": "177719999918709cwy2qwm5",
-    "added": 1777199999187
+    "added": 1777199999187,
+    "female_director": false
   },
   {
     "title": "Blow-Up",
@@ -7993,7 +8207,8 @@
       }
     ],
     "id": "1777199999187syesqwvw0z",
-    "added": 1777199999187
+    "added": 1777199999187,
+    "female_director": false
   },
   {
     "title": "The Double Life of Véronique",
@@ -8028,7 +8243,8 @@
       }
     ],
     "id": "1777199999187xf9wd7mcqi",
-    "added": 1777199999187
+    "added": 1777199999187,
+    "female_director": false
   },
   {
     "title": "My Dinner with Andre",
@@ -8063,7 +8279,8 @@
       }
     ],
     "id": "1777199999187foq4db7lnr",
-    "added": 1777199999187
+    "added": 1777199999187,
+    "female_director": false
   },
   {
     "title": "The Parallax View",
@@ -8102,6 +8319,7 @@
       }
     ],
     "id": "1777199999187n1kzrxxnto",
-    "added": 1777199999187
+    "added": 1777199999187,
+    "female_director": false
   }
 ]
