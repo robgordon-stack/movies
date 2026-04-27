@@ -203,6 +203,50 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 .score-pill{background:var(--surf2);border:1px solid var(--bdr);border-radius:5px;padding:3px 8px;font-size:11px;color:var(--mut)}
 .score-pill b{color:var(--txt);font-weight:600}
 .wn-poster{flex:0 0 80px;cursor:pointer;position:relative;transition:transform .15s}
+
+/* ── PRIORITY WATCH LIST ── */
+.pwl-wrap{background:var(--surf);border:1px solid var(--bdr);border-radius:12px;padding:16px;margin-bottom:24px}
+.pwl-header{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.pwl-title{font-size:15px;font-weight:700;font-family:'DM Serif Display',serif;flex:1}
+.pwl-count{font-size:11px;color:var(--mut)}
+.pwl-add-btn{background:none;border:1px solid rgba(232,185,79,.3);color:var(--acc);border-radius:7px;padding:5px 10px;font-size:11px;font-weight:600;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:all .15s}
+.pwl-add-btn:hover{border-color:rgba(232,185,79,.6);background:rgba(232,185,79,.07)}
+.pwl-empty{text-align:center;padding:20px 0;color:var(--mut);font-size:13px}
+.pwl-empty p{margin-bottom:8px}
+.pwl-list{display:flex;flex-direction:column;gap:6px}
+.pwl-item{display:flex;align-items:center;gap:10px;background:var(--surf2);border:1px solid var(--bdr);border-radius:8px;padding:8px 10px;cursor:grab;transition:background .15s,border-color .15s,opacity .2s,transform .15s;user-select:none;-webkit-user-select:none}
+.pwl-item:active{cursor:grabbing}
+.pwl-item.dragging{opacity:.4;background:var(--surf3)}
+.pwl-item.drag-over{border-color:var(--acc);background:rgba(232,185,79,.06)}
+.pwl-rank{font-size:13px;font-weight:700;color:var(--acc);font-family:'DM Serif Display',serif;width:20px;text-align:center;flex-shrink:0}
+.pwl-thumb{width:38px;height:57px;border-radius:4px;overflow:hidden;background:var(--surf3);flex-shrink:0}
+.pwl-thumb img{width:100%;height:100%;object-fit:cover}
+.pwl-info{flex:1;min-width:0}
+.pwl-film-title{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pwl-film-meta{font-size:11px;color:var(--mut);margin-top:1px}
+.pwl-drag-handle{color:var(--mut);font-size:16px;flex-shrink:0;opacity:.5;line-height:1;padding:4px}
+.pwl-remove{background:none;border:none;color:var(--mut);font-size:18px;cursor:pointer;padding:4px 6px;line-height:1;flex-shrink:0;border-radius:4px;transition:color .15s}
+.pwl-remove:hover{color:#e57373}
+/* Search modal for adding to PWL */
+.pwl-modal-wrap{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:600;display:none;align-items:flex-end;justify-content:center}
+.pwl-modal-wrap.open{display:flex}
+@media(min-width:600px){.pwl-modal-wrap{align-items:center;padding:20px}}
+.pwl-modal{background:var(--surf);border-radius:16px 16px 0 0;width:100%;max-width:480px;max-height:80vh;display:flex;flex-direction:column;padding-bottom:env(safe-area-inset-bottom)}
+@media(min-width:600px){.pwl-modal{border-radius:16px}}
+.pwl-modal-handle{width:36px;height:4px;background:var(--surf3);border-radius:2px;margin:12px auto 0;flex-shrink:0}
+.pwl-modal-inner{padding:16px 20px;overflow-y:auto;flex:1}
+.pwl-modal h3{font-family:'DM Serif Display',serif;font-size:18px;margin-bottom:12px}
+.pwl-search-input{width:100%;background:var(--surf2);border:1px solid var(--bdr);color:var(--txt);border-radius:8px;padding:9px 14px;font-size:15px;outline:none;font-family:'DM Sans',sans-serif;margin-bottom:10px;-webkit-appearance:none}
+.pwl-search-input:focus{border-color:rgba(232,185,79,.4)}
+.pwl-results{display:flex;flex-direction:column;gap:4px}
+.pwl-result-item{display:flex;align-items:center;gap:10px;padding:8px;border-radius:8px;cursor:pointer;transition:background .15s;border:1px solid transparent}
+.pwl-result-item:hover{background:var(--surf2)}
+.pwl-result-item.already-added{opacity:.4;pointer-events:none}
+.pwl-result-thumb{width:34px;height:51px;border-radius:4px;overflow:hidden;background:var(--surf3);flex-shrink:0}
+.pwl-result-thumb img{width:100%;height:100%;object-fit:cover}
+.pwl-result-info{flex:1;min-width:0}
+.pwl-result-title{font-size:13px;font-weight:600}
+.pwl-result-meta{font-size:11px;color:var(--mut)}
 .wn-poster:hover{transform:translateY(-3px)}
 .wn-poster:active{transform:scale(.96)}
 .wn-poster-img{width:80px;height:120px;border-radius:6px;overflow:hidden;background:var(--surf2);transition:box-shadow .15s}
@@ -352,6 +396,7 @@ button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
       <div class="chip" data-f="unwatched">Unwatched</div>
       <div class="chip" data-f="watched">Watched</div>
       <div class="chip" data-f="4k">4K</div>
+      <div class="chip" data-f="female">♀ Female directors</div>
     </div>
     <div class="frow" id="fb2">
       <span class="flabel">Label</span>
@@ -672,6 +717,18 @@ button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
   </div>
 </div>
 
+<!-- ── PRIORITY WATCH LIST PICKER MODAL ── -->
+<div class="pwl-modal-wrap" id="pwl-modal" onclick="if(event.target===this)closePwlModal()">
+  <div class="pwl-modal">
+    <div class="pwl-modal-handle"></div>
+    <div class="pwl-modal-inner">
+      <h3>Add to Priority List</h3>
+      <input type="search" class="pwl-search-input" id="pwl-search" placeholder="Search your unwatched films…" autocomplete="off" autocorrect="off" spellcheck="false" oninput="pwlSearch()">
+      <div class="pwl-results" id="pwl-results"></div>
+    </div>
+  </div>
+</div>
+
 <!-- ── TAB NAV ── -->
 <nav class="tabnav">
   <div class="tabitem active" data-page="collection" onclick="switchTab('collection')">
@@ -740,6 +797,35 @@ const FS_KEY="filter_state_v1";
 // fil[] but fil[] could be re-sorted/re-filtered while the sheet was open.
 let fil=[],af="all",ad="all",adecade="all",ag="all",ac="all",art="all",minScore=5,sq="",sk="title",sa=true,openIdx=-1,openFilm=null;
 
+// ── Female directors known to be in typical collections ──────────────────────
+const FEMALE_DIRECTORS=new Set([
+  // Classic / arthouse
+  'Agnès Varda','Chantal Akerman','Leni Riefenstahl','Dorothy Arzner','Ida Lupino',
+  'Věra Chytilová','Larisa Shepitko','Márta Mészáros','Lina Wertmüller',
+  'Margarethe von Trotta','Yvonne Rainer','Barbara Loden','Elaine May',
+  // Contemporary arthouse & prestige
+  'Sofia Coppola','Andrea Arnold','Kelly Reichardt','Lynne Ramsay','Kathryn Bigelow',
+  'Jane Campion','Claire Denis','Céline Sciamma','Mia Hansen-Løve','Alice Rohrwacher',
+  'Lucrecia Martel','Claudia Llosa','Lucile Hadzihalilovic','Jessica Hausner',
+  'Joanna Hogg','Rose Glass','Chloe Zhao','Greta Gerwig','Miranda July',
+  'Debra Granik','Karyn Kusama','Ana Lily Amirpour','Jennifer Kent',
+  'Coralie Fargeat','Julia Ducournau','Jasmila Žbanić','Susanne Bier',
+  'Lone Scherfig','May el-Toukhy','Haifaa al-Mansour','Maren Ade',
+  // Mainstream & genre
+  'Patty Jenkins','Ava DuVernay','Penny Marshall','Nora Ephron',
+  'Amy Heckerling','Martha Coolidge','Mary Harron','Allison Anders',
+  'Nicole Holofcener','Lisa Cholodenko','Kimberly Peirce','Catherine Hardwicke',
+  'Dee Rees','Marielle Heller','Eliza Hittman','Saoirse Ronan',
+  // International
+  'Naomi Kawase','Nao Kubota','Yoko Ogawa','Park Chan-ok',
+  'Mati Diop','Dea Kulumbegashvili','Rungano Nyoni',
+  'Marianne Khoury','Annemarie Jacir','Hiam Abbass',
+  'Nadine Labaki','Yamina Benguigui',
+  // Documentary
+  'Barbara Kopple','Agnès Varda','Kim Longinotto','Kirby Dick',
+  'Laura Poitras','Alma Har\'el',
+]);
+
 // ── localStorage ─────────────────────────────────────────────────────────────
 function loadOverrides(){
   try{
@@ -783,6 +869,7 @@ function filt(){
       case "unwatched":if(f.watched)return false;break;
       case "watched":if(!f.watched)return false;break;
       case "4k":if(!f.format||!f.format.includes("4K"))return false;break;
+      case "female":if(!FEMALE_DIRECTORS.has(f.director))return false;break;
     }
     if(ad!=="all"&&f.distributor!==DIST_MAP[ad])return false;
     if(adecade!=="all"&&f.decade!==adecade)return false;
@@ -1266,7 +1353,7 @@ function sts(){
 // ── Active filter summary ─────────────────────────────────────────────────────
 function updateSummary(){
   const parts=[];
-  if(af!=="all")parts.push(af==="4k"?"4K":af.charAt(0).toUpperCase()+af.slice(1));
+  if(af!=="all")parts.push(af==="4k"?"4K":af==="female"?"♀ Female directors":af.charAt(0).toUpperCase()+af.slice(1));
   if(ad!=="all")parts.push(DIST_MAP[ad]||ad);
   if(adecade!=="all")parts.push(adecade);
   if(ag!=="all")parts.push(ag);
@@ -1483,7 +1570,247 @@ function wnSurprise(){
   // Find index in wnFilmMap by identity reference
   openWnFilm(wnFilmMap.indexOf(f));
 }
-function renderWatchNext(){
+// ── PRIORITY WATCH LIST ──────────────────────────────────────────────────────
+const PWL_KEY = 'priority_watch_list_v1';
+let pwlList = []; // array of imdb_ids (or title|year keys as fallback)
+
+function pwlLoad() {
+  try {
+    const raw = localStorage.getItem(PWL_KEY);
+    pwlList = raw ? JSON.parse(raw) : [];
+  } catch(e) { pwlList = []; }
+}
+
+function pwlSave() {
+  try { localStorage.setItem(PWL_KEY, JSON.stringify(pwlList)); } catch(e) {}
+}
+
+function pwlKey(f) {
+  return f.imdb_id || (f.title + '|' + (f.year || ''));
+}
+
+function pwlFilms() {
+  // Return film objects in pwlList order, resolving keys back to film objects
+  return pwlList.map(k => C.find(f => pwlKey(f) === k)).filter(Boolean);
+}
+
+function pwlAdd(film) {
+  const k = pwlKey(film);
+  if (pwlList.includes(k)) return;
+  if (pwlList.length >= 10) { alert('Priority list is full (max 10 films). Remove one first.'); return; }
+  pwlList.push(k);
+  pwlSave();
+  closePwlModal();
+  renderWatchNext();
+}
+
+function pwlRemove(k) {
+  pwlList = pwlList.filter(x => x !== k);
+  pwlSave();
+  renderWatchNext();
+}
+
+function pwlMove(fromIdx, toIdx) {
+  if (fromIdx === toIdx) return;
+  const item = pwlList.splice(fromIdx, 1)[0];
+  pwlList.splice(toIdx, 0, item);
+  pwlSave();
+}
+
+function openPwlModal() {
+  document.getElementById('pwl-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => { document.getElementById('pwl-search').focus(); }, 50);
+  pwlSearch();
+}
+
+function closePwlModal() {
+  document.getElementById('pwl-modal').classList.remove('open');
+  document.body.style.overflow = '';
+  document.getElementById('pwl-search').value = '';
+}
+
+function pwlSearch() {
+  const q = document.getElementById('pwl-search').value.toLowerCase().trim();
+  // Show unwatched films, sorted by score, filtered by search
+  const candidates = C.filter(f => !f.watched)
+    .filter(f => !q || (f.title + ' ' + (f.director || '')).toLowerCase().includes(q))
+    .sort((a, b) => (b.score || 0) - (a.score || 0))
+    .slice(0, 30);
+
+  const resultsEl = document.getElementById('pwl-results');
+  if (!candidates.length) {
+    resultsEl.innerHTML = '<div style="text-align:center;padding:20px;color:var(--mut);font-size:13px">No matching unwatched films</div>';
+    return;
+  }
+
+  resultsEl.innerHTML = candidates.map(f => {
+    const k = pwlKey(f);
+    const added = pwlList.includes(k);
+    const thumb = f.poster
+      ? `<img src="${ex(f.poster)}" style="width:100%;height:100%;object-fit:cover" loading="lazy">`
+      : `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--mut);padding:2px;text-align:center">${ex(f.title)}</div>`;
+    return `<div class="pwl-result-item ${added ? 'already-added' : ''}" onclick="${added ? '' : `pwlAdd(C.find(f=>pwlKey(f)==='${k.replace(/'/g,"\\'")}')); return`}">
+      <div class="pwl-result-thumb">${thumb}</div>
+      <div class="pwl-result-info">
+        <div class="pwl-result-title">${ex(f.title)}</div>
+        <div class="pwl-result-meta">${ex(f.director || '')}${f.year ? ' · ' + f.year : ''}${f.score ? ' · ' + f.score.toFixed(1) : ''}</div>
+      </div>
+      <div style="font-size:12px;color:${added ? 'var(--grn)' : 'var(--acc)'};flex-shrink:0;font-weight:600">${added ? '✓ Added' : '+ Add'}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderPwlSection(frag) {
+  const films = pwlFilms();
+  const wrap = document.createElement('div');
+  wrap.className = 'pwl-wrap';
+
+  const canAdd = pwlList.length < 10;
+  wrap.innerHTML = `
+    <div class="pwl-header">
+      <div>
+        <div class="pwl-title">📌 My Priority List</div>
+      </div>
+      <span class="pwl-count">${films.length}/10 films</span>
+      ${canAdd ? `<button class="pwl-add-btn" onclick="openPwlModal()">+ Add film</button>` : ''}
+    </div>
+    ${films.length === 0 ? `
+      <div class="pwl-empty">
+        <p>Build a personal watchlist of up to 10 films, ordered by priority.</p>
+        <button class="pwl-add-btn" onclick="openPwlModal()" style="margin:0 auto;display:block">+ Add your first film</button>
+      </div>
+    ` : `
+      <div class="pwl-list" id="pwl-drag-list">
+        ${films.map((f, i) => {
+          const k = pwlKey(f);
+          const thumb = f.poster
+            ? `<img src="${ex(f.poster)}" loading="lazy">`
+            : `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--mut);padding:2px;text-align:center">${ex(f.title)}</div>`;
+          return `<div class="pwl-item" draggable="true" data-pwl-key="${k.replace(/"/g,'&quot;')}" data-pwl-idx="${i}"
+            ondragstart="pwlDragStart(event)" ondragover="pwlDragOver(event)" ondrop="pwlDrop(event)" ondragend="pwlDragEnd(event)"
+            ontouchstart="pwlTouchStart(event)" ontouchmove="pwlTouchMove(event)" ontouchend="pwlTouchEnd(event)">
+            <div class="pwl-rank">${i + 1}</div>
+            <div class="pwl-thumb">${thumb}</div>
+            <div class="pwl-info">
+              <div class="pwl-film-title">${ex(f.title)}</div>
+              <div class="pwl-film-meta">${ex(f.director || '')}${f.year ? ' · ' + f.year : ''}${f.score ? ' · ★ ' + f.score.toFixed(1) : ''}${f.runtime ? ' · ' + f.runtime + ' min' : ''}</div>
+            </div>
+            <div class="pwl-drag-handle" title="Drag to reorder">⠿</div>
+            <button class="pwl-remove" onclick="pwlRemove('${k.replace(/'/g,"\\'")}');event.stopPropagation()" title="Remove">×</button>
+          </div>`;
+        }).join('')}
+        ${canAdd ? `<button class="pwl-add-btn" onclick="openPwlModal()" style="margin-top:6px;width:100%">+ Add another film</button>` : ''}
+      </div>
+    `}
+  `;
+  frag.appendChild(wrap);
+
+  // Attach click-to-open on poster thumb — open film sheet
+  setTimeout(() => {
+    wrap.querySelectorAll('.pwl-thumb').forEach((el, i) => {
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', e => {
+        e.stopPropagation();
+        const f = films[i]; if (!f) return;
+        openFilm = f;
+        renderSheet(f, wnFilmMap);
+        document.getElementById('sh').classList.add('open');
+        document.getElementById('ov').classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+  }, 0);
+}
+
+// ── Drag and drop for PWL ────────────────────────────────────────────────────
+let pwlDragIdx = -1;
+let pwlDragOverIdx = -1;
+
+function pwlDragStart(e) {
+  pwlDragIdx = parseInt(e.currentTarget.dataset.pwlIdx);
+  e.currentTarget.classList.add('dragging');
+  e.dataTransfer.effectAllowed = 'move';
+}
+function pwlDragOver(e) {
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'move';
+  const idx = parseInt(e.currentTarget.dataset.pwlIdx);
+  if (idx !== pwlDragOverIdx) {
+    document.querySelectorAll('.pwl-item').forEach(el => el.classList.remove('drag-over'));
+    e.currentTarget.classList.add('drag-over');
+    pwlDragOverIdx = idx;
+  }
+}
+function pwlDrop(e) {
+  e.preventDefault();
+  const toIdx = parseInt(e.currentTarget.dataset.pwlIdx);
+  if (pwlDragIdx !== -1 && pwlDragIdx !== toIdx) {
+    pwlMove(pwlDragIdx, toIdx);
+    renderWatchNext();
+  }
+}
+function pwlDragEnd(e) {
+  e.currentTarget.classList.remove('dragging');
+  document.querySelectorAll('.pwl-item').forEach(el => el.classList.remove('drag-over'));
+  pwlDragIdx = -1; pwlDragOverIdx = -1;
+}
+
+// ── Touch drag for mobile ─────────────────────────────────────────────────────
+let pwlTouchItem = null, pwlTouchFromIdx = -1, pwlTouchClone = null, pwlTouchOffsetY = 0;
+
+function pwlTouchStart(e) {
+  const item = e.currentTarget;
+  pwlTouchFromIdx = parseInt(item.dataset.pwlIdx);
+  pwlTouchItem = item;
+  const rect = item.getBoundingClientRect();
+  pwlTouchOffsetY = e.touches[0].clientY - rect.top;
+  // Create a floating clone
+  pwlTouchClone = item.cloneNode(true);
+  pwlTouchClone.style.cssText = `position:fixed;left:${rect.left}px;top:${rect.top}px;width:${rect.width}px;z-index:999;opacity:.85;pointer-events:none;border-radius:8px;box-shadow:0 8px 32px rgba(0,0,0,.5)`;
+  document.body.appendChild(pwlTouchClone);
+  item.style.opacity = '0.3';
+}
+
+function pwlTouchMove(e) {
+  e.preventDefault();
+  if (!pwlTouchClone) return;
+  const y = e.touches[0].clientY;
+  pwlTouchClone.style.top = (y - pwlTouchOffsetY) + 'px';
+  // Find which item we're hovering
+  document.querySelectorAll('.pwl-item').forEach(el => el.classList.remove('drag-over'));
+  const elBelow = document.elementFromPoint(e.touches[0].clientX, y);
+  const hovered = elBelow && elBelow.closest('.pwl-item');
+  if (hovered && hovered !== pwlTouchItem) hovered.classList.add('drag-over');
+}
+
+function pwlTouchEnd(e) {
+  if (pwlTouchClone) { pwlTouchClone.remove(); pwlTouchClone = null; }
+  if (pwlTouchItem) { pwlTouchItem.style.opacity = ''; pwlTouchItem = null; }
+  const y = e.changedTouches[0].clientY;
+  const elBelow = document.elementFromPoint(e.changedTouches[0].clientX, y);
+  const hovered = elBelow && elBelow.closest('.pwl-item');
+  if (hovered) {
+    const toIdx = parseInt(hovered.dataset.pwlIdx);
+    if (pwlTouchFromIdx !== -1 && toIdx !== pwlTouchFromIdx) {
+      pwlMove(pwlTouchFromIdx, toIdx);
+      renderWatchNext();
+    }
+  }
+  document.querySelectorAll('.pwl-item').forEach(el => el.classList.remove('drag-over'));
+  pwlTouchFromIdx = -1;
+}
+
+// Escape to close PWL modal
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && document.getElementById('pwl-modal').classList.contains('open')) {
+    closePwlModal();
+  }
+});
+
+pwlLoad();
+
+
   const pg=document.getElementById('page-watchnext');
   wnFilmMap.length=0;
   const showAll=pg.dataset.showAll==='true';
@@ -1523,6 +1850,9 @@ function renderWatchNext(){
     wnFilmMap.push(hero);
     frag.appendChild(heroEl.firstElementChild);
   }
+
+  // ── PRIORITY WATCH LIST ────────────────────────────────────────────────────
+  renderPwlSection(frag);
 
   // ── CONTROLS ───────────────────────────────────────────────────────────────
   const ctrl=document.createElement('div');
