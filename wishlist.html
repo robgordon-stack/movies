@@ -392,6 +392,10 @@ button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
         <div class="chip" data-decade="2020">2020s</div>
       </div>
       <div class="frow">
+        <span class="flabel">Female</span>
+        <div class="chip" id="fc-female" data-female="1">♀ Female directed</div>
+      </div>
+      <div class="frow">
         <span class="flabel">Director</span>
         <div class="chip active" data-director="all">All</div>
         <div class="chip" data-director="Steven Spielberg">Spielberg</div>
@@ -626,6 +630,7 @@ let filterDist="all";
 let filterCountry="all";
 let filterDecade="all";
 let filterDirector="all";
+let filterFemale=false; // true = show only female-directed films
 let sortKey="title";
 let sortDir=1; // 1=asc, -1=desc
 let openItem=null;
@@ -654,6 +659,7 @@ function getFiltered(){
       const dec=f.year?Math.floor(f.year/10)*10:null;
       if(dec!==parseInt(filterDecade))return false;
     }
+    if(filterFemale&&!f.female_director)return false;
     if(filterDirector!=="all"&&(f.director||"")!==filterDirector)return false;
     if(q&&!(f.title+" "+(f.director||"")+" "+(f.genre||"")+" "+(Array.isArray(f.distributor)?f.distributor.join(" "):f.distributor||"")+" "+(f.country||"")).toLowerCase().includes(q))return false;
     return true;
@@ -759,6 +765,13 @@ document.getElementById("filterPanel").addEventListener("click",e=>{
     dec.classList.add("active");
     render();renderHunt();updateSummary();return;
   }
+  const femaleChip=e.target.closest("[data-female]");
+  if(femaleChip){
+    filterFemale=!filterFemale;
+    femaleChip.classList.toggle("active-hot",filterFemale);
+    femaleChip.classList.toggle("active",false);
+    render();renderHunt();updateSummary();return;
+  }
   const drc=e.target.closest("[data-director]");
   if(drc){
     filterDirector=drc.dataset.director;
@@ -769,7 +782,8 @@ document.getElementById("filterPanel").addEventListener("click",e=>{
 });
 
 document.getElementById("clearAllBtn").addEventListener("click",()=>{
-  filterPri="all";filterFmt="all";filterDist="all";filterCountry="all";filterDecade="all";filterDirector="all";
+  filterPri="all";filterFmt="all";filterDist="all";filterCountry="all";filterDecade="all";filterDirector="all";filterFemale=false;
+  document.getElementById("fc-female").classList.remove("active-hot");
   document.querySelectorAll("[data-pri]").forEach(c=>c.classList.remove("active"));
   document.getElementById("fc-all").classList.add("active");
   document.querySelectorAll("[data-fmt]").forEach(c=>c.classList.remove("active"));
@@ -838,6 +852,7 @@ function updateSummary(){
   if(filterDist!=="all")parts.push(filterDist);
   if(filterCountry!=="all")parts.push(filterCountry);
   if(filterDecade!=="all")parts.push(filterDecade+"s");
+  if(filterFemale)parts.push("♀ Female directed");
   if(filterDirector!=="all")parts.push(filterDirector);
   const s=document.getElementById("activeSummary");
   const ca=document.getElementById("clearAllBtn");
