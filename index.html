@@ -1661,49 +1661,55 @@ function pwlSearch() {
   }).join('');
 }
 
-function renderPwlSection(frag) {
-  const films = pwlFilms();
-  const wrap = document.createElement('div');
-  wrap.className = 'pwl-wrap';
+function pwlItemHtml(f, i) {
+  var k = pwlKey(f);
+  var kq = k.replace(/"/g, '&quot;');
+  var ks = k.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+  var thumb = f.poster
+    ? '<img src="' + ex(f.poster) + '" loading="lazy">'
+    : '<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--mut);padding:2px;text-align:center">' + ex(f.title) + '</div>';
+  var meta = ex(f.director || '') + (f.year ? ' · ' + f.year : '') + (f.score ? ' · ★ ' + f.score.toFixed(1) : '') + (f.runtime ? ' · ' + f.runtime + ' min' : '');
+  return '<div class="pwl-item" draggable="true" data-pwl-key="' + kq + '" data-pwl-idx="' + i + '"'
+    + ' ondragstart="pwlDragStart(event)" ondragover="pwlDragOver(event)" ondrop="pwlDrop(event)" ondragend="pwlDragEnd(event)"'
+    + ' ontouchstart="pwlTouchStart(event)" ontouchmove="pwlTouchMove(event)" ontouchend="pwlTouchEnd(event)">'
+    + '<div class="pwl-rank">' + (i + 1) + '</div>'
+    + '<div class="pwl-thumb">' + thumb + '</div>'
+    + '<div class="pwl-info">'
+    + '<div class="pwl-film-title">' + ex(f.title) + '</div>'
+    + '<div class="pwl-film-meta">' + meta + '</div>'
+    + '</div>'
+    + '<div class="pwl-drag-handle" title="Drag to reorder">⠿</div>'
+    + '<button class="pwl-remove" onclick="pwlRemove(\'' + ks + '\');event.stopPropagation()" title="Remove">×</button>'
+    + '</div>';
+}
 
-  const canAdd = pwlList.length < 10;
-  wrap.innerHTML = `
-    <div class="pwl-header">
-      <div>
-        <div class="pwl-title">📌 My Priority List</div>
-      </div>
-      <span class="pwl-count">${films.length}/10 films</span>
-      ${canAdd ? `<button class="pwl-add-btn" onclick="openPwlModal()">+ Add film</button>` : ''}
-    </div>
-    ${films.length === 0 ? `
-      <div class="pwl-empty">
-        <p>Build a personal watchlist of up to 10 films, ordered by priority.</p>
-        <button class="pwl-add-btn" onclick="openPwlModal()" style="margin:0 auto;display:block">+ Add your first film</button>
-      </div>
-    ` : `
-      <div class="pwl-list" id="pwl-drag-list">
-        ${films.map((f, i) => {
-          const k = pwlKey(f);
-          const thumb = f.poster
-            ? `<img src="${ex(f.poster)}" loading="lazy">`
-            : `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--mut);padding:2px;text-align:center">${ex(f.title)}</div>`;
-          return `<div class="pwl-item" draggable="true" data-pwl-key="${k.replace(/"/g,'&quot;')}" data-pwl-idx="${i}"
-            ondragstart="pwlDragStart(event)" ondragover="pwlDragOver(event)" ondrop="pwlDrop(event)" ondragend="pwlDragEnd(event)"
-            ontouchstart="pwlTouchStart(event)" ontouchmove="pwlTouchMove(event)" ontouchend="pwlTouchEnd(event)">
-            <div class="pwl-rank">${i + 1}</div>
-            <div class="pwl-thumb">${thumb}</div>
-            <div class="pwl-info">
-              <div class="pwl-film-title">${ex(f.title)}</div>
-              <div class="pwl-film-meta">${ex(f.director || '')}${f.year ? ' · ' + f.year : ''}${f.score ? ' · ★ ' + f.score.toFixed(1) : ''}${f.runtime ? ' · ' + f.runtime + ' min' : ''}</div>
-            </div>
-            <div class="pwl-drag-handle" title="Drag to reorder">⠿</div>
-            <button class="pwl-remove" onclick="pwlRemove('${k.replace(/'/g,"\\'")}');event.stopPropagation()" title="Remove">×</button>
-          </div>`;
-        }).join('')}
-        ${canAdd ? `<button class="pwl-add-btn" onclick="openPwlModal()" style="margin-top:6px;width:100%">+ Add another film</button>` : ''}
-      </div>
-    `}
-  `;
+function renderPwlSection(frag) {
+  var films = pwlFilms();
+  var wrap = document.createElement('div');
+  wrap.className = 'pwl-wrap';
+  var canAdd = pwlList.length < 10;
+
+  var bodyHtml;
+  if (films.length === 0) {
+    bodyHtml = '<div class="pwl-empty">'
+      + '<p>Build a personal watchlist of up to 10 films, ordered by priority.</p>'
+      + '<button class="pwl-add-btn" onclick="openPwlModal()" style="margin:0 auto;display:block">+ Add your first film</button>'
+      + '</div>';
+  } else {
+    var items = films.map(pwlItemHtml).join('');
+    var addMore = canAdd ? '<button class="pwl-add-btn" onclick="openPwlModal()" style="margin-top:6px;width:100%">+ Add another film</button>' : '';
+    bodyHtml = '<div class="pwl-list" id="pwl-drag-list">' + items + addMore + '</div>';
+  }
+
+  var addBtn = canAdd ? '<button class="pwl-add-btn" onclick="openPwlModal()">+ Add film</button>' : '';
+
+  wrap.innerHTML = '<div class="pwl-header">'
+    + '<div><div class="pwl-title">📌 My Priority List</div></div>'
+    + '<span class="pwl-count">' + films.length + '/10 films</span>'
+    + addBtn
+    + '</div>'
+    + bodyHtml;
+
   frag.appendChild(wrap);
 
   // Attach click-to-open on poster thumb — open film sheet
@@ -1810,7 +1816,7 @@ document.addEventListener('keydown', e => {
 
 pwlLoad();
 
-
+function renderWatchNext(){
   const pg=document.getElementById('page-watchnext');
   wnFilmMap.length=0;
   const showAll=pg.dataset.showAll==='true';
