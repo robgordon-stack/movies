@@ -278,9 +278,6 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
 .share-option .so-title{font-size:14px;font-weight:600;margin-bottom:2px}
 .share-option .so-desc{font-size:12px;color:var(--mut)}
 
-/* ── MOVE TO COLLECTION BUTTON ── */
-.sh-btn-collect{background:rgba(232,185,79,.12);border:1px solid var(--acc);color:var(--acc);}
-
 /* ── Content fade-in ── */
 @keyframes gridFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 .grid.loaded{animation:gridFadeIn .25s ease both}
@@ -985,7 +982,6 @@ function openSheet(id){
     <div class="sh-actions">
       ${!isOwned?`<button class="sh-btn sh-btn-owned" onclick="markOwned('${f.id}')">✓ Mark as owned</button>`:`<button class="sh-btn sh-btn-pri" onclick="markOwned('${f.id}',true)">Remove from Archive</button>`}
       <button class="sh-btn sh-btn-collect" onclick="moveToCollection('${f.id}')">➕ Add to Collection</button>
-      <button class="sh-btn sh-btn-collect" onclick="moveToCollection('${f.id}')">➕ Add to Collection</button>
       <button class="sh-btn sh-btn-del" onclick="deleteFilm('${f.id}')">Remove</button>
     </div>
   `;
@@ -1610,29 +1606,6 @@ function moveToCollection(id){
   window.open('index.html?addfilm='+encoded,'_self');
 }
 
-
-// ── MOVE TO COLLECTION ───────────────────────────────────────────────────
-function moveToCollection(id){
-  const f=WL.find(x=>x.id===id);
-  if(!f)return;
-  const payload={
-    title:f.title||'',
-    year:f.year||null,
-    director:f.director||null,
-    country:f.country||null,
-    genre:f.genre||null,
-    runtime:f.runtime||null,
-    distributor:f.distributor||null,
-    imdb_id:f.imdb_id||null,
-    poster:f.poster||null,
-    lb:f.lb||null,
-    synopsis:f.synopsis||null,
-    imdb_score:f.imdb_score||null
-  };
-  Object.keys(payload).forEach(k=>{ if(payload[k]===null||payload[k]==='')delete payload[k]; });
-  const encoded=btoa(unescape(encodeURIComponent(JSON.stringify(payload))));
-  window.open('index.html?addfilm='+encoded,'_self');
-}
 
 
 // ── Keyboard shortcuts ────────────────────────────────────────────────────
