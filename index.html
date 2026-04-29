@@ -319,6 +319,14 @@ header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family
 @keyframes gridFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 .grid.loaded{animation:gridFadeIn .25s ease both}
 
+/* ── Reduced motion ── */
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .skeleton-card,.skeleton-stat{animation:none}
+  .card:hover{transform:none}
+  .grid.loaded{animation:none}
+}
+
 /* ── Focus-visible for interactive elements ── */
 .card:focus-visible,.chip:focus-visible,.tabitem:focus-visible,
 button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
@@ -382,12 +390,12 @@ button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
   <div class="sw">
     <span class="si">&#x2315;</span>
     <input type="search" id="q" placeholder="Title, director, genre&hellip;" autocomplete="off" autocorrect="off" spellcheck="false">
-    <button class="scl" id="qc">&times;</button>
+    <button class="scl" id="qc" aria-label="Clear search">&times;</button>
   </div>
   <div class="filter-toggle">
     <button class="ftbtn" id="ftbtn">&#x25BC; Filters<span class="filter-badge" id="filterBadge"></span></button>
     <span class="active-summary" id="activeSummary"></span>
-    <button class="clear-all" id="clearAll">&times;</button>
+    <button class="clear-all" id="clearAll" aria-label="Clear all filters">&times;</button>
   </div>
   <div class="filter-panel" id="filterPanel">
     <div class="frow" id="fb1">
@@ -529,7 +537,7 @@ button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
 <!-- ── SHARE MODAL ── -->
 <div class="share-modal-wrap" id="share-modal" onclick="if(event.target===this)closeShareModal()">
   <div class="share-modal">
-    <button class="share-close" onclick="closeShareModal()">×</button>
+    <button class="share-close" onclick="closeShareModal()" aria-label="Close share modal">×</button>
     <h2>Share Your Collection</h2>
     <p>Export a read-only snapshot anyone can browse — no login needed.</p>
     <div class="share-option" onclick="exportCollectionHTML()">
@@ -572,7 +580,7 @@ button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
   <div class="add-film-modal">
     <div class="afm-handle"></div>
     <div class="afm-inner">
-      <button class="afm-close" onclick="closeAddFilmModal()">×</button>
+      <button class="afm-close" onclick="closeAddFilmModal()" aria-label="Close add film modal">×</button>
       <h2>Add to Collection</h2>
       <p class="afm-sub">Search OMDB to autofill, or enter manually. Copy the generated entry and paste it into the C array in your HTML file.</p>
 
@@ -1381,10 +1389,12 @@ function updateSummary(){
 // ── Surprise me ───────────────────────────────────────────────────────────────
 document.getElementById("surpriseBtn").addEventListener("click",()=>{
   const btn=document.getElementById("surpriseBtn");
+  if(btn.disabled)return;
+  btn.disabled=true;
   btn.classList.remove("spinning");
   void btn.offsetWidth; // reflow to restart animation
   btn.classList.add("spinning");
-  setTimeout(()=>btn.classList.remove("spinning"),600);
+  setTimeout(()=>{btn.classList.remove("spinning");btn.disabled=false;},600);
   const pool=fil.filter(f=>!f.watched).length?fil.filter(f=>!f.watched):fil;
   if(!pool.length)return;
   opn(fil.indexOf(pool[Math.floor(Math.random()*pool.length)]));
@@ -1548,6 +1558,24 @@ function ex(s){return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").r
 // ── Init ──────────────────────────────────────────────────────────────────────
 loadCollection();
 
+// ── Accessibility: make filter chips and sort chips keyboard-navigable ────────
+// Done in JS to avoid touching every HTML chip element individually.
+// Uses event delegation on the containers — no impact on film loading/rendering.
+(function initChipA11y(){
+  function upgradeChips(selector){
+    document.querySelectorAll(selector).forEach(el=>{
+      if(el.getAttribute('role'))return; // already done
+      el.setAttribute('role','button');
+      el.setAttribute('tabindex','0');
+      el.addEventListener('keydown',function(e){
+        if(e.key==='Enter'||e.key===' '){e.preventDefault();el.click();}
+      });
+    });
+  }
+  upgradeChips('.chip');
+  upgradeChips('.sortchip');
+})();
+
 // ── Watch Next film map flat array of unique film objects across all WN groups.
 // Films that appear in multiple groups are deduplicated here so that
 // wnSurprise() always finds a valid index regardless of duplicates.
@@ -1572,18 +1600,49 @@ function wnSurprise(){
   openWnFilm(wnFilmMap.indexOf(f));
 }
 // ── PRIORITY WATCH LIST ──────────────────────────────────────────────────────
-const PWL_KEY = 'priority_watch_list_v1';
-let pwlList = []; // array of imdb_ids (or title|year keys as fallback)
+let pwlList = []; // array of imdb_ids ordered by priority
+let pwlWishlistData = null; // full parsed wishlist.json, kept in memory for re-serialisation
 
-function pwlLoad() {
+// ── Load priority list from wishlist.json ─────────────────────────────────────
+async function pwlLoad() {
   try {
-    const raw = localStorage.getItem(PWL_KEY);
-    pwlList = raw ? JSON.parse(raw) : [];
-  } catch(e) { pwlList = []; }
+    const resp = await fetch('wishlist.json?v=' + Date.now());
+    if (!resp.ok) throw new Error('not found');
+    pwlWishlistData = await resp.json();
+    // Support both {priority_list:[], films:[]} shape and legacy plain array
+    if (Array.isArray(pwlWishlistData)) {
+      // Plain array — no priority_list yet; wrap it
+      pwlWishlistData = { films: pwlWishlistData, priority_list: [] };
+    }
+    pwlList = Array.isArray(pwlWishlistData.priority_list) ? pwlWishlistData.priority_list : [];
+  } catch(e) {
+    pwlWishlistData = null;
+    pwlList = [];
+  }
 }
 
+// ── Serialise updated list back into wishlist.json shape and trigger download ──
 function pwlSave() {
-  try { localStorage.setItem(PWL_KEY, JSON.stringify(pwlList)); } catch(e) {}
+  if (!pwlWishlistData) return;
+  pwlWishlistData.priority_list = pwlList;
+
+  // Determine the correct films array regardless of shape
+  const films = pwlWishlistData.films || pwlWishlistData;
+
+  const out = { priority_list: pwlList, films: Array.isArray(films) ? films : [] };
+  const blob = new Blob([JSON.stringify(out, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+
+  // Show persistent download banner
+  let banner = document.getElementById('pwl-save-banner');
+  if (!banner) {
+    banner = document.createElement('div');
+    banner.id = 'pwl-save-banner';
+    banner.style.cssText = 'position:fixed;bottom:72px;left:50%;transform:translateX(-50%);background:var(--acc);color:#1a1a1a;font-family:\'DM Sans\',sans-serif;font-size:13px;font-weight:700;padding:10px 18px;border-radius:10px;z-index:500;display:flex;align-items:center;gap:10px;box-shadow:0 4px 20px rgba(0,0,0,.4);white-space:nowrap';
+    document.body.appendChild(banner);
+  }
+  banner.innerHTML = '⬇ <a href="' + url + '" download="wishlist.json" style="color:inherit;text-decoration:none" onclick="document.getElementById(\'pwl-save-banner\').style.display=\'none\'">Download wishlist.json to sync priority list</a> <span style="opacity:.6;font-weight:400;font-size:11px">— replace your existing file</span>';
+  banner.style.display = 'flex';
 }
 
 function pwlKey(f) {
@@ -1815,7 +1874,11 @@ document.addEventListener('keydown', e => {
   }
 });
 
-pwlLoad();
+pwlLoad().then(() => {
+  // Re-render Watch Next if it's already visible so priority list populates
+  const wnPage = document.getElementById('page-watchnext');
+  if (wnPage && wnPage.innerHTML) renderWatchNext();
+});
 
 function renderWatchNext(){
   const pg=document.getElementById('page-watchnext');
@@ -2323,7 +2386,15 @@ function afmCopyEntry(){
   const raw=params.get('addfilm');
   if(!raw)return;
   try{
-    const f=JSON.parse(decodeURIComponent(escape(atob(raw))));
+    // Decode: support both new encodeURIComponent format and legacy btoa format
+    let f;
+    try {
+      // Try new format first: encodeURIComponent(JSON)
+      f = JSON.parse(decodeURIComponent(raw));
+    } catch(_) {
+      // Fall back to legacy btoa format for any old links
+      f = JSON.parse(decodeURIComponent(escape(atob(raw))));
+    }
     // Wait for DOM to be ready, then open and prefill
     function prefill(){
       afmClearForm();

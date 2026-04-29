@@ -282,6 +282,13 @@ hr.divl{border:none;border-top:1px solid var(--bdr);margin:12px 0}
 @keyframes gridFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 .grid.loaded{animation:gridFadeIn .25s ease both}
 
+/* ── Reduced motion ── */
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .card:hover{transform:none}
+  .grid.loaded{animation:none}
+}
+
 /* ── Focus-visible for interactive elements ── */
 .card:focus-visible,.chip:focus-visible,.tabitem:focus-visible,
 button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
@@ -337,7 +344,7 @@ button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
     <div class="filter-toggle">
       <button class="ftbtn" id="ftbtn">&#x25BC; Filters<span class="filter-badge" id="filterBadge"></span></button>
       <span class="active-summary" id="activeSummary"></span>
-      <button class="clear-all-btn" id="clearAllBtn">&times;</button>
+      <button class="clear-all-btn" id="clearAllBtn" aria-label="Clear all filters">&times;</button>
     </div>
     <div class="filter-panel" id="filterPanel">
       <div class="frow">
@@ -438,7 +445,7 @@ button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
 <!-- ── SHARE MODAL ── -->
 <div class="share-modal-wrap" id="share-modal">
   <div class="share-modal">
-    <button class="share-close" onclick="closeShareModal()">×</button>
+    <button class="share-close" onclick="closeShareModal()" aria-label="Close share modal">×</button>
     <h2>Share Your Wishlist</h2>
     <p>Export a read-only snapshot of your wishlist that anyone can browse — no login needed.</p>
     <div class="share-option" onclick="exportShareableHTML()">
@@ -526,7 +533,7 @@ button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
 <div class="sh" id="sh">
   <div style="display:flex;align-items:center;padding:10px 16px 0">
     <div class="shn" style="margin:0;flex:1;cursor:grab"></div>
-    <button onclick="closeSheet()" style="background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:50%;width:36px;height:36px;font-size:20px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-left:12px">×</button>
+    <button onclick="closeSheet()" aria-label="Close film details" style="background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:50%;width:36px;height:36px;font-size:20px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-left:12px">×</button>
   </div>
   <div class="shi" id="shi"></div>
 </div>
@@ -536,7 +543,7 @@ button:focus-visible,.scl:focus-visible,.sortchip:focus-visible{
   <div class="modal">
     <div class="modal-head">
       <h2>Add to Wishlist</h2>
-      <button class="modal-close" onclick="closeAddModal()">✕</button>
+      <button class="modal-close" onclick="closeAddModal()" aria-label="Close add film modal">✕</button>
     </div>
     <div class="modal-body">
       <div class="field">
@@ -1477,7 +1484,22 @@ async function init() {
 }
 init();
 
-// ── SHARE / EXPORT ────────────────────────────────────────────────────────────
+// ── Accessibility: make filter chips and sort chips keyboard-navigable ────────
+(function initChipA11y(){
+  function upgradeChips(selector){
+    document.querySelectorAll(selector).forEach(el=>{
+      if(el.getAttribute('role'))return;
+      el.setAttribute('role','button');
+      el.setAttribute('tabindex','0');
+      el.addEventListener('keydown',function(e){
+        if(e.key==='Enter'||e.key===' '){e.preventDefault();el.click();}
+      });
+    });
+  }
+  upgradeChips('.chip');
+  upgradeChips('.sortchip');
+})();
+
 function openShareModal() {
   document.getElementById('share-modal').classList.add('open');
 }
@@ -1602,8 +1624,9 @@ function moveToCollection(id){
   };
   // Strip nulls
   Object.keys(payload).forEach(k=>{ if(payload[k]===null||payload[k]==='')delete payload[k]; });
-  const encoded=btoa(unescape(encodeURIComponent(JSON.stringify(payload))));
-  window.open('index.html?addfilm='+encoded,'_self');
+  // Use encodeURIComponent for Unicode-safe URL encoding (handles non-Latin film titles)
+  const encoded=encodeURIComponent(JSON.stringify(payload));
+  window.open('index.html?addfilm='+encoded,'_blank');
 }
 
 
