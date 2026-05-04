@@ -142,60 +142,6 @@
     </div>
   </div>
 
-<div class="modal-wrap" id="add-modal">
-  <div class="modal">
-    <div class="modal-head">
-      <h2>Add to Wishlist</h2>
-      <button class="modal-close" onclick="closeAddModal()" aria-label="Close add film modal">✕</button>
-    </div>
-    <div class="modal-body">
-      <div class="field">
-        <label>Search TMDB</label>
-        <input type="search" id="tmdb-search" placeholder="Start typing a title…" autocomplete="off" oninput="tmdbSearch()">
-        <div class="search-results" id="tmdb-results"></div>
-      </div>
-      <div id="manual-fields">
-        <div class="field">
-          <label>Title</label>
-          <input type="text" id="f-title" placeholder="Film title">
-        </div>
-        <div style="display:flex;gap:10px">
-          <div class="field" style="flex:1">
-            <label>Year</label>
-            <input type="number" id="f-year" placeholder="2024" min="1888" max="2099">
-          </div>
-          <div class="field" style="flex:1">
-            <label>Director</label>
-            <input type="text" id="f-director" placeholder="Auto-filled when you select a result">
-          </div>
-        </div>
-        <div class="field">
-          <label>Priority</label>
-          <select id="f-priority">
-            <option value="Must Own">🔴 Must Own — need this immediately</option>
-            <option value="High" selected>🟡 High — want it soon</option>
-            <option value="Someday">🔵 Someday — on the radar</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>Notes (optional)</label>
-          <textarea id="f-notes" placeholder="Why you want it, where to find it, edition to hunt for…"></textarea>
-        </div>
-        <input type="hidden" id="f-poster">
-        <input type="hidden" id="f-tmdb-id">
-        <input type="hidden" id="f-imdb-id">
-        <input type="hidden" id="f-genre">
-        <input type="hidden" id="f-country">
-        <input type="hidden" id="f-runtime">
-      </div>
-      <div class="modal-actions">
-        <button class="modal-cancel" onclick="closeAddModal()">Cancel</button>
-        <button class="modal-save" onclick="saveFilm()">Add to wishlist</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 </div>
 
 <div class="share-modal-wrap" id="share-modal">
@@ -293,6 +239,61 @@
 </div>
 
 <div class="toast" id="toast"></div>
+
+<div class="modal-wrap" id="add-modal">
+  <div class="modal">
+    <div class="modal-head">
+      <h2>Add to Wishlist</h2>
+      <button class="modal-close" onclick="closeAddModal()" aria-label="Close add film modal">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="field">
+        <label>Search TMDB</label>
+        <input type="search" id="tmdb-search" placeholder="Start typing a title…" autocomplete="off" oninput="tmdbSearch()">
+        <div class="search-results" id="tmdb-results"></div>
+      </div>
+      <div id="manual-fields">
+        <div class="field">
+          <label>Title</label>
+          <input type="text" id="f-title" placeholder="Film title">
+        </div>
+        <div style="display:flex;gap:10px">
+          <div class="field" style="flex:1">
+            <label>Year</label>
+            <input type="number" id="f-year" placeholder="2024" min="1888" max="2099">
+          </div>
+          <div class="field" style="flex:1">
+            <label>Director</label>
+            <input type="text" id="f-director" placeholder="Auto-filled when you select a result">
+          </div>
+        </div>
+        <div class="field">
+          <label>Priority</label>
+          <select id="f-priority">
+            <option value="Must Own">🔴 Must Own — need this immediately</option>
+            <option value="High" selected>🟡 High — want it soon</option>
+            <option value="Someday">🔵 Someday — on the radar</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Notes (optional)</label>
+          <textarea id="f-notes" placeholder="Why you want it, where to find it, edition to hunt for…"></textarea>
+        </div>
+        <input type="hidden" id="f-poster">
+        <input type="hidden" id="f-tmdb-id">
+        <input type="hidden" id="f-imdb-id">
+        <input type="hidden" id="f-genre">
+        <input type="hidden" id="f-country">
+        <input type="hidden" id="f-runtime">
+      </div>
+      <div class="modal-actions">
+        <button class="modal-cancel" onclick="closeAddModal()">Cancel</button>
+        <button class="modal-save" onclick="saveFilm()">Add to wishlist</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <nav class="tabnav">
   <a class="tabitem" href="index.html" style="text-decoration:none">
