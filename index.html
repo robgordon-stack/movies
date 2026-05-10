@@ -460,9 +460,9 @@ loadCollection(),function(){function e(e){document.querySelectorAll(e).forEach(e
 
   // Duplicate check: same title + same year already in collection
   const yr=parseInt(document.getElementById("afm-year").value)||null;
-  const dupIdx=C.findIndex(x=>x.title.toLowerCase()===e.toLowerCase()&&(x.year||null)===(yr||null));
+  const dupIdx=C.findIndex(x=>x.title.toLowerCase()===e.toLowerCase()&&(!yr||!x.year||x.year===yr));
   if(dupIdx!==-1){
-    const proceed=confirm('"\u201c'+e+'\u201d ('+yr+') is already in your collection.\nAdd it again anyway?');
+    const proceed=confirm('\u201c'+e+'\u201d ('+(yr||'?')+') is already in your collection. Add it again anyway?');
     if(!proceed)return;
   }
 
