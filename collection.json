@@ -25291,7 +25291,12 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
     "imdb_id": "tt0468569",
-    "synopsis": "When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness."
+    "synopsis": "When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness.",
+    "cast": [
+      "Christian Bale",
+      "Heath Ledger",
+      "Aaron Eckhart"
+    ]
   },
   {
     "title": "The Departed",
@@ -26149,5 +26154,54 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/fxRIpx9Op9h71q3tvuabx4GryyP.jpg",
     "imdb_id": "tt0811080",
     "synopsis": "Young driver, Speed Racer, aspires to be champion of the racing world with the help of his family and his high-tech Mach 5 automobile."
+  },
+  {
+    "title": "Eyes Wide Shut",
+    "year": 1999,
+    "decade": "1990s",
+    "director": "Stanley Kubrick",
+    "country": "Uk",
+    "genre": "Drama, Mystery, Thriller",
+    "runtime": 159,
+    "score": 7.5,
+    "distributor": "Criterion",
+    "format": "4K Blu-ray",
+    "watched": false,
+    "spine": "",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZTQ0MmM5MDAtYmYyZS00MzlmLTlhZTAtZDJlZWY5ZTZkZjZmXkEyXkFqcGc@._V1_SX300.jpg",
+    "imdb_id": "tt0120663",
+    "synopsis": "A Manhattan doctor embarks on a bizarre, night-long odyssey after his wife's admission of unfulfilled longing."
+  },
+  {
+    "title": "King Creole",
+    "year": 1958,
+    "decade": "1950s",
+    "director": "Michael Curtiz",
+    "country": "Usa",
+    "genre": "Crime, Drama, Musical",
+    "runtime": 116,
+    "score": 7,
+    "format": "4K Blu-ray",
+    "watched": false,
+    "spine": "",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZTU1YjE2MzgtNmNhYi00OGY1LWEwNDUtY2NmNDVmZThmN2EyXkEyXkFqcGc@._V1_SX300.jpg",
+    "imdb_id": "tt0051818",
+    "synopsis": "A troubled youth's singing sets New Orleans rockin'. With a sweet girl to love him and nightclubbers cheering, it seems he will shake off his past and head for the top. But will a mobster and his man-trap moll snare him in a life ..."
+  },
+  {
+    "title": "Kill Bill: The Whole Bloody Affair",
+    "year": 2025,
+    "decade": "2020s",
+    "director": "Quentin Tarantino",
+    "country": "Usa",
+    "genre": "Action, Crime, Thriller",
+    "runtime": 253,
+    "score": 8.8,
+    "format": "4K Blu-ray",
+    "watched": false,
+    "spine": "",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZDc2YzhkODAtZmRmZS00YzcxLWJkYWEtM2ZhZjY3MmMyZmJiXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+    "imdb_id": "tt6019206",
+    "synopsis": "A female assassin seeks revenge on her former lover and squad members, all of whom left her for dead."
   }
 ]
