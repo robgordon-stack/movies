@@ -196,7 +196,7 @@
     "decade": "1950s",
     "director": "Elia Kazan",
     "country": "Usa",
-    "genre": "Music",
+    "genre": "Drama, Political",
     "runtime": 126,
     "score": 8,
     "distributor": "Criterion Collection",
@@ -26153,7 +26153,8 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/fxRIpx9Op9h71q3tvuabx4GryyP.jpg",
     "imdb_id": "tt0811080",
-    "synopsis": "Young driver, Speed Racer, aspires to be champion of the racing world with the help of his family and his high-tech Mach 5 automobile."
+    "synopsis": "Young driver, Speed Racer, aspires to be champion of the racing world with the help of his family and his high-tech Mach 5 automobile.",
+    "female_director": true
   },
   {
     "title": "Eyes Wide Shut",
@@ -26164,11 +26165,11 @@
     "genre": "Drama, Mystery, Thriller",
     "runtime": 159,
     "score": 7.5,
-    "distributor": "Criterion",
+    "distributor": "Criterion Collection",
     "format": "4K Blu-ray",
     "watched": false,
     "spine": "",
-    "poster": "https://m.media-amazon.com/images/M/MV5BZTQ0MmM5MDAtYmYyZS00MzlmLTlhZTAtZDJlZWY5ZTZkZjZmXkEyXkFqcGc@._V1_SX300.jpg",
+    "poster": "https://www.themoviedb.org/t/p/w1280/knEIz1eNGl5MQDbrEAVWA7iRqF9.jpg",
     "imdb_id": "tt0120663",
     "synopsis": "A Manhattan doctor embarks on a bizarre, night-long odyssey after his wife's admission of unfulfilled longing."
   },
@@ -26184,14 +26185,14 @@
     "format": "4K Blu-ray",
     "watched": false,
     "spine": "",
-    "poster": "https://m.media-amazon.com/images/M/MV5BZTU1YjE2MzgtNmNhYi00OGY1LWEwNDUtY2NmNDVmZThmN2EyXkEyXkFqcGc@._V1_SX300.jpg",
+    "poster": "https://www.themoviedb.org/t/p/w1280/k5WBAgKrI8OytCSxMd4oau5KXzn.jpg",
     "imdb_id": "tt0051818",
     "synopsis": "A troubled youth's singing sets New Orleans rockin'. With a sweet girl to love him and nightclubbers cheering, it seems he will shake off his past and head for the top. But will a mobster and his man-trap moll snare him in a life ..."
   },
   {
     "title": "Kill Bill: The Whole Bloody Affair",
-    "year": 2025,
-    "decade": "2020s",
+    "year": 2003,
+    "decade": "2000s",
     "director": "Quentin Tarantino",
     "country": "Usa",
     "genre": "Action, Crime, Thriller",
@@ -26200,8 +26201,24 @@
     "format": "4K Blu-ray",
     "watched": false,
     "spine": "",
-    "poster": "https://m.media-amazon.com/images/M/MV5BZDc2YzhkODAtZmRmZS00YzcxLWJkYWEtM2ZhZjY3MmMyZmJiXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+    "poster": "https://www.themoviedb.org/t/p/w1280/nSOJfWJCdVFZQwXQA7RXn7FIIiY.jpg",
     "imdb_id": "tt6019206",
     "synopsis": "A female assassin seeks revenge on her former lover and squad members, all of whom left her for dead."
+  },
+  {
+    "title": "Harvey",
+    "year": 1950,
+    "decade": "1950s",
+    "director": "Henry Koster",
+    "country": "Usa",
+    "genre": "Comedy, Drama, Fantasy",
+    "runtime": 104,
+    "score": 7.9,
+    "format": "4K Blu-ray",
+    "watched": false,
+    "spine": "",
+    "poster": "https://www.themoviedb.org/t/p/w1280/dgd82hYmpiXDM1G867HqNaWe8wj.jpg",
+    "imdb_id": "tt0042546",
+    "synopsis": "A whimsical man is thought to be insane due to his insistence that he is best friends with an invisible, humanoid rabbit, but he may be wiser than anyone knows."
   }
 ]

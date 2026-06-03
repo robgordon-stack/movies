@@ -164,7 +164,7 @@
     "genre": "Drama, Western",
     "country": "United States",
     "runtime": 122,
-    "priority": "Someday",
+    "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1776564824073,
@@ -769,7 +769,7 @@
     "genre": "Biography, Drama, History",
     "country": "United States",
     "runtime": 123,
-    "priority": "Someday",
+    "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1775877681937,
@@ -845,7 +845,7 @@
     "genre": "Documentary",
     "country": "United States",
     "runtime": 103,
-    "priority": "Someday",
+    "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1775877341530,
@@ -1280,7 +1280,7 @@
     "genre": "Documentary",
     "country": "France",
     "runtime": 82,
-    "priority": "Someday",
+    "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1775427875718,
@@ -1362,7 +1362,7 @@
     "genre": "Documentary",
     "country": "Belgium",
     "runtime": 85,
-    "priority": "Someday",
+    "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1775427791606,
@@ -2576,7 +2576,7 @@
   {
     "id": "1775363855869en9evv7xd9",
     "title": "The Power of the Dog",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363855869,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/kEy48iCzGnp0ao1cZbNeWR6yIhC.jpg",
@@ -2941,7 +2941,7 @@
   {
     "id": "1775363710752pkmwphbvku",
     "title": "Lady Bird",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363710752,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/gl66K7zRdtNYGrxyS2YDUP5ASZd.jpg",
@@ -3516,46 +3516,6 @@
         "title": "Primer",
         "year": 2004,
         "imdb_id": "tt0390384"
-      }
-    ],
-    "female_director": false
-  },
-  {
-    "id": "1775363589986ghqh0h73ctc",
-    "title": "Inception",
-    "priority": "Someday",
-    "added": 1775363589986,
-    "owned": false,
-    "poster": "https://image.tmdb.org/t/p/w500/xlaY2zyzMfkhk0HSC5VUwzoZPU1.jpg",
-    "imdb_id": "tt1375666",
-    "year": 2010,
-    "runtime": 148,
-    "genre": "Action, Sci-Fi, Adventure",
-    "country": "United States",
-    "director": "Christopher Nolan",
-    "tmdb_id": 27205,
-    "lb": "https://letterboxd.com/search/Inception/",
-    "has4k": true,
-    "score": 8.4,
-    "imdb_score": 8.8,
-    "lb_score": 4.1,
-    "rt_score": 0.87,
-    "mc_score": 74,
-    "similar": [
-      {
-        "title": "Paprika",
-        "year": 2006,
-        "imdb_id": "tt0851578"
-      },
-      {
-        "title": "The Cell",
-        "year": 2000,
-        "imdb_id": "tt0209958"
-      },
-      {
-        "title": "Existenz",
-        "year": 1999,
-        "imdb_id": "tt0120907"
       }
     ],
     "female_director": false
@@ -4319,47 +4279,6 @@
     "female_director": false
   },
   {
-    "id": "17753635899858ag3d93ketn",
-    "title": "The Pianist",
-    "priority": "High",
-    "added": 1775363589985,
-    "owned": false,
-    "poster": "https://image.tmdb.org/t/p/w500/2hFvxCCWrTmCYwfy7yum0GKRi3Y.jpg",
-    "imdb_id": "tt0253474",
-    "year": 2002,
-    "runtime": 150,
-    "genre": "Drama, War",
-    "country": "Poland",
-    "director": "Roman Polanski",
-    "tmdb_id": 423,
-    "lb": "https://letterboxd.com/search/The%20Pianist/",
-    "notes": "4K",
-    "has4k": true,
-    "score": 8.8,
-    "imdb_score": 8.5,
-    "lb_score": 4.3,
-    "rt_score": 0.96,
-    "mc_score": 85,
-    "similar": [
-      {
-        "title": "The Zone of Interest",
-        "year": 2023,
-        "imdb_id": "tt7160372"
-      },
-      {
-        "title": "Son of Saul",
-        "year": 2015,
-        "imdb_id": "tt3808342"
-      },
-      {
-        "title": "The Reader",
-        "year": 2008,
-        "imdb_id": "tt0976051"
-      }
-    ],
-    "female_director": false
-  },
-  {
     "id": "1775363589985sqazc1r9re",
     "title": "Modern Times",
     "priority": "High",
@@ -4674,46 +4593,6 @@
     "female_director": false
   },
   {
-    "id": "1775392611262o1i2czhhj5n",
-    "title": "King Creole",
-    "year": 1958,
-    "director": "Michael Curtiz",
-    "poster": "https://image.tmdb.org/t/p/w1280/k5WBAgKrI8OytCSxMd4oau5KXzn.jpg",
-    "imdb_id": "tt0051818",
-    "genre": "Crime, Drama, Musical",
-    "country": "United States",
-    "runtime": 116,
-    "priority": "Someday",
-    "notes": null,
-    "owned": false,
-    "added": 1775392611262,
-    "lb": "https://letterboxd.com/film/king-creole/",
-    "score": 7.6,
-    "imdb_score": 7.4,
-    "lb_score": 3.7,
-    "rt_score": 0.84,
-    "has4k": false,
-    "similar": [
-      {
-        "title": "Jailhouse Rock",
-        "year": 1957,
-        "imdb_id": "tt0050556"
-      },
-      {
-        "title": "Loving You",
-        "year": 1957,
-        "imdb_id": "tt0050665"
-      },
-      {
-        "title": "Flaming Star",
-        "year": 1960,
-        "imdb_id": "tt0053844"
-      }
-    ],
-    "tmdb_id": null,
-    "female_director": false
-  },
-  {
     "id": "1775391551451f5eydj2l5x",
     "title": "My Neighbor Totoro",
     "year": 1988,
@@ -4887,7 +4766,7 @@
     "genre": "Drama",
     "country": "France",
     "runtime": 105,
-    "priority": "Someday",
+    "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1775391463019,
@@ -5715,7 +5594,7 @@
     "genre": "Crime, Thriller",
     "country": "United States",
     "runtime": 109,
-    "priority": "Someday",
+    "priority": "High",
     "notes": "Criterion 4K",
     "owned": false,
     "added": 1775371492857,
@@ -5783,85 +5662,6 @@
     ],
     "tmdb_id": null,
     "female_director": false
-  },
-  {
-    "id": "17753714485577inbzhhv6dx",
-    "title": "Eyes Wide Shut",
-    "year": 1999,
-    "director": "Stanley Kubrick",
-    "poster": "https://image.tmdb.org/t/p/w1280/knEIz1eNGl5MQDbrEAVWA7iRqF9.jpg",
-    "imdb_id": "tt0120663",
-    "genre": "Drama, Mystery, Thriller",
-    "country": "United States",
-    "runtime": 159,
-    "priority": "High",
-    "notes": null,
-    "owned": false,
-    "added": 1775371448557,
-    "has4k": true,
-    "distributor": "Criterion",
-    "lb": "https://letterboxd.com/film/eyes-wide-shut/",
-    "score": 7.6,
-    "imdb_score": 7.5,
-    "lb_score": 4.1,
-    "rt_score": 0.76,
-    "mc_score": 68,
-    "similar": [
-      {
-        "title": "Belle de Jour",
-        "year": 1967,
-        "imdb_id": "tt0061762"
-      },
-      {
-        "title": "The Night Porter",
-        "year": 1974,
-        "imdb_id": "tt0071947"
-      }
-    ],
-    "tmdb_id": null,
-    "female_director": false
-  },
-  {
-    "id": "1775371437274qdgqjk7djf",
-    "title": "The Hurt Locker",
-    "year": 2008,
-    "director": "Kathryn Bigelow",
-    "poster": "https://image.tmdb.org/t/p/w1280/io2dfBJhasvGbgkCX9cCGVOiA99.jpg",
-    "imdb_id": "tt0887912",
-    "genre": "Drama, Thriller, War",
-    "country": "United States",
-    "runtime": 131,
-    "priority": "High",
-    "notes": null,
-    "owned": false,
-    "added": 1775371437274,
-    "has4k": true,
-    "distributor": null,
-    "lb": "https://letterboxd.com/film/the-hurt-locker/",
-    "score": 8.4,
-    "imdb_score": 7.6,
-    "lb_score": 4,
-    "rt_score": 0.97,
-    "mc_score": 94,
-    "similar": [
-      {
-        "title": "Zero Dark Thirty",
-        "year": 2012,
-        "imdb_id": "tt1790885"
-      },
-      {
-        "title": "Three Kings",
-        "year": 1999,
-        "imdb_id": "tt0120188"
-      },
-      {
-        "title": "Jarhead",
-        "year": 2005,
-        "imdb_id": "tt0418763"
-      }
-    ],
-    "tmdb_id": null,
-    "female_director": true
   },
   {
     "id": "17753714094419j7ecwynwtt",
