@@ -6,13 +6,33 @@
     "director": "Bernardo Bertolucci",
     "poster": "https://www.themoviedb.org/t/p/w1280/dNgdUdNOWfHsZI3lDu6Epig7H2P.jpg",
     "imdb_id": "tt0070849",
-    "genre": null,
+    "genre": "Drama, Romance",
     "country": null,
-    "runtime": null,
+    "runtime": 129,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482483721
+    "added": 1780482483721,
+    "tmdb_id": 11778,
+    "score": 7.5,
+    "imdb_score": 7.4,
+    "lb_score": 3.8,
+    "rt_score": 0.88,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/last-tango-in-paris/",
+    "distributor": "Paramount",
+    "similar": [
+      {
+        "title": "The Conformist",
+        "year": 1971,
+        "imdb_id": "tt0065571"
+      },
+      {
+        "title": "Novecento",
+        "year": 1976,
+        "imdb_id": "tt0074848"
+      }
+    ]
   },
   {
     "id": "17804824698711rf197xf0dv",
@@ -21,13 +41,33 @@
     "director": "Hayao Miyazaki",
     "poster": "https://www.themoviedb.org/t/p/w1280/tcrkfB8SRPQCgwI88hQScua6nxh.jpg",
     "imdb_id": "tt0087544",
-    "genre": null,
+    "genre": "Animation, Adventure, Fantasy",
     "country": null,
-    "runtime": null,
+    "runtime": 117,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482469871
+    "added": 1780482469871,
+    "tmdb_id": 12429,
+    "score": 8.9,
+    "imdb_score": 8.1,
+    "lb_score": 4.4,
+    "rt_score": 0.9,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/nausicaa-of-the-valley-of-the-wind/",
+    "distributor": "GKIDS",
+    "similar": [
+      {
+        "title": "Princess Mononoke",
+        "year": 1997,
+        "imdb_id": "tt0119698"
+      },
+      {
+        "title": "Castle in the Sky",
+        "year": 1986,
+        "imdb_id": "tt0092067"
+      }
+    ]
   },
   {
     "id": "1780482456489b8n0lcj3q39",
@@ -36,13 +76,33 @@
     "director": "Kim Ki-duk",
     "poster": "https://www.themoviedb.org/t/p/w1280/6SQQ5REuAz7k0FMQ9mSCT40T2LN.jpg",
     "imdb_id": "tt0374546",
-    "genre": null,
+    "genre": "Drama",
     "country": null,
-    "runtime": null,
+    "runtime": 137,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482456489
+    "added": 1780482456489,
+    "tmdb_id": 51786,
+    "score": 8.2,
+    "imdb_score": 7.9,
+    "lb_score": 4.1,
+    "rt_score": 0.96,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/spring-summer-fall-winter-and-spring/",
+    "distributor": "Sony Pictures Classics",
+    "similar": [
+      {
+        "title": "The Isle",
+        "year": 2000,
+        "imdb_id": "tt0261024"
+      },
+      {
+        "title": "Poetry",
+        "year": 2010,
+        "imdb_id": "tt1567337"
+      }
+    ]
   },
   {
     "id": "17804824354893smepv8uhmr",
@@ -51,13 +111,33 @@
     "director": "Claire Denis",
     "poster": "https://www.themoviedb.org/t/p/w1280/joOoCuOaiZXZZRiS4JpontBL3Gz.jpg",
     "imdb_id": "tt1100048",
-    "genre": null,
+    "genre": "Drama",
     "country": null,
-    "runtime": null,
+    "runtime": 100,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482435489
+    "added": 1780482435489,
+    "tmdb_id": 19342,
+    "score": 7.8,
+    "imdb_score": 7.3,
+    "lb_score": 3.9,
+    "rt_score": 0.91,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/35-shots-of-rum/",
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Beau Travail",
+        "year": 1999,
+        "imdb_id": "tt0209933"
+      },
+      {
+        "title": "Trouble Every Day",
+        "year": 2001,
+        "imdb_id": "tt0266733"
+      }
+    ]
   },
   {
     "id": "1780482420406e8bqixbahlb",
@@ -66,13 +146,33 @@
     "director": "Robert Bresson",
     "poster": "https://www.themoviedb.org/t/p/w1280/tqt9D4TH702ZXEUKWa3e6UdFAvY.jpg",
     "imdb_id": "tt0085180",
-    "genre": null,
+    "genre": "Drama",
     "country": null,
-    "runtime": null,
+    "runtime": 84,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482420406
+    "added": 1780482420406,
+    "tmdb_id": 37826,
+    "score": 8.4,
+    "imdb_score": 7.7,
+    "lb_score": 4.1,
+    "rt_score": 0.93,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/lergent/",
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "A Man Escaped",
+        "year": 1956,
+        "imdb_id": "tt0049902"
+      },
+      {
+        "title": "Pickpocket",
+        "year": 1959,
+        "imdb_id": "tt0053168"
+      }
+    ]
   },
   {
     "id": "17804824015397u9p8krdc6k",
@@ -81,13 +181,33 @@
     "director": "David Lynch",
     "poster": "https://www.themoviedb.org/t/p/w1280/mxveW3mGVc0DzLdOmtkZsgd7c3B.jpg",
     "imdb_id": "tt0074486",
-    "genre": null,
+    "genre": "Drama, Horror",
     "country": null,
-    "runtime": null,
+    "runtime": 89,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482401539
+    "added": 1780482401539,
+    "tmdb_id": 10650,
+    "score": 8.3,
+    "imdb_score": 7.4,
+    "lb_score": 4.1,
+    "rt_score": 0.92,
+    "has4k": true,
+    "lb": "https://letterboxd.com/film/eraserhead/",
+    "distributor": "Janus Films",
+    "similar": [
+      {
+        "title": "Lost Highway",
+        "year": 1997,
+        "imdb_id": "tt0116922"
+      },
+      {
+        "title": "Blue Velvet",
+        "year": 1986,
+        "imdb_id": "tt0090756"
+      }
+    ]
   },
   {
     "id": "17804823855885tjo73m5365",
@@ -96,13 +216,33 @@
     "director": "Robert Altman",
     "poster": "https://www.themoviedb.org/t/p/w1280/oR839yRsFAiQHwJ78hdKZYjEBg8.jpg",
     "imdb_id": "tt0067411",
-    "genre": null,
+    "genre": "Western, Drama",
     "country": null,
-    "runtime": null,
+    "runtime": 120,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482385588
+    "added": 1780482385588,
+    "tmdb_id": 4236,
+    "score": 8.2,
+    "imdb_score": 7.7,
+    "lb_score": 4.1,
+    "rt_score": 0.89,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/mccabe-mrs-miller/",
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "The Long Goodbye",
+        "year": 1973,
+        "imdb_id": "tt0070334"
+      },
+      {
+        "title": "Nashville",
+        "year": 1975,
+        "imdb_id": "tt0073440"
+      }
+    ]
   },
   {
     "id": "1780482364739dwqxvnzsqav",
@@ -111,13 +251,33 @@
     "director": "Jean-Luc Godard",
     "poster": "https://www.themoviedb.org/t/p/w1280/e9p8VdsAKXz1GoVXD36Lg5e3YKo.jpg",
     "imdb_id": "tt0062480",
-    "genre": null,
+    "genre": "Drama, Comedy",
     "country": null,
-    "runtime": null,
+    "runtime": 105,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482364739
+    "added": 1780482364739,
+    "tmdb_id": 10921,
+    "score": 8.0,
+    "imdb_score": 7.4,
+    "lb_score": 4.0,
+    "rt_score": 0.91,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/week-end/",
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Breathless",
+        "year": 1960,
+        "imdb_id": "tt0053472"
+      },
+      {
+        "title": "Contempt",
+        "year": 1963,
+        "imdb_id": "tt0057345"
+      }
+    ]
   },
   {
     "id": "1780482347987pg8vmr597qi",
@@ -126,13 +286,33 @@
     "director": "Jean-Luc Godard",
     "poster": "https://www.themoviedb.org/t/p/w1280/9oqyj79xmcypxLajJdefOtrYx64.jpg",
     "imdb_id": "tt0057869",
-    "genre": null,
+    "genre": "Crime, Drama",
     "country": null,
-    "runtime": null,
+    "runtime": 95,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482347987
+    "added": 1780482347987,
+    "tmdb_id": 3085,
+    "score": 7.9,
+    "imdb_score": 7.5,
+    "lb_score": 3.9,
+    "rt_score": 0.91,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/band-of-outsiders/",
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Breathless",
+        "year": 1960,
+        "imdb_id": "tt0053472"
+      },
+      {
+        "title": "Vivre sa vie",
+        "year": 1962,
+        "imdb_id": "tt0056663"
+      }
+    ]
   },
   {
     "id": "1780482329536woy06u6nyym",
@@ -141,13 +321,33 @@
     "director": "Jean-Luc Godard",
     "poster": "https://www.themoviedb.org/t/p/w1280/A0BjScjASfMFgyGI5sU0CwfKh3l.jpg",
     "imdb_id": "tt0056663",
-    "genre": null,
+    "genre": "Drama",
     "country": null,
-    "runtime": null,
+    "runtime": 85,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482329536
+    "added": 1780482329536,
+    "tmdb_id": 27586,
+    "score": 8.2,
+    "imdb_score": 7.8,
+    "lb_score": 4.1,
+    "rt_score": 0.96,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/my-life-to-live/",
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Band of Outsiders",
+        "year": 1964,
+        "imdb_id": "tt0057869"
+      },
+      {
+        "title": "Breathless",
+        "year": 1960,
+        "imdb_id": "tt0053472"
+      }
+    ]
   },
   {
     "id": "1780482304885t9shiu5kx9c",
@@ -156,13 +356,28 @@
     "director": "Joanna Hogg",
     "poster": "https://www.themoviedb.org/t/p/w1280/fYNvmZ1vW7bNcUhrAzYjUBgKJWP.jpg",
     "imdb_id": "tt6992978",
-    "genre": null,
+    "genre": "Drama",
     "country": null,
-    "runtime": null,
+    "runtime": 106,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482304885
+    "added": 1780482304885,
+    "tmdb_id": 640146,
+    "score": 7.6,
+    "imdb_score": 6.8,
+    "lb_score": 3.6,
+    "rt_score": 0.88,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/the-souvenir-part-ii/",
+    "distributor": "MUBI",
+    "similar": [
+      {
+        "title": "The Souvenir",
+        "year": 2019,
+        "imdb_id": "tt6920356"
+      }
+    ]
   },
   {
     "id": "17804822953202j6ing2nxoc",
@@ -171,13 +386,33 @@
     "director": "Joanna Hogg",
     "poster": "https://www.themoviedb.org/t/p/w1280/2Nj04HsZ0lNkv07JnfBZ0bAIECn.jpg",
     "imdb_id": "tt6920356",
-    "genre": null,
+    "genre": "Drama, Romance",
     "country": null,
-    "runtime": null,
+    "runtime": 119,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482295320
+    "added": 1780482295320,
+    "tmdb_id": 512819,
+    "score": 7.7,
+    "imdb_score": 6.8,
+    "lb_score": 3.8,
+    "rt_score": 0.96,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/the-souvenir/",
+    "distributor": "MUBI",
+    "similar": [
+      {
+        "title": "The Souvenir: Part II",
+        "year": 2021,
+        "imdb_id": "tt6992978"
+      },
+      {
+        "title": "Aftersun",
+        "year": 2022,
+        "imdb_id": "tt19770238"
+      }
+    ]
   },
   {
     "id": "1780482271936npf8yseijh",
@@ -186,13 +421,33 @@
     "director": "Béla Tarr",
     "poster": "https://www.themoviedb.org/t/p/w1280/iW1WHmZEk9QTeY4qp7gjaDcCPDS.jpg",
     "imdb_id": "tt0095475",
-    "genre": null,
+    "genre": "Drama",
     "country": null,
-    "runtime": null,
+    "runtime": 116,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482271936
+    "added": 1780482271936,
+    "tmdb_id": 46026,
+    "score": 8.1,
+    "imdb_score": 7.7,
+    "lb_score": 4.1,
+    "rt_score": 0.89,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/damnation-1988/",
+    "distributor": "Facets",
+    "similar": [
+      {
+        "title": "The Turin Horse",
+        "year": 2011,
+        "imdb_id": "tt1316540"
+      },
+      {
+        "title": "Werckmeister Harmonies",
+        "year": 2001,
+        "imdb_id": "tt0249241"
+      }
+    ]
   },
   {
     "id": "1780482248069x89960xnrsd",
@@ -201,13 +456,33 @@
     "director": "Béla Tarr, Ágnes Hranitzky",
     "poster": "https://www.themoviedb.org/t/p/w1280/2kSElneXSKmMsGL55k0CbPGqLbu.jpg",
     "imdb_id": "tt1316540",
-    "genre": null,
+    "genre": "Drama",
     "country": null,
-    "runtime": null,
+    "runtime": 146,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482248069
+    "added": 1780482248069,
+    "tmdb_id": 60797,
+    "score": 8.4,
+    "imdb_score": 7.6,
+    "lb_score": 4.2,
+    "rt_score": 0.84,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/the-turin-horse/",
+    "distributor": "Cinema Guild",
+    "similar": [
+      {
+        "title": "Damnation",
+        "year": 1988,
+        "imdb_id": "tt0095475"
+      },
+      {
+        "title": "Werckmeister Harmonies",
+        "year": 2001,
+        "imdb_id": "tt0249241"
+      }
+    ]
   },
   {
     "id": "1780482229569srw9045bn1",
@@ -216,13 +491,33 @@
     "director": "Pier Paolo Pasolini",
     "poster": "https://www.themoviedb.org/t/p/w1280/xnaDdiRfZlJaTf6JRc4in40eaeI.jpg",
     "imdb_id": "tt0073650",
-    "genre": null,
+    "genre": "Drama",
     "country": null,
-    "runtime": null,
+    "runtime": 117,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482229569
+    "added": 1780482229569,
+    "tmdb_id": 37984,
+    "score": 7.8,
+    "imdb_score": 6.1,
+    "lb_score": 3.5,
+    "rt_score": 0.77,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/salo-or-the-120-days-of-sodom/",
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Teorema",
+        "year": 1968,
+        "imdb_id": "tt0063678"
+      },
+      {
+        "title": "The Gospel According to St. Matthew",
+        "year": 1964,
+        "imdb_id": "tt0058715"
+      }
+    ]
   },
   {
     "id": "1780482215903ol23hwqysig",
@@ -231,13 +526,33 @@
     "director": "Pier Paolo Pasolini",
     "poster": "https://www.themoviedb.org/t/p/w1280/113ts2Bmm5CZ3YJMwfCU9XGFCAf.jpg",
     "imdb_id": "tt0054599",
-    "genre": null,
+    "genre": "Drama",
     "country": null,
-    "runtime": null,
+    "runtime": 120,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482215903
+    "added": 1780482215903,
+    "tmdb_id": 10549,
+    "score": 7.9,
+    "imdb_score": 7.4,
+    "lb_score": 3.9,
+    "rt_score": 0.94,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/accattone/",
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Teorema",
+        "year": 1968,
+        "imdb_id": "tt0063678"
+      },
+      {
+        "title": "Mamma Roma",
+        "year": 1962,
+        "imdb_id": "tt0056218"
+      }
+    ]
   },
   {
     "id": "1780482186736vk2yz8u9kph",
@@ -246,13 +561,33 @@
     "director": "Pier Paolo Pasolini",
     "poster": "https://www.themoviedb.org/t/p/w1280/oifi2CQkKbb6Y2x6J5K6CjaKab9.jpg",
     "imdb_id": "tt0058715",
-    "genre": null,
+    "genre": "Drama, History",
     "country": null,
-    "runtime": null,
+    "runtime": 137,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482186736
+    "added": 1780482186736,
+    "tmdb_id": 14232,
+    "score": 8.2,
+    "imdb_score": 7.9,
+    "lb_score": 4.1,
+    "rt_score": 0.97,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/the-gospel-according-to-st-matthew/",
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Teorema",
+        "year": 1968,
+        "imdb_id": "tt0063678"
+      },
+      {
+        "title": "Accattone",
+        "year": 1961,
+        "imdb_id": "tt0054599"
+      }
+    ]
   },
   {
     "id": "1780482160836a1s4u11c1s",
@@ -261,13 +596,33 @@
     "director": "Rainer Werner Fassbinder",
     "poster": "https://www.themoviedb.org/t/p/w1280/bkxrRfXaoTvZObG1Gd91x2mnmFX.jpg",
     "imdb_id": "tt0068278",
-    "genre": null,
+    "genre": "Drama",
     "country": null,
-    "runtime": null,
+    "runtime": 124,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482160837
+    "added": 1780482160837,
+    "tmdb_id": 30587,
+    "score": 8.0,
+    "imdb_score": 7.7,
+    "lb_score": 4.0,
+    "rt_score": 0.92,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/the-bitter-tears-of-petra-von-kant/",
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Ali: Fear Eats the Soul",
+        "year": 1974,
+        "imdb_id": "tt0071141"
+      },
+      {
+        "title": "The Marriage of Maria Braun",
+        "year": 1979,
+        "imdb_id": "tt0079095"
+      }
+    ]
   },
   {
     "id": "17804820886558878xsyix4v",
@@ -276,13 +631,33 @@
     "director": "Rainer Werner Fassbinder",
     "poster": "https://www.themoviedb.org/t/p/w1280/tXjZEzlf4WQwZ4Dt53gXeJVuO7p.jpg",
     "imdb_id": "tt0079095",
-    "genre": null,
+    "genre": "Drama",
     "country": null,
-    "runtime": null,
+    "runtime": 120,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482088655
+    "added": 1780482088655,
+    "tmdb_id": 18692,
+    "score": 8.1,
+    "imdb_score": 7.8,
+    "lb_score": 4.1,
+    "rt_score": 0.96,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/the-marriage-of-maria-braun/",
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Veronika Voss",
+        "year": 1982,
+        "imdb_id": "tt0084875"
+      },
+      {
+        "title": "Lola",
+        "year": 1981,
+        "imdb_id": "tt0082735"
+      }
+    ]
   },
   {
     "id": "1780482017454i5erkr32q8",
@@ -291,13 +666,33 @@
     "director": "Luis Buñuel",
     "poster": "https://www.themoviedb.org/t/p/w1280/zN4ILX2x64PvT2jIOAHXxCOi5WA.jpg",
     "imdb_id": "tt0068361",
-    "genre": null,
+    "genre": "Comedy, Drama",
     "country": null,
-    "runtime": null,
+    "runtime": 102,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482017454
+    "added": 1780482017454,
+    "tmdb_id": 40011,
+    "score": 8.3,
+    "imdb_score": 7.9,
+    "lb_score": 4.1,
+    "rt_score": 0.95,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/the-discreet-charm-of-the-bourgeoisie/",
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Belle de Jour",
+        "year": 1967,
+        "imdb_id": "tt0061395"
+      },
+      {
+        "title": "The Phantom of Liberty",
+        "year": 1974,
+        "imdb_id": "tt0071987"
+      }
+    ]
   },
   {
     "id": "1780482002654dwkokxow3ib",
@@ -306,13 +701,33 @@
     "director": "Luis Buñuel",
     "poster": "https://www.themoviedb.org/t/p/w1280/iUAFECovwPA0cVV9bo4uNGLJSGL.jpg",
     "imdb_id": "tt0061395",
-    "genre": null,
+    "genre": "Drama, Fantasy",
     "country": null,
-    "runtime": null,
+    "runtime": 101,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780482002654
+    "added": 1780482002654,
+    "tmdb_id": 5765,
+    "score": 8.0,
+    "imdb_score": 7.6,
+    "lb_score": 4.0,
+    "rt_score": 0.93,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/belle-de-jour/",
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "The Discreet Charm of the Bourgeoisie",
+        "year": 1972,
+        "imdb_id": "tt0068361"
+      },
+      {
+        "title": "Viridiana",
+        "year": 1961,
+        "imdb_id": "tt0055601"
+      }
+    ]
   },
   {
     "id": "1780481975205pyzb3r3upql",
@@ -321,13 +736,33 @@
     "director": "Luis Buñuel",
     "poster": "https://www.themoviedb.org/t/p/w1280/mYPuSx5JwL8AdTwS1iQW4Un1cYP.jpg",
     "imdb_id": "tt0055601",
-    "genre": null,
+    "genre": "Drama",
     "country": null,
-    "runtime": null,
+    "runtime": 90,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780481975205
+    "added": 1780481975205,
+    "tmdb_id": 30483,
+    "score": 8.1,
+    "imdb_score": 7.9,
+    "lb_score": 4.1,
+    "rt_score": 0.92,
+    "has4k": false,
+    "lb": "https://letterboxd.com/film/viridiana/",
+    "distributor": "Criterion",
+    "similar": [
+      {
+        "title": "Belle de Jour",
+        "year": 1967,
+        "imdb_id": "tt0061395"
+      },
+      {
+        "title": "The Exterminating Angel",
+        "year": 1962,
+        "imdb_id": "tt0055844"
+      }
+    ]
   },
   {
     "id": "1777369138020qtni3pgwmed",
@@ -347,7 +782,8 @@
     "imdb_score": 6.9,
     "lb_score": 3.6,
     "distributor": "Strand Releasing",
-    "female_director": false
+    "female_director": false,
+    "tmdb_id": 75336
   },
   {
     "id": "1777369087635wnsz3g765bj",
@@ -367,7 +803,8 @@
     "imdb_score": 8.1,
     "lb_score": 4.1,
     "distributor": "Criterion",
-    "female_director": false
+    "female_director": false,
+    "tmdb_id": 31177
   },
   {
     "id": "17773690357850fxy67925aio",
@@ -387,7 +824,8 @@
     "imdb_score": 7.9,
     "lb_score": 4,
     "distributor": "Criterion",
-    "female_director": false
+    "female_director": false,
+    "tmdb_id": 18897
   },
   {
     "id": "1777368995915m3nnixd91kn",
@@ -407,7 +845,8 @@
     "imdb_score": 8.2,
     "lb_score": 4.2,
     "distributor": "Criterion",
-    "female_director": false
+    "female_director": false,
+    "tmdb_id": 31502
   },
   {
     "id": "1777368965947oebownet15m",
@@ -426,8 +865,9 @@
     "score": 8.3,
     "imdb_score": 8.1,
     "lb_score": 4.1,
-    "distributor": "GKids",
-    "female_director": false
+    "distributor": "GKIDS",
+    "female_director": false,
+    "tmdb_id": 228204
   },
   {
     "id": "1777329726040rjhb3yb9fnj",
@@ -447,7 +887,8 @@
     "imdb_score": 7.5,
     "lb_score": 3.8,
     "distributor": "Paramount",
-    "female_director": true
+    "female_director": true,
+    "tmdb_id": 36668
   },
   {
     "id": "1776580933238r9ztu2r8z8",
@@ -481,7 +922,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 283552,
     "female_director": false
   },
   {
@@ -516,7 +957,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 590223,
     "female_director": true
   },
   {
@@ -551,7 +992,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 508883,
     "female_director": false
   },
   {
@@ -586,7 +1027,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 390022,
     "female_director": false
   },
   {
@@ -621,7 +1062,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 438238,
     "female_director": false
   },
   {
@@ -656,7 +1097,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 503919,
     "female_director": false
   },
   {
@@ -691,7 +1132,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 430580,
     "female_director": false
   },
   {
@@ -726,7 +1167,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 436966,
     "female_director": false
   },
   {
@@ -761,7 +1202,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 9552,
     "female_director": false
   },
   {
@@ -796,7 +1237,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 203,
     "female_director": false
   },
   {
@@ -831,7 +1272,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 387,
     "female_director": false
   },
   {
@@ -867,7 +1308,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 10191,
     "female_director": false
   },
   {
@@ -903,7 +1344,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 9363,
     "female_director": false
   },
   {
@@ -939,7 +1380,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 9351,
     "female_director": false
   },
   {
@@ -974,7 +1415,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 9457,
     "female_director": false
   },
   {
@@ -1009,7 +1450,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 9609,
     "female_director": false
   },
   {
@@ -1045,7 +1486,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 816,
     "female_director": false
   },
   {
@@ -1086,7 +1527,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 493922,
     "female_director": false
   },
   {
@@ -1127,7 +1568,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 2565,
     "female_director": true
   },
   {
@@ -1162,7 +1603,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 46094,
     "female_director": false
   },
   {
@@ -1202,7 +1643,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 21350,
     "female_director": true
   },
   {
@@ -1243,7 +1684,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 7233,
     "female_director": false
   },
   {
@@ -1284,7 +1725,7 @@
       }
     ],
     "has4k": true,
-    "tmdb_id": null,
+    "tmdb_id": 803114,
     "female_director": false
   },
   {
@@ -1325,7 +1766,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 28047,
     "female_director": false
   },
   {
@@ -1361,7 +1802,7 @@
     "rt_score": 0.75,
     "mc_score": 57,
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 71862,
     "female_director": false
   },
   {
@@ -1402,7 +1843,7 @@
     "rt_score": 0.83,
     "mc_score": 62,
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 44217,
     "female_director": false
   },
   {
@@ -1438,7 +1879,7 @@
     "lb_score": 4.2,
     "rt_score": 0.73,
     "mc_score": 64,
-    "tmdb_id": null,
+    "tmdb_id": 101,
     "female_director": false
   },
   {
@@ -1479,7 +1920,7 @@
         "imdb_id": "tt2328879"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 22090,
     "female_director": false
   },
   {
@@ -1520,7 +1961,7 @@
         "imdb_id": "tt0060665"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 3104,
     "female_director": false
   },
   {
@@ -1561,7 +2002,7 @@
         "imdb_id": "tt0047113"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 35060,
     "female_director": false
   },
   {
@@ -1597,11 +2038,11 @@
         "imdb_id": "tt0042814"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 11579,
     "female_director": false
   },
   {
-    "id": "17754278757182r5fbxw41hl",
+    "id": "1775427875182r5fbxw41hl",
     "title": "The Gleaners & I",
     "year": 2000,
     "director": "Agnès Varda",
@@ -1638,7 +2079,7 @@
         "imdb_id": "tt1271188"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 28854,
     "female_director": true
   },
   {
@@ -1679,7 +2120,7 @@
         "imdb_id": "tt0019649"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 35,
     "female_director": false
   },
   {
@@ -1720,7 +2161,7 @@
         "imdb_id": "tt0106594"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 47721,
     "female_director": true
   },
   {
@@ -1761,7 +2202,7 @@
         "imdb_id": "tt5714132"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 31482,
     "female_director": false
   },
   {
@@ -2245,7 +2686,7 @@
     "distributor": "BFI",
     "similar": [
       {
-        "title": "Dreyer's Day of Wrath",
+        "title": "Day of Wrath",
         "year": 1943,
         "imdb_id": "tt0035827"
       },
@@ -4254,7 +4695,7 @@
     "imdb_score": 7.9,
     "lb_score": 4.1,
     "rt_score": 0.95,
-    "distributor": "Kino lorber",
+    "distributor": "Kino Lorber",
     "similar": [
       {
         "title": "Last Tango in Paris",
@@ -4960,7 +5401,7 @@
         "imdb_id": "tt1568921"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 8392,
     "female_director": false
   },
   {
@@ -5001,7 +5442,7 @@
         "imdb_id": "tt1483797"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 85316,
     "female_director": false
   },
   {
@@ -5042,7 +5483,7 @@
         "imdb_id": "tt1821549"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 76203,
     "female_director": false
   },
   {
@@ -5083,7 +5524,7 @@
         "imdb_id": "tt0045555"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 24556,
     "female_director": false
   },
   {
@@ -5124,7 +5565,7 @@
         "imdb_id": "tt1152850"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 11517,
     "female_director": true
   },
   {
@@ -5161,7 +5602,7 @@
         "imdb_id": "tt7568814"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 81704,
     "female_director": false
   },
   {
@@ -5197,7 +5638,7 @@
         "imdb_id": "tt0060327"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 39013,
     "female_director": false
   },
   {
@@ -5232,7 +5673,7 @@
         "imdb_id": "tt0053577"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 11370,
     "female_director": false
   },
   {
@@ -5267,7 +5708,7 @@
         "imdb_id": "tt0070666"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 2974,
     "female_director": false
   },
   {
@@ -5303,7 +5744,7 @@
         "imdb_id": "tt3655292"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 4238,
     "female_director": false
   },
   {
@@ -5340,7 +5781,7 @@
         "imdb_id": "tt1714210"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 398818,
     "female_director": false
   },
   {
@@ -5382,7 +5823,7 @@
         "imdb_id": "tt0073440"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 4827,
     "female_director": false
   },
   {
@@ -5423,7 +5864,7 @@
         "imdb_id": "tt0073399"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 10882,
     "female_director": false
   },
   {
@@ -5465,7 +5906,7 @@
         "imdb_id": "tt0097937"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 10837,
     "female_director": true
   },
   {
@@ -5507,7 +5948,7 @@
         "imdb_id": "tt1091191"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 1197306,
     "female_director": false
   },
   {
@@ -5549,7 +5990,7 @@
         "imdb_id": "tt2494280"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 281957,
     "female_director": false
   },
   {
@@ -5591,7 +6032,7 @@
         "imdb_id": "tt1821549"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 4538,
     "female_director": false
   },
   {
@@ -5628,7 +6069,7 @@
         "imdb_id": "tt0069155"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 966398,
     "female_director": false
   },
   {
@@ -5670,7 +6111,7 @@
         "imdb_id": "tt0071315"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 296530,
     "female_director": false
   },
   {
@@ -5712,7 +6153,7 @@
         "imdb_id": "tt0131325"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 9408,
     "female_director": false
   },
   {
@@ -5754,7 +6195,7 @@
         "imdb_id": "tt0114746"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 65754,
     "female_director": false
   },
   {
@@ -5791,7 +6232,7 @@
         "imdb_id": "tt0073078"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 1900,
     "female_director": false
   },
   {
@@ -5832,7 +6273,7 @@
         "imdb_id": "tt0113277"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 7916,
     "female_director": false
   },
   {
@@ -5869,7 +6310,7 @@
         "imdb_id": "tt5649144"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 1064213,
     "female_director": false
   },
   {
@@ -5911,7 +6352,7 @@
         "imdb_id": "tt0081507"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 16230,
     "female_director": false
   },
   {
@@ -5953,7 +6394,7 @@
         "imdb_id": "tt0110308"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 8636,
     "female_director": true
   },
   {
@@ -5990,7 +6431,7 @@
         "imdb_id": "tt0098546"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 8960,
     "female_director": false
   },
   {
@@ -6026,7 +6467,7 @@
         "imdb_id": "tt0200859"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 21799,
     "female_director": false
   },
   {
@@ -6068,7 +6509,7 @@
         "imdb_id": "tt0043014"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 736526,
     "female_director": false
   },
   {
@@ -6110,7 +6551,7 @@
         "imdb_id": "tt1465522"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 1585,
     "female_director": false
   },
   {
@@ -6147,7 +6588,7 @@
         "imdb_id": "tt0109642"
       }
     ],
-    "tmdb_id": null,
+    "tmdb_id": 2505,
     "female_director": false
   },
   {
@@ -6387,7 +6828,7 @@
       {
         "title": "Accattone",
         "year": 1961,
-        "imdb_id": "tt0053619"
+        "imdb_id": "tt0054599"
       }
     ],
     "female_director": false
@@ -7225,7 +7666,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 398,
     "female_director": false
   },
   {
@@ -7260,7 +7701,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 12092,
     "female_director": false
   },
   {
@@ -7296,7 +7737,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 9822,
     "female_director": false
   },
   {
@@ -7332,7 +7773,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 9691,
     "female_director": false
   },
   {
@@ -7368,7 +7809,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 9274,
     "female_director": false
   },
   {
@@ -7403,7 +7844,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 31911,
     "female_director": false
   },
   {
@@ -7438,7 +7879,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 35165,
     "female_director": false
   },
   {
@@ -7473,7 +7914,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 44982,
     "female_director": false
   },
   {
@@ -7508,7 +7949,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 3587,
     "female_director": false
   },
   {
@@ -7543,7 +7984,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 11983,
     "female_director": false
   },
   {
@@ -7579,7 +8020,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 27213,
     "female_director": false
   },
   {
@@ -7614,7 +8055,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 6644,
     "female_director": false
   },
   {
@@ -7649,7 +8090,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 10296,
     "female_director": false
   },
   {
@@ -7684,7 +8125,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 18218,
     "female_director": false
   },
   {
@@ -7719,7 +8160,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 15237,
     "female_director": false
   },
   {
@@ -7754,7 +8195,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 3484,
     "female_director": false
   },
   {
@@ -7790,7 +8231,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 10760,
     "female_director": false
   },
   {
@@ -7825,7 +8266,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 9032,
     "female_director": false
   },
   {
@@ -7860,7 +8301,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 11975,
     "female_director": false
   },
   {
@@ -7895,7 +8336,7 @@
       }
     ],
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 16290,
     "female_director": false
   },
   {
@@ -8132,7 +8573,7 @@
     "notes": null,
     "owned": false,
     "has4k": false,
-    "tmdb_id": null,
+    "tmdb_id": 33025,
     "lb": "https://letterboxd.com/film/milestones/",
     "score": 7.8,
     "imdb_score": 7.2,
