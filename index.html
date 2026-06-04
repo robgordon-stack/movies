@@ -1284,16 +1284,18 @@ function lb_render() {
   document.getElementById('count-display').textContent =
     `Showing ${films.length} film${films.length!==1?'s':''}`;
 
-  listEl.innerHTML = films.map(f => `
-    <div class="film-item status-${f.s}">
+  listEl.innerHTML = films.map(f => {
+    const lbUrl = `https://letterboxd.com/search/films/${encodeURIComponent(f.t)}/`;
+    return `
+    <a class="film-item status-${f.s}" href="${lbUrl}" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">
       <span class="rank">${f.r}</span>
       <div class="film-info">
         <div class="film-title${f.s==='missing'?' faded':''}">${f.t}</div>
         <div class="film-year">${f.y}</div>
       </div>
       <span class="status-pill pill-${f.s}">${f.s==='owned'?'owned':f.s==='wishlist'?'wish':'—'}</span>
-    </div>
-  `).join('');
+    </a>`;
+  }).join('');
 }
 
 lb_render();
