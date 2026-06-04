@@ -12,7 +12,170 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>:root{--bg:#0d0d0d;--surf:#171717;--surf2:#202020;--surf3:#2a2a2a;--bdr:rgba(255,255,255,0.07);--txt:#efefef;--mut:#999;--acc:#e8b94f;--grn:#4caf7d;--blu:#5b9bd5;--pur:#9c7fd4;--r:6px;--gap:8px}*{box-sizing:border-box;margin:0;padding:0}body,html{background:var(--bg);color:var(--txt);font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;min-height:100vh;overscroll-behavior:none}.tabnav{position:fixed;bottom:0;left:0;right:0;background:rgba(23,23,23,.95);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid var(--bdr);display:flex;z-index:300;padding-bottom:env(safe-area-inset-bottom)}.tabitem{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 4px 6px;cursor:pointer;color:var(--mut);font-size:9px;letter-spacing:.05em;text-transform:uppercase;gap:3px;transition:color .2s;position:relative;font-family:'DM Sans',sans-serif;font-weight:500}.tabitem svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}.tabitem.active{color:var(--acc)}.tabitem.active svg{transform:scale(1.1)}.tabitem.active::after{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:32px;height:2px;background:var(--acc);border-radius:0 0 2px 2px}.page{display:none;flex-direction:column;min-height:100vh;padding-bottom:calc(60px + env(safe-area-inset-bottom))}.page.active{display:flex}header{background:rgba(23,23,23,.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--bdr);position:sticky;top:0;z-index:100;padding:12px 16px 0;padding-top:calc(12px + env(safe-area-inset-top))}#page-watchnext{padding-top:calc(12px + env(safe-area-inset-top))!important}.hrow{display:flex;align-items:center;gap:10px;margin-bottom:10px}header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family:'DM Serif Display',serif}.cnt{font-size:11px;color:var(--mut);white-space:nowrap}.logo-wordmark{display:none;flex-direction:column;line-height:1;min-width:0;gap:1px}.logo-title{font-size:17px;font-weight:400;color:#f0e6cc;letter-spacing:.12em;font-family:'DM Serif Display',serif;text-transform:uppercase;font-style:italic;white-space:nowrap;text-shadow:0 0 20px rgba(232,185,79,.2)}.logo-sub{font-size:7.5px;letter-spacing:.25em;text-transform:uppercase;color:#e8b94f;opacity:.55;font-family:'DM Sans',sans-serif;font-weight:600;white-space:nowrap}@media(min-width:600px){.logo-wordmark{display:flex}}.hdr-icon-btn{display:flex;align-items:center;justify-content:center;gap:5px;border-radius:8px;padding:7px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:all .15s;flex-shrink:0}.hdr-icon-btn:not(.surprise-btn){background:0 0;border:1px solid rgba(232,185,79,.25);color:var(--acc)}.hdr-icon-btn:not(.surprise-btn):hover{border-color:rgba(232,185,79,.5)}.hdr-btn-label{display:none}@media(min-width:600px){.hdr-btn-label{display:inline}.hdr-icon-btn{padding:6px 10px}}.surprise-btn{background:var(--acc);border:none;color:#000;border-radius:20px;padding:5px 12px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;font-family:'DM Sans',sans-serif;transition:transform .15s,box-shadow .15s;will-change:transform}.surprise-btn:hover{box-shadow:0 0 16px rgba(232,185,79,.4)}.surprise-btn:active{opacity:.8;transform:scale(.95)}.surprise-btn.spinning{animation:surprisePop .5s cubic-bezier(.36,.07,.19,.97) both}@keyframes surprisePop{0%{transform:scale(1) rotate(0)}20%{transform:scale(1.18) rotate(-6deg)}50%{transform:scale(1.12) rotate(5deg)}80%{transform:scale(1.05) rotate(-2deg)}100%{transform:scale(1) rotate(0)}}.sw{position:relative;margin-bottom:8px}.sw input{width:100%;background:var(--surf2);border:1px solid var(--bdr);color:var(--txt);border-radius:8px;padding:9px 36px 9px 36px;font-size:15px;outline:0;-webkit-appearance:none;font-family:'DM Sans',sans-serif;transition:border-color .2s}.sw input:focus{outline:0}.sw input:focus-visible{outline:2px solid rgba(232,185,79,.7);outline-offset:2px;border-color:rgba(232,185,79,.5)}.si{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--mut);font-size:15px;pointer-events:none}.scl{position:absolute;right:6px;top:50%;transform:translateY(-50%);background:0 0;border:none;color:var(--mut);font-size:20px;cursor:pointer;display:none;line-height:1;padding:8px;min-width:44px;min-height:44px;align-items:center;justify-content:center}.filter-toggle{display:flex;align-items:center;gap:8px;margin-bottom:8px}.ftbtn{background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:8px;padding:6px 12px;font-size:12px;cursor:pointer;display:flex;align-items:center;gap:6px;white-space:nowrap;flex-shrink:0;transition:all .2s;font-family:'DM Sans',sans-serif;font-weight:500;position:relative}.ftbtn.has-active{border-color:var(--acc);color:var(--acc)}.filter-badge{display:none;position:absolute;top:-6px;right:-6px;background:var(--acc);color:#000;font-size:9px;font-weight:800;border-radius:10px;min-width:16px;height:16px;padding:0 4px;align-items:center;justify-content:center;line-height:1}.filter-badge.visible{display:flex}.active-summary{font-size:11px;color:var(--acc);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.clear-all{background:0 0;border:none;color:var(--mut);font-size:20px;cursor:pointer;padding:8px;line-height:1;flex-shrink:0;display:none;transition:color .15s;min-width:44px;min-height:44px;align-items:center;justify-content:center}.clear-all:hover{color:var(--txt)}.filter-panel{display:none;padding-bottom:4px}.filter-panel.open{display:block}.frow{display:flex;gap:6px;overflow-x:auto;padding:0 0 6px;scrollbar-width:none;-webkit-overflow-scrolling:touch;align-items:center}.frow::-webkit-scrollbar{display:none}.flabel{flex-shrink:0;font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;width:44px;font-weight:600}.chip{flex-shrink:0;background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:20px;padding:7px 12px;font-size:11px;cursor:pointer;white-space:nowrap;user-select:none;transition:all .15s}.chip.active{background:var(--acc);border-color:var(--acc);color:#000;font-weight:700}.chip:active{opacity:.7}.chip-count{opacity:.6;font-size:10px;margin-left:2px}.sortrow{display:flex;gap:6px;padding:0 0 8px;align-items:center;overflow-x:auto;scrollbar-width:none}.sortrow::-webkit-scrollbar{display:none}.sortchip{flex-shrink:0;background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:4px;transition:all .15s;font-family:'DM Sans',sans-serif}.sortchip.active{border-color:rgba(232,185,79,.4);color:var(--acc);background:rgba(232,185,79,.06)}.sortchip .arr{font-size:9px;transition:transform .2s}.score-row{display:flex;align-items:center;gap:10px;padding:0 0 8px}.score-row label{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;width:44px;flex-shrink:0;font-weight:600}.score-row input[type=range]{flex:1;-webkit-appearance:none;height:3px;border-radius:2px;background:var(--surf3);outline:0}.score-row input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--acc);cursor:pointer;box-shadow:0 0 6px rgba(232,185,79,.5)}.score-row .score-val{font-size:11px;color:var(--acc);font-weight:700;width:28px;text-align:right;flex-shrink:0}.runtime-row{display:flex;gap:6px;padding:0 0 8px;align-items:center;overflow-x:auto;scrollbar-width:none}.runtime-row::-webkit-scrollbar{display:none}.progress-wrap{height:3px;background:var(--surf2)}.progress-bar{height:3px;background:linear-gradient(90deg,var(--grn),#6fe0a0);transition:width .6s cubic-bezier(.4,0,.2,1)}.statsrow{display:flex;border-top:1px solid var(--bdr)}.stat{flex:1;text-align:center;padding:6px 4px;transition:background .15s}.stat .n{font-size:15px;font-weight:700;font-family:'DM Serif Display',serif}.stat .l{font-size:9px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;font-weight:500}@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}.skeleton-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);padding:var(--gap)}@media(min-width:480px){.skeleton-grid{grid-template-columns:repeat(4,1fr)}}@media(min-width:640px){.skeleton-grid{grid-template-columns:repeat(5,1fr)}}@media(min-width:900px){.skeleton-grid{grid-template-columns:repeat(7,1fr)}}@media(min-width:1200px){.skeleton-grid{grid-template-columns:repeat(9,1fr)}}.skeleton-card{aspect-ratio:2/3;border-radius:var(--r);background:linear-gradient(90deg,var(--surf2) 25%,var(--surf3) 50%,var(--surf2) 75%);background-size:200% 100%;animation:shimmer 1.6s ease-in-out infinite}.skeleton-stat{width:32px;height:16px;margin:0 auto 4px;border-radius:4px;background:linear-gradient(90deg,var(--surf2) 25%,var(--surf3) 50%,var(--surf2) 75%);background-size:200% 100%;animation:shimmer 1.6s ease-in-out infinite}.gw{padding:var(--gap)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}@media(min-width:480px){.grid{grid-template-columns:repeat(4,1fr)}}@media(min-width:640px){.grid{grid-template-columns:repeat(5,1fr)}}@media(min-width:900px){.grid{grid-template-columns:repeat(7,1fr)}}@media(min-width:1200px){.grid{grid-template-columns:repeat(9,1fr)}}.card{position:relative;cursor:pointer;border-radius:var(--r);overflow:hidden;background:var(--surf2);aspect-ratio:2/3;transition:transform .15s,box-shadow .15s}.card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.5)}.card:active{transform:scale(.96);box-shadow:0 2px 8px rgba(0,0,0,.4)}.card img{width:100%;height:100%;object-fit:cover;display:block}.fb2{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px;text-align:center}.fb2 .ft{font-size:11px;font-weight:600;line-height:1.3;color:var(--txt);margin-bottom:4px}.fb2 .fy{font-size:10px;color:var(--mut)}.wb{position:absolute;top:4px;right:4px;background:rgba(76,175,125,.9);border-radius:50%;width:18px;height:18px;display:none;align-items:center;justify-content:center;font-size:10px}.card.W .wb{display:flex}.sb{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:16px 6px 5px;font-size:11px;font-weight:700;color:var(--acc);text-align:right;font-family:'DM Serif Display',serif}.kb{position:absolute;top:4px;left:4px;background:rgba(91,155,213,.9);border-radius:3px;font-size:8px;font-weight:800;padding:1px 4px;color:#fff;display:none}.card.K .kb{display:block}.spine-badge{position:absolute;bottom:4px;left:4px;background:rgba(74,20,140,.85);border-radius:3px;font-size:8px;font-weight:800;padding:1px 4px;color:#fff;display:none}.card.CRIT .spine-badge{display:block}.empty{text-align:center;padding:60px 20px;color:var(--mut)}.empty h2{font-size:18px;margin-bottom:8px;color:var(--txt);font-family:'DM Serif Display',serif}.ov{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;opacity:0;pointer-events:none;transition:opacity .2s}.ov.open{opacity:1;pointer-events:all}.sh{position:fixed;bottom:0;left:0;right:0;max-height:90vh;background:var(--surf);border-radius:16px 16px 0 0;z-index:201;transform:translateY(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:calc(env(safe-area-inset-bottom) + 16px)}.sh.open{transform:translateY(0)}.shn{width:36px;height:4px;background:var(--bdr);border-radius:2px;margin:12px auto 0}.shi{padding:16px 20px 48px}.shh{display:flex;gap:16px;margin-bottom:14px}.shp{width:90px;flex-shrink:0;border-radius:6px;overflow:hidden;background:var(--surf2);aspect-ratio:2/3}.shp img{width:100%;height:100%;object-fit:cover}.shm{flex:1;min-width:0}.sht{font-size:20px;font-weight:700;line-height:1.2;margin-bottom:4px;font-family:'DM Serif Display',serif}.shd{font-size:13px;color:var(--mut);margin-bottom:8px}.shs{font-size:28px;font-weight:700;color:var(--acc);line-height:1;font-family:'DM Serif Display',serif}.shs span{font-size:13px;font-weight:400;color:var(--mut)}.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}.tag{background:var(--surf2);border:1px solid var(--bdr);border-radius:4px;padding:3px 8px;font-size:11px;color:var(--mut)}.tag.b{border-color:rgba(91,155,213,.4);color:var(--blu)}.tag.g{border-color:rgba(76,175,125,.4);color:var(--grn)}.tag.a{border-color:rgba(232,185,79,.4);color:var(--acc)}.divl{border:none;border-top:1px solid var(--bdr);margin:14px 0}.dr{display:flex;justify-content:space-between;align-items:center;padding:5px 0;font-size:13px}.dr .lb{color:var(--mut)}.dr .vl{font-weight:500;max-width:65%}.dr .vl.dir-link{color:var(--blu);cursor:pointer;text-decoration:underline}.syn{font-size:13px;color:#ccc;line-height:1.7;margin:12px 0;font-style:italic;font-family:'DM Serif Display',serif}.extlinks{display:flex;gap:8px;margin-top:10px}.extlink{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:10px 8px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;border:1px solid var(--bdr);transition:background .2s}.extlink.lbtn{background:rgba(0,229,160,.08);border-color:rgba(0,229,160,.3);color:#00e5a0}.extlink.ibtn{background:rgba(245,197,24,.08);border-color:rgba(245,197,24,.3);color:#f5c518}.extlink:hover{filter:brightness(1.15)}.watch-toggle{width:100%;margin-top:12px;padding:12px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;border:1px solid var(--bdr);background:var(--surf2);color:var(--txt);transition:all .2s;font-family:'DM Sans',sans-serif}.watch-toggle.ws{background:rgba(76,175,125,.15);border-color:rgba(76,175,125,.5);color:var(--grn)}.watch-toggle:active{opacity:.8}.dir-header{background:rgba(23,23,23,.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--bdr);padding:14px 16px;padding-top:calc(14px + env(safe-area-inset-top));position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:12px}.dir-back{background:0 0;border:none;color:var(--acc);font-size:24px;cursor:pointer;padding:0;line-height:1;transition:transform .15s}.dir-back:hover{transform:translateX(-2px)}.dir-name{font-size:17px;font-weight:700;flex:1;font-family:'DM Serif Display',serif}.dir-stats{font-size:11px;color:var(--mut)}.stats-page-header{background:rgba(23,23,23,.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--bdr);padding:14px 16px;padding-top:calc(14px + env(safe-area-inset-top));position:sticky;top:0;z-index:100}.stats-page-header h2{font-size:17px;font-weight:700;font-family:'DM Serif Display',serif}.stats-scroll{padding:16px;overflow-y:auto}.stat-card{background:var(--surf);border-radius:10px;padding:14px 16px;margin-bottom:12px;border:1px solid var(--bdr)}.stat-card h3{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px;font-weight:700}.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:4px}.stat-box{background:var(--surf2);border-radius:8px;padding:10px 8px;text-align:center}.stat-box .sn{font-size:20px;font-weight:700;font-family:'DM Serif Display',serif}.stat-box .sl{font-size:9px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em;margin-top:2px;font-weight:500}.bar-row{display:flex;align-items:center;gap:8px;margin-bottom:6px}.bar-label{font-size:11px;color:var(--mut);width:70px;flex-shrink:0;text-align:right}.bar-label.wide{width:120px}.bar-wrap{flex:1;background:var(--surf2);border-radius:3px;height:14px;overflow:hidden}.bar-fill{height:100%;border-radius:3px;background:var(--acc);transition:width .7s cubic-bezier(.4,0,.2,1)}.bar-fill.blu{background:var(--blu)}.bar-fill.grn{background:var(--grn)}.bar-fill.pur{background:var(--pur)}.bar-count{font-size:11px;color:var(--mut);width:30px;flex-shrink:0}.score-pills{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 4px}.score-pill{background:var(--surf2);border:1px solid var(--bdr);border-radius:5px;padding:3px 8px;font-size:11px;color:var(--mut)}.score-pill b{color:var(--txt);font-weight:600}.wn-poster{flex:0 0 80px;cursor:pointer;position:relative;transition:transform .15s}.pwl-wrap{background:var(--surf);border:1px solid var(--bdr);border-radius:12px;padding:16px;margin-bottom:24px}.pwl-header{display:flex;align-items:center;gap:8px;margin-bottom:12px}.pwl-title{font-size:15px;font-weight:700;font-family:'DM Serif Display',serif;flex:1}.pwl-count{font-size:11px;color:var(--mut)}.pwl-add-btn{background:0 0;border:1px solid rgba(232,185,79,.3);color:var(--acc);border-radius:7px;padding:5px 10px;font-size:11px;font-weight:600;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:all .15s}.pwl-add-btn:hover{border-color:rgba(232,185,79,.6);background:rgba(232,185,79,.07)}.pwl-empty{text-align:center;padding:20px 0;color:var(--mut);font-size:13px}.pwl-empty p{margin-bottom:8px}.pwl-list{display:flex;flex-direction:column;gap:6px}.pwl-item{display:flex;align-items:center;gap:10px;background:var(--surf2);border:1px solid var(--bdr);border-radius:8px;padding:8px 10px;cursor:grab;transition:background .15s,border-color .15s,opacity .2s,transform .15s;user-select:none;-webkit-user-select:none}.pwl-item:active{cursor:grabbing}.pwl-item.dragging{opacity:.4;background:var(--surf3)}.pwl-item.drag-over{border-color:var(--acc);background:rgba(232,185,79,.06)}.pwl-rank{font-size:13px;font-weight:700;color:var(--acc);font-family:'DM Serif Display',serif;width:20px;text-align:center;flex-shrink:0}.pwl-thumb{width:38px;height:57px;border-radius:4px;overflow:hidden;background:var(--surf3);flex-shrink:0}.pwl-thumb img{width:100%;height:100%;object-fit:cover}.pwl-info{flex:1;min-width:0}.pwl-film-title{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pwl-film-meta{font-size:11px;color:var(--mut);margin-top:1px}.pwl-drag-handle{color:var(--mut);font-size:16px;flex-shrink:0;opacity:.5;line-height:1;padding:4px}.pwl-remove{background:0 0;border:none;color:var(--mut);font-size:18px;cursor:pointer;padding:4px 6px;line-height:1;flex-shrink:0;border-radius:4px;transition:color .15s}.pwl-remove:hover{color:#e57373}.pwl-modal-wrap{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:600;display:none;align-items:flex-end;justify-content:center}.pwl-modal-wrap.open{display:flex}@media(min-width:600px){.pwl-modal-wrap{align-items:center;padding:20px}}.pwl-modal{background:var(--surf);border-radius:16px 16px 0 0;width:100%;max-width:480px;max-height:80vh;display:flex;flex-direction:column;padding-bottom:env(safe-area-inset-bottom)}@media(min-width:600px){.pwl-modal{border-radius:16px}}.pwl-modal-handle{width:36px;height:4px;background:var(--surf3);border-radius:2px;margin:12px auto 0;flex-shrink:0}.pwl-modal-inner{padding:16px 20px;overflow-y:auto;flex:1}.pwl-modal h3{font-family:'DM Serif Display',serif;font-size:18px;margin-bottom:12px}.pwl-search-input{width:100%;background:var(--surf2);border:1px solid var(--bdr);color:var(--txt);border-radius:8px;padding:9px 14px;font-size:15px;outline:0;font-family:'DM Sans',sans-serif;margin-bottom:10px;-webkit-appearance:none}.pwl-search-input:focus{border-color:rgba(232,185,79,.4)}.pwl-results{display:flex;flex-direction:column;gap:4px}.pwl-result-item{display:flex;align-items:center;gap:10px;padding:8px;border-radius:8px;cursor:pointer;transition:background .15s;border:1px solid transparent}.pwl-result-item:hover{background:var(--surf2)}.pwl-result-item.already-added{opacity:.4;pointer-events:none}.pwl-result-thumb{width:34px;height:51px;border-radius:4px;overflow:hidden;background:var(--surf3);flex-shrink:0}.pwl-result-thumb img{width:100%;height:100%;object-fit:cover}.pwl-result-info{flex:1;min-width:0}.pwl-result-title{font-size:13px;font-weight:600}.pwl-result-meta{font-size:11px;color:var(--mut)}.wn-poster:hover{transform:translateY(-3px)}.wn-poster:active{transform:scale(.96)}.wn-poster-img{width:80px;height:120px;border-radius:6px;overflow:hidden;background:var(--surf2);transition:box-shadow .15s}.wn-poster:hover .wn-poster-img{box-shadow:0 8px 24px rgba(0,0,0,.5)}.share-modal-wrap{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:500;display:none;align-items:center;justify-content:center;padding:20px}.share-modal-wrap.open{display:flex}.share-modal{background:var(--surf);border-radius:16px;width:100%;max-width:480px;padding:24px;position:relative}.share-modal h2{font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:6px}.share-modal p{font-size:13px;color:var(--mut);line-height:1.6;margin-bottom:16px}.share-close{position:absolute;top:14px;right:14px;background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:50%;width:32px;height:32px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center}.share-option{background:var(--surf2);border:1px solid var(--bdr);border-radius:10px;padding:14px 16px;margin-bottom:10px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:border-color .2s}.share-option:hover{border-color:rgba(232,185,79,.4)}.share-option .so-icon{font-size:22px;flex-shrink:0}.share-option .so-title{font-size:14px;font-weight:600;margin-bottom:2px}.share-option .so-desc{font-size:12px;color:var(--mut)}.add-film-modal-wrap{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:500;display:none;align-items:flex-end;justify-content:center;padding:0}.add-film-modal-wrap.open{display:flex}@media(min-width:600px){.add-film-modal-wrap{align-items:center;padding:20px}}.add-film-modal{background:var(--surf);border-radius:16px 16px 0 0;width:100%;max-width:520px;max-height:92vh;overflow-y:auto;position:relative;padding-bottom:env(safe-area-inset-bottom)}@media(min-width:600px){.add-film-modal{border-radius:16px}}.afm-handle{width:36px;height:4px;background:var(--surf3);border-radius:2px;margin:12px auto 0}.afm-inner{padding:16px 20px 32px}.afm-inner h2{font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:4px}.afm-inner .afm-sub{font-size:12px;color:var(--mut);margin-bottom:16px}.afm-close{position:absolute;top:14px;right:14px;background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:50%;width:32px;height:32px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:color .15s}.afm-close:hover{color:var(--txt)}.afm-field{margin-bottom:12px}.afm-field label{display:block;font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px}.afm-field input,.afm-field select,.afm-field textarea{width:100%;background:var(--surf2);border:1px solid var(--bdr);color:var(--txt);border-radius:8px;padding:9px 12px;font-size:14px;outline:0;font-family:'DM Sans',sans-serif;transition:border-color .2s;-webkit-appearance:none}.afm-field input:focus,.afm-field select:focus,.afm-field textarea:focus{border-color:rgba(232,185,79,.35)}.afm-field select{cursor:pointer}.afm-field textarea{resize:none;height:72px;line-height:1.5}.afm-row{display:flex;gap:10px}.afm-row .afm-field{flex:1}.afm-search-wrap{position:relative;margin-bottom:14px}.afm-search-wrap label{display:block;font-size:10px;font-weight:700;color:var(--acc);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px}.afm-search-wrap input{width:100%;background:var(--surf2);border:1px solid rgba(232,185,79,.3);color:var(--txt);border-radius:8px;padding:10px 12px;font-size:14px;outline:0;font-family:'DM Sans',sans-serif;transition:border-color .2s}.afm-search-wrap input:focus{border-color:rgba(232,185,79,.6)}.afm-results{position:absolute;top:100%;left:0;right:0;background:var(--surf2);border:1px solid var(--bdr);border-radius:8px;overflow:hidden;z-index:10;max-height:200px;overflow-y:auto;display:none;box-shadow:0 8px 24px rgba(0,0,0,.4)}.afm-result-item{display:flex;align-items:center;gap:10px;padding:10px 12px;cursor:pointer;transition:background .15s;border-bottom:1px solid var(--bdr)}.afm-result-item:last-child{border-bottom:none}.afm-result-item:hover{background:var(--surf3)}.afm-result-item img{width:36px;height:54px;object-fit:cover;border-radius:4px;flex-shrink:0;background:var(--surf3)}.afm-result-item .afm-ri-noimg{width:36px;height:54px;flex-shrink:0;background:var(--surf3);border-radius:4px}.afm-result-item .afm-ri-title{font-size:13px;font-weight:600;line-height:1.3;color:var(--txt)}.afm-result-item .afm-ri-meta{font-size:11px;color:var(--mut);margin-top:2px}.afm-searching{padding:12px;font-size:12px;color:var(--mut);text-align:center}.afm-divider{border:none;border-top:1px solid var(--bdr);margin:16px 0 14px}.afm-section-label{font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;display:flex;align-items:center;gap:8px}.afm-section-label::after{content:'';flex:1;height:1px;background:var(--bdr)}.afm-output{background:var(--surf2);border:1px solid var(--bdr);border-radius:8px;padding:12px;font-size:11px;font-family:monospace;color:var(--txt);line-height:1.6;white-space:pre-wrap;word-break:break-all;margin-top:14px;display:none;max-height:180px;overflow-y:auto}.afm-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}.afm-btn{flex:1;min-width:120px;padding:11px 12px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;text-align:center;border:none;font-family:'DM Sans',sans-serif;transition:opacity .15s,transform .1s}.afm-btn:active{opacity:.8;transform:scale(.97)}.afm-btn-primary{background:var(--acc);color:#000}.afm-btn-secondary{background:var(--surf2);border:1px solid var(--bdr);color:var(--txt)}.afm-btn-copy{background:rgba(76,175,125,.15);border:1px solid rgba(76,175,125,.5);color:var(--grn)}.afm-btn-copy.copied{background:rgba(76,175,125,.3);border-color:var(--grn)}.afm-notice{font-size:11px;color:var(--mut);line-height:1.6;padding:10px 12px;background:var(--surf2);border-radius:8px;border-left:3px solid var(--acc);margin-top:10px}.add-film-btn{background:0 0;border:1px solid rgba(232,185,79,.25);color:var(--acc);border-radius:8px;padding:6px 10px;font-size:12px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:5px;font-family:'DM Sans',sans-serif;transition:border-color .15s}.add-film-btn:hover{border-color:rgba(232,185,79,.5)}@keyframes gridFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}.grid.loaded{animation:gridFadeIn .25s ease both}@media(prefers-reduced-motion:reduce){*{animation-duration:0.001s!important;animation-iteration-count:1!important;transition-duration:NaNs!important}.skeleton-card,.skeleton-stat{animation:none}.card:hover{transform:none}.grid.loaded{animation:none}}.card:focus-visible,.chip:focus-visible,.scl:focus-visible,.sortchip:focus-visible,.tabitem:focus-visible,button:focus-visible{outline:2px solid rgba(232,185,79,.7);outline-offset:2px}.card:focus,.chip:focus,.scl:focus,.sortchip:focus,.tabitem:focus,button:focus{outline:0}.add-film-btn:hover{border-color:rgba(232,185,79,.5)!important}</style>
+<style>:root{--bg:#0d0d0d;--surf:#171717;--surf2:#202020;--surf3:#2a2a2a;--bdr:rgba(255,255,255,0.07);--txt:#efefef;--mut:#999;--acc:#e8b94f;--grn:#4caf7d;--blu:#5b9bd5;--pur:#9c7fd4;--r:6px;--gap:8px}*{box-sizing:border-box;margin:0;padding:0}body,html{background:var(--bg);color:var(--txt);font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;min-height:100vh;overscroll-behavior:none}.tabnav{position:fixed;bottom:0;left:0;right:0;background:rgba(23,23,23,.95);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid var(--bdr);display:flex;z-index:300;padding-bottom:env(safe-area-inset-bottom)}.tabitem{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 4px 6px;cursor:pointer;color:var(--mut);font-size:9px;letter-spacing:.05em;text-transform:uppercase;gap:3px;transition:color .2s;position:relative;font-family:'DM Sans',sans-serif;font-weight:500}.tabitem svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}.tabitem.active{color:var(--acc)}.tabitem.active svg{transform:scale(1.1)}.tabitem.active::after{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:32px;height:2px;background:var(--acc);border-radius:0 0 2px 2px}.page{display:none;flex-direction:column;min-height:100vh;padding-bottom:calc(60px + env(safe-area-inset-bottom))}.page.active{display:flex}header{background:rgba(23,23,23,.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--bdr);position:sticky;top:0;z-index:100;padding:12px 16px 0;padding-top:calc(12px + env(safe-area-inset-top))}#page-watchnext{padding-top:calc(12px + env(safe-area-inset-top))!important}.hrow{display:flex;align-items:center;gap:10px;margin-bottom:10px}header h1{font-size:17px;font-weight:700;letter-spacing:-.3px;flex:1;font-family:'DM Serif Display',serif}.cnt{font-size:11px;color:var(--mut);white-space:nowrap}.logo-wordmark{display:none;flex-direction:column;line-height:1;min-width:0;gap:1px}.logo-title{font-size:17px;font-weight:400;color:#f0e6cc;letter-spacing:.12em;font-family:'DM Serif Display',serif;text-transform:uppercase;font-style:italic;white-space:nowrap;text-shadow:0 0 20px rgba(232,185,79,.2)}.logo-sub{font-size:7.5px;letter-spacing:.25em;text-transform:uppercase;color:#e8b94f;opacity:.55;font-family:'DM Sans',sans-serif;font-weight:600;white-space:nowrap}@media(min-width:600px){.logo-wordmark{display:flex}}.hdr-icon-btn{display:flex;align-items:center;justify-content:center;gap:5px;border-radius:8px;padding:7px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:all .15s;flex-shrink:0}.hdr-icon-btn:not(.surprise-btn){background:0 0;border:1px solid rgba(232,185,79,.25);color:var(--acc)}.hdr-icon-btn:not(.surprise-btn):hover{border-color:rgba(232,185,79,.5)}.hdr-btn-label{display:none}@media(min-width:600px){.hdr-btn-label{display:inline}.hdr-icon-btn{padding:6px 10px}}.surprise-btn{background:var(--acc);border:none;color:#000;border-radius:20px;padding:5px 12px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;font-family:'DM Sans',sans-serif;transition:transform .15s,box-shadow .15s;will-change:transform}.surprise-btn:hover{box-shadow:0 0 16px rgba(232,185,79,.4)}.surprise-btn:active{opacity:.8;transform:scale(.95)}.surprise-btn.spinning{animation:surprisePop .5s cubic-bezier(.36,.07,.19,.97) both}@keyframes surprisePop{0%{transform:scale(1) rotate(0)}20%{transform:scale(1.18) rotate(-6deg)}50%{transform:scale(1.12) rotate(5deg)}80%{transform:scale(1.05) rotate(-2deg)}100%{transform:scale(1) rotate(0)}}.sw{position:relative;margin-bottom:8px}.sw input{width:100%;background:var(--surf2);border:1px solid var(--bdr);color:var(--txt);border-radius:8px;padding:9px 36px 9px 36px;font-size:15px;outline:0;-webkit-appearance:none;font-family:'DM Sans',sans-serif;transition:border-color .2s}.sw input:focus{outline:0}.sw input:focus-visible{outline:2px solid rgba(232,185,79,.7);outline-offset:2px;border-color:rgba(232,185,79,.5)}.si{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--mut);font-size:15px;pointer-events:none}.scl{position:absolute;right:6px;top:50%;transform:translateY(-50%);background:0 0;border:none;color:var(--mut);font-size:20px;cursor:pointer;display:none;line-height:1;padding:8px;min-width:44px;min-height:44px;align-items:center;justify-content:center}.filter-toggle{display:flex;align-items:center;gap:8px;margin-bottom:8px}.ftbtn{background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:8px;padding:6px 12px;font-size:12px;cursor:pointer;display:flex;align-items:center;gap:6px;white-space:nowrap;flex-shrink:0;transition:all .2s;font-family:'DM Sans',sans-serif;font-weight:500;position:relative}.ftbtn.has-active{border-color:var(--acc);color:var(--acc)}.filter-badge{display:none;position:absolute;top:-6px;right:-6px;background:var(--acc);color:#000;font-size:9px;font-weight:800;border-radius:10px;min-width:16px;height:16px;padding:0 4px;align-items:center;justify-content:center;line-height:1}.filter-badge.visible{display:flex}.active-summary{font-size:11px;color:var(--acc);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.clear-all{background:0 0;border:none;color:var(--mut);font-size:20px;cursor:pointer;padding:8px;line-height:1;flex-shrink:0;display:none;transition:color .15s;min-width:44px;min-height:44px;align-items:center;justify-content:center}.clear-all:hover{color:var(--txt)}.filter-panel{display:none;padding-bottom:4px}.filter-panel.open{display:block}.frow{display:flex;gap:6px;overflow-x:auto;padding:0 0 6px;scrollbar-width:none;-webkit-overflow-scrolling:touch;align-items:center}.frow::-webkit-scrollbar{display:none}.flabel{flex-shrink:0;font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;width:44px;font-weight:600}.chip{flex-shrink:0;background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:20px;padding:7px 12px;font-size:11px;cursor:pointer;white-space:nowrap;user-select:none;transition:all .15s}.chip.active{background:var(--acc);border-color:var(--acc);color:#000;font-weight:700}.chip:active{opacity:.7}.chip-count{opacity:.6;font-size:10px;margin-left:2px}.sortrow{display:flex;gap:6px;padding:0 0 8px;align-items:center;overflow-x:auto;scrollbar-width:none}.sortrow::-webkit-scrollbar{display:none}.sortchip{flex-shrink:0;background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:4px;transition:all .15s;font-family:'DM Sans',sans-serif}.sortchip.active{border-color:rgba(232,185,79,.4);color:var(--acc);background:rgba(232,185,79,.06)}.sortchip .arr{font-size:9px;transition:transform .2s}.score-row{display:flex;align-items:center;gap:10px;padding:0 0 8px}.score-row label{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;width:44px;flex-shrink:0;font-weight:600}.score-row input[type=range]{flex:1;-webkit-appearance:none;height:3px;border-radius:2px;background:var(--surf3);outline:0}.score-row input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--acc);cursor:pointer;box-shadow:0 0 6px rgba(232,185,79,.5)}.score-row .score-val{font-size:11px;color:var(--acc);font-weight:700;width:28px;text-align:right;flex-shrink:0}.runtime-row{display:flex;gap:6px;padding:0 0 8px;align-items:center;overflow-x:auto;scrollbar-width:none}.runtime-row::-webkit-scrollbar{display:none}.progress-wrap{height:3px;background:var(--surf2)}.progress-bar{height:3px;background:linear-gradient(90deg,var(--grn),#6fe0a0);transition:width .6s cubic-bezier(.4,0,.2,1)}.statsrow{display:flex;border-top:1px solid var(--bdr)}.stat{flex:1;text-align:center;padding:6px 4px;transition:background .15s}.stat .n{font-size:15px;font-weight:700;font-family:'DM Serif Display',serif}.stat .l{font-size:9px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;font-weight:500}@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}.skeleton-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);padding:var(--gap)}@media(min-width:480px){.skeleton-grid{grid-template-columns:repeat(4,1fr)}}@media(min-width:640px){.skeleton-grid{grid-template-columns:repeat(5,1fr)}}@media(min-width:900px){.skeleton-grid{grid-template-columns:repeat(7,1fr)}}@media(min-width:1200px){.skeleton-grid{grid-template-columns:repeat(9,1fr)}}.skeleton-card{aspect-ratio:2/3;border-radius:var(--r);background:linear-gradient(90deg,var(--surf2) 25%,var(--surf3) 50%,var(--surf2) 75%);background-size:200% 100%;animation:shimmer 1.6s ease-in-out infinite}.skeleton-stat{width:32px;height:16px;margin:0 auto 4px;border-radius:4px;background:linear-gradient(90deg,var(--surf2) 25%,var(--surf3) 50%,var(--surf2) 75%);background-size:200% 100%;animation:shimmer 1.6s ease-in-out infinite}.gw{padding:var(--gap)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}@media(min-width:480px){.grid{grid-template-columns:repeat(4,1fr)}}@media(min-width:640px){.grid{grid-template-columns:repeat(5,1fr)}}@media(min-width:900px){.grid{grid-template-columns:repeat(7,1fr)}}@media(min-width:1200px){.grid{grid-template-columns:repeat(9,1fr)}}.card{position:relative;cursor:pointer;border-radius:var(--r);overflow:hidden;background:var(--surf2);aspect-ratio:2/3;transition:transform .15s,box-shadow .15s}.card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.5)}.card:active{transform:scale(.96);box-shadow:0 2px 8px rgba(0,0,0,.4)}.card img{width:100%;height:100%;object-fit:cover;display:block}.fb2{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px;text-align:center}.fb2 .ft{font-size:11px;font-weight:600;line-height:1.3;color:var(--txt);margin-bottom:4px}.fb2 .fy{font-size:10px;color:var(--mut)}.wb{position:absolute;top:4px;right:4px;background:rgba(76,175,125,.9);border-radius:50%;width:18px;height:18px;display:none;align-items:center;justify-content:center;font-size:10px}.card.W .wb{display:flex}.sb{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:16px 6px 5px;font-size:11px;font-weight:700;color:var(--acc);text-align:right;font-family:'DM Serif Display',serif}.kb{position:absolute;top:4px;left:4px;background:rgba(91,155,213,.9);border-radius:3px;font-size:8px;font-weight:800;padding:1px 4px;color:#fff;display:none}.card.K .kb{display:block}.spine-badge{position:absolute;bottom:4px;left:4px;background:rgba(74,20,140,.85);border-radius:3px;font-size:8px;font-weight:800;padding:1px 4px;color:#fff;display:none}.card.CRIT .spine-badge{display:block}.empty{text-align:center;padding:60px 20px;color:var(--mut)}.empty h2{font-size:18px;margin-bottom:8px;color:var(--txt);font-family:'DM Serif Display',serif}.ov{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;opacity:0;pointer-events:none;transition:opacity .2s}.ov.open{opacity:1;pointer-events:all}.sh{position:fixed;bottom:0;left:0;right:0;max-height:90vh;background:var(--surf);border-radius:16px 16px 0 0;z-index:201;transform:translateY(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:calc(env(safe-area-inset-bottom) + 16px)}.sh.open{transform:translateY(0)}.shn{width:36px;height:4px;background:var(--bdr);border-radius:2px;margin:12px auto 0}.shi{padding:16px 20px 48px}.shh{display:flex;gap:16px;margin-bottom:14px}.shp{width:90px;flex-shrink:0;border-radius:6px;overflow:hidden;background:var(--surf2);aspect-ratio:2/3}.shp img{width:100%;height:100%;object-fit:cover}.shm{flex:1;min-width:0}.sht{font-size:20px;font-weight:700;line-height:1.2;margin-bottom:4px;font-family:'DM Serif Display',serif}.shd{font-size:13px;color:var(--mut);margin-bottom:8px}.shs{font-size:28px;font-weight:700;color:var(--acc);line-height:1;font-family:'DM Serif Display',serif}.shs span{font-size:13px;font-weight:400;color:var(--mut)}.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}.tag{background:var(--surf2);border:1px solid var(--bdr);border-radius:4px;padding:3px 8px;font-size:11px;color:var(--mut)}.tag.b{border-color:rgba(91,155,213,.4);color:var(--blu)}.tag.g{border-color:rgba(76,175,125,.4);color:var(--grn)}.tag.a{border-color:rgba(232,185,79,.4);color:var(--acc)}.divl{border:none;border-top:1px solid var(--bdr);margin:14px 0}.dr{display:flex;justify-content:space-between;align-items:center;padding:5px 0;font-size:13px}.dr .lb{color:var(--mut)}.dr .vl{font-weight:500;max-width:65%}.dr .vl.dir-link{color:var(--blu);cursor:pointer;text-decoration:underline}.syn{font-size:13px;color:#ccc;line-height:1.7;margin:12px 0;font-style:italic;font-family:'DM Serif Display',serif}.extlinks{display:flex;gap:8px;margin-top:10px}.extlink{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:10px 8px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;border:1px solid var(--bdr);transition:background .2s}.extlink.lbtn{background:rgba(0,229,160,.08);border-color:rgba(0,229,160,.3);color:#00e5a0}.extlink.ibtn{background:rgba(245,197,24,.08);border-color:rgba(245,197,24,.3);color:#f5c518}.extlink:hover{filter:brightness(1.15)}.watch-toggle{width:100%;margin-top:12px;padding:12px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;border:1px solid var(--bdr);background:var(--surf2);color:var(--txt);transition:all .2s;font-family:'DM Sans',sans-serif}.watch-toggle.ws{background:rgba(76,175,125,.15);border-color:rgba(76,175,125,.5);color:var(--grn)}.watch-toggle:active{opacity:.8}.dir-header{background:rgba(23,23,23,.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--bdr);padding:14px 16px;padding-top:calc(14px + env(safe-area-inset-top));position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:12px}.dir-back{background:0 0;border:none;color:var(--acc);font-size:24px;cursor:pointer;padding:0;line-height:1;transition:transform .15s}.dir-back:hover{transform:translateX(-2px)}.dir-name{font-size:17px;font-weight:700;flex:1;font-family:'DM Serif Display',serif}.dir-stats{font-size:11px;color:var(--mut)}.stats-page-header{background:rgba(23,23,23,.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--bdr);padding:14px 16px;padding-top:calc(14px + env(safe-area-inset-top));position:sticky;top:0;z-index:100}.stats-page-header h2{font-size:17px;font-weight:700;font-family:'DM Serif Display',serif}.stats-scroll{padding:16px;overflow-y:auto}.stat-card{background:var(--surf);border-radius:10px;padding:14px 16px;margin-bottom:12px;border:1px solid var(--bdr)}.stat-card h3{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px;font-weight:700}.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:4px}.stat-box{background:var(--surf2);border-radius:8px;padding:10px 8px;text-align:center}.stat-box .sn{font-size:20px;font-weight:700;font-family:'DM Serif Display',serif}.stat-box .sl{font-size:9px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em;margin-top:2px;font-weight:500}.bar-row{display:flex;align-items:center;gap:8px;margin-bottom:6px}.bar-label{font-size:11px;color:var(--mut);width:70px;flex-shrink:0;text-align:right}.bar-label.wide{width:120px}.bar-wrap{flex:1;background:var(--surf2);border-radius:3px;height:14px;overflow:hidden}.bar-fill{height:100%;border-radius:3px;background:var(--acc);transition:width .7s cubic-bezier(.4,0,.2,1)}.bar-fill.blu{background:var(--blu)}.bar-fill.grn{background:var(--grn)}.bar-fill.pur{background:var(--pur)}.bar-count{font-size:11px;color:var(--mut);width:30px;flex-shrink:0}.score-pills{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 4px}.score-pill{background:var(--surf2);border:1px solid var(--bdr);border-radius:5px;padding:3px 8px;font-size:11px;color:var(--mut)}.score-pill b{color:var(--txt);font-weight:600}.wn-poster{flex:0 0 80px;cursor:pointer;position:relative;transition:transform .15s}.pwl-wrap{background:var(--surf);border:1px solid var(--bdr);border-radius:12px;padding:16px;margin-bottom:24px}.pwl-header{display:flex;align-items:center;gap:8px;margin-bottom:12px}.pwl-title{font-size:15px;font-weight:700;font-family:'DM Serif Display',serif;flex:1}.pwl-count{font-size:11px;color:var(--mut)}.pwl-add-btn{background:0 0;border:1px solid rgba(232,185,79,.3);color:var(--acc);border-radius:7px;padding:5px 10px;font-size:11px;font-weight:600;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:all .15s}.pwl-add-btn:hover{border-color:rgba(232,185,79,.6);background:rgba(232,185,79,.07)}.pwl-empty{text-align:center;padding:20px 0;color:var(--mut);font-size:13px}.pwl-empty p{margin-bottom:8px}.pwl-list{display:flex;flex-direction:column;gap:6px}.pwl-item{display:flex;align-items:center;gap:10px;background:var(--surf2);border:1px solid var(--bdr);border-radius:8px;padding:8px 10px;cursor:grab;transition:background .15s,border-color .15s,opacity .2s,transform .15s;user-select:none;-webkit-user-select:none}.pwl-item:active{cursor:grabbing}.pwl-item.dragging{opacity:.4;background:var(--surf3)}.pwl-item.drag-over{border-color:var(--acc);background:rgba(232,185,79,.06)}.pwl-rank{font-size:13px;font-weight:700;color:var(--acc);font-family:'DM Serif Display',serif;width:20px;text-align:center;flex-shrink:0}.pwl-thumb{width:38px;height:57px;border-radius:4px;overflow:hidden;background:var(--surf3);flex-shrink:0}.pwl-thumb img{width:100%;height:100%;object-fit:cover}.pwl-info{flex:1;min-width:0}.pwl-film-title{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pwl-film-meta{font-size:11px;color:var(--mut);margin-top:1px}.pwl-drag-handle{color:var(--mut);font-size:16px;flex-shrink:0;opacity:.5;line-height:1;padding:4px}.pwl-remove{background:0 0;border:none;color:var(--mut);font-size:18px;cursor:pointer;padding:4px 6px;line-height:1;flex-shrink:0;border-radius:4px;transition:color .15s}.pwl-remove:hover{color:#e57373}.pwl-modal-wrap{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:600;display:none;align-items:flex-end;justify-content:center}.pwl-modal-wrap.open{display:flex}@media(min-width:600px){.pwl-modal-wrap{align-items:center;padding:20px}}.pwl-modal{background:var(--surf);border-radius:16px 16px 0 0;width:100%;max-width:480px;max-height:80vh;display:flex;flex-direction:column;padding-bottom:env(safe-area-inset-bottom)}@media(min-width:600px){.pwl-modal{border-radius:16px}}.pwl-modal-handle{width:36px;height:4px;background:var(--surf3);border-radius:2px;margin:12px auto 0;flex-shrink:0}.pwl-modal-inner{padding:16px 20px;overflow-y:auto;flex:1}.pwl-modal h3{font-family:'DM Serif Display',serif;font-size:18px;margin-bottom:12px}.pwl-search-input{width:100%;background:var(--surf2);border:1px solid var(--bdr);color:var(--txt);border-radius:8px;padding:9px 14px;font-size:15px;outline:0;font-family:'DM Sans',sans-serif;margin-bottom:10px;-webkit-appearance:none}.pwl-search-input:focus{border-color:rgba(232,185,79,.4)}.pwl-results{display:flex;flex-direction:column;gap:4px}.pwl-result-item{display:flex;align-items:center;gap:10px;padding:8px;border-radius:8px;cursor:pointer;transition:background .15s;border:1px solid transparent}.pwl-result-item:hover{background:var(--surf2)}.pwl-result-item.already-added{opacity:.4;pointer-events:none}.pwl-result-thumb{width:34px;height:51px;border-radius:4px;overflow:hidden;background:var(--surf3);flex-shrink:0}.pwl-result-thumb img{width:100%;height:100%;object-fit:cover}.pwl-result-info{flex:1;min-width:0}.pwl-result-title{font-size:13px;font-weight:600}.pwl-result-meta{font-size:11px;color:var(--mut)}.wn-poster:hover{transform:translateY(-3px)}.wn-poster:active{transform:scale(.96)}.wn-poster-img{width:80px;height:120px;border-radius:6px;overflow:hidden;background:var(--surf2);transition:box-shadow .15s}.wn-poster:hover .wn-poster-img{box-shadow:0 8px 24px rgba(0,0,0,.5)}.share-modal-wrap{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:500;display:none;align-items:center;justify-content:center;padding:20px}.share-modal-wrap.open{display:flex}.share-modal{background:var(--surf);border-radius:16px;width:100%;max-width:480px;padding:24px;position:relative}.share-modal h2{font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:6px}.share-modal p{font-size:13px;color:var(--mut);line-height:1.6;margin-bottom:16px}.share-close{position:absolute;top:14px;right:14px;background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:50%;width:32px;height:32px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center}.share-option{background:var(--surf2);border:1px solid var(--bdr);border-radius:10px;padding:14px 16px;margin-bottom:10px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:border-color .2s}.share-option:hover{border-color:rgba(232,185,79,.4)}.share-option .so-icon{font-size:22px;flex-shrink:0}.share-option .so-title{font-size:14px;font-weight:600;margin-bottom:2px}.share-option .so-desc{font-size:12px;color:var(--mut)}.add-film-modal-wrap{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:500;display:none;align-items:flex-end;justify-content:center;padding:0}.add-film-modal-wrap.open{display:flex}@media(min-width:600px){.add-film-modal-wrap{align-items:center;padding:20px}}.add-film-modal{background:var(--surf);border-radius:16px 16px 0 0;width:100%;max-width:520px;max-height:92vh;overflow-y:auto;position:relative;padding-bottom:env(safe-area-inset-bottom)}@media(min-width:600px){.add-film-modal{border-radius:16px}}.afm-handle{width:36px;height:4px;background:var(--surf3);border-radius:2px;margin:12px auto 0}.afm-inner{padding:16px 20px 32px}.afm-inner h2{font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:4px}.afm-inner .afm-sub{font-size:12px;color:var(--mut);margin-bottom:16px}.afm-close{position:absolute;top:14px;right:14px;background:var(--surf2);border:1px solid var(--bdr);color:var(--mut);border-radius:50%;width:32px;height:32px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:color .15s}.afm-close:hover{color:var(--txt)}.afm-field{margin-bottom:12px}.afm-field label{display:block;font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px}.afm-field input,.afm-field select,.afm-field textarea{width:100%;background:var(--surf2);border:1px solid var(--bdr);color:var(--txt);border-radius:8px;padding:9px 12px;font-size:14px;outline:0;font-family:'DM Sans',sans-serif;transition:border-color .2s;-webkit-appearance:none}.afm-field input:focus,.afm-field select:focus,.afm-field textarea:focus{border-color:rgba(232,185,79,.35)}.afm-field select{cursor:pointer}.afm-field textarea{resize:none;height:72px;line-height:1.5}.afm-row{display:flex;gap:10px}.afm-row .afm-field{flex:1}.afm-search-wrap{position:relative;margin-bottom:14px}.afm-search-wrap label{display:block;font-size:10px;font-weight:700;color:var(--acc);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px}.afm-search-wrap input{width:100%;background:var(--surf2);border:1px solid rgba(232,185,79,.3);color:var(--txt);border-radius:8px;padding:10px 12px;font-size:14px;outline:0;font-family:'DM Sans',sans-serif;transition:border-color .2s}.afm-search-wrap input:focus{border-color:rgba(232,185,79,.6)}.afm-results{position:absolute;top:100%;left:0;right:0;background:var(--surf2);border:1px solid var(--bdr);border-radius:8px;overflow:hidden;z-index:10;max-height:200px;overflow-y:auto;display:none;box-shadow:0 8px 24px rgba(0,0,0,.4)}.afm-result-item{display:flex;align-items:center;gap:10px;padding:10px 12px;cursor:pointer;transition:background .15s;border-bottom:1px solid var(--bdr)}.afm-result-item:last-child{border-bottom:none}.afm-result-item:hover{background:var(--surf3)}.afm-result-item img{width:36px;height:54px;object-fit:cover;border-radius:4px;flex-shrink:0;background:var(--surf3)}.afm-result-item .afm-ri-noimg{width:36px;height:54px;flex-shrink:0;background:var(--surf3);border-radius:4px}.afm-result-item .afm-ri-title{font-size:13px;font-weight:600;line-height:1.3;color:var(--txt)}.afm-result-item .afm-ri-meta{font-size:11px;color:var(--mut);margin-top:2px}.afm-searching{padding:12px;font-size:12px;color:var(--mut);text-align:center}.afm-divider{border:none;border-top:1px solid var(--bdr);margin:16px 0 14px}.afm-section-label{font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;display:flex;align-items:center;gap:8px}.afm-section-label::after{content:'';flex:1;height:1px;background:var(--bdr)}.afm-output{background:var(--surf2);border:1px solid var(--bdr);border-radius:8px;padding:12px;font-size:11px;font-family:monospace;color:var(--txt);line-height:1.6;white-space:pre-wrap;word-break:break-all;margin-top:14px;display:none;max-height:180px;overflow-y:auto}.afm-btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}.afm-btn{flex:1;min-width:120px;padding:11px 12px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;text-align:center;border:none;font-family:'DM Sans',sans-serif;transition:opacity .15s,transform .1s}.afm-btn:active{opacity:.8;transform:scale(.97)}.afm-btn-primary{background:var(--acc);color:#000}.afm-btn-secondary{background:var(--surf2);border:1px solid var(--bdr);color:var(--txt)}.afm-btn-copy{background:rgba(76,175,125,.15);border:1px solid rgba(76,175,125,.5);color:var(--grn)}.afm-btn-copy.copied{background:rgba(76,175,125,.3);border-color:var(--grn)}.afm-notice{font-size:11px;color:var(--mut);line-height:1.6;padding:10px 12px;background:var(--surf2);border-radius:8px;border-left:3px solid var(--acc);margin-top:10px}.add-film-btn{background:0 0;border:1px solid rgba(232,185,79,.25);color:var(--acc);border-radius:8px;padding:6px 10px;font-size:12px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:5px;font-family:'DM Sans',sans-serif;transition:border-color .15s}.add-film-btn:hover{border-color:rgba(232,185,79,.5)}@keyframes gridFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}.grid.loaded{animation:gridFadeIn .25s ease both}@media(prefers-reduced-motion:reduce){*{animation-duration:0.001s!important;animation-iteration-count:1!important;transition-duration:NaNs!important}.skeleton-card,.skeleton-stat{animation:none}.card:hover{transform:none}.grid.loaded{animation:none}}.card:focus-visible,.chip:focus-visible,.scl:focus-visible,.sortchip:focus-visible,.tabitem:focus-visible,button:focus-visible{outline:2px solid rgba(232,185,79,.7);outline-offset:2px}.card:focus,.chip:focus,.scl:focus,.sortchip:focus,.tabitem:focus,button:focus{outline:0}.add-film-btn:hover{border-color:rgba(232,185,79,.5)!important}
+
+/* ===== LB500 Scoped Styles ===== */
+#page-lb500 {
+  --lb-bg: #0e0e0e;
+  --lb-surface: #161616;
+  --lb-surface2: #1e1e1e;
+  --lb-border: #2a2a2a;
+  --lb-owned: #c8f0a0;
+  --lb-owned-dim: rgba(200,240,160,0.12);
+  --lb-owned-mid: rgba(200,240,160,0.35);
+  --lb-wishlist: #f0d080;
+  --lb-wishlist-dim: rgba(240,208,128,0.12);
+  --lb-wishlist-mid: rgba(240,208,128,0.35);
+  --lb-missing: #e05555;
+  --lb-missing-dim: rgba(224,85,85,0.1);
+  --lb-missing-mid: rgba(224,85,85,0.3);
+  --lb-text: #e8e4dc;
+  --lb-text-dim: #888;
+  --lb-text-faint: #444;
+  --lb-accent: #c8f0a0;
+}
+#page-lb500 /* HEADER */
+  .header {
+    padding: 3rem 2rem 2rem;
+    border-bottom: 1px solid var(--lb-border);
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(14,14,14,0.96);
+    backdrop-filter: blur(12px);
+  }
+#page-lb500 .header-top {
+    display: flex; align-items: baseline; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;
+  }
+#page-lb500 h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    line-height: 1; letter-spacing: -0.02em;
+    color: var(--lb-text);
+  }
+#page-lb500 h1 em { color: var(--lb-accent); font-style: italic; }
+#page-lb500 .last-updated { font-size: 11px; color: var(--lb-text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+#page-lb500 /* STATS BAR */
+  .stats {
+    display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem;
+  }
+#page-lb500 .stat { display: flex; flex-direction: column; gap: 2px; }
+#page-lb500 .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem; line-height: 1;
+  }
+#page-lb500 .stat-num.owned { color: var(--lb-owned); }
+#page-lb500 .stat-num.wishlist { color: var(--lb-wishlist); }
+#page-lb500 .stat-num.missing { color: var(--lb-missing); }
+#page-lb500 .stat-label { font-size: 11px; color: var(--lb-text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+#page-lb500 /* PROGRESS BAR */
+  .progress-wrap { margin-bottom: 1.5rem; }
+#page-lb500 .progress-bar {
+    height: 4px; background: var(--lb-border); border-radius: 2px; overflow: hidden;
+    display: flex;
+  }
+#page-lb500 .progress-seg { height: 100%; transition: width 0.5s ease; }
+#page-lb500 .progress-seg.owned { background: var(--lb-owned); }
+#page-lb500 .progress-seg.wishlist { background: var(--lb-wishlist); }
+#page-lb500 .progress-seg.missing { background: var(--lb-border); }
+#page-lb500 /* CONTROLS */
+  .controls {
+    display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;
+  }
+#page-lb500 .filter-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 2px;
+    border: 1px solid var(--lb-border);
+    background: transparent; color: var(--lb-text-dim);
+    cursor: pointer; transition: all 0.15s;
+  }
+#page-lb500 .filter-btn:hover { border-color: var(--lb-text-dim); color: var(--lb-text); }
+#page-lb500 .filter-btn.active-all { border-color: var(--lb-text); color: var(--lb-text); background: var(--lb-surface2); }
+#page-lb500 .filter-btn.active-owned { border-color: var(--lb-owned); color: var(--lb-owned); background: var(--lb-owned-dim); }
+#page-lb500 .filter-btn.active-wishlist { border-color: var(--lb-wishlist); color: var(--lb-wishlist); background: var(--lb-wishlist-dim); }
+#page-lb500 .filter-btn.active-missing { border-color: var(--lb-missing); color: var(--lb-missing); background: var(--lb-missing-dim); }
+#page-lb500 .search-wrap { margin-left: auto; position: relative; }
+#page-lb500 .search-input {
+    font-family: 'DM Mono', monospace; font-size: 12px;
+    background: var(--lb-surface2); border: 1px solid var(--lb-border);
+    color: var(--lb-text); padding: 5px 12px 5px 30px;
+    border-radius: 2px; width: 200px; outline: none;
+    transition: border-color 0.15s;
+  }
+#page-lb500 .search-input:focus { border-color: var(--lb-text-dim); }
+#page-lb500 .search-icon { position: absolute; left: 9px; top: 50%; transform: translateY(-50%); color: var(--lb-text-dim); font-size: 12px; pointer-events: none; }
+#page-lb500 /* SORT */
+  .sort-wrap { display: flex; gap: 4px; margin-left: 8px; }
+#page-lb500 .sort-btn {
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 5px 10px; border-radius: 2px;
+    border: 1px solid var(--lb-border);
+    background: transparent; color: var(--lb-text-faint);
+    cursor: pointer; transition: all 0.15s;
+  }
+#page-lb500 .sort-btn.active { border-color: var(--lb-text-dim); color: var(--lb-text-dim); }
+#page-lb500 /* LIST */
+  .film-list {
+    padding: 0 2rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
+    gap: 1px;
+  }
+#page-lb500 .film-item {
+    display: flex; align-items: center; gap: 1rem;
+    padding: 0.6rem 1rem 0.6rem 0;
+    border-bottom: 1px solid var(--lb-border);
+    transition: background 0.1s;
+    cursor: default;
+  }
+#page-lb500 .film-item:hover { background: var(--lb-surface); }
+#page-lb500 .film-item.status-owned { border-left: 2px solid var(--lb-owned); padding-left: calc(1rem - 2px); }
+#page-lb500 .film-item.status-wishlist { border-left: 2px solid var(--lb-wishlist); padding-left: calc(1rem - 2px); }
+#page-lb500 .film-item.status-missing { border-left: 2px solid var(--lb-text-faint); padding-left: calc(1rem - 2px); }
+#page-lb500 .rank {
+    font-size: 11px; color: var(--lb-text-faint);
+    width: 32px; text-align: right; flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+#page-lb500 .film-info { flex: 1; min-width: 0; }
+#page-lb500 .film-title {
+    font-size: 13px; color: var(--lb-text);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    line-height: 1.3;
+  }
+#page-lb500 .film-title.faded { color: var(--lb-text-dim); }
+#page-lb500 .film-year { font-size: 10px; color: var(--lb-text-faint); margin-top: 1px; }
+#page-lb500 .status-pill {
+    font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 2px 7px; border-radius: 1px; flex-shrink: 0;
+    font-weight: 500;
+  }
+#page-lb500 .pill-owned { background: var(--lb-owned-dim); color: var(--lb-owned); border: 1px solid var(--lb-owned-mid); }
+#page-lb500 .pill-wishlist { background: var(--lb-wishlist-dim); color: var(--lb-wishlist); border: 1px solid var(--lb-wishlist-mid); }
+#page-lb500 .pill-missing { background: transparent; color: var(--lb-text-faint); border: 1px solid var(--lb-border); }
+#page-lb500 /* EMPTY STATE */
+  .empty { padding: 4rem 2rem; text-align: center; color: var(--lb-text-dim); font-size: 13px; }
+#page-lb500 /* COUNT DISPLAY */
+  .count-display {
+    font-size: 11px; color: var(--lb-text-dim); padding: 1rem 2rem 0.5rem;
+    letter-spacing: 0.05em;
+  }
+@media (max-width: 600px) {#page-lb500 .header { padding: 1.5rem 1rem 1rem; }
+#page-lb500 .film-list { padding: 0 0 4rem; }
+#page-lb500 .count-display { padding: 1rem 1rem 0.5rem; }
+#page-lb500 .stats { gap: 1.2rem; }
+#page-lb500 .stat-num { font-size: 1.6rem; }
+
+  }
+
+
+/* ===== LB500 page overrides ===== */
+#page-lb500 { display:none; flex-direction:column; min-height:100vh; padding-bottom:calc(60px + env(safe-area-inset-bottom)); overflow-y:auto; }
+#page-lb500.active { display:flex; flex-direction:column; }
+#page-lb500 .header { position:sticky; top:0; z-index:100; background:rgba(14,14,14,0.96); backdrop-filter:blur(12px); border-bottom:1px solid var(--lb-border); padding:1rem 1rem 0.75rem; }
+#page-lb500 .film-list { flex:1; }
+</style>
 <body>
 
 <div class="page active" id="page-collection">
@@ -227,6 +390,63 @@
   </div>
 </div>
 
+
+<div class="page" id="page-lb500">
+<div class="header">
+  <div class="header-top">
+    <h1>Letterboxd Top 500<br><em>vs your collection</em></h1>
+    <span class="last-updated">Updated June 2026</span>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-num owned" id="count-owned">0</span>
+      <span class="stat-label">Owned</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num wishlist" id="count-wishlist">0</span>
+      <span class="stat-label">Wishlist</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num missing" id="count-missing">0</span>
+      <span class="stat-label">Missing</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" id="count-pct" style="color:var(--text)">0%</span>
+      <span class="stat-label">Coverage</span>
+    </div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-bar">
+      <div class="progress-seg owned" id="prog-owned" style="width:0%"></div>
+      <div class="progress-seg wishlist" id="prog-wishlist" style="width:0%"></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="filter-btn active-all" data-filter="all" onclick="lb_setFilter('all')">All 500</button>
+    <button class="filter-btn" data-filter="owned" onclick="lb_setFilter('owned')">Owned</button>
+    <button class="filter-btn" data-filter="wishlist" onclick="lb_setFilter('wishlist')">Wishlist</button>
+    <button class="filter-btn" data-filter="missing" onclick="lb_setFilter('missing')">Missing</button>
+
+    <div class="sort-wrap">
+      <button class="sort-btn active" id="sort-rank" onclick="lb_setSort('rank')">Rank</button>
+      <button class="sort-btn" id="sort-year" onclick="lb_setSort('year')">Year</button>
+      <button class="sort-btn" id="sort-title" onclick="lb_setSort('title')">Title</button>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input class="search-input" type="text" placeholder="Search..." id="search-input" oninput="lb_onSearch()" />
+    </div>
+  </div>
+</div>
+
+<div class="count-display" id="count-display"></div>
+<div class="film-list" id="film-list"></div>
+</div>
+
 <nav class="tabnav">
   <div class="tabitem active" data-page="collection" onclick="switchTab('collection')">
     <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
@@ -239,6 +459,10 @@
   <div class="tabitem" data-page="watchnext" onclick="switchTab('watchnext')">
     <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
     Watch Next
+  </div>
+  <div class="tabitem" data-page="lb500" onclick="switchTab('lb500')">
+    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+    LB 500
   </div>
   <a class="tabitem" href="wishlist.html" style="text-decoration:none">
     <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
@@ -506,6 +730,576 @@ loadCollection(),function(){function e(e){document.querySelectorAll(e).forEach(e
   f.textContent="⬇ Download collection.json";
 }function afmCopyEntry(){const e=new Blob([JSON.stringify(C,null,2)],{type:"application/json"}),t=document.createElement("a");t.href=URL.createObjectURL(e),t.download="collection.json",t.click();const a=document.getElementById("afm-copy-btn");a.textContent="✓ Downloaded!",a.classList.add("copied"),setTimeout(()=>{a.textContent="⬇ Download collection.json",a.classList.remove("copied")},3e3)}document.addEventListener("keydown",e=>{"Escape"===e.key&&document.getElementById("add-film-modal").classList.contains("open")&&closeAddFilmModal()}),function(){const e=new URLSearchParams(window.location.search).get("addfilm");if(e)try{let a;try{a=JSON.parse(decodeURIComponent(e))}catch(n){a=JSON.parse(decodeURIComponent(escape(atob(e))))}function t(){afmClearForm();const e=(e,t)=>{const a=document.getElementById(e);a&&null!=t&&(a.value=t)};if(e("afm-title",a.title),e("afm-year",a.year),e("afm-director",a.director),e("afm-runtime",a.runtime),e("afm-genre",a.genre),e("afm-country",a.country),e("afm-distributor",a.distributor),e("afm-imdb-id",a.imdb_id),e("afm-poster",a.poster),e("afm-lb",a.lb),e("afm-synopsis",a.synopsis),a.imdb_score&&e("afm-score",parseFloat(a.imdb_score).toFixed(1)),a.year&&!a.decade){const e=10*Math.floor(parseInt(a.year)/10)+"s",t=document.getElementById("afm-decade");t&&(t.value=e)}document.getElementById("add-film-modal").classList.add("open"),document.body.style.overflow="hidden",history.replaceState({},"",window.location.pathname)}"loading"===document.readyState?document.addEventListener("DOMContentLoaded",t):setTimeout(t,100)}catch(i){console.warn("addfilm param error:",i)}}(),document.addEventListener("keydown",e=>{const t=document.activeElement.tagName,a="INPUT"===t||"TEXTAREA"===t||"SELECT"===t;if("Escape"===e.key){if(document.getElementById("add-film-modal").classList.contains("open"))return void closeAddFilmModal();if(document.getElementById("share-modal").classList.contains("open"))return void closeShareModal();if(-1!==openIdx)return void cls();const e=document.getElementById("filterPanel");return e&&e.classList.contains("open")?(e.classList.remove("open"),void(document.getElementById("ftbtn").innerHTML="&#x25BC; Filters")):sq?(document.getElementById("q").value="",sq="",document.getElementById("qc").style.display="none",void filt()):void 0}if(-1!==openIdx){if("ArrowRight"===e.key||"ArrowDown"===e.key){e.preventDefault();return void(fil[openIdx+1]&&opn(openIdx+1))}if("ArrowLeft"===e.key||"ArrowUp"===e.key){e.preventDefault();return void(fil[openIdx-1]&&opn(openIdx-1))}}if("/"===e.key&&!a){e.preventDefault();const t=document.getElementById("q");return void(t&&(t.focus(),t.select()))}});</script>
 <script>
+
+// ===== Letterboxd Top 500 =====
+
+const FILMS = [
+  {r:1,t:"Harakiri",y:1962,s:"owned"},
+  {r:2,t:"The Human Condition III: A Soldier's Prayer",y:1961,s:"owned"},
+  {r:3,t:"12 Angry Men",y:1957,s:"owned"},
+  {r:4,t:"Come and See",y:1985,s:"owned"},
+  {r:5,t:"Seven Samurai",y:1954,s:"owned"},
+  {r:6,t:"High and Low",y:1963,s:"owned"},
+  {r:7,t:"The Shawshank Redemption",y:1994,s:"owned"},
+  {r:8,t:"The Godfather Part II",y:1974,s:"owned"},
+  {r:9,t:"The Human Condition I: No Greater Love",y:1959,s:"owned"},
+  {r:10,t:"City of God",y:2002,s:"owned"},
+  {r:11,t:"The Lord of the Rings: The Return of the King",y:2003,s:"owned"},
+  {r:12,t:"Schindler's List",y:1993,s:"owned"},
+  {r:13,t:"Yi Yi",y:2000,s:"owned"},
+  {r:14,t:"Parasite",y:2019,s:"owned"},
+  {r:15,t:"The Godfather",y:1972,s:"owned"},
+  {r:16,t:"Ikiru",y:1952,s:"owned"},
+  {r:17,t:"Cinema Paradiso",y:1988,s:"wishlist"},
+  {r:18,t:"Ran",y:1985,s:"owned"},
+  {r:19,t:"Le Trou",y:1960,s:"owned"},
+  {r:20,t:"The Good, the Bad and the Ugly",y:1966,s:"owned"},
+  {r:21,t:"La Haine",y:1995,s:"owned"},
+  {r:22,t:"A Brighter Summer Day",y:1991,s:"owned"},
+  {r:23,t:"Autumn Sonata",y:1978,s:"wishlist"},
+  {r:24,t:"The Human Condition II: Road to Eternity",y:1959,s:"owned"},
+  {r:25,t:"The Dark Knight",y:2008,s:"owned"},
+  {r:26,t:"Grave of the Fireflies",y:1988,s:"wishlist"},
+  {r:27,t:"Neon Genesis Evangelion: The End of Evangelion",y:1997,s:"missing"},
+  {r:28,t:"Woman in the Dunes",y:1964,s:"owned"},
+  {r:29,t:"The Battle of Algiers",y:1966,s:"owned"},
+  {r:30,t:"There Will Be Blood",y:2007,s:"wishlist"},
+  {r:31,t:"I Am Cuba",y:1964,s:"owned"},
+  {r:32,t:"The Cranes Are Flying",y:1957,s:"owned"},
+  {r:33,t:"GoodFellas",y:1990,s:"owned"},
+  {r:34,t:"Interstellar",y:2014,s:"owned"},
+  {r:35,t:"Paths of Glory",y:1957,s:"owned"},
+  {r:36,t:"Incendies",y:2010,s:"owned"},
+  {r:37,t:"Spirited Away",y:2001,s:"wishlist"},
+  {r:38,t:"Andrei Rublev",y:1966,s:"owned"},
+  {r:39,t:"It's a Wonderful Life",y:1946,s:"owned"},
+  {r:40,t:"The Ascent",y:1977,s:"owned"},
+  {r:41,t:"Apocalypse Now",y:1979,s:"owned"},
+  {r:42,t:"The Apartment",y:1960,s:"owned"},
+  {r:43,t:"Sunset Boulevard",y:1950,s:"owned"},
+  {r:44,t:"The Lord of the Rings: The Two Towers",y:2002,s:"owned"},
+  {r:45,t:"Tokyo Story",y:1953,s:"owned"},
+  {r:46,t:"Sansho the Bailiff",y:1954,s:"owned"},
+  {r:47,t:"The Passion of Joan of Arc",y:1928,s:"owned"},
+  {r:48,t:"Whiplash",y:2014,s:"owned"},
+  {r:49,t:"Fanny and Alexander",y:1982,s:"owned"},
+  {r:50,t:"Mishima: A Life in Four Chapters",y:1985,s:"owned"},
+  {r:51,t:"Portrait of a Lady on Fire",y:2019,s:"wishlist"},
+  {r:52,t:"Memories of Murder",y:2003,s:"owned"},
+  {r:53,t:"Red Beard",y:1965,s:"wishlist"},
+  {r:54,t:"Close-Up",y:1990,s:"owned"},
+  {r:55,t:"Life Is Beautiful",y:1997,s:"wishlist"},
+  {r:56,t:"The Red Shoes",y:1948,s:"owned"},
+  {r:57,t:"Nobody Knows",y:2004,s:"wishlist"},
+  {r:58,t:"Witness for the Prosecution",y:1957,s:"owned"},
+  {r:59,t:"Nights of Cabiria",y:1957,s:"owned"},
+  {r:60,t:"Barry Lyndon",y:1975,s:"owned"},
+  {r:61,t:"The Pianist",y:2002,s:"owned"},
+  {r:62,t:"Lawrence of Arabia",y:1962,s:"owned"},
+  {r:63,t:"Farewell My Concubine",y:1993,s:"wishlist"},
+  {r:64,t:"Spider-Man: Across the Spider-Verse",y:2023,s:"owned"},
+  {r:65,t:"The Empire Strikes Back",y:1980,s:"owned"},
+  {r:66,t:"A Woman Under the Influence",y:1974,s:"owned"},
+  {r:67,t:"Do the Right Thing",y:1989,s:"owned"},
+  {r:68,t:"Eternity and a Day",y:1998,s:"missing"},
+  {r:69,t:"Stalker",y:1979,s:"owned"},
+  {r:70,t:"Spider-Man: Into the Spider-Verse",y:2018,s:"owned"},
+  {r:71,t:"Satantango",y:1994,s:"owned"},
+  {r:72,t:"Princess Mononoke",y:1997,s:"wishlist"},
+  {r:73,t:"Swing Girls",y:2004,s:"missing"},
+  {r:74,t:"The Handmaiden",y:2016,s:"owned"},
+  {r:75,t:"The Voice of Hind Rajab",y:2025,s:"missing"},
+  {r:76,t:"Love Exposure",y:2008,s:"owned"},
+  {r:77,t:"The Lord of the Rings: The Fellowship of the Ring",y:2001,s:"owned"},
+  {r:78,t:"Once Upon a Time in the West",y:1968,s:"owned"},
+  {r:79,t:"Paper Moon",y:1973,s:"owned"},
+  {r:80,t:"An Elephant Sitting Still",y:2018,s:"wishlist"},
+  {r:81,t:"Scenes from a Marriage",y:1974,s:"wishlist"},
+  {r:82,t:"Persona",y:1966,s:"owned"},
+  {r:83,t:"Perfect Blue",y:1997,s:"wishlist"},
+  {r:84,t:"Good Will Hunting",y:1997,s:"wishlist"},
+  {r:85,t:"Dune: Part Two",y:2024,s:"owned"},
+  {r:86,t:"Where Is the Friend's House?",y:1987,s:"owned"},
+  {r:87,t:"In the Mood for Love",y:2000,s:"owned"},
+  {r:88,t:"Apur Sansar",y:1959,s:"owned"},
+  {r:89,t:"A Separation",y:2011,s:"wishlist"},
+  {r:90,t:"Se7en",y:1995,s:"owned"},
+  {r:91,t:"Sherlock Jr.",y:1924,s:"owned"},
+  {r:92,t:"Z",y:1969,s:"missing"},
+  {r:93,t:"One Flew Over the Cuckoo's Nest",y:1975,s:"owned"},
+  {r:94,t:"Paris, Texas",y:1984,s:"owned"},
+  {r:95,t:"Rear Window",y:1954,s:"owned"},
+  {r:96,t:"Inglourious Basterds",y:2009,s:"owned"},
+  {r:97,t:"Oldboy",y:2003,s:"owned"},
+  {r:98,t:"All About Eve",y:1950,s:"wishlist"},
+  {r:99,t:"The Wages of Fear",y:1953,s:"owned"},
+  {r:100,t:"Landscape in the Mist",y:1988,s:"wishlist"},
+  {r:101,t:"Army of Shadows",y:1969,s:"wishlist"},
+  {r:102,t:"Judgment at Nuremberg",y:1961,s:"missing"},
+  {r:103,t:"Howl's Moving Castle",y:2004,s:"missing"},
+  {r:104,t:"Central Station",y:1998,s:"missing"},
+  {r:105,t:"Amadeus",y:1984,s:"owned"},
+  {r:106,t:"It's Such a Beautiful Day",y:2012,s:"missing"},
+  {r:107,t:"Ordet",y:1955,s:"wishlist"},
+  {r:108,t:"Chainsaw Man – The Movie: Reze Arc",y:2025,s:"missing"},
+  {r:109,t:"The Thing",y:1982,s:"owned"},
+  {r:110,t:"How to Make Millions Before Grandma Dies",y:2024,s:"missing"},
+  {r:111,t:"A Man Escaped",y:1956,s:"wishlist"},
+  {r:112,t:"Dead Poets Society",y:1989,s:"wishlist"},
+  {r:113,t:"Raise the Red Lantern",y:1991,s:"owned"},
+  {r:114,t:"Singin' in the Rain",y:1952,s:"owned"},
+  {r:115,t:"A Special Day",y:1977,s:"missing"},
+  {r:116,t:"All That Jazz",y:1979,s:"owned"},
+  {r:117,t:"Still Walking",y:2008,s:"owned"},
+  {r:118,t:"The Departed",y:2006,s:"owned"},
+  {r:119,t:"I'm Still Here",y:2024,s:"missing"},
+  {r:120,t:"Monster",y:2023,s:"missing"},
+  {r:121,t:"To Be or Not to Be",y:1942,s:"wishlist"},
+  {r:122,t:"The Silence of the Lambs",y:1991,s:"owned"},
+  {r:123,t:"Three Colours: Red",y:1994,s:"owned"},
+  {r:124,t:"Twin Peaks: Fire Walk with Me",y:1992,s:"missing"},
+  {r:125,t:"Late Spring",y:1949,s:"owned"},
+  {r:126,t:"Django Unchained",y:2012,s:"wishlist"},
+  {r:127,t:"Prisoners",y:2013,s:"missing"},
+  {r:128,t:"Das Boot",y:1981,s:"wishlist"},
+  {r:129,t:"Wild Strawberries",y:1957,s:"owned"},
+  {r:130,t:"Rocco and His Brothers",y:1960,s:"owned"},
+  {r:131,t:"City Lights",y:1931,s:"owned"},
+  {r:132,t:"Funeral Parade of Roses",y:1969,s:"wishlist"},
+  {r:133,t:"The Great Dictator",y:1940,s:"wishlist"},
+  {r:134,t:"The Seventh Seal",y:1957,s:"owned"},
+  {r:135,t:"Pather Panchali",y:1955,s:"owned"},
+  {r:136,t:"Underground",y:1995,s:"missing"},
+  {r:137,t:"Taste of Cherry",y:1997,s:"owned"},
+  {r:138,t:"The Celebration",y:1998,s:"owned"},
+  {r:139,t:"Brief Encounter",y:1945,s:"wishlist"},
+  {r:140,t:"The Young Girls of Rochefort",y:1967,s:"owned"},
+  {r:141,t:"Mirror",y:1975,s:"owned"},
+  {r:142,t:"Mommy",y:2014,s:"missing"},
+  {r:143,t:"Before Sunset",y:2004,s:"wishlist"},
+  {r:144,t:"Project Hail Mary",y:2026,s:"missing"},
+  {r:145,t:"Perfect Days",y:2023,s:"owned"},
+  {r:146,t:"Tampopo",y:1985,s:"owned"},
+  {r:147,t:"Psycho",y:1960,s:"owned"},
+  {r:148,t:"No Country for Old Men",y:2007,s:"owned"},
+  {r:149,t:"Werckmeister Harmonies",y:2000,s:"wishlist"},
+  {r:150,t:"Heat",y:1995,s:"owned"},
+  {r:151,t:"Wings of Desire",y:1987,s:"owned"},
+  {r:152,t:"Puella Magi Madoka Magica the Movie Part III: Rebellion",y:2013,s:"missing"},
+  {r:153,t:"Sing Sing",y:2023,s:"missing"},
+  {r:154,t:"Dog Day Afternoon",y:1975,s:"wishlist"},
+  {r:155,t:"Shoplifters",y:2018,s:"wishlist"},
+  {r:156,t:"The Elephant Man",y:1980,s:"owned"},
+  {r:157,t:"The 400 Blows",y:1959,s:"owned"},
+  {r:158,t:"Dr. Strangelove",y:1964,s:"owned"},
+  {r:159,t:"The Cremator",y:1969,s:"wishlist"},
+  {r:160,t:"Chinatown",y:1974,s:"owned"},
+  {r:161,t:"Dersu Uzala",y:1975,s:"owned"},
+  {r:162,t:"Children of Men",y:2006,s:"owned"},
+  {r:163,t:"Fantastic Mr. Fox",y:2009,s:"wishlist"},
+  {r:164,t:"Before Sunrise",y:1995,s:"missing"},
+  {r:165,t:"Yojimbo",y:1961,s:"wishlist"},
+  {r:166,t:"The Treasure of the Sierra Madre",y:1948,s:"owned"},
+  {r:167,t:"Children of Paradise",y:1945,s:"wishlist"},
+  {r:168,t:"Opening Night",y:1977,s:"owned"},
+  {r:169,t:"The Lives of Others",y:2006,s:"wishlist"},
+  {r:170,t:"Malcolm X",y:1992,s:"owned"},
+  {r:171,t:"M",y:1931,s:"missing"},
+  {r:172,t:"We All Loved Each Other So Much",y:1974,s:"wishlist"},
+  {r:173,t:"The Sacrifice",y:1986,s:"wishlist"},
+  {r:174,t:"The Father",y:2020,s:"missing"},
+  {r:175,t:"Nirvanna the Band the Show the Movie",y:2025,s:"missing"},
+  {r:176,t:"Terminator 2: Judgment Day",y:1991,s:"wishlist"},
+  {r:177,t:"La Notte",y:1961,s:"owned"},
+  {r:178,t:"Fail Safe",y:1964,s:"owned"},
+  {r:179,t:"Azur & Asmar: The Princes' Quest",y:2006,s:"missing"},
+  {r:180,t:"Secrets & Lies",y:1996,s:"owned"},
+  {r:181,t:"The Man Who Shot Liberty Valance",y:1962,s:"owned"},
+  {r:182,t:"Bicycle Thieves",y:1948,s:"owned"},
+  {r:183,t:"Evangelion: 3.0+1.0 Thrice Upon a Time",y:2021,s:"missing"},
+  {r:184,t:"The Green Mile",y:1999,s:"wishlist"},
+  {r:185,t:"The Prestige",y:2006,s:"missing"},
+  {r:186,t:"The Hunt",y:2012,s:"wishlist"},
+  {r:187,t:"Nostalghia",y:1983,s:"wishlist"},
+  {r:188,t:"Life, and Nothing More…",y:1992,s:"owned"},
+  {r:189,t:"The Iron Giant",y:1999,s:"missing"},
+  {r:190,t:"Akira",y:1988,s:"wishlist"},
+  {r:191,t:"Song of the Sea",y:2014,s:"missing"},
+  {r:192,t:"Casablanca",y:1942,s:"owned"},
+  {r:193,t:"Ace in the Hole",y:1951,s:"owned"},
+  {r:194,t:"Cure",y:1997,s:"owned"},
+  {r:195,t:"Chungking Express",y:1994,s:"owned"},
+  {r:196,t:"Some Like It Hot",y:1959,s:"wishlist"},
+  {r:197,t:"Ritual",y:2000,s:"missing"},
+  {r:198,t:"Look Back",y:2024,s:"missing"},
+  {r:199,t:"8½",y:1963,s:"owned"},
+  {r:200,t:"Interstella 5555",y:2003,s:"missing"},
+  {r:201,t:"Fight Club",y:1999,s:"owned"},
+  {r:202,t:"Throne of Blood",y:1957,s:"wishlist"},
+  {r:203,t:"Who's Afraid of Virginia Woolf?",y:1966,s:"missing"},
+  {r:204,t:"Sorcerer",y:1977,s:"owned"},
+  {r:205,t:"La Dolce Vita",y:1960,s:"owned"},
+  {r:206,t:"Rififi",y:1955,s:"owned"},
+  {r:207,t:"Aparajito",y:1956,s:"owned"},
+  {r:208,t:"Mary and Max",y:2009,s:"missing"},
+  {r:209,t:"A Matter of Life and Death",y:1946,s:"owned"},
+  {r:210,t:"Jeanne Dielman, 23, quai du Commerce, 1080 Bruxelles",y:1975,s:"owned"},
+  {r:211,t:"Ugetsu",y:1953,s:"owned"},
+  {r:212,t:"Network",y:1976,s:"wishlist"},
+  {r:213,t:"The Tale of The Princess Kaguya",y:2013,s:"wishlist"},
+  {r:214,t:"Mulholland Drive",y:2001,s:"owned"},
+  {r:215,t:"Il Sorpasso",y:1962,s:"owned"},
+  {r:216,t:"Umberto D.",y:1952,s:"owned"},
+  {r:217,t:"Modern Times",y:1936,s:"wishlist"},
+  {r:218,t:"The Night of the Hunter",y:1955,s:"owned"},
+  {r:219,t:"The Face of Another",y:1966,s:"missing"},
+  {r:220,t:"The Fall",y:2006,s:"owned"},
+  {r:221,t:"Double Indemnity",y:1944,s:"owned"},
+  {r:222,t:"Saving Private Ryan",y:1998,s:"wishlist"},
+  {r:223,t:"The Holdovers",y:2023,s:"wishlist"},
+  {r:224,t:"I Swear",y:2025,s:"missing"},
+  {r:225,t:"A Moment of Innocence",y:1996,s:"missing"},
+  {r:226,t:"Kes",y:1969,s:"owned"},
+  {r:227,t:"Winter Light",y:1963,s:"missing"},
+  {r:228,t:"The First Slam Dunk",y:2022,s:"missing"},
+  {r:229,t:"Tokyo Godfathers",y:2003,s:"missing"},
+  {r:230,t:"4 Months, 3 Weeks and 2 Days",y:2007,s:"owned"},
+  {r:231,t:"The Best Years of Our Lives",y:1946,s:"wishlist"},
+  {r:232,t:"Alien",y:1979,s:"owned"},
+  {r:233,t:"The Sound of Music",y:1965,s:"wishlist"},
+  {r:234,t:"Macario",y:1960,s:"missing"},
+  {r:235,t:"The Bridge on the River Kwai",y:1957,s:"missing"},
+  {r:236,t:"Quo Vadis, Aida?",y:2020,s:"missing"},
+  {r:237,t:"Son of the White Mare",y:1981,s:"missing"},
+  {r:238,t:"2001: A Space Odyssey",y:1968,s:"owned"},
+  {r:239,t:"Anatomy of a Murder",y:1959,s:"missing"},
+  {r:240,t:"Everything Everywhere All at Once",y:2022,s:"owned"},
+  {r:241,t:"Metropolis",y:1927,s:"missing"},
+  {r:242,t:"Marcel the Shell with Shoes On",y:2021,s:"owned"},
+  {r:243,t:"The Secret in Their Eyes",y:2009,s:"missing"},
+  {r:244,t:"Kwaidan",y:1964,s:"owned"},
+  {r:245,t:"The Grand Budapest Hotel",y:2014,s:"owned"},
+  {r:246,t:"Kamikaze Girls",y:2004,s:"missing"},
+  {r:247,t:"Vada Chennai",y:2018,s:"missing"},
+  {r:248,t:"Eternal Sunshine of the Spotless Mind",y:2004,s:"owned"},
+  {r:249,t:"WALL·E",y:2008,s:"wishlist"},
+  {r:250,t:"Sweet Smell of Success",y:1957,s:"owned"},
+  {r:251,t:"Time of the Gypsies",y:1988,s:"missing"},
+  {r:252,t:"For a Few Dollars More",y:1965,s:"owned"},
+  {r:253,t:"Poetry",y:2010,s:"owned"},
+  {r:254,t:"The Third Man",y:1949,s:"owned"},
+  {r:255,t:"An Autumn Afternoon",y:1962,s:"owned"},
+  {r:256,t:"Pulp Fiction",y:1994,s:"owned"},
+  {r:257,t:"The Lovers on the Bridge",y:1991,s:"missing"},
+  {r:258,t:"Dreams",y:1990,s:"owned"},
+  {r:259,t:"The Life and Death of Colonel Blimp",y:1943,s:"owned"},
+  {r:260,t:"The King of Comedy",y:1982,s:"missing"},
+  {r:261,t:"To Live",y:1994,s:"owned"},
+  {r:262,t:"Kagemusha",y:1980,s:"missing"},
+  {r:263,t:"Millennium Actress",y:2001,s:"missing"},
+  {r:264,t:"Amour",y:2012,s:"wishlist"},
+  {r:265,t:"Wolfwalkers",y:2020,s:"missing"},
+  {r:266,t:"Inception",y:2010,s:"owned"},
+  {r:267,t:"Ratatouille",y:2007,s:"missing"},
+  {r:268,t:"The Devils",y:1971,s:"missing"},
+  {r:269,t:"Your Name.",y:2016,s:"missing"},
+  {r:270,t:"Embrace of the Serpent",y:2015,s:"missing"},
+  {r:271,t:"The Turin Horse",y:2011,s:"missing"},
+  {r:272,t:"Trainspotting",y:1996,s:"owned"},
+  {r:273,t:"The Lion King",y:1994,s:"missing"},
+  {r:274,t:"Once Upon a Time in America",y:1984,s:"wishlist"},
+  {r:275,t:"Magnolia",y:1999,s:"wishlist"},
+  {r:276,t:"The White Ribbon",y:2009,s:"missing"},
+  {r:277,t:"Fireworks",y:1997,s:"owned"},
+  {r:278,t:"Solaris",y:1972,s:"owned"},
+  {r:279,t:"The Truman Show",y:1998,s:"owned"},
+  {r:280,t:"Dancer in the Dark",y:2000,s:"missing"},
+  {r:281,t:"Shame",y:1968,s:"missing"},
+  {r:282,t:"Vertigo",y:1958,s:"owned"},
+  {r:283,t:"Thelma & Louise",y:1991,s:"owned"},
+  {r:284,t:"The Shining",y:1980,s:"owned"},
+  {r:285,t:"The Young and the Damned",y:1950,s:"missing"},
+  {r:286,t:"They Shoot Horses, Don't They?",y:1969,s:"missing"},
+  {r:287,t:"Capernaum",y:2018,s:"missing"},
+  {r:288,t:"Joint Security Area",y:2000,s:"owned"},
+  {r:289,t:"Children of Heaven",y:1997,s:"missing"},
+  {r:290,t:"Le Samouraï",y:1967,s:"owned"},
+  {r:291,t:"The Man Who Sleeps",y:1974,s:"missing"},
+  {r:292,t:"Cria!",y:1976,s:"missing"},
+  {r:293,t:"Kill Bill: Vol. 1",y:2003,s:"owned"},
+  {r:294,t:"Investigation of a Citizen Above Suspicion",y:1970,s:"owned"},
+  {r:295,t:"The Deer Hunter",y:1978,s:"wishlist"},
+  {r:296,t:"Winter Sleep",y:2014,s:"missing"},
+  {r:297,t:"Little Miss Sunshine",y:2006,s:"missing"},
+  {r:298,t:"Hope",y:2013,s:"missing"},
+  {r:299,t:"Y Tu Mamá También",y:2001,s:"wishlist"},
+  {r:300,t:"Mysterious Skin",y:2004,s:"missing"},
+  {r:301,t:"Happy Together",y:1997,s:"owned"},
+  {r:302,t:"Cries and Whispers",y:1972,s:"owned"},
+  {r:303,t:"Meiyazhagan",y:2024,s:"missing"},
+  {r:304,t:"Le Cercle Rouge",y:1970,s:"owned"},
+  {r:305,t:"A Dog's Will",y:2000,s:"missing"},
+  {r:306,t:"Casino",y:1995,s:"owned"},
+  {r:307,t:"Raging Bull",y:1980,s:"owned"},
+  {r:308,t:"Aftersun",y:2022,s:"wishlist"},
+  {r:309,t:"Rosemary's Baby",y:1968,s:"missing"},
+  {r:310,t:"A Silent Voice: The Movie",y:2016,s:"missing"},
+  {r:311,t:"Sound of Metal",y:2019,s:"missing"},
+  {r:312,t:"Persepolis",y:2007,s:"missing"},
+  {r:313,t:"A Taxi Driver",y:2017,s:"missing"},
+  {r:314,t:"The Last Picture Show",y:1971,s:"owned"},
+  {r:315,t:"Back to the Future",y:1985,s:"owned"},
+  {r:316,t:"Au Revoir les Enfants",y:1987,s:"missing"},
+  {r:317,t:"Grand Illusion",y:1937,s:"wishlist"},
+  {r:318,t:"The Wild Robot",y:2024,s:"missing"},
+  {r:319,t:"The Kid",y:1921,s:"missing"},
+  {r:320,t:"The Sting",y:1973,s:"owned"},
+  {r:321,t:"Night Is Short, Walk On Girl",y:2017,s:"missing"},
+  {r:322,t:"Good Morning",y:1959,s:"owned"},
+  {r:323,t:"Comrades, Almost a Love Story",y:1996,s:"owned"},
+  {r:324,t:"HAIKYU!! The Dumpster Battle",y:2024,s:"missing"},
+  {r:325,t:"Boogie Nights",y:1997,s:"owned"},
+  {r:326,t:"In the Name of the Father",y:1993,s:"owned"},
+  {r:327,t:"Unforgiven",y:1992,s:"owned"},
+  {r:328,t:"Gangs of Wasseypur – Part 2",y:2012,s:"missing"},
+  {r:329,t:"The Taste of Tea",y:2004,s:"missing"},
+  {r:330,t:"Better Days",y:2019,s:"missing"},
+  {r:331,t:"Drive My Car",y:2021,s:"wishlist"},
+  {r:332,t:"Love Streams",y:1984,s:"missing"},
+  {r:333,t:"Linda Linda Linda",y:2005,s:"missing"},
+  {r:334,t:"RRR",y:2022,s:"missing"},
+  {r:335,t:"PlayTime",y:1967,s:"owned"},
+  {r:336,t:"A Face in the Crowd",y:1957,s:"owned"},
+  {r:337,t:"Moonlight",y:2016,s:"owned"},
+  {r:338,t:"The Conformist",y:1970,s:"wishlist"},
+  {r:339,t:"Rashomon",y:1950,s:"owned"},
+  {r:340,t:"Through the Olive Trees",y:1994,s:"missing"},
+  {r:341,t:"Mind Game",y:2004,s:"owned"},
+  {r:342,t:"Pixote",y:1980,s:"missing"},
+  {r:343,t:"Joyland",y:2022,s:"missing"},
+  {r:344,t:"Full Metal Jacket",y:1987,s:"owned"},
+  {r:345,t:"Dogville",y:2003,s:"wishlist"},
+  {r:346,t:"In a Lonely Place",y:1950,s:"wishlist"},
+  {r:347,t:"My Neighbor Totoro",y:1988,s:"wishlist"},
+  {r:348,t:"Amélie",y:2001,s:"owned"},
+  {r:349,t:"The General",y:1926,s:"owned"},
+  {r:350,t:"The Grapes of Wrath",y:1940,s:"missing"},
+  {r:351,t:"Nausicaä of the Valley of the Wind",y:1984,s:"missing"},
+  {r:352,t:"Ivan's Childhood",y:1962,s:"owned"},
+  {r:353,t:"My Life as a Zucchini",y:2016,s:"missing"},
+  {r:354,t:"Kumbalangi Nights",y:2019,s:"missing"},
+  {r:355,t:"The Return",y:2003,s:"missing"},
+  {r:356,t:"Coraline",y:2009,s:"missing"},
+  {r:357,t:"Hamnet",y:2025,s:"missing"},
+  {r:358,t:"A Prophet",y:2009,s:"missing"},
+  {r:359,t:"Roman Holiday",y:1953,s:"missing"},
+  {r:360,t:"Klaus",y:2019,s:"missing"},
+  {r:361,t:"Diabolique",y:1955,s:"owned"},
+  {r:362,t:"North by Northwest",y:1959,s:"owned"},
+  {r:363,t:"Céline and Julie Go Boating",y:1974,s:"wishlist"},
+  {r:364,t:"The Cook, the Thief, His Wife & Her Lover",y:1989,s:"missing"},
+  {r:365,t:"Day for Night",y:1973,s:"owned"},
+  {r:366,t:"Hard Boiled",y:1992,s:"owned"},
+  {r:367,t:"All About My Mother",y:1999,s:"wishlist"},
+  {r:368,t:"The Straight Story",y:1999,s:"missing"},
+  {r:369,t:"What Ever Happened to Baby Jane?",y:1962,s:"missing"},
+  {r:370,t:"The Long Goodbye",y:1973,s:"owned"},
+  {r:371,t:"Stand by Me",y:1986,s:"owned"},
+  {r:372,t:"Princes and Princesses",y:2000,s:"missing"},
+  {r:373,t:"Rio Bravo",y:1959,s:"owned"},
+  {r:374,t:"The Shop Around the Corner",y:1940,s:"owned"},
+  {r:375,t:"Who Killed Captain Alex?",y:2010,s:"missing"},
+  {r:376,t:"Whisper of the Heart",y:1995,s:"missing"},
+  {r:377,t:"Amores Perros",y:2000,s:"wishlist"},
+  {r:378,t:"Threads",y:1984,s:"missing"},
+  {r:379,t:"Shutter Island",y:2010,s:"wishlist"},
+  {r:380,t:"Like Father, Like Son",y:2013,s:"owned"},
+  {r:381,t:"Citizen Kane",y:1941,s:"owned"},
+  {r:382,t:"Gladiator",y:2000,s:"wishlist"},
+  {r:383,t:"The Fire Within",y:1963,s:"missing"},
+  {r:384,t:"All the President's Men",y:1976,s:"missing"},
+  {r:385,t:"Spring, Summer, Fall, Winter… and Spring",y:2003,s:"missing"},
+  {r:386,t:"Little Women",y:2019,s:"missing"},
+  {r:387,t:"La Strada",y:1954,s:"wishlist"},
+  {r:388,t:"Cléo from 5 to 7",y:1962,s:"wishlist"},
+  {r:389,t:"The Children's Hour",y:1961,s:"missing"},
+  {r:390,t:"Memento",y:2000,s:"wishlist"},
+  {r:391,t:"Ernest & Celestine",y:2012,s:"missing"},
+  {r:392,t:"All Quiet on the Western Front",y:1930,s:"missing"},
+  {r:393,t:"Tokyo Sonata",y:2008,s:"missing"},
+  {r:394,t:"Sunrise: A Song of Two Humans",y:1927,s:"owned"},
+  {r:395,t:"The Matrix",y:1999,s:"owned"},
+  {r:396,t:"Güeros",y:2014,s:"missing"},
+  {r:397,t:"Cabaret",y:1972,s:"missing"},
+  {r:398,t:"Forrest Gump",y:1994,s:"wishlist"},
+  {r:399,t:"Rome, Open City",y:1945,s:"owned"},
+  {r:400,t:"It Happened One Night",y:1934,s:"owned"},
+  {r:401,t:"Vampire Hunter D: Bloodlust",y:2000,s:"missing"},
+  {r:402,t:"Once Upon a Time in Anatolia",y:2011,s:"missing"},
+  {r:403,t:"Ali: Fear Eats the Soul",y:1974,s:"owned"},
+  {r:404,t:"The Exterminating Angel",y:1962,s:"owned"},
+  {r:405,t:"The Second Mother",y:2015,s:"missing"},
+  {r:406,t:"Mother",y:2009,s:"missing"},
+  {r:407,t:"Butch Cassidy and the Sundance Kid",y:1969,s:"missing"},
+  {r:408,t:"Touch of Evil",y:1958,s:"owned"},
+  {r:409,t:"Black Swan",y:2010,s:"wishlist"},
+  {r:410,t:"Memoir of a Snail",y:2024,s:"missing"},
+  {r:411,t:"Obsession",y:2025,s:"missing"},
+  {r:412,t:"Nashville",y:1975,s:"owned"},
+  {r:413,t:"Carandiru",y:2003,s:"missing"},
+  {r:414,t:"The Green Ray",y:1986,s:"missing"},
+  {r:415,t:"Phantom Thread",y:2017,s:"owned"},
+  {r:416,t:"My Night at Maud's",y:1969,s:"owned"},
+  {r:417,t:"The Spirit of the Beehive",y:1973,s:"wishlist"},
+  {r:418,t:"Blue Giant",y:2023,s:"missing"},
+  {r:419,t:"On the Waterfront",y:1954,s:"owned"},
+  {r:420,t:"12 Years a Slave",y:2013,s:"missing"},
+  {r:421,t:"Mad Max: Fury Road",y:2015,s:"owned"},
+  {r:422,t:"All About Lily Chou-Chou",y:2001,s:"wishlist"},
+  {r:423,t:"Lilya 4-ever",y:2002,s:"owned"},
+  {r:424,t:"The Great Escape",y:1963,s:"wishlist"},
+  {r:425,t:"After Life",y:1998,s:"owned"},
+  {r:426,t:"Silenced",y:2011,s:"missing"},
+  {r:427,t:"Short Term 12",y:2013,s:"missing"},
+  {r:428,t:"Cool Hand Luke",y:1967,s:"owned"},
+  {r:429,t:"Alice in the Cities",y:1974,s:"missing"},
+  {r:430,t:"Through a Glass Darkly",y:1961,s:"missing"},
+  {r:431,t:"Fallen Angels",y:1995,s:"owned"},
+  {r:432,t:"Mulan",y:1998,s:"missing"},
+  {r:433,t:"Star Wars",y:1977,s:"owned"},
+  {r:434,t:"The Killer",y:1989,s:"owned"},
+  {r:435,t:"Synecdoche, New York",y:2008,s:"wishlist"},
+  {r:436,t:"Oppenheimer",y:2023,s:"owned"},
+  {r:437,t:"American History X",y:1998,s:"missing"},
+  {r:438,t:"The Virgin Spring",y:1960,s:"missing"},
+  {r:439,t:"Punishment Park",y:1971,s:"owned"},
+  {r:440,t:"Hiroshima Mon Amour",y:1959,s:"wishlist"},
+  {r:441,t:"Brokeback Mountain",y:2005,s:"wishlist"},
+  {r:442,t:"Past Lives",y:2023,s:"wishlist"},
+  {r:443,t:"Pride",y:2014,s:"missing"},
+  {r:444,t:"Eat Drink Man Woman",y:1994,s:"missing"},
+  {r:445,t:"The Wolf House",y:2018,s:"missing"},
+  {r:446,t:"The Great Silence",y:1968,s:"missing"},
+  {r:447,t:"Society of the Snow",y:2023,s:"missing"},
+  {r:448,t:"Sentimental Value",y:2025,s:"missing"},
+  {r:449,t:"The Intouchables",y:2011,s:"wishlist"},
+  {r:450,t:"The Gold Rush",y:1925,s:"missing"},
+  {r:451,t:"Pan's Labyrinth",y:2006,s:"owned"},
+  {r:452,t:"Raiders of the Lost Ark",y:1981,s:"wishlist"},
+  {r:453,t:"Dial M for Murder",y:1954,s:"missing"},
+  {r:454,t:"Mustang",y:2015,s:"missing"},
+  {r:455,t:"Three Colours: Blue",y:1993,s:"owned"},
+  {r:456,t:"Midnight Cowboy",y:1969,s:"owned"},
+  {r:457,t:"Sanjuro",y:1962,s:"wishlist"},
+  {r:458,t:"3 Idiots",y:2009,s:"missing"},
+  {r:459,t:"The Leopard",y:1963,s:"owned"},
+  {r:460,t:"Nine Queens",y:2000,s:"missing"},
+  {r:461,t:"Seconds",y:1966,s:"owned"},
+  {r:462,t:"The Hidden Fortress",y:1958,s:"missing"},
+  {r:463,t:"3 Women",y:1977,s:"owned"},
+  {r:464,t:"Pink Floyd: The Wall",y:1982,s:"missing"},
+  {r:465,t:"Terrorizers",y:1986,s:"missing"},
+  {r:466,t:"The Sword of Doom",y:1966,s:"owned"},
+  {r:467,t:"The Conversation",y:1974,s:"owned"},
+  {r:468,t:"Fargo",y:1996,s:"wishlist"},
+  {r:469,t:"Kiki's Delivery Service",y:1989,s:"missing"},
+  {r:470,t:"Scarface",y:1983,s:"wishlist"},
+  {r:471,t:"I Dream in Another Language",y:2017,s:"missing"},
+  {r:472,t:"Monty Python and the Holy Grail",y:1975,s:"wishlist"},
+  {r:473,t:"There's Still Tomorrow",y:2023,s:"missing"},
+  {r:474,t:"My Father's Shadow",y:2025,s:"missing"},
+  {r:475,t:"Breaking the Waves",y:1996,s:"missing"},
+  {r:476,t:"One Battle After Another",y:2025,s:"missing"},
+  {r:477,t:"How to Train Your Dragon",y:2010,s:"missing"},
+  {r:478,t:"One Sings, the Other Doesn't",y:1977,s:"missing"},
+  {r:479,t:"Phantom of the Paradise",y:1974,s:"owned"},
+  {r:480,t:"Harry Potter and the Prisoner of Azkaban",y:2004,s:"missing"},
+  {r:481,t:"Wild Tales",y:2014,s:"missing"},
+  {r:482,t:"Pride & Prejudice",y:2005,s:"missing"},
+  {r:483,t:"Rope",y:1948,s:"owned"},
+  {r:484,t:"The Servant",y:1963,s:"owned"},
+  {r:485,t:"McCabe & Mrs. Miller",y:1971,s:"missing"},
+  {r:486,t:"Faust",y:1926,s:"missing"},
+  {r:487,t:"Le Bonheur",y:1965,s:"missing"},
+  {r:488,t:"The Umbrellas of Cherbourg",y:1964,s:"owned"},
+  {r:489,t:"Arrival",y:2016,s:"missing"},
+  {r:490,t:"Redline",y:2009,s:"missing"},
+  {r:491,t:"Reservoir Dogs",y:1992,s:"owned"},
+  {r:492,t:"Souleymane's Story",y:2024,s:"missing"},
+  {r:493,t:"Mr. Smith Goes to Washington",y:1939,s:"missing"},
+  {r:494,t:"In Cold Blood",y:1967,s:"owned"},
+  {r:495,t:"Get Out",y:2017,s:"owned"},
+  {r:496,t:"12th Fail",y:2023,s:"missing"},
+  {r:497,t:"About Elly",y:2009,s:"missing"},
+  {r:498,t:"Short Cuts",y:1993,s:"missing"},
+  {r:499,t:"Fitzcarraldo",y:1982,s:"owned"},
+  {r:500,t:"Love Letter",y:1995,s:"missing"},
+];
+
+const nOwned = FILMS.filter(f=>f.s==='owned').length;
+const nWish  = FILMS.filter(f=>f.s==='wishlist').length;
+const nMiss  = FILMS.filter(f=>f.s==='missing').length;
+
+document.getElementById('count-owned').textContent = nOwned;
+document.getElementById('count-wishlist').textContent = nWish;
+document.getElementById('count-missing').textContent = nMiss;
+document.getElementById('count-pct').textContent = Math.round(nOwned/5)+'%';
+document.getElementById('prog-owned').style.width = (nOwned/5)+'%';
+document.getElementById('prog-wishlist').style.width = (nWish/5)+'%';
+
+let currentFilter = 'all';
+let currentSort = 'rank';
+let searchQ = '';
+
+function lb_setFilter(f) {
+  currentFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.className = 'filter-btn';
+    if(b.dataset.filter === f) b.classList.add('active-'+f);
+  });
+  lb_lb_render();
+}
+
+function lb_setSort(s) {
+  currentSort = s;
+  document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('sort-'+s).classList.add('active');
+  lb_lb_render();
+}
+
+function lb_onSearch() {
+  searchQ = document.getElementById('search-input').value.toLowerCase();
+  lb_lb_render();
+}
+
+function lb_render() {
+  let films = [...FILMS];
+  if(currentFilter !== 'all') films = films.filter(f => f.s === currentFilter);
+  if(searchQ) films = films.filter(f => f.t.toLowerCase().includes(searchQ) || String(f.y).includes(searchQ));
+  if(currentSort === 'year') films.sort((a,b) => a.y - b.y);
+  else if(currentSort === 'title') films.sort((a,b) => a.t.localeCompare(b.t));
+  else films.sort((a,b) => a.r - b.r);
+
+  const listEl = document.getElementById('film-list');
+  document.getElementById('count-display').textContent =
+    `Showing ${films.length} film${films.length!==1?'s':''}`;
+
+  listEl.innerHTML = films.map(f => `
+    <div class="film-item status-${f.s}">
+      <span class="rank">${f.r}</span>
+      <div class="film-info">
+        <div class="film-title${f.s==='missing'?' faded':''}">${f.t}</div>
+        <div class="film-year">${f.y}</div>
+      </div>
+      <span class="status-pill pill-${f.s}">${f.s==='owned'?'owned':f.s==='wishlist'?'wish':'—'}</span>
+    </div>
+  `).join('');
+}
+
+lb_render();
+
+// ===== End LB500 =====
+
 if('serviceWorker' in navigator){
   window.addEventListener('load',()=>{
     navigator.serviceWorker.register('/movies/sw.js')
