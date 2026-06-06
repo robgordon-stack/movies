@@ -1285,7 +1285,12 @@ function lb_render() {
     `Showing ${films.length} film${films.length!==1?'s':''}`;
 
   listEl.innerHTML = films.map(f => {
-    const lbUrl = `https://letterboxd.com/search/films/${encodeURIComponent(f.t)}/`;
+    const lbSlug = f.t.toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '')
+      .trim()
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-');
+    const lbUrl = `https://letterboxd.com/film/${lbSlug}/`;
     return `
     <a class="film-item status-${f.s}" href="${lbUrl}" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">
       <span class="rank">${f.r}</span>
