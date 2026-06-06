@@ -6,13 +6,31 @@
     "director": "Brad Bird",
     "poster": "https://www.themoviedb.org/t/p/w1280/ct04FCFLPImNG5thcPLRnVsZlmS.jpg",
     "imdb_id": "tt0129167",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Animation, Drama, Family, Science Fiction",
+    "country": "United States of America",
+    "runtime": 86,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780709036314
+    "added": 1780709036314,
+    "tmdb_id": 10386,
+    "imdb_score": 8.0,
+    "score": 8.0,
+    "similar": [
+      {
+        "title": "Strange World",
+        "year": 2022,
+        "imdb_id": "tt10298840"
+      },
+      {
+        "title": "9",
+        "year": 2009,
+        "imdb_id": "tt0472033"
+      }
+    ],
+    "rt_score": 0.96,
+    "lb": "https://boxd.it/1Wow",
+    "lb_score": 4.28
   },
   {
     "id": "1780709025581era23sfwuzu",
@@ -21,13 +39,31 @@
     "director": "Tomm Moore",
     "poster": "https://www.themoviedb.org/t/p/w1280/16LQC6zpqB0l74mVWb93a2oMFnX.jpg",
     "imdb_id": "tt1865505",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Family, Animation, Fantasy",
+    "country": "Ireland",
+    "runtime": 94,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780709025581
+    "added": 1780709025581,
+    "tmdb_id": 110416,
+    "imdb_score": 8.0,
+    "score": 8.0,
+    "similar": [
+      {
+        "title": "The Secret of Kells",
+        "year": 2009,
+        "imdb_id": "tt0485601"
+      },
+      {
+        "title": "The Secret of Roan Inish",
+        "year": 1994,
+        "imdb_id": "tt0111112"
+      }
+    ],
+    "rt_score": 0.99,
+    "lb": "https://boxd.it/3Ic6",
+    "lb_score": 4.28
   },
   {
     "id": "17807090147815fj0875kfn",
@@ -36,13 +72,31 @@
     "director": "Hideaki Anno",
     "poster": "https://www.themoviedb.org/t/p/w1280/h88yVKhgPAaPNEllDqsuhpQOJeL.jpg",
     "imdb_id": "tt0269856",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Drama",
+    "country": "Japan",
+    "runtime": 128,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780709014781
+    "added": 1780709014781,
+    "tmdb_id": 39056,
+    "imdb_score": 7.7,
+    "score": 7.7,
+    "similar": [
+      {
+        "title": "Lucky Them",
+        "year": 2013,
+        "imdb_id": "tt1885299"
+      },
+      {
+        "title": "Bastard Out of Carolina",
+        "year": 1996,
+        "imdb_id": "tt0115633"
+      }
+    ],
+    "lb": "https://boxd.it/14z6",
+    "lb_score": 4.27,
+    "rt_score": 0.82
   },
   {
     "id": "1780709003047ecc2oqxdrf",
@@ -51,13 +105,31 @@
     "director": "Kiyotaka Oshiyama",
     "poster": "https://www.themoviedb.org/t/p/w1280/4f2EcNkp1Mvp9wE5w7HKxcmACWg.jpg",
     "imdb_id": "tt31711040",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Animation, Drama",
+    "country": "Japan",
+    "runtime": 58,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780709003047
+    "added": 1780709003047,
+    "tmdb_id": 1244492,
+    "imdb_score": 8.1,
+    "score": 8.1,
+    "similar": [
+      {
+        "title": "From Up on Poppy Hill",
+        "year": 2011,
+        "imdb_id": "tt1798188"
+      },
+      {
+        "title": "When Marnie Was There",
+        "year": 2014,
+        "imdb_id": "tt3398268"
+      }
+    ],
+    "rt_score": 1.0,
+    "lb": "https://boxd.it/LjA6",
+    "lb_score": 4.27
   },
   {
     "id": "1780708990699whsxqbolra",
@@ -66,13 +138,31 @@
     "director": "Mike Nichols",
     "poster": "https://www.themoviedb.org/t/p/w1280/wF7ihB5V5gSm6zxjv3ZhHOpgREI.jpg",
     "imdb_id": "tt0061184",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Drama",
+    "country": "United States of America",
+    "runtime": 131,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780708990699
+    "added": 1780708990699,
+    "tmdb_id": 396,
+    "imdb_score": 7.7,
+    "score": 7.7,
+    "similar": [
+      {
+        "title": "Othello",
+        "year": 1951,
+        "imdb_id": "tt0045251"
+      },
+      {
+        "title": "21",
+        "year": 2008,
+        "imdb_id": "tt0478087"
+      }
+    ],
+    "rt_score": 0.96,
+    "lb": "https://boxd.it/2atK",
+    "lb_score": 4.27
   },
   {
     "id": "1780708971980s0742ajgag",
@@ -81,13 +171,31 @@
     "director": "Hiroshi Teshigahara",
     "poster": "https://www.themoviedb.org/t/p/w1280/eUnFdf1Mf1b8AD3ChMPOCUfTBDQ.jpg",
     "imdb_id": "tt0061065",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Drama, Science Fiction",
+    "country": "Japan",
+    "runtime": 122,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780708971980
+    "added": 1780708971980,
+    "tmdb_id": 29452,
+    "imdb_score": 7.8,
+    "score": 7.8,
+    "similar": [
+      {
+        "title": "Shin Kamen Rider",
+        "year": 2023,
+        "imdb_id": "tt14379088"
+      },
+      {
+        "title": "Jonathan",
+        "year": 2018,
+        "imdb_id": "tt5639446"
+      }
+    ],
+    "rt_score": 0.86,
+    "lb": "https://boxd.it/1nso",
+    "lb_score": 4.26
   },
   {
     "id": "1780708915297w0s2q32w9e",
@@ -96,13 +204,31 @@
     "director": "Mohsen Makhmalbaf",
     "poster": "https://www.themoviedb.org/t/p/w1280/jBgImBSOFUJg8voD7xbLqS1s1tf.jpg",
     "imdb_id": "tt0117214",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Drama, Comedy",
+    "country": "Iran",
+    "runtime": 78,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780708915298
+    "added": 1780708915298,
+    "tmdb_id": 43976,
+    "imdb_score": 7.6,
+    "score": 7.6,
+    "similar": [
+      {
+        "title": "Blindspotting",
+        "year": 2018,
+        "imdb_id": "tt7242142"
+      },
+      {
+        "title": "Police Academy 3: Back in Training",
+        "year": 1986,
+        "imdb_id": "tt0091777"
+      }
+    ],
+    "rt_score": 0.89,
+    "lb": "https://boxd.it/T6W",
+    "lb_score": 4.25
   },
   {
     "id": "1780708886182tbc15wqj95l",
@@ -111,13 +237,31 @@
     "director": "Ingmar Bergman",
     "poster": "https://www.themoviedb.org/t/p/w1280/ha69smyAISTiqQKojjjCMnbXdA8.jpg",
     "imdb_id": "tt0057358",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Drama",
+    "country": "Sweden",
+    "runtime": 80,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780708886182
+    "added": 1780708886182,
+    "tmdb_id": 29455,
+    "imdb_score": 7.9,
+    "score": 7.9,
+    "similar": [
+      {
+        "title": "First Reformed",
+        "year": 2018,
+        "imdb_id": "tt6053438"
+      },
+      {
+        "title": "I'm Thinking of Ending Things",
+        "year": 2020,
+        "imdb_id": "tt7939766"
+      }
+    ],
+    "rt_score": 0.77,
+    "lb": "https://boxd.it/1nrU",
+    "lb_score": 4.25
   },
   {
     "id": "1780708605633rcbm95588h",
@@ -126,13 +270,31 @@
     "director": "Christopher Nolan",
     "poster": "https://www.themoviedb.org/t/p/w1280/Ag2B2KHKQPukjH7WutmgnnSNurZ.jpg",
     "imdb_id": "tt0482571",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Drama, Mystery, Science Fiction",
+    "country": "United Kingdom",
+    "runtime": 130,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780708605633
+    "added": 1780708605633,
+    "tmdb_id": 1124,
+    "imdb_score": 8.2,
+    "score": 8.2,
+    "similar": [
+      {
+        "title": "Mr. K",
+        "year": 2025,
+        "imdb_id": "tt7972570"
+      },
+      {
+        "title": "Marjorie Prime",
+        "year": 2017,
+        "imdb_id": "tt4978710"
+      }
+    ],
+    "rt_score": 0.77,
+    "lb": "https://boxd.it/293w",
+    "lb_score": 4.28
   },
   {
     "id": "1780708565100fnaw8utbhyo",
@@ -141,13 +303,31 @@
     "director": "Florian Zeller",
     "poster": "https://www.themoviedb.org/t/p/w1280/pr3bEQ517uMb5loLvjFQi8uLAsp.jpg",
     "imdb_id": "tt10272386",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Drama",
+    "country": "France",
+    "runtime": 97,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780708565100
+    "added": 1780708565100,
+    "tmdb_id": 600354,
+    "imdb_score": 8.1,
+    "score": 8.1,
+    "similar": [
+      {
+        "title": "Still Life",
+        "year": 2013,
+        "imdb_id": "tt2395417"
+      },
+      {
+        "title": "A Taste of Honey",
+        "year": 1961,
+        "imdb_id": "tt0055506"
+      }
+    ],
+    "rt_score": 0.98,
+    "lb": "https://boxd.it/m8Ie",
+    "lb_score": 4.29
   },
   {
     "id": "1780708549201ijos76n1ny",
@@ -156,13 +336,31 @@
     "director": "Richard Linklater",
     "poster": "https://www.themoviedb.org/t/p/w1280/kf1Jb1c2JAOqjuzA3H4oDM263uB.jpg",
     "imdb_id": "tt0112471",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Drama, Romance",
+    "country": "Austria",
+    "runtime": 101,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780708549201
+    "added": 1780708549201,
+    "tmdb_id": 76,
+    "imdb_score": 8.0,
+    "score": 8.0,
+    "similar": [
+      {
+        "title": "The Illusionist",
+        "year": 2006,
+        "imdb_id": "tt0443543"
+      },
+      {
+        "title": "Amadeus",
+        "year": 1984,
+        "imdb_id": "tt0086879"
+      }
+    ],
+    "rt_score": 1.0,
+    "lb": "https://boxd.it/2bcU",
+    "lb_score": 4.3
   },
   {
     "id": "1780708491368lyjeiwr001s",
@@ -171,13 +369,31 @@
     "director": "Hideaki Anno, Kazuya Tsurumaki",
     "poster": "https://www.themoviedb.org/t/p/w1280/j6G24dqI4WgUtChhWjfnI4lnmiK.jpg",
     "imdb_id": "tt0169858",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Animation, Science Fiction, Drama, Fantasy",
+    "country": "Japan",
+    "runtime": 87,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780708491368
+    "added": 1780708491368,
+    "tmdb_id": 18491,
+    "imdb_score": 8.3,
+    "score": 8.3,
+    "similar": [
+      {
+        "title": "Evangelion: 3.0+1.0 Thrice Upon a Time",
+        "year": 2021,
+        "imdb_id": "tt2458948"
+      },
+      {
+        "title": "Evangelion: 3.0 You Can (Not) Redo",
+        "year": 2012,
+        "imdb_id": "tt0860907"
+      }
+    ],
+    "rt_score": 0.92,
+    "lb": "https://boxd.it/1GRM",
+    "lb_score": 4.47
   },
   {
     "id": "1780708439552a9ghi4vlg4i",
@@ -186,13 +402,31 @@
     "director": "Don Hertzfeldt",
     "poster": "https://www.themoviedb.org/t/p/w1280/gZIBj1iJAbz5d0pi01FZ4HJLAAq.jpg",
     "imdb_id": "tt2396224",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Animation, Comedy",
+    "country": "United States of America",
+    "runtime": 62,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780708439552
+    "added": 1780708439552,
+    "tmdb_id": 489412,
+    "imdb_score": 7.9,
+    "score": 7.9,
+    "similar": [
+      {
+        "title": "Elio",
+        "year": 2025,
+        "imdb_id": "tt4900148"
+      },
+      {
+        "title": "The Addams Family",
+        "year": 1991,
+        "imdb_id": "tt0101272"
+      }
+    ],
+    "rt_score": 1.0,
+    "lb": "https://boxd.it/hCY2",
+    "lb_score": 4.36
   },
   {
     "id": "17807084069846ni02v58p76",
@@ -201,13 +435,31 @@
     "director": "Pat Boonnitipat",
     "poster": "https://www.themoviedb.org/t/p/w1280/9Xa0Grd2jq2lM2gqcoTB4F9TjMd.jpg",
     "imdb_id": "tt31392609",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Drama",
+    "country": "Thailand",
+    "runtime": 126,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780708406984
+    "added": 1780708406984,
+    "tmdb_id": 1103621,
+    "imdb_score": 8.1,
+    "score": 8.1,
+    "similar": [
+      {
+        "title": "Mr. Church",
+        "year": 2016,
+        "imdb_id": "tt4196848"
+      },
+      {
+        "title": "Aftersun",
+        "year": 2022,
+        "imdb_id": "tt19770238"
+      }
+    ],
+    "rt_score": 0.98,
+    "lb": "https://boxd.it/FLa4",
+    "lb_score": 4.35
   },
   {
     "id": "178070838691949amkopqha5",
@@ -216,13 +468,31 @@
     "director": "Ettore Scola",
     "poster": "https://www.themoviedb.org/t/p/w1280/jzRn7N1mFowkQ5IkUkfWoxXJtYU.jpg",
     "imdb_id": "tt0076085",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Drama, Romance",
+    "country": "Italy",
+    "runtime": 106,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780708386919
+    "added": 1780708386919,
+    "tmdb_id": 42229,
+    "imdb_score": 8.0,
+    "score": 8.0,
+    "similar": [
+      {
+        "title": "Head in the Clouds",
+        "year": 2004,
+        "imdb_id": "tt0338097"
+      },
+      {
+        "title": "The Bad Poet",
+        "year": 2021,
+        "imdb_id": "tt10290352"
+      }
+    ],
+    "rt_score": 1.0,
+    "lb": "https://boxd.it/Xqc",
+    "lb_score": 4.34
   },
   {
     "id": "1780708369468xwlx1yhni28",
@@ -231,13 +501,31 @@
     "director": "Walter Salles",
     "poster": "https://www.themoviedb.org/t/p/w1280/gZnsMbhCvhzAQlKaVpeFRHYjGyb.jpg",
     "imdb_id": "tt14961016",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Drama, History",
+    "country": "Brazil",
+    "runtime": 138,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780708369468
+    "added": 1780708369468,
+    "tmdb_id": 1000837,
+    "imdb_score": 7.9,
+    "score": 7.9,
+    "similar": [
+      {
+        "title": "Central Station",
+        "year": 1998,
+        "imdb_id": "tt0140888"
+      },
+      {
+        "title": "The Emerald Forest",
+        "year": 1985,
+        "imdb_id": "tt0089087"
+      }
+    ],
+    "lb": "https://boxd.it/BPEO",
+    "lb_score": 4.34,
+    "rt_score": 0.9
   },
   {
     "id": "1780708328815bblmkq2729k",
@@ -246,13 +534,31 @@
     "director": "David Lynch",
     "poster": "https://www.themoviedb.org/t/p/w1280/mxsGXqetGnirf99qapYd5MMY1VL.jpg",
     "imdb_id": "tt0105665",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Drama, Mystery, Horror",
+    "country": "United States of America",
+    "runtime": 135,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780708328815
+    "added": 1780708328815,
+    "tmdb_id": 1923,
+    "imdb_score": 7.4,
+    "score": 7.4,
+    "similar": [
+      {
+        "title": "Super Dark Times",
+        "year": 2017,
+        "imdb_id": "tt5112578"
+      },
+      {
+        "title": "Fear Street: 1994",
+        "year": 2021,
+        "imdb_id": "tt6566576"
+      }
+    ],
+    "rt_score": 0.66,
+    "lb": "https://boxd.it/27Qw",
+    "lb_score": 4.33
   },
   {
     "id": "1780708311933l4wpitd06q",
@@ -261,13 +567,31 @@
     "director": "Denis Villeneuve",
     "poster": "https://www.themoviedb.org/t/p/w1280/jsS3a3ep2KyBVmmiwaz3LvK49b1.jpg",
     "imdb_id": "tt1392214",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Drama, Thriller, Crime",
+    "country": "United States of America",
+    "runtime": 153,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780708311933
+    "added": 1780708311933,
+    "tmdb_id": 146233,
+    "imdb_score": 8.1,
+    "score": 8.1,
+    "similar": [
+      {
+        "title": "Shimmer Lake",
+        "year": 2017,
+        "imdb_id": "tt1386691"
+      },
+      {
+        "title": "Witness",
+        "year": 1985,
+        "imdb_id": "tt0090329"
+      }
+    ],
+    "rt_score": 0.81,
+    "lb": "https://boxd.it/4E5i",
+    "lb_score": 4.33
   },
   {
     "id": "178070829990155a9h3jyjs2",
@@ -276,13 +600,31 @@
     "director": "Xavier Dolan",
     "poster": "https://www.themoviedb.org/t/p/w1280/uPDP0cHGOpkr47rdCdHWo4CyiPj.jpg",
     "imdb_id": "tt3612616",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Drama",
+    "country": "Canada",
+    "runtime": 138,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780708299901
+    "added": 1780708299901,
+    "tmdb_id": 265177,
+    "imdb_score": 8.2,
+    "score": 8.2,
+    "similar": [
+      {
+        "title": "20th Century Women",
+        "year": 2016,
+        "imdb_id": "tt4385888"
+      },
+      {
+        "title": "Grandview, U.S.A.",
+        "year": 1984,
+        "imdb_id": "tt0087359"
+      }
+    ],
+    "rt_score": 0.89,
+    "lb": "https://boxd.it/7Uau",
+    "lb_score": 4.32
   },
   {
     "id": "1780708286151pikhjz0gqr7",
@@ -291,13 +633,31 @@
     "director": "Phil Lord, Christopher Miller",
     "poster": "https://www.themoviedb.org/t/p/w1280/yihdXomYb5kTeSivtFndMy5iDmf.jpg",
     "imdb_id": "tt12042730",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Science Fiction, Adventure",
+    "country": "United States of America",
+    "runtime": 157,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780708286151
+    "added": 1780708286151,
+    "tmdb_id": 687163,
+    "imdb_score": 8.7,
+    "score": 8.7,
+    "similar": [
+      {
+        "title": "Solaris",
+        "year": 2002,
+        "imdb_id": "tt0307479"
+      },
+      {
+        "title": "Stowaway",
+        "year": 2021,
+        "imdb_id": "tt9203694"
+      }
+    ],
+    "rt_score": 0.94,
+    "lb": "https://boxd.it/pEeQ",
+    "lb_score": 4.31
   },
   {
     "id": "1780708155868u3e3zryhz3j",
@@ -306,13 +666,31 @@
     "director": "Walter Salles",
     "poster": "https://www.themoviedb.org/t/p/w1280/zJvp7XjQ2LhPbDVYhFXyucs40vR.jpg",
     "imdb_id": "tt0140888",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Drama",
+    "country": "Brazil",
+    "runtime": 111,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780708155868
+    "added": 1780708155868,
+    "tmdb_id": 666,
+    "imdb_score": 8.1,
+    "score": 8.1,
+    "similar": [
+      {
+        "title": "The Emerald Forest",
+        "year": 1985,
+        "imdb_id": "tt0089087"
+      },
+      {
+        "title": "I'm Still Here",
+        "year": 2024,
+        "imdb_id": "tt14961016"
+      }
+    ],
+    "rt_score": 0.94,
+    "lb": "https://boxd.it/29RG",
+    "lb_score": 4.36
   },
   {
     "id": "1780708113768g7tgpl1sx58",
@@ -321,13 +699,31 @@
     "director": "Hayao Miyazaki",
     "poster": "https://www.themoviedb.org/t/p/w1280/13kOl2v0nD2OLbVSHnHk8GUFEhO.jpg",
     "imdb_id": "tt0347149",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Fantasy, Animation, Adventure",
+    "country": "Japan",
+    "runtime": 119,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780708113768
+    "added": 1780708113768,
+    "tmdb_id": 4935,
+    "imdb_score": 8.4,
+    "score": 8.4,
+    "similar": [
+      {
+        "title": "Kiki's Delivery Service",
+        "year": 1989,
+        "imdb_id": "tt0097814"
+      },
+      {
+        "title": "Cardcaptor Sakura: The Movie",
+        "year": 1999,
+        "imdb_id": "tt0301082"
+      }
+    ],
+    "rt_score": 0.88,
+    "lb": "https://boxd.it/23De",
+    "lb_score": 4.36
   },
   {
     "id": "1780708099234yjj9no3mgb",
@@ -336,13 +732,31 @@
     "director": "Stanley Kramer",
     "poster": "https://www.themoviedb.org/t/p/w1280/b6vYatvui1EXeFYfpDX4rcbueuP.jpg",
     "imdb_id": "tt0055031",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Drama, History",
+    "country": "United States of America",
+    "runtime": 191,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780708099234
+    "added": 1780708099234,
+    "tmdb_id": 821,
+    "imdb_score": 8.0,
+    "score": 8.0,
+    "similar": [
+      {
+        "title": "The Eichmann Show",
+        "year": 2015,
+        "imdb_id": "tt4163668"
+      },
+      {
+        "title": "On the Basis of Sex",
+        "year": 2018,
+        "imdb_id": "tt4669788"
+      }
+    ],
+    "rt_score": 0.93,
+    "lb": "https://boxd.it/29xc",
+    "lb_score": 4.36
   },
   {
     "id": "1780707934504hh6wl73z00p",
@@ -351,13 +765,31 @@
     "director": "Kaouther Ben Hania",
     "poster": "https://www.themoviedb.org/t/p/w1280/q7M8kQB46T11vmDMD6E239jsqTz.jpg",
     "imdb_id": "tt36943034",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Drama, History",
+    "country": "France",
+    "runtime": 89,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780707934504
+    "added": 1780707934504,
+    "tmdb_id": 1480382,
+    "imdb_score": 8.1,
+    "score": 8.1,
+    "similar": [
+      {
+        "title": "Exodus",
+        "year": 1960,
+        "imdb_id": "tt0053804"
+      },
+      {
+        "title": "Palestine 36",
+        "year": 2025,
+        "imdb_id": "tt29271622"
+      }
+    ],
+    "rt_score": 0.94,
+    "lb": "https://boxd.it/UXdO",
+    "lb_score": 4.39
   },
   {
     "id": "1780707882303sqxp0ntihl9",
@@ -366,13 +798,31 @@
     "director": "Theodoros Angelopoulos",
     "poster": "https://www.themoviedb.org/t/p/w1280/wH8sfLJCqNjsIw8zkXpvxdSzj60.jpg",
     "imdb_id": "tt0156794",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Drama",
+    "country": "France",
+    "runtime": 133,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780707882303
+    "added": 1780707882303,
+    "tmdb_id": 24858,
+    "imdb_score": 7.8,
+    "score": 7.8,
+    "similar": [
+      {
+        "title": "Mr. Church",
+        "year": 2016,
+        "imdb_id": "tt4196848"
+      },
+      {
+        "title": "Bang the Drum Slowly",
+        "year": 1973,
+        "imdb_id": "tt0069765"
+      }
+    ],
+    "rt_score": 0.95,
+    "lb": "https://boxd.it/1wSq",
+    "lb_score": 4.4
   },
   {
     "id": "1780707839588llhdnts7q5n",
@@ -381,13 +831,31 @@
     "director": "Shinobu Yaguchi",
     "poster": "https://www.themoviedb.org/t/p/w1280/u7lAziuBxlX4DQQzuPHDRoOwtDx.jpg",
     "imdb_id": "tt0435434",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Comedy, Music",
+    "country": "Japan",
+    "runtime": 105,
     "priority": "Someday",
     "notes": null,
     "owned": false,
-    "added": 1780707839588
+    "added": 1780707839588,
+    "tmdb_id": 36592,
+    "imdb_score": 7.9,
+    "score": 7.9,
+    "similar": [
+      {
+        "title": "K-ON! The Movie",
+        "year": 2011,
+        "imdb_id": "tt1909796"
+      },
+      {
+        "title": "The Rocker",
+        "year": 2008,
+        "imdb_id": "tt1031969"
+      }
+    ],
+    "lb": "https://boxd.it/1ag0",
+    "lb_score": 4.39,
+    "rt_score": 0.84
   },
   {
     "id": "178048248372108as30qp4pig",
@@ -397,7 +865,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/dNgdUdNOWfHsZI3lDu6Epig7H2P.jpg",
     "imdb_id": "tt0070849",
     "genre": "Drama, Romance",
-    "country": null,
+    "country": "United Kingdom",
     "runtime": 129,
     "priority": "Someday",
     "notes": null,
@@ -432,7 +900,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/tcrkfB8SRPQCgwI88hQScua6nxh.jpg",
     "imdb_id": "tt0087544",
     "genre": "Animation, Adventure, Fantasy",
-    "country": null,
+    "country": "Japan",
     "runtime": 117,
     "priority": "Someday",
     "notes": null,
@@ -467,7 +935,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/6SQQ5REuAz7k0FMQ9mSCT40T2LN.jpg",
     "imdb_id": "tt0374546",
     "genre": "Drama",
-    "country": null,
+    "country": "United States of America",
     "runtime": 137,
     "priority": "Someday",
     "notes": null,
@@ -502,7 +970,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/joOoCuOaiZXZZRiS4JpontBL3Gz.jpg",
     "imdb_id": "tt1100048",
     "genre": "Drama",
-    "country": null,
+    "country": "United States of America",
     "runtime": 100,
     "priority": "Someday",
     "notes": null,
@@ -537,7 +1005,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/tqt9D4TH702ZXEUKWa3e6UdFAvY.jpg",
     "imdb_id": "tt0085180",
     "genre": "Drama",
-    "country": null,
+    "country": "United States of America",
     "runtime": 84,
     "priority": "Someday",
     "notes": null,
@@ -572,7 +1040,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/mxveW3mGVc0DzLdOmtkZsgd7c3B.jpg",
     "imdb_id": "tt0074486",
     "genre": "Drama, Horror",
-    "country": null,
+    "country": "United States of America",
     "runtime": 89,
     "priority": "Someday",
     "notes": null,
@@ -607,7 +1075,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/oR839yRsFAiQHwJ78hdKZYjEBg8.jpg",
     "imdb_id": "tt0067411",
     "genre": "Western, Drama",
-    "country": null,
+    "country": "United States of America",
     "runtime": 120,
     "priority": "Someday",
     "notes": null,
@@ -642,7 +1110,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/e9p8VdsAKXz1GoVXD36Lg5e3YKo.jpg",
     "imdb_id": "tt0062480",
     "genre": "Drama, Comedy",
-    "country": null,
+    "country": "United States of America",
     "runtime": 105,
     "priority": "Someday",
     "notes": null,
@@ -677,7 +1145,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/9oqyj79xmcypxLajJdefOtrYx64.jpg",
     "imdb_id": "tt0057869",
     "genre": "Crime, Drama",
-    "country": null,
+    "country": "United States of America",
     "runtime": 95,
     "priority": "Someday",
     "notes": null,
@@ -712,7 +1180,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/A0BjScjASfMFgyGI5sU0CwfKh3l.jpg",
     "imdb_id": "tt0056663",
     "genre": "Drama",
-    "country": null,
+    "country": "United States of America",
     "runtime": 85,
     "priority": "Someday",
     "notes": null,
@@ -747,7 +1215,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/fYNvmZ1vW7bNcUhrAzYjUBgKJWP.jpg",
     "imdb_id": "tt6992978",
     "genre": "Drama",
-    "country": null,
+    "country": "United States of America",
     "runtime": 106,
     "priority": "Someday",
     "notes": null,
@@ -777,7 +1245,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/2Nj04HsZ0lNkv07JnfBZ0bAIECn.jpg",
     "imdb_id": "tt6920356",
     "genre": "Drama, Romance",
-    "country": null,
+    "country": "United Kingdom",
     "runtime": 119,
     "priority": "Someday",
     "notes": null,
@@ -812,7 +1280,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/iW1WHmZEk9QTeY4qp7gjaDcCPDS.jpg",
     "imdb_id": "tt0095475",
     "genre": "Drama",
-    "country": null,
+    "country": "United States of America",
     "runtime": 116,
     "priority": "Someday",
     "notes": null,
@@ -847,7 +1315,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/2kSElneXSKmMsGL55k0CbPGqLbu.jpg",
     "imdb_id": "tt1316540",
     "genre": "Drama",
-    "country": null,
+    "country": "France",
     "runtime": 146,
     "priority": "Someday",
     "notes": null,
@@ -882,7 +1350,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/xnaDdiRfZlJaTf6JRc4in40eaeI.jpg",
     "imdb_id": "tt0073650",
     "genre": "Drama",
-    "country": null,
+    "country": "Hong Kong",
     "runtime": 117,
     "priority": "Someday",
     "notes": null,
@@ -917,7 +1385,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/113ts2Bmm5CZ3YJMwfCU9XGFCAf.jpg",
     "imdb_id": "tt0054599",
     "genre": "Drama",
-    "country": null,
+    "country": "United States of America",
     "runtime": 120,
     "priority": "Someday",
     "notes": null,
@@ -952,7 +1420,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/oifi2CQkKbb6Y2x6J5K6CjaKab9.jpg",
     "imdb_id": "tt0058715",
     "genre": "Drama, History",
-    "country": null,
+    "country": "United States of America",
     "runtime": 137,
     "priority": "Someday",
     "notes": null,
@@ -987,7 +1455,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/bkxrRfXaoTvZObG1Gd91x2mnmFX.jpg",
     "imdb_id": "tt0068278",
     "genre": "Drama",
-    "country": null,
+    "country": "United States of America",
     "runtime": 124,
     "priority": "Someday",
     "notes": null,
@@ -1022,7 +1490,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/tXjZEzlf4WQwZ4Dt53gXeJVuO7p.jpg",
     "imdb_id": "tt0079095",
     "genre": "Drama",
-    "country": null,
+    "country": "United States of America",
     "runtime": 120,
     "priority": "Someday",
     "notes": null,
@@ -1057,7 +1525,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/zN4ILX2x64PvT2jIOAHXxCOi5WA.jpg",
     "imdb_id": "tt0068361",
     "genre": "Comedy, Drama",
-    "country": null,
+    "country": "United States of America",
     "runtime": 102,
     "priority": "Someday",
     "notes": null,
@@ -1092,7 +1560,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/iUAFECovwPA0cVV9bo4uNGLJSGL.jpg",
     "imdb_id": "tt0061395",
     "genre": "Drama, Fantasy",
-    "country": null,
+    "country": "Germany",
     "runtime": 101,
     "priority": "Someday",
     "notes": null,
@@ -1127,7 +1595,7 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/mYPuSx5JwL8AdTwS1iQW4Un1cYP.jpg",
     "imdb_id": "tt0055601",
     "genre": "Drama",
-    "country": null,
+    "country": "United States of America",
     "runtime": 90,
     "priority": "Someday",
     "notes": null,
@@ -1173,7 +1641,21 @@
     "lb_score": 3.6,
     "distributor": "Strand Releasing",
     "female_director": false,
-    "tmdb_id": 75336
+    "tmdb_id": 75336,
+    "similar": [
+      {
+        "title": "Fantozzi Still Suffers",
+        "year": 1983,
+        "imdb_id": "tt0085524"
+      },
+      {
+        "title": "Babes",
+        "year": 2024,
+        "imdb_id": "tt21276958"
+      }
+    ],
+    "rt_score": 0.9,
+    "lb": "https://boxd.it/168Q"
   },
   {
     "id": "1777369087635wnsz3g765bj",
@@ -1194,7 +1676,21 @@
     "lb_score": 4.1,
     "distributor": "Criterion",
     "female_director": false,
-    "tmdb_id": 31177
+    "tmdb_id": 31177,
+    "similar": [
+      {
+        "title": "A Tale of Three Sisters",
+        "year": 2019,
+        "imdb_id": "tt9418878"
+      },
+      {
+        "title": "Lady Driver",
+        "year": 2020,
+        "imdb_id": "tt7562334"
+      }
+    ],
+    "rt_score": 0.93,
+    "lb": "https://boxd.it/1bVy"
   },
   {
     "id": "17773690357850fxy67925aio",
@@ -1215,7 +1711,21 @@
     "lb_score": 4,
     "distributor": "Criterion",
     "female_director": false,
-    "tmdb_id": 18897
+    "tmdb_id": 18897,
+    "similar": [
+      {
+        "title": "The Girl in the Book",
+        "year": 2015,
+        "imdb_id": "tt2980554"
+      },
+      {
+        "title": "Premonition",
+        "year": 2007,
+        "imdb_id": "tt0477071"
+      }
+    ],
+    "rt_score": 1.0,
+    "lb": "https://boxd.it/EIm"
   },
   {
     "id": "1777368995915m3nnixd91kn",
@@ -1236,7 +1746,21 @@
     "lb_score": 4.2,
     "distributor": "Criterion",
     "female_director": false,
-    "tmdb_id": 31502
+    "tmdb_id": 31502,
+    "rt_score": 0.87,
+    "lb": "https://boxd.it/29Oi",
+    "similar": [
+      {
+        "title": "The Beekeeper",
+        "year": 1986,
+        "imdb_id": "tt0090781"
+      },
+      {
+        "title": "Landscape in the Mist",
+        "year": 1988,
+        "imdb_id": "tt0095517"
+      }
+    ]
   },
   {
     "id": "1777368965947oebownet15m",
@@ -1257,7 +1781,21 @@
     "lb_score": 4.1,
     "distributor": "GKIDS",
     "female_director": false,
-    "tmdb_id": 228204
+    "tmdb_id": 228204,
+    "similar": [
+      {
+        "title": "Voyeur",
+        "year": 2017,
+        "imdb_id": "tt7588790"
+      },
+      {
+        "title": "The Crash",
+        "year": 2026,
+        "imdb_id": "tt40792117"
+      }
+    ],
+    "rt_score": 1.0,
+    "lb": "https://boxd.it/4JQI"
   },
   {
     "id": "1777329726040rjhb3yb9fnj",
@@ -1278,7 +1816,21 @@
     "lb_score": 3.8,
     "distributor": "Paramount",
     "female_director": true,
-    "tmdb_id": 36668
+    "tmdb_id": 36668,
+    "similar": [
+      {
+        "title": "X-Men: Days of Future Past",
+        "year": 2014,
+        "imdb_id": "tt1877832"
+      },
+      {
+        "title": "Doctor Strange in the Multiverse of Madness",
+        "year": 2022,
+        "imdb_id": "tt9419884"
+      }
+    ],
+    "rt_score": 0.94,
+    "lb": "https://boxd.it/19FS"
   },
   {
     "id": "1776580933238r9ztu2r8z8",
@@ -1313,7 +1865,9 @@
     ],
     "has4k": false,
     "tmdb_id": 283552,
-    "female_director": false
+    "female_director": false,
+    "rt_score": 0.88,
+    "lb_score": 3.57
   },
   {
     "id": "1776564824071zi6fthwgs7a",
@@ -1348,7 +1902,9 @@
     ],
     "has4k": false,
     "tmdb_id": 590223,
-    "female_director": true
+    "female_director": true,
+    "rt_score": 0.96,
+    "lb_score": 3.9
   },
   {
     "id": "1776564736206udsdheqdsni",
@@ -1383,7 +1939,9 @@
     ],
     "has4k": false,
     "tmdb_id": 508883,
-    "female_director": false
+    "female_director": false,
+    "rt_score": 0.93,
+    "lb_score": 3.86
   },
   {
     "id": "17765647011598pfh0t9za3c",
@@ -1418,7 +1976,9 @@
     ],
     "has4k": false,
     "tmdb_id": 390022,
-    "female_director": false
+    "female_director": false,
+    "rt_score": 0.88,
+    "lb_score": 4.01
   },
   {
     "id": "1776564667786yolazm79yfn",
@@ -1453,7 +2013,9 @@
     ],
     "has4k": false,
     "tmdb_id": 438238,
-    "female_director": false
+    "female_director": false,
+    "rt_score": 0.96,
+    "lb_score": 4.1
   },
   {
     "id": "1776564645375yi5vgbpr8s",
@@ -1488,7 +2050,9 @@
     ],
     "has4k": false,
     "tmdb_id": 503919,
-    "female_director": false
+    "female_director": false,
+    "rt_score": 0.9,
+    "lb_score": 4.0
   },
   {
     "id": "1776564539079ad2vg9ahuuj",
@@ -1523,7 +2087,9 @@
     ],
     "has4k": false,
     "tmdb_id": 430580,
-    "female_director": false
+    "female_director": false,
+    "rt_score": 0.91,
+    "lb_score": 3.98
   },
   {
     "id": "1776564498256zo9frg6oer",
@@ -1558,7 +2124,9 @@
     ],
     "has4k": false,
     "tmdb_id": 436966,
-    "female_director": false
+    "female_director": false,
+    "rt_score": 0.91,
+    "lb_score": 3.76
   },
   {
     "id": "1776343205845y5dpzlg0ewl",
@@ -1593,7 +2161,9 @@
     ],
     "has4k": false,
     "tmdb_id": 9552,
-    "female_director": false
+    "female_director": false,
+    "rt_score": 0.86,
+    "lb_score": 3.87
   },
   {
     "id": "1776343157572vnkfut612xo",
@@ -1628,7 +2198,9 @@
     ],
     "has4k": false,
     "tmdb_id": 203,
-    "female_director": false
+    "female_director": false,
+    "rt_score": 0.93,
+    "lb_score": 3.7
   },
   {
     "id": "1776343115333xbw7x2sjprh",
@@ -1663,7 +2235,9 @@
     ],
     "has4k": false,
     "tmdb_id": 387,
-    "female_director": false
+    "female_director": false,
+    "rt_score": 0.98,
+    "lb_score": 4.33
   },
   {
     "id": "1775999459701yeuxa6o5w3",
