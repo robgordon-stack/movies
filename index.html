@@ -1257,19 +1257,19 @@ function lb_setFilter(f) {
     b.className = 'filter-btn';
     if(b.dataset.filter === f) b.classList.add('active-'+f);
   });
-  lb_lb_render();
+  lb_render();
 }
 
 function lb_setSort(s) {
   currentSort = s;
   document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('sort-'+s).classList.add('active');
-  lb_lb_render();
+  lb_render();
 }
 
 function lb_onSearch() {
   searchQ = document.getElementById('search-input').value.toLowerCase();
-  lb_lb_render();
+  lb_render();
 }
 
 function lb_render() {
