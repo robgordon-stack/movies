@@ -363,6 +363,7 @@
   <div class="gw">
     <div class="grid" id="dirGrid"></div>
   </div>
+  <div id="dirFilmographyPanel" style="padding:0 8px 80px"></div>
 </div>
 
 <div class="page" id="page-stats">
@@ -449,6 +450,7 @@
 
 <div class="count-display" id="count-display"></div>
 <div class="film-list" id="film-list"></div>
+  <div id="lb-wishlist-panel" style="padding:1.5rem 2rem 6rem"></div>
 </div>
 
 <nav class="tabnav">
@@ -1304,6 +1306,180 @@ function lb_render() {
 }
 
 lb_render();
+
+// ===== Feature 4: Director Filmography Completion =====
+// Loaded from wishlist.json; compares against C (collection)
+let _dirWishlist = null;
+async function _loadDirWishlist() {
+  if (_dirWishlist !== null) return _dirWishlist;
+  try {
+    const r = await fetch('wishlist.json?v=' + Date.now());
+    if (!r.ok) throw new Error();
+    const data = await r.json();
+    _dirWishlist = Array.isArray(data) ? data : (data.films || []);
+  } catch(e) { _dirWishlist = []; }
+  return _dirWishlist;
+}
+
+function _dirFP_norm(t) { return (t||'').toLowerCase().trim(); }
+
+async function renderDirFilmographyPanel(dirName) {
+  const panel = document.getElementById('dirFilmographyPanel');
+  if (!panel || !dirName) return;
+  panel.innerHTML = '';
+
+  const wishlist = await _loadDirWishlist();
+  const wFilms = wishlist.filter(f => f.director === dirName);
+  if (!wFilms.length) return; // nothing on wishlist for this director
+
+  const cTitles = new Set(C.filter(f => f.director === dirName).map(f => _dirFP_norm(f.title)));
+  const missing = wFilms.filter(f => !cTitles.has(_dirFP_norm(f.title)));
+  if (!missing.length) return;
+
+  const ownedCount = C.filter(f => f.director === dirName).length;
+  const totalKnown = ownedCount + missing.length;
+
+  const pct = Math.round(ownedCount / totalKnown * 100);
+  const barW = pct;
+
+  panel.innerHTML = `
+    <div style="background:var(--surf);border:1px solid var(--bdr);border-radius:10px;padding:14px 16px;margin-bottom:8px">
+      <div style="font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:10px">
+        Filmography Coverage
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+        <div style="flex:1;height:6px;background:var(--surf2);border-radius:3px;overflow:hidden">
+          <div style="height:100%;width:${barW}%;background:var(--grn);border-radius:3px;transition:width .7s cubic-bezier(.4,0,.2,1)"></div>
+        </div>
+        <span style="font-size:12px;font-weight:700;color:var(--grn);flex-shrink:0">${ownedCount}/${totalKnown}</span>
+      </div>
+      <div style="font-size:11px;color:var(--mut);margin-bottom:10px">
+        ${missing.length} film${missing.length!==1?'s':''} on your wishlist
+      </div>
+      <div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none">
+        ${missing.map(f => {
+          const lb = f.lb ? `href="${f.lb}" target="_blank" rel="noopener"` : '';
+          const img = f.poster
+            ? `<img src="${ex(f.poster)}" style="width:100%;height:100%;object-fit:cover" loading="lazy">`
+            : `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--mut);padding:3px;text-align:center">${ex(f.title)}</div>`;
+          return `<a ${lb} style="flex:0 0 60px;text-decoration:none;cursor:${f.lb?'pointer':'default'}">
+            <div style="width:60px;height:90px;border-radius:5px;overflow:hidden;background:var(--surf2);margin-bottom:4px;border:1px solid var(--bdr)">${img}</div>
+            <div style="font-size:9px;color:var(--txt);line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">${ex(f.title)}</div>
+            <div style="font-size:9px;color:var(--mut)">${f.year||''}</div>
+          </a>`;
+        }).join('')}
+      </div>
+    </div>`;
+}
+
+// Patch openDirector to call the panel renderer
+const _origOpenDirector = openDirector;
+function openDirector(dirName) {
+  _origOpenDirector(dirName);
+  renderDirFilmographyPanel(dirName);
+}
+
+// ===== Feature 5: Wishlist × LB500 Cross-Reference Panel =====
+let _lb500Wishlist = null;
+async function _loadLB500Wishlist() {
+  if (_lb500Wishlist !== null) return _lb500Wishlist;
+  try {
+    const r = await fetch('wishlist.json?v=' + Date.now());
+    if (!r.ok) throw new Error();
+    const data = await r.json();
+    _lb500Wishlist = Array.isArray(data) ? data : (data.films || []);
+  } catch(e) { _lb500Wishlist = []; }
+  return _lb500Wishlist;
+}
+
+async function renderLB500WishlistPanel() {
+  const panel = document.getElementById('lb-wishlist-panel');
+  if (!panel) return;
+
+  const wishlist = await _loadLB500Wishlist();
+  const wMap = new Map();
+  wishlist.forEach(f => {
+    if (f.title) wMap.set(f.title.toLowerCase().trim(), f);
+  });
+
+  // Find LB500 films that are on wishlist or missing but high-ranked
+  const onWishlist = FILMS.filter(f => f.s === 'wishlist');
+  const highMissing = FILMS.filter(f => f.s === 'missing' && f.r <= 100);
+
+  if (!onWishlist.length && !highMissing.length) return;
+
+  // For wishlist films, try to get poster from wishlist.json
+  function getWishlistData(lbFilm) {
+    return wMap.get(lbFilm.t.toLowerCase().trim()) || null;
+  }
+
+  function filmCard(lbFilm, extraLabel) {
+    const wf = getWishlistData(lbFilm);
+    const poster = wf && wf.poster ? wf.poster : null;
+    const lb = wf && wf.lb ? wf.lb : `https://letterboxd.com/film/${lbFilm.t.toLowerCase().replace(/[^a-z0-9\s]/g,'').trim().replace(/\s+/g,'-')}/`;
+    const score = wf && wf.lb_score ? wf.lb_score.toFixed(1) : '';
+    const img = poster
+      ? `<img src="${poster}" style="width:100%;height:100%;object-fit:cover" loading="lazy">`
+      : `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--lb-text-dim);padding:3px;text-align:center">${lbFilm.t}</div>`;
+    const pill = extraLabel
+      ? `<div style="position:absolute;top:3px;right:3px;background:rgba(224,85,85,.85);border-radius:3px;font-size:7px;font-weight:800;padding:1px 4px;color:#fff">#${lbFilm.r}</div>`
+      : `<div style="position:absolute;top:3px;right:3px;background:rgba(240,208,128,.85);border-radius:3px;font-size:7px;font-weight:800;padding:1px 4px;color:#111">#${lbFilm.r}</div>`;
+    return `<a href="${lb}" target="_blank" rel="noopener" style="flex:0 0 72px;text-decoration:none">
+      <div style="position:relative;width:72px;height:108px;border-radius:6px;overflow:hidden;background:var(--lb-surface2);margin-bottom:5px;border:1px solid var(--lb-border)">${img}${pill}</div>
+      <div style="font-size:9px;color:var(--lb-text);line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">${lbFilm.t}</div>
+      ${score ? `<div style="font-size:9px;color:var(--lb-wishlist)">★ ${score}</div>` : `<div style="font-size:9px;color:var(--lb-text-dim)">${lbFilm.y}</div>`}
+    </a>`;
+  }
+
+  let html = '';
+
+  if (onWishlist.length) {
+    // Sort by rank
+    const sorted = [...onWishlist].sort((a,b) => a.r - b.r);
+    html += `
+      <div style="margin-bottom:28px">
+        <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--lb-wishlist);margin-bottom:4px">
+          On Your Wishlist · ${onWishlist.length} film${onWishlist.length!==1?'s':''}
+        </div>
+        <div style="font-size:12px;color:var(--lb-text-dim);margin-bottom:12px">
+          LB500 films you already want — sorted by rank
+        </div>
+        <div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none">
+          ${sorted.map(f => filmCard(f, false)).join('')}
+        </div>
+      </div>`;
+  }
+
+  if (highMissing.length) {
+    html += `
+      <div>
+        <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--lb-missing);margin-bottom:4px">
+          Top 100 Gaps · ${highMissing.length} film${highMissing.length!==1?'s':''}
+        </div>
+        <div style="font-size:12px;color:var(--lb-text-dim);margin-bottom:12px">
+          Highly ranked films not owned or wishlisted
+        </div>
+        <div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none">
+          ${[...highMissing].sort((a,b) => a.r - b.r).map(f => filmCard(f, true)).join('')}
+        </div>
+      </div>`;
+  }
+
+  panel.innerHTML = html;
+}
+
+// Trigger the LB500 panel when that tab is opened
+const _origSwitchTab = switchTab;
+function switchTab(tab) {
+  _origSwitchTab(tab);
+  if (tab === 'lb500') renderLB500WishlistPanel();
+}
+// Also render on first load if lb500 is the active tab
+document.addEventListener('DOMContentLoaded', () => {
+  if (document.getElementById('page-lb500').classList.contains('active')) {
+    renderLB500WishlistPanel();
+  }
+});
 
 // ===== End LB500 =====
 
