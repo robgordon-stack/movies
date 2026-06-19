@@ -14,8 +14,8 @@
     "owned": false,
     "added": 1780709036314,
     "tmdb_id": 10386,
-    "imdb_score": 8.0,
-    "score": 8.0,
+    "imdb_score": 8,
+    "score": 8,
     "similar": [
       {
         "title": "Strange World",
@@ -47,8 +47,8 @@
     "owned": false,
     "added": 1780709025581,
     "tmdb_id": 110416,
-    "imdb_score": 8.0,
-    "score": 8.0,
+    "imdb_score": 8,
+    "score": 8,
     "similar": [
       {
         "title": "The Secret of Kells",
@@ -127,7 +127,7 @@
         "imdb_id": "tt3398268"
       }
     ],
-    "rt_score": 1.0,
+    "rt_score": 1,
     "lb": "https://boxd.it/LjA6",
     "lb_score": 4.27
   },
@@ -344,8 +344,8 @@
     "owned": false,
     "added": 1780708549201,
     "tmdb_id": 76,
-    "imdb_score": 8.0,
-    "score": 8.0,
+    "imdb_score": 8,
+    "score": 8,
     "similar": [
       {
         "title": "The Illusionist",
@@ -358,7 +358,7 @@
         "imdb_id": "tt0086879"
       }
     ],
-    "rt_score": 1.0,
+    "rt_score": 1,
     "lb": "https://boxd.it/2bcU",
     "lb_score": 4.3
   },
@@ -424,7 +424,7 @@
         "imdb_id": "tt0101272"
       }
     ],
-    "rt_score": 1.0,
+    "rt_score": 1,
     "lb": "https://boxd.it/hCY2",
     "lb_score": 4.36
   },
@@ -476,8 +476,8 @@
     "owned": false,
     "added": 1780708386919,
     "tmdb_id": 42229,
-    "imdb_score": 8.0,
-    "score": 8.0,
+    "imdb_score": 8,
+    "score": 8,
     "similar": [
       {
         "title": "Head in the Clouds",
@@ -490,7 +490,7 @@
         "imdb_id": "tt10290352"
       }
     ],
-    "rt_score": 1.0,
+    "rt_score": 1,
     "lb": "https://boxd.it/Xqc",
     "lb_score": 4.34
   },
@@ -740,8 +740,8 @@
     "owned": false,
     "added": 1780708099234,
     "tmdb_id": 821,
-    "imdb_score": 8.0,
-    "score": 8.0,
+    "imdb_score": 8,
+    "score": 8,
     "similar": [
       {
         "title": "The Eichmann Show",
@@ -1724,7 +1724,7 @@
         "imdb_id": "tt0477071"
       }
     ],
-    "rt_score": 1.0,
+    "rt_score": 1,
     "lb": "https://boxd.it/EIm"
   },
   {
@@ -1794,7 +1794,7 @@
         "imdb_id": "tt40792117"
       }
     ],
-    "rt_score": 1.0,
+    "rt_score": 1,
     "lb": "https://boxd.it/4JQI"
   },
   {
@@ -2052,7 +2052,7 @@
     "tmdb_id": 503919,
     "female_director": false,
     "rt_score": 0.9,
-    "lb_score": 4.0
+    "lb_score": 4
   },
   {
     "id": "1776564539079ad2vg9ahuuj",
@@ -5023,47 +5023,6 @@
         "title": "His Girl Friday",
         "year": 1940,
         "imdb_id": "tt0032599"
-      }
-    ],
-    "female_director": false
-  },
-  {
-    "id": "177536371075180vc972vgje",
-    "title": "Gladiator",
-    "priority": "High",
-    "added": 1775363710751,
-    "owned": false,
-    "poster": "https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg",
-    "imdb_id": "tt0172495",
-    "year": 2000,
-    "runtime": 155,
-    "genre": "Action, Drama, Adventure",
-    "country": "United States",
-    "director": "Ridley Scott",
-    "tmdb_id": 98,
-    "lb": "https://letterboxd.com/search/Gladiator/",
-    "notes": "4k",
-    "has4k": true,
-    "score": 8,
-    "imdb_score": 8.5,
-    "lb_score": 4,
-    "rt_score": 0.8,
-    "mc_score": 67,
-    "similar": [
-      {
-        "title": "Ben-Hur",
-        "year": 1959,
-        "imdb_id": "tt0052618"
-      },
-      {
-        "title": "Spartacus",
-        "year": 1960,
-        "imdb_id": "tt0054331"
-      },
-      {
-        "title": "The Last Samurai",
-        "year": 2003,
-        "imdb_id": "tt0325710"
       }
     ],
     "female_director": false

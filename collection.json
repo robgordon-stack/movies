@@ -26236,5 +26236,37 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/7paXMt2e3Tr5dLmEZOGgFEn2Vo7.jpg",
     "imdb_id": "tt0050212",
     "synopsis": "British POWs are forced to build a railway bridge across the river Kwai for their Japanese captors in occupied Burma, not knowing that the allied forces are planning a daring commando raid through the jungle to destroy it."
+  },
+  {
+    "title": "Gladiator",
+    "year": 2000,
+    "decade": "2000s",
+    "director": "Ridley Scott",
+    "country": "Usa",
+    "genre": "Action, Adventure, Drama",
+    "runtime": 155,
+    "score": 8.5,
+    "format": "4K Blu-ray",
+    "watched": false,
+    "spine": "",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYWQ4YmNjYjEtOWE1Zi00Y2U4LWI4NTAtMTU0MjkxNWQ1ZmJiXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+    "imdb_id": "tt0172495",
+    "synopsis": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery."
+  },
+  {
+    "title": "Sirat",
+    "year": 2025,
+    "decade": "2020s",
+    "director": "Oliver Laxe",
+    "country": "Spain",
+    "genre": "Action, Adventure, Drama",
+    "runtime": 114,
+    "score": 7,
+    "format": "4K Blu-ray",
+    "watched": false,
+    "spine": "",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNzA1OTkyN2MtMGZjYy00NTcxLTg4Y2ItZjc4NjM2NmQzMzdjXkEyXkFqcGc@._V1_QL75_UY562_CR0,0,380,562_.jpg",
+    "imdb_id": "tt32298285",
+    "synopsis": "A father, accompanied by his son, goes looking for his missing daughter in North Africa."
   }
 ]
