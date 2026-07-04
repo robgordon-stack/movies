@@ -1833,43 +1833,6 @@
     "lb": "https://boxd.it/19FS"
   },
   {
-    "id": "1776580933238r9ztu2r8z8",
-    "title": "Annihilation",
-    "year": 2018,
-    "director": "Alex Garland",
-    "poster": "https://image.tmdb.org/t/p/w342/4YRplSk6BhH6PRuE9gfyw9byUJ6.jpg",
-    "imdb_id": "tt2798920",
-    "genre": "Drama, Horror, Sci-Fi",
-    "country": "United Kingdom",
-    "runtime": 115,
-    "priority": "Someday",
-    "notes": null,
-    "owned": false,
-    "added": 1776580933239,
-    "lb": "https://letterboxd.com/imdb/tt2798920/",
-    "score": 7.5,
-    "imdb_score": 6.8,
-    "similar": [
-      {
-        "title": "Ex Machina",
-        "imdb_id": "tt0470752"
-      },
-      {
-        "title": "Arrival",
-        "imdb_id": "tt2543164"
-      },
-      {
-        "title": "Under the Skin",
-        "imdb_id": "tt1441395"
-      }
-    ],
-    "has4k": false,
-    "tmdb_id": 283552,
-    "female_director": false,
-    "rt_score": 0.88,
-    "lb_score": 3.57
-  },
-  {
     "id": "1776564824071zi6fthwgs7a",
     "title": "First Cow",
     "year": 2020,
@@ -4603,42 +4566,6 @@
     "female_director": false
   },
   {
-    "id": "177536371075278av6jlpnc6",
-    "title": "The Sound of Music",
-    "priority": "High",
-    "added": 1775363710752,
-    "owned": false,
-    "poster": "https://image.tmdb.org/t/p/w500/c6CrUZypAsBCaRWX0M3RVRDbhNS.jpg",
-    "imdb_id": "tt0059742",
-    "year": 1965,
-    "runtime": 174,
-    "genre": "Drama, Family, Music, Romance",
-    "country": "United States",
-    "director": "Robert Wise",
-    "tmdb_id": 15121,
-    "lb": "https://letterboxd.com/search/The%20Sound%20of%20Music/",
-    "notes": "4K",
-    "has4k": true,
-    "score": 8.1,
-    "imdb_score": 8,
-    "lb_score": 3.9,
-    "rt_score": 0.87,
-    "similar": [
-      {
-        "title": "Oliver!",
-        "year": 1968,
-        "imdb_id": "tt0063385"
-      },
-      {
-        "title": "Fiddler on the Roof",
-        "year": 1971,
-        "imdb_id": "tt0067093"
-      }
-    ],
-    "distributor": "Disney",
-    "female_director": false
-  },
-  {
     "id": "1775363710752glfyzn774ul",
     "title": "Raising Arizona",
     "priority": "High",
@@ -4859,47 +4786,6 @@
         "title": "Face to Face",
         "year": 1976,
         "imdb_id": "tt0074428"
-      }
-    ],
-    "female_director": false
-  },
-  {
-    "id": "1775363710752op45th2royl",
-    "title": "Cinema Paradiso",
-    "priority": "High",
-    "added": 1775363710752,
-    "owned": false,
-    "poster": "https://image.tmdb.org/t/p/w500/gCI2AeMV4IHSewhJkzsur5MEp6R.jpg",
-    "imdb_id": "tt0095765",
-    "year": 1988,
-    "runtime": 124,
-    "genre": "Drama, Romance",
-    "country": "Italy",
-    "director": "Giuseppe Tornatore",
-    "tmdb_id": 11216,
-    "lb": "https://letterboxd.com/search/Cinema%20Paradiso/",
-    "has4k": true,
-    "distributor": "Arrow",
-    "score": 8.5,
-    "imdb_score": 8.5,
-    "lb_score": 4.3,
-    "rt_score": 0.9,
-    "mc_score": 79,
-    "similar": [
-      {
-        "title": "Malèna",
-        "year": 2000,
-        "imdb_id": "tt0213847"
-      },
-      {
-        "title": "Amarcord",
-        "year": 1973,
-        "imdb_id": "tt0071129"
-      },
-      {
-        "title": "The Legend of 1900",
-        "year": 1998,
-        "imdb_id": "tt0120731"
       }
     ],
     "female_director": false
@@ -6875,48 +6761,6 @@
     "female_director": false
   },
   {
-    "id": "1775371625207eoz1h8ix8ru",
-    "title": "The Revenant",
-    "year": 2015,
-    "director": "Alejandro G. Iñárritu",
-    "poster": "https://image.tmdb.org/t/p/w1280/ji3ecJphATlVgWNY0B0RVXZizdf.jpg",
-    "imdb_id": "tt1663202",
-    "genre": "Adventure, Drama, Western",
-    "country": "United States",
-    "runtime": 156,
-    "priority": "High",
-    "notes": null,
-    "owned": false,
-    "added": 1775371625207,
-    "has4k": true,
-    "distributor": null,
-    "lb": "https://letterboxd.com/film/the-revenant-2015/",
-    "score": 7.8,
-    "imdb_score": 8,
-    "lb_score": 3.9,
-    "rt_score": 0.78,
-    "mc_score": 76,
-    "similar": [
-      {
-        "title": "Jeremiah Johnson",
-        "year": 1972,
-        "imdb_id": "tt0068762"
-      },
-      {
-        "title": "Wind River",
-        "year": 2017,
-        "imdb_id": "tt5362988"
-      },
-      {
-        "title": "Bone Tomahawk",
-        "year": 2015,
-        "imdb_id": "tt2494280"
-      }
-    ],
-    "tmdb_id": 281957,
-    "female_director": false
-  },
-  {
     "id": "17753716133406gnpzt8kahf",
     "title": "Sideways",
     "year": 2004,
@@ -7391,48 +7235,6 @@
       }
     ],
     "tmdb_id": 21799,
-    "female_director": false
-  },
-  {
-    "id": "1775371378476wv5pwwnlysc",
-    "title": "Babylon",
-    "year": 2022,
-    "director": "Damien Chazelle",
-    "poster": "https://image.tmdb.org/t/p/w1280/wjOHjWCUE0YzDiEzKv8AfqHj3ir.jpg",
-    "imdb_id": "tt10640346",
-    "genre": "Comedy, Drama",
-    "country": "United States",
-    "runtime": 189,
-    "priority": "Someday",
-    "notes": null,
-    "owned": false,
-    "added": 1775371378476,
-    "has4k": true,
-    "distributor": null,
-    "lb": "https://letterboxd.com/film/babylon-2022/",
-    "score": 6.4,
-    "imdb_score": 6.8,
-    "lb_score": 3.5,
-    "rt_score": 0.55,
-    "mc_score": 52,
-    "similar": [
-      {
-        "title": "Boogie Nights",
-        "year": 1997,
-        "imdb_id": "tt0118749"
-      },
-      {
-        "title": "Singin' in the Rain",
-        "year": 1952,
-        "imdb_id": "tt0045152"
-      },
-      {
-        "title": "Sunset Boulevard",
-        "year": 1950,
-        "imdb_id": "tt0043014"
-      }
-    ],
-    "tmdb_id": 736526,
     "female_director": false
   },
   {
