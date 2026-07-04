@@ -26332,5 +26332,21 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/c6CrUZypAsBCaRWX0M3RVRDbhNS.jpg",
     "imdb_id": "tt0059742",
     "synopsis": "A young novice is sent by her convent in 1930s Austria to become a governess to the seven children of a widowed naval officer."
+  },
+  {
+    "title": "Cinema Paradiso",
+    "year": 1990,
+    "decade": "1990s",
+    "director": "Giuseppe Tornatore",
+    "country": "Italy",
+    "genre": "Drama, Romance",
+    "runtime": 174,
+    "score": 8.5,
+    "format": "4K Blu-ray",
+    "watched": false,
+    "spine": "",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTljNzc4YWEtYTZlMS00ODMyLWIwMTAtNWQxY2VkMDEwYTk5XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+    "imdb_id": "tt0095765",
+    "synopsis": "Salvatore, a famous film director, returns to his hometown for the funeral of the local theater's film projectionist, Alfredo. He reminisces about his life as a young boy falling in love with cinema."
   }
 ]
