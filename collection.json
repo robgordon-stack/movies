@@ -2270,7 +2270,7 @@
     "title": "Flowers of Shanghai",
     "year": 1998,
     "decade": "1990s",
-    "director": "Hou Hsiao-Hsien",
+    "director": "Hou Hsiao-hsien",
     "country": "Taiwan",
     "genre": "Romance",
     "runtime": 113,
@@ -3188,7 +3188,7 @@
     "title": "Klute",
     "year": 1971,
     "decade": "1970s",
-    "director": "Alan J Pakula",
+    "director": "Alan J. Pakula",
     "country": "Usa",
     "genre": "Crime, Mystery, Thriller",
     "runtime": 114,
@@ -3715,7 +3715,7 @@
     "title": "Memories of Murder",
     "year": 2003,
     "decade": "2000s",
-    "director": "Bong Joon-Ho",
+    "director": "Bong Joon-ho",
     "country": "South Korea",
     "genre": "Crime, Mystery",
     "runtime": 131,
@@ -5902,7 +5902,7 @@
     "title": "The Cranes are Flying",
     "year": 1957,
     "decade": "1950s",
-    "director": "Mikail Kalatozov",
+    "director": "Mikhail Kalatozov",
     "country": "Soviet Union",
     "genre": "Romance, War",
     "runtime": 95,
@@ -8853,7 +8853,7 @@
     "title": "Female Prisoner #701: Scorpion",
     "year": 1972,
     "decade": "1970s",
-    "director": "Shun'ya Ito",
+    "director": "Shunya Ito",
     "country": "Japan",
     "genre": "Crime, Thriller",
     "runtime": 87,
@@ -20921,7 +20921,7 @@
     "title": "Snowpiercer",
     "year": 2013,
     "decade": "2010s",
-    "director": "Bong Joon-Ho",
+    "director": "Bong Joon-ho",
     "country": "South Korea",
     "genre": "Action, Sci-Fi, Thriller",
     "runtime": 126,
@@ -21894,7 +21894,7 @@
     "title": "Delicatessen",
     "year": 1991,
     "decade": "1990s",
-    "director": "Jean Pierre Jeunet",
+    "director": "Jean-Pierre Jeunet",
     "country": "France",
     "genre": "Comedy, Crime",
     "runtime": 99,
@@ -25283,7 +25283,7 @@
     "decade": "2000s",
     "director": "Christopher Nolan",
     "country": "Usa",
-    "genre": "Action, Crime, Drama",
+    "genre": "Action, Crime",
     "runtime": 152,
     "score": 9.1,
     "format": "4K Blu-ray",
@@ -25296,7 +25296,14 @@
       "Christian Bale",
       "Heath Ledger",
       "Aaron Eckhart"
-    ]
+    ],
+    "distributor": "Warner Bros",
+    "lb": "https://boxd.it/230G",
+    "imdb_score": 9,
+    "rt_score": 0.94,
+    "lb_score": 4.3,
+    "mc_score": 84,
+    "female_director": false
   },
   {
     "title": "The Departed",
@@ -25977,7 +25984,19 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/oxhHl2YokTqcP44QK5tiTgjgLgk.jpg",
     "imdb_id": "tt0120655",
-    "synopsis": "An abortion clinic worker with a special heritage is called upon to save the existence of humanity from being negated by two renegade angels trying to exploit a loop-hole and reenter Heaven."
+    "synopsis": "An abortion clinic worker with a special heritage is called upon to save the existence of humanity from being negated by two renegade angels trying to exploit a loop-hole and reenter Heaven.",
+    "distributor": "Lionsgate",
+    "lb": "https://boxd.it/284e",
+    "imdb_score": 7.3,
+    "rt_score": 0.72,
+    "mc_score": 62,
+    "lb_score": 3.6,
+    "female_director": false,
+    "cast": [
+      "Ben Affleck",
+      "Matt Damon",
+      "Linda Fiorentino"
+    ]
   },
   {
     "title": "GoodFellas",
@@ -25993,7 +26012,18 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/9OkCLM73MIU2CrKZbqiT8Ln1wY2.jpg",
     "imdb_id": "tt0099685",
-    "synopsis": "The story of Henry Hill and his life in the mafia, covering his relationship with his wife Karen and his mob partners Jimmy Conway and Tommy DeVito."
+    "synopsis": "The story of Henry Hill and his life in the mafia, covering his relationship with his wife Karen and his mob partners Jimmy Conway and Tommy DeVito.",
+    "distributor": "Warner Bros",
+    "imdb_score": 8.7,
+    "rt_score": 0.96,
+    "mc_score": 90,
+    "lb_score": 4.5,
+    "female_director": false,
+    "cast": [
+      "Robert De Niro",
+      "Ray Liotta",
+      "Joe Pesci"
+    ]
   },
   {
     "title": "Panic Room",
@@ -26009,7 +26039,18 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/hANYbvfwxmkC9E4yY6YyJxYxlSJ.jpg",
     "imdb_id": "tt0258000",
-    "synopsis": "A divorced woman and her diabetic daughter take refuge in their newly-purchased house's safe room when three men break-in, searching for a missing fortune."
+    "synopsis": "A divorced woman and her diabetic daughter take refuge in their newly-purchased house's safe room when three men break-in, searching for a missing fortune.",
+    "distributor": "Sony Pictures",
+    "imdb_score": 6.7,
+    "rt_score": 0.53,
+    "mc_score": 52,
+    "lb_score": 3.1,
+    "female_director": false,
+    "cast": [
+      "Jodie Foster",
+      "Kristen Stewart",
+      "Forest Whitaker"
+    ]
   },
   {
     "title": "The Lord of the Rings: The Fellowship of the Ring",
@@ -26025,7 +26066,18 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
     "imdb_id": "tt0120737",
-    "synopsis": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron."
+    "synopsis": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+    "distributor": "Warner Bros",
+    "imdb_score": 8.9,
+    "rt_score": 0.91,
+    "mc_score": 92,
+    "lb_score": 4.4,
+    "female_director": false,
+    "cast": [
+      "Elijah Wood",
+      "Ian McKellen",
+      "Viggo Mortensen"
+    ]
   },
   {
     "title": "The Lord of the Rings: The Two Towers",
@@ -26041,7 +26093,18 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg",
     "imdb_id": "tt0167261",
-    "synopsis": "While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard."
+    "synopsis": "While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.",
+    "distributor": "Warner Bros",
+    "imdb_score": 8.8,
+    "rt_score": 0.95,
+    "mc_score": 87,
+    "lb_score": 4.3,
+    "female_director": false,
+    "cast": [
+      "Elijah Wood",
+      "Ian McKellen",
+      "Viggo Mortensen"
+    ]
   },
   {
     "title": "The Lord of the Rings: The Return of the King",
@@ -26057,7 +26120,18 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
     "imdb_id": "tt0167260",
-    "synopsis": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring."
+    "synopsis": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+    "distributor": "Warner Bros",
+    "imdb_score": 9.0,
+    "rt_score": 0.93,
+    "mc_score": 94,
+    "lb_score": 4.5,
+    "female_director": false,
+    "cast": [
+      "Elijah Wood",
+      "Ian McKellen",
+      "Viggo Mortensen"
+    ]
   },
   {
     "title": "Inception",
@@ -26073,7 +26147,18 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/xlaY2zyzMfkhk0HSC5VUwzoZPU1.jpg",
     "imdb_id": "tt1375666",
-    "synopsis": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO, but his tragic past may doom the project and his team to disaster."
+    "synopsis": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO, but his tragic past may doom the project and his team to disaster.",
+    "distributor": "Warner Bros",
+    "imdb_score": 8.8,
+    "rt_score": 0.87,
+    "mc_score": 74,
+    "lb_score": 4.2,
+    "female_director": false,
+    "cast": [
+      "Leonardo DiCaprio",
+      "Joseph Gordon-Levitt",
+      "Tom Hardy"
+    ]
   },
   {
     "title": "The Hurt Locker",
@@ -26089,7 +26174,18 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/io2dfBJhasvGbgkCX9cCGVOiA99.jpg",
     "imdb_id": "tt0887912",
-    "synopsis": "During the Iraq War, a Sergeant recently assigned to an army bomb squad is put at odds with his squad mates due to his maverick way of handling his work."
+    "synopsis": "During the Iraq War, a Sergeant recently assigned to an army bomb squad is put at odds with his squad mates due to his maverick way of handling his work.",
+    "distributor": "Lionsgate",
+    "imdb_score": 7.5,
+    "rt_score": 0.97,
+    "mc_score": 95,
+    "lb_score": 3.7,
+    "female_director": true,
+    "cast": [
+      "Jeremy Renner",
+      "Anthony Mackie",
+      "Brian Geraghty"
+    ]
   },
   {
     "title": "The Pianist",
@@ -26105,7 +26201,18 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/2hFvxCCWrTmCYwfy7yum0GKRi3Y.jpg",
     "imdb_id": "tt0253474",
-    "synopsis": "During WWII, acclaimed Polish musician Wladyslaw faces various struggles as he loses contact with his family. As the situation worsens, he hides in the ruins of Warsaw in order to survive."
+    "synopsis": "During WWII, acclaimed Polish musician Wladyslaw faces various struggles as he loses contact with his family. As the situation worsens, he hides in the ruins of Warsaw in order to survive.",
+    "distributor": "StudioCanal",
+    "imdb_score": 8.5,
+    "rt_score": 0.95,
+    "mc_score": 85,
+    "lb_score": 4.4,
+    "female_director": false,
+    "cast": [
+      "Adrien Brody",
+      "Thomas Kretschmann",
+      "Emilia Fox"
+    ]
   },
   {
     "title": "Batman Begins",
