@@ -25250,62 +25250,6 @@
     ]
   },
   {
-    "title": "The Dark Knight",
-    "year": 2008,
-    "decade": "2000s",
-    "director": "Christopher Nolan",
-    "country": "Usa",
-    "genre": "Action, Crime",
-    "runtime": 152,
-    "score": 8.8,
-    "distributor": "Warner Bros",
-    "format": "Blu-ray",
-    "watched": true,
-    "spine": "",
-    "lb": "https://boxd.it/230G",
-    "poster": "https://image.tmdb.org/t/p/w342/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
-    "imdb_id": "tt0468569",
-    "synopsis": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets.",
-    "imdb_score": 9,
-    "rt_score": 0.94,
-    "lb_score": 4.3,
-    "mc_score": 84,
-    "female_director": false,
-    "cast": [
-      "Christian Bale",
-      "Heath Ledger",
-      "Aaron Eckhart"
-    ]
-  },
-  {
-    "title": "The Dark Knight",
-    "year": 2008,
-    "decade": "2000s",
-    "director": "Christopher Nolan",
-    "country": "Usa",
-    "genre": "Action, Crime",
-    "runtime": 152,
-    "score": 9.1,
-    "format": "4K Blu-ray",
-    "watched": true,
-    "spine": "",
-    "poster": "https://www.themoviedb.org/t/p/w1280/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
-    "imdb_id": "tt0468569",
-    "synopsis": "When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness.",
-    "cast": [
-      "Christian Bale",
-      "Heath Ledger",
-      "Aaron Eckhart"
-    ],
-    "distributor": "Warner Bros",
-    "lb": "https://boxd.it/230G",
-    "imdb_score": 9,
-    "rt_score": 0.94,
-    "lb_score": 4.3,
-    "mc_score": 84,
-    "female_director": false
-  },
-  {
     "title": "The Departed",
     "year": 2006,
     "decade": "2000s",
@@ -26535,5 +26479,33 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/6c1tqfJEBuIyhQC19SLlLQAUAvJ.jpg",
     "imdb_id": "tt0808357",
     "synopsis": "During World War II era, a young woman, Wang Jiazhi, gets swept up in a dangerous game of emotional intrigue with a powerful political figure, Mr. Yee."
+  },
+  {
+    "title": "The Dark Knight",
+    "year": 2008,
+    "decade": "2000s",
+    "director": "Christopher Nolan",
+    "country": "Usa",
+    "genre": "Action, Crime",
+    "runtime": 152,
+    "score": 8.9,
+    "format": "4K Blu-ray",
+    "watched": true,
+    "spine": "",
+    "poster": "https://image.tmdb.org/t/p/w780/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+    "imdb_id": "tt0468569",
+    "synopsis": "When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness.",
+    "cast": [
+      "Christian Bale",
+      "Heath Ledger",
+      "Aaron Eckhart"
+    ],
+    "distributor": "Warner Bros",
+    "lb": "https://boxd.it/230G",
+    "imdb_score": 9,
+    "rt_score": 0.94,
+    "lb_score": 4.3,
+    "mc_score": 84,
+    "female_director": false
   }
 ]
