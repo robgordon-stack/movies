@@ -26066,7 +26066,7 @@
     "imdb_id": "tt0167260",
     "synopsis": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
     "distributor": "Warner Bros",
-    "imdb_score": 9.0,
+    "imdb_score": 9,
     "rt_score": 0.93,
     "mc_score": 94,
     "lb_score": 4.5,
@@ -26172,7 +26172,16 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/sPX89Td70IDDjVr85jdSBb4rWGr.jpg",
     "imdb_id": "tt0372784",
-    "synopsis": "After witnessing his parents' death, billionaire Bruce Wayne learns the art of fighting to confront injustice. When he returns to Gotham as Batman, he must stop a secret society that intends to destroy the city."
+    "synopsis": "After witnessing his parents' death, billionaire Bruce Wayne learns the art of fighting to confront injustice. When he returns to Gotham as Batman, he must stop a secret society that intends to destroy the city.",
+    "cast": [
+      "Christian Bale",
+      "Michael Caine",
+      "Liam Neeson"
+    ],
+    "distributor": "Warner Bros. Pictures",
+    "imdb_score": 8.2,
+    "rt_score": 0.85,
+    "female_director": false
   },
   {
     "title": "The Dark Knight Rises",
@@ -26188,7 +26197,16 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/hr0L2aueqlP2BYUblTTjmtn0hw4.jpg",
     "imdb_id": "tt1345836",
-    "synopsis": "Bane, an imposing terrorist, attacks Gotham City and disrupts its eight-year-long period of peace. This forces Bruce Wayne to come out of hiding and don the cape and cowl of Batman again."
+    "synopsis": "Bane, an imposing terrorist, attacks Gotham City and disrupts its eight-year-long period of peace. This forces Bruce Wayne to come out of hiding and don the cape and cowl of Batman again.",
+    "cast": [
+      "Christian Bale",
+      "Anne Hathaway",
+      "Tom Hardy"
+    ],
+    "distributor": "Warner Bros. Pictures",
+    "imdb_score": 8.4,
+    "rt_score": 0.87,
+    "female_director": false
   },
   {
     "title": "Speed Racer",
@@ -26205,7 +26223,15 @@
     "poster": "https://www.themoviedb.org/t/p/w1280/fxRIpx9Op9h71q3tvuabx4GryyP.jpg",
     "imdb_id": "tt0811080",
     "synopsis": "Young driver, Speed Racer, aspires to be champion of the racing world with the help of his family and his high-tech Mach 5 automobile.",
-    "female_director": true
+    "female_director": true,
+    "cast": [
+      "Emile Hirsch",
+      "Christina Ricci",
+      "John Goodman"
+    ],
+    "distributor": "Warner Bros. Pictures",
+    "imdb_score": 6.1,
+    "rt_score": 0.42
   },
   {
     "title": "Eyes Wide Shut",
@@ -26222,7 +26248,17 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/knEIz1eNGl5MQDbrEAVWA7iRqF9.jpg",
     "imdb_id": "tt0120663",
-    "synopsis": "A Manhattan doctor embarks on a bizarre, night-long odyssey after his wife's admission of unfulfilled longing."
+    "synopsis": "A Manhattan doctor embarks on a bizarre, night-long odyssey after his wife's admission of unfulfilled longing.",
+    "cast": [
+      "Tom Cruise",
+      "Nicole Kidman",
+      "Sydney Pollack"
+    ],
+    "lb": "https://boxd.it/2axs",
+    "imdb_score": 7.5,
+    "rt_score": 0.77,
+    "lb_score": 4.0,
+    "female_director": false
   },
   {
     "title": "King Creole",
@@ -26238,7 +26274,16 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/k5WBAgKrI8OytCSxMd4oau5KXzn.jpg",
     "imdb_id": "tt0051818",
-    "synopsis": "A troubled youth's singing sets New Orleans rockin'. With a sweet girl to love him and nightclubbers cheering, it seems he will shake off his past and head for the top. But will a mobster and his man-trap moll snare him in a life ..."
+    "synopsis": "A troubled youth's singing sets New Orleans rockin'. With a sweet girl to love him and nightclubbers cheering, it seems he will shake off his past and head for the top. But will a mobster and his man-trap moll snare him in a life ...",
+    "cast": [
+      "Elvis Presley",
+      "Carolyn Jones",
+      "Walter Matthau"
+    ],
+    "distributor": "Paramount Pictures",
+    "imdb_score": 7.0,
+    "rt_score": 0.96,
+    "female_director": false
   },
   {
     "title": "Kill Bill: The Whole Bloody Affair",
@@ -26254,7 +26299,16 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/nSOJfWJCdVFZQwXQA7RXn7FIIiY.jpg",
     "imdb_id": "tt6019206",
-    "synopsis": "A female assassin seeks revenge on her former lover and squad members, all of whom left her for dead."
+    "synopsis": "A female assassin seeks revenge on her former lover and squad members, all of whom left her for dead.",
+    "cast": [
+      "Uma Thurman",
+      "David Carradine",
+      "Lucy Liu"
+    ],
+    "distributor": "Lionsgate",
+    "imdb_score": 8.7,
+    "rt_score": 1.0,
+    "female_director": false
   },
   {
     "title": "Harvey",
@@ -26270,7 +26324,16 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/dgd82hYmpiXDM1G867HqNaWe8wj.jpg",
     "imdb_id": "tt0042546",
-    "synopsis": "A whimsical man is thought to be insane due to his insistence that he is best friends with an invisible, humanoid rabbit, but he may be wiser than anyone knows."
+    "synopsis": "A whimsical man is thought to be insane due to his insistence that he is best friends with an invisible, humanoid rabbit, but he may be wiser than anyone knows.",
+    "cast": [
+      "James Stewart",
+      "Josephine Hull",
+      "Peggy Dow"
+    ],
+    "distributor": "Universal Pictures",
+    "imdb_score": 7.9,
+    "rt_score": 0.88,
+    "female_director": false
   },
   {
     "title": "The Bridge on the River Kwai",
@@ -26286,7 +26349,16 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/7paXMt2e3Tr5dLmEZOGgFEn2Vo7.jpg",
     "imdb_id": "tt0050212",
-    "synopsis": "British POWs are forced to build a railway bridge across the river Kwai for their Japanese captors in occupied Burma, not knowing that the allied forces are planning a daring commando raid through the jungle to destroy it."
+    "synopsis": "British POWs are forced to build a railway bridge across the river Kwai for their Japanese captors in occupied Burma, not knowing that the allied forces are planning a daring commando raid through the jungle to destroy it.",
+    "cast": [
+      "William Holden",
+      "Alec Guinness",
+      "Jack Hawkins"
+    ],
+    "distributor": "Columbia Pictures",
+    "imdb_score": 8.1,
+    "rt_score": 0.96,
+    "female_director": false
   },
   {
     "title": "Gladiator",
@@ -26302,7 +26374,16 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/wN2xWp1eIwCKOD0BHTcErTBv1Uq.jpg",
     "imdb_id": "tt0172495",
-    "synopsis": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery."
+    "synopsis": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+    "cast": [
+      "Russell Crowe",
+      "Joaquin Phoenix",
+      "Connie Nielsen"
+    ],
+    "distributor": "DreamWorks Pictures",
+    "imdb_score": 8.5,
+    "rt_score": 0.8,
+    "female_director": false
   },
   {
     "title": "Sirat",
@@ -26318,7 +26399,16 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/bzBtsLi17rK4G6kDvOXfUZfAhca.jpg",
     "imdb_id": "tt32298285",
-    "synopsis": "A father, accompanied by his son, goes looking for his missing daughter in North Africa."
+    "synopsis": "A father, accompanied by his son, goes looking for his missing daughter in North Africa.",
+    "cast": [
+      "Sergi López",
+      "Bruno Núñez Arjona",
+      "Richard Bellamy"
+    ],
+    "distributor": "Neon",
+    "imdb_score": 7.0,
+    "rt_score": 0.91,
+    "female_director": false
   },
   {
     "title": "Babylon",
@@ -26334,7 +26424,16 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/wjOHjWCUE0YzDiEzKv8AfqHj3ir.jpg",
     "imdb_id": "tt10640346",
-    "synopsis": "A tale of outsized ambition and outrageous excess, it traces the rise and fall of multiple characters during an era of unbridled decadence and depravity in early Hollywood."
+    "synopsis": "A tale of outsized ambition and outrageous excess, it traces the rise and fall of multiple characters during an era of unbridled decadence and depravity in early Hollywood.",
+    "cast": [
+      "Brad Pitt",
+      "Margot Robbie",
+      "Diego Calva"
+    ],
+    "distributor": "Paramount Pictures",
+    "imdb_score": 7.1,
+    "rt_score": 0.55,
+    "female_director": false
   },
   {
     "title": "The Revenant",
@@ -26350,7 +26449,16 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/ji3ecJphATlVgWNY0B0RVXZizdf.jpg",
     "imdb_id": "tt1663202",
-    "synopsis": "A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team."
+    "synopsis": "A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team.",
+    "cast": [
+      "Leonardo DiCaprio",
+      "Tom Hardy",
+      "Domhnall Gleeson"
+    ],
+    "distributor": "20th Century Fox",
+    "imdb_score": 8.0,
+    "rt_score": 0.78,
+    "female_director": false
   },
   {
     "title": "Annihilation",
@@ -26366,7 +26474,16 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/4YRplSk6BhH6PRuE9gfyw9byUJ6.jpg",
     "imdb_id": "tt2798920",
-    "synopsis": "A biologist signs up for a dangerous, secret expedition in which the laws of nature don't apply."
+    "synopsis": "A biologist signs up for a dangerous, secret expedition in which the laws of nature don't apply.",
+    "cast": [
+      "Natalie Portman",
+      "Jennifer Jason Leigh",
+      "Oscar Isaac"
+    ],
+    "distributor": "Paramount Pictures",
+    "imdb_score": 6.8,
+    "rt_score": 0.88,
+    "female_director": false
   },
   {
     "title": "The Sound of Music",
@@ -26382,7 +26499,16 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/c6CrUZypAsBCaRWX0M3RVRDbhNS.jpg",
     "imdb_id": "tt0059742",
-    "synopsis": "A young novice is sent by her convent in 1930s Austria to become a governess to the seven children of a widowed naval officer."
+    "synopsis": "A young novice is sent by her convent in 1930s Austria to become a governess to the seven children of a widowed naval officer.",
+    "cast": [
+      "Julie Andrews",
+      "Christopher Plummer",
+      "Eleanor Parker"
+    ],
+    "distributor": "20th Century Fox",
+    "imdb_score": 8.0,
+    "rt_score": 0.86,
+    "female_director": false
   },
   {
     "title": "Cinema Paradiso",
@@ -26398,7 +26524,16 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/gCI2AeMV4IHSewhJkzsur5MEp6R.jpg",
     "imdb_id": "tt0095765",
-    "synopsis": "Salvatore, a famous film director, returns to his hometown for the funeral of the local theater's film projectionist, Alfredo. He reminisces about his life as a young boy falling in love with cinema."
+    "synopsis": "Salvatore, a famous film director, returns to his hometown for the funeral of the local theater's film projectionist, Alfredo. He reminisces about his life as a young boy falling in love with cinema.",
+    "cast": [
+      "Philippe Noiret",
+      "Jacques Perrin",
+      "Marco Leonardi"
+    ],
+    "distributor": "Miramax",
+    "imdb_score": 8.4,
+    "rt_score": 0.89,
+    "female_director": false
   },
   {
     "title": "Boyz n the Hood",
@@ -26414,7 +26549,16 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/v4ox4aSCNT5vyLXl4Q71JiWwCXW.jpg",
     "imdb_id": "tt0101507",
-    "synopsis": "Follows the lives of three young males living in the Crenshaw ghetto of Los Angeles, dissecting questions of race, relationships, violence, and future prospects."
+    "synopsis": "Follows the lives of three young males living in the Crenshaw ghetto of Los Angeles, dissecting questions of race, relationships, violence, and future prospects.",
+    "cast": [
+      "Cuba Gooding Jr.",
+      "Laurence Fishburne",
+      "Ice Cube"
+    ],
+    "distributor": "Columbia Pictures",
+    "imdb_score": 7.8,
+    "rt_score": 0.96,
+    "female_director": false
   },
   {
     "title": "All the President's Men",
@@ -26430,7 +26574,16 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/pCe6lfLxt1B58zPD4lgQrlnDS2j.jpg",
     "imdb_id": "tt0074119",
-    "synopsis": "\"The Washington Post\" reporters Bob Woodward and Carl Bernstein uncover the details of the Watergate scandal that leads to President Richard Nixon's resignation."
+    "synopsis": "\"The Washington Post\" reporters Bob Woodward and Carl Bernstein uncover the details of the Watergate scandal that leads to President Richard Nixon's resignation.",
+    "cast": [
+      "Robert Redford",
+      "Dustin Hoffman",
+      "Jack Warden"
+    ],
+    "distributor": "Warner Bros. Pictures",
+    "imdb_score": 7.9,
+    "rt_score": 0.95,
+    "female_director": false
   },
   {
     "title": "The Science of Sleep",
@@ -26446,7 +26599,16 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/8bummqwU6MV65ZJvNtKx8Y3NIEk.jpg",
     "imdb_id": "tt0354899",
-    "synopsis": "A man entranced by his dreams and imagination is love-struck with a French woman and feels he can show her his world."
+    "synopsis": "A man entranced by his dreams and imagination is love-struck with a French woman and feels he can show her his world.",
+    "cast": [
+      "Gael García Bernal",
+      "Charlotte Gainsbourg",
+      "Alain Chabat"
+    ],
+    "distributor": "Warner Independent Pictures",
+    "imdb_score": 7.2,
+    "rt_score": 0.71,
+    "female_director": false
   },
   {
     "title": "One Battle After Another",
@@ -26462,7 +26624,16 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/lbBWwxBht4JFP5PsuJ5onpMqugW.jpg",
     "imdb_id": "tt30144839",
-    "synopsis": "When their enemy resurfaces after 16 years, a group of ex-revolutionaries reunite to rescue the daughter of one of their own."
+    "synopsis": "When their enemy resurfaces after 16 years, a group of ex-revolutionaries reunite to rescue the daughter of one of their own.",
+    "cast": [
+      "Leonardo DiCaprio",
+      "Sean Penn",
+      "Benicio del Toro"
+    ],
+    "distributor": "Warner Bros. Pictures",
+    "imdb_score": 7.9,
+    "rt_score": 0.94,
+    "female_director": false
   },
   {
     "title": "Lust, Caution",
@@ -26478,7 +26649,16 @@
     "spine": "",
     "poster": "https://www.themoviedb.org/t/p/w1280/6c1tqfJEBuIyhQC19SLlLQAUAvJ.jpg",
     "imdb_id": "tt0808357",
-    "synopsis": "During World War II era, a young woman, Wang Jiazhi, gets swept up in a dangerous game of emotional intrigue with a powerful political figure, Mr. Yee."
+    "synopsis": "During World War II era, a young woman, Wang Jiazhi, gets swept up in a dangerous game of emotional intrigue with a powerful political figure, Mr. Yee.",
+    "cast": [
+      "Tony Leung Chiu-wai",
+      "Tang Wei",
+      "Joan Chen"
+    ],
+    "distributor": "Focus Features",
+    "imdb_score": 7.5,
+    "rt_score": 0.73,
+    "female_director": false
   },
   {
     "title": "The Dark Knight",
@@ -26506,6 +26686,249 @@
     "rt_score": 0.94,
     "lb_score": 4.3,
     "mc_score": 84,
+    "female_director": false
+  },
+  {
+    "title": "Farewell My Concubine",
+    "year": 1993,
+    "decade": "1990s",
+    "director": "Kaige Chen",
+    "country": "China",
+    "genre": "Drama, Music, Romance",
+    "runtime": 171,
+    "score": 8.1,
+    "distributor": "Criterion",
+    "format": "4K Blu-ray + Blu-ray",
+    "watched": false,
+    "spine": "",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYjMzZjcwNzItNTYwZC00NzAxLWE3MmMtYmU3ZjdkMWMxNDMwXkEyXkFqcGc@._V1_SX300.jpg",
+    "imdb_id": "tt0106332",
+    "synopsis": "Two boys meet at an opera training school in Peking in 1924. Their resulting friendship will span nearly 70 years and endure some of the most troublesome times in China's history.",
+    "cast": [
+      "Leslie Cheung",
+      "Zhang Fengyi",
+      "Gong Li"
+    ],
+    "lb": "https://boxd.it/1UTM",
+    "imdb_score": 8.1,
+    "rt_score": 0.9,
+    "lb_score": 4.4,
+    "female_director": false
+  },
+  {
+    "title": "The Friends of Eddie Coyle",
+    "year": 1973,
+    "decade": "1970s",
+    "director": "Peter Yates",
+    "country": "Usa",
+    "genre": "Crime, Drama",
+    "runtime": 102,
+    "score": 7.4,
+    "distributor": "Criterion",
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": "",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNzhkNWQyMjEtM2RkNC00NmE4LThmYjMtMzU5Yzk5MGVkYWU0XkEyXkFqcGc@._V1_SX300.jpg",
+    "imdb_id": "tt0070077",
+    "synopsis": "After his last crime has him looking at a long prison sentence for repeat offenses, a low level Boston gangster decides to snitch on his friends to avoid jail time.",
+    "cast": [
+      "Robert Mitchum",
+      "Peter Boyle",
+      "Richard Jordan"
+    ],
+    "lb": "https://boxd.it/1vki",
+    "imdb_score": 7.4,
+    "rt_score": 0.98,
+    "lb_score": 3.9,
+    "female_director": false
+  },
+  {
+    "title": "Yojimbo",
+    "year": 1961,
+    "decade": "1960s",
+    "director": "Akira Kurosawa",
+    "country": "Japan",
+    "genre": "Action, Drama, Thriller",
+    "runtime": 110,
+    "score": 8.2,
+    "distributor": "Criterion",
+    "format": "4K Blu-ray + Blu-ray",
+    "watched": false,
+    "spine": "",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYzFkODA1N2QtY2UyMC00NTMwLWEyNzctMmE3YjIzNzE1MzY4XkEyXkFqcGc@._V1_SX300.jpg",
+    "imdb_id": "tt0055630",
+    "synopsis": "A crafty ronin comes to a town divided by two criminal gangs and decides to play them against each other to free the town.",
+    "cast": [
+      "Toshiro Mifune",
+      "Tatsuya Nakadai",
+      "Yoko Tsukasa"
+    ],
+    "lb": "https://boxd.it/1SRY",
+    "imdb_score": 8.2,
+    "rt_score": 0.96,
+    "lb_score": 4.3,
+    "female_director": false
+  },
+  {
+    "title": "Sanjuro",
+    "year": 1962,
+    "decade": "1960s",
+    "director": "Akira Kurosawa",
+    "country": "Japan",
+    "genre": "Action, Drama, Thriller",
+    "runtime": 96,
+    "score": 8,
+    "distributor": "Criterion",
+    "format": "4K Blu-ray + Blu-ray",
+    "watched": false,
+    "spine": "",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYzllNDdhYmEtMGI5YS00YTk0LTlmNzMtNmM0MjNjYjBiN2JkXkEyXkFqcGc@._V1_SX300.jpg",
+    "imdb_id": "tt0056443",
+    "synopsis": "A crafty samurai helps a young man and his fellow clansmen trying to save his uncle, who has been framed and imprisoned by a corrupt superintendent.",
+    "cast": [
+      "Toshiro Mifune",
+      "Tatsuya Nakadai",
+      "Yuzo Kayama"
+    ],
+    "lb": "https://boxd.it/1TaQ",
+    "imdb_score": 8.0,
+    "rt_score": 1.0,
+    "lb_score": 4.1,
+    "female_director": false
+  },
+  {
+    "title": "Pee-wee's Big Adventure",
+    "year": 1985,
+    "decade": "1980s",
+    "director": "Tim Burton",
+    "country": "Usa",
+    "genre": "Adventure, Comedy, Family",
+    "runtime": 91,
+    "score": 7.1,
+    "distributor": "Criterion",
+    "format": "4K Blu-ray + Blu-ray",
+    "watched": false,
+    "spine": "",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYTQ2ZTUzZjktMWVmNC00MzBmLTg1ZjMtYzQyNmE1YzY1MDFiXkEyXkFqcGc@._V1_SX300.jpg",
+    "imdb_id": "tt0089791",
+    "synopsis": "When eccentric man-child Pee-wee Herman gets his beloved bike stolen in broad daylight, he sets out across the U.S. on the adventure of his life.",
+    "cast": [
+      "Paul Reubens",
+      "E.G. Daily",
+      "Mark Holton"
+    ],
+    "lb": "https://boxd.it/22Lw",
+    "imdb_score": 7.1,
+    "rt_score": 0.77,
+    "lb_score": 3.5,
+    "female_director": false
+  },
+  {
+    "title": "Design for Living",
+    "year": 1933,
+    "decade": "1930s",
+    "director": "Ernst Lubitsch",
+    "country": "Usa",
+    "genre": "Comedy, Mystery, Romance",
+    "runtime": 91,
+    "score": 7.4,
+    "distributor": "Criterion",
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": "",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMWVjYzFkYjItMWNkMy00M2UyLWIwYTItZmNjMDc5NjAzYzQ0XkEyXkFqcGc@._V1_SX300.jpg",
+    "imdb_id": "tt0023940",
+    "synopsis": "A woman cannot decide between two men who love her, and the trio agree to try living together in a platonic friendly relationship.",
+    "cast": [
+      "Fredric March",
+      "Miriam Hopkins",
+      "Gary Cooper"
+    ],
+    "lb": "https://boxd.it/2FJE",
+    "imdb_score": 7.4,
+    "rt_score": 0.76,
+    "lb_score": 3.9,
+    "female_director": false
+  },
+  {
+    "title": "Harlan County U.S.A.",
+    "year": 1976,
+    "decade": "1970s",
+    "director": "Barbara Kopple",
+    "country": "Usa",
+    "genre": "Documentary",
+    "runtime": 103,
+    "score": 8.2,
+    "distributor": "Criterion",
+    "format": "4K Blu-ray + Blu-ray",
+    "watched": false,
+    "spine": "",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNDEzMDJlMDgtZTIzMi00YjViLTkxMDgtNmYxZjIzM2FjNDVjXkEyXkFqcGc@._V1_SX300.jpg",
+    "imdb_id": "tt0074605",
+    "synopsis": "A heartbreaking record of the thirteen-month struggle between a community fighting to survive and a corporation dedicated to the bottom line.",
+    "cast": [
+      "Norman Yarborough",
+      "Houston Elmore",
+      "Phil Sparks"
+    ],
+    "lb": "https://boxd.it/1fJw",
+    "imdb_score": 8.2,
+    "rt_score": 1.0,
+    "lb_score": 4.4,
+    "female_director": true
+  },
+  {
+    "title": "La Strada",
+    "year": 1954,
+    "decade": "1950s",
+    "director": "Federico Fellini",
+    "country": "Italy",
+    "genre": "Drama",
+    "runtime": 108,
+    "score": 8,
+    "distributor": "Criterion",
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": "",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMWQ0M2Q5NDAtMDg0ZC00YmM1LWI3YjktNDIxOTFiOTIzYzQ2XkEyXkFqcGc@._V1_SX300.jpg",
+    "imdb_id": "tt0047528",
+    "synopsis": "A care-free girl is sold to a traveling entertainer, consequently enduring physical and emotional pain along the way.",
+    "cast": [
+      "Giulietta Masina",
+      "Anthony Quinn",
+      "Richard Basehart"
+    ],
+    "lb": "https://boxd.it/2asi",
+    "imdb_score": 8.0,
+    "rt_score": 0.98,
+    "lb_score": 4.2,
+    "female_director": false
+  },
+  {
+    "title": "Autumn Sonata",
+    "year": 1978,
+    "decade": "1970s",
+    "director": "Ingmar Bergman",
+    "genre": "Drama, Music",
+    "runtime": 99,
+    "score": 8.1,
+    "distributor": "Criterion",
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": "",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNTg1MzJiNTYtZjcyNS00NDE5LWE0N2ItMGIxM2Y2ZDMyYjJjXkEyXkFqcGc@._V1_SX300.jpg",
+    "imdb_id": "tt0077711",
+    "synopsis": "A devoted wife is visited by her mother, a successful concert pianist who had little time for her when she was young.",
+    "country": "Sweden",
+    "cast": [
+      "Ingrid Bergman",
+      "Liv Ullmann",
+      "Halvar Björk"
+    ],
+    "lb": "https://boxd.it/1Rio",
+    "imdb_score": 8.1,
+    "rt_score": 0.85,
+    "lb_score": 4.5,
     "female_director": false
   }
 ]
