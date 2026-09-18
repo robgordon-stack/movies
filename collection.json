@@ -10037,7 +10037,8 @@
       "Tomorowo Taguchi",
       "Shinya Tsukamoto",
       "Nobu Kanaoka"
-    ]
+    ],
+    "imdb_score": 6.4
   },
   {
     "title": "Tetsuo: The Iron Man",
@@ -10063,7 +10064,8 @@
       "Tomorowo Taguchi",
       "Shinya Tsukamoto",
       "Kei Fujiwara"
-    ]
+    ],
+    "imdb_score": 6.9
   },
   {
     "title": "The 'Burbs",
@@ -26930,5 +26932,59 @@
     "rt_score": 0.85,
     "lb_score": 4.5,
     "female_director": false
+  },
+  {
+    "title": "Shoah",
+    "year": 1985,
+    "decade": "1980s",
+    "director": "Claude Lanzmann",
+    "genre": "Documentary, History, War",
+    "runtime": 566,
+    "score": 9.2,
+    "distributor": "Eureka",
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": "",
+    "poster": "https://a.ltrbxd.com/resized/sm/upload/au/v2/fe/p0/shoah-1200-1200-675-675-crop-000000.jpg",
+    "imdb_id": "tt0090015",
+    "synopsis": "Claude Lanzmann's epic documentary recounts the story of the Holocaust through interviews with witnesses - perpetrators as well as survivors.",
+    "country": "France",
+    "cast": [
+      "Simon Srebnik",
+      "Michael Podchlebnik",
+      "Motke Zaidl"
+    ],
+    "lb": "https://boxd.it/XSK",
+    "imdb_score": 8.7,
+    "rt_score": 1.0,
+    "lb_score": 4.5,
+    "female_director": false
+  },
+  {
+    "title": "Portrait of a Lady on Fire",
+    "year": 2019,
+    "decade": "2010s",
+    "director": "Céline Sciamma",
+    "genre": "Drama, Romance",
+    "runtime": 122,
+    "score": 8.9,
+    "distributor": "Curzon",
+    "format": "4K",
+    "watched": false,
+    "spine": "",
+    "poster": "https://a.ltrbxd.com/resized/sm/upload/6s/c1/hx/il/portrait-of-lady-on-fire-1200-1200-675-675-crop-000000.jpg",
+    "imdb_id": "tt8613070",
+    "synopsis": "On an isolated island in Brittany at the end of the eighteenth century, a female painter is obliged to paint a wedding portrait of a young woman.",
+    "country": "France",
+    "cast": [
+      "Noémie Merlant",
+      "Adèle Haenel",
+      "Luàna Bajrami"
+    ],
+    "lb": "https://boxd.it/jkPq",
+    "imdb_score": 8.0,
+    "rt_score": 0.98,
+    "lb_score": 4.4,
+    "female_director": true
   }
 ]
