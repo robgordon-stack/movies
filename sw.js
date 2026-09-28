@@ -1,48 +1,33 @@
-// Service Worker for My Movie Collection
-// To update: bump the version number below, then redeploy
-const VERSION = 'v107';
-const CACHE   = 'my-films-' + VERSION;
-const ASSETS  = [
-  '/movies/',
-  '/movies/index.html',
-  '/movies/manifest.json',
-  '/movies/icon-192.png',
-  '/movies/icon-512.png',
-  '/movies/wishlist.html',
-  '/movies/wishlist.json',
-];
-
-// Install — cache all assets
+// Network-first for pages and data (so updates always appear when online),
+// cache fallback when offline, cache-first for poster images.
+const V = 'archive-v1';
+const SHELL = ['./', 'index.html', 'wishlist.html', 'lb500.html', 'collection.json', 'wishlist.json', 'icon-192.png'];
 self.addEventListener('install', e => {
-  e.waitUntil(
-    caches.open(CACHE)
-      .then(cache => cache.addAll(ASSETS))
-      .then(() => self.skipWaiting())
-  );
+  e.waitUntil(caches.open(V).then(c => Promise.allSettled(SHELL.map(u => c.add(u)))).then(() => self.skipWaiting()));
 });
-
-// Activate — delete old caches
 self.addEventListener('activate', e => {
-  e.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
-    ).then(() => self.clients.claim())
-  );
-}); // ← FIX: this closing }); was missing, breaking the entire service worker
-
-// Fetch — serve from cache, fall back to network
+  e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim()));
+});
+async function trim(cache, max) {
+  const keys = await cache.keys();
+  if (keys.length > max) await Promise.all(keys.slice(0, keys.length - max).map(k => cache.delete(k)));
+}
 self.addEventListener('fetch', e => {
-  // Only handle GET requests for our own origin
-  if (e.request.method !== 'GET') return;
-
-  e.respondWith(
-    caches.match(e.request).then(cached => {
-      if (cached) return cached;
-      // Not in cache (e.g. TMDB poster images) — fetch from network
-      return fetch(e.request).catch(() => {
-        // If network fails too, return a blank response rather than error
-        return new Response('', { status: 408 });
-      });
-    })
-  );
+  const req = e.request;
+  if (req.method !== 'GET') return;
+  const url = new URL(req.url);
+  if (url.hostname === 'image.tmdb.org' || req.destination === 'image') {
+    e.respondWith(caches.open(V).then(async c => {
+      const hit = await c.match(req);
+      if (hit) return hit;
+      try { const res = await fetch(req); if (res && (res.ok || res.type === 'opaque')) { c.put(req, res.clone()); trim(c, 1800); } return res; }
+      catch (err) { return hit || Response.error(); }
+    }));
+    return;
+  }
+  if (url.origin !== location.origin) return;   // leave API calls (OMDb etc.) alone
+  e.respondWith(fetch(req).then(res => {
+    if (res.ok) { const copy = res.clone(); caches.open(V).then(c => c.put(req, copy)); }
+    return res;
+  }).catch(() => caches.match(req, { ignoreSearch: true }).then(r => r || caches.match('index.html'))));
 });
