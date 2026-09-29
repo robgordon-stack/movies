@@ -5441,40 +5441,6 @@
     "female_director": false
   },
   {
-    "id": "17753635899857d567191xnp",
-    "title": "Red Beard",
-    "priority": "High",
-    "added": 1775363589985,
-    "owned": false,
-    "poster": "https://image.tmdb.org/t/p/w500/iYNH3Re0JSypoYaWvZtERUnNaJL.jpg",
-    "imdb_id": "tt0058888",
-    "year": 1965,
-    "runtime": 185,
-    "genre": "Drama",
-    "country": "Japan",
-    "director": "Akira Kurosawa",
-    "tmdb_id": 3780,
-    "lb": "https://letterboxd.com/search/Red%20Beard/",
-    "has4k": false,
-    "score": 8.7,
-    "imdb_score": 8.3,
-    "lb_score": 4.3,
-    "rt_score": 0.96,
-    "similar": [
-      {
-        "title": "Dodes'ka-den",
-        "year": 1970,
-        "imdb_id": "tt0065619"
-      },
-      {
-        "title": "The Quiet Duel",
-        "year": 1949,
-        "imdb_id": "tt0041745"
-      }
-    ],
-    "female_director": false
-  },
-  {
     "id": "1775363589985wp0lb8sa139",
     "title": "Life Is Beautiful",
     "priority": "Someday",
@@ -6495,43 +6461,6 @@
     "female_director": false
   },
   {
-    "id": "1775371605424747e4u09fil",
-    "title": "The Holdovers",
-    "year": 2023,
-    "director": "Alexander Payne",
-    "poster": "https://image.tmdb.org/t/p/w1280/VHSzNBTwxV8vh7wylo7O9CLdac.jpg",
-    "imdb_id": "tt14849194",
-    "genre": "Comedy, Drama",
-    "country": "United States",
-    "runtime": 133,
-    "priority": "High",
-    "notes": null,
-    "owned": false,
-    "added": 1775371605424,
-    "has4k": true,
-    "distributor": null,
-    "lb": "https://letterboxd.com/film/the-holdovers/",
-    "score": 8.6,
-    "imdb_score": 7.9,
-    "lb_score": 4.2,
-    "rt_score": 0.98,
-    "mc_score": 90,
-    "similar": [
-      {
-        "title": "About Schmidt",
-        "year": 2002,
-        "imdb_id": "tt0257360"
-      },
-      {
-        "title": "A Separate Peace",
-        "year": 1972,
-        "imdb_id": "tt0069155"
-      }
-    ],
-    "tmdb_id": 966398,
-    "female_director": false
-  },
-  {
     "id": "1775371594107n44ungk2i6k",
     "title": "The Nice Guys",
     "year": 2016,
@@ -6891,43 +6820,6 @@
       }
     ],
     "tmdb_id": 1585,
-    "female_director": false
-  },
-  {
-    "id": "1775369564988i3ewoak8ml",
-    "title": "Misery",
-    "year": 1990,
-    "director": "Rob Reiner",
-    "poster": "https://image.tmdb.org/t/p/w1280/klPO5oh1LOxiPpdDXZo1ADgpKcw.jpg",
-    "imdb_id": "tt0100157",
-    "genre": "Drama, Thriller",
-    "country": "United States",
-    "runtime": 107,
-    "priority": "High",
-    "notes": "Kino Lorber 4K",
-    "owned": false,
-    "added": 1775369564988,
-    "has4k": true,
-    "distributor": "Kino Lorber",
-    "lb": "https://letterboxd.com/film/misery/",
-    "score": 8,
-    "imdb_score": 7.8,
-    "lb_score": 4,
-    "rt_score": 0.9,
-    "mc_score": 74,
-    "similar": [
-      {
-        "title": "Gerald's Game",
-        "year": 2017,
-        "imdb_id": "tt3748172"
-      },
-      {
-        "title": "Dolores Claiborne",
-        "year": 1995,
-        "imdb_id": "tt0109642"
-      }
-    ],
-    "tmdb_id": 2505,
     "female_director": false
   },
   {

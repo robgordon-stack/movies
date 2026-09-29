@@ -5,7 +5,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Letterboxd Top 500 — Collection Tracker</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -31,11 +31,11 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { background: var(--bg); color: var(--text); font-family: 'DM Mono', monospace; }
-  body { min-height: 100vh; }
+  body { min-height: 100vh; padding-bottom: env(safe-area-inset-bottom, 0px); }
 
   /* HEADER */
   .header {
-    padding: 3rem 2rem 2rem;
+    padding: calc(3rem + env(safe-area-inset-top, 0px)) 2rem 2rem;
     border-bottom: 1px solid var(--border);
     position: sticky; top: 0; z-index: 100;
     background: rgba(14,14,14,0.96);
@@ -740,17 +740,6 @@ const FILMS = [
   {r:500,t:"Love Letter",y:1995,s:"missing"},
 ];
 
-const nOwned = FILMS.filter(f=>f.s==='owned').length;
-const nWish  = FILMS.filter(f=>f.s==='wishlist').length;
-const nMiss  = FILMS.filter(f=>f.s==='missing').length;
-
-document.getElementById('count-owned').textContent = nOwned;
-document.getElementById('count-wishlist').textContent = nWish;
-document.getElementById('count-missing').textContent = nMiss;
-document.getElementById('count-pct').textContent = Math.round(nOwned/5)+'%';
-document.getElementById('prog-owned').style.width = (nOwned/5)+'%';
-document.getElementById('prog-wishlist').style.width = (nWish/5)+'%';
-
 let currentFilter = 'all';
 let currentSort = 'rank';
 let searchQ = '';
@@ -789,18 +778,43 @@ function render() {
     `Showing ${films.length} film${films.length!==1?'s':''}`;
 
   listEl.innerHTML = films.map(f => `
-    <div class="film-item status-${f.s}">
+    <a class="film-item status-${f.s}" href="${f.lb||('https://letterboxd.com/film/'+f.t.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9\s-]/g,'').trim().replace(/\s+/g,'-')+'/')}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
       <span class="rank">${f.r}</span>
       <div class="film-info">
         <div class="film-title${f.s==='missing'?' faded':''}">${f.t}</div>
         <div class="film-year">${f.y}</div>
       </div>
       <span class="status-pill pill-${f.s}">${f.s==='owned'?'owned':f.s==='wishlist'?'wish':'—'}</span>
-    </div>
+    </a>
   `).join('');
 }
 
 render();
+
+// ===== Auto-sync statuses & links from collection.json / wishlist.json =====
+function lbNorm(s){return (s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');}
+const LB_ALIAS={dreams:'akirakurosawasdreams',jointsecurityarea:'jsajointsecurityarea'};
+function lbCounts(){
+  const nOwned=FILMS.filter(f=>f.s==='owned').length,nWish=FILMS.filter(f=>f.s==='wishlist').length,nMiss=FILMS.filter(f=>f.s==='missing').length;
+  document.getElementById('count-owned').textContent=nOwned;
+  document.getElementById('count-wishlist').textContent=nWish;
+  document.getElementById('count-missing').textContent=nMiss;
+  document.getElementById('count-pct').textContent=Math.round(nOwned/5)+'%';
+  document.getElementById('prog-owned').style.width=(nOwned/5)+'%';
+  document.getElementById('prog-wishlist').style.width=(nWish/5)+'%';
+}
+async function lbSync(){
+  try{
+    const [c,w]=await Promise.all(['collection.json','wishlist.json'].map(u=>fetch(u+'?v='+Date.now()).then(r=>{if(!r.ok)throw 0;return r.json();})));
+    const idx=a=>(Array.isArray(a)?a:(a.films||[])).map(d=>({n:lbNorm(d.title),y:d.year,lb:d.lb}));
+    const ci=idx(c),wi=idx(w);
+    const find=(list,f)=>{const k=LB_ALIAS[lbNorm(f.t)]||lbNorm(f.t);return list.find(d=>(d.n===k||(k.length>=10&&d.n.startsWith(k)))&&Math.abs(d.y-f.y)<=2);};
+    FILMS.forEach(f=>{const o=find(ci,f),wl=o?null:find(wi,f);f.s=o?'owned':wl?'wishlist':'missing';f.lb=(o||wl||{}).lb||f.lb;});
+    lbCounts();render();
+  }catch(e){console.warn('lb500 sync skipped (using built-in statuses)',e);}
+}
+lbSync();
+lbCounts();
 </script>
 </body>
 </html>

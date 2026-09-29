@@ -4964,7 +4964,7 @@
     "genre": "Action, Crime, Sci-Fi",
     "runtime": 102,
     "score": 7.8,
-    "distributor": "Criterion Collection / Arrow Films",
+    "distributor": "Criterion Collection",
     "format": "DVD + 4K Blu-ray",
     "watched": true,
     "spine": "23.0",
@@ -26148,7 +26148,7 @@
     "poster": "https://image.tmdb.org/t/p/w342/2hFvxCCWrTmCYwfy7yum0GKRi3Y.jpg",
     "imdb_id": "tt0253474",
     "synopsis": "During WWII, acclaimed Polish musician Wladyslaw faces various struggles as he loses contact with his family. As the situation worsens, he hides in the ruins of Warsaw in order to survive.",
-    "distributor": "StudioCanal",
+    "distributor": "Studio Canal",
     "imdb_score": 8.5,
     "rt_score": 0.95,
     "mc_score": 85,
@@ -27254,7 +27254,8 @@
       "Jim Carrey",
       "Matthew Broderick",
       "Leslie Mann"
-    ]
+    ],
+    "distributor": "Columbia Pictures"
   },
   {
     "title": "The Holdovers",
@@ -27279,7 +27280,8 @@
       "Paul Giamatti",
       "Da'Vine Joy Randolph",
       "Dominic Sessa"
-    ]
+    ],
+    "distributor": "Focus Features"
   },
   {
     "title": "Misery",
