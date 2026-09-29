@@ -6,6 +6,10 @@
 <meta http-equiv="Expires" content="0">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Top 500">
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0d0d0d"><link rel="apple-touch-icon" href="icon-192.png">
 <title>Letterboxd Top 500 — Collection Tracker</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -814,6 +818,9 @@ async function lbSync(){
   }catch(e){console.warn('lb500 sync skipped (using built-in statuses)',e);}
 }
 lbSync();
+document.addEventListener("visibilitychange",()=>{document.hidden||lbSync()});
+window.addEventListener("pageshow",e=>{e.persisted&&lbSync()});
+if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').then(r=>r.update()).catch(()=>{}));
 lbCounts();
 </script>
 </body>

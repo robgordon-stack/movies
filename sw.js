@@ -1,6 +1,6 @@
 // Network-first for pages and data (so updates always appear when online),
 // cache fallback when offline, cache-first for poster images.
-const V = 'archive-v1';
+const V = 'archive-v2';
 const SHELL = ['./', 'index.html', 'wishlist.html', 'lb500.html', 'collection.json', 'wishlist.json', 'icon-192.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(V).then(c => Promise.allSettled(SHELL.map(u => c.add(u)))).then(() => self.skipWaiting()));
@@ -26,7 +26,7 @@ self.addEventListener('fetch', e => {
     return;
   }
   if (url.origin !== location.origin) return;   // leave API calls (OMDb etc.) alone
-  e.respondWith(fetch(req).then(res => {
+  e.respondWith(fetch(req, { cache: 'no-store' }).then(res => {
     if (res.ok) { const copy = res.clone(); caches.open(V).then(c => c.put(req, copy)); }
     return res;
   }).catch(() => caches.match(req, { ignoreSearch: true }).then(r => r || caches.match('index.html'))));
