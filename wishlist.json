@@ -1,5 +1,35 @@
 [
   {
+    "id": "17908512135027vaha892296",
+    "title": "The Devils",
+    "year": 1971,
+    "director": "Ken Russell",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYjQzYzFmNmUtMWVkNS00MmU1LTkyMzUtYzhmNjIwM2ZjOWZmXkEyXkFqcGc@._V1_SX300.jpg",
+    "imdb_id": "tt0066993",
+    "genre": null,
+    "country": null,
+    "runtime": null,
+    "priority": "High",
+    "notes": null,
+    "owned": false,
+    "added": 1790851213502
+  },
+  {
+    "id": "17908511143897hy8vmsut1r",
+    "title": "Kiss Kiss Bang Bang",
+    "year": 2005,
+    "director": "Shane Black",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTY5NDExMDA3M15BMl5BanBnXkFtZTYwNTc2MzA3._V1_SX300.jpg",
+    "imdb_id": "tt0373469",
+    "genre": null,
+    "country": null,
+    "runtime": null,
+    "priority": "High",
+    "notes": null,
+    "owned": false,
+    "added": 1790851114390
+  },
+  {
     "id": "1790675426073hv6vkw6v1a",
     "title": "Repulsion",
     "year": 1965,
@@ -23,7 +53,8 @@
       "Catherine Deneuve",
       "Ian Hendry",
       "John Fraser"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "179067540652633b6mwm8ut8",
@@ -49,7 +80,8 @@
       "Katharine Hepburn",
       "Cary Grant",
       "Charles Ruggles"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790675388159pgouh04ploe",
@@ -75,7 +107,8 @@
       "Miyoko Shoji",
       "Mami Koyama",
       "Fumiko Orikasa"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790675365041f7f1oomqvj4",
@@ -101,7 +134,8 @@
       "Gérard Hernandez",
       "Jean Valmont",
       "Jennifer Drake"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790675347636za3thmkdef",
@@ -127,7 +161,8 @@
       "Humphrey Bogart",
       "Lauren Bacall",
       "John Ridgely"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790675335244i9r727ejho",
@@ -144,7 +179,7 @@
     "owned": false,
     "added": 1790675335244,
     "imdb_score": 7.7,
-    "rt_score": 1.0,
+    "rt_score": 1,
     "mc_score": 96,
     "score": 7.7,
     "tmdb_id": 3089,
@@ -153,7 +188,8 @@
       "John Wayne",
       "Montgomery Clift",
       "Joanne Dru"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790675320003c6obgnwqi2",
@@ -179,7 +215,8 @@
       "Jack Nicholson",
       "Karen Black",
       "Susan Anspach"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790675304501ntirfofotbj",
@@ -205,7 +242,8 @@
       "Ruth Gordon",
       "Bud Cort",
       "Vivian Pickles"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790675292075ssg9pn8ndth",
@@ -231,7 +269,8 @@
       "Tom Waits",
       "John Lurie",
       "Roberto Benigni"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "17906752731446wzfcd9iqfj",
@@ -243,7 +282,7 @@
     "genre": "Comedy, Drama, Romance",
     "country": "France",
     "runtime": 118,
-    "priority": "Someday",
+    "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1790675273144,
@@ -257,7 +296,8 @@
       "Adam Driver",
       "Golshifteh Farahani",
       "Rizwan Manji"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790675252346xvnh47ftsir",
@@ -283,7 +323,8 @@
       "Michelle Williams",
       "Bruce Greenwood",
       "Will Patton"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790675217595btcbdc5h6b",
@@ -295,7 +336,7 @@
     "genre": "Crime, Mystery, Thriller",
     "country": "Usa",
     "runtime": 120,
-    "priority": "Someday",
+    "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1790675217595,
@@ -309,7 +350,8 @@
       "William L. Petersen",
       "Tom Noonan",
       "Dennis Farina"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790675186328ndu3vwil34",
@@ -335,7 +377,8 @@
       "Jeremy Irons",
       "Geneviève Bujold",
       "Heidi von Palleske"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "17906751455084gtzutrpd4q",
@@ -359,7 +402,8 @@
       "Michel Bouquet",
       "Reinhard Heydrich",
       "Heinrich Himmler"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "179067511224537801xshtrt",
@@ -371,12 +415,12 @@
     "genre": "Documentary, Music",
     "country": "Usa",
     "runtime": 88,
-    "priority": "Someday",
+    "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1790675112245,
     "imdb_score": 8.7,
-    "rt_score": 1.0,
+    "rt_score": 1,
     "mc_score": 94,
     "score": 8.7,
     "tmdb_id": 24128,
@@ -385,7 +429,8 @@
       "David Byrne",
       "Chris Frantz",
       "Jerry Harrison"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "17906750810477pc658xhxw",
@@ -411,7 +456,8 @@
       "Ben Mendelsohn",
       "Joel Edgerton",
       "Guy Pearce"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790675052554l3a9d2hav7",
@@ -437,7 +483,8 @@
       "Richard Chamberlain",
       "Olivia Hamnett",
       "David Gulpilil"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674978181veh3y56c0f",
@@ -462,7 +509,8 @@
       "Max Schreck",
       "Gustav von Wangenheim",
       "Greta Schröder"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "179067495308293gy8ar08md",
@@ -488,7 +536,8 @@
       "Gustav Fröhlich",
       "Brigitte Helm",
       "Alfred Abel"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674930928wgqra6xj1y",
@@ -513,7 +562,8 @@
       "Jean-Paul Belmondo",
       "Serge Reggiani",
       "Jean Desailly"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "179067491044323z9kjcbxug",
@@ -539,7 +589,8 @@
       "Roger Duchesne",
       "Isabelle Corey",
       "Daniel Cauchy"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "17906748941141317151y23gp",
@@ -564,7 +615,8 @@
       "Václav Neckář",
       "Jitka Scoffin",
       "Vladimír Valenta"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674863738tzui0r648lc",
@@ -580,16 +632,17 @@
     "notes": null,
     "owned": false,
     "added": 1790674863738,
-    "imdb_score": 7.0,
+    "imdb_score": 7,
     "rt_score": 0.81,
-    "score": 7.0,
+    "score": 7,
     "tmdb_id": 46315,
     "synopsis": "Valerie, a Czechoslovakian teenager living with her grandmother, is blossoming into womanhood, but that transformation proves secondary to the effects she experiences when she puts on a pair of magic earrings. Now seeing the world around her in a different light, Valerie must endure her sexual awakening while attempting to discern reality from fantasy as she encounters lecherous priest Gracian, a vampire-like stranger and otherworldly carnival folk.",
     "cast": [
       "Jaroslava Schallerová",
       "Helena Anýžová",
       "Petr Kopřiva"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674846860s6jkkwecwpm",
@@ -614,7 +667,8 @@
       "Ivan Mykolaichuk",
       "Larysa Kadochnykova",
       "Tatyana Bestayeva"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674818082db71qe9tgel",
@@ -639,7 +693,8 @@
       "Sofiko Chiaureli",
       "Melkon Alekyan",
       "Vilen Galstyan"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "17906747926937guhb1nsxzu",
@@ -665,7 +720,8 @@
       "Shu Qi",
       "Chang Chen",
       "Zhou Yun"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674772904sbdme3neth",
@@ -682,7 +738,7 @@
     "owned": false,
     "added": 1790674772904,
     "imdb_score": 7.6,
-    "rt_score": 1.0,
+    "rt_score": 1,
     "score": 7.6,
     "tmdb_id": 106380,
     "synopsis": "A young woman urgently seeks to navigate the maze of contemporary Taipei and find a future. She hopes that her boyfriend Lung is the key to the future, but Lung is stuck in a past that combines baseball and traditional loyalty that leads him to squander his nest egg bailing her father out of financial trouble.",
@@ -690,7 +746,8 @@
       "Tsai Chin",
       "Hou Hsiao-hsien",
       "Wu Nien-jen"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "17906747335760tj4vptxk3mi",
@@ -706,17 +763,18 @@
     "notes": null,
     "owned": false,
     "added": 1790674733576,
-    "imdb_score": 7.0,
+    "imdb_score": 7,
     "rt_score": 0.84,
     "mc_score": 72,
-    "score": 7.0,
+    "score": 7,
     "tmdb_id": 11553,
     "synopsis": "In 2011, Vicky looks back on her life a decade earlier, recalling her turbulent relationship with her controlling boyfriend Hao Hao and her growing connection to a compassionate gangster amid the neon haze of Taipei's nightlife.",
     "cast": [
       "Shu Qi",
       "Jack Kao",
       "Duan Chun-hao"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674705147b39g7ckm9uw",
@@ -742,7 +800,8 @@
       "Ti Lung",
       "Chow Yun-Fat",
       "Leslie Cheung"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "17906746792948mryyfhx77j",
@@ -766,7 +825,8 @@
       "Jimmy Wang Yu",
       "Lisa Chiao Chiao",
       "Tien Feng"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674641295zoc5n4oyvyq",
@@ -783,7 +843,7 @@
     "owned": false,
     "added": 1790674641296,
     "imdb_score": 7.4,
-    "rt_score": 1.0,
+    "rt_score": 1,
     "mc_score": 100,
     "score": 7.4,
     "tmdb_id": 104237,
@@ -792,7 +852,8 @@
       "Shih Chun",
       "Pai Ying",
       "Polly Shang-Kuan Ling-Feng"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674620038279x0o23gzc",
@@ -817,7 +878,8 @@
       "Hsu Feng",
       "Shih Chun",
       "Pai Ying"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "17906745825082ns17chvdz6",
@@ -842,7 +904,8 @@
       "Ken Ogata",
       "Sumiko Sakamoto",
       "Tonpei Hidari"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674543526bxihw685flp",
@@ -866,7 +929,8 @@
       "Hiroyuki Nagato",
       "Jitsuko Yoshimura",
       "Masao Mishima"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674521890m5cpl5whfq",
@@ -882,16 +946,17 @@
     "notes": null,
     "owned": false,
     "added": 1790674521890,
-    "imdb_score": 8.0,
-    "rt_score": 1.0,
-    "score": 8.0,
+    "imdb_score": 8,
+    "rt_score": 1,
+    "score": 8,
     "tmdb_id": 36872,
     "synopsis": "Keiko, whom everyone calls Mama, narrates her story: she's a hostess on the Ginza, 30, a widow. She describes life's vicious cycle: acting cheerful around drunks, dressing and living well to convey confidence, needing money for these expenses and for her demanding mother and brother, and knowing she's growing older.",
     "cast": [
       "Hideko Takamine",
       "Masayuki Mori",
       "Reiko Dan"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674493894xbaxz93mi2o",
@@ -908,7 +973,7 @@
     "owned": false,
     "added": 1790674493894,
     "imdb_score": 7.8,
-    "rt_score": 1.0,
+    "rt_score": 1,
     "score": 7.8,
     "tmdb_id": 822,
     "synopsis": "An aging, decadent landlord’s passion for music becomes the undoing of his legacy as he sacrifices his wealth in order to compete with the opulent music room of his younger, richer neighbour.",
@@ -916,7 +981,8 @@
       "Chhabi Biswas",
       "Gangapada Basu",
       "Kali Sarkar"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "17906744751283qf0pynoueb",
@@ -932,16 +998,17 @@
     "notes": null,
     "owned": false,
     "added": 1790674475128,
-    "imdb_score": 8.0,
+    "imdb_score": 8,
     "rt_score": 0.88,
-    "score": 8.0,
+    "score": 8,
     "tmdb_id": 11656,
     "synopsis": "Devout Christians Töre and Märeta send their only daughter, the virginal Karin, and their foster daughter, the unrepentant Ingeri, to deliver candles to a distant church. On their way through the woods, the girls encounter a group of savage goat herders who brutally rape and murder Karin as Ingeri remains hidden. When the killers unwittingly seek refuge in the farmhouse of Töre and Märeta, Töre plots a fitting revenge.",
     "cast": [
       "Max von Sydow",
       "Birgitta Valberg",
       "Gunnel Lindblom"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674458123huclgdg30u4",
@@ -957,17 +1024,18 @@
     "notes": null,
     "owned": false,
     "added": 1790674458123,
-    "imdb_score": 7.0,
+    "imdb_score": 7,
     "rt_score": 0.79,
     "mc_score": 69,
-    "score": 7.0,
+    "score": 7,
     "tmdb_id": 40751,
     "synopsis": "Ouyang Feng is a heartbroken and cynical man who spends his days in the desert, connecting expert swordsmen with those seeking revenge and willing to pay for it. Throughout five seasons in exile, Ouyang spins tales of his clients' unrequited loves and unusual acts of bravery.",
     "cast": [
       "Leslie Cheung",
       "Brigitte Lin",
       "Tony Leung Ka-fai"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674434235uec9c5ibxb",
@@ -992,7 +1060,8 @@
       "Mohammadali Keshavarz",
       "Farhad Kheradmand",
       "Zarifeh Shiva"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "17906744137577z0170hlc0n",
@@ -1017,7 +1086,8 @@
       "Amanda Langlet",
       "Arielle Dombasle",
       "Pascal Greggory"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674389103hg7iy6f50z4",
@@ -1043,7 +1113,8 @@
       "Behzad Dorani",
       "Farzad Sohrabi",
       "Noghre Asadi"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "179067436152798f2430qx3a",
@@ -1069,7 +1140,8 @@
       "Gena Rowlands",
       "Seymour Cassel",
       "Val Avery"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674336857ekazrgqlf3b",
@@ -1086,7 +1158,7 @@
     "owned": false,
     "added": 1790674336857,
     "imdb_score": 7.6,
-    "rt_score": 1.0,
+    "rt_score": 1,
     "score": 7.6,
     "tmdb_id": 52109,
     "synopsis": "Two closely-bound, emotionally wounded siblings reunite after years apart.",
@@ -1094,7 +1166,8 @@
       "Gena Rowlands",
       "John Cassavetes",
       "Diahnne Abbott"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674316774e663vs2379c",
@@ -1120,7 +1193,8 @@
       "Timothy Treadwell",
       "Werner Herzog",
       "Warren Queeney"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674298311zvburwrdvdh",
@@ -1137,7 +1211,7 @@
     "owned": false,
     "added": 1790674298311,
     "imdb_score": 8.3,
-    "rt_score": 1.0,
+    "rt_score": 1,
     "mc_score": 90,
     "score": 8.3,
     "tmdb_id": 27031,
@@ -1146,7 +1220,8 @@
       "Toshirō Mifune",
       "Yōko Tsukasa",
       "Gō Katō"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674269037gz7pnk41j1e",
@@ -1163,7 +1238,7 @@
     "owned": false,
     "added": 1790674269037,
     "imdb_score": 7.9,
-    "rt_score": 1.0,
+    "rt_score": 1,
     "score": 7.9,
     "tmdb_id": 21967,
     "synopsis": "A woman and her daughter are each forced to contend with an increasing pressure to marry, particularly from three men who knew her late husband.",
@@ -1171,7 +1246,8 @@
       "Setsuko Hara",
       "Yōko Tsukasa",
       "Mariko Okada"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674245246xg3nd4t8xy8",
@@ -1188,7 +1264,7 @@
     "owned": false,
     "added": 1790674245246,
     "imdb_score": 8.1,
-    "rt_score": 1.0,
+    "rt_score": 1,
     "mc_score": 94,
     "score": 8.1,
     "tmdb_id": 50247,
@@ -1197,7 +1273,8 @@
       "Setsuko Hara",
       "Chishū Ryū",
       "Chikage Awashima"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674221909taej4o7xg4",
@@ -1223,7 +1300,8 @@
       "Tatsuya Nakadai",
       "Tsutomu Yamazaki",
       "Kenichi Hagiwara"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1790674181110m8alu3gjnt",
@@ -1240,7 +1318,7 @@
     "owned": false,
     "added": 1790674181111,
     "imdb_score": 7.8,
-    "rt_score": 1.0,
+    "rt_score": 1,
     "score": 7.8,
     "tmdb_id": 30368,
     "synopsis": "A bad day gets worse for young detective Murakami when a pickpocket steals his gun on a hot, crowded bus. Desperate to right the wrong, he goes undercover, scavenging Tokyo’s sweltering streets for the stray dog whose desperation has led him to a life of crime. With each step, cop and criminal’s lives become more intertwined and the investigation becomes an examination of Murakami’s own dark side.",
@@ -1248,7 +1326,8 @@
       "Toshirō Mifune",
       "Takashi Shimura",
       "Keiko Awaji"
-    ]
+    ],
+    "_j": 1
   },
   {
     "id": "1780709036314ukixvn3pur",
@@ -4082,7 +4161,7 @@
     "genre": "Comedy, Romance",
     "country": "Usa",
     "runtime": 93,
-    "priority": "Someday",
+    "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1775997929904,
@@ -5131,7 +5210,7 @@
   {
     "id": "1775364083318o3obu8inwnd",
     "title": "The Lives of Others",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775364083318,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/cVUDMnskSc01rdbyH0tLATTJUdP.jpg",
@@ -5179,7 +5258,7 @@
   {
     "id": "17753640833187x20vxed2bb",
     "title": "Children of Paradise",
-    "priority": "Someday",
+    "priority": "Must Own",
     "added": 1775364083318,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/yiy9stl1jjVhW44ypkWMFDT8Ix3.jpg",
@@ -5766,7 +5845,7 @@
   {
     "id": "177536385586906ulpitei45h",
     "title": "28 Days Later",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363855869,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/sQckQRt17VaWbo39GIu0TMOiszq.jpg",
@@ -5863,7 +5942,7 @@
   {
     "id": "177536385586972vtk0ejktl",
     "title": "Good Will Hunting",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363855869,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/z2FnLKpFi1HPO7BEJxdkv6hpJSU.jpg",
@@ -5947,7 +6026,7 @@
   {
     "id": "1775363855869l683eznh8k",
     "title": "Network",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363855869,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/qZomlHsaALUtkFeMDwdYmwS2Pbo.jpg",
@@ -6828,7 +6907,7 @@
   {
     "id": "1775363710752m8cnd2l7g8m",
     "title": "Before Sunset",
-    "priority": "High",
+    "priority": "Must Own",
     "added": 1775363710752,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/4sW5XH9ZfYXpvFzev00S1IGAEbg.jpg",
@@ -6876,7 +6955,7 @@
   {
     "id": "1775363710752bwrau27f6j",
     "title": "All About Eve",
-    "priority": "High",
+    "priority": "Must Own",
     "added": 1775363710752,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/blBzZaatPWVuWpXEnPscMA4Xp6m.jpg",
@@ -7194,7 +7273,7 @@
   {
     "id": "177536358998636jfh2v1xna",
     "title": "Raiders of the Lost Ark",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363589986,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/ceG9VzoRAVGwivFU403Wc3AHRys.jpg",
@@ -7467,7 +7546,7 @@
   {
     "id": "1775363589986hm15ib2qh9g",
     "title": "Amores Perros",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363589986,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/A4lH22nlFF7MdalGfcvSrlC1ttt.jpg",
@@ -7604,7 +7683,7 @@
   {
     "id": "1775363589986fpcpt5k2ic7",
     "title": "The Conformist",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363589986,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/nLJjFRqIJAK8qz0OKYnpKCblZNK.jpg",
@@ -7646,7 +7725,7 @@
   {
     "id": "1775363589985tj4nam3pbd",
     "title": "Céline and Julie Go Boating",
-    "priority": "Someday",
+    "priority": "High",
     "added": 1775363589985,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/ijpehUwH4XFNFm8UcYHpRQVRQUF.jpg",
@@ -7916,7 +7995,7 @@
   {
     "id": "1775363589985sqazc1r9re",
     "title": "Modern Times",
-    "priority": "High",
+    "priority": "Must Own",
     "added": 1775363589985,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/7uoiKOEjxBBW0AgDGQWrlfGQ90w.jpg",
@@ -8059,7 +8138,7 @@
   {
     "id": "1775363589985crerbmkmc4",
     "title": "There Will Be Blood",
-    "priority": "High",
+    "priority": "Must Own",
     "added": 1775363589985,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/fa0RDkAlCec0STeMNAhPaF89q6U.jpg",
@@ -8106,7 +8185,7 @@
   {
     "id": "17753635899856b4ux3jm27r",
     "title": "Shoplifters",
-    "priority": "High",
+    "priority": "Must Own",
     "added": 1775363589985,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/4nfRUOv3LX5zLn98WS1WqVBk9E9.jpg",
@@ -8202,7 +8281,7 @@
     "genre": "Animation, Adventure, Comedy",
     "country": "Japan",
     "runtime": 86,
-    "priority": "Someday",
+    "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1775391551451,
@@ -8298,7 +8377,7 @@
     "genre": "Drama",
     "country": "France",
     "runtime": 127,
-    "priority": "High",
+    "priority": "Must Own",
     "notes": null,
     "owned": false,
     "added": 1775391497635,
@@ -8895,7 +8974,7 @@
     "genre": "Comedy, Drama, Romance",
     "country": "Usa",
     "runtime": 127,
-    "priority": "High",
+    "priority": "Must Own",
     "notes": null,
     "owned": false,
     "added": 1775371613340,
@@ -8993,7 +9072,7 @@
     "genre": "Comedy, Sport",
     "country": "Usa",
     "runtime": 114,
-    "priority": "High",
+    "priority": "Must Own",
     "notes": null,
     "owned": false,
     "added": 1775371582007,
@@ -9042,7 +9121,7 @@
     "genre": "Action, Crime, Mystery",
     "country": "Usa",
     "runtime": 145,
-    "priority": "Someday",
+    "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1775371570590,
@@ -9648,7 +9727,7 @@
     "genre": "Drama, Horror, Sci-Fi",
     "country": "Usa",
     "runtime": 96,
-    "priority": "Someday",
+    "priority": "Must Own",
     "notes": null,
     "owned": false,
     "added": 1775439733426,
@@ -9741,7 +9820,7 @@
     "genre": "Drama, History, Thriller",
     "country": "Usa",
     "runtime": 164,
-    "priority": "Someday",
+    "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1775439666010,
@@ -9878,7 +9957,7 @@
     "genre": "Comedy, Drama",
     "country": "Usa",
     "runtime": 102,
-    "priority": "High",
+    "priority": "Must Own",
     "notes": null,
     "owned": false,
     "added": 1775439410944,
@@ -10020,7 +10099,7 @@
     "genre": "Drama",
     "country": "Italy",
     "runtime": 141,
-    "priority": "Someday",
+    "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1775439017762,
@@ -10069,7 +10148,7 @@
     "genre": "Drama",
     "country": "Usa",
     "runtime": 124,
-    "priority": "Someday",
+    "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1775438976263,
@@ -11299,7 +11378,7 @@
     "genre": "Drama, Romance, War",
     "country": "Usa",
     "runtime": 170,
-    "priority": "Someday",
+    "priority": "High",
     "notes": null,
     "owned": false,
     "added": 1776478715357,
