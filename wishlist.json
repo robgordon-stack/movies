@@ -12,7 +12,13 @@
     "priority": "High",
     "notes": null,
     "owned": false,
-    "added": 1790851213502
+    "added": 1790851213502,
+    "imdb_score": 7.7,
+    "rt_score": 0.56,
+    "mc_score": 49,
+    "lb_score": 4.23,
+    "lb": "https://boxd.it/1inI",
+    "score": 6.9
   },
   {
     "id": "17908511143897hy8vmsut1r",
@@ -27,7 +33,13 @@
     "priority": "High",
     "notes": null,
     "owned": false,
-    "added": 1790851114390
+    "added": 1790851114390,
+    "imdb_score": 7.4,
+    "rt_score": 0.86,
+    "mc_score": 73,
+    "lb_score": 3.73,
+    "lb": "https://boxd.it/23c8",
+    "score": 7.6
   },
   {
     "id": "1790675426073hv6vkw6v1a",
@@ -46,7 +58,7 @@
     "imdb_score": 7.5,
     "rt_score": 0.96,
     "mc_score": 91,
-    "score": 7.5,
+    "score": 8.3,
     "tmdb_id": 11481,
     "synopsis": "Beautiful young manicurist Carole suffers from androphobia (the pathological fear of interaction with men). When her sister and roommate, Helen, leaves their London flat to go on an Italian holiday with her married boyfriend, Carole withdraws into her apartment. She begins to experience frightful hallucinations, her fear gradually mutating into madness.",
     "cast": [
@@ -54,7 +66,9 @@
       "Ian Hendry",
       "John Fraser"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.91,
+    "lb": "https://boxd.it/1TKu"
   },
   {
     "id": "179067540652633b6mwm8ut8",
@@ -73,7 +87,7 @@
     "imdb_score": 7.8,
     "rt_score": 0.97,
     "mc_score": 91,
-    "score": 7.8,
+    "score": 8.5,
     "tmdb_id": 900,
     "synopsis": "David Huxley is waiting to get a bone he needs for his museum collection. Through a series of strange circumstances, he meets Susan Vance, and the duo have a series of misadventures which include a leopard called Baby.",
     "cast": [
@@ -81,7 +95,9 @@
       "Cary Grant",
       "Charles Ruggles"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.01,
+    "lb": "https://boxd.it/29ks"
   },
   {
     "id": "1790675388159pgouh04ploe",
@@ -100,7 +116,7 @@
     "imdb_score": 7.8,
     "rt_score": 0.93,
     "mc_score": 70,
-    "score": 7.8,
+    "score": 8.1,
     "tmdb_id": 33320,
     "synopsis": "Documentary filmmaker Genya Tachibana has tracked down the legendary actress Chiyoko Fujiwara, who mysteriously vanished at the height of her career. When he presents her with a key she had lost and thought was gone forever, the filmmaker could not have imagined that it would not only unlock the long-held secrets of Chiyoko’s life... but also his own.",
     "cast": [
@@ -108,7 +124,9 @@
       "Mami Koyama",
       "Fumiko Orikasa"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.24,
+    "lb": "https://boxd.it/1fK0"
   },
   {
     "id": "1790675365041f7f1oomqvj4",
@@ -127,7 +145,7 @@
     "imdb_score": 7.7,
     "rt_score": 0.91,
     "mc_score": 73,
-    "score": 7.7,
+    "score": 8.0,
     "tmdb_id": 16306,
     "synopsis": "On the planet Ygam, the Draags, extremely technologically and spiritually advanced blue humanoids, consider the tiny Oms, human beings descendants of Terra's inhabitants, as ignorant animals. Those who live in slavery are treated as simple pets and used to entertain Draag children; those who live hidden in the hostile wilderness of the planet are periodically hunted and ruthlessly slaughtered as if they were vermin.",
     "cast": [
@@ -135,7 +153,9 @@
       "Jean Valmont",
       "Jennifer Drake"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.01,
+    "lb": "https://boxd.it/1KnQ"
   },
   {
     "id": "1790675347636za3thmkdef",
@@ -154,7 +174,7 @@
     "imdb_score": 7.9,
     "rt_score": 0.96,
     "mc_score": 86,
-    "score": 7.9,
+    "score": 8.4,
     "tmdb_id": 910,
     "synopsis": "Private Investigator Philip Marlowe is hired by wealthy General Sternwood regarding a matter involving his youngest daughter Carmen. Before the complex case is over, Marlowe sees murder, blackmail, deception, and what might be love.",
     "cast": [
@@ -162,7 +182,9 @@
       "Lauren Bacall",
       "John Ridgely"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.96,
+    "lb": "https://boxd.it/29iQ"
   },
   {
     "id": "1790675335244i9r727ejho",
@@ -181,7 +203,7 @@
     "imdb_score": 7.7,
     "rt_score": 1,
     "mc_score": 96,
-    "score": 7.7,
+    "score": 8.6,
     "tmdb_id": 3089,
     "synopsis": "Following the Civil War, headstrong rancher Thomas Dunson decides to lead a perilous cattle drive from Texas to Missouri. During the exhausting journey, his persistence becomes tyrannical in the eyes of Matthew Garth, his adopted son and protégé.",
     "cast": [
@@ -189,7 +211,9 @@
       "Montgomery Clift",
       "Joanne Dru"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.01,
+    "lb": "https://boxd.it/25Lu"
   },
   {
     "id": "1790675320003c6obgnwqi2",
@@ -208,7 +232,7 @@
     "imdb_score": 7.3,
     "rt_score": 0.89,
     "mc_score": 85,
-    "score": 7.3,
+    "score": 8.0,
     "tmdb_id": 26617,
     "synopsis": "Robert Dupea spends his days doing various odd jobs, drinking and womanizing until an encounter with his sister makes him revisit his past.",
     "cast": [
@@ -216,7 +240,9 @@
       "Karen Black",
       "Susan Anspach"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.86,
+    "lb": "https://boxd.it/1tww"
   },
   {
     "id": "1790675304501ntirfofotbj",
@@ -243,7 +269,9 @@
       "Bud Cort",
       "Vivian Pickles"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.11,
+    "lb": "https://boxd.it/2axM"
   },
   {
     "id": "1790675292075ssg9pn8ndth",
@@ -262,7 +290,7 @@
     "imdb_score": 7.7,
     "rt_score": 0.85,
     "mc_score": 75,
-    "score": 7.7,
+    "score": 8.0,
     "tmdb_id": 1554,
     "synopsis": "A disc jockey, a pimp and an Italian tourist escape from jail in New Orleans.",
     "cast": [
@@ -270,7 +298,9 @@
       "John Lurie",
       "Roberto Benigni"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.08,
+    "lb": "https://boxd.it/28CA"
   },
   {
     "id": "17906752731446wzfcd9iqfj",
@@ -289,7 +319,7 @@
     "imdb_score": 7.3,
     "rt_score": 0.96,
     "mc_score": 90,
-    "score": 7.3,
+    "score": 8.2,
     "tmdb_id": 370755,
     "synopsis": "A week in the life of Paterson, a poet bus driver, and his wife Laura, a very creative artist, who live in Paterson, New Jersey, hometown of many famous poets and artists.",
     "cast": [
@@ -297,7 +327,9 @@
       "Golshifteh Farahani",
       "Rizwan Manji"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.89,
+    "lb": "https://boxd.it/cRk2"
   },
   {
     "id": "1790675252346xvnh47ftsir",
@@ -316,7 +348,7 @@
     "imdb_score": 6.5,
     "rt_score": 0.86,
     "mc_score": 85,
-    "score": 6.5,
+    "score": 7.6,
     "tmdb_id": 57120,
     "synopsis": "A group of settlers traveling through the Oregon High Desert in 1845 find themselves stranded in harsh conditions.",
     "cast": [
@@ -324,7 +356,9 @@
       "Bruce Greenwood",
       "Will Patton"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.73,
+    "lb": "https://boxd.it/nsG"
   },
   {
     "id": "1790675217595btcbdc5h6b",
@@ -343,7 +377,7 @@
     "imdb_score": 7.2,
     "rt_score": 0.82,
     "mc_score": 75,
-    "score": 7.2,
+    "score": 7.6,
     "tmdb_id": 11454,
     "synopsis": "FBI Agent Will Graham, retired after catching notorious cannibal Hannibal Lecter, returns to duty to engage in a risky cat-and-mouse game with Lecter to capture a new killer.",
     "cast": [
@@ -351,7 +385,9 @@
       "Tom Noonan",
       "Dennis Farina"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.87,
+    "lb": "https://boxd.it/1TOw"
   },
   {
     "id": "1790675186328ndu3vwil34",
@@ -370,7 +406,7 @@
     "imdb_score": 7.2,
     "rt_score": 0.86,
     "mc_score": 86,
-    "score": 7.2,
+    "score": 7.9,
     "tmdb_id": 9540,
     "synopsis": "Elliot, a successful gynecologist, works at the same practice as his identical twin, Beverly. Elliot is attracted to many of his patients and has affairs with them. When he inevitably loses interest, he will give the woman over to Beverly, the meeker of the two, without the woman knowing the difference. Beverly falls hard for one of the patients, Claire, but when she inadvertently deceives him, he slips into a state of madness.",
     "cast": [
@@ -378,7 +414,9 @@
       "Geneviève Bujold",
       "Heidi von Palleske"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.85,
+    "lb": "https://boxd.it/1Yqk"
   },
   {
     "id": "17906751455084gtzutrpd4q",
@@ -395,7 +433,7 @@
     "owned": false,
     "added": 1790675145508,
     "imdb_score": 8.6,
-    "score": 8.6,
+    "score": 8.8,
     "tmdb_id": 803,
     "synopsis": "Filmmaker Alain Resnais documents the atrocities behind the walls of Hitler's concentration camps.",
     "cast": [
@@ -403,7 +441,9 @@
       "Reinhard Heydrich",
       "Heinrich Himmler"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.55,
+    "lb": "https://boxd.it/29A6"
   },
   {
     "id": "179067511224537801xshtrt",
@@ -422,7 +462,7 @@
     "imdb_score": 8.7,
     "rt_score": 1,
     "mc_score": 94,
-    "score": 8.7,
+    "score": 9.3,
     "tmdb_id": 24128,
     "synopsis": "A concert film documenting Talking Heads at the height of their popularity, on tour for their 1983 album \"Speaking in Tongues.\" The band takes the stage one by one and is joined by a cadre of guest musicians for a career-spanning and cinematic performance that features creative choreography and visuals.",
     "cast": [
@@ -430,7 +470,9 @@
       "Chris Frantz",
       "Jerry Harrison"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.68,
+    "lb": "https://boxd.it/1ygo"
   },
   {
     "id": "17906750810477pc658xhxw",
@@ -449,7 +491,7 @@
     "imdb_score": 7.2,
     "rt_score": 0.94,
     "mc_score": 83,
-    "score": 7.2,
+    "score": 7.9,
     "tmdb_id": 44629,
     "synopsis": "Joshua “J” is taken in by his extended family after his mother dies of an overdose. The clan, ruled by J’s scheming grandmother, is heavily involved in criminal activities, and J is soon indoctrinated into their way of life. But J is given a chance to take another path when a cop seeks to help him.",
     "cast": [
@@ -457,7 +499,9 @@
       "Joel Edgerton",
       "Guy Pearce"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.74,
+    "lb": "https://boxd.it/Ru8"
   },
   {
     "id": "1790675052554l3a9d2hav7",
@@ -476,7 +520,7 @@
     "imdb_score": 6.9,
     "rt_score": 0.78,
     "mc_score": 85,
-    "score": 6.9,
+    "score": 7.5,
     "tmdb_id": 72277,
     "synopsis": "A Sydney lawyer defends five Aboriginal people in a ritualised taboo murder and in the process learns disturbing truths about himself and premonitions.",
     "cast": [
@@ -484,7 +528,9 @@
       "Olivia Hamnett",
       "David Gulpilil"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.57,
+    "lb": "https://boxd.it/2oOM"
   },
   {
     "id": "1790674978181veh3y56c0f",
@@ -502,7 +548,7 @@
     "added": 1790674978181,
     "imdb_score": 7.8,
     "rt_score": 0.97,
-    "score": 7.8,
+    "score": 8.2,
     "tmdb_id": 653,
     "synopsis": "The mysterious Count Orlok summons a happily married real estate agent to his castle, located up in the Transylvanian mountains, to finalise a terrifying deal.",
     "cast": [
@@ -510,7 +556,9 @@
       "Gustav von Wangenheim",
       "Greta Schröder"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.82,
+    "lb": "https://boxd.it/29TM"
   },
   {
     "id": "179067495308293gy8ar08md",
@@ -529,7 +577,7 @@
     "imdb_score": 8.2,
     "rt_score": 0.97,
     "mc_score": 98,
-    "score": 8.2,
+    "score": 8.9,
     "tmdb_id": 19,
     "synopsis": "In a futuristic city sharply divided between the rich and the poor, the son of the city's mastermind meets a prophet who predicts the coming of a savior to mediate their differences.",
     "cast": [
@@ -537,7 +585,9 @@
       "Brigitte Helm",
       "Alfred Abel"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.24,
+    "lb": "https://boxd.it/71a"
   },
   {
     "id": "1790674930928wgqra6xj1y",
@@ -555,7 +605,7 @@
     "added": 1790674930928,
     "imdb_score": 7.7,
     "rt_score": 0.96,
-    "score": 7.7,
+    "score": 8.2,
     "tmdb_id": 20778,
     "synopsis": "Enigmatic gangster Silien may or may not be responsible for informing on Faugel,  who was just released from prison and is already involved in what should be a simple heist. By the end of this brutal, twisting, and multilayered policier, who will be left to trust?",
     "cast": [
@@ -563,7 +613,9 @@
       "Serge Reggiani",
       "Jean Desailly"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.93,
+    "lb": "https://boxd.it/1CVg"
   },
   {
     "id": "179067491044323z9kjcbxug",
@@ -582,7 +634,7 @@
     "imdb_score": 7.5,
     "rt_score": 0.97,
     "mc_score": 80,
-    "score": 7.5,
+    "score": 8.1,
     "tmdb_id": 26030,
     "synopsis": "In Paris, Bob Montagne is practically synonymous with gambling -- and winning. He is kind, classy and well-liked by virtually everyone in town, including police inspector Ledru. However, when Bob's luck turns sour, he begins to lose friends and makes the most desperate gamble of his life: to rob the Deauville casino during Grand Prix weekend, when the vaults are full. Unfortunately, Bob soon learns that the game is rigged and the cops are on to him.",
     "cast": [
@@ -590,7 +642,9 @@
       "Isabelle Corey",
       "Daniel Cauchy"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.79,
+    "lb": "https://boxd.it/1uC6"
   },
   {
     "id": "17906748941141317151y23gp",
@@ -608,7 +662,7 @@
     "added": 1790674894115,
     "imdb_score": 7.6,
     "rt_score": 0.9,
-    "score": 7.6,
+    "score": 8.0,
     "tmdb_id": 789,
     "synopsis": "At a village railway station in occupied Czechoslovakia, a bumbling dispatcher’s apprentice longs to liberate himself from his virginity. Oblivious to the war and the resistance that surrounds him, this young man embarks on a journey of sexual awakening and self-discovery, encountering a universe of frustration, eroticism, and adventure within his sleepy backwater depot.",
     "cast": [
@@ -616,7 +670,9 @@
       "Jitka Scoffin",
       "Vladimír Valenta"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.92,
+    "lb": "https://boxd.it/29Cm"
   },
   {
     "id": "1790674863738tzui0r648lc",
@@ -634,7 +690,7 @@
     "added": 1790674863738,
     "imdb_score": 7,
     "rt_score": 0.81,
-    "score": 7,
+    "score": 7.2,
     "tmdb_id": 46315,
     "synopsis": "Valerie, a Czechoslovakian teenager living with her grandmother, is blossoming into womanhood, but that transformation proves secondary to the effects she experiences when she puts on a pair of magic earrings. Now seeing the world around her in a different light, Valerie must endure her sexual awakening while attempting to discern reality from fantasy as she encounters lecherous priest Gracian, a vampire-like stranger and otherworldly carnival folk.",
     "cast": [
@@ -642,7 +698,9 @@
       "Helena Anýžová",
       "Petr Kopřiva"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.43,
+    "lb": "https://boxd.it/NsC"
   },
   {
     "id": "1790674846860s6jkkwecwpm",
@@ -660,7 +718,7 @@
     "added": 1790674846860,
     "imdb_score": 7.8,
     "rt_score": 0.93,
-    "score": 7.8,
+    "score": 8.3,
     "tmdb_id": 26782,
     "synopsis": "In the Carpathian Mountains of 19th-century Ukraine, love, hate, life and death among the Hutsul people are as they’ve been since time began. Ivan is drawn to Marichka, the beautiful young daughter of the man who killed his father. But fate tragically decrees that the two lovers will remain apart.",
     "cast": [
@@ -668,7 +726,9 @@
       "Larysa Kadochnykova",
       "Tatyana Bestayeva"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.06,
+    "lb": "https://boxd.it/1tbS"
   },
   {
     "id": "1790674818082db71qe9tgel",
@@ -686,7 +746,7 @@
     "added": 1790674818082,
     "imdb_score": 7.6,
     "rt_score": 0.95,
-    "score": 7.6,
+    "score": 8.3,
     "tmdb_id": 26302,
     "synopsis": "The life of the revered 18th-century Armenian poet and musician Sayat-Nova. Portraying events in the life of the artist from childhood up to his death, the movie addresses in particular his relationships with women, including his muse. The production tells Sayat-Nova's dramatic story by using both his poems and largely still camerawork, creating a work hailed as revolutionary by Mikhail Vartanov.",
     "cast": [
@@ -694,7 +754,9 @@
       "Melkon Alekyan",
       "Vilen Galstyan"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.11,
+    "lb": "https://boxd.it/1u94"
   },
   {
     "id": "17906747926937guhb1nsxzu",
@@ -713,7 +775,7 @@
     "imdb_score": 6.3,
     "rt_score": 0.8,
     "mc_score": 82,
-    "score": 6.3,
+    "score": 7.2,
     "tmdb_id": 253450,
     "synopsis": "9th century China. Ten year old general’s daughter Nie Yinniang is abducted by a nun who initiates her into the martial arts, transforming her into an exceptional assassin charged with eliminating cruel and corrupt local governors. One day, having failed in a task, she is sent back by her mistress to the land of her birth, with orders to kill the man to whom she was promised – a cousin who now leads the largest military region in North China. After 13 years of exile, the young woman must confront her parents, her memories and her long-repressed feelings.",
     "cast": [
@@ -721,7 +783,9 @@
       "Chang Chen",
       "Zhou Yun"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.5,
+    "lb": "https://boxd.it/7rdE"
   },
   {
     "id": "1790674772904sbdme3neth",
@@ -739,7 +803,7 @@
     "added": 1790674772904,
     "imdb_score": 7.6,
     "rt_score": 1,
-    "score": 7.6,
+    "score": 8.4,
     "tmdb_id": 106380,
     "synopsis": "A young woman urgently seeks to navigate the maze of contemporary Taipei and find a future. She hopes that her boyfriend Lung is the key to the future, but Lung is stuck in a past that combines baseball and traditional loyalty that leads him to squander his nest egg bailing her father out of financial trouble.",
     "cast": [
@@ -747,7 +811,9 @@
       "Hou Hsiao-hsien",
       "Wu Nien-jen"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.04,
+    "lb": "https://boxd.it/3BkC"
   },
   {
     "id": "17906747335760tj4vptxk3mi",
@@ -766,7 +832,7 @@
     "imdb_score": 7,
     "rt_score": 0.84,
     "mc_score": 72,
-    "score": 7,
+    "score": 7.5,
     "tmdb_id": 11553,
     "synopsis": "In 2011, Vicky looks back on her life a decade earlier, recalling her turbulent relationship with her controlling boyfriend Hao Hao and her growing connection to a compassionate gangster amid the neon haze of Taipei's nightlife.",
     "cast": [
@@ -774,7 +840,9 @@
       "Jack Kao",
       "Duan Chun-hao"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.81,
+    "lb": "https://boxd.it/1Tzw"
   },
   {
     "id": "1790674705147b39g7ckm9uw",
@@ -793,7 +861,7 @@
     "imdb_score": 7.4,
     "rt_score": 0.95,
     "mc_score": 78,
-    "score": 7.4,
+    "score": 8.0,
     "tmdb_id": 11471,
     "synopsis": "A reforming ex-gangster tries to reconcile with his estranged policeman brother, but the ties to his former gang are difficult to break.",
     "cast": [
@@ -801,7 +869,9 @@
       "Chow Yun-Fat",
       "Leslie Cheung"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.94,
+    "lb": "https://boxd.it/1TLW"
   },
   {
     "id": "17906746792948mryyfhx77j",
@@ -818,7 +888,7 @@
     "owned": false,
     "added": 1790674679294,
     "imdb_score": 7.2,
-    "score": 7.2,
+    "score": 7.3,
     "tmdb_id": 54178,
     "synopsis": "A noble swordsman, whose arm had been chopped off, returns to his former teacher to defend him from a villainous gang of rival swordsmen.",
     "cast": [
@@ -826,7 +896,9 @@
       "Lisa Chiao Chiao",
       "Tien Feng"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.7,
+    "lb": "https://boxd.it/uSQ"
   },
   {
     "id": "1790674641295zoc5n4oyvyq",
@@ -845,7 +917,7 @@
     "imdb_score": 7.4,
     "rt_score": 1,
     "mc_score": 100,
-    "score": 7.4,
+    "score": 8.6,
     "tmdb_id": 104237,
     "synopsis": "China, year 1457. The Minister of Defense is executed, and his children are sentenced to exile by order of the tyrannical Tsao. Fearful of future revenge from the young people, Tsao sends cruel soldiers to murder them, but a brave group of swordsmen can change the course of the battle at the Dragon Inn.",
     "cast": [
@@ -853,7 +925,9 @@
       "Pai Ying",
       "Polly Shang-Kuan Ling-Feng"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.02,
+    "lb": "https://boxd.it/3xGa"
   },
   {
     "id": "1790674620038279x0o23gzc",
@@ -871,7 +945,7 @@
     "added": 1790674620038,
     "imdb_score": 7.5,
     "rt_score": 0.97,
-    "score": 7.5,
+    "score": 8.3,
     "tmdb_id": 44154,
     "synopsis": "Yang Hui-zhen, a mysterious princess on the run from corrupt government officials, is joined in her endeavors by skilled Buddhist monks and an unambitious painter named Gu Sheng-zhai.",
     "cast": [
@@ -879,7 +953,9 @@
       "Shih Chun",
       "Pai Ying"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.12,
+    "lb": "https://boxd.it/SFm"
   },
   {
     "id": "17906745825082ns17chvdz6",
@@ -897,7 +973,7 @@
     "added": 1790674582508,
     "imdb_score": 7.8,
     "rt_score": 0.94,
-    "score": 7.8,
+    "score": 8.2,
     "tmdb_id": 42113,
     "synopsis": "In a small village in a valley everyone who reaches the age of 70 must leave the village and go to a certain mountain top to die. If anyone should refuse they would disgrace their family. Old Orin is 69. This winter it is her turn to go to the mountain. But first she must make sure that her eldest son Tatsuhei finds a wife.",
     "cast": [
@@ -905,7 +981,9 @@
       "Sumiko Sakamoto",
       "Tonpei Hidari"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.96,
+    "lb": "https://boxd.it/XI6"
   },
   {
     "id": "1790674543526bxihw685flp",
@@ -922,7 +1000,7 @@
     "owned": false,
     "added": 1790674543526,
     "imdb_score": 7.4,
-    "score": 7.4,
+    "score": 7.6,
     "tmdb_id": 31104,
     "synopsis": "In the city of Yokosuka, Kinta and his lover Haruko, both involved with yakuza, brave the post-occupation period with a goal to be together.",
     "cast": [
@@ -930,7 +1008,9 @@
       "Jitsuko Yoshimura",
       "Masao Mishima"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.91,
+    "lb": "https://boxd.it/1jQG"
   },
   {
     "id": "1790674521890m5cpl5whfq",
@@ -948,7 +1028,7 @@
     "added": 1790674521890,
     "imdb_score": 8,
     "rt_score": 1,
-    "score": 8,
+    "score": 8.6,
     "tmdb_id": 36872,
     "synopsis": "Keiko, whom everyone calls Mama, narrates her story: she's a hostess on the Ginza, 30, a widow. She describes life's vicious cycle: acting cheerful around drunks, dressing and living well to convey confidence, needing money for these expenses and for her demanding mother and brother, and knowing she's growing older.",
     "cast": [
@@ -956,7 +1036,9 @@
       "Masayuki Mori",
       "Reiko Dan"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.18,
+    "lb": "https://boxd.it/19Ck"
   },
   {
     "id": "1790674493894xbaxz93mi2o",
@@ -974,7 +1056,7 @@
     "added": 1790674493894,
     "imdb_score": 7.8,
     "rt_score": 1,
-    "score": 7.8,
+    "score": 8.5,
     "tmdb_id": 822,
     "synopsis": "An aging, decadent landlord’s passion for music becomes the undoing of his legacy as he sacrifices his wealth in order to compete with the opulent music room of his younger, richer neighbour.",
     "cast": [
@@ -982,7 +1064,9 @@
       "Gangapada Basu",
       "Kali Sarkar"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.05,
+    "lb": "https://boxd.it/29x2"
   },
   {
     "id": "17906744751283qf0pynoueb",
@@ -1000,7 +1084,7 @@
     "added": 1790674475128,
     "imdb_score": 8,
     "rt_score": 0.88,
-    "score": 8,
+    "score": 8.3,
     "tmdb_id": 11656,
     "synopsis": "Devout Christians Töre and Märeta send their only daughter, the virginal Karin, and their foster daughter, the unrepentant Ingeri, to deliver candles to a distant church. On their way through the woods, the girls encounter a group of savage goat herders who brutally rape and murder Karin as Ingeri remains hidden. When the killers unwittingly seek refuge in the farmhouse of Töre and Märeta, Töre plots a fitting revenge.",
     "cast": [
@@ -1008,7 +1092,9 @@
       "Birgitta Valberg",
       "Gunnel Lindblom"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.15,
+    "lb": "https://boxd.it/1TjI"
   },
   {
     "id": "1790674458123huclgdg30u4",
@@ -1027,7 +1113,7 @@
     "imdb_score": 7,
     "rt_score": 0.79,
     "mc_score": 69,
-    "score": 7,
+    "score": 7.2,
     "tmdb_id": 40751,
     "synopsis": "Ouyang Feng is a heartbroken and cynical man who spends his days in the desert, connecting expert swordsmen with those seeking revenge and willing to pay for it. Throughout five seasons in exile, Ouyang spins tales of his clients' unrequited loves and unusual acts of bravery.",
     "cast": [
@@ -1035,7 +1121,9 @@
       "Brigitte Lin",
       "Tony Leung Ka-fai"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.54,
+    "lb": "https://boxd.it/111K"
   },
   {
     "id": "1790674434235uec9c5ibxb",
@@ -1053,7 +1141,7 @@
     "added": 1790674434235,
     "imdb_score": 7.7,
     "rt_score": 0.89,
-    "score": 7.7,
+    "score": 8.2,
     "tmdb_id": 47104,
     "synopsis": "When the actor in a scene for his film Life And Nothing More… has to quit, a film director casts another man for the part. However, complications arise since the man and the woman who was cast for the scene know each other.",
     "cast": [
@@ -1061,7 +1149,9 @@
       "Farhad Kheradmand",
       "Zarifeh Shiva"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.17,
+    "lb": "https://boxd.it/Lx6"
   },
   {
     "id": "17906744137577z0170hlc0n",
@@ -1079,7 +1169,7 @@
     "added": 1790674413757,
     "imdb_score": 7.3,
     "rt_score": 0.94,
-    "score": 7.3,
+    "score": 8.0,
     "tmdb_id": 10293,
     "synopsis": "Marion is about to divorce from her husband and takes her 15-year-old niece, Pauline, on a vacation to Granville. There, she meets an old love...",
     "cast": [
@@ -1087,7 +1177,9 @@
       "Arielle Dombasle",
       "Pascal Greggory"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.83,
+    "lb": "https://boxd.it/1WC4"
   },
   {
     "id": "1790674389103hg7iy6f50z4",
@@ -1106,7 +1198,7 @@
     "imdb_score": 7.4,
     "rt_score": 0.97,
     "mc_score": 87,
-    "score": 7.4,
+    "score": 8.3,
     "tmdb_id": 43423,
     "synopsis": "Irreverent city engineer Behzad comes to a rural Kurdish village in Iran to keep vigil for a dying relative. In the meanwhile the film follows his efforts to fit in with the local community and how he changes his own attitudes as a result.",
     "cast": [
@@ -1114,7 +1206,9 @@
       "Farzad Sohrabi",
       "Noghre Asadi"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.06,
+    "lb": "https://boxd.it/Uwc"
   },
   {
     "id": "179067436152798f2430qx3a",
@@ -1133,7 +1227,7 @@
     "imdb_score": 7.2,
     "rt_score": 0.82,
     "mc_score": 67,
-    "score": 7.2,
+    "score": 7.5,
     "tmdb_id": 24349,
     "synopsis": "Depressed and jaded after being dumped by her married boyfriend, aging beauty Minnie Moore wonders if she'll ever find love.  After shaggy-haired parking lot attendant Seymour Moskowitz comes to her defense from an angry and rebuffed blind date, he falls hopelessly in love with her despite their myriad differences.  Minnie reluctantly agrees to a date with Moskowitz, and, slowly but surely, an unlikely romance blossoms between the two.",
     "cast": [
@@ -1141,7 +1235,9 @@
       "Seymour Cassel",
       "Val Avery"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 3.86,
+    "lb": "https://boxd.it/1xPi"
   },
   {
     "id": "1790674336857ekazrgqlf3b",
@@ -1159,7 +1255,7 @@
     "added": 1790674336857,
     "imdb_score": 7.6,
     "rt_score": 1,
-    "score": 7.6,
+    "score": 8.5,
     "tmdb_id": 52109,
     "synopsis": "Two closely-bound, emotionally wounded siblings reunite after years apart.",
     "cast": [
@@ -1167,7 +1263,9 @@
       "John Cassavetes",
       "Diahnne Abbott"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.17,
+    "lb": "https://boxd.it/zOk"
   },
   {
     "id": "1790674316774e663vs2379c",
@@ -1186,7 +1284,7 @@
     "imdb_score": 7.8,
     "rt_score": 0.93,
     "mc_score": 87,
-    "score": 7.8,
+    "score": 8.4,
     "tmdb_id": 501,
     "synopsis": "Follows the story of \"Grizzly Man\" Timothy Treadwell and what the thirteen summers in a National Park in Alaska were like in his attempt to protect the grizzly bears. The film is full of unique images and a look into the spirit of a man who sacrificed himself for nature.",
     "cast": [
@@ -1194,7 +1292,9 @@
       "Werner Herzog",
       "Warren Queeney"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.14,
+    "lb": "https://boxd.it/2ag2"
   },
   {
     "id": "1790674298311zvburwrdvdh",
@@ -1213,7 +1313,7 @@
     "imdb_score": 8.3,
     "rt_score": 1,
     "mc_score": 90,
-    "score": 8.3,
+    "score": 8.9,
     "tmdb_id": 27031,
     "synopsis": "The mother of a feudal lord's only heir is kidnapped by the lord. Her husband and his samurai father must decide whether to accept the unjust decision, or risk death to rescue her.",
     "cast": [
@@ -1221,7 +1321,9 @@
       "Yōko Tsukasa",
       "Gō Katō"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.29,
+    "lb": "https://boxd.it/2loc"
   },
   {
     "id": "1790674269037gz7pnk41j1e",
@@ -1239,7 +1341,7 @@
     "added": 1790674269037,
     "imdb_score": 7.9,
     "rt_score": 1,
-    "score": 7.9,
+    "score": 8.5,
     "tmdb_id": 21967,
     "synopsis": "A woman and her daughter are each forced to contend with an increasing pressure to marry, particularly from three men who knew her late husband.",
     "cast": [
@@ -1247,7 +1349,9 @@
       "Yōko Tsukasa",
       "Mariko Okada"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.1,
+    "lb": "https://boxd.it/1Bf4"
   },
   {
     "id": "1790674245246xg3nd4t8xy8",
@@ -1266,7 +1370,7 @@
     "imdb_score": 8.1,
     "rt_score": 1,
     "mc_score": 94,
-    "score": 8.1,
+    "score": 8.8,
     "tmdb_id": 50247,
     "synopsis": "In postwar Tokyo, Noriko lives with her extended family. Although she enjoys her career and her social life, her more traditional family worries about her single marital status at the advanced age of 28. 40-year-old business associate Takako proposes, Noriko's family press her into accepting, but when her widowed childhood friend Kenkichi returns to the neighborhood, she finds her heart leading in another direction.",
     "cast": [
@@ -1274,7 +1378,9 @@
       "Chishū Ryū",
       "Chikage Awashima"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.2,
+    "lb": "https://boxd.it/E4G"
   },
   {
     "id": "1790674221909taej4o7xg4",
@@ -1293,7 +1399,7 @@
     "imdb_score": 7.9,
     "rt_score": 0.89,
     "mc_score": 84,
-    "score": 7.9,
+    "score": 8.4,
     "tmdb_id": 11953,
     "synopsis": "Akira Kurosawa's lauded feudal epic presents the tale of a petty thief who is recruited to impersonate Shingen, an aging warlord, in order to avoid attacks by competing clans. When Shingen dies, his generals reluctantly agree to have the impostor take over as the powerful ruler. He soon begins to appreciate life as Shingen, but his commitment to the role is tested when he must lead his troops into battle against the forces of a rival warlord.",
     "cast": [
@@ -1301,7 +1407,9 @@
       "Tsutomu Yamazaki",
       "Kenichi Hagiwara"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.23,
+    "lb": "https://boxd.it/1SGG"
   },
   {
     "id": "1790674181110m8alu3gjnt",
@@ -1319,7 +1427,7 @@
     "added": 1790674181111,
     "imdb_score": 7.8,
     "rt_score": 1,
-    "score": 7.8,
+    "score": 8.4,
     "tmdb_id": 30368,
     "synopsis": "A bad day gets worse for young detective Murakami when a pickpocket steals his gun on a hot, crowded bus. Desperate to right the wrong, he goes undercover, scavenging Tokyo’s sweltering streets for the stray dog whose desperation has led him to a life of crime. With each step, cop and criminal’s lives become more intertwined and the investigation becomes an examination of Murakami’s own dark side.",
     "cast": [
@@ -1327,7 +1435,9 @@
       "Takashi Shimura",
       "Keiko Awaji"
     ],
-    "_j": 1
+    "_j": 1,
+    "lb_score": 4.02,
+    "lb": "https://boxd.it/1ltu"
   },
   {
     "id": "1780709036314ukixvn3pur",
