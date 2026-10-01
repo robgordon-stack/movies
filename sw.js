@@ -1,7 +1,7 @@
 // Network-first for pages and data (so updates always appear when online),
 // cache fallback when offline, cache-first for poster images.
-const V = 'archive-v2';
-const SHELL = ['./', 'index.html', 'wishlist.html', 'lb500.html', 'collection.json', 'wishlist.json', 'icon-192.png'];
+const V = 'archive-v3';
+const SHELL = ['./', 'index.html', 'wishlist.html', 'lb500.html', 'ownsearch.js', 'collection.json', 'wishlist.json', 'icon-192.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(V).then(c => Promise.allSettled(SHELL.map(u => c.add(u)))).then(() => self.skipWaiting()));
 });

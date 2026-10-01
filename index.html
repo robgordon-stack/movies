@@ -1519,5 +1519,9 @@ if('serviceWorker' in navigator){
 
 </script>
 <script>if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));</script>
+<script>
+window.OWN_ADAPTER={getOwned:function(){return typeof C!=='undefined'?C:[]},openOwned:function(f){var i=C.indexOf(f);if(i>-1)opn(i,C)}};
+</script>
+<script src="ownsearch.js"></script>
 </body>
 </html>
