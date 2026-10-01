@@ -67,15 +67,39 @@
   }
   window.__ownSearch = { search, fold };
 
+  async function loadTop() {
+    if (typeof A.getTop500 === "function") { try { return A.getTop500(); } catch (e) { return []; } }
+    try {                                    // other pages: read the list straight out of lb500.html
+      const r = await fetch("lb500.html?v=" + Date.now());
+      if (!r.ok) return [];
+      const m = (await r.text()).match(/const FILMS\s*=\s*(\[[\s\S]*?\n\]);/);
+      if (!m) return [];
+      return new Function("return " + m[1])().map(f => ({ title: f.t, year: f.y, rank: f.r }));
+    } catch (e) { return []; }
+  }
+  /* Top 500 films with no status yet: mark 'missing' unless they match something owned/wishlisted
+     (same matching rule lb500.html uses, including its aliases). */
+  function markTop(top, owned, wanted) {
+    const key = s => fold(s).replace(/ /g, "");
+    const have = owned.concat(wanted).map(f => ({ n: key(f.title), y: f.year || 0 }));
+    const alias = A.alias || { dreams: "akirakurosawasdreams", jointsecurityarea: "jsajointsecurityarea" };
+    return top.map(t => {
+      if (t.status) return t;
+      const k0 = key(t.title), k = alias[k0] || k0;
+      const hit = have.some(d => (d.n === k || (k.length >= 10 && d.n.indexOf(k) === 0)) && Math.abs(d.y - t.year) <= 2);
+      return Object.assign({}, t, { status: hit ? "tracked" : "missing" });
+    });
+  }
+
   async function load() {
-    if (cache) return cache;
     const get = async (fn, url) => {
       if (typeof fn === "function") { try { const r = fn(); if (Array.isArray(r) && r.length) return r; } catch (e) {} }
       try { const r = await fetch(url + "?v=" + Date.now()); return r.ok ? await r.json() : []; } catch (e) { return []; }
     };
-    let top = [];
-    try { top = typeof A.getTop500 === "function" ? A.getTop500() : []; } catch (e) {}
-    return { owned: await get(A.getOwned, "collection.json"), wanted: await get(A.getWanted, "wishlist.json"), top };
+    const owned = await get(A.getOwned, "collection.json");
+    const wanted = await get(A.getWanted, "wishlist.json");
+    const top = markTop(await loadTop(), owned, wanted);
+    return { owned, wanted, top };
   }
 
   /* ---------- UI ---------- */
@@ -104,7 +128,7 @@
   fab.id = "ownFab"; fab.type = "button"; fab.textContent = "🔍 Own it?"; fab.setAttribute("aria-label", "Check whether you own a film");
   const ov = document.createElement("div");
   ov.id = "ownOv"; ov.setAttribute("role", "dialog"); ov.setAttribute("aria-modal", "true"); ov.setAttribute("aria-label", "Do I own it?");
-  ov.innerHTML = '<div id="ownBox"><input id="ownIn" type="search" placeholder="Title, year or director…" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Search title"><div id="ownRes" aria-live="polite"></div><div class="ownHint">Searches your collection and wishlist' + (typeof A.getTop500 === 'function' ? ' and the Top 500' : '') + ' · Esc to close</div></div>';
+  ov.innerHTML = '<div id="ownBox"><input id="ownIn" type="search" placeholder="Title, year or director…" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Search title"><div id="ownRes" aria-live="polite"></div><div class="ownHint">Searches your collection and wishlist · Esc to close</div></div>';
   document.body.appendChild(fab); document.body.appendChild(ov);
   const inp = ov.querySelector("#ownIn"), res = ov.querySelector("#ownRes");
   let shown = [];
@@ -117,7 +141,7 @@
     const tr = r.tr ? " · Top 500 #" + r.tr : "";
     if (r.kind === "top") return '<span class="ownB t">☆ Top 500 #' + esc(f.rank) + " · not in collection or wishlist</span>";
     if (r.kind === "owned") {
-      const bits = [f.format, f.distributor, f.spine ? "#" + f.spine : ""].filter(Boolean).map(esc).join(" · ");
+      const bits = [f.format, f.distributor, f.spine ? "#" + String(f.spine).replace(/\.0+$/, "") : ""].filter(Boolean).map(esc).join(" · ");
       return '<span class="ownB o">✓ Owned' + (bits ? " · " + bits : "") + tr + "</span>";
     }
     const bits = [f.priority, f.has4k ? "4K" : ""].filter(Boolean).map(esc).join(" · ");
@@ -145,7 +169,12 @@
   }
   function open() {
     ov.classList.add("open"); inp.value = ""; res.innerHTML = ""; inp.focus();
-    cache = null; load().then(c => { cache = c; });          // refresh data each time it opens
+    cache = null;                                             // refresh data each time it opens
+    load().then(c => {
+      cache = c;
+      ov.querySelector(".ownHint").textContent = "Searches your collection and wishlist" +
+        (c.top.length ? " and the Top 500" : "") + " · Esc to close";
+    });
   }
   function close() { ov.classList.remove("open"); inp.blur(); }
 
