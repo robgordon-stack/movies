@@ -25,6 +25,12 @@
       "Vanessa Redgrave",
       "Oliver Reed",
       "Dudley Sutton"
+    ],
+    "alt_titles": [
+      "Ken Russell's Film of The Devils",
+      "I Diavoli",
+      "Les Diables",
+      "Djevlene"
     ]
   },
   {
@@ -53,6 +59,10 @@
       "Robert Downey Jr.",
       "Val Kilmer",
       "Michelle Monaghan"
+    ],
+    "alt_titles": [
+      "Durr, durr és csók",
+      "Beijos e Tiros"
     ]
   },
   {
@@ -82,7 +92,12 @@
     ],
     "_j": 1,
     "lb_score": 3.91,
-    "lb": "https://boxd.it/1TKu"
+    "lb": "https://boxd.it/1TKu",
+    "alt_titles": [
+      "Repulsa ao Sexo",
+      "Ekel",
+      "Avsporet"
+    ]
   },
   {
     "id": "179067540652633b6mwm8ut8",
@@ -111,7 +126,17 @@
     ],
     "_j": 1,
     "lb_score": 4.01,
-    "lb": "https://boxd.it/29ks"
+    "lb": "https://boxd.it/29ks",
+    "alt_titles": [
+      "La fiera de mi niña",
+      "L'impossible monsieur bébé",
+      "Susanna",
+      "Hätä ei lue lakia",
+      "A Levada da Breca",
+      "La adorable revoltosa",
+      "Een lastige baby",
+      "Silom dadilja"
+    ]
   },
   {
     "id": "1790675388159pgouh04ploe",
@@ -140,7 +165,17 @@
     ],
     "_j": 1,
     "lb_score": 4.24,
-    "lb": "https://boxd.it/1fK0"
+    "lb": "https://boxd.it/1fK0",
+    "alt_titles": [
+      "Sennen Joyuu",
+      "Aastatuhande näitlejatar",
+      "Tūkstantmečio aktorė",
+      "Čijoko, herečka tisíciletí",
+      "Sennen Joyû",
+      "Vai Diễn Ngàn Năm",
+      "L'actrice millénaire",
+      "Aktorka Millenium"
+    ]
   },
   {
     "id": "1790675365041f7f1oomqvj4",
@@ -169,7 +204,17 @@
     ],
     "_j": 1,
     "lb_score": 4.01,
-    "lb": "https://boxd.it/1KnQ"
+    "lb": "https://boxd.it/1KnQ",
+    "alt_titles": [
+      "La Planète sauvage",
+      "The Savage Planet",
+      "The Fantastic Planet",
+      "O Planeta Selvagem",
+      "O Agrios Planitis",
+      "Agrios Planitis",
+      "Levoton planeetta",
+      "Villi planeetta"
+    ]
   },
   {
     "id": "1790675347636za3thmkdef",
@@ -198,7 +243,11 @@
     ],
     "_j": 1,
     "lb_score": 3.96,
-    "lb": "https://boxd.it/29iQ"
+    "lb": "https://boxd.it/29iQ",
+    "alt_titles": [
+      "À Beira do Abismo",
+      "Dərin Yuxu"
+    ]
   },
   {
     "id": "1790675335244i9r727ejho",
@@ -227,7 +276,17 @@
     ],
     "_j": 1,
     "lb_score": 4.01,
-    "lb": "https://boxd.it/25Lu"
+    "lb": "https://boxd.it/25Lu",
+    "alt_titles": [
+      "Panik am roten Fluss",
+      "De rode rivier",
+      "To kokkino potami",
+      "Blazing Guns on the Chisholm Trail",
+      "Ha-Nahar Ha-Adom",
+      "Akai kawa",
+      "Râul roșu",
+      "Riu Vermell"
+    ]
   },
   {
     "id": "1790675320003c6obgnwqi2",
@@ -256,7 +315,11 @@
     ],
     "_j": 1,
     "lb_score": 3.86,
-    "lb": "https://boxd.it/1tww"
+    "lb": "https://boxd.it/1tww",
+    "alt_titles": [
+      "Mi vida es mi vida",
+      "Cinq pièces faciles"
+    ]
   },
   {
     "id": "1790675304501ntirfofotbj",
@@ -285,7 +348,13 @@
     ],
     "_j": 1,
     "lb_score": 4.11,
-    "lb": "https://boxd.it/2axM"
+    "lb": "https://boxd.it/2axM",
+    "alt_titles": [
+      "Ensina-me a Viver",
+      "Enséñame a vivir",
+      "Harold y Maude",
+      "Harold & Maude"
+    ]
   },
   {
     "id": "1790675292075ssg9pn8ndth",
@@ -314,7 +383,13 @@
     ],
     "_j": 1,
     "lb_score": 4.08,
-    "lb": "https://boxd.it/28CA"
+    "lb": "https://boxd.it/28CA",
+    "alt_titles": [
+      "Down by Law - Alles im Griff",
+      "Stin pagida tou nomou",
+      "Likuma vajātie",
+      "Sous le coup de la loi"
+    ]
   },
   {
     "id": "17906752731446wzfcd9iqfj",
@@ -343,7 +418,8 @@
     ],
     "_j": 1,
     "lb_score": 3.89,
-    "lb": "https://boxd.it/cRk2"
+    "lb": "https://boxd.it/cRk2",
+    "alt_titles": []
   },
   {
     "id": "1790675252346xvnh47ftsir",
@@ -372,7 +448,12 @@
     ],
     "_j": 1,
     "lb_score": 3.73,
-    "lb": "https://boxd.it/nsG"
+    "lb": "https://boxd.it/nsG",
+    "alt_titles": [
+      "Meek's Oregon 1845 Cutoff",
+      "O Atalho",
+      "To perasma tou Meek"
+    ]
   },
   {
     "id": "1790675217595btcbdc5h6b",
@@ -401,7 +482,16 @@
     ],
     "_j": 1,
     "lb_score": 3.87,
-    "lb": "https://boxd.it/1TOw"
+    "lb": "https://boxd.it/1TOw",
+    "alt_titles": [
+      "Red Dragon",
+      "Red Dragon: The Curse of Hannibal Lecter",
+      "Dragão Vermelho",
+      "Roter Drache",
+      "Manhunter - Roter Drache",
+      "Blutmond - Roter Drache",
+      "Łowca"
+    ]
   },
   {
     "id": "1790675186328ndu3vwil34",
@@ -430,7 +520,13 @@
     ],
     "_j": 1,
     "lb_score": 3.85,
-    "lb": "https://boxd.it/1Yqk"
+    "lb": "https://boxd.it/1Yqk",
+    "alt_titles": [
+      "Inseparables",
+      "Dead Ringers - Die Unzertrennlichen",
+      "Dead Ringers - Tödliches Doppelspiel",
+      "Tvillingskjebner"
+    ]
   },
   {
     "id": "17906751455084gtzutrpd4q",
@@ -457,7 +553,12 @@
     ],
     "_j": 1,
     "lb_score": 4.55,
-    "lb": "https://boxd.it/29A6"
+    "lb": "https://boxd.it/29A6",
+    "alt_titles": [
+      "Nuit et Brouillard",
+      "Noche y niebla",
+      "Natt og tåke"
+    ]
   },
   {
     "id": "179067511224537801xshtrt",
@@ -486,7 +587,12 @@
     ],
     "_j": 1,
     "lb_score": 4.68,
-    "lb": "https://boxd.it/1ygo"
+    "lb": "https://boxd.it/1ygo",
+    "alt_titles": [
+      "Talking Heads - Stop Making Sense",
+      "STOP MAKING SENSE 40TH ANNIVERSARY - The IMAX Experience",
+      "Məntiqli Olmağı Burax"
+    ]
   },
   {
     "id": "17906750810477pc658xhxw",
@@ -515,7 +621,12 @@
     ],
     "_j": 1,
     "lb_score": 3.74,
-    "lb": "https://boxd.it/Ru8"
+    "lb": "https://boxd.it/Ru8",
+    "alt_titles": [
+      "Królestwo zwierząt",
+      "Reino Animal",
+      "Animal Kingdom - OZ"
+    ]
   },
   {
     "id": "1790675052554l3a9d2hav7",
@@ -544,7 +655,13 @@
     ],
     "_j": 1,
     "lb_score": 3.57,
-    "lb": "https://boxd.it/2oOM"
+    "lb": "https://boxd.it/2oOM",
+    "alt_titles": [
+      "Black Rain",
+      "A Última Onda",
+      "Die letzte Flut",
+      "Den siste bølgen"
+    ]
   },
   {
     "id": "1790674978181veh3y56c0f",
@@ -572,7 +689,17 @@
     ],
     "_j": 1,
     "lb_score": 3.82,
-    "lb": "https://boxd.it/29TM"
+    "lb": "https://boxd.it/29TM",
+    "alt_titles": [
+      "Nosferatu, eine Symphonie des Grauens",
+      "Nosferatu the Vampire",
+      "Die zwölfte Stunde - Eine Nacht des Grauens",
+      "Nosferatu el vampiro",
+      "Nosferatu, o Vampiro",
+      "Nosferatu, una simfonia del terror",
+      "Nosferatu: Kino Ultimate Edition",
+      "Schatten der Nacht"
+    ]
   },
   {
     "id": "179067495308293gy8ar08md",
@@ -601,7 +728,10 @@
     ],
     "_j": 1,
     "lb_score": 4.24,
-    "lb": "https://boxd.it/71a"
+    "lb": "https://boxd.it/71a",
+    "alt_titles": [
+      "Metoroporisu"
+    ]
   },
   {
     "id": "1790674930928wgqra6xj1y",
@@ -629,7 +759,11 @@
     ],
     "_j": 1,
     "lb_score": 3.93,
-    "lb": "https://boxd.it/1CVg"
+    "lb": "https://boxd.it/1CVg",
+    "alt_titles": [
+      "The Finger Man",
+      "The informant"
+    ]
   },
   {
     "id": "179067491044323z9kjcbxug",
@@ -658,7 +792,16 @@
     ],
     "_j": 1,
     "lb_score": 3.79,
-    "lb": "https://boxd.it/1uC6"
+    "lb": "https://boxd.it/1uC6",
+    "alt_titles": [
+      "Als Parijs Ontwaakt",
+      "Bob el Jugador",
+      "Drei Uhr Nachts",
+      "Bob The Gambler",
+      "Spilleren Bob",
+      "Fever Heat",
+      "Qumarbaz Bob"
+    ]
   },
   {
     "id": "17906748941141317151y23gp",
@@ -686,7 +829,16 @@
     ],
     "_j": 1,
     "lb_score": 3.92,
-    "lb": "https://boxd.it/29Cm"
+    "lb": "https://boxd.it/29Cm",
+    "alt_titles": [
+      "Ostře sledované vlaky",
+      "Scharf beobachtete Züge",
+      "Closely Observed Trains",
+      "Hou de Trein in het Oog",
+      "Szigorúan Ellenőrzött Vonatok",
+      "Stingri uzraudzītie vilcieni",
+      "Cieši vērojot vilcienus"
+    ]
   },
   {
     "id": "1790674863738tzui0r648lc",
@@ -714,7 +866,17 @@
     ],
     "_j": 1,
     "lb_score": 3.43,
-    "lb": "https://boxd.it/NsC"
+    "lb": "https://boxd.it/NsC",
+    "alt_titles": [
+      "Valerie a týden divů",
+      "Valérie au pays des merveilles",
+      "Le fantasie di una tredicenne",
+      "Valéria e os Sonhos",
+      "Valeria y la semana de las maravillas",
+      "Valerie e a Semana das Maravilhas",
+      "Valerie & Her Week of Wonders",
+      "Valéria és a csodák hete"
+    ]
   },
   {
     "id": "1790674846860s6jkkwecwpm",
@@ -742,7 +904,17 @@
     ],
     "_j": 1,
     "lb_score": 4.06,
-    "lb": "https://boxd.it/1tbS"
+    "lb": "https://boxd.it/1tbS",
+    "alt_titles": [
+      "Shadows of Our Forgotten Ancestors",
+      "Wild Horses of Fire",
+      "Tini zabutykh predkiv",
+      "Teni Zabytykh Predkov",
+      "Fortidens skygger",
+      "La sombra de nuestros antepasados olvidados",
+      "Los corceles de fuego",
+      "Moratsvats nakhnineri stvernery"
+    ]
   },
   {
     "id": "1790674818082db71qe9tgel",
@@ -770,7 +942,17 @@
     ],
     "_j": 1,
     "lb_score": 4.11,
-    "lb": "https://boxd.it/1u94"
+    "lb": "https://boxd.it/1u94",
+    "alt_titles": [
+      "Sayat Nova",
+      "The Colour of Pomegranates",
+      "Nřan guynə",
+      "El color de la granada",
+      "Zakuro no Iro",
+      "Nran Guyne",
+      "Brotseulis kvaviloba",
+      "Tsvet granata"
+    ]
   },
   {
     "id": "17906747926937guhb1nsxzu",
@@ -799,7 +981,12 @@
     ],
     "_j": 1,
     "lb_score": 3.5,
-    "lb": "https://boxd.it/7rdE"
+    "lb": "https://boxd.it/7rdE",
+    "alt_titles": [
+      "Nie Yin Niang",
+      "Cìkè Niè Yǐnniáng",
+      "The Assassin Lady Nie"
+    ]
   },
   {
     "id": "1790674772904sbdme3neth",
@@ -827,7 +1014,12 @@
     ],
     "_j": 1,
     "lb_score": 4.04,
-    "lb": "https://boxd.it/3BkC"
+    "lb": "https://boxd.it/3BkC",
+    "alt_titles": [
+      "Qing mei zhu ma",
+      "Taipėjaus istorija",
+      "Thanh Mai Trúc Mã"
+    ]
   },
   {
     "id": "17906747335760tj4vptxk3mi",
@@ -856,7 +1048,12 @@
     ],
     "_j": 1,
     "lb_score": 3.81,
-    "lb": "https://boxd.it/1Tzw"
+    "lb": "https://boxd.it/1Tzw",
+    "alt_titles": [
+      "Qianxi Manbo",
+      "Millenium Mambo",
+      "Thiên Hi Mạn Ba"
+    ]
   },
   {
     "id": "1790674705147b39g7ckm9uw",
@@ -885,7 +1082,17 @@
     ],
     "_j": 1,
     "lb_score": 3.94,
-    "lb": "https://boxd.it/1TLW"
+    "lb": "https://boxd.it/1TLW",
+    "alt_titles": [
+      "Alvo Duplo",
+      "Gangland Boss",
+      "Ying hung boon sik",
+      "Rapid Fire",
+      "Otoko tachi no banka",
+      "Otoko tachi no banka I",
+      "Un Mañana Mejor",
+      "City Wolf - A Better Tomorrow"
+    ]
   },
   {
     "id": "17906746792948mryyfhx77j",
@@ -912,7 +1119,17 @@
     ],
     "_j": 1,
     "lb_score": 3.7,
-    "lb": "https://boxd.it/uSQ"
+    "lb": "https://boxd.it/uSQ",
+    "alt_titles": [
+      "Kataude Hissatsu-Ken",
+      "O monoheir ekdikitis enantion kung-fu",
+      "Şampiyon",
+      "Du bei dao",
+      "Mantieni L'odio per la Tua Vendetta",
+      "Kareteciler Krali",
+      "Das Goldene Schwert des Königstigers",
+      "Un Seul Bras les Tua Tous"
+    ]
   },
   {
     "id": "1790674641295zoc5n4oyvyq",
@@ -941,7 +1158,15 @@
     ],
     "_j": 1,
     "lb_score": 4.02,
-    "lb": "https://boxd.it/3xGa"
+    "lb": "https://boxd.it/3xGa",
+    "alt_titles": [
+      "Dragon Gate Inn",
+      "Long men kezhan",
+      "Breakthrough",
+      "Die Herberge zum Drachentor",
+      "La posada del dragón",
+      "A Estalagem do Dragão"
+    ]
   },
   {
     "id": "1790674620038279x0o23gzc",
@@ -969,7 +1194,17 @@
     ],
     "_j": 1,
     "lb_score": 4.12,
-    "lb": "https://boxd.it/SFm"
+    "lb": "https://boxd.it/SFm",
+    "alt_titles": [
+      "Chivalrous Lady",
+      "Les Maîtres du Zen",
+      "Xia Nu",
+      "Kultainen hämähäkki",
+      "A Tocha de Zen",
+      "Les Héroïques",
+      "SHA-NU",
+      "Zen'in Dokunuşu"
+    ]
   },
   {
     "id": "17906745825082ns17chvdz6",
@@ -997,7 +1232,13 @@
     ],
     "_j": 1,
     "lb_score": 3.96,
-    "lb": "https://boxd.it/XI6"
+    "lb": "https://boxd.it/XI6",
+    "alt_titles": [
+      "Narayama-bushi kô",
+      "De Ballade van Narayama",
+      "Balladen om Narayama",
+      "Balāde par Narajamu"
+    ]
   },
   {
     "id": "1790674543526bxihw685flp",
@@ -1024,7 +1265,15 @@
     ],
     "_j": 1,
     "lb_score": 3.91,
-    "lb": "https://boxd.it/1jQG"
+    "lb": "https://boxd.it/1jQG",
+    "alt_titles": [
+      "Hogs and Warships",
+      "Buta to gunkan",
+      "Pigs & Battleships",
+      "Cochons et Cuirassés",
+      "Filles et gangsters",
+      "Todos Porcos"
+    ]
   },
   {
     "id": "1790674521890m5cpl5whfq",
@@ -1052,7 +1301,11 @@
     ],
     "_j": 1,
     "lb_score": 4.18,
-    "lb": "https://boxd.it/19Ck"
+    "lb": "https://boxd.it/19Ck",
+    "alt_titles": [
+      "Onna ga Kaidan wo Agaru Toki",
+      "Bước Chân Nặng Trĩu"
+    ]
   },
   {
     "id": "1790674493894xbaxz93mi2o",
@@ -1080,7 +1333,11 @@
     ],
     "_j": 1,
     "lb_score": 4.05,
-    "lb": "https://boxd.it/29x2"
+    "lb": "https://boxd.it/29x2",
+    "alt_titles": [
+      "Jalsaghar",
+      "A Sala de Música"
+    ]
   },
   {
     "id": "17906744751283qf0pynoueb",
@@ -1108,7 +1365,14 @@
     ],
     "_j": 1,
     "lb_score": 4.15,
-    "lb": "https://boxd.it/1TjI"
+    "lb": "https://boxd.it/1TjI",
+    "alt_titles": [
+      "Jungfrukällan",
+      "Jomfrukilden",
+      "De Maagdenbron",
+      "El manantial de la doncella",
+      "La Source"
+    ]
   },
   {
     "id": "1790674458123huclgdg30u4",
@@ -1137,7 +1401,15 @@
     ],
     "_j": 1,
     "lb_score": 3.54,
-    "lb": "https://boxd.it/111K"
+    "lb": "https://boxd.it/111K",
+    "alt_titles": [
+      "Este contraveneno del Oeste",
+      "Cenizas del tiempo",
+      "Dung che sai duk",
+      "Les Cendres du temps",
+      "Die verlorene Zeit",
+      "Ashes of Time Redux"
+    ]
   },
   {
     "id": "1790674434235uec9c5ibxb",
@@ -1165,7 +1437,16 @@
     ],
     "_j": 1,
     "lb_score": 4.17,
-    "lb": "https://boxd.it/Lx6"
+    "lb": "https://boxd.it/Lx6",
+    "alt_titles": [
+      "Zire darakhatan zeyton",
+      "Zīr-e Derakhtān-e Zeytūn",
+      "Oliivipuiden katveessa",
+      "Zir-e derakhtan-e zeytoon",
+      "Orîbu no Hayashi o Nukete",
+      "Doorheen de olijfbomen",
+      "Under the Olive Trees"
+    ]
   },
   {
     "id": "17906744137577z0170hlc0n",
@@ -1193,7 +1474,17 @@
     ],
     "_j": 1,
     "lb_score": 3.83,
-    "lb": "https://boxd.it/1WC4"
+    "lb": "https://boxd.it/1WC4",
+    "alt_titles": [
+      "Pauline à la plage",
+      "Pauline en la playa",
+      "Pauline am Strand",
+      "Paulina na Praia",
+      "Paulina na plaży",
+      "Paulina en la playa",
+      "Pauline alla spiaggia",
+      "Pauline na Praia"
+    ]
   },
   {
     "id": "1790674389103hg7iy6f50z4",
@@ -1222,7 +1513,14 @@
     ],
     "_j": 1,
     "lb_score": 4.06,
-    "lb": "https://boxd.it/Uwc"
+    "lb": "https://boxd.it/Uwc",
+    "alt_titles": [
+      "Bad ma ra khahad bord",
+      "De wind zal ons meenemen",
+      "Külək Bizi Daşıyacaq",
+      "Vetar će nas odneti",
+      "Kaze ga fuku mama"
+    ]
   },
   {
     "id": "179067436152798f2430qx3a",
@@ -1251,7 +1549,11 @@
     ],
     "_j": 1,
     "lb_score": 3.86,
-    "lb": "https://boxd.it/1xPi"
+    "lb": "https://boxd.it/1xPi",
+    "alt_titles": [
+      "Ainsi va l'amour",
+      "Así habla el amor"
+    ]
   },
   {
     "id": "1790674336857ekazrgqlf3b",
@@ -1279,7 +1581,12 @@
     ],
     "_j": 1,
     "lb_score": 4.17,
-    "lb": "https://boxd.it/zOk"
+    "lb": "https://boxd.it/zOk",
+    "alt_titles": [
+      "Os Caminhos do Amor",
+      "Jaryanate Eshgh",
+      "Torrentes de amor"
+    ]
   },
   {
     "id": "1790674316774e663vs2379c",
@@ -1308,7 +1615,15 @@
     ],
     "_j": 1,
     "lb_score": 4.14,
-    "lb": "https://boxd.it/2ag2"
+    "lb": "https://boxd.it/2ag2",
+    "alt_titles": [
+      "O Homem Urso",
+      "Karhumies",
+      "A grizzlyember",
+      "Čovek-grizli",
+      "Чeловек гризли",
+      "Chelovek grizli"
+    ]
   },
   {
     "id": "1790674298311zvburwrdvdh",
@@ -1337,7 +1652,17 @@
     ],
     "_j": 1,
     "lb_score": 4.29,
-    "lb": "https://boxd.it/2loc"
+    "lb": "https://boxd.it/2loc",
+    "alt_titles": [
+      "Jôi-uchi: Hairyô tsuma shimatsu",
+      "Rebellion: Receive the Wife",
+      "Rebellion",
+      "Rebelión",
+      "L'ultimo samurai",
+      "Samurai Rebelião",
+      "Ultimul samurai",
+      "Rebeliunea samurailor"
+    ]
   },
   {
     "id": "1790674269037gz7pnk41j1e",
@@ -1365,7 +1690,11 @@
     ],
     "_j": 1,
     "lb_score": 4.1,
-    "lb": "https://boxd.it/1Bf4"
+    "lb": "https://boxd.it/1Bf4",
+    "alt_titles": [
+      "Akibiyori",
+      "Giorni sereni d'autunno"
+    ]
   },
   {
     "id": "1790674245246xg3nd4t8xy8",
@@ -1394,7 +1723,15 @@
     ],
     "_j": 1,
     "lb_score": 4.2,
-    "lb": "https://boxd.it/E4G"
+    "lb": "https://boxd.it/E4G",
+    "alt_titles": [
+      "Principios de verano",
+      "Bakushû",
+      "Também Fomos Felizes",
+      "Weizenherbst",
+      "Il tempo della mietitura (Inizio d'estate)",
+      "Inizio d'estate"
+    ]
   },
   {
     "id": "1790674221909taej4o7xg4",
@@ -1423,7 +1760,13 @@
     ],
     "_j": 1,
     "lb_score": 4.23,
-    "lb": "https://boxd.it/1SGG"
+    "lb": "https://boxd.it/1SGG",
+    "alt_titles": [
+      "Krigerens skygge",
+      "Kagemusha - skugggeneralen",
+      "Kagemusha: A Sombra de um Samurai",
+      "Sobowtór"
+    ]
   },
   {
     "id": "1790674181110m8alu3gjnt",
@@ -1451,7 +1794,13 @@
     ],
     "_j": 1,
     "lb_score": 4.02,
-    "lb": "https://boxd.it/1ltu"
+    "lb": "https://boxd.it/1ltu",
+    "alt_titles": [
+      "Nora inu",
+      "Ein herrenloser Hund",
+      "Cane randagio",
+      "Chien enragé"
+    ]
   },
   {
     "id": "1780709036314ukixvn3pur",
@@ -1491,6 +1840,11 @@
       "Jennifer Aniston",
       "Harry Connick Jr.",
       "Vin Diesel"
+    ],
+    "alt_titles": [
+      "Anak ha'barzel",
+      "Gutten og jernkjempen",
+      "El gigante de acero"
     ]
   },
   {
@@ -1531,6 +1885,16 @@
       "David Rawle",
       "Brendan Gleeson",
       "Lisa Hannigan"
+    ],
+    "alt_titles": [
+      "Le chant de la mer",
+      "Pesnja morya",
+      "La canción del mar",
+      "A Canção do Mar",
+      "Písen more",
+      "Sangen fra havet",
+      "Meren laulu",
+      "Het lied van de zee"
     ]
   },
   {
@@ -1571,6 +1935,10 @@
       "Shunji Iwai",
       "Ayako Fujitani",
       "Jun Murakami"
+    ],
+    "alt_titles": [
+      "Shiki-Jitsu",
+      "Ritüel"
     ]
   },
   {
@@ -1611,6 +1979,10 @@
       "Yuumi Kawai",
       "Mizuki Yoshida",
       "Yoichiro Saito"
+    ],
+    "alt_titles": [
+      "Rukku Bakku",
+      "LOOK BACK: Continúa Dibujando"
     ]
   },
   {
@@ -1651,7 +2023,8 @@
       "Elizabeth Taylor",
       "Richard Burton",
       "George Segal"
-    ]
+    ],
+    "alt_titles": []
   },
   {
     "id": "1780708971980s0742ajgag",
@@ -1691,6 +2064,16 @@
       "Tatsuya Nakadai",
       "Mikijiro Hira",
       "Machiko Kyō"
+    ],
+    "alt_titles": [
+      "La cara de otro",
+      "Tanin no kao",
+      "Tvář toho druhého",
+      "Le visage d'un autre",
+      "Het Gezicht van een Ander",
+      "Il volto di un altro",
+      "Twarz innego",
+      "O Rosto da Maldade"
     ]
   },
   {
@@ -1731,6 +2114,13 @@
       "Mirhadi Tayebi",
       "Mohsen Makhmalbaf",
       "Ali Bakhsi"
+    ],
+    "alt_titles": [
+      "Nun va Goldoon",
+      "Nūn o goldūn",
+      "Pain et Fleurs",
+      "Nun and Goldo",
+      "Çörək və Çiçək"
     ]
   },
   {
@@ -1771,6 +2161,14 @@
       "Ingrid Thulin",
       "Gunnar Björnstrand",
       "Gunnel Lindblom"
+    ],
+    "alt_titles": [
+      "Nattvardsgästerna",
+      "Luz de Invierno",
+      "De Avondmaalsgasten",
+      "The Communicants",
+      "Les Communiants",
+      "Kış Işığı"
     ]
   },
   {
@@ -1811,6 +2209,16 @@
       "Hugh Jackman",
       "Christian Bale",
       "Michael Caine"
+    ],
+    "alt_titles": [
+      "El Truco Final (El Prestigio)",
+      "Prestiż",
+      "El Truco Final",
+      "O Grande Truque",
+      "O Terceiro Passo",
+      "Prestij",
+      "A tökéletes trükk",
+      "Ảo Thuật Gia Đấu Trí"
     ]
   },
   {
@@ -1851,6 +2259,10 @@
       "Anthony Hopkins",
       "Olivia Colman",
       "Mark Gatiss"
+    ],
+    "alt_titles": [
+      "Otec",
+      "Ata"
     ]
   },
   {
@@ -1891,6 +2303,12 @@
       "Ethan Hawke",
       "Julie Delpy",
       "Andrea Eckert"
+    ],
+    "alt_titles": [
+      "Zwischenstopp in Wien",
+      "Antes do Amanhecer",
+      "Før Soloppgang",
+      "Günəş Doğmadan Əvvəl"
     ]
   },
   {
@@ -1931,6 +2349,16 @@
       "Megumi Ogata",
       "Megumi Hayashibara",
       "Kotono Mitsuishi"
+    ],
+    "alt_titles": [
+      "新世紀エヴァンゲリオン劇場版 Air／まごころを、君に",
+      "The End of Evangelion",
+      "新世紀エヴァンゲリオン 劇場版 THE END OF EVANGELION Air/まごころを、君に",
+      "Evangelion 'un Sonu",
+      "Shin Seiki Evangelion Movie: Air / Magokoro wo, Kimi ni",
+      "Shinseiki Evangelion Gekijouban: Air / Magokoro o, Kimi ni",
+      "Shin Seiki Evangelion Gekijouban: The End of Evangelion - Air/Magokoro o, Kimi ni",
+      "Evangelion: The End of Evangelion"
     ]
   },
   {
@@ -1970,6 +2398,9 @@
     "cast": [
       "Don Hertzfeldt",
       "Sara Cushman"
+    ],
+    "alt_titles": [
+      "É um dia tão lindo"
     ]
   },
   {
@@ -2010,6 +2441,16 @@
       "Putthipong Assaratanakul",
       "Usha Seamkhum",
       "Sanya Kunakorn"
+    ],
+    "alt_titles": [
+      "Lahnmah",
+      "Gia Tài Của Ngoại",
+      "Min mormors millioner",
+      "Min mormors miljoner",
+      "Min bestemors millioner",
+      "Isoäidin miljoonat",
+      "Cómo ser Millonario Antes de que se Muera la Abuela",
+      "Como Ganhar Milhões Antes Que a Avó Morra"
     ]
   },
   {
@@ -2050,6 +2491,16 @@
       "Sophia Loren",
       "Marcello Mastroianni",
       "John Vernon"
+    ],
+    "alt_titles": [
+      "Una giornata particolare",
+      "Un día muy particular",
+      "Una jornada particular",
+      "Um Dia Inesquecível",
+      "Une journée particulière",
+      "Um Dia Muito Especial",
+      "O zi deosebită",
+      "Un día muy especial"
     ]
   },
   {
@@ -2090,6 +2541,16 @@
       "Fernanda Torres",
       "Fernanda Montenegro",
       "Selton Mello"
+    ],
+    "alt_titles": [
+      "Ainda Estou Aqui",
+      "Je Suis Toujours là",
+      "Für immer hier",
+      "Je suis encore là",
+      "Aún estoy aquí",
+      "Hələ Burdayam",
+      "Wciąż tu jestem",
+      "Olen yhä täällä"
     ]
   },
   {
@@ -2130,6 +2591,16 @@
       "Sheryl Lee",
       "Ray Wise",
       "Mädchen Amick"
+    ],
+    "alt_titles": [
+      "Twin Peaks: The Movie",
+      "Twin Peaks: Os Últimos Sete Dias de Laura Palmer",
+      "Twin Peaks - Teresa Banks and the Last Seven Days of Laura Palmer",
+      "Twin Peaks - Der Film: Die letzten 7 Tage im Leben der Laura Palmer",
+      "Twin Peaks - Laura Palmers sidste dage",
+      "Twin Peaks (El diario de Laura Palmer)",
+      "Twin Peaks - eld vandra med mig",
+      "Twin Peaks: Tűz, jöjj velem!"
     ]
   },
   {
@@ -2170,6 +2641,16 @@
       "Hugh Jackman",
       "Jake Gyllenhaal",
       "Viola Davis"
+    ],
+    "alt_titles": [
+      "Zmiznutie",
+      "La sospecha",
+      "Prisioneros La sospecha",
+      "Vangitut",
+      "Os Suspeitos",
+      "Prisioneros",
+      "Mahbuslar",
+      "Məhbuslar"
     ]
   },
   {
@@ -2210,7 +2691,8 @@
       "Anne Dorval",
       "Suzanne Clément",
       "Antoine Olivier Pilon"
-    ]
+    ],
+    "alt_titles": []
   },
   {
     "id": "1780708286151pikhjz0gqr7",
@@ -2250,6 +2732,14 @@
       "Ryan Gosling",
       "Sandra Hüller",
       "James Ortiz"
+    ],
+    "alt_titles": [
+      "Projet dernière chance",
+      "Devoradores de Estrelas",
+      "Projecto Hail Mary",
+      "Projecto Fin del Mundo",
+      "Projekti Shpresa e Fundit",
+      "Proyek Hail Mary"
     ]
   },
   {
@@ -2290,6 +2780,10 @@
       "Fernanda Montenegro",
       "Vinícius de Oliveira",
       "Marília Pêra"
+    ],
+    "alt_titles": [
+      "Central do Brasil",
+      "Estación central de Brasil"
     ]
   },
   {
@@ -2330,6 +2824,16 @@
       "Chieko Baisho",
       "Takuya Kimura",
       "Akihiro Miwa"
+    ],
+    "alt_titles": [
+      "Haulov pokretni zamak",
+      "Hauru no Ugoku Shiro",
+      "Howl no Ugoku Shiro",
+      "Ghaleye Motahareke Howl",
+      "Ghaleh Motahareke Howl",
+      "Le Chateau Ambulant",
+      "Howl'un Yürüyen Şatosu",
+      "Det levende slottet"
     ]
   },
   {
@@ -2370,6 +2874,16 @@
       "Spencer Tracy",
       "Richard Widmark",
       "Maximilian Schell"
+    ],
+    "alt_titles": [
+      "Vencedores o vencidos",
+      "Yom Ha-Dean B'Nirenberg",
+      "Oordeel te Neurenberg",
+      "Das Urteil von Nürnberg",
+      "Het Procès van Nuremberg",
+      "Le Procès de Nuremberg",
+      "Suđenje u Nürenbergu",
+      "Nürnbergi protsess"
     ]
   },
   {
@@ -2410,6 +2924,14 @@
       "Hind Rajab",
       "Motaz Malhees",
       "Saja Kilani"
+    ],
+    "alt_titles": [
+      "La voz de Hind",
+      "Hind Rajabin ääni",
+      "Hlas Hind Radžab",
+      "Hind Radžab balsas",
+      "La veu de Hind",
+      "Sawt Hind Rajab"
     ]
   },
   {
@@ -2450,6 +2972,14 @@
       "Bruno Ganz",
       "Fabrizio Bentivoglio",
       "Isabelle Renauld"
+    ],
+    "alt_titles": [
+      "Mia aioniotita kai mia mera",
+      "L'éternité et un jour",
+      "Evigheten og en dag",
+      "Die Ewigkeit und ein Tag",
+      "MIA EONIOTITA KE MIA MERA",
+      "Mūžība un viena diena"
     ]
   },
   {
@@ -2490,6 +3020,10 @@
       "Juri Ueno",
       "Yuta Hiraoka",
       "Shihori Kanjiya"
+    ],
+    "alt_titles": [
+      "Suwingu gâruzu",
+      "Garotas do Balanço"
     ]
   },
   {
@@ -2532,6 +3066,13 @@
       "Marlon Brando",
       "Maria Schneider",
       "Maria Michi"
+    ],
+    "alt_titles": [
+      "Ultimo tango a Parigi",
+      "Dernier Tango à Paris",
+      "Sista tangon i Paris",
+      "Siste tango i Paris",
+      "O Último Tango em Paris"
     ]
   },
   {
@@ -2574,6 +3115,16 @@
       "Sumi Shimamoto",
       "Ichiro Nagai",
       "Gorō Naya"
+    ],
+    "alt_titles": [
+      "I nafsika tis koiladas ton anemon",
+      "Kaze no tani no Naushika",
+      "Nausikaja iz Doline Vetra",
+      "Nausicaä - Prinzessin aus dem Tal der Winde",
+      "La princesse des étoiles",
+      "SternenKrieger - Warriors of the Wind",
+      "Baram Gegok ui Nausika",
+      "Nausica of the Valley of the Wind"
     ]
   },
   {
@@ -2616,6 +3167,16 @@
       "Oh Young-soo",
       "Kim Ki-duk",
       "Kim Young-min"
+    ],
+    "alt_titles": [
+      "Primavera, Verão, Outono, Inverno e… Primavera",
+      "Primavera, verano, otoño, invierno... y primavera",
+      "Spring, Summer, Autumn, Winter... and Spring",
+      "Bom Yeoreum Gaeul Gyeoul Geurigo Bom",
+      "Forår, sommer, efterår, vinter ... og forår",
+      "Frühling, Sommer, Herbst, Winter... und Frühling",
+      "Livets hjul",
+      "Primavera, verano, otoño, invierno... y otra vez primavera"
     ]
   },
   {
@@ -2659,6 +3220,10 @@
       "Alex Descas",
       "Mati Diop",
       "Nicole Dogué"
+    ],
+    "alt_titles": [
+      "35 Rhums",
+      "35 Doses de Rum"
     ]
   },
   {
@@ -2701,6 +3266,12 @@
       "Christian Patey",
       "Vincent Risterucci",
       "Sylvie Van Den Elsen"
+    ],
+    "alt_titles": [
+      "Money",
+      "Robert Bresson s money",
+      "Blodpenger",
+      "Raha"
     ]
   },
   {
@@ -2743,6 +3314,12 @@
       "Jack Nance",
       "Charlotte Stewart",
       "Allen Joseph"
+    ],
+    "alt_titles": [
+      "Labyrinth Man",
+      "Cabeza borradora",
+      "Cabeza de borrador",
+      "Silgi Kafa"
     ]
   },
   {
@@ -2785,6 +3362,16 @@
       "Warren Beatty",
       "Julie Christie",
       "René Auberjonois"
+    ],
+    "alt_titles": [
+      "McCabe and Mrs. Miller",
+      "Jogos e Trapaças - Quando os Homens São Homens",
+      "Quando os Homens São Homens",
+      "John Mac Cabe",
+      "I entimos kyria ki o hartopaiktis",
+      "Gyanburâ",
+      "Gambler",
+      "Sleeping Pathners Mccabe & Mrs. Miller"
     ]
   },
   {
@@ -2827,6 +3414,15 @@
       "Mireille Darc",
       "Jean Yanne",
       "Jean-Pierre Kalfon"
+    ],
+    "alt_titles": [
+      "Le week-end",
+      "Fim de semana",
+      "Week-end à Francesa",
+      "Vikend",
+      "Week End - Una donna e un uomo da sabato a domenica",
+      "Savaitgalis",
+      "Utflykt i det röda"
     ]
   },
   {
@@ -2869,6 +3465,16 @@
       "Anna Karina",
       "Claude Brasseur",
       "Sami Frey"
+    ],
+    "alt_titles": [
+      "Bande à part",
+      "Asalto frustrado",
+      "O Bando à Parte",
+      "Bande à part - Laittomat",
+      "De laglösa",
+      "Hanarebanareni",
+      "Outsider-banden",
+      "Iban por lana"
     ]
   },
   {
@@ -2911,6 +3517,16 @@
       "Anna Karina",
       "Sady Rebbot",
       "André S. Labarthe"
+    ],
+    "alt_titles": [
+      "Vivre sa vie: film en douze tableaux",
+      "Zijn Leven beleven",
+      "Zouse ti zoi tis",
+      "Onna to Otoko no Iru Hodô",
+      "La corrupción",
+      "Viver a Sua Vida",
+      "Viver a Sua Vida. Filme em 12 Quadros",
+      "It's My Life"
     ]
   },
   {
@@ -2948,6 +3564,12 @@
       "Honor Swinton Byrne",
       "Tilda Swinton",
       "Charlie Heaton"
+    ],
+    "alt_titles": [
+      "수베니어: 파트 II",
+      "The Souvenir - Partie 2",
+      "Hatıra: 2. Bölüm",
+      "The Souvenir 2"
     ]
   },
   {
@@ -2990,6 +3612,13 @@
       "Honor Swinton Byrne",
       "Tom Burke",
       "Tilda Swinton"
+    ],
+    "alt_titles": [
+      "soghati",
+      "수베니어: 파트 I",
+      "The Souvenir - Partie 1",
+      "O Souvenir",
+      "Hatıra"
     ]
   },
   {
@@ -3032,6 +3661,10 @@
       "Székely B. Miklós",
       "György Cserhalmi",
       "Vali Kerekes"
+    ],
+    "alt_titles": [
+      "Kárhozat",
+      "Lənət"
     ]
   },
   {
@@ -3074,6 +3707,13 @@
       "János Derzsi",
       "Erika Bók",
       "Mihály Kormos"
+    ],
+    "alt_titles": [
+      "A torinói ló",
+      "El caballo de Turín",
+      "Koń turyński",
+      "Das Turiner Pferd",
+      "Torino Atı"
     ]
   },
   {
@@ -3116,6 +3756,16 @@
       "Paolo Bonacelli",
       "Giorgio Cataldi",
       "Uberto Paolo Quintavalle"
+    ],
+    "alt_titles": [
+      "Salò o le 120 giornate di Sodoma",
+      "120 meres sta Sodoma",
+      "Salò, o las 120 jornadas de Sodoma",
+      "Pier Paolo Pasolini's Salò",
+      "Salò",
+      "Salo - De 120 dagen van Sodoma",
+      "Salo: Les 120 Jours de Sodome",
+      "Salò - Sodoman 120 päivää"
     ]
   },
   {
@@ -3158,6 +3808,9 @@
       "Franco Citti",
       "Franca Pasut",
       "Silvana Corsini"
+    ],
+    "alt_titles": [
+      "The Procurer"
     ]
   },
   {
@@ -3200,6 +3853,16 @@
       "Enrique Irazoqui",
       "Margherita Caruso",
       "Susanna Pasolini"
+    ],
+    "alt_titles": [
+      "Il vangelo secondo Matteo",
+      "The Gospel According to Matthew",
+      "Das erste Evangelium Matthäus",
+      "Evangelium nach Matthäus",
+      "L'évangile selon saint Matthieu",
+      "El evangelio según San Mateo",
+      "O Evangelho Segundo São Mateus",
+      "El evangelio según Mateo"
     ]
   },
   {
@@ -3242,6 +3905,16 @@
       "Margit Carstensen",
       "Hanna Schygulla",
       "Katrin Schaake"
+    ],
+    "alt_titles": [
+      "Die bitteren Tränen der Petra von Kant",
+      "As Lágrimas Amargas de Petra von Kant",
+      "Las lágrimas amargas de Petra von Kant",
+      "Gorke suze Petre von Kant",
+      "Petra von Kants bitre tårer",
+      "Petra von Kantin katkerat kyyneleet",
+      "Les larmes amères de Petra von Kant",
+      "Petra von Kant keserű könnyei"
     ]
   },
   {
@@ -3284,6 +3957,9 @@
       "Hanna Schygulla",
       "Klaus Löwitsch",
       "Ivan Desny"
+    ],
+    "alt_titles": [
+      "Die Ehe der Maria Braun"
     ]
   },
   {
@@ -3326,6 +4002,12 @@
       "Fernando Rey",
       "Delphine Seyrig",
       "Paul Frankeur"
+    ],
+    "alt_titles": [
+      "Le Charme discret de la bourgeoisie",
+      "El discreto encanto de la burguesía",
+      "Burjuvazinin Gizli Çekiciliği",
+      "Borgerskapets diskré sjarm"
     ]
   },
   {
@@ -3368,6 +4050,11 @@
       "Catherine Deneuve",
       "Jean Sorel",
       "Michel Piccoli"
+    ],
+    "alt_titles": [
+      "Dagens skjønnhet",
+      "Beauty of the Day",
+      "Gündüz Güzeli"
     ]
   },
   {
@@ -3410,7 +4097,8 @@
       "Silvia Pinal",
       "Francisco Rabal",
       "Fernando Rey"
-    ]
+    ],
+    "alt_titles": []
   },
   {
     "id": "1777369138020qtni3pgwmed",
@@ -3452,6 +4140,16 @@
       "Thanapat Saisaymar",
       "Jenjira Pongpas",
       "Sakda Kaewbuadee"
+    ],
+    "alt_titles": [
+      "Oncle Boonmee (celui qui se souvient de ses vies antérieures)",
+      "Wujek Boonmee, który potrafi przywolac swoje poprzednie wcielenia",
+      "Uncle Boonmee erinnert sich an seine früheren Leben",
+      "Tio Boonmee, Que Pode Recordar Suas Vidas Passadas",
+      "Onkel Boonmee som kan huske sine tidligere liv",
+      "El hombre que podía recordar sus vidas pasadas (Tío Boonme)",
+      "Loong Boonmee raleuk chat",
+      "Onkel Boonmee som kan erindre sine tidligere liv"
     ]
   },
   {
@@ -3494,6 +4192,13 @@
       "Madhabi Mukherjee",
       "Soumitra Chatterjee",
       "Shailen Mukherjee"
+    ],
+    "alt_titles": [
+      "The Lonely Wife",
+      "Den ensomme hustru",
+      "Chaarulata",
+      "La Moglie Sola",
+      "Samotna kobieta"
     ]
   },
   {
@@ -3536,6 +4241,16 @@
       "Tony Leung Chiu-wai",
       "Hsin Shu-Fen",
       "Chan Chung-Yung"
+    ],
+    "alt_titles": [
+      "La città dolente",
+      "A Cidade do Desencanto",
+      "A Cidade da Dor",
+      "I poli tis thlipsis",
+      "A szomorúság városa",
+      "Miasto smutku",
+      "Sorgens stad",
+      "Bi Tình Thành Thị"
     ]
   },
   {
@@ -3578,6 +4293,13 @@
       "Eva Kotamanidou",
       "Vangelis Kazan",
       "Aliki Georgouli"
+    ],
+    "alt_titles": [
+      "Die Wanderschauspieler",
+      "O Thiassos",
+      "O thiasos",
+      "De Komedianten",
+      "Skuespillernes reise"
     ]
   },
   {
@@ -3620,6 +4342,16 @@
       "Aki Asakura",
       "Takeo Chii",
       "Nobuko Miyamoto"
+    ],
+    "alt_titles": [
+      "Die Legende von Prinzessin Kaguya",
+      "The Tale of Princess Kaguya",
+      "The Tale of the Bamboo Cutter",
+      "Bajka o princezi Kaguji",
+      "Kaguya-hime no monogatari",
+      "Sagan om prinsessan Kaguya",
+      "Het Verhaal van Prinses Kaguya",
+      "La leyenda de la Princesa Kaguya"
     ]
   },
   {
@@ -3662,7 +4394,8 @@
       "Walter Matthau",
       "Elaine May",
       "Jack Weston"
-    ]
+    ],
+    "alt_titles": []
   },
   {
     "id": "1776564824071zi6fthwgs7a",
@@ -3706,7 +4439,8 @@
       "John Magaro",
       "Orion Lee",
       "Toby Jones"
-    ]
+    ],
+    "alt_titles": []
   },
   {
     "id": "1776564736206udsdheqdsni",
@@ -3750,6 +4484,16 @@
       "Christian Friedel",
       "Sandra Hüller",
       "Johann Karthaus"
+    ],
+    "alt_titles": [
+      "KP24: Interesų zona",
+      "La zona de interés",
+      "Maraq Dairəsi",
+      "Zona de interés",
+      "Zona de Interesse",
+      "Zona interesa",
+      "Zóna zájmu",
+      "Huvivöönd"
     ]
   },
   {
@@ -3794,6 +4538,13 @@
       "Annette Bening",
       "Elle Fanning",
       "Greta Gerwig"
+    ],
+    "alt_titles": [
+      "Mujeres del siglo XX",
+      "Alla tiders kvinnor",
+      "Mulheres do Século 20",
+      "Les Femmes du 20e Siècle",
+      "20. századi nők"
     ]
   },
   {
@@ -3838,6 +4589,10 @@
       "Brooklynn Prince",
       "Bria Vinaite",
       "Willem Dafoe"
+    ],
+    "alt_titles": [
+      "El proyecto Florida",
+      "Mon royaume en Floride"
     ]
   },
   {
@@ -3882,6 +4637,16 @@
       "Robert Pattinson",
       "Willem Dafoe",
       "Valeriia Karaman"
+    ],
+    "alt_titles": [
+      "A Világítótorony",
+      "El faro",
+      "Dəniz Fənəri",
+      "Le Phare",
+      "Mayak",
+      "Der Leuchtturm",
+      "Bāka",
+      "Deniz Feneri"
     ]
   },
   {
@@ -3926,6 +4691,10 @@
       "Robert Pattinson",
       "Benny Safdie",
       "Buddy Duress"
+    ],
+    "alt_titles": [
+      "Une nuit sous tension",
+      "Yaxşı Vaxt"
     ]
   },
   {
@@ -3970,6 +4739,10 @@
       "Casey Affleck",
       "Rooney Mara",
       "McColm Cephas Jr."
+    ],
+    "alt_titles": [
+      "Una hitoria de fantasmas",
+      "Une histoire de fantôme"
     ]
   },
   {
@@ -4014,6 +4787,14 @@
       "Tom Cruise",
       "Jamie Foxx",
       "Jada Pinkett Smith"
+    ],
+    "alt_titles": [
+      "Colateral: Lugar y tiempo equivocado",
+      "Sŭuchastnikŭt",
+      "I Diadromí",
+      "Kolateral",
+      "Souchastnik",
+      "Spivuchasnyk"
     ]
   },
   {
@@ -4058,6 +4839,11 @@
       "Michael Douglas",
       "Benicio del Toro",
       "Catherine Zeta-Jones"
+    ],
+    "alt_titles": [
+      "Traffic - Macht des Kartells",
+      "Traffic: Ninguém Sai Limpo",
+      "Tráfico"
     ]
   },
   {
@@ -4102,6 +4888,16 @@
       "Jürgen Prochnow",
       "Herbert Grönemeyer",
       "Klaus Wennemann"
+    ],
+    "alt_titles": [
+      "Das Boot - A tengeralattjáró",
+      "Подводницата U-96",
+      "Anija",
+      "El barco",
+      "O Barco: Inferno no Mar",
+      "U-båt 96",
+      "To ypovryhio",
+      "Ypovryhio U-96: Epistrofi stin kolasi"
     ]
   },
   {
@@ -4145,6 +4941,12 @@
       "Tom Hanks",
       "Meg Ryan",
       "Lloyd Bridges"
+    ],
+    "alt_titles": [
+      "Joe contro il vulcano",
+      "Joe kontra sopka",
+      "Joe contra el volcán",
+      "Joe vs The Volcano"
     ]
   },
   {
@@ -4188,6 +4990,11 @@
       "Tim Curry",
       "Eileen Brennan",
       "Madeline Kahn"
+    ],
+    "alt_titles": [
+      "Os 7 Suspeitos",
+      "Clue: The Movie",
+      "İpucu"
     ]
   },
   {
@@ -4231,6 +5038,11 @@
       "Jean-Claude Van Damme",
       "Arnold Vosloo",
       "Lance Henriksen"
+    ],
+    "alt_titles": [
+      "Operación caceria",
+      "Hard Target - Harte Ziele",
+      "Cietais mērķis"
     ]
   },
   {
@@ -4273,6 +5085,16 @@
       "Jean-Claude Van Damme",
       "Donald Gibb",
       "Leah Ayres"
+    ],
+    "alt_titles": [
+      "Bloodsport I",
+      "Véres játék",
+      "Bloodsport - Eine wahre Geschichte",
+      "Contacto Sangriento",
+      "Krwawy Sport",
+      "El gran dragón blanco",
+      "O Grande Dragão Branco",
+      "Qanlı Döyüş"
     ]
   },
   {
@@ -4315,6 +5137,10 @@
       "Mike Myers",
       "Nancy Travis",
       "Anthony LaPaglia"
+    ],
+    "alt_titles": [
+      "Mia moglie è una pazza assassina?",
+      "Saken er biff"
     ]
   },
   {
@@ -4358,6 +5184,12 @@
       "Mike Myers",
       "Elizabeth Hurley",
       "Michael York"
+    ],
+    "alt_titles": [
+      "Austin Powers - 000 Um Agente Nada Discreto",
+      "Austin Powers: O kataskopos pou gyrise apo... trio",
+      "Austin Powers: Špionátor",
+      "Austin Powers I: International Man of Mystery"
     ]
   },
   {
@@ -4406,6 +5238,14 @@
       "Toni Collette",
       "Alex Wolff",
       "Gabriel Byrne"
+    ],
+    "alt_titles": [
+      "Hereditary: Das Vermächtnis",
+      "Ondskabens hus",
+      "Hereditary: le radici del male",
+      "Hérédité",
+      "Héréditaire",
+      "Ayin"
     ]
   },
   {
@@ -4454,6 +5294,16 @@
       "Kirsten Dunst",
       "Jason Schwartzman",
       "Steve Coogan"
+    ],
+    "alt_titles": [
+      "Sofia Coppola's Marie Antoinette",
+      "María Antonieta - La reina adolescente",
+      "Maria Antonieta",
+      "Marija Antoaneta",
+      "Marie Antoinetta",
+      "Maria Antouanetta",
+      "Marija Antuanete",
+      "Maria Antonina"
     ]
   },
   {
@@ -4496,6 +5346,14 @@
       "Yves Montand",
       "Daniel Auteuil",
       "Emmanuelle Béart"
+    ],
+    "alt_titles": [
+      "Manon des sources",
+      "La venganza de Manon",
+      "Manon og kilden",
+      "Die Wasser der Hügel - Manons Rache",
+      "Jean de Florette Del 2 - Manons källa",
+      "Manon des sources : Jean de Florette 2ème partie"
     ]
   },
   {
@@ -4544,6 +5402,16 @@
       "Colin Farrell",
       "Brendan Gleeson",
       "Ralph Fiennes"
+    ],
+    "alt_titles": [
+      "En Brujas",
+      "Unas vacaciones diferentes",
+      "Escondidos",
+      "Brügge sehen... und sterben",
+      "Apostoli stin Bruges",
+      "Apostoli stin Mpriz",
+      "Escondidos en Brujas",
+      "Najpierw strzelaj, potem zwiedzaj"
     ]
   },
   {
@@ -4592,6 +5460,16 @@
       "Ryunosuke Kamiki",
       "Minami Hamabe",
       "Yuki Yamada"
+    ],
+    "alt_titles": [
+      "G-1.0",
+      "Gojira -1.0",
+      "G Minus One",
+      "ゴジラ-1.0／C",
+      "G-1.0／C",
+      "Godzilla Minus One/Minus Color",
+      "Godzilla: Mənfi Bir",
+      "Godzilla -1.0"
     ]
   },
   {
@@ -4640,6 +5518,16 @@
       "Kirk Douglas",
       "Marilyn Maxwell",
       "Arthur Kennedy"
+    ],
+    "alt_titles": [
+      "Sieger ohne Herz",
+      "Nyrkkeilysankari",
+      "Ha-Alooff",
+      "El triunfador",
+      "De kampioen",
+      "O Grande Ídolo",
+      "Campionul",
+      "Sampion"
     ]
   },
   {
@@ -4683,6 +5571,16 @@
       "François Cluzet",
       "Omar Sy",
       "Anne Le Ny"
+    ],
+    "alt_titles": [
+      "Intouchables",
+      "Untouchable",
+      "Amigos",
+      "Mehubarim la'hayim",
+      "Saikyô no futari",
+      "Prijatelja",
+      "Amigos para siempre",
+      "En oväntad vänskap"
     ]
   },
   {
@@ -4731,6 +5629,16 @@
       "Edward Norton",
       "Edward Furlong",
       "Beverly D'Angelo"
+    ],
+    "alt_titles": [
+      "América X",
+      "Amerikan Hisutori X",
+      "Američka istorija X",
+      "Amerikanska istoriya KH",
+      "Mathímata Amerikanikís Istorías",
+      "Amerykansʹka istoriya KH",
+      "Amerykańska Historia X",
+      "Amerikan Tarixi X"
     ]
   },
   {
@@ -4774,6 +5682,16 @@
       "Jean Reno",
       "Natalie Portman",
       "Gary Oldman"
+    ],
+    "alt_titles": [
+      "Léon",
+      "The Professional",
+      "Léon: Profesionalac",
+      "Léon: Der Profi",
+      "Leon Zawodowiec",
+      "Léon: El Profesional",
+      "Léon, a profi",
+      "Léon – Der Profi (Director's Cut)"
     ]
   },
   {
@@ -4822,6 +5740,10 @@
       "Banlop Lomnoi",
       "Sakda Kaewbuadee",
       "Siriwej Jareornchon"
+    ],
+    "alt_titles": [
+      "Sud pralad",
+      "Tropical Malady - Liebe kennt nur den Moment..."
     ]
   },
   {
@@ -4870,6 +5792,16 @@
       "Jean-Paul Belmondo",
       "Anna Karina",
       "Graziella Galvani"
+    ],
+    "alt_titles": [
+      "Il bandito delle undici",
+      "Pierrot, el loco",
+      "Pierrot de Gangster",
+      "Pierrot, den tokige",
+      "Kichigai Piero",
+      "Crazy Pete",
+      "Pierrot Goes Wild",
+      "Nori Pierrot"
     ]
   },
   {
@@ -4918,6 +5850,12 @@
       "Lana Turner",
       "John Gavin",
       "Sandra Dee"
+    ],
+    "alt_titles": [
+      "Imitação da Vida",
+      "Zolang Er Mensen Zijn",
+      "Mirage de la vie",
+      "Odeio Minha Mãe"
     ]
   },
   {
@@ -4961,6 +5899,16 @@
       "Ingrid Bergman",
       "George Sanders",
       "Maria Mauban"
+    ],
+    "alt_titles": [
+      "Viaggio in Italia",
+      "Voyage in Italy",
+      "Reise in Italien",
+      "Viagem pela Itália",
+      "L'amour est le plus fort",
+      "Romance na Itália",
+      "Viagem à Itália",
+      "Matka Italiassa"
     ]
   },
   {
@@ -5009,6 +5957,12 @@
       "Agnès Varda",
       "Bodan Litnanski",
       "François Wertheimer"
+    ],
+    "alt_titles": [
+      "Les Glaneurs et la Glaneuse",
+      "The Gleaners and I",
+      "Ochibo Hiroi",
+      "Los hurgadores y yo"
     ]
   },
   {
@@ -5057,6 +6011,16 @@
       "Aleksandr Antonov",
       "Vladimir Barsky",
       "Grigori Aleksandrov"
+    ],
+    "alt_titles": [
+      "The Battleship Potemkin",
+      "O Encouraçado Potenkim",
+      "Panssarilaiva Potemkin",
+      "Krstarica Potemkin",
+      "Senkan Pochomukin",
+      "Acorazado Potemkin",
+      "O Couraçado Potemkine",
+      "Crucisatorul Potemkin"
     ]
   },
   {
@@ -5103,6 +6067,9 @@
     "synopsis": "Impersonal and beautiful images of Akerman's life in New York are combined with letters from her loving but manipulative mother, read by Akerman herself.",
     "cast": [
       "Chantal Akerman"
+    ],
+    "alt_titles": [
+      "Briefe von zu Haus"
     ]
   },
   {
@@ -5146,6 +6113,14 @@
       "Ben Burtt",
       "Elissa Knight",
       "Jeff Garlin"
+    ],
+    "alt_titles": [
+      "월-E",
+      "VALL-I",
+      "WALL-E: RÔ-BỐT BIẾT IU",
+      "Người Máy Wall-E",
+      "WALL·E, batalló de neteja",
+      "VOL•İ"
     ]
   },
   {
@@ -5192,6 +6167,16 @@
       "Nino Manfredi",
       "Vittorio Gassman",
       "Stefania Sandrelli"
+    ],
+    "alt_titles": [
+      "C'eravamo tanto amati",
+      "Nós Que Nos Amávamos Tanto",
+      "Så gode venner var vi vist",
+      "We Hielden Zoveel van Elkaar",
+      "Nos habíamos amado tanto",
+      "Mehän rakastimme toisiamme niin paljon",
+      "Nous nous sommes tant aimés",
+      "Mennyire szerettük"
     ]
   },
   {
@@ -5234,6 +6219,12 @@
       "Oleg Yankovskiy",
       "Erland Josephson",
       "Domiziana Giordano"
+    ],
+    "alt_titles": [
+      "Nosztalgia",
+      "Nostalji",
+      "Nostalgie",
+      "Nostalgija"
     ]
   },
   {
@@ -5282,6 +6273,15 @@
       "Mads Mikkelsen",
       "Thomas Bo Larsen",
       "Annika"
+    ],
+    "alt_titles": [
+      "Jagten",
+      "La cacería",
+      "Die Jagd - Jagten",
+      "Jahti",
+      "Jagten The Hunt",
+      "Nitzod",
+      "Onur Savaşı"
     ]
   },
   {
@@ -5329,6 +6329,16 @@
       "Erland Josephson",
       "Susan Fleetwood",
       "Allan Edwall"
+    ],
+    "alt_titles": [
+      "Offret",
+      "El sacrificio",
+      "The Witch",
+      "Le sacrifice",
+      "Opfer",
+      "Sacrificio",
+      "Kurban",
+      "O Sacrifício"
     ]
   },
   {
@@ -5377,6 +6387,16 @@
       "Martina Gedeck",
       "Ulrich Mühe",
       "Sebastian Koch"
+    ],
+    "alt_titles": [
+      "Das Leben der Anderen",
+      "Zivoty tech druhých",
+      "Teiste elu",
+      "Das Leben der Anderen - Die Sonate vom guten Menschen",
+      "De andras liv",
+      "La vida de los otros",
+      "La vie des autres",
+      "Başqalarının Həyatı"
     ]
   },
   {
@@ -5424,6 +6444,16 @@
       "Arletty",
       "Jean-Louis Barrault",
       "Pierre Brasseur"
+    ],
+    "alt_titles": [
+      "Les Enfants du Paradis",
+      "Los niños del paraíso",
+      "Amanti perduti",
+      "De kinderen van het paradijs",
+      "Paradisets børn",
+      "Paratiisin lapset",
+      "Ta paidia tou Paradeisou",
+      "Szerelmek városa"
     ]
   },
   {
@@ -5471,6 +6501,14 @@
       "Rudolf Hrušínský",
       "Vlasta Chramostová",
       "Jana Stehnová"
+    ],
+    "alt_titles": [
+      "Spalovač mrtvol",
+      "Der Leichenverbrenner",
+      "L'incinérateur de cadavres",
+      "De Lijkverbrander",
+      "Perfeksjonisten",
+      "Lò Thiêu"
     ]
   },
   {
@@ -5515,6 +6553,15 @@
       "George Clooney",
       "Meryl Streep",
       "Jason Schwartzman"
+    ],
+    "alt_titles": [
+      "O apithanos kyrios Fox",
+      "ファンタスティックMr. FOX",
+      "O Fantástico Senhor Raposo",
+      "Le Fantastique Mr. Fox",
+      "O Fantástico Sr. Raposo",
+      "A Fantasztikus Róka úr",
+      "Möhtəşəm Cənab Tülkü"
     ]
   },
   {
@@ -5556,6 +6603,10 @@
       "Lars Rudolph",
       "Peter Fitz",
       "Hanna Schygulla"
+    ],
+    "alt_titles": [
+      "Werckmeister harmóniák",
+      "Verkmeisterio harmonijos"
     ]
   },
   {
@@ -5603,6 +6654,12 @@
       "Shinnosuke Ikehata",
       "Yoshio Tsuchiya",
       "Emiko Azuma"
+    ],
+    "alt_titles": [
+      "Bara no soretsu",
+      "Nos funérailles en rose",
+      "O Funeral das Rosas",
+      "Güllerin Cenaze Töreni"
     ]
   },
   {
@@ -5645,6 +6702,16 @@
       "Carole Lombard",
       "Jack Benny",
       "Robert Stack"
+    ],
+    "alt_titles": [
+      "At være eller ikke være",
+      "Jeux dangereux",
+      "Sein oder Nichtsein",
+      "Vogliamo vivere!",
+      "Ser o no ser",
+      "Być albo nie być",
+      "Ser ou Não Ser",
+      "A fi sau a nu fi"
     ]
   },
   {
@@ -5687,6 +6754,16 @@
       "Henrik Malberg",
       "Birgitte Federspiel",
       "Emil Hass Christensen"
+    ],
+    "alt_titles": [
+      "Ordet - La parola",
+      "The Word",
+      "La parole",
+      "Sana",
+      "A Palavra",
+      "Ordet (La palabra)",
+      "Ige",
+      "Słowo"
     ]
   },
   {
@@ -5733,6 +6810,15 @@
       "Michalis Zeke",
       "Tania Paleologou",
       "Stratos Tzortzoglou"
+    ],
+    "alt_titles": [
+      "Topio Stin Omichli",
+      "Paysage dans le brouillard",
+      "Landschap in de Mist",
+      "Paisaje En La Niebla",
+      "Topio stin omihli",
+      "Landskap i tåke",
+      "Phong Cảnh Trong Sương"
     ]
   },
   {
@@ -5781,6 +6867,16 @@
       "Payman Maadi",
       "Leila Hatami",
       "Shahab Hosseini"
+    ],
+    "alt_titles": [
+      "Nader y Simin, una separación",
+      "Une séparation",
+      "Nader og Simin - en seperation",
+      "Una separazione",
+      "Jodaeiye Nader az Simin",
+      "Jodái-e Náder az Simin",
+      "Nader ja Simin: Ero",
+      "Nader og Simin - et brudd"
     ]
   },
   {
@@ -5829,6 +6925,10 @@
       "Peng Yuchang",
       "Wang Yuwen",
       "Zhang Yu"
+    ],
+    "alt_titles": [
+      "Da xiang xi di er zuo",
+      "Um Elefante Sentado Quieto"
     ]
   },
   {
@@ -5875,6 +6975,13 @@
       "Junko Iwao",
       "Rica Matsumoto",
       "Shiho Niiyama"
+    ],
+    "alt_titles": [
+      "Pāfekuto Burū",
+      "Paafekuto Buruu",
+      "The Perfect Blue",
+      "PERFECT BLUE Remastered",
+      "Mükemmel Mavi"
     ]
   },
   {
@@ -5922,6 +7029,16 @@
       "Yoji Matsuda",
       "Yuriko Ishida",
       "Yuko Tanaka"
+    ],
+    "alt_titles": [
+      "Mononoke Hime",
+      "Princeza Mononoke",
+      "Princesa Mononoke",
+      "A Princesa Mononoke",
+      "Prenses Mononoke",
+      "Księżniczka Mononoke",
+      "La Princesa Mononoke",
+      "Prinses Mononoke"
     ]
   },
   {
@@ -5964,6 +7081,11 @@
       "Yuya Yagira",
       "Ayu Kitaura",
       "Hiei Kimura"
+    ],
+    "alt_titles": [
+      "Dare mo shiranai",
+      "Nobody Knows - Die Kofferkinder",
+      "Nessuno lo sa"
     ]
   },
   {
@@ -6013,6 +7135,16 @@
       "Cillian Murphy",
       "Naomie Harris",
       "Brendan Gleeson"
+    ],
+    "alt_titles": [
+      "28 Tage später",
+      "28 päivää myöhemmin",
+      "Devastación: 28 días después",
+      "Exterminio",
+      "Extermínio: Os Dias Estão Contados",
+      "28 dager senere",
+      "28 giorni dopo",
+      "28 kundan so‘ng"
     ]
   },
   {
@@ -6061,6 +7193,15 @@
       "Brad Pitt",
       "Jessica Chastain",
       "Hunter McCracken"
+    ],
+    "alt_titles": [
+      "The tree of life - l'arbre de vie",
+      "To dentro tis zois",
+      "El árbol de la vida",
+      "A Árvore da Vida",
+      "Drzewo życia",
+      "Elämän puu",
+      "Həyat Ağacı"
     ]
   },
   {
@@ -6103,6 +7244,15 @@
       "Matt Damon",
       "Robin Williams",
       "Ben Affleck"
+    ],
+    "alt_titles": [
+      "En busca del destino",
+      "O xehoristos Will Hunting",
+      "Sippuro Shel Will Hunting",
+      "Dobri Vil Hanting",
+      "Good Will Hunting – Der gute Will Hunting",
+      "Will Hunting - syntynyt neroksi",
+      "Gênio Indomável"
     ]
   },
   {
@@ -6145,6 +7295,16 @@
       "Toshirō Mifune",
       "Isuzu Yamada",
       "Takashi Shimura"
+    ],
+    "alt_titles": [
+      "Kumonosu-jô",
+      "O thronos tou aimatos",
+      "Das Schloß im Spinnwebwald",
+      "Seittien linna",
+      "Trono de sangre",
+      "O Trono de Sangue",
+      "Le Château de l'araignée",
+      "Il trono di sangue"
     ]
   },
   {
@@ -6188,6 +7348,11 @@
       "Faye Dunaway",
       "William Holden",
       "Peter Finch"
+    ],
+    "alt_titles": [
+      "Network - Main basse sur la TV",
+      "To diktyo",
+      "Reshet Shidur"
     ]
   },
   {
@@ -6232,6 +7397,14 @@
       "Casper Van Dien",
       "Dina Meyer",
       "Denise Richards"
+    ],
+    "alt_titles": [
+      "Svemirski marinci",
+      "Infanteria stelara",
+      "Svemirski vojnici",
+      "Vesoljski bojevniki",
+      "Hviezdna pechota",
+      "Żołnierze Kosmosu"
     ]
   },
   {
@@ -6279,6 +7452,16 @@
       "Robin Williams",
       "Robert Sean Leonard",
       "Ethan Hawke"
+    ],
+    "alt_titles": [
+      "Bekkjarfélagið",
+      "Ölü Ozanlar Derneği",
+      "Clube dos Poetas Mortos",
+      "Sociedade dos Poetas Mortos",
+      "Ölü Şairlər Dərnəyi",
+      "La Sociedad de los Poetas Muertos",
+      "El Club de los Poetas Muertos",
+      "Ölü Şairlər Cəmiyyəti"
     ]
   },
   {
@@ -6321,6 +7504,16 @@
       "Tom Hanks",
       "David Morse",
       "Bonnie Hunt"
+    ],
+    "alt_titles": [
+      "Stephen King's The Green Mile",
+      "Roheline miil",
+      "Gurîn Mairu",
+      "To prasino mili",
+      "Yeşil Yol",
+      "Zielona mila",
+      "Yaşıl Yol",
+      "La milla verde"
     ]
   },
   {
@@ -6363,6 +7556,16 @@
       "Al Pacino",
       "Steven Bauer",
       "Michelle Pfeiffer"
+    ],
+    "alt_titles": [
+      "Scarface - Toni, das Narbengesicht",
+      "Zjazvená tvár",
+      "Лицо со шрамoм",
+      "Arpinaama",
+      "Yaralı Yüz",
+      "Caracortada",
+      "Le balafré",
+      "Yaralı Üz"
     ]
   },
   {
@@ -6410,6 +7613,16 @@
       "Leonardo DiCaprio",
       "Mark Ruffalo",
       "Ben Kingsley"
+    ],
+    "alt_titles": [
+      "Ilha do Medo",
+      "Zindan Adası",
+      "Đảo Kinh Hoàng",
+      "Suletud saar",
+      "A ilha do Medo",
+      "Otok Shutter",
+      "Slēgtā sala",
+      "Kuždesių sala"
     ]
   },
   {
@@ -6452,6 +7665,16 @@
       "Samuel L. Jackson",
       "Kurt Russell",
       "Jennifer Jason Leigh"
+    ],
+    "alt_titles": [
+      "The H8ful Eight",
+      "Shmonat ha'snou'im",
+      "Bjaurusis aštuntukas",
+      "Les 8 Salopards",
+      "Les huit enragés",
+      "Les 8 enragés",
+      "Los odiosos ocho",
+      "The Hateful Eight: Extended Version"
     ]
   },
   {
@@ -6496,6 +7719,12 @@
       "Benedict Cumberbatch",
       "Kodi Smit-McPhee",
       "Kirsten Dunst"
+    ],
+    "alt_titles": [
+      "Köpeğin Pençesi",
+      "Psie Pazuty",
+      "El poder del perro",
+      "Ataque dos Cães"
     ]
   },
   {
@@ -6537,6 +7766,11 @@
       "Robert De Niro",
       "James Woods",
       "Elizabeth McGovern"
+    ],
+    "alt_titles": [
+      "Het Gebeurde in Amerika",
+      "Suuri gangsterisota",
+      "Bir Dəfə Amerikada"
     ]
   },
   {
@@ -6584,6 +7818,16 @@
       "Harrison Ford",
       "Kate Capshaw",
       "Ke Huy Quan"
+    ],
+    "alt_titles": [
+      "Indiana Jones y el templo maldito",
+      "Indiana Jones 2",
+      "Indiana Jones og templets forbandelse",
+      "Indiana Jones 2: The Temple of Doom",
+      "Indiana Jones 2 - Et Le temple maudit",
+      "Tuomion temppeli",
+      "Indiana Jones y El Templo de la Perdición",
+      "Indiana Jones 2: El templo maldito"
     ]
   },
   {
@@ -6626,6 +7870,16 @@
       "Natalie Portman",
       "Mila Kunis",
       "Vincent Cassel"
+    ],
+    "alt_titles": [
+      "Černá labuť",
+      "Cisne Negro",
+      "Siyah Kuğu",
+      "Czarny łabędź",
+      "Cierna labut",
+      "Ji Lasne Revoel",
+      "Must luik",
+      "Qara Qu Quşu"
     ]
   },
   {
@@ -6668,6 +7922,13 @@
       "Heath Ledger",
       "Jake Gyllenhaal",
       "Michelle Williams"
+    ],
+    "alt_titles": [
+      "Brokeback Mountain (En Terreno Vedado)",
+      "Brokeback Mountain - Túl a barátságon",
+      "Secreto en la montaña",
+      "Tajemnica Brokeback Mountain",
+      "Brokeback Dağı"
     ]
   },
   {
@@ -6710,6 +7971,10 @@
       "Tom Hanks",
       "Robin Wright",
       "Gary Sinise"
+    ],
+    "alt_titles": [
+      "Forrest Qamp",
+      "Atchariya Panya Nim"
     ]
   },
   {
@@ -6759,6 +8024,13 @@
       "Adam Sandler",
       "LaKeith Stanfield",
       "Julia Fox"
+    ],
+    "alt_titles": [
+      "Pierres brutes",
+      "Uncut Gems - Der schwarze Diamant",
+      "Nieoszlifowane diamenty",
+      "Diamante Bruto",
+      "Diamantes en bruto"
     ]
   },
   {
@@ -6802,6 +8074,16 @@
       "Maribel Verdú",
       "Gael García Bernal",
       "Diego Luna"
+    ],
+    "alt_titles": [
+      "E a Tua Mãe Também",
+      "E Sua Mãe Também",
+      "And Your Mother Too!",
+      "Din morsa också!",
+      "Anani Da!",
+      "Jaz pa tebi mamo",
+      "I ja tebi kevu",
+      "Og mora di, også!"
     ]
   },
   {
@@ -6844,6 +8126,9 @@
       "Nicolas Cage",
       "Holly Hunter",
       "Trey Wilson"
+    ],
+    "alt_titles": [
+      "Arizona junior"
     ]
   },
   {
@@ -6891,6 +8176,10 @@
       "Saoirse Ronan",
       "Laurie Metcalf",
       "Tracy Letts"
+    ],
+    "alt_titles": [
+      "Lady Bird - A Hora de Voar",
+      "Uğur Böceği"
     ]
   },
   {
@@ -6937,6 +8226,14 @@
       "Graham Chapman",
       "John Cleese",
       "Eric Idle"
+    ],
+    "alt_titles": [
+      "Em Busca do Cálice Sagrado",
+      "Monti Paison ando hôrii gurairu",
+      "Monty Python ir šventasis Gralis",
+      "Monty Python's The Holy Grail",
+      "Los caballeros de la mesa cuadrada",
+      "Die Ritter der Kokosnuss"
     ]
   },
   {
@@ -6979,6 +8276,16 @@
       "Charlie Chaplin",
       "Paulette Goddard",
       "Jack Oakie"
+    ],
+    "alt_titles": [
+      "Charlie Chaplin: The Great Dictator",
+      "Diktatoren",
+      "El gran dictador",
+      "De diktator",
+      "O Grande Ditador",
+      "Le dictateur",
+      "Diktátor",
+      "Dokusaisha"
     ]
   },
   {
@@ -7026,6 +8333,10 @@
       "Brian Glover",
       "Joe Gladwin",
       "Peter Bourke"
+    ],
+    "alt_titles": [
+      "Initiation",
+      "Centre Play: Initiation"
     ]
   },
   {
@@ -7074,6 +8385,11 @@
       "Ethan Hawke",
       "Julie Delpy",
       "Vernon Dobtcheff"
+    ],
+    "alt_titles": [
+      "Antes do Pôr do Sol",
+      "Før Solnedgang",
+      "Günəş Batmadan Əvvəl"
     ]
   },
   {
@@ -7122,6 +8438,16 @@
       "Bette Davis",
       "Anne Baxter",
       "George Sanders"
+    ],
+    "alt_titles": [
+      "Ola gia tin Eva",
+      "Beszéljünk Éváról!",
+      "Lábuk elött hever a világ",
+      "Allt om Eva",
+      "Eva",
+      "A Malvada",
+      "Ève",
+      "Yeva haqqında hər şey"
     ]
   },
   {
@@ -7170,6 +8496,16 @@
       "Tony Curtis",
       "Jack Lemmon",
       "Marilyn Monroe"
+    ],
+    "alt_titles": [
+      "O atsui no ga o suki",
+      "Hamim V'Taeem",
+      "Hett om öronen",
+      "Джазра хĕрсем çеç",
+      "Bəziləri isti sevir",
+      "Cazda yalnız qızlardır",
+      "Ningú no és perfecte",
+      "Düü testimoni scomud"
     ]
   },
   {
@@ -7217,6 +8553,16 @@
       "Jamie Foxx",
       "Christoph Waltz",
       "Leonardo DiCaprio"
+    ],
+    "alt_titles": [
+      "Zencirsiz Canqo",
+      "Đangova osveta",
+      "Django Livre",
+      "Django desencadenado",
+      "Django déchaîné",
+      "Django, ο τιμωρός",
+      "Django desencadenáu",
+      "Django desencadenat"
     ]
   },
   {
@@ -7259,6 +8605,13 @@
       "Jesse Eisenberg",
       "Andrew Garfield",
       "Armie Hammer"
+    ],
+    "alt_titles": [
+      "Sosial Şəbəkə",
+      "Sotsialuri kseli",
+      "Shejiao wangluo",
+      "La red social",
+      "Le réseau social"
     ]
   },
   {
@@ -7302,6 +8655,9 @@
       "Frances McDormand",
       "William H. Macy",
       "Steve Buscemi"
+    ],
+    "alt_titles": [
+      "Fargo - Blutiger Schnee"
     ]
   },
   {
@@ -7349,6 +8705,15 @@
       "Bruce Willis",
       "Alan Rickman",
       "Alexander Godunov"
+    ],
+    "alt_titles": [
+      "Die Hard - Trappola di cristallo",
+      "La jungla de cristal",
+      "Duro de Matar",
+      "Assalto ao Arranha-Céus",
+      "Die Hard - vain kuolleen ruumiini yli",
+      "Die Hard 1 - Drágán add az életed!  (1988)",
+      "Aksjon skyskraper"
     ]
   },
   {
@@ -7392,6 +8757,9 @@
       "Guy Pearce",
       "Carrie-Anne Moss",
       "Joe Pantoliano"
+    ],
+    "alt_titles": [
+      "Amnésia 2000"
     ]
   },
   {
@@ -7438,6 +8806,16 @@
       "Harrison Ford",
       "Karen Allen",
       "Paul Freeman"
+    ],
+    "alt_titles": [
+      "Poszukiwacze Zaginionej Arki",
+      "Indiana Jones and the Raiders of the Lost Ark",
+      "Indiana Jones og jagten på den forsvundne skat",
+      "Indiana Jones ja kadonneen aarteen metsästäjät",
+      "Indiana Jones et les aventuriers de l'Arche perdue",
+      "Dobyvatelia stratenej archy",
+      "Inidiana Jones and the Raiders of the Lost Ark",
+      "Indiana Jones és az elveszett frigyláda fosztogatói"
     ]
   },
   {
@@ -7484,6 +8862,16 @@
       "Arnold Schwarzenegger",
       "Linda Hamilton",
       "Edward Furlong"
+    ],
+    "alt_titles": [
+      "T2",
+      "Terminator 2: Judgement Day",
+      "Terminator 2 - Il giorno del giudizio - Director's Cut",
+      "Terminaator 2: Kohtupäev",
+      "Tortímandinn: Dómsdagur",
+      "Terminatorius 2: paskutinio teismo diena",
+      "Terminator 2 - Sodni dan",
+      "Ke Huy Diet 2: Ngay Phan Xet"
     ]
   },
   {
@@ -7530,6 +8918,16 @@
       "Arnold Schwarzenegger",
       "Michael Biehn",
       "Linda Hamilton"
+    ],
+    "alt_titles": [
+      "Tamineta",
+      "Terminaattori",
+      "El exteminador",
+      "El ejecutor",
+      "Terminator: El exterminador",
+      "Naboodgar",
+      "Terminateur",
+      "Dödsängeln"
     ]
   },
   {
@@ -7577,6 +8975,15 @@
       "Tom Hanks",
       "Tom Sizemore",
       "Edward Burns"
+    ],
+    "alt_titles": [
+      "Spasavanje redova Rajana",
+      "Resevanje vojaka Ryana",
+      "Vryatuvannya ryadovoho Rayana",
+      "Spasyavaneto na rednik Raĭŭn",
+      "I Diásosi tou Stratióti Ráian",
+      "Spasti ryadovogo Rayana",
+      "Rescatando al soldado Ryan"
     ]
   },
   {
@@ -7623,6 +9030,16 @@
       "Tsutomu Tatsumi",
       "Ayano Shiraishi",
       "Yoshiko Shinohara"
+    ],
+    "alt_titles": [
+      "Die letzten Leuchtkäfer",
+      "Graf van de Vuurvliegjes",
+      "Căn hầm đom đóm",
+      "Jaanimardikate haud",
+      "Jonvabalių kapas",
+      "Mormântul Licuricilor",
+      "Una tomba per le lucciole",
+      "Túmulo dos Vagalumes"
     ]
   },
   {
@@ -7665,6 +9082,16 @@
       "Rumi Hiiragi",
       "Miyu Irino",
       "Mari Natsuki"
+    ],
+    "alt_titles": [
+      "Sen to Chihiro no Kamikakushi",
+      "Unesenniye prizrakami",
+      "Chihiro ilmmiid gaskkas",
+      "El viatge de Chihiro",
+      "Shahr Ashbah",
+      "Ruhların Qaçışı",
+      "Sen gwa Chihiro ui Haengbang Bulmyeong",
+      "Shahre Ashbah"
     ]
   },
   {
@@ -7714,6 +9141,16 @@
       "Emilio Echevarría",
       "Gael García Bernal",
       "Goya Toledo"
+    ],
+    "alt_titles": [
+      "Love's a Bitch",
+      "Korcs szerelmek",
+      "Amor Cão",
+      "Amores perros - Von Hunden und Menschen",
+      "Amores perros - Láska je kurva",
+      "Love Dogs",
+      "Amours chiennes",
+      "Amores Brutos"
     ]
   },
   {
@@ -7755,6 +9192,11 @@
       "Ana Torrent",
       "Fernando Fernán Gómez",
       "Teresa Gimpera"
+    ],
+    "alt_titles": [
+      "El espíritu de la colmena",
+      "Mehiläispesän henki",
+      "L'Esprit de la ruche"
     ]
   },
   {
@@ -7802,6 +9244,10 @@
       "Henry G. Sanders",
       "Kaycee Moore",
       "Charles Bracy"
+    ],
+    "alt_titles": [
+      "Matador de ovejas",
+      "Schafe töten"
     ]
   },
   {
@@ -7844,6 +9290,16 @@
       "Jean-Louis Trintignant",
       "Stefania Sandrelli",
       "Gastone Moschin"
+    ],
+    "alt_titles": [
+      "Il conformista",
+      "De conformist",
+      "Le conformiste",
+      "Fascisten",
+      "Ansatsu no Mori",
+      "Fascistene",
+      "El conformista",
+      "Konformisten"
     ]
   },
   {
@@ -7886,6 +9342,16 @@
       "Juliet Berto",
       "Dominique Labourier",
       "Bulle Ogier"
+    ],
+    "alt_titles": [
+      "Céline et Julie vont en bateau",
+      "Celina and Julie Go Boating",
+      "Céline e Julie Vão de Barco",
+      "Céline & Julie Go Boating",
+      "Phantom Ladies Over Paris",
+      "Céline to Julie wa Fune de Yuku",
+      "Céline og Julie",
+      "Celine y Julie van en barco"
     ]
   },
   {
@@ -7933,6 +9399,16 @@
       "Jeanne Moreau",
       "Oskar Werner",
       "Henri Serre"
+    ],
+    "alt_titles": [
+      "Jules et Jim",
+      "Jules y Jim",
+      "Unutulmayan Sevgili",
+      "Jules och Jim",
+      "Jules si Jim",
+      "Jules e Jim",
+      "Jules i Jim",
+      "To menn og en kvinne"
     ]
   },
   {
@@ -7975,6 +9451,16 @@
       "Roberto Benigni",
       "Nicoletta Braschi",
       "Giorgio Cantarini"
+    ],
+    "alt_titles": [
+      "La vita è bella",
+      "Az élet szép",
+      "La Vida es Bella",
+      "Livet är underbart",
+      "A Vida é Bela",
+      "Život je krásný",
+      "La vie est belle",
+      "Kaunis elämä"
     ]
   },
   {
@@ -8024,6 +9510,11 @@
       "Paul Mescal",
       "Frankie Corio",
       "Brooklyn Toulson"
+    ],
+    "alt_titles": [
+      "Poslije sunca",
+      "Akharei Ha'Shemesh",
+      "Güneş Sonrası"
     ]
   },
   {
@@ -8072,6 +9563,16 @@
       "Greta Lee",
       "Teo Yoo",
       "John Magaro"
+    ],
+    "alt_titles": [
+      "Geçmiş Yaşamlar",
+      "Past Lives (Vidas pasadas)",
+      "Keçmiş Yaşamlar",
+      "Előző életek",
+      "Vidas Passadas",
+      "Vidas Pasadas",
+      "Mga Nakaraang Buhay",
+      "Nos vies d'avant"
     ]
   },
   {
@@ -8114,6 +9615,11 @@
       "Emmanuelle Riva",
       "Eiji Okada",
       "Stella Dassas"
+    ],
+    "alt_titles": [
+      "Hiroshima My Love",
+      "Hiroshima, mi amor",
+      "Hiroshima, min Elskede"
     ]
   },
   {
@@ -8161,6 +9667,16 @@
       "Charlie Chaplin",
       "Paulette Goddard",
       "Henry Bergman"
+    ],
+    "alt_titles": [
+      "Dr. Hauser & Co. Ges.m.b.H.",
+      "Moderne tijden",
+      "Os Tempos Modernos",
+      "Alazmena alhaditha",
+      "Modernoi kairoi",
+      "Asr-e jadid",
+      "Zmanim Modernim",
+      "Modan Taimusu"
     ]
   },
   {
@@ -8208,6 +9724,16 @@
       "Lino Ventura",
       "Paul Meurisse",
       "Jean-Pierre Cassel"
+    ],
+    "alt_titles": [
+      "L'Armée des ombres",
+      "O Exército das Sombras",
+      "Een Leger Vecht in de Schaduw",
+      "L'armata degli eroi",
+      "El ejército de las sombras",
+      "Maanalainen armeija",
+      "Okända hjältar",
+      "I megali stratia ton afanon iroon"
     ]
   },
   {
@@ -8257,6 +9783,16 @@
       "Cecilia Roth",
       "Marisa Paredes",
       "Candela Peña"
+    ],
+    "alt_titles": [
+      "Todo sobre mi madre",
+      "Wszystko o mojej matce",
+      "Tutto su mia madre",
+      "Mindent anyámról",
+      "Allt om min mamma",
+      "Annem Hakkında Her Şey",
+      "Tudo Sobre Minha Mãe",
+      "Alles über meine Mutter"
     ]
   },
   {
@@ -8304,6 +9840,15 @@
       "Daniel Day-Lewis",
       "Paul Dano",
       "Kevin J. O'Connor"
+    ],
+    "alt_titles": [
+      "Sangue Negro",
+      "Petróleo sangriento",
+      "Il petroliere",
+      "Aż poleje się krew",
+      "Pozos de ambición",
+      "Veri hakkab voolama",
+      "Qan Töküləcək"
     ]
   },
   {
@@ -8351,6 +9896,12 @@
       "Lily Franky",
       "Sakura Ando",
       "Mayu Matsuoka"
+    ],
+    "alt_titles": [
+      "Manbiki Kazoku",
+      "Shoplifting Family",
+      "Somos una familia",
+      "Une affaire de famille"
     ]
   },
   {
@@ -8393,6 +9944,16 @@
       "Corinne Marchand",
       "Antoine Bourseiller",
       "Dominique Davray"
+    ],
+    "alt_titles": [
+      "Cléo de 5 à 7",
+      "Cléo de cinq à sept",
+      "Cléo van 5 tot 7",
+      "Cléo od pěti do sedmi",
+      "Cleo viidestä seitsemään",
+      "Cléo från fem till sju",
+      "Cléo från 5 till 7",
+      "5 ji kara 7 ji made no Kureo"
     ]
   },
   {
@@ -8441,6 +10002,16 @@
       "Noriko Hidaka",
       "Chika Sakamoto",
       "Hitoshi Takagi"
+    ],
+    "alt_titles": [
+      "Tonari no Totoro",
+      "Magiska äventyr med Totoro",
+      "Näkymätön ystävä",
+      "Totoro",
+      "Totoro auzokidea",
+      "Mon Voisin Totoro",
+      "Komşum Totoro",
+      "My Neighbour Totoro"
     ]
   },
   {
@@ -8489,6 +10060,9 @@
       "Mitsuo Iwata",
       "Nozomu Sasaki",
       "Mami Koyama"
+    ],
+    "alt_titles": [
+      "Akira: 25th Anniversary Edition"
     ]
   },
   {
@@ -8537,6 +10111,16 @@
       "Jean-Louis Trintignant",
       "Emmanuelle Riva",
       "Isabelle Huppert"
+    ],
+    "alt_titles": [
+      "Love",
+      "Amor",
+      "Liebe",
+      "Ljubav",
+      "Armastus",
+      "Agapi",
+      "Ahava",
+      "Ai, Amûru"
     ]
   },
   {
@@ -8585,6 +10169,16 @@
       "Humphrey Bogart",
       "Gloria Grahame",
       "Frank Lovejoy"
+    ],
+    "alt_titles": [
+      "El derecho de matar",
+      "Late at Night",
+      "Behind the Mask",
+      "Tehlike isareti",
+      "В yкромном месте",
+      "Nakna nerver",
+      "Na usamljenom mestu",
+      "Matar ou Não Matar"
     ]
   },
   {
@@ -8633,6 +10227,16 @@
       "Sandrine Bonnaire",
       "Macha Méril",
       "Yolande Moreau"
+    ],
+    "alt_titles": [
+      "Sans toit ni loi",
+      "Sem Teto Nem Lei",
+      "Скитницa",
+      "Ik Zie Nog Wel",
+      "Vagabonde",
+      "Sin techo ni ley",
+      "Os Renegados",
+      "En pige på drift"
     ]
   },
   {
@@ -8677,6 +10281,15 @@
       "Hidetoshi Nishijima",
       "Toko Miura",
       "Masaki Okada"
+    ],
+    "alt_titles": [
+      "Doraibu mai kâ",
+      "Vadi manu mašīnu",
+      "Keyra bílinn minn",
+      "Conduz o Meu Carro",
+      "Drive My Carais",
+      "Drajv maj kár",
+      "Maşınımı Sür"
     ]
   },
   {
@@ -8720,6 +10333,16 @@
       "François Leterrier",
       "Charles Le Clainche",
       "Maurice Beerblock"
+    ],
+    "alt_titles": [
+      "Un condamné à mort s'est échappé",
+      "A Man Escaped or The Wind Bloweth Where It Listeth",
+      "Le vent souffle où il veut",
+      "Fugiu Um Condenado à Morte",
+      "Um Condenado à Morte Escapou",
+      "En dödsdömd har rymt",
+      "Un condenado a muerte se ha escapado",
+      "K smrti odsouzený uprchl"
     ]
   },
   {
@@ -8762,6 +10385,16 @@
       "Jean Gabin",
       "Dita Parlo",
       "Pierre Fresnay"
+    ],
+    "alt_titles": [
+      "La Grande Illusion",
+      "De groote illusie",
+      "Les Aventures du lieutenant Maréchal",
+      "L’évasion de Pinsard",
+      "De grote illusie",
+      "De grote begoocheling",
+      "Suuri illuusio",
+      "Den Stora illusionen"
     ]
   },
   {
@@ -8804,6 +10437,13 @@
       "Al Pacino",
       "John Cazale",
       "Charles Durning"
+    ],
+    "alt_titles": [
+      "Quel pomeriggio di un giorno da cani",
+      "Tarde de perros",
+      "Un après-midi de chien",
+      "Een hondse namiddag",
+      "Lämbe pärastlõuna"
     ]
   },
   {
@@ -8847,6 +10487,16 @@
       "Celia Johnson",
       "Trevor Howard",
       "Stanley Holloway"
+    ],
+    "alt_titles": [
+      "Breve Encuentro",
+      "Kort möte",
+      "Lyhyt onni",
+      "Det korte møde",
+      "Syntomi synantisis",
+      "Késői találkozás",
+      "Spotkanie",
+      "Puto najsilnejsie"
     ]
   },
   {
@@ -8891,6 +10541,16 @@
       "Timothée Chalamet",
       "Armie Hammer",
       "Michael Stuhlbarg"
+    ],
+    "alt_titles": [
+      "Chiamami col tuo nome",
+      "Skrivena ljubav",
+      "Vadink mane savo vardu",
+      "Strigă-mă pe numele tău",
+      "Zovi me svojim imenom",
+      "Poklici me po svojem imenu",
+      "Më thirr me emrin tënd",
+      "Llámame por tu nombre"
     ]
   },
   {
@@ -8940,7 +10600,8 @@
       "Tom Cruise",
       "Philip Baker Hall",
       "Philip Seymour Hoffman"
-    ]
+    ],
+    "alt_titles": []
   },
   {
     "id": "1775371673725w1gn52pc3i",
@@ -8988,6 +10649,12 @@
       "Robert De Niro",
       "Harvey Keitel",
       "David Proval"
+    ],
+    "alt_titles": [
+      "Ulice nędzy",
+      "Hexenkessel",
+      "Mizerné ulice",
+      "Pis Küçələr"
     ]
   },
   {
@@ -9037,6 +10704,12 @@
       "Robert De Niro",
       "Robin Williams",
       "John Heard"
+    ],
+    "alt_titles": [
+      "L'Éveil",
+      "Przebudzenia",
+      "Despertares",
+      "Oyanış"
     ]
   },
   {
@@ -9086,6 +10759,11 @@
       "D'Pharaoh Woon-A-Tai",
       "Will Poulter",
       "Cosmo Jarvis"
+    ],
+    "alt_titles": [
+      "Tiempo de guerra",
+      "Warfare: Tiempo de guerra",
+      "Válka"
     ]
   },
   {
@@ -9135,6 +10813,9 @@
       "Paul Giamatti",
       "Thomas Haden Church",
       "Virginia Madsen"
+    ],
+    "alt_titles": [
+      "À la dérive"
     ]
   },
   {
@@ -9184,7 +10865,10 @@
       "Ryan Gosling",
       "Angourie Rice"
     ],
-    "synopsis": "A private eye investigates the apparent suicide of a fading porn star in 1970s Los Angeles and uncovers a conspiracy."
+    "synopsis": "A private eye investigates the apparent suicide of a fading porn star in 1970s Los Angeles and uncovers a conspiracy.",
+    "alt_titles": [
+      "The Nice Guys - Nett war gestern!"
+    ]
   },
   {
     "id": "1775371582007sg1j8ev1rgs",
@@ -9233,6 +10917,11 @@
       "Woody Harrelson",
       "Randy Quaid",
       "Vanessa Angel"
+    ],
+    "alt_titles": [
+      "Kingpin – Zwei Trottel auf der Bowlingbahn",
+      "Kingpin - EC",
+      "Kingpin - keglernes konge"
     ]
   },
   {
@@ -9282,6 +10971,16 @@
       "Tom Cruise",
       "Colin Farrell",
       "Samantha Morton"
+    ],
+    "alt_titles": [
+      "Suvišni izveštaj",
+      "Second Sight",
+      "Total Recall 2",
+      "Spetsialen doklad",
+      "Osoboye mneniye",
+      "Osoblyva dumka",
+      "Raport Mniejszości",
+      "Rapport minoritaire"
     ]
   },
   {
@@ -9326,6 +11025,10 @@
       "Pam Grier",
       "Samuel L. Jackson",
       "Robert De Niro"
+    ],
+    "alt_titles": [
+      "Jackie Brown: Triple traición",
+      "Jackie Brown: La Estafa"
     ]
   },
   {
@@ -9370,7 +11073,8 @@
       "Mikey Madison",
       "Mark Eydelshteyn",
       "Yura Borisov"
-    ]
+    ],
+    "alt_titles": []
   },
   {
     "id": "1775371513524dur9q0gdn7u",
@@ -9419,7 +11123,8 @@
       "Chris Cooper",
       "Elizabeth Peña",
       "Kris Kristofferson"
-    ]
+    ],
+    "alt_titles": []
   },
   {
     "id": "1775371492857ndgtur5e9jr",
@@ -9468,6 +11173,16 @@
       "Gina Gershon",
       "Jennifer Tilly",
       "Joe Pantoliano"
+    ],
+    "alt_titles": [
+      "Sin límites",
+      "Liaisons interdites",
+      "The Business",
+      "Ligadas pelo Desejo",
+      "Preko svake mjere",
+      "Gefesselt",
+      "Fülledtség",
+      "Torbido inganno"
     ]
   },
   {
@@ -9511,6 +11226,12 @@
       "Aida Mohammadkhani",
       "Mohsen Kafili",
       "Fereshteh Sadr Orafaee"
+    ],
+    "alt_titles": [
+      "El globo blanco",
+      "Badkonake Sefid",
+      "Den hvite ballongen",
+      "Bəyaz Şar"
     ]
   },
   {
@@ -9560,6 +11281,16 @@
       "Simon Pegg",
       "Nick Frost",
       "Kate Ashfield"
+    ],
+    "alt_titles": [
+      "L'alba dei morti dementi",
+      "Zombie Party - Uma Noite... de Morte",
+      "Todo Mundo Quase Morto",
+      "Zombies Party",
+      "Ein Zombie kommt selten allein",
+      "Zombies Party (Una noche... de muerte)",
+      "Muertos de risa",
+      "Shaun, kuolleiden kunkku"
     ]
   },
   {
@@ -9609,6 +11340,16 @@
       "Akira Takarada",
       "Momoko Kôchi",
       "Akihiko Hirata"
+    ],
+    "alt_titles": [
+      "Gojira",
+      "Godzilla: Monstret Från Havet",
+      "Gojira: The Original Japanese Masterpiece",
+      "Yuánzǐ kǒnglóng",
+      "Japón Bajo el Terror del Monstruo",
+      "O Monstro do Oceano Pacífico",
+      "Godzilla: Rey de los Monstruos",
+      "Godzilla Uhyrernes Konge"
     ]
   },
   {
@@ -9658,6 +11399,12 @@
       "Arnold Schwarzenegger",
       "Rae Dawn Chong",
       "Dan Hedaya"
+    ],
+    "alt_titles": [
+      "Phantom Kommando",
+      "Comando Para Matar",
+      "Komando",
+      "Das Phantom-Kommando"
     ]
   },
   {
@@ -9702,6 +11449,9 @@
       "Hayato Ichihara",
       "Shugo Oshinari",
       "Yu Aoi"
+    ],
+    "alt_titles": [
+      "Rirī Shushu no subete"
     ]
   },
   {
@@ -9746,6 +11496,12 @@
       "Paul Newman",
       "Charlotte Rampling",
       "Jack Warden"
+    ],
+    "alt_titles": [
+      "Veredicto final",
+      "Rozsudek",
+      "Será justicia",
+      "O Veredito"
     ]
   },
   {
@@ -9795,6 +11551,14 @@
       "Terence Stamp",
       "Silvana Mangano",
       "Massimo Girotti"
+    ],
+    "alt_titles": [
+      "Theorem",
+      "Théorème",
+      "Skandalen i Milano",
+      "Theorima",
+      "To theorima",
+      "Teoremat"
     ]
   },
   {
@@ -9839,6 +11603,13 @@
       "Walter Matthau",
       "Robert Shaw",
       "Martin Balsam"
+    ],
+    "alt_titles": [
+      "Pelham, un, dos, tres",
+      "The Mastermind",
+      "Underground Hi-jack",
+      "Il colpo della metropolitana - Un ostaggio al minuto",
+      "Les pirates du métro 123"
     ]
   },
   {
@@ -9883,6 +11654,16 @@
       "Jeff Goldblum",
       "Geena Davis",
       "John Getz"
+    ],
+    "alt_titles": [
+      "Moucha",
+      "Mucha",
+      "Flugan",
+      "Ha-Zvuv",
+      "Za furai",
+      "Muha",
+      "Muva",
+      "A Mosca"
     ]
   },
   {
@@ -9932,6 +11713,16 @@
       "Nicole Kidman",
       "Paul Bettany",
       "John Hurt"
+    ],
+    "alt_titles": [
+      "Dogville: Uma Cidade Não Muito Longe",
+      "U - Der Film 'Dogville' erzählt in neun Kapiteln und einem Prolog.",
+      "The Film 'Dogville' as Told in Nine Chapters and a Prologue",
+      "Ổ Chó",
+      "Dogvili",
+      "Dogville - A menedék",
+      "Dogvilis",
+      "Kibirli Kasaba"
     ]
   },
   {
@@ -9981,6 +11772,13 @@
       "Eric Bana",
       "Daniel Craig",
       "Ciarán Hinds"
+    ],
+    "alt_titles": [
+      "München",
+      "Minchen",
+      "Miunchenas",
+      "Minhen",
+      "Münhen"
     ]
   },
   {
@@ -10025,6 +11823,13 @@
       "Harrison Ford",
       "Kelly McGillis",
       "Josef Sommer"
+    ],
+    "alt_titles": [
+      "A Testemunha",
+      "Vittne till mord",
+      "Único testigo",
+      "Vitne til mord",
+      "Témoin sous surveillance"
     ]
   },
   {
@@ -10069,6 +11874,16 @@
       "Jason London",
       "Matthew McConaughey",
       "Joey Lauren Adams"
+    ],
+    "alt_titles": [
+      "Dazed and Confused - Sommer der Ausgeflippten",
+      "Neanika berdemata",
+      "Genç ve Heyecanlı",
+      "Rebeldes y confundidos",
+      "La Movida del 76",
+      "Jóvenes desorientados",
+      "Išmuštieji iš vėžių",
+      "Jovens, Loucos e Rebeldes"
     ]
   },
   {
@@ -10113,6 +11928,16 @@
       "Bill Murray",
       "Scarlett Johansson",
       "Giovanni Ribisi"
+    ],
+    "alt_titles": [
+      "Lost in Translation - Zwischen den Welten",
+      "Targmanshi dakargulni",
+      "Lost in Translation - O Amor é um Lugar Estranho",
+      "Izgubljeni u prijevodu",
+      "Tõlkes kaduma läinud",
+      "Hamenoi sti metafrasi",
+      "Elveszett jelentés",
+      "Avoodim B'Tokyo"
     ]
   },
   {
@@ -10162,6 +11987,16 @@
       "Al Pacino",
       "Russell Crowe",
       "Christopher Plummer"
+    ],
+    "alt_titles": [
+      "A bennfentes",
+      "Révélations",
+      "O Informante",
+      "Sisäpiirissä",
+      "Probuđena savjest",
+      "El dilema",
+      "Ha-Makkor",
+      "Dietro la verità"
     ]
   },
   {
@@ -10211,6 +12046,13 @@
       "Mel Gibson",
       "Joanne Samuel",
       "Hugh Keays-Byrne"
+    ],
+    "alt_titles": [
+      "Bolides hurlants",
+      "Mad Max: O ekdikitis tis nyhtas",
+      "Mad Max: Loco Max",
+      "Pobesneli Max: Cestni bojevnik",
+      "Çılgın Max"
     ]
   },
   {
@@ -10260,6 +12102,16 @@
       "Toni Servillo",
       "Carlo Verdone",
       "Sabrina Ferilli"
+    ],
+    "alt_titles": [
+      "La grande bellezza",
+      "Kohutav ilu",
+      "I teleia omorfia",
+      "Yafa la'netzakh",
+      "Didis grozis",
+      "Den store skjønnheten",
+      "Suuri kauneus",
+      "La gran belleza"
     ]
   },
   {
@@ -10309,6 +12161,16 @@
       "Philip Seymour Hoffman",
       "Samantha Morton",
       "Michelle Williams"
+    ],
+    "alt_titles": [
+      "Kis-nagy világ",
+      "New York, Iscenesat",
+      "Synecdoche, New York - todas las vidas, mi vida",
+      "Sinédoque, Nova York",
+      "Sinegdoha, New York",
+      "Synekdocha, New York",
+      "Sünekdohh, New York",
+      "Stage Play"
     ]
   },
   {
@@ -10358,6 +12220,16 @@
       "Vivien Leigh",
       "Clark Gable",
       "Olivia de Havilland"
+    ],
+    "alt_titles": [
+      "Lo que el viento se llevó",
+      "Gejaagd door de wind",
+      "Jih proti Severu",
+      "Odviate vetrom",
+      "E o Vento Levou",
+      "Autant en emporte le vent",
+      "Przeminęło z Wiatrem",
+      "Borta med vinden"
     ]
   },
   {
@@ -10407,6 +12279,13 @@
       "Johnny Depp",
       "Winona Ryder",
       "Dianne Wiest"
+    ],
+    "alt_titles": [
+      "Saxhand Edward",
+      "Eduardo Manostijeras : 1990",
+      "Edward Omul-foarfece",
+      "El joven manos de tijera",
+      "Edvard Qayçıəllər"
     ]
   },
   {
@@ -10451,6 +12330,14 @@
       "Stephen Baldwin",
       "Gabriel Byrne",
       "Benicio del Toro"
+    ],
+    "alt_titles": [
+      "Sospechosos habituales",
+      "Podozriví",
+      "De misstänkta",
+      "Epäillyt",
+      "Sospechosos comunes",
+      "Die ueblichen Verdaechtigen"
     ]
   },
   {
@@ -10500,6 +12387,12 @@
       "Dustin Hoffman",
       "Anne Bancroft",
       "Katharine Ross"
+    ],
+    "alt_titles": [
+      "Mezun",
+      "Mandomsprovet",
+      "Manndomsprøven",
+      "A Primeira Noite de um Homem"
     ]
   },
   {
@@ -10544,6 +12437,14 @@
       "Kevin Spacey",
       "Russell Crowe",
       "Guy Pearce"
+    ],
+    "alt_titles": [
+      "Poverljivo iz L.A.",
+      "Los angeles: Empisteftiko",
+      "Mahramane los angeles",
+      "L.A. Confidential - Jeder hat seinen Preis",
+      "LA 컨피덴셜",
+      "L.A. Konfidensielt"
     ]
   },
   {
@@ -10593,6 +12494,16 @@
       "Steve McQueen",
       "James Garner",
       "Richard Attenborough"
+    ],
+    "alt_titles": [
+      "Den stora flykten",
+      "Wielka Ucieczka",
+      "Veliki bijeg",
+      "Great Escape",
+      "Gesprengte Ketten",
+      "La Grande Évasion",
+      "La grande fuga",
+      "La gran evasión"
     ]
   },
   {
@@ -10642,6 +12553,13 @@
       "William Holden",
       "Ernest Borgnine",
       "Robert Ryan"
+    ],
+    "alt_titles": [
+      "Den vilda hopen",
+      "In Gorooh-e Khashen",
+      "Wild Bunch",
+      "Divja banda",
+      "Grup salvatge"
     ]
   },
   {
@@ -10686,6 +12604,16 @@
       "Bruce Campbell",
       "Sarah Berry",
       "Dan Hicks"
+    ],
+    "alt_titles": [
+      "Evil Dead II",
+      "Dood vóór de dageraad",
+      "Evil dead 2 - Mort à l'aube",
+      "Posesión Infernal 2",
+      "La casa II",
+      "Evil Dead 2: Dead by Dawn",
+      "Tanz der Teufel II",
+      "Tanz der Teufel II - Jetzt wird noch mehr getanzt"
     ]
   },
   {
@@ -10729,6 +12657,16 @@
       "Nicolas Cage",
       "Meryl Streep",
       "Chris Cooper"
+    ],
+    "alt_titles": [
+      "The Orchid Thief",
+      "El ladrón de orquídeas",
+      "Adaption.",
+      "Adaptação.",
+      "Adaption - Der Orchideendieb",
+      "Adaptasiya",
+      "Adaptacija",
+      "Orkidé-tyven"
     ]
   },
   {
@@ -10771,6 +12709,9 @@
       "DMX",
       "Nas",
       "Hassan Johnson"
+    ],
+    "alt_titles": [
+      "White Lines"
     ]
   },
   {
@@ -10814,6 +12755,16 @@
       "John Travolta",
       "Hugh Jackman",
       "Halle Berry"
+    ],
+    "alt_titles": [
+      "Codice Swordfish",
+      "Opération espadon",
+      "Operación Swordfish",
+      "Password Swordfish",
+      "A Senha: Swordfish",
+      "Operacion Swordfish - Acceso autorizado",
+      "Passwort: Swordfish",
+      "Swordfish - kodeord sværdfisk"
     ]
   },
   {
@@ -10857,6 +12808,16 @@
       "Sean Connery",
       "Nicolas Cage",
       "Ed Harris"
+    ],
+    "alt_titles": [
+      "The Rock - Entscheidung auf Alcatraz",
+      "A Rocha",
+      "Rock",
+      "Le Rocher",
+      "Qaya",
+      "The Rock – Fels der Entscheidung",
+      "La roca",
+      "Fortăreața"
     ]
   },
   {
@@ -10900,6 +12861,12 @@
       "Nicolas Cage",
       "John Cusack",
       "John Malkovich"
+    ],
+    "alt_titles": [
+      "Lot Skazańców",
+      "Air bagnards",
+      "Les Ailes de l'enfer",
+      "Ieslodzīto reiss"
     ]
   },
   {
@@ -10942,7 +12909,8 @@
       "Ricky Tomlinson",
       "Amanda Redman",
       "Philip Jackson"
-    ]
+    ],
+    "alt_titles": []
   },
   {
     "id": "1776479540018wpe28z2lbl",
@@ -10984,6 +12952,16 @@
       "Lizabeth Scott",
       "Don DeFore",
       "Dan Duryea"
+    ],
+    "alt_titles": [
+      "Killer Bait",
+      "Prepozno za solze",
+      "Med berått mod",
+      "Kasno je za suze",
+      "Lágrimas Tardias",
+      "Poly arga gia dakrya",
+      "La tigresse",
+      "Ingen vej tilbage"
     ]
   },
   {
@@ -11026,6 +13004,12 @@
       "Cathy O'Donnell",
       "Farley Granger",
       "Howard Da Silva"
+    ],
+    "alt_titles": [
+      "Amarga Esperança",
+      "Im Schatten der Nacht",
+      "Vivre la nuit",
+      "Les amants de la nuit"
     ]
   },
   {
@@ -11068,6 +13052,15 @@
       "Roman Polanski",
       "Isabelle Adjani",
       "Melvyn Douglas"
+    ],
+    "alt_titles": [
+      "Le locataire",
+      "L'inquilino del terzo piano",
+      "El inquilino",
+      "Der Mieter",
+      "El quimérico inquilino",
+      "Leieboeren",
+      "Hyresgästen"
     ]
   },
   {
@@ -11110,6 +13103,16 @@
       "Edward G. Robinson",
       "Joan Bennett",
       "Dan Duryea"
+    ],
+    "alt_titles": [
+      "Perversidad",
+      "Der Narr und die Dirne",
+      "De verwenschte meid",
+      "Almas Perversas",
+      "Gaden med de røde lygter",
+      "Punainen katu",
+      "La rue rouge",
+      "I skylla"
     ]
   },
   {
@@ -11153,7 +13156,8 @@
       "Émilie Dequenne",
       "Olivier Gourmet",
       "Fabrizio Rongione"
-    ]
+    ],
+    "alt_titles": []
   },
   {
     "id": "1776479167803hyniby62a5h",
@@ -11195,6 +13199,14 @@
       "Monica Vitti",
       "Richard Harris",
       "Carlo Chionetti"
+    ],
+    "alt_titles": [
+      "Il deserto rosso",
+      "El desierto rojo",
+      "O Deserto Vermelho",
+      "The Red Desert",
+      "Le désert rouge",
+      "Deserto Vermelho"
     ]
   },
   {
@@ -11237,6 +13249,15 @@
       "Louise Brooks",
       "Fritz Kortner",
       "Francis Lederer"
+    ],
+    "alt_titles": [
+      "Die Büchse der Pandora",
+      "Lulu",
+      "Lulù - Il vaso di Pandora",
+      "Lulú, la caixa de Pandora",
+      "La capsa de Pandora. Variacions sobre el tema de la Lulu",
+      "Pandora'nın Kutusu",
+      "Pandoranın Qutusu"
     ]
   },
   {
@@ -11279,6 +13300,14 @@
       "Joel McCrea",
       "Fay Wray",
       "Leslie Banks"
+    ],
+    "alt_titles": [
+      "Zaroff, o Caçador de Vidas",
+      "Mänskligt villebråd",
+      "La chasse du comte Zaroff",
+      "Caccia fatale",
+      "Pericolosa partita",
+      "Ən Təhlükəli Oyun"
     ]
   },
   {
@@ -11321,6 +13350,15 @@
       "Kevin McCarthy",
       "Dana Wynter",
       "King Donovan"
+    ],
+    "alt_titles": [
+      "Walter Wagner's Invasion of the Body Snatchers",
+      "La invasión de los usurpadores de cuerpos",
+      "Ruumiinryöstäjät",
+      "They Came from Another World",
+      "The Body Snatchers",
+      "Sleep No More",
+      "Utrolige hendelser i Santa Mira"
     ]
   },
   {
@@ -11363,6 +13401,14 @@
       "Alain Delon",
       "Monica Vitti",
       "Francisco Rabal"
+    ],
+    "alt_titles": [
+      "Sonnenfinsternis",
+      "Auringonpimennys",
+      "Taiyô wa Hitoribocchi",
+      "L'eclipsi",
+      "Liebe 1962",
+      "The Eclipse"
     ]
   },
   {
@@ -11406,6 +13452,13 @@
       "Robert De Niro",
       "Christopher Walken",
       "John Cazale"
+    ],
+    "alt_titles": [
+      "The Man Who Came to Play",
+      "Vanatorul de Cerbi",
+      "Łowca Jeleni",
+      "Kauriinmetsästäjä",
+      "O Franco Atirador"
     ]
   },
   {
@@ -11448,6 +13501,16 @@
       "Deborah Kerr",
       "Sabu",
       "David Farrar"
+    ],
+    "alt_titles": [
+      "Narciso Negro",
+      "Het Huis der Vrouwen",
+      "Quando os Sinos Dobram",
+      "Narcís negre",
+      "Die schwarze Narzisse",
+      "Narciso nero",
+      "Svart narcissus",
+      "Czarny narcyz"
     ]
   },
   {
@@ -11490,6 +13553,16 @@
       "Boris Karloff",
       "Colin Clive",
       "Valerie Hobson"
+    ],
+    "alt_titles": [
+      "Frankensteins Rückkehr",
+      "Frankenstein Lives Again!",
+      "The Return of Frankenstein",
+      "La fiancée de Frankenstein",
+      "A Noiva de Frankenstein",
+      "La novia de Frankenstein",
+      "Frankenstein 2: The Bride of Frankenstein",
+      "Frankenşteynin Gəlini"
     ]
   },
   {
@@ -11532,6 +13605,16 @@
       "Dana Andrews",
       "Fredric March",
       "Harold Russell"
+    ],
+    "alt_titles": [
+      "Lo mejor de nuestra vida",
+      "Die schönsten Jahre unseres Lebens",
+      "De schoonste onzer jaren",
+      "Os Melhores Anos de Nossa Vida",
+      "Los Mejores Años De Nuestras Vidas",
+      "De bedste år",
+      "Parhaat vuodet",
+      "Ta kalytera hronia tis zois mas"
     ]
   },
   {
@@ -11575,6 +13658,13 @@
       "Juliette Binoche",
       "William Shimell",
       "Jean-Claude Carrière"
+    ],
+    "alt_titles": [
+      "Copie conforme",
+      "Möte i Toscana",
+      "Mødet i Toscana",
+      "Cópia Certificada",
+      "Aslı Gibidir"
     ]
   },
   {
@@ -11618,6 +13708,9 @@
       "Carola Höhn",
       "Else von Möllendorff",
       "Lucie Englisch"
+    ],
+    "alt_titles": [
+      "Drei tolle Mädels"
     ]
   },
   {
@@ -11661,6 +13754,16 @@
       "Ken Ogata",
       "Mayumi Ogawa",
       "Mitsuko Baisho"
+    ],
+    "alt_titles": [
+      "Enyém a bosszú",
+      "Hämnden är min",
+      "Imamura: Yön kasvot",
+      "Morder i natten",
+      "La venganza es mía",
+      "La Vengeance est à moi",
+      "Fukushû suru wa ware ni ari",
+      "Nattens ansikt"
     ]
   },
   {
@@ -11704,6 +13807,16 @@
       "Timothy Balme",
       "Diana Peñalver",
       "Elizabeth Moody"
+    ],
+    "alt_titles": [
+      "Braindead",
+      "Dead Alive",
+      "Splatters: gli schizzacervelli",
+      "Braindead (Tu madre se ha comido a mi perro)",
+      "Fome Animal",
+      "Tu madre se ha comido a mi perro",
+      "Braindead - Živí mrtví",
+      "Braindead - Der Zombie-Rasenmähermann"
     ]
   },
   {
@@ -11752,6 +13865,11 @@
       "Yoo Ah-in",
       "Steven Yeun",
       "Jeon Jong-seo"
+    ],
+    "alt_titles": [
+      "Ardiente",
+      "Em Chamas",
+      "Beoning"
     ]
   },
   {
@@ -11795,6 +13913,14 @@
       "Jiang Wu",
       "Wang Baoqiang",
       "Zhao Tao"
+    ],
+    "alt_titles": [
+      "Il tocco del peccato",
+      "Tian zhu ding",
+      "Synnin kosketus",
+      "China: um toque de pecado",
+      "Un toque de violencia",
+      "Touch of Sin, A"
     ]
   },
   {
@@ -11837,6 +13963,16 @@
       "Bembol Roco",
       "Hilda Koronel",
       "Lou Salvador Jr."
+    ],
+    "alt_titles": [
+      "Maynila sa mga Kuko ng Liwanag",
+      "The Nail of Brightness",
+      "Manila in the Claws of Neon",
+      "Maynila, sa Kuko ng Liwanag",
+      "Manila nas Garras da Luz",
+      "Manila in the Talons of Light",
+      "Maynila",
+      "Manila"
     ]
   },
   {
@@ -11884,6 +14020,16 @@
       "Woody Allen",
       "Martin Landau",
       "Mia Farrow"
+    ],
+    "alt_titles": [
+      "Crímenes y pecados",
+      "Zlociny a poklesky",
+      "Delitos y faltas",
+      "Rikoksia ja rikkomuksia",
+      "Crimes et Délits",
+      "Apisties kai amarties",
+      "Bűnök és vétkek",
+      "Crimini e misfatti"
     ]
   },
   {
@@ -11932,7 +14078,8 @@
       "Madhubala",
       "Ashok Kumar",
       "K.N. Singh"
-    ]
+    ],
+    "alt_titles": []
   },
   {
     "title": "Blow-Up",
@@ -11980,6 +14127,11 @@
       "David Hemmings",
       "Vanessa Redgrave",
       "Sarah Miles"
+    ],
+    "alt_titles": [
+      "Blow-Up - Depois Daquele Beijo",
+      "Michelangelo Antonioni's Blow-Up",
+      "A História dum Fotógrafo"
     ]
   },
   {
@@ -12023,6 +14175,16 @@
       "Irène Jacob",
       "Halina Gryglaszewska",
       "Philippe Volter"
+    ],
+    "alt_titles": [
+      "La Double Vie de Véronique",
+      "Veronique'nin Çifte Yasami",
+      "Двойная жизнь Yероники",
+      "Futari no Beronika",
+      "Podwójne życie Weroniki",
+      "La doble vida de Verònica",
+      "Die zwei Leben der Veronika",
+      "La doppia vita di Veronica"
     ]
   },
   {
@@ -12066,6 +14228,10 @@
       "Klaus Maria Brandauer",
       "Krystyna Janda",
       "Ildikó Bánsági"
+    ],
+    "alt_titles": [
+      "Mephisto",
+      "Mefisto"
     ]
   },
   {
@@ -12113,6 +14279,9 @@
       "David Birney",
       "Michele Lee",
       "John Astin"
+    ],
+    "alt_titles": [
+      "Only with Married Men"
     ]
   }
 ]
