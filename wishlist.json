@@ -18,7 +18,14 @@
     "mc_score": 49,
     "lb_score": 4.23,
     "lb": "https://boxd.it/1inI",
-    "score": 6.9
+    "score": 6.9,
+    "tmdb_id": 31767,
+    "synopsis": "In 1634 France, charismatic Father Urbain Grandier becomes the target of a sexually obsessed nun’s witchcraft accusations, which corrupt church and state officials are all too happy to exploit.​​​​​​​​​​​​​​​​",
+    "cast": [
+      "Vanessa Redgrave",
+      "Oliver Reed",
+      "Dudley Sutton"
+    ]
   },
   {
     "id": "17908511143897hy8vmsut1r",
@@ -39,7 +46,14 @@
     "mc_score": 73,
     "lb_score": 3.73,
     "lb": "https://boxd.it/23c8",
-    "score": 7.6
+    "score": 7.6,
+    "tmdb_id": 5236,
+    "synopsis": "A petty thief posing as an actor is brought to Los Angeles for an unlikely audition and finds himself in the middle of a murder investigation along with his high school dream girl and a detective who's been training him for his upcoming role...",
+    "cast": [
+      "Robert Downey Jr.",
+      "Val Kilmer",
+      "Michelle Monaghan"
+    ]
   },
   {
     "id": "1790675426073hv6vkw6v1a",
@@ -11611,7 +11625,7 @@
     "year": 1979,
     "director": "Shôhei Imamura",
     "poster": "https://image.tmdb.org/t/p/w342/7mzlay0miUkplT0EsKdR8znOVpe.jpg",
-    "imdb_id": "tt0079680",
+    "imdb_id": "tt0079182",
     "genre": "Crime, Drama, Thriller",
     "country": "Japan",
     "runtime": 140,
@@ -11619,7 +11633,6 @@
     "notes": null,
     "owned": false,
     "has4k": false,
-    "tmdb_id": 92183,
     "lb": "https://letterboxd.com/film/vengeance-is-mine/",
     "score": 8.4,
     "imdb_score": 8,
@@ -11642,11 +11655,12 @@
     "added": 1777199999187,
     "female_director": false,
     "_j": 1,
-    "synopsis": "Strategical factory should be evacuated. The movie shows how destinies of those working on the factory and their families are being broken. And yet - they have no choice, but to live.",
+    "tmdb_id": 42170,
+    "synopsis": "A thief, a murderer, and a charming lady-killer, Iwao Enokizu is on the run from the police.",
     "cast": [
-      "Lyudmila Gurchenko",
-      "Valeriya Zaklunnaya",
-      "Nikolay Kryuchkov"
+      "Ken Ogata",
+      "Mayumi Ogawa",
+      "Mitsuko Baisho"
     ]
   },
   {
