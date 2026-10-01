@@ -24,31 +24,45 @@
   const esc = s => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;")
     .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
-  /* Pure search: returns [{f, kind:'owned'|'wanted', rank}] best first. */
-  function search(q, owned, wanted) {
+  /* Pure search: returns [{f, kind:'owned'|'wanted'|'top', rank, tr}] best first.
+     `top` (optional) = [{title, year, rank, status}] e.g. the Letterboxd Top 500; matching owned /
+     wishlist films get their Top 500 rank (tr), and Top 500 films with status 'missing' are
+     returned as kind 'top'. `alias` (optional) maps a normalised Top 500 title to a collection one. */
+  const ORDER = { owned: 0, wanted: 1, top: 2 };
+  function search(q, owned, wanted, top, alias) {
     let tokens = fold(q).split(" ").filter(Boolean);
     const core = tokens.filter(t => !STOP.has(t));      // ignore leading "the", "le" ... unless that is all there is
     if (core.length) tokens = core;
     if (!tokens.length) return [];
     const whole = noArticle(q);
+    alias = alias || {};
+    const key = s => fold(s).replace(/ /g, "");
+    const topIdx = (top || []).map(t => { const k = key(t.title); return { t, k: alias[k] || k }; });
+    const topRank = f => {
+      const n = key(f.title);
+      const hit = topIdx.find(x => (x.k === n || (x.k.length >= 10 && n.indexOf(x.k) === 0)) &&
+        Math.abs((x.t.year || 0) - (f.year || 0)) <= 2);
+      return hit ? hit.t.rank : null;
+    };
     const out = [];
     const test = (f, kind) => {
-      const title = fold(f.title), tNo = noArticle(f.title);
+      const title = fold(f.title);
       const hay = " " + title + " " + (f.year || "") + " " + fold(f.director) + " ";
-      // every token must start a word (or be a substring of a word >= 3 chars) in the haystack
+      // every token must start a word (or be a substring of a longer token) in the haystack
       const ok = tokens.every(t => hay.indexOf(" " + t) > -1 || (t.length >= 4 && hay.indexOf(t) > -1));
       if (!ok) return;
+      const tNo = noArticle(f.title);
       let rank = 4;
       if (tNo === whole || title === fold(q)) rank = 0;
       else if (tNo.indexOf(whole) === 0) rank = 1;
       else if (tokens.every(t => (" " + title).indexOf(" " + t) > -1)) rank = 2;
       else if (tokens.every(t => title.indexOf(t) > -1)) rank = 3;
-      out.push({ f, kind, rank });
+      out.push({ f, kind, rank, tr: kind === "top" ? f.rank : topRank(f) });
     };
     owned.forEach(f => test(f, "owned"));
     wanted.forEach(f => test(f, "wanted"));
-    out.sort((a, b) => a.rank - b.rank || (a.kind === b.kind ? 0 : a.kind === "owned" ? -1 : 1)
-      || (b.f.year || 0) - (a.f.year || 0));
+    (top || []).filter(t => t.status === "missing").forEach(t => test(t, "top"));
+    out.sort((a, b) => a.rank - b.rank || ORDER[a.kind] - ORDER[b.kind] || (b.f.year || 0) - (a.f.year || 0));
     return out;
   }
   window.__ownSearch = { search, fold };
@@ -59,7 +73,9 @@
       if (typeof fn === "function") { try { const r = fn(); if (Array.isArray(r) && r.length) return r; } catch (e) {} }
       try { const r = await fetch(url + "?v=" + Date.now()); return r.ok ? await r.json() : []; } catch (e) { return []; }
     };
-    return { owned: await get(A.getOwned, "collection.json"), wanted: await get(A.getWanted, "wishlist.json") };
+    let top = [];
+    try { top = typeof A.getTop500 === "function" ? A.getTop500() : []; } catch (e) {}
+    return { owned: await get(A.getOwned, "collection.json"), wanted: await get(A.getWanted, "wishlist.json"), top };
   }
 
   /* ---------- UI ---------- */
@@ -78,7 +94,7 @@
 .ownRow img,.ownRow .ph{width:34px;height:51px;border-radius:4px;object-fit:cover;background:var(--surf3,#2a2a2a);flex:0 0 34px}
 .ownT{font-size:14px;font-weight:600}.ownM{font-size:12px;color:var(--mut,#999);margin-top:2px}
 .ownB{display:inline-block;font-size:11px;font-weight:700;border-radius:10px;padding:2px 8px;margin-top:4px}
-.ownB.o{background:rgba(120,200,120,.18);color:#8fd48f}.ownB.w{background:rgba(232,185,79,.16);color:var(--acc,#e8b94f)}
+.ownB.o{background:rgba(120,200,120,.18);color:#8fd48f}.ownB.t{background:rgba(120,160,230,.16);color:#8fb4ee}.ownB.w{background:rgba(232,185,79,.16);color:var(--acc,#e8b94f)}
 .ownNone{padding:18px 6px;font-size:14px;color:var(--mut,#999);text-align:center}
 .ownNone b{display:block;color:var(--txt,#efefef);font-size:15px;margin-bottom:4px}
 .ownHint{font-size:11px;color:var(--mut2,#666);margin-top:8px;text-align:center}`;
@@ -88,7 +104,7 @@
   fab.id = "ownFab"; fab.type = "button"; fab.textContent = "🔍 Own it?"; fab.setAttribute("aria-label", "Check whether you own a film");
   const ov = document.createElement("div");
   ov.id = "ownOv"; ov.setAttribute("role", "dialog"); ov.setAttribute("aria-modal", "true"); ov.setAttribute("aria-label", "Do I own it?");
-  ov.innerHTML = '<div id="ownBox"><input id="ownIn" type="search" placeholder="Title, year or director…" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Search title"><div id="ownRes" aria-live="polite"></div><div class="ownHint">Searches your collection and wishlist · Esc to close</div></div>';
+  ov.innerHTML = '<div id="ownBox"><input id="ownIn" type="search" placeholder="Title, year or director…" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Search title"><div id="ownRes" aria-live="polite"></div><div class="ownHint">Searches your collection and wishlist' + (typeof A.getTop500 === 'function' ? ' and the Top 500' : '') + ' · Esc to close</div></div>';
   document.body.appendChild(fab); document.body.appendChild(ov);
   const inp = ov.querySelector("#ownIn"), res = ov.querySelector("#ownRes");
   let shown = [];
@@ -98,13 +114,16 @@
   }
   function badge(r) {
     const f = r.f;
+    const tr = r.tr ? " · Top 500 #" + r.tr : "";
+    if (r.kind === "top") return '<span class="ownB t">☆ Top 500 #' + esc(f.rank) + " · not in collection or wishlist</span>";
     if (r.kind === "owned") {
       const bits = [f.format, f.distributor, f.spine ? "#" + f.spine : ""].filter(Boolean).map(esc).join(" · ");
-      return '<span class="ownB o">✓ Owned' + (bits ? " · " + bits : "") + "</span>";
+      return '<span class="ownB o">✓ Owned' + (bits ? " · " + bits : "") + tr + "</span>";
     }
     const bits = [f.priority, f.has4k ? "4K" : ""].filter(Boolean).map(esc).join(" · ");
-    return '<span class="ownB w">★ Wishlist' + (bits ? " · " + bits : "") + "</span>";
+    return '<span class="ownB w">★ Wishlist' + (bits ? " · " + bits : "") + tr + "</span>";
   }
+  const tapFor = r => (r.kind === "owned" ? A.openOwned : r.kind === "wanted" ? A.openWanted : A.openTop);
   function draw(list, q) {
     shown = list.slice(0, 12);
     if (!q.trim()) { res.innerHTML = ""; return; }
@@ -113,7 +132,7 @@
       return;
     }
     res.innerHTML = shown.map((r, i) => {
-      const tap = r.kind === "owned" ? A.openOwned : A.openWanted;
+      const tap = tapFor(r);
       const img = r.f.poster ? '<img src="' + esc(r.f.poster) + '" alt="" loading="lazy">' : '<div class="ph"></div>';
       return '<button type="button" class="ownRow' + (tap ? " tap" : "") + '" data-i="' + i + '">' + img +
         '<div><div class="ownT">' + esc(r.f.title) + "</div><div class=\"ownM\">" + meta(r.f) + "</div>" + badge(r) + "</div></button>";
@@ -122,7 +141,7 @@
   async function run() {
     const q = inp.value;
     if (!cache) cache = await load();
-    draw(search(q, cache.owned, cache.wanted), q);
+    draw(search(q, cache.owned, cache.wanted, cache.top, A.alias), q);
   }
   function open() {
     ov.classList.add("open"); inp.value = ""; res.innerHTML = ""; inp.focus();
@@ -135,7 +154,7 @@
   inp.addEventListener("input", run);
   res.addEventListener("click", e => {
     const row = e.target.closest(".ownRow"); if (!row) return;
-    const r = shown[+row.dataset.i]; const fn = r.kind === "owned" ? A.openOwned : A.openWanted;
+    const r = shown[+row.dataset.i]; const fn = tapFor(r);
     if (fn) { close(); fn(r.f); }
   });
   document.addEventListener("keydown", e => {
