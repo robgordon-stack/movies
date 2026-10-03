@@ -176,17 +176,22 @@
   }
 
   @media (max-width: 600px) {
-    .header { padding: 1.5rem 1rem 1rem; }
+    .header { padding: calc(1.5rem + env(safe-area-inset-top, 0px)) 1rem 1rem; }
     .film-list { padding: 0 0 4rem; }
     .count-display { padding: 1rem 1rem 0.5rem; }
     .stats { gap: 1.2rem; }
     .stat-num { font-size: 1.6rem; }
   }
+.top-row{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:1rem;flex-wrap:wrap}
+.back{font-size:11px;color:var(--text-dim);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;display:inline-block;padding:10px 0}
+.back:hover{color:var(--text)}
+.back:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 </style>
 </head>
 <body>
 
 <div class="header">
+  <div class="top-row"><a class="back" href="index.html">← The Archive</a></div>
   <div class="header-top">
     <h1>Letterboxd Top 500<br><em>vs your collection</em></h1>
     <span class="last-updated">Updated July 2026</span>
