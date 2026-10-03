@@ -402,6 +402,7 @@
 
 <div class="page" id="page-lb500">
 <div class="header">
+  <button type="button" class="lb-back" onclick="switchTab('collection')" aria-label="Back to The Archive">← The Archive</button>
   <div class="header-top">
     <h1>Letterboxd Top 500<br><em>vs your collection</em></h1>
     <span class="last-updated">Updated July 2026</span>
@@ -1524,6 +1525,7 @@ window.OWN_ADAPTER={getOwned:function(){return typeof C!=='undefined'?C:[]},open
 </script>
 <script src="ownsearch.js"></script>
 <style>
+#page-lb500 .header{padding-top:calc(1rem + env(safe-area-inset-top,0px)) !important}#page-lb500 .lb-back{display:inline-block;background:none;border:0;padding:10px 0;margin-bottom:.5rem;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--lb-text-dim,#999);cursor:pointer}#page-lb500 .lb-back:hover{color:var(--lb-text,#efefef)}
 #listsMenu{display:none;position:fixed;z-index:500;min-width:236px;max-width:calc(100vw - 16px);box-sizing:border-box;background:var(--surf,#171717);border:1px solid var(--bdr2,rgba(255,255,255,.12));border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.6);padding:6px;font-family:'DM Sans',sans-serif}
 #listsMenu .lm-h{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mut,#999);padding:6px 10px 4px}
 #listsMenu .lm-i{display:flex;flex-direction:column;align-items:flex-start;gap:1px;width:100%;background:none;border:0;border-radius:8px;padding:9px 10px;color:var(--txt,#efefef);text-align:left;cursor:pointer;font:inherit}
