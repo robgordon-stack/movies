@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="S&amp;S 250">
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0d0d0d"><link rel="apple-touch-icon" href="icon-192.png">
+<title>Sight &amp; Sound Greatest Films — Collection Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0e0e;
+    --surface: #161616;
+    --surface2: #1e1e1e;
+    --border: #2a2a2a;
+    --owned: #c8f0a0;
+    --owned-dim: rgba(200,240,160,0.12);
+    --owned-mid: rgba(200,240,160,0.35);
+    --wishlist: #f0d080;
+    --wishlist-dim: rgba(240,208,128,0.12);
+    --wishlist-mid: rgba(240,208,128,0.35);
+    --missing: #e05555;
+    --missing-dim: rgba(224,85,85,0.1);
+    --missing-mid: rgba(224,85,85,0.3);
+    --text: #e8e4dc;
+    --text-dim: #888;
+    --text-faint: #444;
+    --accent: #c8f0a0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: var(--bg); color: var(--text); font-family: 'DM Mono', monospace; }
+  body { min-height: 100vh; padding-bottom: env(safe-area-inset-bottom, 0px); }
+
+  /* HEADER */
+  .header {
+    padding: calc(3rem + env(safe-area-inset-top, 0px)) 2rem 2rem;
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(14,14,14,0.96);
+    backdrop-filter: blur(12px);
+  }
+  .header-top {
+    display: flex; align-items: baseline; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;
+  }
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    line-height: 1; letter-spacing: -0.02em;
+    color: var(--text);
+  }
+  h1 em { color: var(--accent); font-style: italic; }
+  .last-updated { font-size: 11px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* STATS BAR */
+  .stats {
+    display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem;
+  }
+  .stat { display: flex; flex-direction: column; gap: 2px; }
+  .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem; line-height: 1;
+  }
+  .stat-num.owned { color: var(--owned); }
+  .stat-num.wishlist { color: var(--wishlist); }
+  .stat-num.missing { color: var(--missing); }
+  .stat-label { font-size: 11px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* PROGRESS BAR */
+  .progress-wrap { margin-bottom: 1.5rem; }
+  .progress-bar {
+    height: 4px; background: var(--border); border-radius: 2px; overflow: hidden;
+    display: flex;
+  }
+  .progress-seg { height: 100%; transition: width 0.5s ease; }
+  .progress-seg.owned { background: var(--owned); }
+  .progress-seg.wishlist { background: var(--wishlist); }
+  .progress-seg.missing { background: var(--border); }
+
+  /* CONTROLS */
+  .controls {
+    display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;
+  }
+  .filter-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 2px;
+    border: 1px solid var(--border);
+    background: transparent; color: var(--text-dim);
+    cursor: pointer; transition: all 0.15s;
+  }
+  .filter-btn:hover { border-color: var(--text-dim); color: var(--text); }
+  .filter-btn.active-all { border-color: var(--text); color: var(--text); background: var(--surface2); }
+  .filter-btn.active-owned { border-color: var(--owned); color: var(--owned); background: var(--owned-dim); }
+  .filter-btn.active-wishlist { border-color: var(--wishlist); color: var(--wishlist); background: var(--wishlist-dim); }
+  .filter-btn.active-missing { border-color: var(--missing); color: var(--missing); background: var(--missing-dim); }
+
+  .search-wrap { margin-left: auto; position: relative; }
+  .search-input {
+    font-family: 'DM Mono', monospace; font-size: 12px;
+    background: var(--surface2); border: 1px solid var(--border);
+    color: var(--text); padding: 5px 12px 5px 30px;
+    border-radius: 2px; width: 200px; outline: none;
+    transition: border-color 0.15s;
+  }
+  .search-input:focus { border-color: var(--text-dim); }
+  .search-icon { position: absolute; left: 9px; top: 50%; transform: translateY(-50%); color: var(--text-dim); font-size: 12px; pointer-events: none; }
+
+  /* SORT */
+  .sort-wrap { display: flex; gap: 4px; margin-left: 8px; }
+  .sort-btn {
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 5px 10px; border-radius: 2px;
+    border: 1px solid var(--border);
+    background: transparent; color: var(--text-faint);
+    cursor: pointer; transition: all 0.15s;
+  }
+  .sort-btn.active { border-color: var(--text-dim); color: var(--text-dim); }
+
+  /* LIST */
+  .film-list {
+    padding: 0 2rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
+    gap: 1px;
+  }
+
+  .film-item {
+    display: flex; align-items: center; gap: 1rem;
+    padding: 0.6rem 1rem 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.1s;
+    cursor: default;
+  }
+  .film-item:hover { background: var(--surface); }
+  .film-item.status-owned { border-left: 2px solid var(--owned); padding-left: calc(1rem - 2px); }
+  .film-item.status-wishlist { border-left: 2px solid var(--wishlist); padding-left: calc(1rem - 2px); }
+  .film-item.status-missing { border-left: 2px solid var(--text-faint); padding-left: calc(1rem - 2px); }
+
+  .rank {
+    font-size: 11px; color: var(--text-faint);
+    width: 32px; text-align: right; flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+  .film-info { flex: 1; min-width: 0; }
+  .film-title {
+    font-size: 13px; color: var(--text);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    line-height: 1.3;
+  }
+  .film-title.faded { color: var(--text-dim); }
+  .film-year { font-size: 10px; color: var(--text-faint); margin-top: 1px; }
+  .status-pill {
+    font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 2px 7px; border-radius: 1px; flex-shrink: 0;
+    font-weight: 500;
+  }
+  .pill-owned { background: var(--owned-dim); color: var(--owned); border: 1px solid var(--owned-mid); }
+  .pill-wishlist { background: var(--wishlist-dim); color: var(--wishlist); border: 1px solid var(--wishlist-mid); }
+  .pill-missing { background: transparent; color: var(--text-faint); border: 1px solid var(--border); }
+
+  /* EMPTY STATE */
+  .empty { padding: 4rem 2rem; text-align: center; color: var(--text-dim); font-size: 13px; }
+
+  /* COUNT DISPLAY */
+  .count-display {
+    font-size: 11px; color: var(--text-dim); padding: 1rem 2rem 0.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 600px) {
+    .header { padding: 1.5rem 1rem 1rem; }
+    .film-list { padding: 0 0 4rem; }
+    .count-display { padding: 1rem 1rem 0.5rem; }
+    .stats { gap: 1.2rem; }
+    .stat-num { font-size: 1.6rem; }
+  }
+.top-row{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:1rem;flex-wrap:wrap}
+.back{font-size:11px;color:var(--text-dim);text-decoration:none;letter-spacing:.08em;text-transform:uppercase}
+.back:hover{color:var(--text)}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:2px;overflow:hidden}
+.seg button{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:6px 16px;background:transparent;color:var(--text-dim);border:0;cursor:pointer}
+.seg button+button{border-left:1px solid var(--border)}
+.seg button.on{background:var(--surface2);color:var(--accent)}
+.seg button:focus-visible,.back:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="top-row">
+    <a class="back" href="index.html">← The Archive</a>
+    <div class="seg" role="tablist" aria-label="Which poll">
+      <button id="seg-critics" role="tab" onclick="setList('critics')">Critics</button>
+      <button id="seg-directors" role="tab" onclick="setList('directors')">Directors</button>
+    </div>
+  </div>
+  <div class="header-top">
+    <h1><span id="list-title">Sight &amp; Sound Critics’ Poll</span><br><em>vs your collection</em></h1>
+    <span class="last-updated" id="list-sub">2022 · 1,639 critics · BFI</span>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-num owned" id="count-owned">0</span>
+      <span class="stat-label">Owned</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num wishlist" id="count-wishlist">0</span>
+      <span class="stat-label">Wishlist</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num missing" id="count-missing">0</span>
+      <span class="stat-label">Missing</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" id="count-pct" style="color:var(--text)">0%</span>
+      <span class="stat-label">Coverage</span>
+    </div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-bar">
+      <div class="progress-seg owned" id="prog-owned" style="width:0%"></div>
+      <div class="progress-seg wishlist" id="prog-wishlist" style="width:0%"></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="filter-btn active-all" data-filter="all" onclick="setFilter('all')" id="btn-all">All 264</button>
+    <button class="filter-btn" data-filter="owned" onclick="setFilter('owned')">Owned</button>
+    <button class="filter-btn" data-filter="wishlist" onclick="setFilter('wishlist')">Wishlist</button>
+    <button class="filter-btn" data-filter="missing" onclick="setFilter('missing')">Missing</button>
+
+    <div class="sort-wrap">
+      <button class="sort-btn active" id="sort-rank" onclick="setSort('rank')">Rank</button>
+      <button class="sort-btn" id="sort-year" onclick="setSort('year')">Year</button>
+      <button class="sort-btn" id="sort-title" onclick="setSort('title')">Title</button>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input class="search-input" type="text" placeholder="Search..." id="search-input" oninput="onSearch()" />
+    </div>
+  </div>
+</div>
+
+<div class="count-display" id="count-display"></div>
+<div class="film-list" id="film-list"></div>
+
+<script>
+const LISTS = {
+  critics:{films:[{"r":243,"t":"Born in Flames","y":1983,"d":"Lizzie Borden","s":"missing","e":1},{"r":243,"t":"Pandora's Box","y":1928,"d":"G.W. Pabst","s":"wishlist","e":1},{"r":243,"t":"Sullivan's Travels","y":1941,"d":"Preston Sturges","s":"owned","e":1},{"r":243,"t":"Annie Hall","y":1977,"d":"Woody Allen","s":"missing","e":1},{"r":243,"t":"Earth","y":1930,"d":"Alexander Dovzhenko","s":"missing","e":1},{"r":243,"t":"My Darling Clementine","y":1946,"d":"John Ford","s":"missing","e":1},{"r":243,"t":"Mouchette","y":1966,"d":"Robert Bresson","s":"owned","e":1},{"r":243,"t":"A Clockwork Orange","y":1971,"d":"Stanley Kubrick","s":"owned","e":1},{"r":243,"t":"A Canterbury Tale","y":1944,"d":"Michael Powell & Emeric Pressburger","s":"missing","e":1},{"r":243,"t":"Videodrome","y":1983,"d":"David Cronenberg","s":"owned","e":1},{"r":243,"t":"Possession","y":1981,"d":"Andrzej Zulawski","s":"owned","e":1},{"r":243,"t":"Soleil Ô","y":1970,"d":"Med Hondo","s":"missing","e":1},{"r":243,"t":"Distant Voices, Still Lives","y":1988,"d":"Terence Davies","s":"missing","e":1},{"r":243,"t":"Nostalgia for the Light","y":2010,"d":"Patricio Guzmán","s":"missing","e":1},{"r":243,"t":"Syndromes and a Century","y":2006,"d":"Apichatpong Weerasethakul","s":"missing","e":1},{"r":243,"t":"The Intruder","y":2004,"d":"Claire Denis","s":"missing","e":1},{"r":243,"t":"Morvern Callar","y":2001,"d":"Lynne Ramsay","s":"owned","e":1},{"r":243,"t":"In Vanda's Room","y":2000,"d":"Pedro Costa","s":"missing","e":1},{"r":243,"t":"Werckmeister Harmonies","y":2000,"d":"Béla Tarr","s":"wishlist","e":1},{"r":243,"t":"Taste of Cherry","y":1997,"d":"Abbas Kiarostami","s":"owned","e":1},{"r":243,"t":"The Quince Tree Sun","y":1992,"d":"Víctor Erice","s":"missing","e":1},{"r":243,"t":"The Last Laugh","y":1924,"d":"F.W. Murnau","s":"missing","e":1},{"r":225,"t":"Harlan County, USA","y":1976,"d":"Barbara Kopple","s":"owned","e":1},{"r":225,"t":"Cries and Whispers","y":1972,"d":"Ingmar Bergman","s":"owned","e":1},{"r":225,"t":"Star Wars","y":1977,"d":"George Lucas","s":"owned","e":1},{"r":225,"t":"Intolerance","y":1916,"d":"D.W. Griffith","s":"missing","e":1},{"r":225,"t":"The Hour of the Furnaces","y":1968,"d":"Fernando Solanas","s":"missing","e":1},{"r":225,"t":"Europa '51","y":1952,"d":"Roberto Rossellini","s":"missing","e":1},{"r":225,"t":"Napoléon","y":1927,"d":"Abel Gance","s":"missing","e":1},{"r":225,"t":"The Crowd","y":1928,"d":"King Vidor","s":"missing","e":1},{"r":225,"t":"A Touch of Zen","y":1969,"d":"King Hu","s":"wishlist","e":1},{"r":225,"t":"Je, tu, il, elle","y":1974,"d":"Chantal Akerman","s":"missing","e":1},{"r":225,"t":"Petite maman","y":2021,"d":"Céline Sciamma","s":"missing","e":1},{"r":225,"t":"As I Was Moving Ahead, Occasionally I Saw Brief Glimpses of Beauty","y":2000,"d":"Jonas Mekas","s":"missing","e":1},{"r":225,"t":"Flowers of Shanghai","y":1998,"d":"Hou Hsiao-Hsien","s":"owned","e":1},{"r":225,"t":"Happy Together","y":1997,"d":"Wong Kar Wai","s":"owned","e":1},{"r":225,"t":"Crash","y":1996,"d":"David Cronenberg","s":"missing","e":1},{"r":225,"t":"Blue","y":1993,"d":"Derek Jarman","s":"missing","e":1},{"r":225,"t":"Grave of the Fireflies","y":1988,"d":"Isao Takahata","s":"wishlist","e":1},{"r":225,"t":"The Green Ray","y":1986,"d":"Eric Rohmer","s":"missing","e":1},{"r":211,"t":"By the Bluest of Seas","y":1935,"d":"Boris Barnet","s":"missing","e":1},{"r":211,"t":"Duck Soup","y":1933,"d":"Leo McCarey","s":"owned","e":1},{"r":211,"t":"All about Eve","y":1950,"d":"Joseph L. Mankiewicz","s":"wishlist","e":1},{"r":211,"t":"Brief Encounter","y":1945,"d":"David Lean","s":"wishlist","e":1},{"r":211,"t":"Suspiria","y":1977,"d":"Dario Argento","s":"owned","e":1},{"r":211,"t":"In a Lonely Place","y":1950,"d":"Nicholas Ray","s":"wishlist","e":1},{"r":211,"t":"The Deer Hunter","y":1978,"d":"Michael Cimino","s":"wishlist","e":1},{"r":211,"t":"Army of Shadows","y":1969,"d":"Jean-Pierre Melville","s":"wishlist","e":1},{"r":211,"t":"Melancholia","y":2011,"d":"Lars von Trier","s":"missing","e":1},{"r":211,"t":"Twenty Years Later","y":1984,"d":"Eduardo Coutinho","s":"missing","e":1},{"r":211,"t":"Twin Peaks: Fire Walk with Me","y":1992,"d":"David Lynch","s":"wishlist","e":1},{"r":211,"t":"Pink Flamingos","y":1972,"d":"John Waters","s":"missing","e":1},{"r":211,"t":"Raiders of the Lost Ark","y":1981,"d":"Steven Spielberg","s":"wishlist","e":1},{"r":211,"t":"Limite","y":1931,"d":"Mário Peixoto","s":"missing","e":1},{"r":196,"t":"The Life and Death of Colonel Blimp","y":1943,"d":"Michael Powell & Emeric Pressburger","s":"owned","e":1},{"r":196,"t":"Wavelength","y":1967,"d":"Michael Snow","s":"missing","e":1},{"r":196,"t":"I Know Where I'm Going!","y":1945,"d":"Michael Powell & Emeric Pressburger","s":"missing","e":1},{"r":196,"t":"L'eclisse","y":1962,"d":"Michelangelo Antonioni","s":"wishlist","e":1},{"r":196,"t":"Double Indemnity","y":1944,"d":"Billy Wilder","s":"owned","e":1},{"r":196,"t":"Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb","y":1963,"d":"Stanley Kubrick","s":"owned","e":1},{"r":196,"t":"One Way or Another","y":1977,"d":"Sara Gómez","s":"missing","e":1},{"r":196,"t":"Nosferatu","y":1922,"d":"F.W. Murnau","s":"wishlist","e":1},{"r":196,"t":"Paisan","y":1946,"d":"Roberto Rossellini","s":"owned","e":1},{"r":196,"t":"Zama","y":2017,"d":"Lucrecia Martel","s":"missing","e":1},{"r":196,"t":"Mad Max: Fury Road","y":2015,"d":"George Miller","s":"owned","e":1},{"r":196,"t":"The Tree of Life","y":2010,"d":"Terrence Malick","s":"wishlist","e":1},{"r":196,"t":"Uncle Boonmee Who Can Recall His Past Lives","y":2010,"d":"Apichatpong Weerasethakul","s":"wishlist","e":1},{"r":196,"t":"The Headless Woman","y":2008,"d":"Lucrecia Martel","s":"missing","e":1},{"r":196,"t":"Paris Is Burning","y":1990,"d":"Jennie Livingston","s":"missing","e":1},{"r":185,"t":"Paris, Texas","y":1984,"d":"Wim Wenders","s":"owned","e":1},{"r":185,"t":"Les Demoiselles de Rochefort","y":1967,"d":"Jacques Demy","s":"owned","e":1},{"r":185,"t":"The Birds","y":1963,"d":"Alfred Hitchcock","s":"owned","e":1},{"r":185,"t":"The River","y":1951,"d":"Jean Renoir","s":"owned","e":1},{"r":185,"t":"An Autumn Afternoon","y":1962,"d":"Yasujirō Ozu","s":"owned","e":1},{"r":185,"t":"Love Streams","y":1984,"d":"John Cassavetes","s":"wishlist","e":1},{"r":185,"t":"Greed","y":1923,"d":"Erich von Stroheim","s":"missing","e":1},{"r":185,"t":"Ran","y":1985,"d":"Akira Kurosawa","s":"owned","e":1},{"r":185,"t":"Pyaasa","y":1957,"d":"Guru Dutt","s":"missing","e":1},{"r":185,"t":"Wings of Desire","y":1987,"d":"Wim Wenders","s":"owned","e":1},{"r":185,"t":"Magnolia","y":1999,"d":"Paul Thomas Anderson","s":"wishlist","e":1},{"r":169,"t":"The Magnificent Ambersons","y":1942,"d":"Orson Welles","s":"owned","e":1},{"r":169,"t":"Hiroshima mon amour","y":1959,"d":"Alain Resnais","s":"wishlist","e":1},{"r":169,"t":"Letter from an Unknown Woman","y":1948,"d":"Max Ophuls","s":"missing","e":1},{"r":169,"t":"Charulata","y":1964,"d":"Satyajit Ray","s":"wishlist","e":1},{"r":169,"t":"The Good, the Bad and the Ugly","y":1966,"d":"Sergio Leone","s":"owned","e":1},{"r":169,"t":"Red Desert","y":1964,"d":"Michelangelo Antonioni","s":"wishlist","e":1},{"r":169,"t":"Black Narcissus","y":1947,"d":"Michael Powell & Emeric Pressburger","s":"wishlist","e":1},{"r":169,"t":"Memories of Underdevelopment","y":1968,"d":"Tomás Gutiérrez Alea","s":"missing","e":1},{"r":169,"t":"The Exterminating Angel","y":1962,"d":"Luis Buñuel","s":"owned","e":1},{"r":169,"t":"Under the Skin","y":2013,"d":"Jonathan Glazer","s":"owned","e":1},{"r":169,"t":"Heat","y":1995,"d":"Michael Mann","s":"owned","e":1},{"r":169,"t":"Symbiopsychotaxiplasm: Take One","y":1967,"d":"William Greaves","s":"missing","e":1},{"r":169,"t":"Out 1","y":1990,"d":"Jacques Rivette","s":"missing","e":1},{"r":169,"t":"Un chien andalou","y":1928,"d":"Luis Buñuel","s":"missing","e":1},{"r":169,"t":"L'Argent","y":1983,"d":"Robert Bresson","s":"wishlist","e":1},{"r":169,"t":"Last Year at Marienbad","y":1961,"d":"Alain Resnais","s":"owned","e":1},{"r":157,"t":"Los olvidados","y":1950,"d":"Luis Buñuel","s":"missing","e":1},{"r":157,"t":"Ikiru","y":1952,"d":"Akira Kurosawa","s":"owned","e":1},{"r":157,"t":"Out of the Past","y":1947,"d":"Jacques Tourneur","s":"missing","e":1},{"r":157,"t":"Vivre sa vie","y":1962,"d":"Jean-Luc Godard","s":"wishlist","e":1},{"r":157,"t":"Amarcord","y":1972,"d":"Federico Fellini","s":"owned","e":1},{"r":157,"t":"Once upon a Time in America","y":1983,"d":"Sergio Leone","s":"wishlist","e":1},{"r":157,"t":"The Gospel According to St. Matthew","y":1964,"d":"Pier Paolo Pasolini","s":"wishlist","e":1},{"r":157,"t":"Where Is the Friend's House?","y":1987,"d":"Abbas Kiarostami","s":"owned","e":1},{"r":157,"t":"All about My Mother","y":1999,"d":"Pedro Almodóvar","s":"wishlist","e":1},{"r":157,"t":"A City of Sadness","y":1989,"d":"Hou Hsiao-Hsien","s":"wishlist","e":1},{"r":157,"t":"Orlando","y":1992,"d":"Sally Potter","s":"missing","e":1},{"r":157,"t":"West of the Tracks","y":2002,"d":"Wang Bing","s":"missing","e":1},{"r":152,"t":"Le Bonheur","y":1965,"d":"Agnès Varda","s":"missing","e":1},{"r":152,"t":"Meghe Dhaka Tara","y":1960,"d":"Ritwik Ghatak","s":"missing","e":1},{"r":152,"t":"Days of Heaven","y":1978,"d":"Terrence Malick","s":"owned","e":1},{"r":152,"t":"West Indies: The Fugitive Slaves of Liberty","y":1979,"d":"Med Hondo","s":"missing","e":1},{"r":152,"t":"Twin Peaks: The Return","y":2017,"d":"David Lynch","s":"missing","e":1},{"r":146,"t":"Chinatown","y":1974,"d":"Roman Polanski","s":"owned","e":1},{"r":146,"t":"La Grande Illusion","y":1937,"d":"Jean Renoir","s":"wishlist","e":1},{"r":146,"t":"India Song","y":1975,"d":"Marguerite Duras","s":"missing","e":1},{"r":146,"t":"Alien","y":1979,"d":"Ridley Scott","s":"owned","e":1},{"r":146,"t":"Vampyr","y":1932,"d":"Carl Th. Dreyer","s":"owned","e":1},{"r":146,"t":"The Watermelon Woman","y":1997,"d":"Cheryl Dunye","s":"missing","e":1},{"r":136,"t":"Gertrud","y":1964,"d":"Carl Th. Dreyer","s":"missing","e":1},{"r":136,"t":"All That Heaven Allows","y":1955,"d":"Douglas Sirk","s":"missing","e":1},{"r":136,"t":"Partie de campagne","y":1936,"d":"Jean Renoir","s":"missing","e":1},{"r":136,"t":"Pickpocket","y":1959,"d":"Robert Bresson","s":"owned","e":1},{"r":136,"t":"The Seventh Seal","y":1957,"d":"Ingmar Bergman","s":"owned","e":1},{"r":136,"t":"Trouble in Paradise","y":1932,"d":"Ernst Lubitsch","s":"missing","e":1},{"r":136,"t":"Sambizanga","y":1972,"d":"Sarah Maldoror","s":"missing","e":1},{"r":136,"t":"The Wild Bunch","y":1969,"d":"Sam Peckinpah","s":"wishlist","e":1},{"r":136,"t":"Les Enfants du paradis","y":1945,"d":"Marcel Carné","s":"wishlist","e":1},{"r":136,"t":"La ciénaga","y":2001,"d":"Lucrecia Martel","s":"missing","e":1},{"r":133,"t":"It's a Wonderful Life","y":1947,"d":"Frank Capra","s":"owned","e":1},{"r":133,"t":"Notorious","y":1946,"d":"Alfred Hitchcock","s":"owned","e":1},{"r":133,"t":"Lawrence of Arabia","y":1962,"d":"David Lean","s":"owned","e":1},{"r":129,"t":"Pulp Fiction","y":1994,"d":"Quentin Tarantino","s":"owned","e":1},{"r":129,"t":"Raging Bull","y":1980,"d":"Martin Scorsese","s":"owned","e":1},{"r":129,"t":"His Girl Friday","y":1939,"d":"Howard Hawks","s":"owned","e":1},{"r":129,"t":"Fanny and Alexander","y":1982,"d":"Ingmar Bergman","s":"owned","e":1},{"r":128,"t":"The Ascent","y":1976,"d":"Larissa Shepitko","s":"owned"},{"r":122,"t":"Only Angels Have Wings","y":1939,"d":"Howard Hawks","s":"owned","e":1},{"r":122,"t":"The Umbrellas of Cherbourg","y":1964,"d":"Jacques Demy","s":"owned","e":1},{"r":122,"t":"Johnny Guitar","y":1954,"d":"Nicholas Ray","s":"owned","e":1},{"r":122,"t":"The Colour of Pomegranates","y":1968,"d":"Sergei Paradjanov","s":"wishlist","e":1},{"r":122,"t":"The Matrix","y":1999,"d":"The Wachowskis","s":"owned","e":1},{"r":122,"t":"There Will Be Blood","y":2007,"d":"Paul Thomas Anderson","s":"wishlist","e":1},{"r":118,"t":"The Thing","y":1982,"d":"John Carpenter","s":"owned","e":1},{"r":118,"t":"The Texas Chain Saw Massacre","y":1974,"d":"Tobe Hooper","s":"owned","e":1},{"r":118,"t":"The Conformist","y":1970,"d":"Bernardo Bertolucci","s":"wishlist","e":1},{"r":118,"t":"Aguirre, Wrath of God","y":1972,"d":"Werner Herzog","s":"owned","e":1},{"r":114,"t":"Don't Look Now","y":1973,"d":"Nicolas Roeg","s":"owned","e":1},{"r":114,"t":"Nashville","y":1975,"d":"Robert Altman","s":"owned","e":1},{"r":114,"t":"A Woman under the Influence","y":1974,"d":"John Cassavetes","s":"owned","e":1},{"r":114,"t":"To Be or Not to Be","y":1942,"d":"Ernst Lubitsch","s":"wishlist","e":1},{"r":108,"t":"Bringing Up Baby","y":1938,"d":"Howard Hawks","s":"wishlist","e":1},{"r":108,"t":"The Man Who Shot Liberty Valance","y":1962,"d":"John Ford","s":"owned","e":1},{"r":108,"t":"Touch of Evil","y":1958,"d":"Orson Welles","s":"owned","e":1},{"r":108,"t":"Wild Strawberries","y":1957,"d":"Ingmar Bergman","s":"owned","e":1},{"r":108,"t":"The Wizard of Oz","y":1939,"d":"Victor Fleming","s":"owned","e":1},{"r":108,"t":"Goodbye, Dragon Inn","y":2003,"d":"Tsai Ming-liang","s":"missing","e":1},{"r":104,"t":"The Godfather Part II","y":1974,"d":"Francis Ford Coppola","s":"owned","e":1},{"r":104,"t":"Jaws","y":1975,"d":"Steven Spielberg","s":"owned","e":1},{"r":104,"t":"Come and See","y":1985,"d":"Elem Klimov","s":"owned","e":1},{"r":104,"t":"La Maman et la Putain","y":1973,"d":"Jean Eustache","s":"owned","e":1},{"r":101,"t":"Vagabond","y":1985,"d":"Agnès Varda","s":"wishlist","e":1},{"r":101,"t":"The House Is Black","y":1962,"d":"Forough Farokhzad","s":"missing","e":1},{"r":101,"t":"Rio Bravo","y":1958,"d":"Howard Hawks","s":"owned","e":1},{"r":95,"t":"Once upon a Time in the West","y":1968,"d":"Sergio Leone","s":"owned","e":1},{"r":95,"t":"A Man Escaped","y":1956,"d":"Robert Bresson","s":"wishlist","e":1},{"r":95,"t":"The General","y":1926,"d":"Buster Keaton & Clyde Bruckman","s":"owned","e":1},{"r":95,"t":"Black Girl","y":1965,"d":"Ousmane Sembène","s":"owned","e":1},{"r":95,"t":"Tropical Malady","y":2004,"d":"Apichatpong Weerasethakul","s":"wishlist","e":1},{"r":95,"t":"Get Out","y":2017,"d":"Jordan Peele","s":"owned","e":1},{"r":90,"t":"Parasite","y":2019,"d":"Bong Joon-ho","s":"owned","e":1},{"r":90,"t":"Yi Yi","y":1999,"d":"Edward Yang","s":"owned","e":1},{"r":90,"t":"Ugetsu Monogatari","y":1953,"d":"Kenji Mizoguchi","s":"owned","e":1},{"r":90,"t":"The Leopard","y":1962,"d":"Luchino Visconti","s":"owned","e":1},{"r":90,"t":"Madame de...","y":1953,"d":"Max Ophuls","s":"owned","e":1},{"r":88,"t":"The Shining","y":1980,"d":"Stanley Kubrick","s":"owned","e":1},{"r":88,"t":"Chungking Express","y":1994,"d":"Wong Kar Wai","s":"owned","e":1},{"r":85,"t":"Blue Velvet","y":1986,"d":"David Lynch","s":"owned","e":1},{"r":85,"t":"The Spirit of the Beehive","y":1973,"d":"Víctor Erice","s":"wishlist","e":1},{"r":85,"t":"Pierrot le fou","y":1965,"d":"Jean-Luc Godard","s":"wishlist","e":1},{"r":78,"t":"Histoire(s) du Cinéma","y":1988,"d":"Jean-Luc Godard","s":"missing","e":1},{"r":78,"t":"A Matter of Life and Death","y":1946,"d":"Michael Powell & Emeric Pressburger","s":"owned","e":1},{"r":78,"t":"Modern Times","y":1936,"d":"Charles Chaplin","s":"wishlist","e":1},{"r":78,"t":"Sunset Blvd.","y":1950,"d":"Billy Wilder","s":"owned","e":1},{"r":78,"t":"Céline and Julie Go Boating","y":1974,"d":"Jacques Rivette","s":"wishlist","e":1},{"r":78,"t":"A Brighter Summer Day","y":1991,"d":"Edward Yang","s":"owned","e":1},{"r":78,"t":"Sátántangó","y":1994,"d":"Béla Tarr","s":"owned","e":1},{"r":75,"t":"Spirited Away","y":2001,"d":"Hayao Miyazaki","s":"wishlist","e":1},{"r":75,"t":"Sansho the Bailiff","y":1954,"d":"Kenji Mizoguchi","s":"owned","e":1},{"r":75,"t":"Imitation of Life","y":1959,"d":"Douglas Sirk","s":"wishlist","e":1},{"r":72,"t":"L'avventura","y":1960,"d":"Michelangelo Antonioni","s":"owned","e":1},{"r":72,"t":"Journey to Italy","y":1954,"d":"Roberto Rossellini","s":"wishlist","e":1},{"r":72,"t":"My Neighbour Totoro","y":1988,"d":"Hayao Miyazaki","s":"wishlist","e":1},{"r":67,"t":"The Red Shoes","y":1948,"d":"Michael Powell & Emeric Pressburger","s":"owned","e":1},{"r":67,"t":"Metropolis","y":1927,"d":"Fritz Lang","s":"wishlist","e":1},{"r":67,"t":"Andrei Rublev","y":1966,"d":"Andrei Tarkovsky","s":"owned","e":1},{"r":67,"t":"La Jetée","y":1962,"d":"Chris Marker","s":"owned","e":1},{"r":67,"t":"The Gleaners and I","y":2000,"d":"Agnès Varda","s":"wishlist","e":1},{"r":66,"t":"Touki Bouki","y":1973,"d":"Djibril Diop Mambéty","s":"owned"},{"r":63,"t":"The Third Man","y":1949,"d":"Carol Reed","s":"owned","e":1},{"r":63,"t":"GoodFellas","y":1990,"d":"Martin Scorsese","s":"owned","e":1},{"r":63,"t":"Casablanca","y":1942,"d":"Michael Curtiz","s":"owned","e":1},{"r":60,"t":"Daughters of the Dust","y":1991,"d":"Julie Dash","s":"owned","e":1},{"r":60,"t":"La dolce vita","y":1960,"d":"Federico Fellini","s":"owned","e":1},{"r":60,"t":"Moonlight","y":2016,"d":"Barry Jenkins","s":"owned","e":1},{"r":59,"t":"Sans soleil","y":1982,"d":"Chris Marker","s":"owned"},{"r":54,"t":"The Apartment","y":1960,"d":"Billy Wilder","s":"owned","e":1},{"r":54,"t":"Sherlock Jr.","y":1924,"d":"Buster Keaton","s":"owned","e":1},{"r":54,"t":"Le Mépris","y":1963,"d":"Jean-Luc Godard","s":"owned","e":1},{"r":54,"t":"Battleship Potemkin","y":1925,"d":"Sergei M. Eisenstein","s":"wishlist","e":1},{"r":54,"t":"Blade Runner","y":1982,"d":"Ridley Scott","s":"owned","e":1},{"r":52,"t":"News from Home","y":1976,"d":"Chantal Akerman","s":"wishlist","e":1},{"r":52,"t":"Fear Eats the Soul","y":1974,"d":"Rainer Werner Fassbinder","s":"owned","e":1},{"r":50,"t":"The Piano","y":1992,"d":"Jane Campion","s":"owned","e":1},{"r":50,"t":"The 400 Blows","y":1959,"d":"François Truffaut","s":"owned","e":1},{"r":48,"t":"Ordet","y":1955,"d":"Carl Th. Dreyer","s":"wishlist","e":1},{"r":48,"t":"Wanda","y":1970,"d":"Barbara Loden","s":"owned","e":1},{"r":45,"t":"Barry Lyndon","y":1975,"d":"Stanley Kubrick","s":"owned","e":1},{"r":45,"t":"North by Northwest","y":1959,"d":"Alfred Hitchcock","s":"owned","e":1},{"r":45,"t":"The Battle of Algiers","y":1966,"d":"Gillo Pontecorvo","s":"owned","e":1},{"r":43,"t":"Stalker","y":1979,"d":"Andrei Tarkovsky","s":"owned","e":1},{"r":43,"t":"Killer of Sheep","y":1977,"d":"Charles Burnett","s":"wishlist","e":1},{"r":41,"t":"Rashomon","y":1950,"d":"Akira Kurosawa","s":"owned","e":1},{"r":41,"t":"Bicycle Thieves","y":1948,"d":"Vittorio De Sica","s":"owned","e":1},{"r":38,"t":"Rear Window","y":1954,"d":"Alfred Hitchcock","s":"owned","e":1},{"r":38,"t":"À bout de souffle","y":1960,"d":"Jean-Luc Godard","s":"owned","e":1},{"r":38,"t":"Some Like It Hot","y":1959,"d":"Billy Wilder","s":"wishlist","e":1},{"r":36,"t":"M","y":1931,"d":"Fritz Lang","s":"missing","e":1},{"r":36,"t":"City Lights","y":1931,"d":"Charles Chaplin","s":"owned","e":1},{"r":35,"t":"Pather Panchali","y":1955,"d":"Satyajit Ray","s":"owned"},{"r":34,"t":"L'Atalante","y":1934,"d":"Jean Vigo","s":"owned"},{"r":31,"t":"8½","y":1963,"d":"Federico Fellini","s":"owned","e":1},{"r":31,"t":"Psycho","y":1960,"d":"Alfred Hitchcock","s":"owned","e":1},{"r":31,"t":"Mirror","y":1975,"d":"Andrei Tarkovsky","s":"owned","e":1},{"r":30,"t":"Portrait of a Lady on Fire","y":2019,"d":"Céline Sciamma","s":"owned"},{"r":29,"t":"Taxi Driver","y":1976,"d":"Martin Scorsese","s":"owned"},{"r":28,"t":"Daisies","y":1966,"d":"Věra Chytilová","s":"owned"},{"r":27,"t":"Shoah","y":1985,"d":"Claude Lanzmann","s":"owned"},{"r":25,"t":"The Night of the Hunter","y":1955,"d":"Charles Laughton","s":"owned","e":1},{"r":25,"t":"Au hasard Balthazar","y":1966,"d":"Robert Bresson","s":"owned","e":1},{"r":24,"t":"Do the Right Thing","y":1989,"d":"Spike Lee","s":"owned"},{"r":23,"t":"Playtime","y":1967,"d":"Jacques Tati","s":"owned"},{"r":21,"t":"Late Spring","y":1949,"d":"Yasujirō Ozu","s":"owned","e":1},{"r":21,"t":"The Passion of Joan of Arc","y":1927,"d":"Carl Th. Dreyer","s":"owned","e":1},{"r":20,"t":"Seven Samurai","y":1954,"d":"Akira Kurosawa","s":"owned"},{"r":19,"t":"Apocalypse Now","y":1979,"d":"Francis Ford Coppola","s":"owned"},{"r":18,"t":"Persona","y":1966,"d":"Ingmar Bergman","s":"owned"},{"r":17,"t":"Close-up","y":1989,"d":"Abbas Kiarostami","s":"owned"},{"r":16,"t":"Meshes of the Afternoon","y":1943,"d":"Maya Deren & Alexander Hackenschmied","s":"owned"},{"r":15,"t":"The Searchers","y":1956,"d":"John Ford","s":"owned"},{"r":14,"t":"Cléo from 5 to 7","y":1962,"d":"Agnès Varda","s":"wishlist"},{"r":13,"t":"La Règle du jeu","y":1939,"d":"Jean Renoir","s":"owned"},{"r":12,"t":"The Godfather","y":1972,"d":"Francis Ford Coppola","s":"owned"},{"r":11,"t":"Sunrise: A Song of Two Humans","y":1927,"d":"F.W. Murnau","s":"owned"},{"r":10,"t":"Singin' in the Rain","y":1951,"d":"Gene Kelly & Stanley Donen","s":"owned"},{"r":9,"t":"Man with a Movie Camera","y":1929,"d":"Dziga Vertov","s":"owned"},{"r":8,"t":"Mulholland Dr.","y":2001,"d":"David Lynch","s":"owned"},{"r":7,"t":"Beau Travail","y":1998,"d":"Claire Denis","s":"owned"},{"r":6,"t":"2001: A Space Odyssey","y":1968,"d":"Stanley Kubrick","s":"owned"},{"r":5,"t":"In the Mood for Love","y":2000,"d":"Wong Kar Wai","s":"owned"},{"r":4,"t":"Tokyo Story","y":1953,"d":"Yasujirō Ozu","s":"owned"},{"r":3,"t":"Citizen Kane","y":1941,"d":"Orson Welles","s":"owned"},{"r":2,"t":"Vertigo","y":1958,"d":"Alfred Hitchcock","s":"owned"},{"r":1,"t":"Jeanne Dielman, 23 Quai du Commerce, 1080 Bruxelles","y":1975,"d":"Chantal Akerman","s":"owned"}],title:'Sight &amp; Sound Critics’ Poll',sub:'2022 · 1,639 critics · BFI',note:''},
+  directors:{films:[{"r":1,"t":"2001: A Space Odyssey","y":1968,"d":"Stanley Kubrick","s":"owned"},{"r":2,"t":"Citizen Kane","y":1941,"d":"Orson Welles","s":"owned"},{"r":3,"t":"The Godfather","y":1972,"d":"Francis Ford Coppola","s":"owned"},{"r":4,"t":"Tokyo Story","y":1953,"d":"Yasujirō Ozu","s":"owned"},{"r":5,"t":"Jeanne Dielman, 23 Quai du Commerce, 1080 Bruxelles","y":1975,"d":"Chantal Akerman","s":"owned"},{"r":6,"t":"Vertigo","y":1958,"d":"Alfred Hitchcock","s":"owned"},{"r":7,"t":"8½","y":1963,"d":"Federico Fellini","s":"owned"},{"r":8,"t":"Mirror","y":1975,"d":"Andrei Tarkovsky","s":"owned"},{"r":9,"t":"Persona","y":1966,"d":"Ingmar Bergman","s":"owned"},{"r":10,"t":"In the Mood for Love","y":2000,"d":"Wong Kar Wai","s":"owned"},{"r":11,"t":"Close-up","y":1989,"d":"Abbas Kiarostami","s":"owned"},{"r":12,"t":"Taxi Driver","y":1976,"d":"Martin Scorsese","s":"owned"},{"r":13,"t":"Barry Lyndon","y":1975,"d":"Stanley Kubrick","s":"owned"},{"r":14,"t":"Beau Travail","y":1998,"d":"Claire Denis","s":"owned"},{"r":15,"t":"Seven Samurai","y":1954,"d":"Akira Kurosawa","s":"owned"},{"r":16,"t":"À bout de souffle","y":1960,"d":"Jean-Luc Godard","s":"owned"},{"r":17,"t":"Stalker","y":1979,"d":"Andrei Tarkovsky","s":"owned"},{"r":18,"t":"Apocalypse Now","y":1979,"d":"Francis Ford Coppola","s":"owned"},{"r":19,"t":"A Woman under the Influence","y":1974,"d":"John Cassavetes","s":"owned"},{"r":20,"t":"Rashomon","y":1950,"d":"Akira Kurosawa","s":"owned"},{"r":21,"t":"Bicycle Thieves","y":1948,"d":"Vittorio De Sica","s":"owned"},{"r":22,"t":"The Battle of Algiers","y":1966,"d":"Gillo Pontecorvo","s":"owned"},{"r":23,"t":"Mulholland Dr.","y":2001,"d":"David Lynch","s":"owned"},{"r":24,"t":"Pather Panchali","y":1955,"d":"Satyajit Ray","s":"owned"},{"r":25,"t":"Raging Bull","y":1980,"d":"Martin Scorsese","s":"owned"},{"r":26,"t":"Andrei Rublev","y":1966,"d":"Andrei Tarkovsky","s":"owned"},{"r":27,"t":"The Godfather Part II","y":1974,"d":"Francis Ford Coppola","s":"owned"},{"r":28,"t":"GoodFellas","y":1990,"d":"Martin Scorsese","s":"owned"},{"r":29,"t":"Do the Right Thing","y":1989,"d":"Spike Lee","s":"owned"},{"r":30,"t":"Ordet","y":1955,"d":"Carl Th. Dreyer","s":"wishlist"},{"r":31,"t":"The Passion of Joan of Arc","y":1927,"d":"Carl Th. Dreyer","s":"owned"},{"r":32,"t":"Man with a Movie Camera","y":1929,"d":"Dziga Vertov","s":"owned"},{"r":33,"t":"Sunrise: A Song of Two Humans","y":1927,"d":"F.W. Murnau","s":"owned"},{"r":34,"t":"The 400 Blows","y":1959,"d":"François Truffaut","s":"owned"},{"r":35,"t":"La Jetée","y":1962,"d":"Chris Marker","s":"owned"},{"r":36,"t":"La dolce vita","y":1960,"d":"Federico Fellini","s":"owned"},{"r":37,"t":"Au hasard Balthazar","y":1966,"d":"Robert Bresson","s":"owned"},{"r":38,"t":"La Strada","y":1954,"d":"Federico Fellini","s":"owned"},{"r":39,"t":"La Règle du jeu","y":1939,"d":"Jean Renoir","s":"owned"},{"r":40,"t":"L'avventura","y":1960,"d":"Michelangelo Antonioni","s":"owned"},{"r":41,"t":"Playtime","y":1967,"d":"Jacques Tati","s":"owned"},{"r":42,"t":"The Night of the Hunter","y":1955,"d":"Charles Laughton","s":"owned"},{"r":43,"t":"A Man Escaped","y":1956,"d":"Robert Bresson","s":"wishlist"},{"r":44,"t":"Vagabond","y":1985,"d":"Agnès Varda","s":"wishlist"},{"r":45,"t":"Come and See","y":1985,"d":"Elem Klimov","s":"owned"},{"r":46,"t":"Le Mépris","y":1963,"d":"Jean-Luc Godard","s":"owned"},{"r":47,"t":"Once upon a Time in the West","y":1968,"d":"Sergio Leone","s":"owned"},{"r":48,"t":"City Lights","y":1931,"d":"Charles Chaplin","s":"owned"},{"r":49,"t":"L'Atalante","y":1934,"d":"Jean Vigo","s":"owned"},{"r":50,"t":"Psycho","y":1960,"d":"Alfred Hitchcock","s":"owned"},{"r":51,"t":"Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb","y":1963,"d":"Stanley Kubrick","s":"owned"},{"r":52,"t":"Don't Look Now","y":1973,"d":"Nicolas Roeg","s":"owned"},{"r":53,"t":"La Maman et la Putain","y":1973,"d":"Jean Eustache","s":"owned"},{"r":54,"t":"Singin' in the Rain","y":1951,"d":"Gene Kelly & Stanley Donen","s":"owned"},{"r":55,"t":"La notte","y":1961,"d":"Michelangelo Antonioni","s":"owned"},{"r":56,"t":"The Piano","y":1992,"d":"Jane Campion","s":"owned"},{"r":57,"t":"Fear Eats the Soul","y":1974,"d":"Rainer Werner Fassbinder","s":"owned"},{"r":58,"t":"Viridiana","y":1961,"d":"Luis Buñuel","s":"wishlist"},{"r":59,"t":"Cléo from 5 to 7","y":1962,"d":"Agnès Varda","s":"wishlist"},{"r":60,"t":"Fanny and Alexander","y":1982,"d":"Ingmar Bergman","s":"owned"},{"r":61,"t":"Eraserhead","y":1977,"d":"David Lynch","s":"wishlist"},{"r":62,"t":"Late Spring","y":1949,"d":"Yasujirō Ozu","s":"owned"},{"r":63,"t":"Meshes of the Afternoon","y":1943,"d":"Maya Deren & Alexander Hackenschmied","s":"owned"},{"r":64,"t":"Sunset Blvd.","y":1950,"d":"Billy Wilder","s":"owned"},{"r":65,"t":"La ciénaga","y":2001,"d":"Lucrecia Martel","s":"missing"},{"r":66,"t":"Sátántangó","y":1994,"d":"Béla Tarr","s":"owned"},{"r":67,"t":"Tropical Malady","y":2004,"d":"Apichatpong Weerasethakul","s":"wishlist"},{"r":68,"t":"Blade Runner","y":1982,"d":"Ridley Scott","s":"owned"},{"r":69,"t":"Lawrence of Arabia","y":1962,"d":"David Lean","s":"owned"},{"r":70,"t":"Some Like It Hot","y":1959,"d":"Billy Wilder","s":"wishlist"},{"r":71,"t":"Jaws","y":1975,"d":"Steven Spielberg","s":"owned"},{"r":72,"t":"Chinatown","y":1974,"d":"Roman Polanski","s":"owned"},{"r":73,"t":"The Seventh Seal","y":1957,"d":"Ingmar Bergman","s":"owned"},{"r":74,"t":"Ikiru","y":1952,"d":"Akira Kurosawa","s":"owned"},{"r":75,"t":"L'Argent","y":1983,"d":"Robert Bresson","s":"wishlist"},{"r":76,"t":"The Conversation","y":1974,"d":"Francis Ford Coppola","s":"owned"},{"r":77,"t":"Salò, or the 120 Days of Sodom","y":1975,"d":"Pier Paolo Pasolini","s":"wishlist"},{"r":78,"t":"A Separation","y":2011,"d":"Asghar Farhadi","s":"wishlist"},{"r":79,"t":"Kes","y":1969,"d":"Ken Loach","s":"owned"},{"r":80,"t":"Where Is the Friend's House?","y":1987,"d":"Abbas Kiarostami","s":"owned"},{"r":81,"t":"The Searchers","y":1956,"d":"John Ford","s":"owned"},{"r":82,"t":"Touki Bouki","y":1973,"d":"Djibril Diop Mambéty","s":"owned"},{"r":83,"t":"A Brighter Summer Day","y":1991,"d":"Edward Yang","s":"owned"},{"r":84,"t":"Sans soleil","y":1982,"d":"Chris Marker","s":"owned"},{"r":85,"t":"Modern Times","y":1936,"d":"Charles Chaplin","s":"wishlist"},{"r":86,"t":"News from Home","y":1976,"d":"Chantal Akerman","s":"wishlist"},{"r":87,"t":"Blue Velvet","y":1986,"d":"David Lynch","s":"owned"},{"r":88,"t":"The Spirit of the Beehive","y":1973,"d":"Víctor Erice","s":"wishlist"},{"r":89,"t":"Shoah","y":1985,"d":"Claude Lanzmann","s":"owned"},{"r":90,"t":"Wild Strawberries","y":1957,"d":"Ingmar Bergman","s":"owned"},{"r":91,"t":"The Red Shoes","y":1948,"d":"Michael Powell & Emeric Pressburger","s":"owned"},{"r":92,"t":"The Ascent","y":1976,"d":"Larissa Shepitko","s":"owned"},{"r":93,"t":"Eternal Sunshine of the Spotless Mind","y":2004,"d":"Michel Gondry","s":"owned"},{"r":94,"t":"Moonlight","y":2016,"d":"Barry Jenkins","s":"owned"},{"r":95,"t":"The Colour of Pomegranates","y":1968,"d":"Sergei Paradjanov","s":"wishlist"},{"r":96,"t":"The Conformist","y":1970,"d":"Bernardo Bertolucci","s":"wishlist"},{"r":97,"t":"Caché","y":2005,"d":"Michael Haneke","s":"missing"},{"r":98,"t":"Parasite","y":2019,"d":"Bong Joon-ho","s":"owned"},{"r":99,"t":"Taste of Cherry","y":1997,"d":"Abbas Kiarostami","s":"owned"},{"r":100,"t":"Wanda","y":1970,"d":"Barbara Loden","s":"owned"},{"r":101,"t":"Battleship Potemkin","y":1925,"d":"Sergei M. Eisenstein","s":"wishlist"},{"r":102,"t":"Pickpocket","y":1959,"d":"Robert Bresson","s":"owned"},{"r":103,"t":"Yi Yi","y":1999,"d":"Edward Yang","s":"owned"},{"r":104,"t":"Throne of Blood","y":1957,"d":"Akira Kurosawa","s":"wishlist"}],title:'Sight &amp; Sound Directors’ Poll',sub:'2022 · 480 directors · BFI',note:'Order as published — tied films aren’t marked'}
+};
+let currentList = 'critics';
+let FILMS = LISTS.critics.films;
+
+// Sight & Sound titles that differ from the title in your collection/wishlist (keys/values are lbNorm() forms)
+const SS_ALIAS = {"lesdemoisellesderochefort":"theyounggirlsofrochefort","nosferatu":"nosferatuasymphonyofhorror","lagrandeillusion":"thegrandillusion","lesenfantsduparadis":"childrenofparadise","aguirrewrathofgod":"aguirrethewrathofgod","lamamanetlaputain":"themotherandthewhore","ugetsumonogatari":"ugetsu","madamede":"theearringsofmadamede","sunsetblvd":"sunsetboulevard","myneighbourtotoro":"myneighbortotoro","thegleanersandi":"thegleanersi","lemepris":"contempt","aboutdesouffle":"breathless","laregledujeu":"therulesofthegame","thecolourofpomegranates":"thecolorofpomegranates"};
+
+let currentFilter = 'all';
+let currentSort = 'rank';
+let searchQ = '';
+
+const esc = s => String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const fold = s => (s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+
+function setFilter(f) {
+  currentFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.className = 'filter-btn';
+    if(b.dataset.filter === f) b.classList.add('active-'+f);
+  });
+  render();
+}
+
+function setSort(s) {
+  currentSort = s;
+  document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('sort-'+s).classList.add('active');
+  render();
+}
+
+function onSearch() {
+  searchQ = fold(document.getElementById('search-input').value);
+  render();
+}
+
+function render() {
+  let films = [...FILMS];
+  if(currentFilter !== 'all') films = films.filter(f => f.s === currentFilter);
+  if(searchQ) films = films.filter(f => fold(f.t+' '+f.d).includes(searchQ) || String(f.y).includes(searchQ));
+  if(currentSort === 'year') films.sort((a,b) => a.y - b.y || a.r - b.r);
+  else if(currentSort === 'title') films.sort((a,b) => a.t.localeCompare(b.t));
+  else films.sort((a,b) => a.r - b.r || a.t.localeCompare(b.t));
+
+  const listEl = document.getElementById('film-list');
+  document.getElementById('count-display').textContent =
+    `Showing ${films.length} film${films.length!==1?'s':''}${LISTS[currentList].note?' · '+LISTS[currentList].note:''}`;
+
+  listEl.innerHTML = films.map(f => `
+    <a class="film-item status-${f.s}" href="${esc(f.lb||('https://letterboxd.com/search/films/'+encodeURIComponent(f.t+' '+f.y)+'/'))}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+      <span class="rank">${f.e?'=':''}${f.r}</span>
+      <div class="film-info">
+        <div class="film-title${f.s==='missing'?' faded':''}">${esc(f.t)}</div>
+        <div class="film-year">${f.y} · ${esc(f.d)}</div>
+      </div>
+      <span class="status-pill pill-${f.s}">${f.s==='owned'?'owned':f.s==='wishlist'?'wish':'—'}</span>
+    </a>
+  `).join('');
+}
+
+function setList(k, silent){
+  if(!LISTS[k]) k='critics';
+  currentList=k; FILMS=LISTS[k].films;
+  document.getElementById('list-title').innerHTML=LISTS[k].title;
+  document.getElementById('list-sub').textContent=LISTS[k].sub;
+  document.getElementById('btn-all').textContent='All '+FILMS.length;
+  document.getElementById('seg-critics').classList.toggle('on',k==='critics');
+  document.getElementById('seg-directors').classList.toggle('on',k==='directors');
+  document.getElementById('seg-critics').setAttribute('aria-selected',k==='critics');
+  document.getElementById('seg-directors').setAttribute('aria-selected',k==='directors');
+  document.title=LISTS[k].title.replace('&amp;','&')+' — Collection Tracker';
+  try{localStorage.setItem('ssList',k)}catch(e){}
+  lbCounts(); render();
+  if(!silent&&location.hash!=='#'+k){try{history.replaceState(null,'','#'+k)}catch(e){}}
+}
+
+render();
+
+// ===== Auto-sync statuses & links from collection.json / wishlist.json =====
+function lbNorm(s){return (s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');}
+function lbCounts(){
+  const N=FILMS.length;
+  const nOwned=FILMS.filter(f=>f.s==='owned').length,nWish=FILMS.filter(f=>f.s==='wishlist').length,nMiss=FILMS.filter(f=>f.s==='missing').length;
+  document.getElementById('count-owned').textContent=nOwned;
+  document.getElementById('count-wishlist').textContent=nWish;
+  document.getElementById('count-missing').textContent=nMiss;
+  document.getElementById('count-pct').textContent=Math.round(nOwned*100/N)+'%';
+  document.getElementById('prog-owned').style.width=(nOwned*100/N)+'%';
+  document.getElementById('prog-wishlist').style.width=(nWish*100/N)+'%';
+}
+async function lbSync(){
+  try{
+    const [c,w]=await Promise.all(['collection.json','wishlist.json'].map(u=>fetch(u+'?v='+Date.now()).then(r=>{if(!r.ok)throw 0;return r.json();})));
+    // index every title a film is known by (main title + alt_titles)
+    const idx=a=>(Array.isArray(a)?a:(a.films||[])).flatMap(d=>[d.title].concat(d.alt_titles||[]).map(t=>({n:lbNorm(t),y:d.year,lb:d.lb})));
+    const ci=idx(c),wi=idx(w);
+    const find=(list,f)=>{const k=SS_ALIAS[lbNorm(f.t)]||lbNorm(f.t);return list.find(d=>(d.n===k||(k.length>=10&&(d.n.startsWith(k)||d.n.endsWith(k))))&&Math.abs(d.y-f.y)<=2);};
+    Object.values(LISTS).forEach(L=>L.films.forEach(f=>{const o=find(ci,f),wl=o?null:find(wi,f);f.s=o?'owned':wl?'wishlist':'missing';f.lb=(o||wl||{}).lb||f.lb;}));
+    lbCounts();render();
+  }catch(e){console.warn('S&S sync skipped (using built-in statuses)',e);}
+}
+lbSync();
+document.addEventListener("visibilitychange",()=>{document.hidden||lbSync()});
+window.addEventListener("pageshow",e=>{e.persisted&&lbSync()});
+if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').then(r=>r.update()).catch(()=>{}));
+(function(){var h=(location.hash||'').slice(1),st=null;try{st=localStorage.getItem('ssList')}catch(e){}
+  setList(LISTS[h]?h:(LISTS[st]?st:'critics'),true);})();
+window.addEventListener('hashchange',function(){var h=location.hash.slice(1);if(LISTS[h]&&h!==currentList)setList(h,true)});
+</script>
+<style>#ownFab{bottom:calc(16px + env(safe-area-inset-bottom))}</style>
+<script>
+(function(){
+  function go(f){
+    var b=document.querySelector("[onclick*=\"setFilter('all'\"]"); if(b) b.click();
+    var el=document.getElementById('search-input'); if(el){el.value=f.title; onSearch();}
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  window.OWN_ADAPTER={
+    topLabel:'S&S',
+    getTop500:function(){return typeof FILMS!=='undefined'?FILMS.map(function(f){return{title:f.t,year:f.y,rank:f.r,status:f.s}}):[]},
+    alias:typeof SS_ALIAS!=='undefined'?SS_ALIAS:{},
+    openOwned:go,openWanted:go,openTop:go
+  };
+})();
+</script>
+<script src="ownsearch.js"></script>
+</body>
+</html>
