@@ -1656,7 +1656,7 @@ renderStats=function(){
   var old=document.getElementById('stats-extra');if(old)old.remove();
   var div=document.createElement('div');div.id='stats-extra';
   try{div.innerHTML=syncCards()}catch(e){console.warn('stats extra',e)}
-  host.appendChild(div);
+  var first=host.querySelector('.stat-card');if(first)first.after(div);else host.appendChild(div);
   getRaw().then(function(){var I=info();if(I&&document.contains(div))div.insertAdjacentHTML('afterbegin',listCards(I))}).catch(function(e){console.warn('lists',e)});
 };
 var _tw=toggleWatched;
