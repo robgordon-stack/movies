@@ -384,5 +384,47 @@ window.addEventListener('hashchange',function(){var h=location.hash.slice(1);if(
 })();
 </script>
 <script src="ownsearch.js"></script>
+<script>
+/* ===== On Your Wishlist + Top Gaps panel (shared across list pages) ===== */
+(function(){
+var wlP=null,lastKey='';
+function getWl(){return wlP||(wlP=fetch('wishlist.json?v='+Date.now()).then(function(r){return r.json()}).then(function(d){return Array.isArray(d)?d:(d&&d.films)||[]}).catch(function(){return []}))}
+var nz=function(s){return (s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'')};
+var esc=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+function films(){return typeof curFilms==='function'?curFilms():FILMS}
+function build(wl){
+  var F=films(),wm=new Map();wl.forEach(function(w){if(w.title)wm.set(nz(w.title),w)});
+  var onW=F.filter(function(f){return f.s==='wishlist'}).sort(function(a,b){return a.r-b.r});
+  var top=Math.min(100,Math.ceil(F.length/5));
+  var gaps=F.filter(function(f){return f.s==='missing'&&f.r<=top}).sort(function(a,b){return a.r-b.r});
+  if(!onW.length&&!gaps.length)return '';
+  function cardOf(f,red){
+    var w=wm.get(nz(f.t)),p=w&&w.poster,sc=w&&+w.lb_score?(+w.lb_score).toFixed(1):'';
+    var url=(w&&w.lb)||('https://letterboxd.com/search/'+encodeURIComponent(f.t)+'/');
+    var img=p?'<img src="'+esc(p)+'" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="">':'<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--text-dim);padding:3px;text-align:center">'+esc(f.t)+'</div>';
+    var bg=red?'rgba(224,85,85,.85);color:#fff':'rgba(240,208,128,.85);color:#111';
+    return '<a href="'+esc(url)+'" target="_blank" rel="noopener" style="flex:0 0 72px;text-decoration:none"><div style="position:relative;width:72px;height:108px;border-radius:6px;overflow:hidden;background:var(--surface2);margin-bottom:5px;border:1px solid var(--border)">'+img+'<div style="position:absolute;top:3px;right:3px;background:'+bg+';border-radius:3px;font-size:7px;font-weight:800;padding:1px 4px">#'+f.r+'</div></div><div style="font-size:9px;color:var(--text);line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">'+esc(f.t)+'</div>'+(sc?'<div style="font-size:9px;color:var(--wishlist)">★ '+sc+'</div>':'<div style="font-size:9px;color:var(--text-dim)">'+f.y+'</div>')+'</a>'}
+  var row=function(a,r){return '<div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none">'+a.map(function(f){return cardOf(f,r)}).join('')+'</div>'};
+  var h='';
+  if(onW.length)h+='<div style="margin-bottom:28px"><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--wishlist);margin-bottom:4px">On Your Wishlist · '+onW.length+' film'+(onW.length!==1?'s':'')+'</div><div style="font-size:12px;color:var(--text-dim);margin-bottom:12px">Films from this list you already want — sorted by rank</div>'+row(onW,false)+'</div>';
+  if(gaps.length)h+='<div><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--missing);margin-bottom:4px">Top '+top+' Gaps · '+gaps.length+' film'+(gaps.length!==1?'s':'')+'</div><div style="font-size:12px;color:var(--text-dim);margin-bottom:12px">Highly ranked films not owned or wishlisted</div>'+row(gaps,true)+'</div>';
+  return h;
+}
+function gaps(){
+  try{
+    var F=films(),k=F.length+':'+F.filter(function(f){return f.s==='wishlist'}).length+':'+F.filter(function(f){return f.s==='missing'}).length+':'+F[0].t;
+    if(k===lastKey)return;lastKey=k;
+    getWl().then(function(wl){
+      var p=document.getElementById('gaps-panel');
+      if(!p){var l=document.getElementById('film-list');if(!l)return;p=document.createElement('div');p.id='gaps-panel';p.style.padding='1.5rem 1rem 6rem';l.insertAdjacentElement('afterend',p)}
+      p.innerHTML=build(wl);
+    });
+  }catch(e){console.warn('gaps',e)}
+}
+var _r=render;
+render=function(){var r=_r.apply(this,arguments);gaps();return r};
+gaps();
+})();
+</script>
 </body>
 </html>
