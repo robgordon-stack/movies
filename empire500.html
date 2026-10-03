@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Empire 500">
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0d0d0d"><link rel="apple-touch-icon" href="icon-192.png">
+<title>Empire 500 — Collection Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0e0e;
+    --surface: #161616;
+    --surface2: #1e1e1e;
+    --border: #2a2a2a;
+    --owned: #c8f0a0;
+    --owned-dim: rgba(200,240,160,0.12);
+    --owned-mid: rgba(200,240,160,0.35);
+    --wishlist: #f0d080;
+    --wishlist-dim: rgba(240,208,128,0.12);
+    --wishlist-mid: rgba(240,208,128,0.35);
+    --missing: #e05555;
+    --missing-dim: rgba(224,85,85,0.1);
+    --missing-mid: rgba(224,85,85,0.3);
+    --text: #e8e4dc;
+    --text-dim: #888;
+    --text-faint: #444;
+    --accent: #c8f0a0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: var(--bg); color: var(--text); font-family: 'DM Mono', monospace; }
+  body { min-height: 100vh; padding-bottom: env(safe-area-inset-bottom, 0px); }
+
+  /* HEADER */
+  .header {
+    padding: calc(3rem + env(safe-area-inset-top, 0px)) 2rem 2rem;
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(14,14,14,0.96);
+    backdrop-filter: blur(12px);
+  }
+  .header-top {
+    display: flex; align-items: baseline; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;
+  }
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    line-height: 1; letter-spacing: -0.02em;
+    color: var(--text);
+  }
+  h1 em { color: var(--accent); font-style: italic; }
+  .last-updated { font-size: 11px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* STATS BAR */
+  .stats {
+    display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem;
+  }
+  .stat { display: flex; flex-direction: column; gap: 2px; }
+  .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem; line-height: 1;
+  }
+  .stat-num.owned { color: var(--owned); }
+  .stat-num.wishlist { color: var(--wishlist); }
+  .stat-num.missing { color: var(--missing); }
+  .stat-label { font-size: 11px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* PROGRESS BAR */
+  .progress-wrap { margin-bottom: 1.5rem; }
+  .progress-bar {
+    height: 4px; background: var(--border); border-radius: 2px; overflow: hidden;
+    display: flex;
+  }
+  .progress-seg { height: 100%; transition: width 0.5s ease; }
+  .progress-seg.owned { background: var(--owned); }
+  .progress-seg.wishlist { background: var(--wishlist); }
+  .progress-seg.missing { background: var(--border); }
+
+  /* CONTROLS */
+  .controls {
+    display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;
+  }
+  .filter-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 2px;
+    border: 1px solid var(--border);
+    background: transparent; color: var(--text-dim);
+    cursor: pointer; transition: all 0.15s;
+  }
+  .filter-btn:hover { border-color: var(--text-dim); color: var(--text); }
+  .filter-btn.active-all { border-color: var(--text); color: var(--text); background: var(--surface2); }
+  .filter-btn.active-owned { border-color: var(--owned); color: var(--owned); background: var(--owned-dim); }
+  .filter-btn.active-wishlist { border-color: var(--wishlist); color: var(--wishlist); background: var(--wishlist-dim); }
+  .filter-btn.active-missing { border-color: var(--missing); color: var(--missing); background: var(--missing-dim); }
+
+  .search-wrap { margin-left: auto; position: relative; }
+  .search-input {
+    font-family: 'DM Mono', monospace; font-size: 12px;
+    background: var(--surface2); border: 1px solid var(--border);
+    color: var(--text); padding: 5px 12px 5px 30px;
+    border-radius: 2px; width: 200px; outline: none;
+    transition: border-color 0.15s;
+  }
+  .search-input:focus { border-color: var(--text-dim); }
+  .search-icon { position: absolute; left: 9px; top: 50%; transform: translateY(-50%); color: var(--text-dim); font-size: 12px; pointer-events: none; }
+
+  /* SORT */
+  .sort-wrap { display: flex; gap: 4px; margin-left: 8px; }
+  .sort-btn {
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 5px 10px; border-radius: 2px;
+    border: 1px solid var(--border);
+    background: transparent; color: var(--text-faint);
+    cursor: pointer; transition: all 0.15s;
+  }
+  .sort-btn.active { border-color: var(--text-dim); color: var(--text-dim); }
+
+  /* LIST */
+  .film-list {
+    padding: 0 2rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
+    gap: 1px;
+  }
+
+  .film-item {
+    display: flex; align-items: center; gap: 1rem;
+    padding: 0.6rem 1rem 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.1s;
+    cursor: default;
+  }
+  .film-item:hover { background: var(--surface); }
+  .film-item.status-owned { border-left: 2px solid var(--owned); padding-left: calc(1rem - 2px); }
+  .film-item.status-wishlist { border-left: 2px solid var(--wishlist); padding-left: calc(1rem - 2px); }
+  .film-item.status-missing { border-left: 2px solid var(--text-faint); padding-left: calc(1rem - 2px); }
+
+  .rank {
+    font-size: 11px; color: var(--text-faint);
+    width: 32px; text-align: right; flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+  .film-info { flex: 1; min-width: 0; }
+  .film-title {
+    font-size: 13px; color: var(--text);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    line-height: 1.3;
+  }
+  .film-title.faded { color: var(--text-dim); }
+  .film-year { font-size: 10px; color: var(--text-faint); margin-top: 1px; }
+  .status-pill {
+    font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 2px 7px; border-radius: 1px; flex-shrink: 0;
+    font-weight: 500;
+  }
+  .pill-owned { background: var(--owned-dim); color: var(--owned); border: 1px solid var(--owned-mid); }
+  .pill-wishlist { background: var(--wishlist-dim); color: var(--wishlist); border: 1px solid var(--wishlist-mid); }
+  .pill-missing { background: transparent; color: var(--text-faint); border: 1px solid var(--border); }
+
+  /* EMPTY STATE */
+  .empty { padding: 4rem 2rem; text-align: center; color: var(--text-dim); font-size: 13px; }
+
+  /* COUNT DISPLAY */
+  .count-display {
+    font-size: 11px; color: var(--text-dim); padding: 1rem 2rem 0.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 600px) {
+    .header { padding: calc(1.5rem + env(safe-area-inset-top, 0px)) 1rem 1rem; }
+    .film-list { padding: 0 0 4rem; }
+    .count-display { padding: 1rem 1rem 0.5rem; }
+    .stats { gap: 1.2rem; }
+    .stat-num { font-size: 1.6rem; }
+  }
+.top-row{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:1rem;flex-wrap:wrap}
+.back{font-size:11px;color:var(--text-dim);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;display:inline-block;padding:10px 0}
+.back:hover{color:var(--text)}
+.back:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="top-row"><a class="back" href="index.html">← The Archive</a></div>
+  <div class="header-top">
+    <h1>Empire’s 500 Greatest<br><em>vs your collection</em></h1>
+    <span class="last-updated">Greatest movies · 2008</span>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-num owned" id="count-owned">0</span>
+      <span class="stat-label">Owned</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num wishlist" id="count-wishlist">0</span>
+      <span class="stat-label">Wishlist</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num missing" id="count-missing">0</span>
+      <span class="stat-label">Missing</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" id="count-pct" style="color:var(--text)">0%</span>
+      <span class="stat-label">Coverage</span>
+    </div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-bar">
+      <div class="progress-seg owned" id="prog-owned" style="width:0%"></div>
+      <div class="progress-seg wishlist" id="prog-wishlist" style="width:0%"></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="filter-btn active-all" data-filter="all" onclick="setFilter('all')">All 500</button>
+    <button class="filter-btn" data-filter="owned" onclick="setFilter('owned')">Owned</button>
+    <button class="filter-btn" data-filter="wishlist" onclick="setFilter('wishlist')">Wishlist</button>
+    <button class="filter-btn" data-filter="missing" onclick="setFilter('missing')">Missing</button>
+
+    <div class="sort-wrap">
+      <button class="sort-btn active" id="sort-rank" onclick="setSort('rank')">Rank</button>
+      <button class="sort-btn" id="sort-year" onclick="setSort('year')">Year</button>
+      <button class="sort-btn" id="sort-title" onclick="setSort('title')">Title</button>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input class="search-input" type="text" placeholder="Search..." id="search-input" oninput="onSearch()" />
+    </div>
+  </div>
+</div>
+
+<div class="count-display" id="count-display"></div>
+<div class="film-list" id="film-list"></div>
+
+<script>
+const FILMS = [
+  {r:1,t:"The Godfather",y:1972,s:"missing"},
+  {r:2,t:"Raiders of the Lost Ark",y:1981,s:"missing"},
+  {r:3,t:"The Empire Strikes Back",y:1980,s:"missing"},
+  {r:4,t:"The Shawshank Redemption",y:1994,s:"missing"},
+  {r:5,t:"Jaws",y:1975,s:"missing"},
+  {r:6,t:"GoodFellas",y:1990,s:"missing"},
+  {r:7,t:"Apocalypse Now",y:1979,s:"missing"},
+  {r:8,t:"Singin' in the Rain",y:1952,s:"missing"},
+  {r:9,t:"Pulp Fiction",y:1994,s:"missing"},
+  {r:10,t:"Fight Club",y:1999,s:"missing"},
+  {r:11,t:"Raging Bull",y:1980,s:"missing"},
+  {r:12,t:"The Apartment",y:1960,s:"missing"},
+  {r:13,t:"Chinatown",y:1974,s:"missing"},
+  {r:14,t:"Once Upon a Time in the West",y:1968,s:"missing"},
+  {r:15,t:"The Dark Knight",y:2008,s:"missing"},
+  {r:16,t:"2001: A Space Odyssey",y:1968,s:"missing"},
+  {r:17,t:"Taxi Driver",y:1976,s:"missing"},
+  {r:18,t:"Casablanca",y:1942,s:"missing"},
+  {r:19,t:"The Godfather Part II",y:1974,s:"missing"},
+  {r:20,t:"Blade Runner",y:1982,s:"missing"},
+  {r:21,t:"The Third Man",y:1949,s:"missing"},
+  {r:22,t:"Star Wars",y:1977,s:"missing"},
+  {r:23,t:"Back to the Future",y:1985,s:"missing"},
+  {r:24,t:"The Lord of the Rings: The Fellowship of the Ring",y:2001,s:"missing"},
+  {r:25,t:"The Good, the Bad and the Ugly",y:1966,s:"missing"},
+  {r:26,t:"Dr. Strangelove",y:1964,s:"missing"},
+  {r:27,t:"Some Like It Hot",y:1959,s:"missing"},
+  {r:28,t:"Citizen Kane",y:1941,s:"missing"},
+  {r:29,t:"Die Hard",y:1988,s:"missing"},
+  {r:30,t:"Aliens",y:1986,s:"missing"},
+  {r:31,t:"Gone with the Wind",y:1939,s:"missing"},
+  {r:32,t:"Butch Cassidy and the Sundance Kid",y:1969,s:"missing"},
+  {r:33,t:"Alien",y:1979,s:"missing"},
+  {r:34,t:"The Lord of the Rings: The Return of the King",y:2003,s:"missing"},
+  {r:35,t:"Terminator 2: Judgment Day",y:1991,s:"missing"},
+  {r:36,t:"Andrei Rublev",y:1966,s:"missing"},
+  {r:37,t:"A Clockwork Orange",y:1971,s:"missing"},
+  {r:38,t:"Heat",y:1995,s:"missing"},
+  {r:39,t:"The Matrix",y:1999,s:"missing"},
+  {r:40,t:"Vertigo",y:1958,s:"missing"},
+  {r:41,t:"The 400 Blows",y:1959,s:"missing"},
+  {r:42,t:"Kind Hearts and Coronets",y:1949,s:"missing"},
+  {r:43,t:"The Big Lebowski",y:1998,s:"missing"},
+  {r:44,t:"Schindler's List",y:1993,s:"missing"},
+  {r:45,t:"Psycho",y:1960,s:"missing"},
+  {r:46,t:"On the Waterfront",y:1954,s:"missing"},
+  {r:47,t:"E.T. the Extra-Terrestrial",y:1982,s:"missing"},
+  {r:48,t:"This Is Spinal Tap",y:1984,s:"missing"},
+  {r:49,t:"Evil Dead II",y:1987,s:"missing"},
+  {r:50,t:"Seven Samurai",y:1954,s:"missing"},
+  {r:51,t:"8½",y:1963,s:"missing"},
+  {r:52,t:"The Shining",y:1980,s:"missing"},
+  {r:53,t:"Donnie Darko",y:2001,s:"missing"},
+  {r:54,t:"The Lord of the Rings: The Two Towers",y:2002,s:"missing"},
+  {r:55,t:"La Dolce Vita",y:1960,s:"missing"},
+  {r:56,t:"Casino Royale",y:2006,s:"missing"},
+  {r:57,t:"Lawrence of Arabia",y:1962,s:"missing"},
+  {r:58,t:"His Girl Friday",y:1940,s:"missing"},
+  {r:59,t:"Close Encounters of the Third Kind",y:1977,s:"missing"},
+  {r:60,t:"Come and See",y:1985,s:"missing"},
+  {r:61,t:"The Usual Suspects",y:1995,s:"missing"},
+  {r:62,t:"The Graduate",y:1967,s:"missing"},
+  {r:63,t:"Sunset Boulevard",y:1950,s:"missing"},
+  {r:64,t:"Oldboy",y:2003,s:"missing"},
+  {r:65,t:"Harold and Maude",y:1971,s:"missing"},
+  {r:66,t:"Edward Scissorhands",y:1990,s:"missing"},
+  {r:67,t:"Tokyo Story",y:1953,s:"missing"},
+  {r:68,t:"Annie Hall",y:1977,s:"missing"},
+  {r:69,t:"Three Colors: Red",y:1994,s:"missing"},
+  {r:70,t:"Stand by Me",y:1986,s:"missing"},
+  {r:71,t:"The Night of the Hunter",y:1955,s:"missing"},
+  {r:72,t:"12 Angry Men",y:1957,s:"missing"},
+  {r:73,t:"Eternal Sunshine of the Spotless Mind",y:2004,s:"missing"},
+  {r:74,t:"The Treasure of the Sierra Madre",y:1948,s:"missing"},
+  {r:75,t:"A Matter of Life and Death",y:1946,s:"missing"},
+  {r:76,t:"Manhattan",y:1979,s:"missing"},
+  {r:77,t:"Spartacus",y:1960,s:"missing"},
+  {r:78,t:"Rosemary's Baby",y:1968,s:"missing"},
+  {r:79,t:"The Thin Red Line",y:1998,s:"missing"},
+  {r:80,t:"The Life and Death of Colonel Blimp",y:1943,s:"missing"},
+  {r:81,t:"Batman Begins",y:2005,s:"missing"},
+  {r:82,t:"The Great Escape",y:1963,s:"missing"},
+  {r:83,t:"Brazil",y:1985,s:"missing"},
+  {r:84,t:"L.A. Confidential",y:1997,s:"missing"},
+  {r:85,t:"Blue Velvet",y:1986,s:"missing"},
+  {r:86,t:"Carrie",y:1976,s:"missing"},
+  {r:87,t:"The King of Comedy",y:1982,s:"missing"},
+  {r:88,t:"Ferris Bueller's Day Off",y:1986,s:"missing"},
+  {r:89,t:"Magnolia",y:1999,s:"missing"},
+  {r:90,t:"When Harry Met Sally...",y:1989,s:"missing"},
+  {r:91,t:"Return of the Jedi",y:1983,s:"missing"},
+  {r:92,t:"Once Upon a Time in America",y:1984,s:"missing"},
+  {r:93,t:"The Spirit of the Beehive",y:1973,s:"missing"},
+  {r:94,t:"The Wild Bunch",y:1969,s:"missing"},
+  {r:95,t:"Yojimbo",y:1961,s:"missing"},
+  {r:96,t:"American Beauty",y:1999,s:"missing"},
+  {r:97,t:"Reservoir Dogs",y:1992,s:"missing"},
+  {r:98,t:"North by Northwest",y:1959,s:"missing"},
+  {r:99,t:"Toy Story",y:1995,s:"missing"},
+  {r:100,t:"Network",y:1976,s:"missing"},
+  {r:101,t:"Raising Arizona",y:1987,s:"missing"},
+  {r:102,t:"The Hustler",y:1961,s:"missing"},
+  {r:103,t:"Rear Window",y:1954,s:"missing"},
+  {r:104,t:"The Rules of the Game",y:1939,s:"missing"},
+  {r:105,t:"One Flew Over the Cuckoo's Nest",y:1975,s:"missing"},
+  {r:106,t:"A Man for All Seasons",y:1966,s:"missing"},
+  {r:107,t:"An American Werewolf in London",y:1981,s:"missing"},
+  {r:108,t:"The Tree of Wooden Clogs",y:1978,s:"missing"},
+  {r:109,t:"Touch of Evil",y:1958,s:"missing"},
+  {r:110,t:"Before Sunset",y:2004,s:"missing"},
+  {r:111,t:"Fitzcarraldo",y:1982,s:"missing"},
+  {r:112,t:"I Am Cuba",y:1964,s:"missing"},
+  {r:113,t:"Anchorman: The Legend of Ron Burgundy",y:2004,s:"missing"},
+  {r:114,t:"The Conversation",y:1974,s:"missing"},
+  {r:115,t:"Blazing Saddles",y:1974,s:"missing"},
+  {r:116,t:"Rio Bravo",y:1959,s:"missing"},
+  {r:117,t:"Miller's Crossing",y:1990,s:"missing"},
+  {r:118,t:"Withnail and I",y:1987,s:"missing"},
+  {r:119,t:"The Wages of Fear",y:1953,s:"missing"},
+  {r:120,t:"The Battle of Algiers",y:1966,s:"missing"},
+  {r:121,t:"Los Olvidados",y:1950,s:"missing"},
+  {r:122,t:"The Princess Bride",y:1987,s:"missing"},
+  {r:123,t:"A Woman Under the Influence",y:1974,s:"missing"},
+  {r:124,t:"The Silence of the Lambs",y:1991,s:"missing"},
+  {r:125,t:"Breathless",y:1960,s:"missing"},
+  {r:126,t:"Pat Garrett & Billy the Kid",y:1973,s:"missing"},
+  {r:127,t:"The Sting",y:1973,s:"missing"},
+  {r:128,t:"Lost in Translation",y:2003,s:"missing"},
+  {r:129,t:"Harvey",y:1950,s:"missing"},
+  {r:130,t:"The Man Who Would Be King",y:1975,s:"missing"},
+  {r:131,t:"The Last of the Mohicans",y:1992,s:"missing"},
+  {r:132,t:"Pan's Labyrinth",y:2006,s:"missing"},
+  {r:133,t:"Double Indemnity",y:1944,s:"missing"},
+  {r:134,t:"Se7en",y:1995,s:"missing"},
+  {r:135,t:"Duck Soup",y:1933,s:"missing"},
+  {r:136,t:"Amadeus",y:1984,s:"missing"},
+  {r:137,t:"Dances with Wolves",y:1990,s:"missing"},
+  {r:138,t:"Cool Hand Luke",y:1967,s:"missing"},
+  {r:139,t:"Blow Out",y:1981,s:"missing"},
+  {r:140,t:"As Good as It Gets",y:1997,s:"missing"},
+  {r:141,t:"Snow White and the Seven Dwarfs",y:1937,s:"missing"},
+  {r:142,t:"Almost Famous",y:2000,s:"missing"},
+  {r:143,t:"Cyrano de Bergerac",y:1990,s:"missing"},
+  {r:144,t:"There Will Be Blood",y:2007,s:"missing"},
+  {r:145,t:"Sophie's Choice",y:1982,s:"missing"},
+  {r:146,t:"Shampoo",y:1975,s:"missing"},
+  {r:147,t:"Notorious",y:1946,s:"missing"},
+  {r:148,t:"Z",y:1969,s:"missing"},
+  {r:149,t:"The Red Shoes",y:1948,s:"missing"},
+  {r:150,t:"The French Connection",y:1971,s:"missing"},
+  {r:151,t:"Gladiator",y:2000,s:"missing"},
+  {r:152,t:"Boogie Nights",y:1997,s:"missing"},
+  {r:153,t:"The Innocents",y:1961,s:"missing"},
+  {r:154,t:"Betty Blue",y:1986,s:"missing"},
+  {r:155,t:"Badlands",y:1973,s:"missing"},
+  {r:156,t:"Saving Private Ryan",y:1998,s:"missing"},
+  {r:157,t:"True Romance",y:1993,s:"missing"},
+  {r:158,t:"Unforgiven",y:1992,s:"missing"},
+  {r:159,t:"The Royal Tenenbaums",y:2001,s:"missing"},
+  {r:160,t:"Being There",y:1979,s:"missing"},
+  {r:161,t:"The Year of Living Dangerously",y:1982,s:"missing"},
+  {r:162,t:"A Nightmare on Elm Street",y:1984,s:"missing"},
+  {r:163,t:"The Bridge on the River Kwai",y:1957,s:"missing"},
+  {r:164,t:"The Searchers",y:1956,s:"missing"},
+  {r:165,t:"A Day in the Country",y:1946,s:"missing"},
+  {r:166,t:"Goldfinger",y:1964,s:"missing"},
+  {r:167,t:"Don't Look Now",y:1973,s:"missing"},
+  {r:168,t:"Tootsie",y:1982,s:"missing"},
+  {r:169,t:"Viridiana",y:1961,s:"missing"},
+  {r:170,t:"La haine",y:1995,s:"missing"},
+  {r:171,t:"Brief Encounter",y:1945,s:"missing"},
+  {r:172,t:"The Wizard of Oz",y:1939,s:"missing"},
+  {r:173,t:"Memento",y:2000,s:"missing"},
+  {r:174,t:"Superman",y:1978,s:"missing"},
+  {r:175,t:"Rushmore",y:1998,s:"missing"},
+  {r:176,t:"A Canterbury Tale",y:1944,s:"missing"},
+  {r:177,t:"City of God",y:2002,s:"missing"},
+  {r:178,t:"Hellzapoppin'",y:1941,s:"missing"},
+  {r:179,t:"Toy Story 2",y:1999,s:"missing"},
+  {r:180,t:"To Kill a Mockingbird",y:1962,s:"missing"},
+  {r:181,t:"Beyond the Valley of the Dolls",y:1970,s:"missing"},
+  {r:182,t:"Performance",y:1970,s:"missing"},
+  {r:183,t:"Le Samouraï",y:1967,s:"missing"},
+  {r:184,t:"Dirty Harry",y:1971,s:"missing"},
+  {r:185,t:"Paths of Glory",y:1957,s:"missing"},
+  {r:186,t:"United 93",y:2006,s:"missing"},
+  {r:187,t:"The Big Country",y:1958,s:"missing"},
+  {r:188,t:"School of Rock",y:2003,s:"missing"},
+  {r:189,t:"Ghostbusters",y:1984,s:"missing"},
+  {r:190,t:"Big",y:1988,s:"missing"},
+  {r:191,t:"Brokeback Mountain",y:2005,s:"missing"},
+  {r:192,t:"Eraserhead",y:1977,s:"missing"},
+  {r:193,t:"Ed Wood",y:1994,s:"missing"},
+  {r:194,t:"Bicycle Thieves",y:1948,s:"missing"},
+  {r:195,t:"It's a Wonderful Life",y:1946,s:"missing"},
+  {r:196,t:"Amélie",y:2001,s:"missing"},
+  {r:197,t:"Point Break",y:1991,s:"missing"},
+  {r:198,t:"Fargo",y:1996,s:"missing"},
+  {r:199,t:"The Texas Chain Saw Massacre",y:1974,s:"missing"},
+  {r:200,t:"Before Sunrise",y:1995,s:"missing"},
+  {r:201,t:"JFK",y:1991,s:"missing"},
+  {r:202,t:"The Killer",y:1989,s:"missing"},
+  {r:203,t:"Monty Python's Life of Brian",y:1979,s:"missing"},
+  {r:204,t:"Bride of Frankenstein",y:1935,s:"missing"},
+  {r:205,t:"The Addiction",y:1995,s:"missing"},
+  {r:206,t:"The Exorcist",y:1973,s:"missing"},
+  {r:207,t:"The Misfits",y:1961,s:"missing"},
+  {r:208,t:"The Departed",y:2006,s:"missing"},
+  {r:209,t:"Local Hero",y:1983,s:"missing"},
+  {r:210,t:"Platoon",y:1986,s:"missing"},
+  {r:211,t:"Moulin Rouge!",y:2001,s:"missing"},
+  {r:212,t:"M",y:1931,s:"missing"},
+  {r:213,t:"Songs from the Second Floor",y:2000,s:"missing"},
+  {r:214,t:"Army of Shadows",y:1969,s:"missing"},
+  {r:215,t:"Jackie Brown",y:1997,s:"missing"},
+  {r:216,t:"Sunday Bloody Sunday",y:1971,s:"missing"},
+  {r:217,t:"The Magnificent Seven",y:1960,s:"missing"},
+  {r:218,t:"Monsieur Hulot's Holiday",y:1953,s:"missing"},
+  {r:219,t:"The Outlaw Josey Wales",y:1976,s:"missing"},
+  {r:220,t:"Far from Heaven",y:2002,s:"missing"},
+  {r:221,t:"McCabe & Mrs. Miller",y:1971,s:"missing"},
+  {r:222,t:"Mother and Son",y:1997,s:"missing"},
+  {r:223,t:"Safe",y:1995,s:"missing"},
+  {r:224,t:"Distant Voices, Still Lives",y:1988,s:"missing"},
+  {r:225,t:"Get Carter",y:1971,s:"missing"},
+  {r:226,t:"Romeo + Juliet",y:1996,s:"missing"},
+  {r:227,t:"Léon: The Professional",y:1994,s:"missing"},
+  {r:228,t:"No Country for Old Men",y:2007,s:"missing"},
+  {r:229,t:"The Celebration",y:1998,s:"missing"},
+  {r:230,t:"Howl's Moving Castle",y:2004,s:"missing"},
+  {r:231,t:"Shaun of the Dead",y:2004,s:"missing"},
+  {r:232,t:"Jurassic Park",y:1993,s:"missing"},
+  {r:233,t:"Indiana Jones and the Temple of Doom",y:1984,s:"missing"},
+  {r:234,t:"The Bourne Ultimatum",y:2007,s:"missing"},
+  {r:235,t:"Battle Royale",y:2000,s:"missing"},
+  {r:236,t:"Black Narcissus",y:1947,s:"missing"},
+  {r:237,t:"Delicatessen",y:1991,s:"missing"},
+  {r:238,t:"Requiem for a Dream",y:2000,s:"missing"},
+  {r:239,t:"Cinema Paradiso",y:1988,s:"missing"},
+  {r:240,t:"Forrest Gump",y:1994,s:"missing"},
+  {r:241,t:"Brighton Rock",y:1948,s:"missing"},
+  {r:242,t:"King Kong",y:1933,s:"missing"},
+  {r:243,t:"Heimat: A Chronicle of Germany",y:1984,s:"missing"},
+  {r:244,t:"Dazed and Confused",y:1993,s:"missing"},
+  {r:245,t:"Downfall",y:2004,s:"missing"},
+  {r:246,t:"The Philadelphia Story",y:1940,s:"missing"},
+  {r:247,t:"All That Jazz",y:1979,s:"missing"},
+  {r:248,t:"Pandora's Box",y:1929,s:"missing"},
+  {r:249,t:"My Darling Clementine",y:1946,s:"missing"},
+  {r:250,t:"Sunrise: A Song of Two Humans",y:1927,s:"missing"},
+  {r:251,t:"Darling",y:1965,s:"missing"},
+  {r:252,t:"The Leopard",y:1963,s:"missing"},
+  {r:253,t:"First Blood",y:1982,s:"missing"},
+  {r:254,t:"The Verdict",y:1982,s:"missing"},
+  {r:255,t:"Ninotchka",y:1939,s:"missing"},
+  {r:256,t:"Port of Shadows",y:1938,s:"missing"},
+  {r:257,t:"The Black Cat",y:1934,s:"missing"},
+  {r:258,t:"The Blues Brothers",y:1980,s:"missing"},
+  {r:259,t:"Groundhog Day",y:1993,s:"missing"},
+  {r:260,t:"Field of Dreams",y:1989,s:"missing"},
+  {r:261,t:"Roman Holiday",y:1953,s:"missing"},
+  {r:262,t:"The Virgin Suicides",y:1999,s:"missing"},
+  {r:263,t:"Das Boot",y:1981,s:"missing"},
+  {r:264,t:"American Graffiti",y:1973,s:"missing"},
+  {r:265,t:"A.I. Artificial Intelligence",y:2001,s:"missing"},
+  {r:266,t:"Ghost World",y:2001,s:"missing"},
+  {r:267,t:"Crimes and Misdemeanors",y:1989,s:"missing"},
+  {r:268,t:"The Lady Vanishes",y:1938,s:"missing"},
+  {r:269,t:"A Place in the Sun",y:1951,s:"missing"},
+  {r:270,t:"The Death of Mr. Lazarescu",y:2005,s:"missing"},
+  {r:271,t:"Pee-wee's Big Adventure",y:1985,s:"missing"},
+  {r:272,t:"The Bird with the Crystal Plumage",y:1970,s:"missing"},
+  {r:273,t:"The Maltese Falcon",y:1941,s:"missing"},
+  {r:274,t:"Sin City",y:2005,s:"missing"},
+  {r:275,t:"My Neighbor Totoro",y:1988,s:"missing"},
+  {r:276,t:"Layer Cake",y:2004,s:"missing"},
+  {r:277,t:"On the Town",y:1949,s:"missing"},
+  {r:278,t:"Carlito's Way",y:1993,s:"missing"},
+  {r:279,t:"National Lampoon's Animal House",y:1978,s:"missing"},
+  {r:280,t:"Mad Max 2: The Road Warrior",y:1981,s:"missing"},
+  {r:281,t:"Interview with the Vampire",y:1994,s:"missing"},
+  {r:282,t:"The Godfather Part III",y:1990,s:"missing"},
+  {r:283,t:"Ran",y:1985,s:"missing"},
+  {r:284,t:"Scarface",y:1983,s:"missing"},
+  {r:285,t:"Solaris",y:1972,s:"missing"},
+  {r:286,t:"L'Avventura",y:1960,s:"missing"},
+  {r:287,t:"Secrets & Lies",y:1996,s:"missing"},
+  {r:288,t:"Who Framed Roger Rabbit",y:1988,s:"missing"},
+  {r:289,t:"The Thing",y:1982,s:"missing"},
+  {r:290,t:"Rashomon",y:1950,s:"missing"},
+  {r:291,t:"Rocco and His Brothers",y:1960,s:"missing"},
+  {r:292,t:"Beauty and the Beast",y:1946,s:"missing"},
+  {r:293,t:"The Mother and the Whore",y:1973,s:"missing"},
+  {r:294,t:"The Red Balloon",y:1956,s:"missing"},
+  {r:295,t:"The Untouchables",y:1987,s:"missing"},
+  {r:296,t:"All the President's Men",y:1976,s:"missing"},
+  {r:297,t:"It Happened One Night",y:1934,s:"missing"},
+  {r:298,t:"The Red Circle",y:1970,s:"missing"},
+  {r:299,t:"The Palm Beach Story",y:1942,s:"missing"},
+  {r:300,t:"Sawdust and Tinsel",y:1953,s:"missing"},
+  {r:301,t:"Love and Death",y:1975,s:"missing"},
+  {r:302,t:"The Best Years of Our Lives",y:1946,s:"missing"},
+  {r:303,t:"Together",y:2000,s:"missing"},
+  {r:304,t:"Radio Days",y:1987,s:"missing"},
+  {r:305,t:"The Prestige",y:2006,s:"missing"},
+  {r:306,t:"Indiana Jones and the Last Crusade",y:1989,s:"missing"},
+  {r:307,t:"Midnight Cowboy",y:1969,s:"missing"},
+  {r:308,t:"The Terminator",y:1984,s:"missing"},
+  {r:309,t:"Transformers",y:2007,s:"missing"},
+  {r:310,t:"Gremlins",y:1984,s:"missing"},
+  {r:311,t:"American History X",y:1998,s:"missing"},
+  {r:312,t:"Suspiria",y:1977,s:"missing"},
+  {r:313,t:"Battleship Potemkin",y:1925,s:"missing"},
+  {r:314,t:"Sweet Smell of Success",y:1957,s:"missing"},
+  {r:315,t:"Sense and Sensibility",y:1995,s:"missing"},
+  {r:316,t:"Trainspotting",y:1996,s:"missing"},
+  {r:317,t:"Midnight Run",y:1988,s:"missing"},
+  {r:318,t:"Rebecca",y:1940,s:"missing"},
+  {r:319,t:"The Lion King",y:1994,s:"missing"},
+  {r:320,t:"Braveheart",y:1995,s:"missing"},
+  {r:321,t:"Funny Face",y:1957,s:"missing"},
+  {r:322,t:"Aladdin",y:1992,s:"missing"},
+  {r:323,t:"The Last Seduction",y:1994,s:"missing"},
+  {r:324,t:"Lone Star",y:1996,s:"missing"},
+  {r:325,t:"Kill Bill: Vol. 1",y:2003,s:"missing"},
+  {r:326,t:"Out of Sight",y:1998,s:"missing"},
+  {r:327,t:"The Nightmare Before Christmas",y:1993,s:"missing"},
+  {r:328,t:"The Truman Show",y:1998,s:"missing"},
+  {r:329,t:"The Lives of Others",y:2006,s:"missing"},
+  {r:330,t:"Revenge of the Sith",y:2005,s:"missing"},
+  {r:331,t:"The Green Mile",y:1999,s:"missing"},
+  {r:332,t:"The Sixth Sense",y:1999,s:"missing"},
+  {r:333,t:"Grease",y:1978,s:"missing"},
+  {r:334,t:"The Magnificent Ambersons",y:1942,s:"missing"},
+  {r:335,t:"The Seventh Seal",y:1957,s:"missing"},
+  {r:336,t:"Titanic",y:1997,s:"missing"},
+  {r:337,t:"300",y:2006,s:"missing"},
+  {r:338,t:"Jules and Jim",y:1962,s:"missing"},
+  {r:339,t:"Spirited Away",y:2001,s:"missing"},
+  {r:340,t:"High and Low",y:1963,s:"missing"},
+  {r:341,t:"The Passenger",y:1975,s:"missing"},
+  {r:342,t:"The Gold Rush",y:1925,s:"missing"},
+  {r:343,t:"Monsters, Inc.",y:2001,s:"missing"},
+  {r:344,t:"The Last Waltz",y:1978,s:"missing"},
+  {r:345,t:"Fatal Attraction",y:1987,s:"missing"},
+  {r:346,t:"Leave Her to Heaven",y:1945,s:"missing"},
+  {r:347,t:"All About Eve",y:1950,s:"missing"},
+  {r:348,t:"Au hasard Balthazar",y:1966,s:"missing"},
+  {r:349,t:"Arthur",y:1981,s:"missing"},
+  {r:350,t:"Planet of the Apes",y:1968,s:"missing"},
+  {r:351,t:"Zulu",y:1964,s:"missing"},
+  {r:352,t:"Unfaithfully Yours",y:1948,s:"missing"},
+  {r:353,t:"Bugsy Malone",y:1976,s:"missing"},
+  {r:354,t:"Un chien andalou",y:1929,s:"missing"},
+  {r:355,t:"Sunshine",y:2007,s:"missing"},
+  {r:356,t:"Napoleon",y:1927,s:"missing"},
+  {r:357,t:"The Long Goodbye",y:1973,s:"missing"},
+  {r:358,t:"Russian Ark",y:2002,s:"missing"},
+  {r:359,t:"The Lady Eve",y:1941,s:"missing"},
+  {r:360,t:"The Return",y:2003,s:"missing"},
+  {r:361,t:"Clerks",y:1994,s:"missing"},
+  {r:362,t:"The Elephant Man",y:1980,s:"missing"},
+  {r:363,t:"Good Morning, Vietnam",y:1987,s:"missing"},
+  {r:364,t:"Natural Born Killers",y:1994,s:"missing"},
+  {r:365,t:"The Bourne Identity",y:2002,s:"missing"},
+  {r:366,t:"Predator",y:1987,s:"missing"},
+  {r:367,t:"Cabaret",y:1972,s:"missing"},
+  {r:368,t:"Airplane!",y:1980,s:"missing"},
+  {r:369,t:"The Breakfast Club",y:1985,s:"missing"},
+  {r:370,t:"Rocky",y:1976,s:"missing"},
+  {r:371,t:"Pirates of the Caribbean: The Curse of the Black Pearl",y:2003,s:"missing"},
+  {r:372,t:"Army of Darkness",y:1992,s:"missing"},
+  {r:373,t:"WALL·E",y:2008,s:"missing"},
+  {r:374,t:"Hot Fuzz",y:2007,s:"missing"},
+  {r:375,t:"Four Weddings and a Funeral",y:1994,s:"missing"},
+  {r:376,t:"Zodiac",y:2007,s:"missing"},
+  {r:377,t:"Mean Streets",y:1973,s:"missing"},
+  {r:378,t:"The Goonies",y:1985,s:"missing"},
+  {r:379,t:"Ratatouille",y:2007,s:"missing"},
+  {r:380,t:"Children of Men",y:2006,s:"missing"},
+  {r:381,t:"Monty Python and the Holy Grail",y:1975,s:"missing"},
+  {r:382,t:"Caché",y:2005,s:"missing"},
+  {r:383,t:"Serenity",y:2005,s:"missing"},
+  {r:384,t:"The Shop Around the Corner",y:1940,s:"missing"},
+  {r:385,t:"Ace in the Hole",y:1951,s:"missing"},
+  {r:386,t:"The Great Silence",y:1968,s:"missing"},
+  {r:387,t:"Rain Man",y:1988,s:"missing"},
+  {r:388,t:"The English Patient",y:1996,s:"missing"},
+  {r:389,t:"Election",y:1999,s:"missing"},
+  {r:390,t:"Two Days in Paris",y:2007,s:"missing"},
+  {r:391,t:"Mulholland Drive",y:2001,s:"missing"},
+  {r:392,t:"Paris, Texas",y:1984,s:"missing"},
+  {r:393,t:"Garden State",y:2004,s:"missing"},
+  {r:394,t:"Cloverfield",y:2008,s:"missing"},
+  {r:395,t:"Casino",y:1995,s:"missing"},
+  {r:396,t:"The Assassination of Jesse James by the Coward Robert Ford",y:2007,s:"missing"},
+  {r:397,t:"Night of the Living Dead",y:1968,s:"missing"},
+  {r:398,t:"Killer of Sheep",y:1978,s:"missing"},
+  {r:399,t:"Greed",y:1924,s:"missing"},
+  {r:400,t:"The Incredibles",y:2004,s:"missing"},
+  {r:401,t:"Batman Returns",y:1992,s:"missing"},
+  {r:402,t:"Little Miss Sunshine",y:2006,s:"missing"},
+  {r:403,t:"Do the Right Thing",y:1989,s:"missing"},
+  {r:404,t:"RoboCop",y:1987,s:"missing"},
+  {r:405,t:"Dirty Dancing",y:1987,s:"missing"},
+  {r:406,t:"Iron Man",y:2008,s:"missing"},
+  {r:407,t:"The Jungle Book",y:1967,s:"missing"},
+  {r:408,t:"Zelig",y:1983,s:"missing"},
+  {r:409,t:"Men in Black",y:1997,s:"missing"},
+  {r:410,t:"A Hard Day's Night",y:1964,s:"missing"},
+  {r:411,t:"Spider-Man 2",y:2004,s:"missing"},
+  {r:412,t:"Heathers",y:1989,s:"missing"},
+  {r:413,t:"Finding Nemo",y:2003,s:"missing"},
+  {r:414,t:"The Double Life of Véronique",y:1991,s:"missing"},
+  {r:415,t:"Dawn of the Dead",y:1978,s:"missing"},
+  {r:416,t:"Bad Taste",y:1987,s:"missing"},
+  {r:417,t:"Lords of Dogtown",y:2005,s:"missing"},
+  {r:418,t:"V for Vendetta",y:2005,s:"missing"},
+  {r:419,t:"Days of Heaven",y:1978,s:"missing"},
+  {r:420,t:"Jerry Maguire",y:1996,s:"missing"},
+  {r:421,t:"Lethal Weapon",y:1987,s:"missing"},
+  {r:422,t:"A Man Escaped",y:1956,s:"missing"},
+  {r:423,t:"Kill Bill: Vol. 2",y:2004,s:"missing"},
+  {r:424,t:"To Have and Have Not",y:1944,s:"missing"},
+  {r:425,t:"Wonder Boys",y:2000,s:"missing"},
+  {r:426,t:"Enduring Love",y:2004,s:"missing"},
+  {r:427,t:"Spring in a Small Town",y:1948,s:"missing"},
+  {r:428,t:"The Enigma of Kaspar Hauser",y:1974,s:"missing"},
+  {r:429,t:"Danger: Diabolik",y:1968,s:"missing"},
+  {r:430,t:"Big Trouble in Little China",y:1986,s:"missing"},
+  {r:431,t:"Electra Glide in Blue",y:1973,s:"missing"},
+  {r:432,t:"X2: X-Men United",y:2003,s:"missing"},
+  {r:433,t:"Good Will Hunting",y:1997,s:"missing"},
+  {r:434,t:"The Cat Concerto",y:1947,s:"missing"},
+  {r:435,t:"American Psycho",y:2000,s:"missing"},
+  {r:436,t:"Beauty and the Beast",y:1991,s:"missing"},
+  {r:437,t:"Spider-Man",y:2002,s:"missing"},
+  {r:438,t:"The Lost Boys",y:1987,s:"missing"},
+  {r:439,t:"Grosse Pointe Blank",y:1997,s:"missing"},
+  {r:440,t:"Akira",y:1988,s:"missing"},
+  {r:441,t:"Being John Malkovich",y:1999,s:"missing"},
+  {r:442,t:"Atonement",y:2007,s:"missing"},
+  {r:443,t:"Dog Day Afternoon",y:1975,s:"missing"},
+  {r:444,t:"Hairspray",y:1988,s:"missing"},
+  {r:445,t:"Dumb and Dumber",y:1994,s:"missing"},
+  {r:446,t:"High Fidelity",y:2000,s:"missing"},
+  {r:447,t:"Ten",y:2002,s:"missing"},
+  {r:448,t:"A History of Violence",y:2005,s:"missing"},
+  {r:449,t:"The Phantom Menace",y:1999,s:"missing"},
+  {r:450,t:"King Kong",y:2005,s:"missing"},
+  {r:451,t:"Speed",y:1994,s:"missing"},
+  {r:452,t:"Unbreakable",y:2000,s:"missing"},
+  {r:453,t:"Indiana Jones and the Kingdom of the Crystal Skull",y:2008,s:"missing"},
+  {r:454,t:"The Bourne Supremacy",y:2004,s:"missing"},
+  {r:455,t:"Top Gun",y:1986,s:"missing"},
+  {r:456,t:"28 Days Later",y:2002,s:"missing"},
+  {r:457,t:"Full Metal Jacket",y:1987,s:"missing"},
+  {r:458,t:"Batman",y:1989,s:"missing"},
+  {r:459,t:"Ikiru",y:1952,s:"missing"},
+  {r:460,t:"Crash",y:2004,s:"missing"},
+  {r:461,t:"Halloween",y:1978,s:"missing"},
+  {r:462,t:"Dead Man's Shoes",y:2004,s:"missing"},
+  {r:463,t:"Juno",y:2007,s:"missing"},
+  {r:464,t:"Seven Brides for Seven Brothers",y:1954,s:"missing"},
+  {r:465,t:"12 Monkeys",y:1995,s:"missing"},
+  {r:466,t:"Snatch",y:2000,s:"missing"},
+  {r:467,t:"The Deer Hunter",y:1978,s:"missing"},
+  {r:468,t:"The Crow",y:1994,s:"missing"},
+  {r:469,t:"Fear and Loathing in Las Vegas",y:1998,s:"missing"},
+  {r:470,t:"Glengarry Glen Ross",y:1992,s:"missing"},
+  {r:471,t:"Harry Potter and the Prisoner of Azkaban",y:2004,s:"missing"},
+  {r:472,t:"Le Doulos",y:1962,s:"missing"},
+  {r:473,t:"Into the Wild",y:2007,s:"missing"},
+  {r:474,t:"Enter the Dragon",y:1973,s:"missing"},
+  {r:475,t:"Pirates of the Caribbean: Dead Man's Chest",y:2006,s:"missing"},
+  {r:476,t:"Santa Sangre",y:1989,s:"missing"},
+  {r:477,t:"Rebel Without a Cause",y:1955,s:"missing"},
+  {r:478,t:"Flesh",y:1968,s:"missing"},
+  {r:479,t:"The Secret Life of Walter Mitty",y:1947,s:"missing"},
+  {r:480,t:"The Son's Room",y:2001,s:"missing"},
+  {r:481,t:"Topsy-Turvy",y:1999,s:"missing"},
+  {r:482,t:"Scream",y:1996,s:"missing"},
+  {r:483,t:"The Big Red One",y:1980,s:"missing"},
+  {r:484,t:"The Fountain",y:2006,s:"missing"},
+  {r:485,t:"The Wicker Man",y:1973,s:"missing"},
+  {r:486,t:"Breakfast at Tiffany's",y:1961,s:"missing"},
+  {r:487,t:"Superbad",y:2007,s:"missing"},
+  {r:488,t:"Princess Mononoke",y:1997,s:"missing"},
+  {r:489,t:"Brick",y:2005,s:"missing"},
+  {r:490,t:"Sweeney Todd: The Demon Barber of Fleet Street",y:2007,s:"missing"},
+  {r:491,t:"Ben-Hur",y:1959,s:"missing"},
+  {r:492,t:"Amores Perros",y:2000,s:"missing"},
+  {r:493,t:"In the Company of Men",y:1997,s:"missing"},
+  {r:494,t:"Sideways",y:2004,s:"missing"},
+  {r:495,t:"Jailhouse Rock",y:1957,s:"missing"},
+  {r:496,t:"Superman Returns",y:2006,s:"missing"},
+  {r:497,t:"Crouching Tiger, Hidden Dragon",y:2000,s:"missing"},
+  {r:498,t:"Back to the Future Part II",y:1989,s:"missing"},
+  {r:499,t:"Saw",y:2004,s:"missing"},
+  {r:500,t:"Ocean's Eleven",y:2001,s:"missing"},
+];
+
+let currentFilter = 'all';
+let currentSort = 'rank';
+let searchQ = '';
+
+function setFilter(f) {
+  currentFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.className = 'filter-btn';
+    if(b.dataset.filter === f) b.classList.add('active-'+f);
+  });
+  render();
+}
+
+function setSort(s) {
+  currentSort = s;
+  document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('sort-'+s).classList.add('active');
+  render();
+}
+
+function onSearch() {
+  searchQ = document.getElementById('search-input').value.toLowerCase();
+  render();
+}
+
+function render() {
+  let films = [...FILMS];
+  if(currentFilter !== 'all') films = films.filter(f => f.s === currentFilter);
+  if(searchQ) films = films.filter(f => f.t.toLowerCase().includes(searchQ) || String(f.y).includes(searchQ));
+  if(currentSort === 'year') films.sort((a,b) => a.y - b.y);
+  else if(currentSort === 'title') films.sort((a,b) => a.t.localeCompare(b.t));
+  else films.sort((a,b) => a.r - b.r);
+
+  const listEl = document.getElementById('film-list');
+  document.getElementById('count-display').textContent =
+    `Showing ${films.length} film${films.length!==1?'s':''}`;
+
+  listEl.innerHTML = films.map(f => `
+    <a class="film-item status-${f.s}" href="${f.lb||('https://letterboxd.com/film/'+f.t.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9\s-]/g,'').trim().replace(/\s+/g,'-')+'/')}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+      <span class="rank">${f.r}</span>
+      <div class="film-info">
+        <div class="film-title${f.s==='missing'?' faded':''}">${f.t}</div>
+        <div class="film-year">${f.y}</div>
+      </div>
+      <span class="status-pill pill-${f.s}">${f.s==='owned'?'owned':f.s==='wishlist'?'wish':'—'}</span>
+    </a>
+  `).join('');
+}
+
+render();
+
+// ===== Auto-sync statuses & links from collection.json / wishlist.json =====
+function lbNorm(s){return (s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');}
+const LB_ALIAS={dreams:'akirakurosawasdreams',jointsecurityarea:'jsajointsecurityarea'};
+function lbCounts(){
+  const nOwned=FILMS.filter(f=>f.s==='owned').length,nWish=FILMS.filter(f=>f.s==='wishlist').length,nMiss=FILMS.filter(f=>f.s==='missing').length;
+  document.getElementById('count-owned').textContent=nOwned;
+  document.getElementById('count-wishlist').textContent=nWish;
+  document.getElementById('count-missing').textContent=nMiss;
+  document.getElementById('count-pct').textContent=Math.round(nOwned*100/FILMS.length)+'%';
+  document.getElementById('prog-owned').style.width=(nOwned*100/FILMS.length)+'%';
+  document.getElementById('prog-wishlist').style.width=(nWish*100/FILMS.length)+'%';
+}
+async function lbSync(){
+  try{
+    const [c,w]=await Promise.all(['collection.json','wishlist.json'].map(u=>fetch(u+'?v='+Date.now()).then(r=>{if(!r.ok)throw 0;return r.json();})));
+    const idx=a=>(Array.isArray(a)?a:(a.films||[])).map(d=>({n:lbNorm(d.title),y:d.year,lb:d.lb}));
+    const ci=idx(c),wi=idx(w);
+    const find=(list,f)=>{const k=LB_ALIAS[lbNorm(f.t)]||lbNorm(f.t);return list.find(d=>(d.n===k||(k.length>=10&&d.n.startsWith(k)))&&Math.abs(d.y-f.y)<=2);};
+    FILMS.forEach(f=>{const o=find(ci,f),wl=o?null:find(wi,f);f.s=o?'owned':wl?'wishlist':'missing';f.lb=(o||wl||{}).lb||f.lb;});
+    lbCounts();render();
+  }catch(e){console.warn('empire500 sync skipped (using built-in statuses)',e);}
+}
+lbSync();
+document.addEventListener("visibilitychange",()=>{document.hidden||lbSync()});
+window.addEventListener("pageshow",e=>{e.persisted&&lbSync()});
+if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').then(r=>r.update()).catch(()=>{}));
+lbCounts();
+</script>
+<style>#ownFab{bottom:calc(16px + env(safe-area-inset-bottom))}</style>
+<script>
+(function(){
+  function go(f){
+    var b=document.querySelector("[onclick*=\"setFilter('all'\"]"); if(b) b.click();
+    var el=document.getElementById('search-input'); if(el){el.value=f.title; onSearch();}
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  window.OWN_ADAPTER={
+    getTop500:function(){return typeof FILMS!=='undefined'?FILMS.map(function(f){return{title:f.t,year:f.y,rank:f.r,status:f.s}}):[]},
+    alias:typeof LB_ALIAS!=='undefined'?LB_ALIAS:{},
+    openOwned:go,openWanted:go,openTop:go
+  };
+})();
+</script>
+<script src="ownsearch.js"></script>
+</body>
+</html>

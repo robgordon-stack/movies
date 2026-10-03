@@ -1539,6 +1539,7 @@ window.OWN_ADAPTER={getOwned:function(){return typeof C!=='undefined'?C:[]},open
   <button class="lm-i" role="menuitem" onclick="openList('lb500')"><b>Letterboxd Top 500</b><span>500 films · opens here</span></button>
   <button class="lm-i" role="menuitem" onclick="openList('imdb250')"><b>IMDb Top 250</b><span>250 films · top rated</span></button>
   <hr>
+  <button class="lm-i" role="menuitem" onclick="openList('empire500')"><b>Empire’s 500 Greatest</b><span>500 films · 2008</span></button>
   <button class="lm-i" role="menuitem" onclick="openList('critics')"><b>Sight &amp; Sound · Critics</b><span>2022 poll · 264 films</span></button>
   <button class="lm-i" role="menuitem" onclick="openList('directors')"><b>Sight &amp; Sound · Directors</b><span>2022 poll · 104 films</span></button>
 </div>
@@ -1558,7 +1559,7 @@ function closeListsMenu(){
 }
 function openList(k){
   closeListsMenu();
-  if(k==='lb500')switchTab('lb500');else if(k==='imdb250')location.href='imdb250.html';else location.href='sightsound.html#'+k;
+  if(k==='lb500')switchTab('lb500');else if(k==='imdb250')location.href='imdb250.html';else if(k==='empire500')location.href='empire500.html';else location.href='sightsound.html#'+k;
 }
 document.addEventListener('click',function(e){if(!e.target.closest('#listsMenu,#lb500-btn'))closeListsMenu()});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeListsMenu()});
