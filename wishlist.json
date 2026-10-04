@@ -6,9 +6,9 @@
     "director": "Ken Russell",
     "poster": "https://m.media-amazon.com/images/M/MV5BYjQzYzFmNmUtMWVkNS00MmU1LTkyMzUtYzhmNjIwM2ZjOWZmXkEyXkFqcGc@._V1_SX300.jpg",
     "imdb_id": "tt0066993",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Drama, Horror",
+    "country": "Uk",
+    "runtime": 111,
     "priority": "High",
     "notes": null,
     "owned": false,
@@ -40,9 +40,9 @@
     "director": "Shane Black",
     "poster": "https://m.media-amazon.com/images/M/MV5BMTY5NDExMDA3M15BMl5BanBnXkFtZTYwNTc2MzA3._V1_SX300.jpg",
     "imdb_id": "tt0373469",
-    "genre": null,
-    "country": null,
-    "runtime": null,
+    "genre": "Comedy, Crime, Mystery",
+    "country": "Usa",
+    "runtime": 103,
     "priority": "High",
     "notes": null,
     "owned": false,
@@ -1148,7 +1148,7 @@
     "imdb_score": 7.4,
     "rt_score": 1,
     "mc_score": 100,
-    "score": 8.6,
+    "score": 8.9,
     "tmdb_id": 104237,
     "synopsis": "China, year 1457. The Minister of Defense is executed, and his children are sentenced to exile by order of the tyrannical Tsao. Fearful of future revenge from the young people, Tsao sends cruel soldiers to murder them, but a brave group of swordsmen can change the course of the battle at the Dragon Inn.",
     "cast": [
@@ -1818,7 +1818,7 @@
     "added": 1780709036314,
     "tmdb_id": 10386,
     "imdb_score": 8,
-    "score": 8,
+    "score": 8.7,
     "similar": [
       {
         "title": "Strange World",
@@ -1863,7 +1863,7 @@
     "added": 1780709025581,
     "tmdb_id": 110416,
     "imdb_score": 8,
-    "score": 8,
+    "score": 8.8,
     "similar": [
       {
         "title": "The Secret of Kells",
@@ -1913,7 +1913,7 @@
     "added": 1780709014781,
     "tmdb_id": 39056,
     "imdb_score": 7.7,
-    "score": 7.7,
+    "score": 8.1,
     "similar": [
       {
         "title": "Lucky Them",
@@ -1957,7 +1957,7 @@
     "added": 1780709003047,
     "tmdb_id": 1244492,
     "imdb_score": 8.1,
-    "score": 8.1,
+    "score": 8.9,
     "similar": [
       {
         "title": "From Up on Poppy Hill",
@@ -2001,7 +2001,7 @@
     "added": 1780708990699,
     "tmdb_id": 396,
     "imdb_score": 7.7,
-    "score": 7.7,
+    "score": 8.6,
     "similar": [
       {
         "title": "Othello",
@@ -2042,7 +2042,7 @@
     "added": 1780708971980,
     "tmdb_id": 29452,
     "imdb_score": 7.8,
-    "score": 7.8,
+    "score": 8.3,
     "similar": [
       {
         "title": "Shin Kamen Rider",
@@ -2092,7 +2092,7 @@
     "added": 1780708915298,
     "tmdb_id": 43976,
     "imdb_score": 7.6,
-    "score": 7.6,
+    "score": 8.3,
     "similar": [
       {
         "title": "Blindspotting",
@@ -2237,7 +2237,7 @@
     "added": 1780708565100,
     "tmdb_id": 600354,
     "imdb_score": 8.1,
-    "score": 8.1,
+    "score": 8.8,
     "similar": [
       {
         "title": "Still Life",
@@ -2281,7 +2281,7 @@
     "added": 1780708549201,
     "tmdb_id": 76,
     "imdb_score": 8,
-    "score": 8,
+    "score": 8.9,
     "similar": [
       {
         "title": "The Illusionist",
@@ -2327,7 +2327,7 @@
     "added": 1780708491368,
     "tmdb_id": 18491,
     "imdb_score": 8.3,
-    "score": 8.3,
+    "score": 8.8,
     "similar": [
       {
         "title": "Evangelion: 3.0+1.0 Thrice Upon a Time",
@@ -2377,7 +2377,7 @@
     "added": 1780708439552,
     "tmdb_id": 489412,
     "imdb_score": 7.9,
-    "score": 7.9,
+    "score": 8.9,
     "similar": [
       {
         "title": "Elio",
@@ -2419,7 +2419,7 @@
     "added": 1780708406984,
     "tmdb_id": 1103621,
     "imdb_score": 8.1,
-    "score": 8.1,
+    "score": 8.9,
     "similar": [
       {
         "title": "Mr. Church",
@@ -2469,7 +2469,7 @@
     "added": 1780708386919,
     "tmdb_id": 42229,
     "imdb_score": 8,
-    "score": 8,
+    "score": 8.9,
     "similar": [
       {
         "title": "Head in the Clouds",
@@ -2519,7 +2519,7 @@
     "added": 1780708369468,
     "tmdb_id": 1000837,
     "imdb_score": 7.9,
-    "score": 7.9,
+    "score": 8.5,
     "similar": [
       {
         "title": "Central Station",
@@ -2669,7 +2669,7 @@
     "added": 1780708299901,
     "tmdb_id": 265177,
     "imdb_score": 8.2,
-    "score": 8.2,
+    "score": 8.6,
     "similar": [
       {
         "title": "20th Century Women",
@@ -2758,7 +2758,7 @@
     "added": 1780708155868,
     "tmdb_id": 666,
     "imdb_score": 8.1,
-    "score": 8.1,
+    "score": 8.7,
     "similar": [
       {
         "title": "The Emerald Forest",
@@ -2852,7 +2852,7 @@
     "added": 1780708099234,
     "tmdb_id": 821,
     "imdb_score": 8,
-    "score": 8,
+    "score": 8.7,
     "similar": [
       {
         "title": "The Eichmann Show",
@@ -2902,7 +2902,7 @@
     "added": 1780707934504,
     "tmdb_id": 1480382,
     "imdb_score": 8.1,
-    "score": 8.1,
+    "score": 8.8,
     "similar": [
       {
         "title": "Exodus",
@@ -2950,7 +2950,7 @@
     "added": 1780707882303,
     "tmdb_id": 24858,
     "imdb_score": 7.8,
-    "score": 7.8,
+    "score": 8.7,
     "similar": [
       {
         "title": "Mr. Church",
@@ -2998,7 +2998,7 @@
     "added": 1780707839588,
     "tmdb_id": 36592,
     "imdb_score": 7.9,
-    "score": 7.9,
+    "score": 8.4,
     "similar": [
       {
         "title": "K-ON! The Movie",
@@ -3041,7 +3041,7 @@
     "owned": false,
     "added": 1780482483721,
     "tmdb_id": 1643,
-    "score": 7.5,
+    "score": 7.9,
     "imdb_score": 7.4,
     "lb_score": 3.8,
     "rt_score": 0.88,
@@ -3090,7 +3090,7 @@
     "owned": false,
     "added": 1780482469871,
     "tmdb_id": 81,
-    "score": 8.9,
+    "score": 8.6,
     "imdb_score": 8.1,
     "lb_score": 4.4,
     "rt_score": 0.9,
@@ -3142,7 +3142,7 @@
     "owned": false,
     "added": 1780482456489,
     "tmdb_id": 113,
-    "score": 8.2,
+    "score": 8.6,
     "imdb_score": 7.9,
     "lb_score": 4.1,
     "rt_score": 0.96,
@@ -3194,7 +3194,7 @@
     "owned": false,
     "added": 1780482435489,
     "tmdb_id": 26191,
-    "score": 7.8,
+    "score": 8.1,
     "imdb_score": 7.3,
     "lb_score": 3.9,
     "rt_score": 0.91,
@@ -3492,7 +3492,7 @@
     "owned": false,
     "added": 1780482329536,
     "tmdb_id": 1626,
-    "score": 8.2,
+    "score": 8.5,
     "imdb_score": 7.8,
     "lb_score": 4.1,
     "rt_score": 0.96,
@@ -3587,7 +3587,7 @@
     "owned": false,
     "added": 1780482295320,
     "tmdb_id": 473019,
-    "score": 7.7,
+    "score": 8.0,
     "imdb_score": 6.8,
     "lb_score": 3.8,
     "rt_score": 0.96,
@@ -3682,7 +3682,7 @@
     "owned": false,
     "added": 1780482248069,
     "tmdb_id": 81401,
-    "score": 8.4,
+    "score": 8.1,
     "imdb_score": 7.6,
     "lb_score": 4.2,
     "rt_score": 0.84,
@@ -3731,7 +3731,7 @@
     "owned": false,
     "added": 1780482229569,
     "tmdb_id": 5336,
-    "score": 7.8,
+    "score": 6.9,
     "imdb_score": 6.1,
     "lb_score": 3.5,
     "rt_score": 0.77,
@@ -3783,7 +3783,7 @@
     "owned": false,
     "added": 1780482215903,
     "tmdb_id": 12491,
-    "score": 7.9,
+    "score": 8.2,
     "imdb_score": 7.4,
     "lb_score": 3.9,
     "rt_score": 0.94,
@@ -3828,7 +3828,7 @@
     "owned": false,
     "added": 1780482186736,
     "tmdb_id": 24192,
-    "score": 8.2,
+    "score": 8.6,
     "imdb_score": 7.9,
     "lb_score": 4.1,
     "rt_score": 0.97,
@@ -3880,7 +3880,7 @@
     "owned": false,
     "added": 1780482160837,
     "tmdb_id": 10310,
-    "score": 8,
+    "score": 8.3,
     "imdb_score": 7.7,
     "lb_score": 4,
     "rt_score": 0.92,
@@ -3932,7 +3932,7 @@
     "owned": false,
     "added": 1780482088655,
     "tmdb_id": 661,
-    "score": 8.1,
+    "score": 8.5,
     "imdb_score": 7.8,
     "lb_score": 4.1,
     "rt_score": 0.96,
@@ -4025,7 +4025,7 @@
     "owned": false,
     "added": 1780482002654,
     "tmdb_id": 649,
-    "score": 8,
+    "score": 8.3,
     "imdb_score": 7.6,
     "lb_score": 4,
     "rt_score": 0.93,
@@ -4072,7 +4072,7 @@
     "owned": false,
     "added": 1780481975205,
     "tmdb_id": 4497,
-    "score": 8.1,
+    "score": 8.4,
     "imdb_score": 7.9,
     "lb_score": 4.1,
     "rt_score": 0.92,
@@ -4114,7 +4114,7 @@
     "notes": null,
     "owned": false,
     "added": 1777369138022,
-    "score": 7.3,
+    "score": 7.7,
     "imdb_score": 6.9,
     "lb_score": 3.6,
     "distributor": "Strand Releasing",
@@ -4215,7 +4215,7 @@
     "notes": null,
     "owned": false,
     "added": 1777369035786,
-    "score": 8.2,
+    "score": 8.6,
     "imdb_score": 7.9,
     "lb_score": 4,
     "distributor": "Criterion",
@@ -4316,7 +4316,7 @@
     "notes": null,
     "owned": false,
     "added": 1777368965949,
-    "score": 8.3,
+    "score": 8.8,
     "imdb_score": 8.1,
     "lb_score": 4.1,
     "distributor": "GKIDS",
@@ -4368,7 +4368,7 @@
     "notes": null,
     "owned": false,
     "added": 1777329726040,
-    "score": 7.8,
+    "score": 8.2,
     "imdb_score": 7.5,
     "lb_score": 3.8,
     "distributor": "Paramount",
@@ -4412,7 +4412,7 @@
     "owned": false,
     "added": 1776564824073,
     "lb": "https://letterboxd.com/imdb/tt9231040/",
-    "score": 7.8,
+    "score": 8.1,
     "imdb_score": 7,
     "similar": [
       {
@@ -4511,7 +4511,7 @@
     "owned": false,
     "added": 1776564701160,
     "lb": "https://letterboxd.com/imdb/tt4385888/",
-    "score": 7.8,
+    "score": 8.1,
     "imdb_score": 7.4,
     "similar": [
       {
@@ -4562,7 +4562,7 @@
     "owned": false,
     "added": 1776564667787,
     "lb": "https://letterboxd.com/imdb/tt5649144/",
-    "score": 8.1,
+    "score": 8.5,
     "imdb_score": 7.6,
     "similar": [
       {
@@ -4664,7 +4664,7 @@
     "owned": false,
     "added": 1776564539079,
     "lb": "https://letterboxd.com/imdb/tt4846232/",
-    "score": 7.8,
+    "score": 8.2,
     "imdb_score": 7.4,
     "similar": [
       {
@@ -4712,7 +4712,7 @@
     "owned": false,
     "added": 1776564498258,
     "lb": "https://letterboxd.com/imdb/tt6265828/",
-    "score": 7.5,
+    "score": 7.8,
     "imdb_score": 6.8,
     "similar": [
       {
@@ -4861,7 +4861,7 @@
     "owned": false,
     "added": 1776343115333,
     "lb": "https://letterboxd.com/imdb/tt0082096/",
-    "score": 8.5,
+    "score": 9.0,
     "imdb_score": 8.4,
     "similar": [
       {
@@ -4915,7 +4915,7 @@
     "owned": false,
     "added": 1775999459701,
     "lb": "https://letterboxd.com/film/joe-versus-the-volcano/",
-    "score": 6.9,
+    "score": 6.1,
     "imdb_score": 6.4,
     "lb_score": 3.3,
     "rt_score": 0.61,
@@ -4964,7 +4964,7 @@
     "owned": false,
     "added": 1775998783400,
     "lb": "https://letterboxd.com/film/clue/",
-    "score": 7.7,
+    "score": 6.8,
     "imdb_score": 7.3,
     "lb_score": 3.9,
     "rt_score": 0.68,
@@ -5012,7 +5012,7 @@
     "owned": false,
     "added": 1775998583282,
     "lb": "https://letterboxd.com/film/hard-target/",
-    "score": 6.7,
+    "score": 5.0,
     "imdb_score": 6.3,
     "lb_score": 3.3,
     "rt_score": 0.37,
@@ -5060,7 +5060,7 @@
     "owned": false,
     "added": 1775998429785,
     "lb": "https://letterboxd.com/film/bloodsport/",
-    "score": 6.7,
+    "score": 5.7,
     "imdb_score": 6.8,
     "lb_score": 3.4,
     "rt_score": 0.34,
@@ -5112,7 +5112,7 @@
     "owned": false,
     "added": 1775997929904,
     "lb": "https://letterboxd.com/film/so-i-married-an-axe-murderer/",
-    "score": 7.1,
+    "score": 6.3,
     "imdb_score": 6.6,
     "lb_score": 3.5,
     "rt_score": 0.52,
@@ -5158,7 +5158,7 @@
     "owned": false,
     "added": 1775997906622,
     "lb": "https://letterboxd.com/film/austin-powers-international-man-of-mystery/",
-    "score": 7,
+    "score": 6.7,
     "imdb_score": 7,
     "lb_score": 3.5,
     "rt_score": 0.72,
@@ -5263,7 +5263,7 @@
     "owned": false,
     "added": 1775877681937,
     "lb": "https://letterboxd.com/film/marie-antoinette-2006/",
-    "score": 7.4,
+    "score": 6.8,
     "imdb_score": 6.5,
     "lb_score": 3.7,
     "rt_score": 0.74,
@@ -5371,7 +5371,7 @@
     "owned": false,
     "added": 1775877234649,
     "lb": "https://letterboxd.com/film/in-bruges/",
-    "score": 8.1,
+    "score": 7.7,
     "imdb_score": 7.9,
     "lb_score": 4,
     "rt_score": 0.82,
@@ -5429,7 +5429,7 @@
     "owned": false,
     "added": 1775876632988,
     "lb": "https://letterboxd.com/film/godzilla-minus-one/",
-    "score": 8.1,
+    "score": 8.4,
     "imdb_score": 7.9,
     "lb_score": 4,
     "rt_score": 0.98,
@@ -5488,7 +5488,7 @@
     "added": 1775874263968,
     "distributor": "Masters of Cinema",
     "lb": "https://letterboxd.com/film/champion-1949/",
-    "score": 7.8,
+    "score": 8.2,
     "imdb_score": 7.5,
     "lb_score": 3.8,
     "rt_score": 0.96,
@@ -5557,7 +5557,7 @@
       }
     ],
     "lb": "https://letterboxd.com/film/the-intouchables/",
-    "score": 8.5,
+    "score": 7.5,
     "imdb_score": 8.5,
     "lb_score": 4.1,
     "rt_score": 0.75,
@@ -5615,7 +5615,7 @@
       }
     ],
     "lb": "https://letterboxd.com/film/american-history-x/",
-    "score": 8.5,
+    "score": 7.8,
     "imdb_score": 8.5,
     "lb_score": 4.2,
     "rt_score": 0.83,
@@ -5669,7 +5669,7 @@
       }
     ],
     "lb": "https://letterboxd.com/film/leon-the-professional/",
-    "score": 8.5,
+    "score": 7.6,
     "imdb_score": 8.5,
     "lb_score": 4.2,
     "rt_score": 0.73,
@@ -7480,7 +7480,7 @@
     "tmdb_id": 497,
     "lb": "https://letterboxd.com/search/The%20Green%20Mile/",
     "has4k": true,
-    "score": 8,
+    "score": 7.7,
     "imdb_score": 8.6,
     "lb_score": 4.2,
     "rt_score": 0.78,
@@ -7771,63 +7771,6 @@
       "Het Gebeurde in Amerika",
       "Suuri gangsterisota",
       "Bir Dəfə Amerikada"
-    ]
-  },
-  {
-    "id": "17753638558693nxmruzyljr",
-    "title": "Indiana Jones and the Temple of Doom",
-    "priority": "Someday",
-    "added": 1775363855869,
-    "owned": false,
-    "poster": "https://image.tmdb.org/t/p/w500/gpdVNUaa4LhRMLfJOPj1AZdhAZ3.jpg",
-    "imdb_id": "tt0087469",
-    "year": 1984,
-    "runtime": 118,
-    "genre": "Adventure, Action",
-    "country": "Usa",
-    "director": "Steven Spielberg",
-    "tmdb_id": 87,
-    "lb": "https://letterboxd.com/search/Indiana%20Jones%20and%20the%20Temple%20of%20Doom/",
-    "has4k": true,
-    "score": 7.5,
-    "imdb_score": 7.5,
-    "lb_score": 3.8,
-    "rt_score": 0.85,
-    "mc_score": 57,
-    "similar": [
-      {
-        "title": "Raiders of the Lost Ark",
-        "year": 1981,
-        "imdb_id": "tt0082971"
-      },
-      {
-        "title": "Indiana Jones and the Last Crusade",
-        "year": 1989,
-        "imdb_id": "tt0097576"
-      },
-      {
-        "title": "The Mummy",
-        "year": 1999,
-        "imdb_id": "tt0120616"
-      }
-    ],
-    "female_director": false,
-    "_j": 1,
-    "synopsis": "After arriving in India, Indiana Jones is asked by a desperate village to find a mystical stone. He agrees – and stumbles upon a secret cult plotting a terrible plan in the catacombs of an ancient palace.",
-    "cast": [
-      "Harrison Ford",
-      "Kate Capshaw",
-      "Ke Huy Quan"
-    ],
-    "alt_titles": [
-      "Indiana Jones y el templo maldito",
-      "Indiana Jones 2",
-      "Indiana Jones og templets forbandelse",
-      "Indiana Jones 2: The Temple of Doom",
-      "Indiana Jones 2 - Et Le temple maudit",
-      "Tuomion temppeli",
-      "Indiana Jones y El Templo de la Perdición",
-      "Indiana Jones 2: El templo maldito"
     ]
   },
   {
@@ -8147,7 +8090,7 @@
     "tmdb_id": 391713,
     "lb": "https://letterboxd.com/search/Lady%20Bird/",
     "has4k": false,
-    "score": 8.2,
+    "score": 8.5,
     "imdb_score": 7.4,
     "lb_score": 3.9,
     "rt_score": 0.99,
@@ -8763,62 +8706,6 @@
     ]
   },
   {
-    "id": "177536358998636jfh2v1xna",
-    "title": "Raiders of the Lost Ark",
-    "priority": "High",
-    "added": 1775363589986,
-    "owned": false,
-    "poster": "https://image.tmdb.org/t/p/w500/ceG9VzoRAVGwivFU403Wc3AHRys.jpg",
-    "imdb_id": "tt0082971",
-    "year": 1981,
-    "runtime": 115,
-    "genre": "Adventure, Action",
-    "country": "Usa",
-    "director": "Steven Spielberg",
-    "tmdb_id": 85,
-    "lb": "https://letterboxd.com/search/Raiders%20of%20the%20Lost%20Ark/",
-    "has4k": true,
-    "score": 8.7,
-    "imdb_score": 8.4,
-    "lb_score": 4.2,
-    "rt_score": 0.95,
-    "similar": [
-      {
-        "title": "Indiana Jones and the Last Crusade",
-        "year": 1989,
-        "imdb_id": "tt0097576"
-      },
-      {
-        "title": "The Mummy",
-        "year": 1999,
-        "imdb_id": "tt0120616"
-      },
-      {
-        "title": "Romancing the Stone",
-        "year": 1984,
-        "imdb_id": "tt0088011"
-      }
-    ],
-    "female_director": false,
-    "_j": 1,
-    "synopsis": "When Dr. Indiana Jones – the tweed-suited professor who just happens to be a celebrated archaeologist – is hired by the government to locate the legendary Ark of the Covenant, he finds himself up against the entire Nazi regime.",
-    "cast": [
-      "Harrison Ford",
-      "Karen Allen",
-      "Paul Freeman"
-    ],
-    "alt_titles": [
-      "Poszukiwacze Zaginionej Arki",
-      "Indiana Jones and the Raiders of the Lost Ark",
-      "Indiana Jones og jagten på den forsvundne skat",
-      "Indiana Jones ja kadonneen aarteen metsästäjät",
-      "Indiana Jones et les aventuriers de l'Arche perdue",
-      "Dobyvatelia stratenej archy",
-      "Inidiana Jones and the Raiders of the Lost Ark",
-      "Indiana Jones és az elveszett frigyláda fosztogatói"
-    ]
-  },
-  {
     "id": "17753635899869keba4ku8b",
     "title": "Terminator 2: Judgment Day",
     "priority": "High",
@@ -9002,7 +8889,7 @@
     "tmdb_id": 12477,
     "lb": "https://letterboxd.com/film/grave-of-the-fireflies/",
     "has4k": false,
-    "score": 8.7,
+    "score": 9.1,
     "imdb_score": 8.5,
     "lb_score": 4.5,
     "rt_score": 0.97,
@@ -9427,7 +9314,7 @@
     "tmdb_id": 637,
     "lb": "https://letterboxd.com/search/Life%20Is%20Beautiful/",
     "has4k": false,
-    "score": 8,
+    "score": 7.7,
     "imdb_score": 8.6,
     "lb_score": 4.1,
     "rt_score": 0.8,
@@ -9480,7 +9367,7 @@
     "lb": "https://letterboxd.com/search/Aftersun/",
     "notes": null,
     "has4k": false,
-    "score": 8.5,
+    "score": 8.8,
     "imdb_score": 7.6,
     "lb_score": 4.2,
     "rt_score": 0.96,
@@ -9534,7 +9421,7 @@
     "lb": "https://letterboxd.com/search/Past%20Lives/",
     "notes": "4K",
     "has4k": true,
-    "score": 8.7,
+    "score": 9.0,
     "imdb_score": 7.9,
     "lb_score": 4.2,
     "rt_score": 0.98,
@@ -12683,7 +12570,7 @@
     "notes": null,
     "owned": false,
     "added": 1776490034504,
-    "score": 6.5,
+    "score": 5.0,
     "imdb_score": 6.2,
     "lb_score": 3.5,
     "rt_score": 0.18,
@@ -12728,7 +12615,7 @@
     "notes": null,
     "owned": false,
     "added": 1776489826188,
-    "score": 6.5,
+    "score": 4.5,
     "imdb_score": 6.5,
     "lb_score": 3.1,
     "rt_score": 0.26,
@@ -12781,7 +12668,7 @@
     "notes": null,
     "owned": false,
     "added": 1776489815238,
-    "score": 7.5,
+    "score": 6.8,
     "imdb_score": 7.4,
     "lb_score": 3.7,
     "rt_score": 0.68,
@@ -12834,7 +12721,7 @@
     "notes": null,
     "owned": false,
     "added": 1776489802122,
-    "score": 7.1,
+    "score": 6.2,
     "imdb_score": 6.9,
     "lb_score": 3.6,
     "rt_score": 0.56,
@@ -12978,7 +12865,7 @@
     "notes": null,
     "owned": false,
     "added": 1776479314436,
-    "score": 8.1,
+    "score": 8.4,
     "imdb_score": 7.7,
     "lb_score": 4,
     "rt_score": 0.96,
@@ -13077,7 +12964,7 @@
     "notes": null,
     "owned": false,
     "added": 1776479212453,
-    "score": 8.1,
+    "score": 8.5,
     "imdb_score": 7.8,
     "lb_score": 4.1,
     "rt_score": 0.94,
@@ -13223,7 +13110,7 @@
     "notes": null,
     "owned": false,
     "added": 1776479138020,
-    "score": 8.4,
+    "score": 8.7,
     "imdb_score": 8,
     "lb_score": 4.2,
     "rt_score": 0.97,
@@ -13324,7 +13211,7 @@
     "notes": null,
     "owned": false,
     "added": 1776478993872,
-    "score": 8.1,
+    "score": 8.4,
     "imdb_score": 7.7,
     "lb_score": 3.9,
     "rt_score": 0.98,
@@ -13375,7 +13262,7 @@
     "notes": null,
     "owned": false,
     "added": 1776478928989,
-    "score": 8.2,
+    "score": 8.5,
     "imdb_score": 7.7,
     "lb_score": 4.1,
     "rt_score": 0.95,
@@ -13527,7 +13414,7 @@
     "notes": null,
     "owned": false,
     "added": 1776478770806,
-    "score": 8.1,
+    "score": 8.6,
     "imdb_score": 7.8,
     "lb_score": 4,
     "rt_score": 1,
@@ -13727,7 +13614,7 @@
     "owned": false,
     "has4k": false,
     "lb": "https://letterboxd.com/film/vengeance-is-mine/",
-    "score": 8.4,
+    "score": 8.7,
     "imdb_score": 8,
     "lb_score": 4.2,
     "rt_score": 0.98,
@@ -13990,7 +13877,7 @@
     "has4k": false,
     "tmdb_id": 11562,
     "lb": "https://letterboxd.com/film/crimes-and-misdemeanors/",
-    "score": 8.3,
+    "score": 8.7,
     "imdb_score": 8.1,
     "lb_score": 4.2,
     "rt_score": 0.95,
@@ -14047,7 +13934,7 @@
     "has4k": false,
     "tmdb_id": 396026,
     "lb": "https://letterboxd.com/film/elevator-to-the-gallows/",
-    "score": 8.4,
+    "score": 8.7,
     "imdb_score": 7.9,
     "lb_score": 4.2,
     "rt_score": 0.98,

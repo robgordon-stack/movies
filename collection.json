@@ -17119,25 +17119,20 @@
     "country": "Poland",
     "genre": "Horror",
     "runtime": 125,
-    "score": 7.9,
+    "score": 7.0,
     "distributor": "Masters of Cinema",
     "format": "Blu-ray",
     "watched": false,
     "spine": "",
-    "lb": "https://boxd.it/1inI",
     "poster": "https://image.tmdb.org/t/p/w342/y1k7eiOFc6fzm8XeTa1kNGx6JIs.jpg",
-    "imdb_id": "tt0066993",
-    "synopsis": "Father Urbain Grandier’s unorthodox views of sex and religion make him a polarizing figure in 17th-century France. His outspokenness has amassed a passionate following of nuns and a respected reputation for protecting the city of Loudon from corruption.",
+    "synopsis": "In 1793 Poland, during the Prussian invasion, a young man freed from captivity by a mysterious stranger is drawn into a spree of violence and madness.",
     "imdb_score": 7,
-    "rt_score": 0.84,
     "female_director": false,
     "cast": [
       "Vanessa Redgrave",
       "Oliver Reed",
       "Dudley Sutton"
     ],
-    "tmdb_id": 31767,
-    "lb_score": 4.23,
     "alt_titles": [
       "The Devils",
       "Ken Russell's Film of The Devils",
@@ -23505,7 +23500,7 @@
     "watched": true,
     "spine": "",
     "lb": "https://boxd.it/29ry",
-    "poster": "https://image.tmdb.org/t/p/w342/ceG9VzoRAVGwivFU403Wc3AHRys.jpg",
+    "poster": "https://image.tmdb.org/t/p/w342/Abnm1Ws3JH0ReCfEhLMPwPcMcGO.jpg",
     "imdb_id": "tt1899353",
     "synopsis": "When Dr. Indiana Jones – the tweed-suited professor who just happens to be a celebrated archaeologist – is hired by the government to locate the legendary Ark of the Covenant, he finds himself up against the entire Nazi regime.",
     "imdb_score": 7.6,
@@ -34458,7 +34453,7 @@
     "format": "4K Blu-ray",
     "watched": true,
     "spine": "",
-    "poster": "https://image.tmdb.org/t/p/w780/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+    "poster": "https://image.tmdb.org/t/p/w342/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
     "imdb_id": "tt0468569",
     "synopsis": "When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness.",
     "cast": [
@@ -35313,13 +35308,13 @@
   },
   {
     "title": "Rose of Nevada",
-    "year": 2026,
+    "year": 2025,
     "decade": "2020s",
     "director": "Mark Jenkin",
     "country": "Uk",
     "genre": "Drama, Fantasy, Horror",
     "runtime": 114,
-    "score": 8,
+    "score": 7.7,
     "format": "Blu-ray",
     "watched": false,
     "spine": "",
@@ -35334,7 +35329,11 @@
       "George MacKay",
       "Callum Turner",
       "Emily Daglish-Laine"
-    ]
+    ],
+    "lb": "https://boxd.it/RQAq",
+    "tmdb_id": 1399525,
+    "lb_score": 3.47,
+    "distributor": "BFI"
   },
   {
     "title": "Raiders of the Lost Ark",
@@ -35359,7 +35358,10 @@
       "Harrison Ford",
       "Karen Allen",
       "Paul Freeman"
-    ]
+    ],
+    "distributor": "Paramount",
+    "tmdb_id": 85,
+    "lb": "https://letterboxd.com/imdb/tt0082971/"
   },
   {
     "title": "Indiana Jones and the Temple of Doom",
@@ -35384,7 +35386,10 @@
       "Harrison Ford",
       "Kate Capshaw",
       "Ke Huy Quan"
-    ]
+    ],
+    "distributor": "Paramount",
+    "tmdb_id": 87,
+    "lb": "https://letterboxd.com/imdb/tt0087469/"
   },
   {
     "title": "Indiana Jones and the Last Crusade",
@@ -35409,7 +35414,10 @@
       "Harrison Ford",
       "Sean Connery",
       "Alison Doody"
-    ]
+    ],
+    "distributor": "Paramount",
+    "tmdb_id": 89,
+    "lb": "https://letterboxd.com/imdb/tt0097576/"
   },
   {
     "title": "Indiana Jones and the Kingdom of the Crystal Skull",
@@ -35434,6 +35442,9 @@
       "Harrison Ford",
       "Cate Blanchett",
       "Shia LaBeouf"
-    ]
+    ],
+    "distributor": "Paramount",
+    "tmdb_id": 217,
+    "lb": "https://letterboxd.com/imdb/tt0367882/"
   }
 ]
