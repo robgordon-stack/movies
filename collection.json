@@ -17119,7 +17119,7 @@
     "country": "Poland",
     "genre": "Horror",
     "runtime": 125,
-    "score": 7.0,
+    "score": 7,
     "distributor": "Masters of Cinema",
     "format": "Blu-ray",
     "watched": false,
@@ -35445,5 +35445,30 @@
       "Shia LaBeouf"
     ],
     "tmdb_id": 217
+  },
+  {
+    "title": "Amour",
+    "year": 2012,
+    "decade": "2010s",
+    "director": "Michael Haneke",
+    "country": "France",
+    "genre": "Drama",
+    "runtime": 127,
+    "score": 8.9,
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": "",
+    "poster": "https://image.tmdb.org/t/p/w342/19hyCudualHxCD0GrEngqsi0wBF.jpg",
+    "imdb_id": "tt1602620",
+    "synopsis": "Georges and Anne are an octogenarian couple. They are cultivated, retired music teachers. Their daughter, also a musician, lives in Britain with her family. One day, Anne has a stroke, and the couple's bond of love is severely tes...",
+    "imdb_score": 7.9,
+    "rt_score": 0.93,
+    "mc_score": 95,
+    "female_director": false,
+    "cast": [
+      "Jean-Louis Trintignant",
+      "Emmanuelle Riva",
+      "Isabelle Huppert"
+    ]
   }
 ]
