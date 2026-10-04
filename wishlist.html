@@ -343,5 +343,6 @@ function mergeWithJson(e,t){const r={};return e.forEach(e=>{r[e.id]=e}),t.forEac
 window.OWN_ADAPTER={getOwned:function(){return typeof COLL!=='undefined'?COLL:[]},getWanted:function(){return typeof WL!=='undefined'?WL:[]},openWanted:function(f){openSheet(f.id)}};
 </script>
 <script src="ownsearch.js"></script>
+<script>(function(){var m=/#film=(.+)/.exec(location.hash);if(!m)return;var id=decodeURIComponent(m[1]),n=0,t=setInterval(function(){if(typeof WL!=='undefined'&&WL.some(function(x){return x.id===id})){clearInterval(t);openSheet(id)}else if(++n>40)clearInterval(t)},150)})();</script>
 </body>
 </html>
