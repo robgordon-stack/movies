@@ -58,7 +58,7 @@ function draw(){
 function op(i){var g=G[i],q=encodeURIComponent(g.t+' '+g.y),w=g.w;
   document.getElementById('card').innerHTML='<h2>'+E(g.t)+'</h2><div class="sub">'+g.y+(w&&w.director?' · '+E(w.director):'')+' · on '+g.n+' lists</div>'
   +'<div>'+Object.keys(g.l).map(function(k){return'<a class="tag" href="'+LISTS[k][1]+'">'+LISTS[k][0]+' #'+g.l[k]+'</a>'}).join('')+'</div>'
-  +'<div class="lk">'+(w?'<a class="pr" href="wishlist.html#film='+encodeURIComponent(w.id)+'">Open wishlist card</a>':'<button class="pr" onclick="cp(\'python3 add_film.py wish &quot;'+E(g.t).replace(/'/g,"\\'")+'&quot; '+g.y+'\',this)">Copy add-to-wishlist command</button>')
+  +'<div class="lk">'+(w?'<a class="pr" href="wishlist.html#film='+encodeURIComponent(w.id)+'">Open wishlist card</a>':'<a class="pr" href="add.html?list=wish&y='+g.y+'&q='+encodeURIComponent(g.t)+'">Add to wishlist</a>')
   +'<a target="_blank" rel="noopener" href="'+(w&&w.lb?E(w.lb):'https://letterboxd.com/search/films/'+q+'/')+'">Letterboxd</a>'
   +'<a target="_blank" rel="noopener" href="'+(w&&w.imdb_id?'https://www.imdb.com/title/'+w.imdb_id+'/':'https://www.imdb.com/find/?q='+q)+'">IMDb</a>'
   +'<a target="_blank" rel="noopener" href="'+(w&&w.tmdb_id?'https://www.themoviedb.org/movie/'+w.tmdb_id:'https://www.themoviedb.org/search?query='+q)+'">TMDB</a></div>';

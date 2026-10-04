@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Add a film — The Archive</title>
+<style>
+:root{--bg:#0d0d0d;--s:#171717;--s2:#222;--t:#efefef;--m:#8a8a8a;--a:#e8b94f;--g:#4caf7d;--r:#e0645c;--br:rgba(255,255,255,.09)}
+*{box-sizing:border-box;margin:0}body{background:var(--bg);color:var(--t);font:15px/1.4 'DM Sans',-apple-system,sans-serif;padding:calc(14px + env(safe-area-inset-top)) 14px 90px;max-width:640px;margin:0 auto}
+a{color:#5b9bd5}h1{font:400 26px 'DM Serif Display',Georgia,serif;color:var(--a);margin:8px 0 12px}
+input,select{width:100%;background:var(--s);border:1px solid var(--br);color:var(--t);border-radius:10px;padding:12px;font:inherit;margin-bottom:8px}
+.r{display:flex;gap:10px;align-items:center;background:var(--s);border:1px solid var(--br);border-radius:10px;padding:8px;margin-bottom:6px;cursor:pointer}
+.r img,.r i{width:40px;height:60px;border-radius:4px;object-fit:cover;background:var(--s2);flex:none}.r b{font-weight:600}.r small{display:block;color:var(--m);font-size:12px}
+.st{margin-left:auto;font-size:11px;color:var(--a);white-space:nowrap}.st.o{color:var(--g)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 10px}.c{border:1px solid var(--br);background:var(--s);color:var(--m);border-radius:16px;padding:6px 13px;font-size:13px;cursor:pointer}.c.on{color:#111;background:var(--a);border-color:var(--a)}
+button.go{width:100%;background:var(--a);color:#111;border:0;border-radius:12px;padding:14px;font:700 15px inherit;cursor:pointer}button.go:disabled{opacity:.5}
+#sh{position:fixed;left:0;right:0;bottom:0;max-width:640px;margin:auto;background:var(--s);border-top:1px solid var(--br);border-radius:16px 16px 0 0;padding:16px 16px calc(16px + env(safe-area-inset-bottom));transform:translateY(110%);transition:.22s;z-index:5;max-height:85vh;overflow:auto}#sh.o{transform:none}
+#sh h2{font:400 21px 'DM Serif Display',serif}#msg{font-size:13px;margin:10px 0 0;min-height:18px}details{margin-top:18px;color:var(--m);font-size:13px}summary{cursor:pointer;margin-bottom:8px}label{font-size:12px;color:var(--m)}
+</style></head><body>
+<a href="index.html">← The Archive</a>
+<h1>Add a film</h1>
+<input id="q" type="search" placeholder="Search for a film…" autocomplete="off">
+<div id="res"></div>
+<details id="set"><summary>Settings (stored only on this device)</summary>
+<label>GitHub repo (owner/name)</label><input id="s_repo" placeholder="rob/movie-list">
+<label>Branch</label><input id="s_branch" placeholder="main">
+<label>GitHub token (fine-grained, this repo only, Contents: read &amp; write)</label><input id="s_gh" type="password">
+<label>TMDB API key</label><input id="s_tmdb" type="password">
+<label>OMDb key (optional, adds IMDb/RT/Metacritic scores)</label><input id="s_omdb" type="password">
+</details>
+<div id="sh"><div id="card"></div></div>
+<script>
+var $=function(i){return document.getElementById(i)},S=JSON.parse(localStorage.getItem('add_cfg')||'{}'),C=[],W=[],R=[],sel=null,mode='wish',pri='High',fmt='Blu-ray',k4=false,tmr;
+['repo','branch','gh','tmdb','omdb'].forEach(function(k){var e=$('s_'+k);e.value=S[k]||(k==='branch'?'main':'');e.onchange=function(){S[k]=e.value.trim();localStorage.setItem('add_cfg',JSON.stringify(S))}});
+if(!S.gh||!S.tmdb||!S.repo)$('set').open=true;
+var E=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
+Promise.all(['collection.json','wishlist.json'].map(function(u){return fetch(u+'?v='+Date.now()).then(function(r){return r.json()}).catch(function(){return[]})})).then(function(d){C=d[0];W=Array.isArray(d[1])?d[1]:(d[1].films||[]);var p=new URLSearchParams(location.search);if(p.get('q')){$('q').value=p.get('q');mode=p.get('list')==='own'?'own':'wish';find(p.get('y'))}});
+function tm(path,o){o=o||{};var h={};if((S.tmdb||'').length>40)h.Authorization='Bearer '+S.tmdb;else o.api_key=S.tmdb;return fetch('https://api.themoviedb.org/3'+path+'?'+new URLSearchParams(o),{headers:h}).then(function(r){if(!r.ok)throw'TMDB error '+r.status+' (check your TMDB key)';return r.json()})}
+function stat(m){var y=+(m.release_date||'').slice(0,4),f=function(x){return x.tmdb_id===m.id||(x.title===m.title&&Math.abs((+x.year||0)-y)<=1)};return C.some(f)?'o':W.some(f)?'w':''}
+$('q').oninput=function(){clearTimeout(tmr);tmr=setTimeout(function(){find()},350)};
+function find(y){var q=$('q').value.trim();if(q.length<2){$('res').innerHTML='';return}
+  tm('/search/movie',y?{query:q,year:y}:{query:q}).then(function(d){R=d.results.slice(0,8);
+    $('res').innerHTML=R.map(function(m,i){var s=stat(m),yr=(m.release_date||'').slice(0,4);
+      return'<div class="r" onclick="pick('+i+')">'+(m.poster_path?'<img src="https://image.tmdb.org/t/p/w92'+m.poster_path+'">':'<i></i>')+'<div><b>'+E(m.title)+'</b> <span style="color:var(--m)">'+yr+'</span><small>'+E((m.overview||'').slice(0,70))+'</small></div>'+(s?'<span class="st '+s+'">'+(s==='o'?'✓ Owned':'On wishlist')+'</span>':'')+'</div>'}).join('')||'<p style="color:var(--m)">No results.</p>'}).catch(function(e){$('res').innerHTML='<p style="color:var(--r)">'+E(e)+'</p>'})}
+function chips(id,opts,cur,fn){return'<div class="chips">'+opts.map(function(o){return'<span class="c '+(o===cur?'on':'')+'" onclick="'+fn+'(\''+o+'\')">'+o+'</span>'}).join('')+'</div>'}
+function pick(i){sel=R[i];draw()}
+function draw(){var s=stat(sel),dist=Array.from(new Set(C.map(function(c){return c.distributor}).filter(Boolean))).sort();
+  $('card').innerHTML='<h2>'+E(sel.title)+' <span style="color:var(--m);font-size:15px">'+(sel.release_date||'').slice(0,4)+'</span></h2>'
+  +(s==='o'?'<p style="color:var(--g);margin:10px 0">Already in your collection.</p>':
+   chips('m',['wish','own'],mode,'setMode').replace('>wish<','>Wishlist<').replace('>own<','>Collection<')
+   +(mode==='wish'?chips('p',['Must Own','High','Someday'],pri,'setPri'):chips('f',['Blu-ray','4K Blu-ray','DVD'],fmt,'setFmt')+'<input id="d" list="dl" placeholder="Distributor (e.g. Criterion Collection)"><datalist id="dl">'+dist.map(function(d){return'<option>'+E(d)+'</option>'}).join('')+'</datalist><input id="sp" placeholder="Spine number (optional)">')
+   +(mode==='wish'?'<div class="chips"><span class="c '+(k4?'on':'')+'" onclick="k4=!k4;draw()">4K available</span></div>':'')
+   +'<button class="go" id="go" onclick="add()">'+(mode==='wish'?'Add to wishlist':(s==='w'?'Move to collection':'Add to collection'))+'</button>')
+  +'<div id="msg"></div><button class="c" style="margin-top:10px" onclick="$(\'sh\').classList.remove(\'o\')">Close</button>';
+  $('sh').classList.add('o')}
+function setMode(m){mode=m;draw()}function setPri(p){pri=p;draw()}function setFmt(f){fmt=f;draw()}
+var CT={'United States of America':'Usa','United Kingdom':'Uk'},GN={'Science Fiction':'Sci-Fi'};
+async function build(id){
+  var m=await tm('/movie/'+id,{append_to_response:'credits,alternative_titles'}),y=+(m.release_date||'').slice(0,4)||null,
+  al=new Set(m.alternative_titles.titles.map(function(t){return t.title}));if(m.original_title)al.add(m.original_title);al.delete(m.title);
+  var e={title:m.title,year:y,decade:y?Math.floor(y/10)*10+'s':null,director:m.credits.crew.filter(function(c){return c.job==='Director'}).map(function(c){return c.name}).join(', '),
+   country:m.production_countries[0]?(CT[m.production_countries[0].name]||m.production_countries[0].name):null,genre:m.genres.map(function(g){return GN[g.name]||g.name}).join(', '),
+   runtime:m.runtime||null,poster:m.poster_path?'https://image.tmdb.org/t/p/w342'+m.poster_path:null,imdb_id:m.imdb_id,tmdb_id:m.id,synopsis:m.overview,
+   cast:m.credits.cast.slice(0,3).map(function(c){return c.name}),female_director:false,alt_titles:Array.from(al).sort().slice(0,8),lb:'https://letterboxd.com/tmdb/'+m.id+'/'};
+  if(S.omdb&&e.imdb_id)try{var o=await fetch('https://www.omdbapi.com/?i='+e.imdb_id+'&apikey='+S.omdb).then(function(r){return r.json()});
+    if(o.Response==='True'){if(o.imdbRating&&o.imdbRating!=='N/A')e.imdb_score=parseFloat(o.imdbRating);var rt=(o.Ratings||[]).find(function(r){return r.Source==='Rotten Tomatoes'});if(rt)e.rt_score=parseInt(rt.Value)/100;if(o.Metascore&&o.Metascore!=='N/A')e.mc_score=parseInt(o.Metascore)}}catch(x){}
+  var p=[];if(e.imdb_score)p.push(e.imdb_score);if(e.rt_score)p.push(10*e.rt_score);if(e.mc_score)p.push(e.mc_score/10);if(p.length)e.score=Math.round(p.reduce(function(a,b){return a+b})/p.length*10)/10;
+  Object.keys(e).forEach(function(k){if(e[k]==null||e[k]==='')delete e[k]});return e}
+function b64(s){var b=new TextEncoder().encode(s),o='';for(var i=0;i<b.length;i+=32768)o+=String.fromCharCode.apply(null,b.subarray(i,i+32768));return btoa(o)}
+async function edit(path,fn,msg){
+  var H={Authorization:'Bearer '+S.gh,'X-GitHub-Api-Version':'2022-11-28'},api='https://api.github.com/repos/'+S.repo+'/contents/',dir=path.indexOf('/')>-1?path.slice(0,path.lastIndexOf('/')):'';
+  var ls=await fetch(api+dir+'?ref='+S.branch,{headers:H,cache:'no-store'});if(!ls.ok)throw'GitHub '+ls.status+' — check repo, branch and token';
+  var f=(await ls.json()).find(function(x){return x.path===path});if(!f)throw path+' not found in the repo';
+  var raw=await fetch(api+path+'?ref='+S.branch,{headers:Object.assign({Accept:'application/vnd.github.raw+json'},H),cache:'no-store'}),j=JSON.parse(await raw.text()),arr=Array.isArray(j)?j:j.films,out=fn(arr);
+  if(Array.isArray(j))j=out;else j.films=out;
+  var p=await fetch(api+path,{method:'PUT',headers:H,body:JSON.stringify({message:msg,content:b64(JSON.stringify(j,null,2)),sha:f.sha,branch:S.branch})});
+  if(!p.ok)throw'Commit failed: '+p.status+' '+((await p.json()).message||'');return out}
+async function add(){
+  var btn=$('go'),msg=$('msg');btn.disabled=true;btn.textContent='Adding…';msg.style.color='';msg.textContent='';
+  try{if(!S.gh||!S.repo||!S.tmdb){$('set').open=true;throw'Fill in the settings below first.'}
+    var e=await build(sel.id),same=function(x){return x.tmdb_id===e.tmdb_id||(e.imdb_id&&x.imdb_id===e.imdb_id)};
+    if(mode==='wish'){e.id=Date.now()+Math.random().toString(36).slice(2);e.priority=pri;e.owned=false;e.added=Date.now();e.has4k=k4;
+      await edit('wishlist.json',function(L){if(L.some(same))throw'Already on your wishlist';L.unshift(e);return L},'Add '+e.title+' to wishlist');W.unshift(e)}
+    else{var w=W.find(same);e.distributor=($('d').value.trim())||(w&&w.distributor)||'';e.format=fmt;e.watched=false;e.spine=$('sp').value.trim();
+      await edit('collection.json',function(L){if(L.some(same))throw'Already in your collection';L.push(e);return L},'Add '+e.title+' to collection');C.push(e);
+      if(w){await edit('wishlist.json',function(L){return L.filter(function(x){return!same(x)})},'Move '+e.title+' to collection');W=W.filter(function(x){return!same(x)})}}
+    msg.style.color='var(--g)';msg.textContent='✓ Added "'+e.title+'". Live on your site in about a minute.';btn.style.display='none';find()
+  }catch(x){msg.style.color='var(--r)';msg.textContent=String(x);btn.disabled=false;btn.textContent='Try again'}}
+</script></body></html>
