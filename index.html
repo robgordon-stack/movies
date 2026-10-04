@@ -1691,15 +1691,48 @@ function listCards(I){
     h+=card('Wishlist','<div class="stat-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:10px">'+b2(wl.length,'Titles')+b2(av,'Avg score')+b2(n4,'Have 4K')+'</div>'+td.map(function(x){return bar(esc(x[0].replace(' Collection','').replace(' Films','')),x[1],mx,x[1],'')}).join('')+note('Collection average score is '+ca+'.'))}
   return h;
 }
+var SECTIONS=[
+ ['watching','Watching','Progress, backlog and what to watch next',['Backlog','Watch Log','Top Rated Unwatched','Watched by Score Band']],
+ ['lists','Lists & Wishlist','How close you are to finishing the lists you collect',['List Completion','Most-Listed Films You Don’t Own','Wishlist']],
+ ['collection','The Collection','What you own: eras, labels, formats and places',['By Decade','By Label','Formats','Runtime','By Country','Top Genres','More Cuts']],
+ ['people','People','Directors and cast',['Top Directors','Top Cast Members']],
+ ['ratings','Scores & Ratings','How your films rate, and where critics and audiences differ',['Score Distribution','Average Score by Decade','Average Score by Label','Rating Sources Compared','Critics vs Audiences','Extremes']]
+];
+function ttl(c){var h=c.querySelector('h3,.stat-title,.sec-title');return h?h.textContent.trim():''}
+function organise(){
+  var host=document.getElementById('statsScroll');if(!host)return;
+  var cards=Array.prototype.slice.call(host.querySelectorAll('.stat-card')),seen={},byT={},rest=[];
+  cards.forEach(function(c){var t=ttl(c);if(seen[t])return;seen[t]=1;byT[t]=c});
+  var over=byT['Overview'];delete byT['Overview'];
+  var placed={};
+  var frag=document.createDocumentFragment();
+  if(over)frag.appendChild(over);
+  var nav=document.createElement('div');nav.style.cssText='display:flex;gap:6px;overflow-x:auto;margin:2px 0 4px;padding:6px 0;scrollbar-width:none;position:sticky;top:0;z-index:5;background:var(--bg,#111)';
+  var body=document.createDocumentFragment();
+  SECTIONS.forEach(function(s){
+    var list=s[3].filter(function(t){return byT[t]});
+    if(!list.length)return;
+    var head=document.createElement('div');head.id='sec-'+s[0];head.style.cssText='margin:22px 2px 10px;scroll-margin-top:56px';
+    head.innerHTML='<div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--acc)">'+s[1]+'</div><div style="font-size:12px;color:var(--mut);margin-top:2px">'+s[2]+'</div>';
+    body.appendChild(head);
+    list.forEach(function(t){body.appendChild(byT[t]);placed[t]=1});
+    var b=document.createElement('button');b.type='button';b.textContent=s[1];
+    b.style.cssText='flex:0 0 auto;border:1px solid var(--bdr);background:var(--surf);color:var(--mut);border-radius:14px;padding:5px 11px;font-size:11px;font-family:inherit;cursor:pointer';
+    b.onclick=function(){var e=document.getElementById('sec-'+s[0]);if(e)e.scrollIntoView({behavior:'smooth',block:'start'})};
+    nav.appendChild(b);
+  });
+  Object.keys(byT).forEach(function(t){if(!placed[t])rest.push(byT[t])});
+  if(rest.length){var h=document.createElement('div');h.style.cssText='margin:22px 2px 10px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--acc)';h.textContent='Other';body.appendChild(h);rest.forEach(function(c){body.appendChild(c)})}
+  if(nav.children.length)frag.appendChild(nav);
+  frag.appendChild(body);
+  host.innerHTML='';host.appendChild(frag);
+}
 var _rs=renderStats;
 renderStats=function(){
   try{_rs.apply(this,arguments)}catch(e){console.warn('renderStats',e)}
   var host=document.getElementById('statsScroll');if(!host)return;
-  var old=document.getElementById('stats-extra');if(old)old.remove();
-  var div=document.createElement('div');div.id='stats-extra';
-  try{div.innerHTML=syncCards()+analysisCards()}catch(e){console.warn('stats extra',e)}
-  var first=host.querySelector('.stat-card');if(first)first.after(div);else host.appendChild(div);
-  getRaw().then(function(){var I=info();if(I&&document.contains(div))div.insertAdjacentHTML('afterbegin',listCards(I))}).catch(function(e){console.warn('lists',e)});
+  try{var t=document.createElement('div');t.innerHTML=syncCards()+analysisCards();while(t.firstChild)host.appendChild(t.firstChild);organise()}catch(e){console.warn('stats extra',e)}
+  getRaw().then(function(){var I=info(),h=document.getElementById('statsScroll');if(!I||!h)return;var t=document.createElement('div');t.innerHTML=listCards(I);while(t.firstChild)h.appendChild(t.firstChild);organise()}).catch(function(e){console.warn('lists',e)});
 };
 var _tw=toggleWatched;
 toggleWatched=function(x){
