@@ -1,5 +1,155 @@
 [
   {
+    "id": "1791284295970akf78my3wwn",
+    "title": "Baraka",
+    "year": 1993,
+    "director": "Ron Fricke",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMzAxOTgwNTAtOTM0Ny00NThkLTg0OWYtMTQwOGQ4ZDUxNTJiXkEyXkFqcGc@._V1_QL75_UX380_CR0,1,380,562_.jpg",
+    "imdb_id": "tt0103767",
+    "genre": "Documentary",
+    "country": "United States",
+    "runtime": 96,
+    "priority": "High",
+    "notes": null,
+    "owned": false,
+    "added": 1791284295970
+  },
+  {
+    "id": "17912842689933hcd46oqy6z",
+    "title": "Silence",
+    "year": 2017,
+    "director": "Martin Scorsese",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMjY3OTk0NjA2NV5BMl5BanBnXkFtZTgwNTg3Mjc2MDI@._V1_QL75_UX380_CR0,15,380,562_.jpg",
+    "imdb_id": "tt0490215",
+    "genre": "Drama, History",
+    "country": "United Kingdom",
+    "runtime": 161,
+    "priority": "High",
+    "notes": null,
+    "owned": false,
+    "added": 1791284268993
+  },
+  {
+    "id": "179128424437741azopba944",
+    "title": "The Fountain",
+    "year": 2006,
+    "director": "Darren Aronofsky",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTU5OTczMTcxMV5BMl5BanBnXkFtZTcwNDg3MTEzMw@@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+    "imdb_id": "tt0414993",
+    "genre": "Drama, Mystery, Romance",
+    "country": "United States",
+    "runtime": 97,
+    "priority": "High",
+    "notes": null,
+    "owned": false,
+    "added": 1791284244377
+  },
+  {
+    "id": "1791284218952fsyqdz1xxif",
+    "title": "Your Name.",
+    "year": 2016,
+    "director": "Makoto Shinkai",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMjI1ODZkYTgtYTY3Yy00ZTJkLWFkOTgtZDUyYWM4MzQwNjk0XkEyXkFqcGc@._V1_SX300.jpg",
+    "imdb_id": "tt5311514",
+    "genre": "Animation, Drama, Fantasy",
+    "country": "Japan",
+    "runtime": 106,
+    "priority": "High",
+    "notes": null,
+    "owned": false,
+    "added": 1791284218952
+  },
+  {
+    "id": "1791284169676jg08st34jkh",
+    "title": "The Favourite",
+    "year": 2018,
+    "director": "Yorgos Lanthimos",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTg1NzQwMDQxNV5BMl5BanBnXkFtZTgwNDg2NDYyNjM@._V1_SX300.jpg",
+    "imdb_id": "tt5083738",
+    "genre": "Biography, Comedy, Drama",
+    "country": "Ireland",
+    "runtime": 119,
+    "priority": "High",
+    "notes": null,
+    "owned": false,
+    "added": 1791284169676
+  },
+  {
+    "id": "17912841392081mmsihecf28",
+    "title": "A Single Man",
+    "year": 2010,
+    "director": "Tom Ford",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMzU5MTk4MjQ2M15BMl5BanBnXkFtZTcwNDU0MzEwMw@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+    "imdb_id": "tt1315981",
+    "genre": "Drama, Romance, Thriller",
+    "country": "United States",
+    "runtime": 99,
+    "priority": "High",
+    "notes": null,
+    "owned": false,
+    "added": 1791284139208
+  },
+  {
+    "id": "1791284110127rmmbt8xx7hf",
+    "title": "Enter the Void",
+    "year": 2009,
+    "director": "Gaspar Noé",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZmUyYjM1YjUtYTVhZC00YzYwLThiYTMtZjE3ZmZmNzA2NDA4XkEyXkFqcGc@._V1_SX300.jpg",
+    "imdb_id": "tt1191111",
+    "genre": "Drama, Fantasy",
+    "country": "France",
+    "runtime": 161,
+    "priority": "High",
+    "notes": null,
+    "owned": false,
+    "added": 1791284110127
+  },
+  {
+    "id": "1791284082500cal3iiqgjs",
+    "title": "House of Flying Daggers",
+    "year": 2005,
+    "director": "Yimou Zhang",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYWZlZjQwMjUtNGI5Ny00ODg4LTg0Y2UtODkxYmYxM2IxNjgzXkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+    "imdb_id": "tt0385004",
+    "genre": "Action, Adventure, Drama",
+    "country": "China",
+    "runtime": 119,
+    "priority": "High",
+    "notes": null,
+    "owned": false,
+    "added": 1791284082500
+  },
+  {
+    "id": "17912840148063k4vlsy4fui",
+    "title": "The New World",
+    "year": 2006,
+    "director": "Terrence Malick",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZGRhNmVmZDMtYzAyNy00M2YyLThkYTItNjNkYzMzYjUyZDY4XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+    "imdb_id": "tt0402399",
+    "genre": "Biography, Drama, History",
+    "country": "United States",
+    "runtime": 135,
+    "priority": "High",
+    "notes": null,
+    "owned": false,
+    "added": 1791284014806
+  },
+  {
+    "id": "1791283534543ai8y57gji35",
+    "title": "Hero",
+    "year": 2002,
+    "director": "Yimou Zhang",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYTlkZWVjYzQtZmI1My00MGM2LTlmZjEtNjU1M2Y1MTRkNmZjXkEyXkFqcGc@._V1_SX300.jpg",
+    "imdb_id": "tt0299977",
+    "genre": "Action, Adventure, Drama",
+    "country": "China",
+    "runtime": 94,
+    "priority": "Must Own",
+    "notes": null,
+    "owned": false,
+    "added": 1791283534543
+  },
+  {
     "id": "1791006475316rxvi0xf00n",
     "title": "Caché",
     "year": 2005,
@@ -736,7 +886,7 @@
     "genre": "Action, Drama, History",
     "country": "Taiwan",
     "runtime": 105,
-    "priority": "Someday",
+    "priority": "Must Own",
     "notes": null,
     "owned": false,
     "added": 1790674792693,
@@ -6446,53 +6596,6 @@
     ]
   },
   {
-    "id": "17753638558693nxmruzyljr",
-    "title": "Indiana Jones and the Temple of Doom",
-    "priority": "Someday",
-    "added": 1775363855869,
-    "owned": false,
-    "poster": "https://image.tmdb.org/t/p/w500/gpdVNUaa4LhRMLfJOPj1AZdhAZ3.jpg",
-    "imdb_id": "tt0087469",
-    "year": 1984,
-    "runtime": 118,
-    "genre": "Adventure, Action",
-    "country": "United States",
-    "director": "Steven Spielberg",
-    "tmdb_id": 87,
-    "lb": "https://letterboxd.com/search/Indiana%20Jones%20and%20the%20Temple%20of%20Doom/",
-    "has4k": true,
-    "score": 7.5,
-    "imdb_score": 7.5,
-    "lb_score": 3.8,
-    "rt_score": 0.85,
-    "mc_score": 57,
-    "similar": [
-      {
-        "title": "Raiders of the Lost Ark",
-        "year": 1981,
-        "imdb_id": "tt0082971"
-      },
-      {
-        "title": "Indiana Jones and the Last Crusade",
-        "year": 1989,
-        "imdb_id": "tt0097576"
-      },
-      {
-        "title": "The Mummy",
-        "year": 1999,
-        "imdb_id": "tt0120616"
-      }
-    ],
-    "female_director": false,
-    "_j": 1,
-    "synopsis": "After arriving in India, Indiana Jones is asked by a desperate village to find a mystical stone. He agrees – and stumbles upon a secret cult plotting a terrible plan in the catacombs of an ancient palace.",
-    "cast": [
-      "Harrison Ford",
-      "Kate Capshaw",
-      "Ke Huy Quan"
-    ]
-  },
-  {
     "id": "1775363855869cazsynrg2x",
     "title": "Black Swan",
     "priority": "Someday",
@@ -7298,52 +7401,6 @@
       "Guy Pearce",
       "Carrie-Anne Moss",
       "Joe Pantoliano"
-    ]
-  },
-  {
-    "id": "177536358998636jfh2v1xna",
-    "title": "Raiders of the Lost Ark",
-    "priority": "High",
-    "added": 1775363589986,
-    "owned": false,
-    "poster": "https://image.tmdb.org/t/p/w500/ceG9VzoRAVGwivFU403Wc3AHRys.jpg",
-    "imdb_id": "tt0082971",
-    "year": 1981,
-    "runtime": 115,
-    "genre": "Adventure, Action",
-    "country": "United States",
-    "director": "Steven Spielberg",
-    "tmdb_id": 85,
-    "lb": "https://letterboxd.com/search/Raiders%20of%20the%20Lost%20Ark/",
-    "has4k": true,
-    "score": 8.7,
-    "imdb_score": 8.4,
-    "lb_score": 4.2,
-    "rt_score": 0.95,
-    "similar": [
-      {
-        "title": "Indiana Jones and the Last Crusade",
-        "year": 1989,
-        "imdb_id": "tt0097576"
-      },
-      {
-        "title": "The Mummy",
-        "year": 1999,
-        "imdb_id": "tt0120616"
-      },
-      {
-        "title": "Romancing the Stone",
-        "year": 1984,
-        "imdb_id": "tt0088011"
-      }
-    ],
-    "female_director": false,
-    "_j": 1,
-    "synopsis": "When Dr. Indiana Jones – the tweed-suited professor who just happens to be a celebrated archaeologist – is hired by the government to locate the legendary Ark of the Covenant, he finds himself up against the entire Nazi regime.",
-    "cast": [
-      "Harrison Ford",
-      "Karen Allen",
-      "Paul Freeman"
     ]
   },
   {
@@ -8262,7 +8319,7 @@
   {
     "id": "1775363589985rstiihcjugn",
     "title": "Cleo from 5 to 7",
-    "priority": "High",
+    "priority": "Must Own",
     "added": 1775363589985,
     "owned": false,
     "poster": "https://image.tmdb.org/t/p/w500/oelBStY4xpguaplRv15P3Za7Xsr.jpg",
