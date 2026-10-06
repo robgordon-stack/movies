@@ -57,7 +57,7 @@ async function build(id){
   var m=await tm('/movie/'+id,{append_to_response:'credits,alternative_titles'}),y=+(m.release_date||'').slice(0,4)||null,
   al=new Set(m.alternative_titles.titles.map(function(t){return t.title}));if(m.original_title)al.add(m.original_title);al.delete(m.title);
   var e={title:m.title,year:y,decade:y?Math.floor(y/10)*10+'s':null,director:m.credits.crew.filter(function(c){return c.job==='Director'}).map(function(c){return c.name}).join(', '),
-   country:m.production_countries[0]?(CT[m.production_countries[0].name]||m.production_countries[0].name):null,genre:m.genres.map(function(g){return GN[g.name]||g.name}).join(', '),
+   country:m.production_countries[0]?(mode==='wish'?(m.production_countries[0].name==='United States of America'?'United States':m.production_countries[0].name):(CT[m.production_countries[0].name]||m.production_countries[0].name)):null,genre:m.genres.map(function(g){return GN[g.name]||g.name}).join(', '),
    runtime:m.runtime||null,poster:m.poster_path?'https://image.tmdb.org/t/p/w342'+m.poster_path:null,imdb_id:m.imdb_id,tmdb_id:m.id,synopsis:m.overview,
    cast:m.credits.cast.slice(0,3).map(function(c){return c.name}),female_director:false,alt_titles:Array.from(al).sort().slice(0,8),lb:'https://letterboxd.com/tmdb/'+m.id+'/'};
   if(S.omdb&&e.imdb_id)try{var o=await fetch('https://www.omdbapi.com/?i='+e.imdb_id+'&apikey='+S.omdb).then(function(r){return r.json()});
