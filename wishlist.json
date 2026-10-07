@@ -1,5 +1,44 @@
 [
   {
+    "title": "Z",
+    "year": 1969,
+    "decade": "1960s",
+    "director": "Costa-Gavras",
+    "country": "Algeria",
+    "genre": "Thriller, Crime, Drama",
+    "runtime": 122,
+    "poster": "https://image.tmdb.org/t/p/w342/dFAJyFNgvOv24f2RQyI9KDxjGr3.jpg",
+    "imdb_id": "tt0065234",
+    "tmdb_id": 2721,
+    "synopsis": "A prominent politician is murdered during a demonstration. The government and army are trying to suppress the truth, but a tenacious magistrate is determined not to let them get away with it.",
+    "cast": [
+      "Yves Montand",
+      "Irene Papas",
+      "Jean-Louis Trintignant"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Z (Costa-Gavras)",
+      "Z - A Orgia do Poder",
+      "Z - Anatomie eines politischen Mordes",
+      "Z - Han lever",
+      "Z - hän elää",
+      "Z ou l'anatomie d'un assassinat politique",
+      "Z – jis vis dar gyvas!",
+      "Z, avagy egy politikai gyilkosság anatómiája"
+    ],
+    "lb": "https://letterboxd.com/tmdb/2721/",
+    "imdb_score": 8.1,
+    "rt_score": 0.94,
+    "mc_score": 86,
+    "score": 8.7,
+    "id": "1791367475227mf4skywdp8",
+    "priority": "High",
+    "owned": false,
+    "added": 1791367475227,
+    "has4k": false
+  },
+  {
     "id": "1791284295970akf78my3wwn",
     "title": "Baraka",
     "year": 1993,
