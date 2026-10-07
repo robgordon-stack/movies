@@ -1,5 +1,43 @@
 [
   {
+    "title": "M",
+    "year": 1931,
+    "decade": "1930s",
+    "director": "Fritz Lang",
+    "country": "Germany",
+    "genre": "Drama, Thriller, Crime",
+    "runtime": 110,
+    "poster": "https://image.tmdb.org/t/p/w342/bTdZk3q2DWpBRnLiaaItKFWOVhI.jpg",
+    "imdb_id": "tt0022100",
+    "tmdb_id": 832,
+    "synopsis": "In this classic German thriller, Hans Beckert, a serial killer who preys on children, becomes the focus of a massive Berlin police manhunt. Beckert's heinous crimes are so repellant and disruptive to city life that he is even targeted by others in the seedy underworld network. With both cops and criminals in pursuit, the murderer soon realizes that people are on his trail, sending him into a tense, panicked attempt to escape justice.",
+    "cast": [
+      "Peter Lorre",
+      "Ellen Widmann",
+      "Inge Landgut"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "El vampiro de Düsseldorf",
+      "El vampiro negro",
+      "En stad söker mördaren 'M'",
+      "Kaupunki etsii murhaajaa",
+      "M - Dein Mörder sieht dich an",
+      "M - Eine Stadt sucht einen Mörder",
+      "M - Mörder unter uns",
+      "M, een stad zoekt zijn moordenaar"
+    ],
+    "lb": "https://letterboxd.com/tmdb/832/",
+    "imdb_score": 8.3,
+    "rt_score": 1,
+    "score": 9.2,
+    "id": "1791367499864rkjyk79ag6o",
+    "priority": "High",
+    "owned": false,
+    "added": 1791367499864,
+    "has4k": false
+  },
+  {
     "title": "Z",
     "year": 1969,
     "decade": "1960s",
