@@ -29,6 +29,7 @@ button.go{width:100%;background:var(--a);color:#111;border:0;border-radius:12px;
 <div id="sh"><div id="card"></div></div>
 <script>
 var $=function(i){return document.getElementById(i)},S=JSON.parse(localStorage.getItem('add_cfg')||'{}'),C=[],W=[],R=[],sel=null,mode='wish',pri='High',fmt='Blu-ray',k4=false,tmr;
+S.tmdb=S.tmdb||'629e63fca4e9b61a912511334debd42c';S.omdb=S.omdb||'e5846dcc';
 ['repo','branch','gh','tmdb','omdb'].forEach(function(k){var e=$('s_'+k);e.value=S[k]||(k==='branch'?'main':'');e.onchange=function(){S[k]=e.value.trim();localStorage.setItem('add_cfg',JSON.stringify(S))}});
 if(!S.gh||!S.tmdb||!S.repo)$('set').open=true;
 var E=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
