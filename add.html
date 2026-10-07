@@ -32,12 +32,12 @@ var $=function(i){return document.getElementById(i)},S=JSON.parse(localStorage.g
 ['repo','branch','gh','tmdb','omdb'].forEach(function(k){var e=$('s_'+k);e.value=S[k]||(k==='branch'?'main':'');e.onchange=function(){S[k]=e.value.trim();localStorage.setItem('add_cfg',JSON.stringify(S))}});
 if(!S.gh||!S.tmdb||!S.repo)$('set').open=true;
 var E=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
-Promise.all(['collection.json','wishlist.json'].map(function(u){return fetch(u+'?v='+Date.now()).then(function(r){return r.json()}).catch(function(){return[]})})).then(function(d){C=d[0];W=Array.isArray(d[1])?d[1]:(d[1].films||[]);var p=new URLSearchParams(location.search);if(p.get('q')){$('q').value=p.get('q');mode=p.get('list')==='own'?'own':'wish';find(p.get('y'))}});
+Promise.all(['collection.json','wishlist.json'].map(function(u){return fetch(u+'?v='+Date.now()).then(function(r){return r.json()}).catch(function(){return[]})})).then(function(d){C=d[0];W=Array.isArray(d[1])?d[1]:(d[1].films||[]);var p=new URLSearchParams(location.search);mode=p.get('list')==='own'?'own':'wish';if(p.get('q')){$('q').value=p.get('q');find(p.get('y'))}});
 function tm(path,o){o=o||{};var h={};if((S.tmdb||'').length>40)h.Authorization='Bearer '+S.tmdb;else o.api_key=S.tmdb;return fetch('https://api.themoviedb.org/3'+path+'?'+new URLSearchParams(o),{headers:h}).then(function(r){if(!r.ok)throw'TMDB error '+r.status+' (check your TMDB key)';return r.json()})}
 function stat(m){var y=+(m.release_date||'').slice(0,4),f=function(x){return x.tmdb_id===m.id||(x.title===m.title&&Math.abs((+x.year||0)-y)<=1)};return C.some(f)?'o':W.some(f)?'w':''}
 $('q').oninput=function(){clearTimeout(tmr);tmr=setTimeout(function(){find()},350)};
 function find(y){var q=$('q').value.trim();if(q.length<2){$('res').innerHTML='';return}
-  tm('/search/movie',y?{query:q,year:y}:{query:q}).then(function(d){R=d.results.slice(0,8);
+  tm('/search/movie',y?{query:q,year:y}:{query:q}).then(function(d){return(!d.results.length&&y)?tm('/search/movie',{query:q}):d}).then(function(d){R=d.results.slice(0,8);
     $('res').innerHTML=R.map(function(m,i){var s=stat(m),yr=(m.release_date||'').slice(0,4);
       return'<div class="r" onclick="pick('+i+')">'+(m.poster_path?'<img src="https://image.tmdb.org/t/p/w92'+m.poster_path+'">':'<i></i>')+'<div><b>'+E(m.title)+'</b> <span style="color:var(--m)">'+yr+'</span><small>'+E((m.overview||'').slice(0,70))+'</small></div>'+(s?'<span class="st '+s+'">'+(s==='o'?'✓ Owned':'On wishlist')+'</span>':'')+'</div>'}).join('')||'<p style="color:var(--m)">No results.</p>'}).catch(function(e){$('res').innerHTML='<p style="color:var(--r)">'+E(e)+'</p>'})}
 function chips(id,opts,cur,fn){return'<div class="chips">'+opts.map(function(o){return'<span class="c '+(o===cur?'on':'')+'" onclick="'+fn+'(\''+o+'\')">'+o+'</span>'}).join('')+'</div>'}
