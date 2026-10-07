@@ -30,7 +30,7 @@ button.go{width:100%;background:var(--a);color:#111;border:0;border-radius:12px;
 <div id="sh"><div id="card"></div></div>
 <script>
 var $=function(i){return document.getElementById(i)},S=JSON.parse(localStorage.getItem('add_cfg')||'{}'),C=[],W=[],R=[],sel=null,mode='wish',pri='High',fmt='Blu-ray',k4=false,tmr;
-S.tmdb=S.tmdb||'629e63fca4e9b61a912511334debd42c';S.omdb=S.omdb||'e5846dcc';
+S.tmdb=S.tmdb||'629e63fca4e9b61a912511334debd42c';S.omdb=S.omdb||'e5846dcc';S.repo=S.repo||'robgordon-stack/movies';
 ['repo','branch','gh','tmdb','omdb'].forEach(function(k){var e=$('s_'+k);e.value=S[k]||(k==='branch'?'main':'');e.onchange=e.oninput=function(){S[k]=e.value.trim();localStorage.setItem('add_cfg',JSON.stringify(S));chk()}});
 function chk(){var m=[];if(!S.repo)m.push('GitHub repo');if(!S.gh)m.push('GitHub token');if(!S.tmdb)m.push('TMDB key');$('warn').textContent=m.length?'Setup needed: '+m.join(' and ')+'. Fill in the Settings below.':'';return m}
 if(chk().length)$('set').open=true;
