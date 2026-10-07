@@ -1,5 +1,44 @@
 [
   {
+    "title": "The Odyssey",
+    "year": 2026,
+    "decade": "2020s",
+    "director": "Christopher Nolan",
+    "country": "United Kingdom",
+    "genre": "Adventure, Action, Fantasy",
+    "runtime": 173,
+    "poster": "https://image.tmdb.org/t/p/w342/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+    "imdb_id": "tt33764258",
+    "tmdb_id": 1368337,
+    "synopsis": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
+    "cast": [
+      "Matt Damon",
+      "Tom Holland",
+      "Anne Hathaway"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Odisseya",
+      "Odysseen",
+      "Οδύσσεια",
+      "Адысея",
+      "האודיסיאה",
+      "ادیسه",
+      "دی اوڈیسی",
+      "দ্য অডিচি"
+    ],
+    "lb": "https://letterboxd.com/tmdb/1368337/",
+    "imdb_score": 8.4,
+    "rt_score": 0.94,
+    "mc_score": 88,
+    "score": 8.9,
+    "id": "1791372723829mgsbqd2pkni",
+    "priority": "High",
+    "owned": false,
+    "added": 1791372723830,
+    "has4k": true
+  },
+  {
     "title": "Macario",
     "year": 1960,
     "decade": "1960s",
