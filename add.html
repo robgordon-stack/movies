@@ -21,17 +21,19 @@ button.go{width:100%;background:var(--a);color:#111;border:0;border-radius:12px;
 <details id="set"><summary>Settings (stored only on this device)</summary>
 <label>GitHub repo (owner/name)</label><input id="s_repo" placeholder="rob/movie-list">
 <label>Branch</label><input id="s_branch" placeholder="main">
+<label>Folder in the repo (leave blank if the files are at the top level)</label><input id="s_dir">
 <label>GitHub token (fine-grained, this repo only, Contents: read &amp; write)</label><input id="s_gh" type="password">
 <label>TMDB API key</label><input id="s_tmdb" type="password">
 <label>OMDb key (optional, adds IMDb/RT/Metacritic scores)</label><input id="s_omdb" type="password">
+<button class="c" onclick="test()">Test connection</button><div id="tres" style="margin:8px 0;font-size:13px"></div>
 </details>
 <input id="q" type="search" placeholder="Search for a film…" autocomplete="off">
 <div id="res"></div>
 <div id="sh"><div id="card"></div></div>
 <script>
 var $=function(i){return document.getElementById(i)},S=JSON.parse(localStorage.getItem('add_cfg')||'{}'),C=[],W=[],R=[],sel=null,mode='wish',pri='High',fmt='Blu-ray',k4=false,tmr;
-S.tmdb=S.tmdb||'629e63fca4e9b61a912511334debd42c';S.omdb=S.omdb||'e5846dcc';S.repo=S.repo||'robgordon-stack/movies';
-['repo','branch','gh','tmdb','omdb'].forEach(function(k){var e=$('s_'+k);e.value=S[k]||(k==='branch'?'main':'');e.onchange=e.oninput=function(){S[k]=e.value.trim();localStorage.setItem('add_cfg',JSON.stringify(S));chk()}});
+S.tmdb=S.tmdb||'629e63fca4e9b61a912511334debd42c';S.omdb=S.omdb||'e5846dcc';S.repo=S.repo||'robgordon-stack/movies';S.branch=S.branch||'main';S.dir=S.dir||'';
+['repo','branch','dir','gh','tmdb','omdb'].forEach(function(k){var e=$('s_'+k);e.value=S[k]||(k==='branch'?'main':'');e.onchange=e.oninput=function(){S[k]=e.value.trim();localStorage.setItem('add_cfg',JSON.stringify(S));chk()}});
 function chk(){var m=[];if(!S.repo)m.push('GitHub repo');if(!S.gh)m.push('GitHub token');if(!S.tmdb)m.push('TMDB key');$('warn').textContent=m.length?'Setup needed: '+m.join(' and ')+'. Fill in the Settings below.':'';return m}
 if(chk().length)$('set').open=true;
 var E=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
@@ -68,14 +70,20 @@ async function build(id){
   var p=[];if(e.imdb_score)p.push(e.imdb_score);if(e.rt_score)p.push(10*e.rt_score);if(e.mc_score)p.push(e.mc_score/10);if(p.length)e.score=Math.round(p.reduce(function(a,b){return a+b})/p.length*10)/10;
   Object.keys(e).forEach(function(k){if(e[k]==null||e[k]==='')delete e[k]});return e}
 function b64(s){var b=new TextEncoder().encode(s),o='';for(var i=0;i<b.length;i+=32768)o+=String.fromCharCode.apply(null,b.subarray(i,i+32768));return btoa(o)}
-async function edit(path,fn,msg){
+async function edit(path,fn,msg){if(S.dir)path=S.dir.replace(/^\/+|\/+$/g,'')+'/'+path;
   var H={Authorization:'Bearer '+S.gh,'X-GitHub-Api-Version':'2022-11-28'},api='https://api.github.com/repos/'+S.repo+'/contents/',dir=path.indexOf('/')>-1?path.slice(0,path.lastIndexOf('/')):'';
-  var ls=await fetch(api+dir+'?ref='+S.branch,{headers:H,cache:'no-store'});if(!ls.ok)throw'GitHub '+ls.status+' — check repo, branch and token';
+  var ls=await fetch(api+dir+'?ref='+S.branch,{headers:H,cache:'no-store'});if(!ls.ok){var em='';try{em=(await ls.json()).message||''}catch(x){}throw'GitHub '+ls.status+' ('+em+') for '+S.repo+' on branch "'+S.branch+'". '+(ls.status===404?'Either the repo name or branch is wrong, or the token has no access to this repo.':ls.status===401?'The token is wrong or has expired.':'Check the token permissions.')}
   var f=(await ls.json()).find(function(x){return x.path===path});if(!f)throw path+' not found in the repo';
   var raw=await fetch(api+path+'?ref='+S.branch,{headers:Object.assign({Accept:'application/vnd.github.raw+json'},H),cache:'no-store'}),j=JSON.parse(await raw.text()),arr=Array.isArray(j)?j:j.films,out=fn(arr);
   if(Array.isArray(j))j=out;else j.films=out;
   var p=await fetch(api+path,{method:'PUT',headers:H,body:JSON.stringify({message:msg,content:b64(JSON.stringify(j,null,2)),sha:f.sha,branch:S.branch})});
   if(!p.ok)throw'Commit failed: '+p.status+' '+((await p.json()).message||'');return out}
+async function test(){var r=$('tres');r.style.color='';r.textContent='Testing…';var mi=chk();if(mi.length){r.style.color='var(--r)';r.textContent='Missing: '+mi.join(', ');return}
+  try{var d=(S.dir||'').replace(/^\/+|\/+$/g,''),x=await fetch('https://api.github.com/repos/'+S.repo+'/contents/'+d+'?ref='+S.branch,{headers:{Authorization:'Bearer '+S.gh,'X-GitHub-Api-Version':'2022-11-28'},cache:'no-store'}),j=await x.json();
+    if(!x.ok)throw'GitHub '+x.status+': '+(j.message||'')+' (repo '+S.repo+', branch '+S.branch+')';
+    var n=j.map(function(f){return f.name}),ok=n.indexOf('collection.json')>-1&&n.indexOf('wishlist.json')>-1;
+    r.style.color=ok?'var(--g)':'var(--a)';r.textContent=ok?'✓ Connected. Found collection.json and wishlist.json.':'Connected, but collection.json / wishlist.json are not in this folder. Found: '+n.slice(0,12).join(', ')}
+  catch(e){r.style.color='var(--r)';r.textContent=String(e)}}
 async function add(){
   var btn=$('go'),msg=$('msg');btn.disabled=true;btn.textContent='Adding…';msg.style.color='';msg.textContent='';
   try{var mi=chk();if(mi.length){$('sh').classList.remove('o');$('set').open=true;$('set').scrollIntoView();throw'Missing: '+mi.join(', ')+'. Fill these in under Settings at the top of the page, then try again.'}
