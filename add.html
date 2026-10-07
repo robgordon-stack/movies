@@ -17,8 +17,7 @@ button.go{width:100%;background:var(--a);color:#111;border:0;border-radius:12px;
 </style></head><body>
 <a href="index.html">← The Archive</a>
 <h1>Add a film</h1>
-<input id="q" type="search" placeholder="Search for a film…" autocomplete="off">
-<div id="res"></div>
+<div id="warn" style="color:var(--a);font-size:13px;margin-bottom:8px"></div>
 <details id="set"><summary>Settings (stored only on this device)</summary>
 <label>GitHub repo (owner/name)</label><input id="s_repo" placeholder="rob/movie-list">
 <label>Branch</label><input id="s_branch" placeholder="main">
@@ -26,12 +25,15 @@ button.go{width:100%;background:var(--a);color:#111;border:0;border-radius:12px;
 <label>TMDB API key</label><input id="s_tmdb" type="password">
 <label>OMDb key (optional, adds IMDb/RT/Metacritic scores)</label><input id="s_omdb" type="password">
 </details>
+<input id="q" type="search" placeholder="Search for a film…" autocomplete="off">
+<div id="res"></div>
 <div id="sh"><div id="card"></div></div>
 <script>
 var $=function(i){return document.getElementById(i)},S=JSON.parse(localStorage.getItem('add_cfg')||'{}'),C=[],W=[],R=[],sel=null,mode='wish',pri='High',fmt='Blu-ray',k4=false,tmr;
 S.tmdb=S.tmdb||'629e63fca4e9b61a912511334debd42c';S.omdb=S.omdb||'e5846dcc';
-['repo','branch','gh','tmdb','omdb'].forEach(function(k){var e=$('s_'+k);e.value=S[k]||(k==='branch'?'main':'');e.onchange=function(){S[k]=e.value.trim();localStorage.setItem('add_cfg',JSON.stringify(S))}});
-if(!S.gh||!S.tmdb||!S.repo)$('set').open=true;
+['repo','branch','gh','tmdb','omdb'].forEach(function(k){var e=$('s_'+k);e.value=S[k]||(k==='branch'?'main':'');e.onchange=e.oninput=function(){S[k]=e.value.trim();localStorage.setItem('add_cfg',JSON.stringify(S));chk()}});
+function chk(){var m=[];if(!S.repo)m.push('GitHub repo');if(!S.gh)m.push('GitHub token');if(!S.tmdb)m.push('TMDB key');$('warn').textContent=m.length?'Setup needed: '+m.join(' and ')+'. Fill in the Settings below.':'';return m}
+if(chk().length)$('set').open=true;
 var E=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
 Promise.all(['collection.json','wishlist.json'].map(function(u){return fetch(u+'?v='+Date.now()).then(function(r){return r.json()}).catch(function(){return[]})})).then(function(d){C=d[0];W=Array.isArray(d[1])?d[1]:(d[1].films||[]);var p=new URLSearchParams(location.search);mode=p.get('list')==='own'?'own':'wish';if(p.get('q')){$('q').value=p.get('q');find(p.get('y'))}});
 function tm(path,o){o=o||{};var h={};if((S.tmdb||'').length>40)h.Authorization='Bearer '+S.tmdb;else o.api_key=S.tmdb;return fetch('https://api.themoviedb.org/3'+path+'?'+new URLSearchParams(o),{headers:h}).then(function(r){if(!r.ok)throw'TMDB error '+r.status+' (check your TMDB key)';return r.json()})}
@@ -76,7 +78,7 @@ async function edit(path,fn,msg){
   if(!p.ok)throw'Commit failed: '+p.status+' '+((await p.json()).message||'');return out}
 async function add(){
   var btn=$('go'),msg=$('msg');btn.disabled=true;btn.textContent='Adding…';msg.style.color='';msg.textContent='';
-  try{if(!S.gh||!S.repo||!S.tmdb){$('set').open=true;throw'Fill in the settings below first.'}
+  try{var mi=chk();if(mi.length){$('sh').classList.remove('o');$('set').open=true;$('set').scrollIntoView();throw'Missing: '+mi.join(', ')+'. Fill these in under Settings at the top of the page, then try again.'}
     var e=await build(sel.id),same=function(x){return x.tmdb_id===e.tmdb_id||(e.imdb_id&&x.imdb_id===e.imdb_id)};
     if(mode==='wish'){e.id=Date.now()+Math.random().toString(36).slice(2);e.priority=pri;e.owned=false;e.added=Date.now();e.has4k=k4;
       await edit('wishlist.json',function(L){if(L.some(same))throw'Already on your wishlist';L.unshift(e);return L},'Add '+e.title+' to wishlist');W.unshift(e)}
