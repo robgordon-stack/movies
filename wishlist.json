@@ -1,5 +1,44 @@
 [
   {
+    "title": "Hellboy II: The Golden Army",
+    "year": 2008,
+    "decade": "2000s",
+    "director": "Guillermo del Toro",
+    "country": "United States",
+    "genre": "Fantasy, Action",
+    "runtime": 120,
+    "poster": "https://image.tmdb.org/t/p/w342/zO0Wdrxnhx3KoJEvychSmnY3urC.jpg",
+    "imdb_id": "tt0411477",
+    "tmdb_id": 11253,
+    "synopsis": "Hellboy, his pyrokinetic girlfriend, Liz, and aquatic empath, Abe Sapien, face their biggest battle when an underworld elven prince plans to reclaim Earth for his magical kindred. Tired of living in the shadow of humans, Prince Nuada tries to awaken an ancient force of killing machines, the all-powerful Golden Army, to clear the way for fantasy creatures to roam free. Only Hellboy can stop the dark prince and prevent humanity's annihilation.",
+    "cast": [
+      "Ron Perlman",
+      "Selma Blair",
+      "Doug Jones"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Hellboy 2",
+      "Hellboy 2 - Die goldene Armee",
+      "Hellboy 2 - The Golden Army",
+      "Hellboy 2 : L'armée d'or",
+      "Hellboy II",
+      "Hellboy II - Die Goldene Armee",
+      "Hellboy II - L'armée d'or",
+      "Hellboy II: El Ejército Dorado"
+    ],
+    "lb": "https://letterboxd.com/tmdb/11253/",
+    "imdb_score": 7,
+    "rt_score": 0.86,
+    "mc_score": 78,
+    "score": 7.8,
+    "id": "1791456291786v4lwm1r11um",
+    "priority": "High",
+    "owned": false,
+    "added": 1791456291786,
+    "has4k": false
+  },
+  {
     "title": "Hellboy",
     "year": 2004,
     "decade": "2000s",
