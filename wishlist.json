@@ -1,5 +1,41 @@
 [
   {
+    "title": "Hellboy",
+    "year": 2004,
+    "decade": "2000s",
+    "director": "Guillermo del Toro",
+    "country": "United States",
+    "genre": "Fantasy, Action",
+    "runtime": 122,
+    "poster": "https://image.tmdb.org/t/p/w342/21hS8mD8uxBVvf8xVYR30LbbmPO.jpg",
+    "imdb_id": "tt0167190",
+    "tmdb_id": 1487,
+    "synopsis": "In the final days of World War II, the Nazis attempt to use black magic to aid their dying cause. The Allies raid the camp where the ceremony is taking place, but not before they summon a baby demon who is rescued by Allied forces and dubbed \"Hellboy\". Sixty years later, Hellboy serves the cause of good rather than evil as an agent in the Bureau of Paranormal Research & Defense, along with Abe Sapien - a merman with psychic powers, and Liz Sherman - a woman with pyrokinesis, protecting America against dark forces.",
+    "cast": [
+      "Ron Perlman",
+      "Selma Blair",
+      "Doug Jones"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Helboj",
+      "Hellboy: O Íroas tis Kólasis",
+      "Khelboĭ",
+      "Khellboy",
+      "Хеллбой: Герой из пекла"
+    ],
+    "lb": "https://letterboxd.com/tmdb/1487/",
+    "imdb_score": 6.9,
+    "rt_score": 0.81,
+    "mc_score": 72,
+    "score": 7.4,
+    "id": "1791456278809d35ntkz6bp",
+    "priority": "High",
+    "owned": false,
+    "added": 1791456278809,
+    "has4k": false
+  },
+  {
     "title": "The Odyssey",
     "year": 2026,
     "decade": "2020s",
