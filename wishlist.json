@@ -1,5 +1,39 @@
 [
   {
+    "title": "Barbarian",
+    "year": 2022,
+    "decade": "2020s",
+    "director": "Zach Cregger",
+    "country": "United States",
+    "genre": "Horror, Mystery, Thriller",
+    "runtime": 103,
+    "poster": "https://image.tmdb.org/t/p/w342/idT5mnqPcJgSkvpDX7pJffBzdVH.jpg",
+    "imdb_id": "tt15791034",
+    "tmdb_id": 913290,
+    "synopsis": "In town for a job interview, a young woman arrives at her Airbnb late at night only to find that it has been mistakenly double-booked and a strange man is already staying there. Against her better judgement, she decides to stay the night anyway.",
+    "cast": [
+      "Georgina Campbell",
+      "Justin Long",
+      "Bill Skarsgård"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Barbar",
+      "Noites Brutais",
+      "Варвар"
+    ],
+    "lb": "https://letterboxd.com/tmdb/913290/",
+    "imdb_score": 7,
+    "rt_score": 0.92,
+    "mc_score": 78,
+    "score": 8,
+    "id": "1791456581400w0ktlkhy1o",
+    "priority": "High",
+    "owned": false,
+    "added": 1791456581400,
+    "has4k": false
+  },
+  {
     "title": "Hellboy II: The Golden Army",
     "year": 2008,
     "decade": "2000s",
