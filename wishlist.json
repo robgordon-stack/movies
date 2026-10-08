@@ -1,5 +1,44 @@
 [
   {
+    "title": "Bullitt",
+    "year": 1968,
+    "decade": "1960s",
+    "director": "Peter Yates",
+    "country": "United States",
+    "genre": "Action, Crime, Thriller",
+    "runtime": 113,
+    "poster": "https://image.tmdb.org/t/p/w342/2ffzF1WmeXtH420fSUoCrecFvDA.jpg",
+    "imdb_id": "tt0062765",
+    "tmdb_id": 916,
+    "synopsis": "Senator Walter Chalmers is aiming to take down mob boss Pete Ross with the help of testimony from the criminal's hothead brother Johnny, who is in protective custody in San Francisco under the watch of police lieutenant Frank Bullitt. When a pair of mob hitmen enter the scene, Bullitt follows their trail through a maze of complications and double-crosses. This thriller includes one of the most famous car chases ever filmed.",
+    "cast": [
+      "Steve McQueen",
+      "Robert Vaughn",
+      "Jacqueline Bisset"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "A chicagói tanú",
+      "San Franciscó-i zsaru",
+      "布利特",
+      "浑身是胆",
+      "神探布里特",
+      "警网铁金刚",
+      "블리트",
+      "스티브 맥퀸의 블리트"
+    ],
+    "lb": "https://letterboxd.com/tmdb/916/",
+    "imdb_score": 7.4,
+    "rt_score": 0.98,
+    "mc_score": 81,
+    "score": 8.4,
+    "id": "17914569120785s3k0b12mz",
+    "priority": "High",
+    "owned": false,
+    "added": 1791456912078,
+    "has4k": false
+  },
+  {
     "title": "Requiem for a Dream",
     "year": 2000,
     "decade": "2000s",
