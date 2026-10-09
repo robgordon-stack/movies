@@ -17119,12 +17119,12 @@
     "country": "Poland",
     "genre": "Horror",
     "runtime": 125,
-    "score": 7.0,
+    "score": 7.3,
     "distributor": "Masters of Cinema",
     "format": "Blu-ray",
     "watched": false,
     "spine": "",
-    "lb": "https://letterboxd.com/imdb/tt0095012/",
+    "lb": "https://letterboxd.com/film/the-devil-1972/",
     "poster": "https://image.tmdb.org/t/p/w342/12vWPiAnnI7Ua2ByPBsVegrXfJo.jpg",
     "imdb_id": "tt0095012",
     "synopsis": "In 1793 Poland, during the Prussian invasion, a young man freed from captivity by a mysterious stranger is drawn into a spree of violence and madness.",
@@ -17138,7 +17138,8 @@
     "tmdb_id": 95043,
     "alt_titles": [
       "Diabeł"
-    ]
+    ],
+    "lb_score": 3.84
   },
   {
     "title": "The General",
@@ -35342,12 +35343,12 @@
     "country": "Usa",
     "genre": "Action, Adventure",
     "runtime": 115,
-    "score": 8.8,
+    "score": 8.7,
     "distributor": "Paramount",
     "format": "4K Blu-ray",
     "watched": false,
     "spine": "",
-    "lb": "https://letterboxd.com/imdb/tt0082971/",
+    "lb": "https://letterboxd.com/film/raiders-of-the-lost-ark/",
     "poster": "https://image.tmdb.org/t/p/w342/ceG9VzoRAVGwivFU403Wc3AHRys.jpg",
     "imdb_id": "tt0082971",
     "synopsis": "In 1936, archaeologist Indiana Jones is tasked by Army Intelligence to help locate a legendary ancient power, the Ark of Covenant, before the Nazis get it first.",
@@ -35360,7 +35361,8 @@
       "Karen Allen",
       "Paul Freeman"
     ],
-    "tmdb_id": 85
+    "tmdb_id": 85,
+    "lb_score": 4.16
   },
   {
     "title": "Indiana Jones and the Temple of Doom",
@@ -35370,12 +35372,12 @@
     "country": "Usa",
     "genre": "Action, Adventure",
     "runtime": 118,
-    "score": 7,
+    "score": 7.1,
     "distributor": "Paramount",
     "format": "4K Blu-ray",
     "watched": false,
     "spine": "",
-    "lb": "https://letterboxd.com/imdb/tt0087469/",
+    "lb": "https://letterboxd.com/film/indiana-jones-and-the-temple-of-doom/",
     "poster": "https://image.tmdb.org/t/p/w342/gpdVNUaa4LhRMLfJOPj1AZdhAZ3.jpg",
     "imdb_id": "tt0087469",
     "synopsis": "In 1935, Indiana Jones is tasked by Indian villagers with reclaiming a sacred stone stolen from them by a secret cult.",
@@ -35388,7 +35390,8 @@
       "Kate Capshaw",
       "Ke Huy Quan"
     ],
-    "tmdb_id": 87
+    "tmdb_id": 87,
+    "lb_score": 3.68
   },
   {
     "title": "Indiana Jones and the Last Crusade",
@@ -35398,12 +35401,12 @@
     "country": "Usa",
     "genre": "Action, Adventure",
     "runtime": 127,
-    "score": 7.7,
+    "score": 7.8,
     "distributor": "Paramount",
     "format": "4K Blu-ray",
     "watched": false,
     "spine": "",
-    "lb": "https://letterboxd.com/imdb/tt0097576/",
+    "lb": "https://letterboxd.com/film/indiana-jones-and-the-last-crusade/",
     "poster": "https://image.tmdb.org/t/p/w342/sizg1AU8f8JDZX4QIgE4pjUMBvx.jpg",
     "imdb_id": "tt0097576",
     "synopsis": "In 1938, after his father goes missing while pursuing the Holy Grail, Indiana Jones finds himself up against the Nazis again to stop them from obtaining its powers.",
@@ -35416,7 +35419,8 @@
       "Sean Connery",
       "Alison Doody"
     ],
-    "tmdb_id": 89
+    "tmdb_id": 89,
+    "lb_score": 4.12
   },
   {
     "title": "Indiana Jones and the Kingdom of the Crystal Skull",
@@ -35426,12 +35430,12 @@
     "country": "Usa",
     "genre": "Action, Adventure",
     "runtime": 122,
-    "score": 6.8,
+    "score": 6.5,
     "distributor": "Paramount",
     "format": "4K Blu-ray",
     "watched": false,
     "spine": "",
-    "lb": "https://letterboxd.com/imdb/tt0367882/",
+    "lb": "https://letterboxd.com/film/indiana-jones-and-the-kingdom-of-the-crystal-skull/",
     "poster": "https://image.tmdb.org/t/p/w342/56As6XEM1flWvprX4LgkPl8ii4K.jpg",
     "imdb_id": "tt0367882",
     "synopsis": "In 1957, Indiana Jones is called back into action when he becomes entangled in a Soviet plot to uncover the secret behind mysterious artifacts known as the Crystal Skulls.",
@@ -35444,6 +35448,7 @@
       "Cate Blanchett",
       "Shia LaBeouf"
     ],
-    "tmdb_id": 217
+    "tmdb_id": 217,
+    "lb_score": 2.82
   }
 ]
