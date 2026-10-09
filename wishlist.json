@@ -36,7 +36,17 @@
     "owned": false,
     "added": 1791367499864,
     "has4k": false,
-    "lb_score": 4.29
+    "lb_score": 4.29,
+    "similar": [
+      {
+        "title": "Psycho",
+        "year": 1960
+      },
+      {
+        "title": "The Third Man",
+        "year": 1949
+      }
+    ]
   },
   {
     "title": "Z",
@@ -76,7 +86,17 @@
     "owned": false,
     "added": 1791367475227,
     "has4k": false,
-    "lb_score": 4.38
+    "lb_score": 4.38,
+    "similar": [
+      {
+        "title": "State of Siege",
+        "year": 1972
+      },
+      {
+        "title": "The Battle of Algiers",
+        "year": 1966
+      }
+    ]
   },
   {
     "id": "1791284295970akf78my3wwn",
@@ -107,6 +127,20 @@
     "alt_titles": [
       "Baraka - Eine Welt jenseits der Worte",
       "Világok arca - Baraka"
+    ],
+    "similar": [
+      {
+        "title": "Koyaanisqatsi",
+        "year": 1982
+      },
+      {
+        "title": "Samsara",
+        "year": 2011
+      },
+      {
+        "title": "Powaqqatsi",
+        "year": 1988
+      }
     ]
   },
   {
@@ -146,6 +180,20 @@
       "Vaikus",
       "Vaitiolo",
       "Молчание"
+    ],
+    "similar": [
+      {
+        "title": "The Mission",
+        "year": 1986
+      },
+      {
+        "title": "Black Robe",
+        "year": 1991
+      },
+      {
+        "title": "Ordet",
+        "year": 1955
+      }
     ]
   },
   {
@@ -185,6 +233,16 @@
       "Джерело",
       "Ֆանտոմ",
       "천년을 흐르는 사랑"
+    ],
+    "similar": [
+      {
+        "title": "Tree of Life",
+        "year": 2011
+      },
+      {
+        "title": "2001: A Space Odyssey",
+        "year": 1968
+      }
     ]
   },
   {
@@ -224,6 +282,20 @@
       "Seu Nome",
       "Sənin Adın.",
       "Ton Nom"
+    ],
+    "similar": [
+      {
+        "title": "Weathering with You",
+        "year": 2019
+      },
+      {
+        "title": "The Girl Who Leapt Through Time",
+        "year": 2006
+      },
+      {
+        "title": "A Silent Voice",
+        "year": 2016
+      }
     ]
   },
   {
@@ -263,6 +335,20 @@
       "Sủng phi",
       "The Favourite – Intrigen und Irrsinn",
       "Η Ευνοούμενη"
+    ],
+    "similar": [
+      {
+        "title": "The Killing of a Sacred Deer",
+        "year": 2017
+      },
+      {
+        "title": "Dangerous Liaisons",
+        "year": 1988
+      },
+      {
+        "title": "The Duke of Burgundy",
+        "year": 2014
+      }
     ]
   },
   {
@@ -302,6 +388,16 @@
       "Single Man, A",
       "Um Homem Singular",
       "Un bărbat singur"
+    ],
+    "similar": [
+      {
+        "title": "Carol",
+        "year": 2015
+      },
+      {
+        "title": "Brokeback Mountain",
+        "year": 2005
+      }
     ]
   },
   {
@@ -338,6 +434,16 @@
       "Вход в пустоту",
       "Մտի՛ր դատարկության մեջ",
       "엔터 더 보이드"
+    ],
+    "similar": [
+      {
+        "title": "Climax",
+        "year": 2018
+      },
+      {
+        "title": "Naked Lunch",
+        "year": 1991
+      }
     ]
   },
   {
@@ -371,6 +477,16 @@
     "alt_titles": [
       "Sap min maai fuk",
       "十面埋伏"
+    ],
+    "similar": [
+      {
+        "title": "Hero",
+        "year": 2002
+      },
+      {
+        "title": "The Assassin",
+        "year": 2015
+      }
     ]
   },
   {
@@ -410,6 +526,16 @@
       "Podróż do Nowej Ziemi",
       "Yeni Dünya",
       "Новый мир"
+    ],
+    "similar": [
+      {
+        "title": "The Last of the Mohicans",
+        "year": 1992
+      },
+      {
+        "title": "The Thin Red Line",
+        "year": 1998
+      }
     ]
   },
   {
@@ -448,6 +574,16 @@
       "Héros",
       "Iroas",
       "Jet Li Hero"
+    ],
+    "similar": [
+      {
+        "title": "House of Flying Daggers",
+        "year": 2004
+      },
+      {
+        "title": "Red Cliff",
+        "year": 2008
+      }
     ]
   },
   {
@@ -487,6 +623,20 @@
       "El observador oculto",
       "Hidden",
       "Hidden (Caché)"
+    ],
+    "similar": [
+      {
+        "title": "The White Ribbon",
+        "year": 2009
+      },
+      {
+        "title": "Blow-Up",
+        "year": 1966
+      },
+      {
+        "title": "Funny Games",
+        "year": 1997
+      }
     ]
   },
   {
@@ -519,6 +669,20 @@
     "score": 7.8,
     "alt_titles": [
       "La ciénaga"
+    ],
+    "similar": [
+      {
+        "title": "La Ciénaga",
+        "year": 2001
+      },
+      {
+        "title": "The Headless Woman",
+        "year": 2008
+      },
+      {
+        "title": "Zama",
+        "year": 2017
+      }
     ]
   },
   {
@@ -555,6 +719,16 @@
       "Ken Russell's Film of The Devils",
       "Les Diables",
       "Οι Δαιμονισμένες"
+    ],
+    "similar": [
+      {
+        "title": "Witchfinder General",
+        "year": 1968
+      },
+      {
+        "title": "Salò, or the 120 Days of Sodom",
+        "year": 1975
+      }
     ]
   },
   {
@@ -592,6 +766,16 @@
       "Поцелуй навылет",
       "吻两下打两枪",
       "吻兩下打兩槍"
+    ],
+    "similar": [
+      {
+        "title": "The Nice Guys",
+        "year": 2016
+      },
+      {
+        "title": "Inherent Vice",
+        "year": 2014
+      }
     ]
   },
   {
@@ -630,6 +814,20 @@
       "Отвращение",
       "반항",
       "혐오"
+    ],
+    "similar": [
+      {
+        "title": "Rosemary's Baby",
+        "year": 1968
+      },
+      {
+        "title": "The Tenant",
+        "year": 1976
+      },
+      {
+        "title": "Black Swan",
+        "year": 2010
+      }
     ]
   },
   {
@@ -669,6 +867,20 @@
       "Det ordner seg nok",
       "Drapieżne maleństwo",
       "Duas Feras"
+    ],
+    "similar": [
+      {
+        "title": "The Lady Eve",
+        "year": 1941
+      },
+      {
+        "title": "The Philadelphia Story",
+        "year": 1940
+      },
+      {
+        "title": "What's Up, Doc?",
+        "year": 1972
+      }
     ]
   },
   {
@@ -708,6 +920,20 @@
       "Sennen Joyuu",
       "Sennen Joyû",
       "Tūkstantmečio aktorė"
+    ],
+    "similar": [
+      {
+        "title": "Perfect Blue",
+        "year": 1997
+      },
+      {
+        "title": "Paprika",
+        "year": 2006
+      },
+      {
+        "title": "Tokyo Godfathers",
+        "year": 2003
+      }
     ]
   },
   {
@@ -747,6 +973,20 @@
       "La Planète sauvage",
       "Levoton planeetta",
       "Mežonīgā planēta"
+    ],
+    "similar": [
+      {
+        "title": "Heavy Metal",
+        "year": 1981
+      },
+      {
+        "title": "Watership Down",
+        "year": 1978
+      },
+      {
+        "title": "Akira",
+        "year": 1988
+      }
     ]
   },
   {
@@ -782,6 +1022,16 @@
       "À Beira do Abismo",
       "Πάθος και Αίμα",
       "명탐정 필립"
+    ],
+    "similar": [
+      {
+        "title": "Murder, My Sweet",
+        "year": 1944
+      },
+      {
+        "title": "Out of the Past",
+        "year": 1947
+      }
     ]
   },
   {
@@ -821,6 +1071,16 @@
       "Panik am roten Fluss",
       "Qırmızı Çay",
       "Riu Vermell"
+    ],
+    "similar": [
+      {
+        "title": "The Man from Laramie",
+        "year": 1955
+      },
+      {
+        "title": "Rio Bravo",
+        "year": 1959
+      }
     ]
   },
   {
@@ -855,6 +1115,16 @@
       "Cinq pièces faciles",
       "Mi vida es mi vida",
       "잃어버린 전주곡"
+    ],
+    "similar": [
+      {
+        "title": "Easy Rider",
+        "year": 1969
+      },
+      {
+        "title": "Scarecrow",
+        "year": 1973
+      }
     ]
   },
   {
@@ -893,6 +1163,16 @@
       "哈洛与慕德",
       "哈洛与茂德",
       "해롤드와 모드"
+    ],
+    "similar": [
+      {
+        "title": "The Graduate",
+        "year": 1967
+      },
+      {
+        "title": "Being There",
+        "year": 1979
+      }
     ]
   },
   {
@@ -930,6 +1210,20 @@
       "Stin pagida tou nomou",
       "다운 바이 로",
       "다운 바이 로우"
+    ],
+    "similar": [
+      {
+        "title": "Stranger Than Paradise",
+        "year": 1984
+      },
+      {
+        "title": "Mystery Train",
+        "year": 1989
+      },
+      {
+        "title": "Night on Earth",
+        "year": 1991
+      }
     ]
   },
   {
@@ -959,7 +1253,21 @@
     ],
     "female_director": false,
     "lb": "https://letterboxd.com/film/paterson/",
-    "lb_score": 3.89
+    "lb_score": 3.89,
+    "similar": [
+      {
+        "title": "Only Lovers Left Alive",
+        "year": 2013
+      },
+      {
+        "title": "Columbus",
+        "year": 2017
+      },
+      {
+        "title": "Certain Women",
+        "year": 2016
+      }
+    ]
   },
   {
     "id": "1790675252346xvnh47ftsir",
@@ -995,6 +1303,16 @@
       "To perasma tou Meek",
       "ミークス・カットオフ",
       "믹의 지름길"
+    ],
+    "similar": [
+      {
+        "title": "First Cow",
+        "year": 2019
+      },
+      {
+        "title": "Old Joy",
+        "year": 2006
+      }
     ]
   },
   {
@@ -1034,6 +1352,16 @@
       "Roter Drache",
       "Łowca",
       "Ловец на хора"
+    ],
+    "similar": [
+      {
+        "title": "Heat",
+        "year": 1995
+      },
+      {
+        "title": "Thief",
+        "year": 1981
+      }
     ]
   },
   {
@@ -1071,6 +1399,20 @@
       "Tvillingskjebner",
       "Связанные насмерть",
       "데드 링거"
+    ],
+    "similar": [
+      {
+        "title": "Crash",
+        "year": 1996
+      },
+      {
+        "title": "Scanners",
+        "year": 1981
+      },
+      {
+        "title": "The Brood",
+        "year": 1979
+      }
     ]
   },
   {
@@ -1104,6 +1446,16 @@
       "Noche y niebla",
       "Nuit et Brouillard",
       "밤과 안개"
+    ],
+    "similar": [
+      {
+        "title": "Hiroshima mon amour",
+        "year": 1959
+      },
+      {
+        "title": "The Sorrow and the Pity",
+        "year": 1969
+      }
     ]
   },
   {
@@ -1141,6 +1493,16 @@
       "ストップ・メイキング・センス",
       "造反有理",
       "스톱 메이킹 센스"
+    ],
+    "similar": [
+      {
+        "title": "Amazing Grace",
+        "year": 2018
+      },
+      {
+        "title": "Summer of Soul",
+        "year": 2021
+      }
     ]
   },
   {
@@ -1179,6 +1541,20 @@
       "生存法则",
       "野兽家族",
       "애니멀 킹덤"
+    ],
+    "similar": [
+      {
+        "title": "Snowtown",
+        "year": 2011
+      },
+      {
+        "title": "Chopper",
+        "year": 2000
+      },
+      {
+        "title": "Mystic River",
+        "year": 2003
+      }
     ]
   },
   {
@@ -1214,6 +1590,16 @@
       "Black Rain",
       "Den siste bølgen",
       "Die letzte Flut"
+    ],
+    "similar": [
+      {
+        "title": "Long Weekend",
+        "year": 1978
+      },
+      {
+        "title": "Picnic at Hanging Rock",
+        "year": 1975
+      }
     ]
   },
   {
@@ -1252,6 +1638,16 @@
       "Nosferatu",
       "Nosferatu - Drakula",
       "Nosferatu - kauhun sinfonia"
+    ],
+    "similar": [
+      {
+        "title": "Faust",
+        "year": 1926
+      },
+      {
+        "title": "The Cabinet of Dr. Caligari",
+        "year": 1920
+      }
     ]
   },
   {
@@ -1285,6 +1681,16 @@
     "alt_titles": [
       "Metoroporisu",
       "科学世界"
+    ],
+    "similar": [
+      {
+        "title": "Things to Come",
+        "year": 1936
+      },
+      {
+        "title": "Woman in the Moon",
+        "year": 1929
+      }
     ]
   },
   {
@@ -1319,6 +1725,16 @@
       "The informant",
       "Дулосът",
       "밀고자"
+    ],
+    "similar": [
+      {
+        "title": "Army of Shadows",
+        "year": 1969
+      },
+      {
+        "title": "Bob le Flambeur",
+        "year": 1956
+      }
     ]
   },
   {
@@ -1358,6 +1774,16 @@
       "Fever Heat",
       "Qumarbaz Bob",
       "Spilleren Bob"
+    ],
+    "similar": [
+      {
+        "title": "Touchez pas au grisbi",
+        "year": 1954
+      },
+      {
+        "title": "Ocean's Eleven",
+        "year": 1960
+      }
     ]
   },
   {
@@ -1396,6 +1822,16 @@
       "Stingri uzraudzītie vilcieni",
       "Szigorúan Ellenőrzött Vonatok",
       "严密看管的列车"
+    ],
+    "similar": [
+      {
+        "title": "The Shop on Main Street",
+        "year": 1965
+      },
+      {
+        "title": "The Fireman's Ball",
+        "year": 1967
+      }
     ]
   },
   {
@@ -1434,6 +1870,16 @@
       "Valerie e a Semana das Maravilhas",
       "Valerie og miraklenes uke",
       "Valerie og miraklernes uge"
+    ],
+    "similar": [
+      {
+        "title": "Alice",
+        "year": 1988
+      },
+      {
+        "title": "Spirited Away",
+        "year": 2001
+      }
     ]
   },
   {
@@ -1472,6 +1918,20 @@
       "Teni Zabytykh Predkov",
       "Tini zabutykh predkiv",
       "Wild Horses of Fire"
+    ],
+    "similar": [
+      {
+        "title": "The Color of Pomegranates",
+        "year": 1969
+      },
+      {
+        "title": "Ashik Kerib",
+        "year": 1988
+      },
+      {
+        "title": "The Wild Horses of Fire",
+        "year": 1964
+      }
     ]
   },
   {
@@ -1510,6 +1970,16 @@
       "Red Pomegranate",
       "Sayat Nova",
       "The Colour of Pomegranates"
+    ],
+    "similar": [
+      {
+        "title": "Shadows of Forgotten Ancestors",
+        "year": 1965
+      },
+      {
+        "title": "Andrei Rublev",
+        "year": 1966
+      }
     ]
   },
   {
@@ -1548,6 +2018,16 @@
       "המחסלת",
       "刺客聶隱娘",
       "자객 섭은낭"
+    ],
+    "similar": [
+      {
+        "title": "A Touch of Zen",
+        "year": 1971
+      },
+      {
+        "title": "Ashes of Time",
+        "year": 1994
+      }
     ]
   },
   {
@@ -1586,6 +2066,16 @@
       "青梅竹馬",
       "青梅竹马",
       "청매죽마"
+    ],
+    "similar": [
+      {
+        "title": "Millennium Mambo",
+        "year": 2001
+      },
+      {
+        "title": "Café Lumière",
+        "year": 2003
+      }
     ]
   },
   {
@@ -1625,6 +2115,16 @@
       "ミレニアム・マンボ",
       "千禧曼波",
       "밀레니엄 맘보"
+    ],
+    "similar": [
+      {
+        "title": "Platform",
+        "year": 2000
+      },
+      {
+        "title": "Taipei Story",
+        "year": 1985
+      }
     ]
   },
   {
@@ -1664,6 +2164,16 @@
       "Otoko tachi no banka I",
       "Rapid Fire",
       "Un Mañana Mejor"
+    ],
+    "similar": [
+      {
+        "title": "City on Fire",
+        "year": 1987
+      },
+      {
+        "title": "Infernal Affairs",
+        "year": 2002
+      }
     ]
   },
   {
@@ -1701,6 +2211,16 @@
       "Kataude Hissatsu-Ken",
       "Mantieni L'odio per la Tua Vendetta",
       "O monoheir ekdikitis enantion kung-fu"
+    ],
+    "similar": [
+      {
+        "title": "The Chinese Boxer",
+        "year": 1970
+      },
+      {
+        "title": "Come Drink with Me",
+        "year": 1966
+      }
     ]
   },
   {
@@ -1740,6 +2260,20 @@
       "Long men kezhan",
       "Lóng Mén Kè Zhàn",
       "Таверна у врат дракона"
+    ],
+    "similar": [
+      {
+        "title": "A Touch of Zen",
+        "year": 1971
+      },
+      {
+        "title": "Come Drink with Me",
+        "year": 1966
+      },
+      {
+        "title": "Raining in the Mountain",
+        "year": 1979
+      }
     ]
   },
   {
@@ -1778,6 +2312,20 @@
       "Ett drag av Zen",
       "Hiệp Nữ",
       "Kultainen hämähäkki"
+    ],
+    "similar": [
+      {
+        "title": "Dragon Inn",
+        "year": 1967
+      },
+      {
+        "title": "Hero",
+        "year": 2002
+      },
+      {
+        "title": "The Assassin",
+        "year": 2015
+      }
     ]
   },
   {
@@ -1815,6 +2363,16 @@
       "Narayama-bushi kô",
       "Легенда о Нарайяме",
       "楢山節考"
+    ],
+    "similar": [
+      {
+        "title": "Onibaba",
+        "year": 1964
+      },
+      {
+        "title": "The Face of Another",
+        "year": 1966
+      }
     ]
   },
   {
@@ -1851,6 +2409,16 @@
       "Pigs & Battleships",
       "Todos Porcos",
       "豚と軍艦"
+    ],
+    "similar": [
+      {
+        "title": "Vengeance Is Mine",
+        "year": 1979
+      },
+      {
+        "title": "The Insect Woman",
+        "year": 1963
+      }
     ]
   },
   {
@@ -1884,6 +2452,16 @@
       "Bước Chân Nặng Trĩu",
       "Onna ga Kaidan wo Agaru Toki",
       "女が階段を上る時"
+    ],
+    "similar": [
+      {
+        "title": "Sisters of the Gion",
+        "year": 1936
+      },
+      {
+        "title": "Street of Shame",
+        "year": 1956
+      }
     ]
   },
   {
@@ -1918,6 +2496,16 @@
       "Jalsaghar",
       "জলসাঘর",
       "뮤직 룸"
+    ],
+    "similar": [
+      {
+        "title": "Charulata",
+        "year": 1964
+      },
+      {
+        "title": "The Apu Trilogy",
+        "year": 1959
+      }
     ]
   },
   {
@@ -1954,6 +2542,16 @@
       "Jungfrukällan",
       "La Source",
       "처녀의 샘"
+    ],
+    "similar": [
+      {
+        "title": "Through a Glass Darkly",
+        "year": 1961
+      },
+      {
+        "title": "Ordet",
+        "year": 1955
+      }
     ]
   },
   {
@@ -1993,6 +2591,16 @@
       "Les Cendres du temps",
       "东邪西毒：终极版",
       "東邪西毒"
+    ],
+    "similar": [
+      {
+        "title": "The Assassin",
+        "year": 2015
+      },
+      {
+        "title": "Happy Together",
+        "year": 1997
+      }
     ]
   },
   {
@@ -2031,6 +2639,16 @@
       "Zire darakhatan zeyton",
       "Zīr-e Derakhtān-e Zeytūn",
       "Μέσα απ' τα λιόδεντρα"
+    ],
+    "similar": [
+      {
+        "title": "The Wind Will Carry Us",
+        "year": 1999
+      },
+      {
+        "title": "Close-Up",
+        "year": 1990
+      }
     ]
   },
   {
@@ -2069,6 +2687,16 @@
       "Pauline en la playa",
       "Pauline na Praia",
       "Pauline på stranden"
+    ],
+    "similar": [
+      {
+        "title": "A Summer's Tale",
+        "year": 1996
+      },
+      {
+        "title": "Full Moon in Paris",
+        "year": 1984
+      }
     ]
   },
   {
@@ -2107,6 +2735,16 @@
       "Külək Bizi Daşıyacaq",
       "Vetar će nas odneti",
       "باد ما را خواهد برد"
+    ],
+    "similar": [
+      {
+        "title": "Ten",
+        "year": 2002
+      },
+      {
+        "title": "Certified Copy",
+        "year": 2010
+      }
     ]
   },
   {
@@ -2140,6 +2778,16 @@
     "alt_titles": [
       "Ainsi va l'amour",
       "Así habla el amor"
+    ],
+    "similar": [
+      {
+        "title": "Faces",
+        "year": 1968
+      },
+      {
+        "title": "Husbands",
+        "year": 1970
+      }
     ]
   },
   {
@@ -2178,6 +2826,16 @@
       "爱的溪流",
       "迷雾狂情",
       "사랑의 행로"
+    ],
+    "similar": [
+      {
+        "title": "Gloria",
+        "year": 1980
+      },
+      {
+        "title": "Opening Night",
+        "year": 1977
+      }
     ]
   },
   {
@@ -2216,6 +2874,20 @@
       "Čovek-grizli",
       "Чeловек гризли",
       "灰熊人"
+    ],
+    "similar": [
+      {
+        "title": "Encounters at the End of the World",
+        "year": 2007
+      },
+      {
+        "title": "Cave of Forgotten Dreams",
+        "year": 2010
+      },
+      {
+        "title": "Into the Abyss",
+        "year": 2011
+      }
     ]
   },
   {
@@ -2255,6 +2927,16 @@
       "Pobuna",
       "Rebeliunea samurailor",
       "Rebelión"
+    ],
+    "similar": [
+      {
+        "title": "Sword of the Beast",
+        "year": 1965
+      },
+      {
+        "title": "Kill!",
+        "year": 1968
+      }
     ]
   },
   {
@@ -2290,6 +2972,16 @@
       "秋日和",
       "가을 햇살",
       "만추"
+    ],
+    "similar": [
+      {
+        "title": "Equinox Flower",
+        "year": 1958
+      },
+      {
+        "title": "Late Spring",
+        "year": 1949
+      }
     ]
   },
   {
@@ -2329,6 +3021,16 @@
       "Weizenherbst",
       "Раннее лето",
       "麥秋"
+    ],
+    "similar": [
+      {
+        "title": "Late Spring",
+        "year": 1949
+      },
+      {
+        "title": "Tokyo Story",
+        "year": 1953
+      }
     ]
   },
   {
@@ -2368,6 +3070,16 @@
       "Καγκεμούσα, ο Ίσκιος του Πολεμιστή",
       "Καγκεμούσα: Η Σκιά του Πολεμιστή",
       "影子武士"
+    ],
+    "similar": [
+      {
+        "title": "Throne of Blood",
+        "year": 1957
+      },
+      {
+        "title": "The Hidden Fortress",
+        "year": 1958
+      }
     ]
   },
   {
@@ -2404,6 +3116,16 @@
       "Nora inu",
       "Бездомный пес",
       "野良犬"
+    ],
+    "similar": [
+      {
+        "title": "The Bad Sleep Well",
+        "year": 1960
+      },
+      {
+        "title": "Drunken Angel",
+        "year": 1948
+      }
     ]
   },
   {
