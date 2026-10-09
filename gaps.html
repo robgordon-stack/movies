@@ -21,19 +21,19 @@ a{color:var(--b)}h1{font:400 26px 'DM Serif Display',Georgia,serif;color:var(--a
 <div id="ov" onclick="cl()"></div>
 <div id="sh"><button class="x" onclick="cl()">×</button><div id="card"></div></div>
 <script>
-var LISTS=[['Letterboxd 500','lb500.html'],['IMDb 250','imdb250.html'],['Empire 500','empire500.html'],['S&S Critics','sightsound.html#critics'],['S&S Directors','sightsound.html#directors']];
+var LISTS=[['Letterboxd 500','lb500.html'],['IMDb 250','imdb250.html'],['Empire 500','empire500.html'],['S&S Critics','sightsound.html#critics'],['S&S Directors','sightsound.html#directors'],['BBC 21st C.','bbc21.html'],['LaCinetek','lacinetek.html'],['TSPDT 1000','tspdt1000.html'],['Cahiers','cahiers.html']];
 var N=function(s){return(s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'')};
 var E=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
 function parse(t){var re=/\{"?r"?:(\d+),"?t"?:("(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'),"?y"?:(\d{4})/g,o=[],m,s;while((m=re.exec(t))){try{s=m[2][0]==="'"?m[2].slice(1,-1).replace(/\\'/g,"'"):JSON.parse(m[2]);o.push({r:+m[1],t:s,y:+m[3]})}catch(e){}}return o}
 var G=[],WL=[],mode='all',minL=2;
 function wlIds(){return WL}
-Promise.all([fetch('collection.json?v='+Date.now()).then(r=>r.json()),fetch('wishlist.json?v='+Date.now()).then(r=>r.json())].concat(LISTS.map(l=>fetch(l[1].split('#')[0]).then(r=>r.text()))))
+Promise.all([fetch('collection.json?v='+Date.now()).then(r=>r.json()),fetch('wishlist.json?v='+Date.now()).then(r=>r.json())].concat(LISTS.map(l=>fetch(l[1].split('#')[0]).then(r=>r.ok?r.text():'').catch(()=>''))))
 .then(function(R){
   var C=R[0];WL=Array.isArray(R[1])?R[1]:(R[1].films||[]);
-  var ss=R[5],cut=ss.indexOf('directors:{films:'),T=[R[2],R[3],R[4],cut>0?ss.slice(0,cut):ss,cut>0?ss.slice(cut):''];
+  var ss=R[5],cut=ss.indexOf('directors:{films:'),T=[R[2],R[3],R[4],cut>0?ss.slice(0,cut):ss,cut>0?ss.slice(cut):'',R[7],R[8],R[9],R[10]];
   var own={},wish={};
-  C.forEach(function(c){(own[N(c.title)]=own[N(c.title)]||[]).push(c.year)});
-  WL.forEach(function(w){(wish[N(w.title)]=wish[N(w.title)]||[]).push(w)});
+  C.forEach(function(c){[c.title].concat(c.alt_titles||[]).forEach(function(t){(own[N(t)]=own[N(t)]||[]).push(c.year)})});
+  WL.forEach(function(w){[w.title].concat(w.alt_titles||[]).forEach(function(t){(wish[N(t)]=wish[N(t)]||[]).push(w)})});
   var near=function(a,y){return a&&a.some(function(x){return Math.abs((+x||0)-y)<=2})};
   var pop={};
   T.forEach(function(txt,i){parse(txt).forEach(function(f){
@@ -48,10 +48,10 @@ Promise.all([fetch('collection.json?v='+Date.now()).then(r=>r.json()),fetch('wis
 }).catch(function(e){document.getElementById('sub').textContent='Could not load data ('+e+'). Open via your site, not a file.'});
 function draw(){
   var bar='';[['all','All'],['wish','On wishlist'],['no','Not on wishlist']].forEach(function(m){bar+='<span class="chip '+(mode===m[0]?'on':'')+'" onclick="mode=\''+m[0]+'\';draw()">'+m[1]+'</span>'});
-  [2,3,4].forEach(function(n){bar+='<span class="chip '+(minL===n?'on':'')+'" onclick="minL='+n+';draw()">'+n+'+ lists</span>'});
+  [2,3,4,5,6].forEach(function(n){bar+='<span class="chip '+(minL===n?'on':'')+'" onclick="minL='+n+';draw()">'+n+'+ lists</span>'});
   document.getElementById('bar').innerHTML=bar;
   var L=G.filter(function(g){return g.n>=minL&&(mode==='all'||(mode==='wish')===!!g.w)});
-  document.getElementById('sub').textContent=L.length+' films you don’t own, ranked by how many of your 5 lists include them';
+  document.getElementById('sub').textContent=L.length+' films you don’t own, ranked by how many of your '+LISTS.length+' lists include them';
   document.getElementById('out').innerHTML=L.slice(0,150).map(function(g){var i=G.indexOf(g);
     return'<div class="row" onclick="op('+i+')"><div class="n">'+g.n+'</div><div class="i"><b>'+E(g.t)+'</b> <span style="color:var(--m)">'+g.y+'</span>'+(g.w?' <span class="tag w">'+E(g.w.priority||'Wishlist')+'</span>':'')+'<small>'+Object.keys(g.l).map(function(k){return LISTS[k][0]+' #'+g.l[k]}).join(' · ')+'</small></div></div>'}).join('')||'<div class="msg">Nothing here.</div>';
 }
