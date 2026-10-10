@@ -1,5 +1,35 @@
 [
   {
+    "title": "Poolhall Junkies",
+    "year": 2002,
+    "decade": "2000s",
+    "director": "Mars Callahan",
+    "country": "United States",
+    "genre": "Comedy, Drama, Thriller",
+    "runtime": 99,
+    "poster": "https://image.tmdb.org/t/p/w342/3MAGLk0AtuPi24PBwy3o4ILO0CV.jpg",
+    "imdb_id": "tt0273982",
+    "tmdb_id": 14293,
+    "synopsis": "A retired pool hustler is forced to pick up the stick again when his brother starts a game he can't finish.",
+    "cast": [
+      "Mars Callahan",
+      "Chazz Palminteri",
+      "Christopher Walken"
+    ],
+    "female_director": false,
+    "alt_titles": [],
+    "lb": "https://letterboxd.com/tmdb/14293/",
+    "imdb_score": 6.8,
+    "rt_score": 0.33,
+    "mc_score": 36,
+    "score": 4.6,
+    "id": "1791597475032ofa9z6inb7n",
+    "priority": "Someday",
+    "owned": false,
+    "added": 1791597475032,
+    "has4k": false
+  },
+  {
     "title": "Broadcast News",
     "year": 1987,
     "decade": "1980s",
