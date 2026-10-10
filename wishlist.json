@@ -1,5 +1,41 @@
 [
   {
+    "title": "Broadcast News",
+    "year": 1987,
+    "decade": "1980s",
+    "director": "James L. Brooks",
+    "country": "United States",
+    "genre": "Comedy, Romance",
+    "runtime": 133,
+    "poster": "https://image.tmdb.org/t/p/w342/kQNR1Lc0qAF5xuBySpDn481KVjb.jpg",
+    "imdb_id": "tt0092699",
+    "tmdb_id": 12626,
+    "synopsis": "A high-strung news producer finds herself in a love triangle between a talented but self-doubting reporter and a charming news anchor who embodies the growing trivialization of news that she is determined to fight against.",
+    "cast": [
+      "Holly Hunter",
+      "William Hurt",
+      "Albert Brooks"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Al filo de la noticia",
+      "Broadcast News - Nachrichtenfieber",
+      "Edição Especial",
+      "Теленовини",
+      "富貴浮雲"
+    ],
+    "lb": "https://letterboxd.com/tmdb/12626/",
+    "imdb_score": 7.3,
+    "rt_score": 0.98,
+    "mc_score": 84,
+    "score": 8.5,
+    "id": "1791597404328vhrquw1xtc",
+    "priority": "High",
+    "owned": false,
+    "added": 1791597404328,
+    "has4k": false
+  },
+  {
     "title": "Hellboy II: The Golden Army",
     "year": 2008,
     "decade": "2000s",
