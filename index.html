@@ -1544,11 +1544,10 @@ window.OWN_ADAPTER={getOwned:function(){return typeof C!=='undefined'?C:[]},open
   <button class="lm-i" role="menuitem" onclick="openList('empire500')"><b>Empire’s 500 Greatest</b><span>500 films · 2008</span></button>
   <button class="lm-i" role="menuitem" onclick="openList('critics')"><b>Sight &amp; Sound · Critics</b><span>2022 poll · 264 films</span></button>
   <button class="lm-i" role="menuitem" onclick="openList('directors')"><b>Sight &amp; Sound · Directors</b><span>2022 poll · 104 films</span></button>
-<hr>
-<button class="lm-i" role="menuitem" onclick="openList('bbc21')"><b>BBC 21st Century</b><span>102 films · 2016 critics poll</span></button>
-<button class="lm-i" role="menuitem" onclick="openList('lacinetek')"><b>LaCinetek Top of the Lists</b><span>directors’ most-cited films</span></button>
-<button class="lm-i" role="menuitem" onclick="openList('tspdt1000')"><b>TSPDT 1,000</b><span>1,000 films · consensus ranking</span></button>
-<button class="lm-i" role="menuitem" onclick="openList('cahiers')"><b>Cahiers du Cinéma</b><span>100 films · greatest films</span></button>
+  <hr>
+  <button class="lm-i" role="menuitem" onclick="openList('tspdt1000')"><b>TSPDT · 1,000 Greatest Films</b><span>2026 edition · 1,000 films</span></button>
+  <button class="lm-i" role="menuitem" onclick="openList('lacinetek')"><b>LaCinetek · Top of the Lists</b><span>826 films · directors’ picks</span></button>
+  <button class="lm-i" role="menuitem" onclick="openList('wright1000')"><b>Edgar Wright’s 1,000 Favourites</b><span>1,000 films</span></button>
 </div>
 <script>
 function toggleListsMenu(e){
@@ -1566,7 +1565,7 @@ function closeListsMenu(){
 }
 function openList(k){
   closeListsMenu();
-  if(k==='lb500')switchTab('lb500');else if(k==='imdb250')location.href='imdb250.html';else if(k==='empire500')location.href='empire500.html';else if(['bbc21','lacinetek','tspdt1000','cahiers'].indexOf(k)>-1)location.href=k+'.html';else location.href='sightsound.html#'+k;
+  if(k==='lb500')switchTab('lb500');else if(k==='imdb250')location.href='imdb250.html';else if(k==='empire500')location.href='empire500.html';else if(k==='tspdt1000')location.href='tspdt1000.html';else if(k==='lacinetek')location.href='lacinetek-top.html';else if(k==='wright1000')location.href='edgar-wright-1000.html';else location.href='sightsound.html#'+k;
 }
 document.addEventListener('click',function(e){if(!e.target.closest('#listsMenu,#lb500-btn'))closeListsMenu()});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeListsMenu()});
@@ -1582,12 +1581,12 @@ function parse(txt){var re=/\{"?r"?:(\d+),"?t"?:("(?:[^"\\]|\\.)*"),"?y"?:(\d{4}
 function getRaw(){
   if(raw)return Promise.resolve(raw);
   if(loading)return loading;
-  var files=['lb500.html','imdb250.html','empire500.html','sightsound.html','bbc21.html','lacinetek.html','tspdt1000.html','cahiers.html'];
+  var files=['lb500.html','imdb250.html','empire500.html','sightsound.html','tspdt1000.html','lacinetek-top.html','edgar-wright-1000.html'];
   loading=Promise.all(files.map(function(u){return fetch(u).then(function(r){return r.ok?r.text():''}).catch(function(){return ''})})
     .concat([fetch('wishlist.json?v='+Date.now()).then(function(r){return r.json()}).catch(function(){return []})])).then(function(res){
-    var T=res.slice(0,4),NT=res.slice(4,8),wl=res[8];wl=Array.isArray(wl)?wl:(wl&&wl.films)||[];
+    var T=res.slice(0,7),wl=res[7];wl=Array.isArray(wl)?wl:(wl&&wl.films)||[];
     var ss=T[3],cut=ss.indexOf('directors:{films:'),crit=cut>0?ss.slice(0,cut):ss,dir=cut>0?ss.slice(cut):'';
-    var lists=[['Letterboxd Top 500','lb500.html',T[0]],['IMDb Top 250','imdb250.html',T[1]],['Empire 500','empire500.html',T[2]],['S&S Critics','sightsound.html#critics',crit],['S&S Directors','sightsound.html#directors',dir],['BBC 21st Century','bbc21.html',NT[0]],['LaCinetek','lacinetek.html',NT[1]],['TSPDT 1000','tspdt1000.html',NT[2]],['Cahiers','cahiers.html',NT[3]]]
+    var lists=[['Letterboxd Top 500','lb500.html',T[0]],['IMDb Top 250','imdb250.html',T[1]],['Empire 500','empire500.html',T[2]],['S&S Critics','sightsound.html#critics',crit],['S&S Directors','sightsound.html#directors',dir],['TSPDT 1,000','tspdt1000.html',T[4]],['LaCinetek Top','lacinetek-top.html',T[5]],['Edgar Wright 1,000','edgar-wright-1000.html',T[6]]]
       .map(function(l){return {name:l[0],file:l[1],films:parse(l[2])}}).filter(function(l){return l.films.length});
     loading=null;
     if(!lists.length)return null;
