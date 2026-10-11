@@ -186,6 +186,7 @@
 .back{font-size:11px;color:var(--text-dim);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;display:inline-block;padding:10px 0}
 .back:hover{color:var(--text)}
 .back:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+<style>.imdb-chip{font-size:9px;font-weight:700;letter-spacing:.05em;padding:2px 6px;border-radius:4px;border:1px solid rgba(255,255,255,.2);color:#aaa;margin-right:8px;cursor:pointer;white-space:nowrap}.imdb-chip:hover{color:#f5c518;border-color:#f5c518}</style>
 </style>
 </head>
 <body>
@@ -1274,6 +1275,14 @@ function onSearch() {
   render();
 }
 
+
+let LINKS = {};
+const NK = s => (s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+const FL = f => LINKS[NK(f.t)+'|'+f.y] || {};
+const lbUrl = f => f.lb || FL(f).lb || ('https://letterboxd.com/search/films/'+encodeURIComponent(f.t+' '+f.y)+'/');
+const imdbUrl = f => { const i = f.imdb_id || FL(f).imdb; return i ? 'https://www.imdb.com/title/'+i+'/' : 'https://www.imdb.com/find/?q='+encodeURIComponent(f.t+' '+f.y); };
+function openIMDb(e, el){ e.preventDefault(); e.stopPropagation(); window.open(el.dataset.u, '_blank', 'noopener'); return false; }
+fetch('film_links.json').then(r => r.ok ? r.json() : {}).then(j => { LINKS = j; render(); }).catch(() => {});
 function render() {
   let films = [...FILMS];
   if(currentFilter !== 'all') films = films.filter(f => f.s === currentFilter);
@@ -1287,13 +1296,13 @@ function render() {
     `Showing ${films.length} film${films.length!==1?'s':''}`;
 
   listEl.innerHTML = films.map(f => `
-    <a class="film-item status-${f.s}" href="${f.lb||('https://letterboxd.com/film/'+f.t.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9\s-]/g,'').trim().replace(/\s+/g,'-')+'/')}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+    <a class="film-item status-${f.s}" href="${lbUrl(f)}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
       <span class="rank">${f.r}</span>
       <div class="film-info">
         <div class="film-title${f.s==='missing'?' faded':''}">${f.t}</div>
         <div class="film-year">${f.y}</div>
       </div>
-      <span class="status-pill pill-${f.s}">${f.s==='owned'?'owned':f.s==='wishlist'?'wish':'—'}</span>
+      <span class="imdb-chip" data-u="${imdbUrl(f)}" onclick="return openIMDb(event,this)">IMDb</span> <span class="status-pill pill-${f.s}">${f.s==='owned'?'owned':f.s==='wishlist'?'wish':'—'}</span>
     </a>
   `).join('');
 }
