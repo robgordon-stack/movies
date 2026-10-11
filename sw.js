@@ -1,7 +1,7 @@
-// Network-first for pages and data (so updates always appear when online),
+// Network-first for pages and data (always re-checks with the server, but only re-downloads a file that changed),
 // cache fallback when offline, cache-first for poster images.
-const V = 'archive-v3';
-const SHELL = ['./', 'index.html', 'wishlist.html', 'lb500.html', 'ownsearch.js', 'collection.json', 'wishlist.json', 'icon-192.png'];
+const V = 'archive-v4';
+const SHELL = ['./', 'index.html', 'wishlist.html', 'gaps.html', 'add.html', 'lb500.html', 'imdb250.html', 'empire500.html', 'sightsound.html', 'tspdt1000.html', 'lacinetek-top.html', 'edgar-wright-1000.html', 'bbc21.html', 'ownsearch.js', 'collection.json', 'wishlist.json', 'film_links.json', 'icon-192.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(V).then(c => Promise.allSettled(SHELL.map(u => c.add(u)))).then(() => self.skipWaiting()));
 });
@@ -26,7 +26,7 @@ self.addEventListener('fetch', e => {
     return;
   }
   if (url.origin !== location.origin) return;   // leave API calls (OMDb etc.) alone
-  e.respondWith(fetch(req, { cache: 'no-store' }).then(res => {
+  e.respondWith(fetch(req, { cache: 'no-cache' }).then(res => {
     if (res.ok) { const copy = res.clone(); caches.open(V).then(c => c.put(req, copy)); }
     return res;
   }).catch(() => caches.match(req, { ignoreSearch: true }).then(r => r || caches.match('index.html'))));
