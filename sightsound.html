@@ -194,6 +194,35 @@
 </style>
 </head>
 <body>
+<style id="listnav-css">
+#listnav{position:sticky;top:0;z-index:1000;background:rgba(14,14,14,.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#2a2a2a);padding-top:env(safe-area-inset-top,0px);display:flex;align-items:center}
+#listnav .ln-scroll{display:flex;gap:6px;overflow-x:auto;padding:8px 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch;flex:1}
+#listnav .ln-scroll::-webkit-scrollbar{display:none}
+#listnav a{flex:0 0 auto;text-decoration:none;font-family:'DM Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.04em;white-space:nowrap;color:var(--text-dim,#888);border:1px solid var(--border,#2a2a2a);border-radius:999px;padding:6px 12px;transition:color .15s,border-color .15s,background .15s}
+#listnav a:hover{color:var(--text,#e8e4dc)}
+#listnav a.ln-home{color:var(--text,#e8e4dc);border-color:transparent;padding-left:8px}
+#listnav a.active{color:#111;background:var(--accent,#c8f0a0);border-color:var(--accent,#c8f0a0);font-weight:500}
+</style>
+<nav id="listnav" aria-label="Lists"><div class="ln-scroll">
+<a class="ln-home" href="index.html">&larr; Archive</a>
+<a data-k="lb500" href="lb500.html">Letterboxd 500</a>
+<a data-k="imdb250" href="imdb250.html">IMDb 250</a>
+<a data-k="empire500" href="empire500.html">Empire 500</a>
+<a data-k="tspdt1000" href="tspdt1000.html">TSPDT 1000</a>
+<a data-k="critics" href="sightsound.html#critics">S&amp;S Critics</a>
+<a data-k="directors" href="sightsound.html#directors">S&amp;S Directors</a>
+<a data-k="bbc21" href="bbc21.html">BBC 21st C.</a>
+<a data-k="lacinetek" href="lacinetek-top.html">LaCinetek</a>
+<a data-k="wright1000" href="edgar-wright-1000.html">Edgar Wright</a>
+</div></nav>
+<script>(function(){
+var P={'lb500.html':'lb500','imdb250.html':'imdb250','empire500.html':'empire500','tspdt1000.html':'tspdt1000','bbc21.html':'bbc21','lacinetek-top.html':'lacinetek','edgar-wright-1000.html':'wright1000'};
+function cur(){var f=location.pathname.split('/').pop()||'';if(f==='sightsound.html'){var h=location.hash.slice(1);if(h!=='critics'&&h!=='directors'){try{h=localStorage.getItem('ssList')}catch(e){}}return h==='directors'?'directors':'critics'}return P[f]}
+function mark(){var k=cur(),a=document.querySelectorAll('#listnav a[data-k]');a.forEach(function(x){var on=x.dataset.k===k;x.classList.toggle('active',on);if(on)x.setAttribute('aria-current','page');else x.removeAttribute('aria-current')});var el=document.querySelector('#listnav a.active');if(el&&el.scrollIntoView)try{el.scrollIntoView({inline:'center',block:'nearest'})}catch(e){}}
+window.__lnMark=mark;mark();window.addEventListener('hashchange',mark);
+document.querySelectorAll('#listnav a[href^="sightsound.html#"]').forEach(function(x){x.addEventListener('click',function(){var k=x.dataset.k;try{localStorage.setItem('ssList',k)}catch(e){}setTimeout(mark,0)})});
+})();</script>
+
 
 <div class="header">
   <div class="top-row">
@@ -341,6 +370,7 @@ function setList(k, silent){
   try{localStorage.setItem('ssList',k)}catch(e){}
   lbCounts(); render();
   if(!silent&&location.hash!=='#'+k){try{history.replaceState(null,'','#'+k)}catch(e){}}
+  if(window.__lnMark)window.__lnMark();
 }
 
 render();
