@@ -1539,7 +1539,7 @@ window.OWN_ADAPTER={getOwned:function(){return typeof C!=='undefined'?C:[]},open
 <div id="listsMenu" role="menu" aria-label="Film lists">
   <div class="lm-h">Film lists</div>
 <div class="lm-h" style="margin-top:6px">Popular &amp; audience</div>
-<button class="lm-i" role="menuitem" onclick="openList('lb500')"><b>Letterboxd Top 500</b><span>500 films · opens here</span></button>
+<button class="lm-i" role="menuitem" onclick="openList('lb500')"><b>Letterboxd Top 500</b><span>500 films · Letterboxd</span></button>
 <button class="lm-i" role="menuitem" onclick="openList('imdb250')"><b>IMDb Top 250</b><span>250 films · top rated</span></button>
 <button class="lm-i" role="menuitem" onclick="openList('empire500')"><b>Empire’s 500 Greatest</b><span>500 films · 2008</span></button>
 <div class="lm-h" style="margin-top:6px">Critics &amp; polls</div>
@@ -1567,7 +1567,7 @@ function closeListsMenu(){
 }
 function openList(k){
   closeListsMenu();
-  if(k==='lb500')switchTab('lb500');else if(k==='imdb250')location.href='imdb250.html';else if(k==='empire500')location.href='empire500.html';else if(k==='tspdt1000')location.href='tspdt1000.html';else if(k==='lacinetek')location.href='lacinetek-top.html';else if(k==='wright1000')location.href='edgar-wright-1000.html';else if(k==='bbc21')location.href='bbc21.html';else location.href='sightsound.html#'+k;
+  if(k==='lb500')location.href='lb500.html';else if(k==='imdb250')location.href='imdb250.html';else if(k==='empire500')location.href='empire500.html';else if(k==='tspdt1000')location.href='tspdt1000.html';else if(k==='lacinetek')location.href='lacinetek-top.html';else if(k==='wright1000')location.href='edgar-wright-1000.html';else if(k==='bbc21')location.href='bbc21.html';else location.href='sightsound.html#'+k;
 }
 document.addEventListener('click',function(e){if(!e.target.closest('#listsMenu,#lb500-btn'))closeListsMenu()});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeListsMenu()});
