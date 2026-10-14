@@ -21,7 +21,7 @@ a{color:var(--b)}h1{font:400 26px 'DM Serif Display',Georgia,serif;color:var(--a
 <div id="ov" onclick="cl()"></div>
 <div id="sh"><button class="x" onclick="cl()">×</button><div id="card"></div></div>
 <script>
-var LISTS=[['Letterboxd 500','lb500.html'],['IMDb 250','imdb250.html'],['Empire 500','empire500.html'],['S&S Critics','sightsound.html#critics'],['S&S Directors','sightsound.html#directors'],['BBC 21st C.','bbc21.html'],['LaCinetek','lacinetek-top.html'],['TSPDT 1000','tspdt1000.html'],['Edgar Wright','edgar-wright-1000.html']];
+var LISTS=[['Letterboxd 500','lb500.html'],['IMDb 250','imdb250.html'],['Empire 500','empire500.html'],['S&S Critics','sightsound.html#critics'],['S&S Directors','sightsound.html#directors'],['BBC 21st C.','bbc21.html'],['LaCinetek','lacinetek-top.html'],['TSPDT 1000','tspdt1000.html'],['Edgar Wright','edgar-wright-1000.html'],['Big Picture 25','big25.html']];
 var N=function(s){return(s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'')};
 var E=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
 function parse(t){var re=/\{"?r"?:(\d+),"?t"?:("(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'),"?y"?:(\d{4})/g,o=[],m,s;while((m=re.exec(t))){try{s=m[2][0]==="'"?m[2].slice(1,-1).replace(/\\'/g,"'"):JSON.parse(m[2]);o.push({r:+m[1],t:s,y:+m[3]})}catch(e){}}return o}
@@ -30,7 +30,7 @@ function wlIds(){return WL}
 Promise.all([fetch('collection.json?v='+Date.now()).then(r=>r.json()),fetch('wishlist.json?v='+Date.now()).then(r=>r.json())].concat(LISTS.map(l=>fetch(l[1].split('#')[0]).then(r=>r.ok?r.text():'').catch(()=>''))))
 .then(function(R){
   var C=R[0];WL=Array.isArray(R[1])?R[1]:(R[1].films||[]);
-  var ss=R[5],cut=ss.indexOf('directors:{films:'),T=[R[2],R[3],R[4],cut>0?ss.slice(0,cut):ss,cut>0?ss.slice(cut):'',R[7],R[8],R[9],R[10]];
+  var ss=R[5],cut=ss.indexOf('directors:{films:'),T=[R[2],R[3],R[4],cut>0?ss.slice(0,cut):ss,cut>0?ss.slice(cut):'',R[7],R[8],R[9],R[10],R[11]];
   var own={},wish={};
   C.forEach(function(c){[c.title].concat(c.alt_titles||[]).forEach(function(t){(own[N(t)]=own[N(t)]||[]).push(c.year)})});
   WL.forEach(function(w){[w.title].concat(w.alt_titles||[]).forEach(function(t){(wish[N(t)]=wish[N(t)]||[]).push(w)})});

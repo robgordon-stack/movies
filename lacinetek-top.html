@@ -208,11 +208,12 @@
 <a data-k="critics" href="sightsound.html#critics">S&amp;S Critics</a>
 <a data-k="directors" href="sightsound.html#directors">S&amp;S Directors</a>
 <a data-k="bbc21" href="bbc21.html">BBC 21st C.</a>
+<a data-k="big25" href="big25.html">Big Picture 25</a>
 <a data-k="lacinetek" href="lacinetek-top.html">LaCinetek</a>
 <a data-k="wright1000" href="edgar-wright-1000.html">Edgar Wright</a>
 </div></nav>
 <script>(function(){
-var P={'lb500.html':'lb500','imdb250.html':'imdb250','empire500.html':'empire500','tspdt1000.html':'tspdt1000','bbc21.html':'bbc21','lacinetek-top.html':'lacinetek','edgar-wright-1000.html':'wright1000'};
+var P={'lb500.html':'lb500','imdb250.html':'imdb250','empire500.html':'empire500','tspdt1000.html':'tspdt1000','bbc21.html':'bbc21','big25.html':'big25','lacinetek-top.html':'lacinetek','edgar-wright-1000.html':'wright1000'};
 function cur(){var f=location.pathname.split('/').pop()||'';if(f==='sightsound.html'){var h=location.hash.slice(1);if(h!=='critics'&&h!=='directors'){try{h=localStorage.getItem('ssList')}catch(e){}}return h==='directors'?'directors':'critics'}return P[f]}
 function mark(){var k=cur(),a=document.querySelectorAll('#listnav a[data-k]');a.forEach(function(x){var on=x.dataset.k===k;x.classList.toggle('active',on);if(on)x.setAttribute('aria-current','page');else x.removeAttribute('aria-current')});var el=document.querySelector('#listnav a.active');if(el&&el.scrollIntoView)try{el.scrollIntoView({inline:'center',block:'nearest'})}catch(e){}}
 mark();window.addEventListener('hashchange',mark);
