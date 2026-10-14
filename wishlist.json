@@ -1,5 +1,41 @@
 [
   {
+    "title": "Something's Gotta Give",
+    "year": 2003,
+    "decade": "2000s",
+    "director": "Nancy Meyers",
+    "country": "United States",
+    "genre": "Drama, Comedy, Romance",
+    "runtime": 128,
+    "poster": "https://image.tmdb.org/t/p/w342/1cpdqe0SpiHzzbOLq9GDUUlZdSl.jpg",
+    "imdb_id": "tt0337741",
+    "tmdb_id": 6964,
+    "synopsis": "When perpetually single, aging music industry exec Harry Sanborn, and his latest trophy girlfriend, Marin, arrive at her mother's beach house in the Hamptons, they find that her mother, playwright Erica Barry, also plans to stay for the weekend. Erica is scandalized by the relationship and Harry's sexist ways. But when Harry has a heart attack while there, and the doctor prescribes bedrest, his only option is to stay at the Barry home. Left in the care of Erica and his doctor, a love triangle starts to take shape.",
+    "cast": [
+      "Jack Nicholson",
+      "Diane Keaton",
+      "Keanu Reeves"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Alguém Tem Que Ceder",
+      "Aşkta Herşey Mümkün",
+      "Cuando menos te lo esperas",
+      "Milovať je zábavné",
+      "Tout peut arriver"
+    ],
+    "lb": "https://letterboxd.com/tmdb/6964/",
+    "imdb_score": 6.8,
+    "rt_score": 0.72,
+    "mc_score": 66,
+    "score": 6.9,
+    "id": "1791969388173nbe8ptz0j3",
+    "priority": "Someday",
+    "owned": false,
+    "added": 1791969388173,
+    "has4k": false
+  },
+  {
     "title": "Michael Clayton",
     "year": 2007,
     "decade": "2000s",
