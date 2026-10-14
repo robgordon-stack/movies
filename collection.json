@@ -47095,5 +47095,43 @@
     "format": "4K Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "Teenage Mutant Ninja Turtles II: The Secret of the Ooze",
+    "year": 1991,
+    "decade": "1990s",
+    "director": "Michael Pressman",
+    "country": "Hong Kong",
+    "genre": "Sci-Fi, Adventure, Action, Comedy, Family",
+    "runtime": 88,
+    "poster": "https://image.tmdb.org/t/p/w342/Hyvvz9Z3le1is8a0EeFJQm0aSC.jpg",
+    "imdb_id": "tt0103060",
+    "tmdb_id": 1497,
+    "synopsis": "The Turtles and the Shredder battle once again, this time for the last cannister of the ooze that created the Turtles, which Shredder wants to create an army of new mutants. Meanwhile Splinter is coming... to a decision.",
+    "cast": [
+      "Brian Tochi",
+      "Laurie Faso",
+      "Robbie Rist"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "As Tartarugas Ninja II: O Segredo de Ooze",
+      "Las Tortugas Ninja II: El Secreto De Los Mocos",
+      "Les Tortues Ninja 2",
+      "Les Tortues Ninja 2 : Le secret de la mutation",
+      "Teenage Mutant Ninja Turtles 2",
+      "Teenage Mutant Ninja Turtles 2: The Secret of the Ooze",
+      "Teenage Mutant Ninja Turtles II",
+      "Teenage Mutant Ninja Turtles II - Das Geheimnis des Ooze"
+    ],
+    "lb": "https://letterboxd.com/tmdb/1497/",
+    "imdb_score": 6.1,
+    "rt_score": 0.37,
+    "mc_score": 45,
+    "score": 4.8,
+    "distributor": "",
+    "format": "4K Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
