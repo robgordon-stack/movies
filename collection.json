@@ -47024,5 +47024,38 @@
     "format": "4K Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "Deep Blue Sea",
+    "year": 1999,
+    "decade": "1990s",
+    "director": "Renny Harlin",
+    "country": "Australia",
+    "genre": "Action, Horror, Sci-Fi",
+    "runtime": 105,
+    "poster": "https://image.tmdb.org/t/p/w342/fyn0zyCI4kIlbDoHH0Hzv09hDC5.jpg",
+    "imdb_id": "tt0149261",
+    "tmdb_id": 8914,
+    "synopsis": "Researchers on the undersea lab Aquatica have genetically altered the brains of captive sharks to develop a cure for Alzheimer's disease. But there's an unexpected side effect: the sharks got smarter, faster, and more dangerous. After a big storm damages their remote research facility, they must fight for their lives.",
+    "cast": [
+      "Saffron Burrows",
+      "Thomas Jane",
+      "LL Cool J"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Duboko plavo more",
+      "Útok z hlbín",
+      "딥 블루 씨 1"
+    ],
+    "lb": "https://letterboxd.com/tmdb/8914/",
+    "imdb_score": 6,
+    "rt_score": 0.6,
+    "mc_score": 54,
+    "score": 5.8,
+    "distributor": "",
+    "format": "4K Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
