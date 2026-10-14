@@ -46948,5 +46948,43 @@
     "format": "Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "Witness",
+    "year": 1985,
+    "decade": "1980s",
+    "director": "Peter Weir",
+    "country": "Usa",
+    "genre": "Crime, Drama, Thriller",
+    "runtime": 112,
+    "poster": "https://image.tmdb.org/t/p/w342/kOymD1rChAMykmDVEzJpIh4OYS7.jpg",
+    "imdb_id": "tt0090329",
+    "tmdb_id": 9281,
+    "synopsis": "While protecting an Amish boy—the sole witness to a brutal murder—and his mother, a detective is forced to seek refuge within their community when his own life comes under threat.",
+    "cast": [
+      "Harrison Ford",
+      "Kelly McGillis",
+      "Josef Sommer"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "A Testemunha",
+      "Témoin sous surveillance",
+      "Vitne til mord",
+      "Vittne till mord",
+      "Único testigo",
+      "Свидетель",
+      "साक्षी",
+      "刑事ジョン・ブック／目撃者"
+    ],
+    "lb": "https://letterboxd.com/tmdb/9281/",
+    "imdb_score": 7.3,
+    "rt_score": 0.92,
+    "mc_score": 76,
+    "score": 8,
+    "distributor": "Arrow",
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
