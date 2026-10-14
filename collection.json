@@ -47133,5 +47133,43 @@
     "format": "4K Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "Teenage Mutant Ninja Turtles III",
+    "year": 1993,
+    "decade": "1990s",
+    "director": "Stuart Gillard",
+    "country": "Usa",
+    "genre": "Action, Adventure, Comedy, Family, Fantasy, Sci-Fi",
+    "runtime": 95,
+    "poster": "https://image.tmdb.org/t/p/w342/fwX5RdPDBFsbEAXc46DrvRz5Bca.jpg",
+    "imdb_id": "tt0108308",
+    "tmdb_id": 1499,
+    "synopsis": "The four turtles travel back in time to the days of the legendary and deadly samurai in ancient Japan, where they train to perfect the art of becoming one. The turtles also assist a small village in an uprising.",
+    "cast": [
+      "Brian Tochi",
+      "Tim Kelleher",
+      "Corey Feldman"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "As Tartarugas Ninja III",
+      "Las Tortugas Ninja III: Viaje al pasado",
+      "Las tortugas ninja III",
+      "Les Tortues Ninja 3",
+      "Ninja Turtles 3",
+      "Ninja Turtles III",
+      "Tartarughe ninja 3 - Viaggio nel tempo",
+      "Teenage Mutant Hero Turtles III"
+    ],
+    "lb": "https://letterboxd.com/tmdb/1499/",
+    "imdb_score": 4.8,
+    "rt_score": 0.19,
+    "mc_score": 40,
+    "score": 3.6,
+    "distributor": "",
+    "format": "4K Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
