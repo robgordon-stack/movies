@@ -47057,5 +47057,43 @@
     "format": "4K Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "Teenage Mutant Ninja Turtles",
+    "year": 1990,
+    "decade": "1990s",
+    "director": "Steve Barron",
+    "country": "Hong Kong",
+    "genre": "Sci-Fi, Action, Adventure, Comedy, Family",
+    "runtime": 93,
+    "poster": "https://image.tmdb.org/t/p/w342/shfAU6xIIEAEtsloIT3n9Fscz2E.jpg",
+    "imdb_id": "tt0100758",
+    "tmdb_id": 1498,
+    "synopsis": "A quartet of humanoid turtles, trained by their mentor in Ninjutsu, must learn to work together to face the menace of Shredder and the Foot Clan.",
+    "cast": [
+      "Brian Tochi",
+      "Josh Pais",
+      "Corey Feldman"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "As Tartarugas Ninja",
+      "Las Tortugas Ninja",
+      "Las Tortugas Ninja: La película",
+      "Teenage Mutant Ninja Turtles - Der Film",
+      "Teenage Mutant Ninja Turtles I (1990)",
+      "Teenage Mutant Ninja Turtles I - Der Film",
+      "Teenage Mutant Ninja Turtles: The Movie",
+      "Teenage Mutant Ninja Turtles: The Original Movie"
+    ],
+    "lb": "https://letterboxd.com/tmdb/1498/",
+    "imdb_score": 6.8,
+    "rt_score": 0.46,
+    "mc_score": 51,
+    "score": 5.5,
+    "distributor": "",
+    "format": "4K Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
