@@ -209,11 +209,13 @@
 <a data-k="directors" href="sightsound.html#directors">S&amp;S Directors</a>
 <a data-k="bbc21" href="bbc21.html">BBC 21st C.</a>
 <a data-k="big25" href="big25.html">Big Picture 25</a>
+<a data-k="peary" href="peary.html">Peary Cult</a>
+<a data-k="m1001" href="1001movies.html">1001 Movies</a>
 <a data-k="lacinetek" href="lacinetek-top.html">LaCinetek</a>
 <a data-k="wright1000" href="edgar-wright-1000.html">Edgar Wright</a>
 </div></nav>
 <script>(function(){
-var P={'lb500.html':'lb500','imdb250.html':'imdb250','empire500.html':'empire500','tspdt1000.html':'tspdt1000','bbc21.html':'bbc21','big25.html':'big25','lacinetek-top.html':'lacinetek','edgar-wright-1000.html':'wright1000'};
+var P={'lb500.html':'lb500','imdb250.html':'imdb250','empire500.html':'empire500','tspdt1000.html':'tspdt1000','bbc21.html':'bbc21','big25.html':'big25','peary.html':'peary','1001movies.html':'m1001','lacinetek-top.html':'lacinetek','edgar-wright-1000.html':'wright1000'};
 function cur(){var f=location.pathname.split('/').pop()||'';if(f==='sightsound.html'){var h=location.hash.slice(1);if(h!=='critics'&&h!=='directors'){try{h=localStorage.getItem('ssList')}catch(e){}}return h==='directors'?'directors':'critics'}return P[f]}
 function mark(){var k=cur(),a=document.querySelectorAll('#listnav a[data-k]');a.forEach(function(x){var on=x.dataset.k===k;x.classList.toggle('active',on);if(on)x.setAttribute('aria-current','page');else x.removeAttribute('aria-current')});var el=document.querySelector('#listnav a.active');if(el&&el.scrollIntoView)try{el.scrollIntoView({inline:'center',block:'nearest'})}catch(e){}}
 mark();window.addEventListener('hashchange',mark);
@@ -261,7 +263,7 @@ document.querySelectorAll('#listnav a[href^="sightsound.html#"]').forEach(functi
     <button class="filter-btn" data-filter="missing" onclick="setFilter('missing')">Missing</button>
 
     <div class="sort-wrap">
-      <button class="sort-btn active" id="sort-rank" onclick="setSort('rank')">Rank</button>
+      <button class="sort-btn active" id="sort-rank" onclick="setSort('rank')">Order</button>
       <button class="sort-btn" id="sort-year" onclick="setSort('year')">Year</button>
       <button class="sort-btn" id="sort-title" onclick="setSort('title')">Title</button>
     </div>
@@ -277,6 +279,7 @@ document.querySelectorAll('#listnav a[href^="sightsound.html#"]').forEach(functi
 <div class="film-list" id="film-list"></div>
 
 <script>
+window.NO_GAPS=true;
 const FILMS = [
   {r:1,t:"The Cabinet of Dr. Caligari",y:1920,s:"missing"},
   {r:2,t:"Nosferatu: A Symphony of Horror",y:1922,s:"missing"},
@@ -1395,7 +1398,7 @@ function build(wl){
   var F=films(),wm=new Map();wl.forEach(function(w){if(w.title)wm.set(nz(w.title),w)});
   var onW=F.filter(function(f){return f.s==='wishlist'}).sort(function(a,b){return a.r-b.r});
   var top=Math.min(100,Math.ceil(F.length/5));
-  var gaps=F.filter(function(f){return f.s==='missing'&&f.r<=top}).sort(function(a,b){return a.r-b.r});
+  var gaps=window.NO_GAPS?[]:F.filter(function(f){return f.s==='missing'&&f.r<=top}).sort(function(a,b){return a.r-b.r});
   if(!onW.length&&!gaps.length)return '';
   function cardOf(f,red){
     var w=wm.get(nz(f.t)),p=w&&w.poster,sc=w&&+w.lb_score?(+w.lb_score).toFixed(1):'';

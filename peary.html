@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Peary Cult">
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0d0d0d"><link rel="apple-touch-icon" href="icon-192.png">
+<title>Danny Peary’s Cult Movies — Collection Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0e0e;
+    --surface: #161616;
+    --surface2: #1e1e1e;
+    --border: #2a2a2a;
+    --owned: #c8f0a0;
+    --owned-dim: rgba(200,240,160,0.12);
+    --owned-mid: rgba(200,240,160,0.35);
+    --wishlist: #f0d080;
+    --wishlist-dim: rgba(240,208,128,0.12);
+    --wishlist-mid: rgba(240,208,128,0.35);
+    --missing: #e05555;
+    --missing-dim: rgba(224,85,85,0.1);
+    --missing-mid: rgba(224,85,85,0.3);
+    --text: #e8e4dc;
+    --text-dim: #888;
+    --text-faint: #444;
+    --accent: #c8f0a0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: var(--bg); color: var(--text); font-family: 'DM Mono', monospace; }
+  body { min-height: 100vh; padding-bottom: env(safe-area-inset-bottom, 0px); }
+
+  /* HEADER */
+  .header {
+    padding: calc(3rem + env(safe-area-inset-top, 0px)) 2rem 2rem;
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(14,14,14,0.96);
+    backdrop-filter: blur(12px);
+  }
+  .header-top {
+    display: flex; align-items: baseline; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;
+  }
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    line-height: 1; letter-spacing: -0.02em;
+    color: var(--text);
+  }
+  h1 em { color: var(--accent); font-style: italic; }
+  .last-updated { font-size: 11px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* STATS BAR */
+  .stats {
+    display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem;
+  }
+  .stat { display: flex; flex-direction: column; gap: 2px; }
+  .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem; line-height: 1;
+  }
+  .stat-num.owned { color: var(--owned); }
+  .stat-num.wishlist { color: var(--wishlist); }
+  .stat-num.missing { color: var(--missing); }
+  .stat-label { font-size: 11px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* PROGRESS BAR */
+  .progress-wrap { margin-bottom: 1.5rem; }
+  .progress-bar {
+    height: 4px; background: var(--border); border-radius: 2px; overflow: hidden;
+    display: flex;
+  }
+  .progress-seg { height: 100%; transition: width 0.5s ease; }
+  .progress-seg.owned { background: var(--owned); }
+  .progress-seg.wishlist { background: var(--wishlist); }
+  .progress-seg.missing { background: var(--border); }
+
+  /* CONTROLS */
+  .controls {
+    display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;
+  }
+  .filter-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 2px;
+    border: 1px solid var(--border);
+    background: transparent; color: var(--text-dim);
+    cursor: pointer; transition: all 0.15s;
+  }
+  .filter-btn:hover { border-color: var(--text-dim); color: var(--text); }
+  .filter-btn.active-all { border-color: var(--text); color: var(--text); background: var(--surface2); }
+  .filter-btn.active-owned { border-color: var(--owned); color: var(--owned); background: var(--owned-dim); }
+  .filter-btn.active-wishlist { border-color: var(--wishlist); color: var(--wishlist); background: var(--wishlist-dim); }
+  .filter-btn.active-missing { border-color: var(--missing); color: var(--missing); background: var(--missing-dim); }
+
+  .search-wrap { margin-left: auto; position: relative; }
+  .search-input {
+    font-family: 'DM Mono', monospace; font-size: 12px;
+    background: var(--surface2); border: 1px solid var(--border);
+    color: var(--text); padding: 5px 12px 5px 30px;
+    border-radius: 2px; width: 200px; outline: none;
+    transition: border-color 0.15s;
+  }
+  .search-input:focus { border-color: var(--text-dim); }
+  .search-icon { position: absolute; left: 9px; top: 50%; transform: translateY(-50%); color: var(--text-dim); font-size: 12px; pointer-events: none; }
+
+  /* SORT */
+  .sort-wrap { display: flex; gap: 4px; margin-left: 8px; }
+  .sort-btn {
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 5px 10px; border-radius: 2px;
+    border: 1px solid var(--border);
+    background: transparent; color: var(--text-faint);
+    cursor: pointer; transition: all 0.15s;
+  }
+  .sort-btn.active { border-color: var(--text-dim); color: var(--text-dim); }
+
+  /* LIST */
+  .film-list {
+    padding: 0 2rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
+    gap: 1px;
+  }
+
+  .film-item {
+    display: flex; align-items: center; gap: 1rem;
+    padding: 0.6rem 1rem 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.1s;
+    cursor: default;
+  }
+  .film-item:hover { background: var(--surface); }
+  .film-item.status-owned { border-left: 2px solid var(--owned); padding-left: calc(1rem - 2px); }
+  .film-item.status-wishlist { border-left: 2px solid var(--wishlist); padding-left: calc(1rem - 2px); }
+  .film-item.status-missing { border-left: 2px solid var(--text-faint); padding-left: calc(1rem - 2px); }
+
+  .rank {
+    font-size: 11px; color: var(--text-faint);
+    width: 32px; text-align: right; flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+  .film-info { flex: 1; min-width: 0; }
+  .film-title {
+    font-size: 13px; color: var(--text);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    line-height: 1.3;
+  }
+  .film-title.faded { color: var(--text-dim); }
+  .film-year { font-size: 10px; color: var(--text-faint); margin-top: 1px; }
+  .status-pill {
+    font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 2px 7px; border-radius: 1px; flex-shrink: 0;
+    font-weight: 500;
+  }
+  .pill-owned { background: var(--owned-dim); color: var(--owned); border: 1px solid var(--owned-mid); }
+  .pill-wishlist { background: var(--wishlist-dim); color: var(--wishlist); border: 1px solid var(--wishlist-mid); }
+  .pill-missing { background: transparent; color: var(--text-faint); border: 1px solid var(--border); }
+
+  /* EMPTY STATE */
+  .empty { padding: 4rem 2rem; text-align: center; color: var(--text-dim); font-size: 13px; }
+
+  /* COUNT DISPLAY */
+  .count-display {
+    font-size: 11px; color: var(--text-dim); padding: 1rem 2rem 0.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 600px) {
+    .header { padding: calc(1.5rem + env(safe-area-inset-top, 0px)) 1rem 1rem; }
+    .film-list { padding: 0 0 4rem; }
+    .count-display { padding: 1rem 1rem 0.5rem; }
+    .stats { gap: 1.2rem; }
+    .stat-num { font-size: 1.6rem; }
+  }
+.top-row{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:1rem;flex-wrap:wrap}
+.back{font-size:11px;color:var(--text-dim);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;display:inline-block;padding:10px 0}
+.back:hover{color:var(--text)}
+.back:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+<style>.imdb-chip{font-size:9px;font-weight:700;letter-spacing:.05em;padding:2px 6px;border-radius:4px;border:1px solid rgba(255,255,255,.2);color:#aaa;margin-right:8px;cursor:pointer;white-space:nowrap}.imdb-chip:hover{color:#f5c518;border-color:#f5c518}</style>
+</style>
+<style>.vbtn{background:none;border:1px solid var(--border);color:var(--text-dim);border-radius:999px;padding:6px 12px;font:inherit;font-size:11px;cursor:pointer}.vbtn.on{border-color:var(--text);color:var(--text);background:var(--surface2)}</style>
+</head>
+<body>
+<style id="listnav-css">
+#listnav{position:sticky;top:0;z-index:1000;background:rgba(14,14,14,.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#2a2a2a);padding-top:env(safe-area-inset-top,0px);display:flex;align-items:center}
+#listnav .ln-scroll{display:flex;gap:6px;overflow-x:auto;padding:8px 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch;flex:1}
+#listnav .ln-scroll::-webkit-scrollbar{display:none}
+#listnav a{flex:0 0 auto;text-decoration:none;font-family:'DM Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.04em;white-space:nowrap;color:var(--text-dim,#888);border:1px solid var(--border,#2a2a2a);border-radius:999px;padding:6px 12px;transition:color .15s,border-color .15s,background .15s}
+#listnav a:hover{color:var(--text,#e8e4dc)}
+#listnav a.ln-home{color:var(--text,#e8e4dc);border-color:transparent;padding-left:8px}
+#listnav a.active{color:#111;background:var(--accent,#c8f0a0);border-color:var(--accent,#c8f0a0);font-weight:500}
+</style>
+<nav id="listnav" aria-label="Lists"><div class="ln-scroll">
+<a class="ln-home" href="index.html">&larr; Archive</a>
+<a data-k="lb500" href="lb500.html">Letterboxd 500</a>
+<a data-k="imdb250" href="imdb250.html">IMDb 250</a>
+<a data-k="empire500" href="empire500.html">Empire 500</a>
+<a data-k="tspdt1000" href="tspdt1000.html">TSPDT 1000</a>
+<a data-k="critics" href="sightsound.html#critics">S&amp;S Critics</a>
+<a data-k="directors" href="sightsound.html#directors">S&amp;S Directors</a>
+<a data-k="bbc21" href="bbc21.html">BBC 21st C.</a>
+<a data-k="big25" href="big25.html">Big Picture 25</a>
+<a data-k="peary" href="peary.html">Peary Cult</a>
+<a data-k="m1001" href="1001movies.html">1001 Movies</a>
+<a data-k="lacinetek" href="lacinetek-top.html">LaCinetek</a>
+<a data-k="wright1000" href="edgar-wright-1000.html">Edgar Wright</a>
+</div></nav>
+<script>(function(){
+var P={'lb500.html':'lb500','imdb250.html':'imdb250','empire500.html':'empire500','tspdt1000.html':'tspdt1000','bbc21.html':'bbc21','big25.html':'big25','peary.html':'peary','1001movies.html':'m1001','lacinetek-top.html':'lacinetek','edgar-wright-1000.html':'wright1000'};
+function cur(){var f=location.pathname.split('/').pop()||'';if(f==='sightsound.html'){var h=location.hash.slice(1);if(h!=='critics'&&h!=='directors'){try{h=localStorage.getItem('ssList')}catch(e){}}return h==='directors'?'directors':'critics'}return P[f]}
+function mark(){var k=cur(),a=document.querySelectorAll('#listnav a[data-k]');a.forEach(function(x){var on=x.dataset.k===k;x.classList.toggle('active',on);if(on)x.setAttribute('aria-current','page');else x.removeAttribute('aria-current')});var el=document.querySelector('#listnav a.active');if(el&&el.scrollIntoView)try{el.scrollIntoView({inline:'center',block:'nearest'})}catch(e){}}
+mark();window.addEventListener('hashchange',mark);
+document.querySelectorAll('#listnav a[href^="sightsound.html#"]').forEach(function(x){x.addEventListener('click',function(){var k=x.dataset.k;try{localStorage.setItem('ssList',k)}catch(e){}setTimeout(mark,0)})});
+})();</script>
+
+
+<div class="header">
+  <div class="top-row"><a class="back" href="index.html">← The Archive</a></div>
+  <div class="header-top">
+    <h1>Peary’s Cult Movies<br><em>vs your collection</em></h1>
+    <span class="last-updated">Danny Peary · Cult Movies, Volumes 1–3</span>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-num owned" id="count-owned">0</span>
+      <span class="stat-label">Owned</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num wishlist" id="count-wishlist">0</span>
+      <span class="stat-label">Wishlist</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num missing" id="count-missing">0</span>
+      <span class="stat-label">Missing</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" id="count-pct" style="color:var(--text)">0%</span>
+      <span class="stat-label">Coverage</span>
+    </div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-bar">
+      <div class="progress-seg owned" id="prog-owned" style="width:0%"></div>
+      <div class="progress-seg wishlist" id="prog-wishlist" style="width:0%"></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="filter-btn active-all" data-filter="all" onclick="setFilter('all')">All 200</button>
+    <button class="filter-btn" data-filter="owned" onclick="setFilter('owned')">Owned</button>
+    <button class="filter-btn" data-filter="wishlist" onclick="setFilter('wishlist')">Wishlist</button>
+    <button class="filter-btn" data-filter="missing" onclick="setFilter('missing')">Missing</button>
+
+    <div style="flex-basis:100%;display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2px"><button class="vbtn on" data-v="0" onclick="setVol(0)">All volumes</button><button class="vbtn" data-v="1" onclick="setVol(1)">Vol. 1 · 100</button><button class="vbtn" data-v="2" onclick="setVol(2)">Vol. 2 · 50</button><button class="vbtn" data-v="3" onclick="setVol(3)">Vol. 3 · 50</button></div>
+    <div class="sort-wrap">
+      <button class="sort-btn active" id="sort-rank" onclick="setSort('rank')">Order</button>
+      <button class="sort-btn" id="sort-year" onclick="setSort('year')">Year</button>
+      <button class="sort-btn" id="sort-title" onclick="setSort('title')">Title</button>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input class="search-input" type="text" placeholder="Search..." id="search-input" oninput="onSearch()" />
+    </div>
+  </div>
+</div>
+
+<div class="count-display" id="count-display"></div>
+<div class="film-list" id="film-list"></div>
+
+<script>
+window.NO_GAPS=true;
+const FILMS = [
+  {r:1,t:"Aguirre, the Wrath of God",y:1972,s:"missing",v:1},
+  {r:2,t:"All About Eve",y:1950,s:"missing",v:1},
+  {r:3,t:"Andy Warhol's Bad",y:1977,s:"missing",v:1},
+  {r:4,t:"Badlands",y:1973,s:"missing",v:1},
+  {r:5,t:"Beauty and the Beast",y:1946,s:"missing",v:1,a:["La Belle et la Bête"]},
+  {r:6,t:"Bedtime for Bonzo",y:1951,s:"missing",v:1},
+  {r:7,t:"Behind the Green Door",y:1972,s:"missing",v:1},
+  {r:8,t:"Beyond the Valley of the Dolls",y:1970,s:"missing",v:1},
+  {r:9,t:"Billy Jack",y:1971,s:"missing",v:1},
+  {r:10,t:"Black Sunday",y:1960,s:"missing",v:1},
+  {r:11,t:"The Brood",y:1979,s:"missing",v:1},
+  {r:12,t:"Burn!",y:1969,s:"missing",v:1},
+  {r:13,t:"Caged Heat",y:1974,s:"missing",v:1},
+  {r:14,t:"Casablanca",y:1942,s:"missing",v:1},
+  {r:15,t:"Citizen Kane",y:1941,s:"missing",v:1},
+  {r:16,t:"Witchfinder General",y:1968,s:"missing",v:1,a:["The Conqueror Worm"]},
+  {r:17,t:"Dance, Girl, Dance",y:1940,s:"missing",v:1},
+  {r:18,t:"Deep End",y:1970,s:"missing",v:1},
+  {r:19,t:"Detour",y:1945,s:"missing",v:1},
+  {r:20,t:"Duck Soup",y:1933,s:"missing",v:1},
+  {r:21,t:"El Topo",y:1970,s:"missing",v:1},
+  {r:22,t:"Emmanuelle",y:1974,s:"missing",v:1},
+  {r:23,t:"Enter the Dragon",y:1973,s:"missing",v:1},
+  {r:24,t:"Eraserhead",y:1977,s:"missing",v:1},
+  {r:25,t:"Fantasia",y:1940,s:"missing",v:1},
+  {r:26,t:"Forbidden Planet",y:1956,s:"missing",v:1},
+  {r:27,t:"Force of Evil",y:1948,s:"missing",v:1},
+  {r:28,t:"42nd Street",y:1933,s:"missing",v:1},
+  {r:29,t:"Freaks",y:1932,s:"missing",v:1},
+  {r:30,t:"The Girl Can't Help It",y:1956,s:"missing",v:1},
+  {r:31,t:"Greetings",y:1968,s:"missing",v:1},
+  {r:32,t:"Gun Crazy",y:1950,s:"missing",v:1},
+  {r:33,t:"Halloween",y:1978,s:"missing",v:1},
+  {r:34,t:"A Hard Day's Night",y:1964,s:"missing",v:1},
+  {r:35,t:"The Harder They Come",y:1973,s:"missing",v:1},
+  {r:36,t:"Harold and Maude",y:1971,s:"missing",v:1},
+  {r:37,t:"The Honeymoon Killers",y:1970,s:"missing",v:1},
+  {r:38,t:"House of Wax",y:1953,s:"missing",v:1},
+  {r:39,t:"I Married a Monster from Outer Space",y:1958,s:"missing",v:1},
+  {r:40,t:"I Walked with a Zombie",y:1943,s:"missing",v:1},
+  {r:41,t:"Invasion of the Body Snatchers",y:1956,s:"missing",v:1},
+  {r:42,t:"It's a Gift",y:1934,s:"missing",v:1},
+  {r:43,t:"It's a Wonderful Life",y:1946,s:"missing",v:1},
+  {r:44,t:"Jason and the Argonauts",y:1963,s:"missing",v:1},
+  {r:45,t:"Johnny Guitar",y:1954,s:"missing",v:1},
+  {r:46,t:"The Killing",y:1956,s:"missing",v:1},
+  {r:47,t:"King Kong",y:1933,s:"missing",v:1},
+  {r:48,t:"King of Hearts",y:1967,s:"missing",v:1},
+  {r:49,t:"Kiss Me Deadly",y:1955,s:"missing",v:1},
+  {r:50,t:"La Cage aux Folles",y:1978,s:"missing",v:1},
+  {r:51,t:"Land of the Pharaohs",y:1955,s:"missing",v:1},
+  {r:52,t:"Laura",y:1944,s:"missing",v:1},
+  {r:53,t:"The Little Shop of Horrors",y:1960,s:"missing",v:1},
+  {r:54,t:"Lola Montès",y:1955,s:"missing",v:1},
+  {r:55,t:"The Long Goodbye",y:1973,s:"missing",v:1},
+  {r:56,t:"Mad Max",y:1979,s:"missing",v:1},
+  {r:57,t:"The Maltese Falcon",y:1941,s:"missing",v:1},
+  {r:58,t:"Man of the West",y:1958,s:"missing",v:1},
+  {r:59,t:"Night of the Living Dead",y:1968,s:"missing",v:1},
+  {r:60,t:"The Nutty Professor",y:1963,s:"missing",v:1},
+  {r:61,t:"Once Upon a Time in the West",y:1968,s:"missing",v:1},
+  {r:62,t:"Out of the Past",y:1947,s:"missing",v:1},
+  {r:63,t:"Outrageous!",y:1977,s:"missing",v:1},
+  {r:64,t:"Pandora's Box",y:1929,s:"missing",v:1},
+  {r:65,t:"Peeping Tom",y:1960,s:"missing",v:1},
+  {r:66,t:"Performance",y:1970,s:"missing",v:1},
+  {r:67,t:"Petulia",y:1968,s:"missing",v:1},
+  {r:68,t:"Pink Flamingos",y:1972,s:"missing",v:1},
+  {r:69,t:"Plan 9 from Outer Space",y:1957,s:"missing",v:1},
+  {r:70,t:"Pretty Poison",y:1968,s:"missing",v:1},
+  {r:71,t:"The Producers",y:1967,s:"missing",v:1},
+  {r:72,t:"The Rain People",y:1969,s:"missing",v:1},
+  {r:73,t:"Rebel Without a Cause",y:1955,s:"missing",v:1},
+  {r:74,t:"The Red Shoes",y:1948,s:"missing",v:1},
+  {r:75,t:"Reefer Madness",y:1936,s:"missing",v:1},
+  {r:76,t:"Rio Bravo",y:1959,s:"missing",v:1},
+  {r:77,t:"Rock 'n' Roll High School",y:1979,s:"missing",v:1},
+  {r:78,t:"The Rocky Horror Picture Show",y:1975,s:"missing",v:1},
+  {r:79,t:"The Scarlet Empress",y:1934,s:"missing",v:1},
+  {r:80,t:"The Searchers",y:1956,s:"missing",v:1},
+  {r:81,t:"Shock Corridor",y:1963,s:"missing",v:1},
+  {r:82,t:"The Shooting",y:1966,s:"missing",v:1},
+  {r:83,t:"Singin' in the Rain",y:1952,s:"missing",v:1},
+  {r:84,t:"Sunset Boulevard",y:1950,s:"missing",v:1},
+  {r:85,t:"Sylvia Scarlett",y:1935,s:"missing",v:1},
+  {r:86,t:"The Tall T",y:1957,s:"missing",v:1},
+  {r:87,t:"Targets",y:1968,s:"missing",v:1},
+  {r:88,t:"Tarzan and His Mate",y:1934,s:"missing",v:1},
+  {r:89,t:"The Texas Chain Saw Massacre",y:1974,s:"missing",v:1},
+  {r:90,t:"Top Hat",y:1935,s:"missing",v:1},
+  {r:91,t:"Trash",y:1970,s:"missing",v:1},
+  {r:92,t:"Two for the Road",y:1967,s:"missing",v:1},
+  {r:93,t:"Two-Lane Blacktop",y:1971,s:"missing",v:1},
+  {r:94,t:"2001: A Space Odyssey",y:1968,s:"missing",v:1},
+  {r:95,t:"Up in Smoke",y:1978,s:"missing",v:1},
+  {r:96,t:"Vertigo",y:1958,s:"missing",v:1},
+  {r:97,t:"The Warriors",y:1979,s:"missing",v:1},
+  {r:98,t:"Where’s Poppa?",y:1970,s:"missing",v:1,a:["Where's Poppa?"]},
+  {r:99,t:"The Wild Bunch",y:1969,s:"missing",v:1},
+  {r:100,t:"The Wizard of Oz",y:1939,s:"missing",v:1},
+  {r:101,t:"Altered States",y:1980,s:"missing",v:2},
+  {r:102,t:"The American Friend",y:1977,s:"missing",v:2,a:["Der Amerikanische Freund"]},
+  {r:103,t:"Barbarella",y:1968,s:"missing",v:2},
+  {r:104,t:"Basket Case",y:1982,s:"missing",v:2},
+  {r:105,t:"Beat the Devil",y:1953,s:"missing",v:2},
+  {r:106,t:"Bedazzled",y:1967,s:"missing",v:2},
+  {r:107,t:"The Big Heat",y:1953,s:"missing",v:2},
+  {r:108,t:"Blood Feast",y:1963,s:"missing",v:2},
+  {r:109,t:"Blood Money",y:1933,s:"missing",v:2},
+  {r:110,t:"A Boy and His Dog",y:1975,s:"missing",v:2},
+  {r:111,t:"Breathless",y:1960,s:"missing",v:2,a:["À bout de souffle"]},
+  {r:112,t:"Bride of Frankenstein",y:1935,s:"missing",v:2},
+  {r:113,t:"Children of Paradise",y:1945,s:"missing",v:2,a:["Les Enfants du Paradis"]},
+  {r:114,t:"A Clockwork Orange",y:1971,s:"missing",v:2},
+  {r:115,t:"Cutter's Way",y:1981,s:"missing",v:2},
+  {r:116,t:"Dark Star",y:1974,s:"missing",v:2},
+  {r:117,t:"Daughters of Darkness",y:1971,s:"missing",v:2},
+  {r:118,t:"The First Nudie Musical",y:1976,s:"missing",v:2},
+  {r:119,t:"Godzilla",y:1954,s:"missing",v:2,a:["Gojira"]},
+  {r:120,t:"The Great Texas Dynamite Chase",y:1976,s:"missing",v:2},
+  {r:121,t:"High School Confidential!",y:1958,s:"missing",v:2},
+  {r:122,t:"His Girl Friday",y:1940,s:"missing",v:2},
+  {r:123,t:"Last Tango in Paris",y:1972,s:"missing",v:2},
+  {r:124,t:"The Man Who Fell to Earth",y:1976,s:"missing",v:2},
+  {r:125,t:"Marnie",y:1964,s:"missing",v:2},
+  {r:126,t:"Massacre at Central High",y:1976,s:"missing",v:2},
+  {r:127,t:"Mommie Dearest",y:1981,s:"missing",v:2},
+  {r:128,t:"Monty Python and the Holy Grail",y:1975,s:"missing",v:2},
+  {r:129,t:"Morgan!",y:1966,s:"missing",v:2,a:["Morgan: A Suitable Case for Treatment"]},
+  {r:130,t:"Ms. 45",y:1981,s:"missing",v:2,a:["Ms. 45", "Angel of Vengeance"]},
+  {r:131,t:"My Darling Clementine",y:1946,s:"missing",v:2},
+  {r:132,t:"Night of the Demon",y:1957,s:"missing",v:2,a:["Curse of the Demon"]},
+  {r:133,t:"Nightmare Alley",y:1947,s:"missing",v:2},
+  {r:134,t:"The Parallax View",y:1974,s:"missing",v:2},
+  {r:135,t:"Phantom of the Paradise",y:1974,s:"missing",v:2},
+  {r:136,t:"Picnic at Hanging Rock",y:1975,s:"missing",v:2},
+  {r:137,t:"Pretty Baby",y:1978,s:"missing",v:2},
+  {r:138,t:"Quadrophenia",y:1979,s:"missing",v:2},
+  {r:139,t:"Salt of the Earth",y:1954,s:"missing",v:2},
+  {r:140,t:"The Seventh Seal",y:1957,s:"missing",v:2},
+  {r:141,t:"Some Like It Hot",y:1959,s:"missing",v:2},
+  {r:142,t:"Sullivan's Travels",y:1941,s:"missing",v:2},
+  {r:143,t:"Taxi Driver",y:1976,s:"missing",v:2},
+  {r:144,t:"To Be or Not to Be",y:1942,s:"missing",v:2},
+  {r:145,t:"Vanishing Point",y:1971,s:"missing",v:2},
+  {r:146,t:"White Heat",y:1949,s:"missing",v:2},
+  {r:147,t:"The Wicker Man",y:1973,s:"missing",v:2},
+  {r:148,t:"Willy Wonka & the Chocolate Factory",y:1971,s:"missing",v:2},
+  {r:149,t:"Wuthering Heights",y:1939,s:"missing",v:2},
+  {r:150,t:"Zardoz",y:1974,s:"missing",v:2},
+  {r:151,t:"An American Werewolf in London",y:1981,s:"missing",v:3},
+  {r:152,t:"Annie Hall",y:1977,s:"missing",v:3},
+  {r:153,t:"The Black Cat",y:1934,s:"missing",v:3},
+  {r:154,t:"Blade Runner",y:1982,s:"missing",v:3},
+  {r:155,t:"Blue Velvet",y:1986,s:"missing",v:3},
+  {r:156,t:"Body Heat",y:1981,s:"missing",v:3},
+  {r:157,t:"The Cabinet of Dr. Caligari",y:1920,s:"missing",v:3},
+  {r:158,t:"Cafe Flesh",y:1982,s:"missing",v:3},
+  {r:159,t:"Chilly Scenes of Winter",y:1979,s:"missing",v:3,a:["Head Over Heels"]},
+  {r:160,t:"Choose Me",y:1984,s:"missing",v:3},
+  {r:161,t:"Diva",y:1981,s:"missing",v:3},
+  {r:162,t:"Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",y:1964,s:"missing",v:3,a:["Dr. Strangelove"]},
+  {r:163,t:"Easy Rider",y:1969,s:"missing",v:3},
+  {r:164,t:"Faster, Pussycat! Kill! Kill!",y:1965,s:"missing",v:3},
+  {r:165,t:"Quatermass and the Pit",y:1967,s:"missing",v:3,a:["Five Million Years to Earth"]},
+  {r:166,t:"Gentlemen Prefer Blondes",y:1953,s:"missing",v:3},
+  {r:167,t:"Glen or Glenda",y:1953,s:"missing",v:3},
+  {r:168,t:"The Gods Must Be Crazy",y:1980,s:"missing",v:3},
+  {r:169,t:"Imitation of Life",y:1959,s:"missing",v:3},
+  {r:170,t:"In a Lonely Place",y:1950,s:"missing",v:3},
+  {r:171,t:"It's a Mad, Mad, Mad, Mad World",y:1963,s:"missing",v:3},
+  {r:172,t:"Liquid Sky",y:1982,s:"missing",v:3},
+  {r:173,t:"Martin",y:1977,s:"missing",v:3},
+  {r:174,t:"Miracle on 34th Street",y:1947,s:"missing",v:3},
+  {r:175,t:"Monsieur Verdoux",y:1947,s:"missing",v:3},
+  {r:176,t:"The Naked Kiss",y:1964,s:"missing",v:3},
+  {r:177,t:"Napoleon",y:1927,s:"missing",v:3,a:["Napoléon"]},
+  {r:178,t:"New York, New York",y:1977,s:"missing",v:3},
+  {r:179,t:"The Night of the Hunter",y:1955,s:"missing",v:3},
+  {r:180,t:"Now, Voyager",y:1942,s:"missing",v:3},
+  {r:181,t:"The Young and the Damned",y:1950,s:"missing",v:3,a:["Los Olvidados"]},
+  {r:182,t:"On Her Majesty's Secret Service",y:1969,s:"missing",v:3},
+  {r:183,t:"One-Eyed Jacks",y:1961,s:"missing",v:3},
+  {r:184,t:"Over the Edge",y:1979,s:"missing",v:3},
+  {r:185,t:"Psycho",y:1960,s:"missing",v:3},
+  {r:186,t:"The Quiet Man",y:1952,s:"missing",v:3},
+  {r:187,t:"Ride the High Country",y:1962,s:"missing",v:3},
+  {r:188,t:"Mad Max 2: The Road Warrior",y:1981,s:"missing",v:3,a:["The Road Warrior"]},
+  {r:189,t:"Seconds",y:1966,s:"missing",v:3},
+  {r:190,t:"Sons of the Desert",y:1933,s:"missing",v:3},
+  {r:191,t:"A Star Is Born",y:1954,s:"missing",v:3},
+  {r:192,t:"The Stunt Man",y:1980,s:"missing",v:3},
+  {r:193,t:"The Terminator",y:1984,s:"missing",v:3},
+  {r:194,t:"That Hamilton Woman",y:1941,s:"missing",v:3},
+  {r:195,t:"The Thief of Bagdad",y:1940,s:"missing",v:3},
+  {r:196,t:"The Thing from Another World",y:1951,s:"missing",v:3},
+  {r:197,t:"Touch of Evil",y:1958,s:"missing",v:3},
+  {r:198,t:"Walkabout",y:1971,s:"missing",v:3},
+  {r:199,t:"The Wanderers",y:1979,s:"missing",v:3},
+  {r:200,t:"Where the Boys Are",y:1960,s:"missing",v:3},
+];
+
+let currentFilter = 'all';
+let currentSort = 'rank';
+let searchQ = '';
+
+function setFilter(f) {
+  currentFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.className = 'filter-btn';
+    if(b.dataset.filter === f) b.classList.add('active-'+f);
+  });
+  render();
+}
+
+function setSort(s) {
+  currentSort = s;
+  document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('sort-'+s).classList.add('active');
+  render();
+}
+
+let currentVol = 0;
+function setVol(v){currentVol=v;document.querySelectorAll('.vbtn').forEach(b=>b.classList.toggle('on',+b.dataset.v===v));render();}
+function onSearch() {
+  searchQ = document.getElementById('search-input').value.toLowerCase();
+  render();
+}
+
+
+let LINKS = {};
+const NK = s => (s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+const FL = f => LINKS[NK(f.t)+'|'+f.y] || {};
+const lbUrl = f => f.lb || FL(f).lb || ('https://letterboxd.com/search/films/'+encodeURIComponent(f.t+' '+f.y)+'/');
+const imdbUrl = f => { const i = f.imdb_id || FL(f).imdb; return i ? 'https://www.imdb.com/title/'+i+'/' : 'https://www.imdb.com/find/?q='+encodeURIComponent(f.t+' '+f.y); };
+function openIMDb(e, el){ e.preventDefault(); e.stopPropagation(); window.open(el.dataset.u, '_blank', 'noopener'); return false; }
+fetch('film_links.json').then(r => r.ok ? r.json() : {}).then(j => { LINKS = j; render(); }).catch(() => {});
+function render() {
+  let films = [...FILMS];
+  if(currentFilter !== 'all') films = films.filter(f => f.s === currentFilter);
+  if(currentVol) films = films.filter(f => f.v === currentVol);
+  if(searchQ) films = films.filter(f => f.t.toLowerCase().includes(searchQ) || (f.a||[]).some(x=>x.toLowerCase().includes(searchQ)) || String(f.y).includes(searchQ));
+  if(currentSort === 'year') films.sort((a,b) => a.y - b.y);
+  else if(currentSort === 'title') films.sort((a,b) => a.t.localeCompare(b.t));
+  else films.sort((a,b) => a.r - b.r);
+
+  const listEl = document.getElementById('film-list');
+  document.getElementById('count-display').textContent =
+    `Showing ${films.length} film${films.length!==1?'s':''}`;
+
+  listEl.innerHTML = films.map(f => `
+    <a class="film-item status-${f.s}" href="${lbUrl(f)}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+      <span class="rank">${f.r}</span>
+      <div class="film-info">
+        <div class="film-title${f.s==='missing'?' faded':''}">${f.t}</div>
+        <div class="film-year">${f.y} · Vol ${f.v}</div>
+      </div>
+      <span class="imdb-chip" data-u="${imdbUrl(f)}" onclick="return openIMDb(event,this)">IMDb</span> <span class="status-pill pill-${f.s}">${f.s==='owned'?'owned':f.s==='wishlist'?'wish':'—'}</span>
+    </a>
+  `).join('');
+}
+
+render();
+
+// ===== Auto-sync statuses & links from collection.json / wishlist.json =====
+function lbNorm(s){return (s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]/g,'').replace(/colour/g,'color').replace(/neighbour/g,'neighbor');}
+const LB_ALIAS={dreams:'akirakurosawasdreams',jointsecurityarea:'jsajointsecurityarea'};
+function lbCounts(){
+  const nOwned=FILMS.filter(f=>f.s==='owned').length,nWish=FILMS.filter(f=>f.s==='wishlist').length,nMiss=FILMS.filter(f=>f.s==='missing').length;
+  document.getElementById('count-owned').textContent=nOwned;
+  document.getElementById('count-wishlist').textContent=nWish;
+  document.getElementById('count-missing').textContent=nMiss;
+  document.getElementById('count-pct').textContent=Math.round(nOwned/FILMS.length*100)+'%';
+  document.getElementById('prog-owned').style.width=(nOwned/FILMS.length*100)+'%';
+  document.getElementById('prog-wishlist').style.width=(nWish/FILMS.length*100)+'%';
+}
+async function lbSync(){
+  try{
+    const [c,w]=await Promise.all(['collection.json','wishlist.json'].map(u=>fetch(u+'?v='+Date.now()).then(r=>{if(!r.ok)throw 0;return r.json();})));
+    const idx=a=>(Array.isArray(a)?a:(a.films||[])).map(d=>({n:lbNorm(d.title),y:d.year,lb:d.lb}));
+    const ci=idx(c),wi=idx(w);
+    const find=(list,f)=>{for(const nm of [f.t].concat(f.a||[])){const k=LB_ALIAS[lbNorm(nm)]||lbNorm(nm);const d=list.find(d=>(d.n===k||(k.length>=10&&d.n.startsWith(k)))&&Math.abs(d.y-f.y)<=2);if(d)return d;}return null;};
+    FILMS.forEach(f=>{const o=find(ci,f),wl=o?null:find(wi,f);f.s=o?'owned':wl?'wishlist':'missing';f.lb=(o||wl||{}).lb||f.lb;});
+    lbCounts();render();
+  }catch(e){console.warn('peary sync skipped (using built-in statuses)',e);}
+}
+lbSync();
+document.addEventListener("visibilitychange",()=>{document.hidden||lbSync()});
+window.addEventListener("pageshow",e=>{e.persisted&&lbSync()});
+if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').then(r=>r.update()).catch(()=>{}));
+lbCounts();
+</script>
+<style>#ownFab{bottom:calc(16px + env(safe-area-inset-bottom))}</style>
+<script>
+(function(){
+  function go(f){
+    var b=document.querySelector("[onclick*=\"setFilter('all'\"]"); if(b) b.click();
+    var el=document.getElementById('search-input'); if(el){el.value=f.title; onSearch();}
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  window.OWN_ADAPTER={
+    getTop500:function(){return typeof FILMS!=='undefined'?FILMS.map(function(f){return{title:f.t,year:f.y,rank:f.r,status:f.s}}):[]},
+    alias:typeof LB_ALIAS!=='undefined'?LB_ALIAS:{},
+    openOwned:go,openWanted:go,openTop:go
+  };
+})();
+</script>
+<script src="ownsearch.js"></script>
+<script>
+/* ===== On Your Wishlist + Top Gaps panel (shared across list pages) ===== */
+(function(){
+var wlP=null,lastKey='';
+function getWl(){return wlP||(wlP=fetch('wishlist.json?v='+Date.now()).then(function(r){return r.json()}).then(function(d){return Array.isArray(d)?d:(d&&d.films)||[]}).catch(function(){return []}))}
+var nz=function(s){return (s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'')};
+var esc=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+function films(){return typeof curFilms==='function'?curFilms():FILMS}
+function build(wl){
+  var F=films(),wm=new Map();wl.forEach(function(w){if(w.title)wm.set(nz(w.title),w)});
+  var onW=F.filter(function(f){return f.s==='wishlist'}).sort(function(a,b){return a.r-b.r});
+  var top=Math.min(100,Math.ceil(F.length/5));
+  var gaps=window.NO_GAPS?[]:F.filter(function(f){return f.s==='missing'&&f.r<=top}).sort(function(a,b){return a.r-b.r});
+  if(!onW.length&&!gaps.length)return '';
+  function cardOf(f,red){
+    var w=wm.get(nz(f.t)),p=w&&w.poster,sc=w&&+w.lb_score?(+w.lb_score).toFixed(1):'';
+    var url=(w&&w.lb)||('https://letterboxd.com/search/'+encodeURIComponent(f.t)+'/');
+    var img=p?'<img src="'+esc(p)+'" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="">':'<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--text-dim);padding:3px;text-align:center">'+esc(f.t)+'</div>';
+    var bg=red?'rgba(224,85,85,.85);color:#fff':'rgba(240,208,128,.85);color:#111';
+    return '<a href="'+esc(url)+'" target="_blank" rel="noopener" style="flex:0 0 72px;text-decoration:none"><div style="position:relative;width:72px;height:108px;border-radius:6px;overflow:hidden;background:var(--surface2);margin-bottom:5px;border:1px solid var(--border)">'+img+'<div style="position:absolute;top:3px;right:3px;background:'+bg+';border-radius:3px;font-size:7px;font-weight:800;padding:1px 4px">#'+f.r+'</div></div><div style="font-size:9px;color:var(--text);line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">'+esc(f.t)+'</div>'+(sc?'<div style="font-size:9px;color:var(--wishlist)">★ '+sc+'</div>':'<div style="font-size:9px;color:var(--text-dim)">'+f.y+'</div>')+'</a>'}
+  var row=function(a,r){return '<div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none">'+a.map(function(f){return cardOf(f,r)}).join('')+'</div>'};
+  var h='';
+  if(onW.length)h+='<div style="margin-bottom:28px"><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--wishlist);margin-bottom:4px">On Your Wishlist · '+onW.length+' film'+(onW.length!==1?'s':'')+'</div><div style="font-size:12px;color:var(--text-dim);margin-bottom:12px">Films from this list you already want — sorted by rank</div>'+row(onW,false)+'</div>';
+  if(gaps.length)h+='<div><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--missing);margin-bottom:4px">Top '+top+' Gaps · '+gaps.length+' film'+(gaps.length!==1?'s':'')+'</div><div style="font-size:12px;color:var(--text-dim);margin-bottom:12px">Highly ranked films not owned or wishlisted</div>'+row(gaps,true)+'</div>';
+  return h;
+}
+function gaps(){
+  try{
+    var F=films(),k=F.length+':'+F.filter(function(f){return f.s==='wishlist'}).length+':'+F.filter(function(f){return f.s==='missing'}).length+':'+F[0].t;
+    if(k===lastKey)return;lastKey=k;
+    getWl().then(function(wl){
+      var p=document.getElementById('gaps-panel');
+      if(!p){var l=document.getElementById('film-list');if(!l)return;p=document.createElement('div');p.id='gaps-panel';p.style.padding='1.5rem 1rem 6rem';l.insertAdjacentElement('afterend',p)}
+      p.innerHTML=build(wl);
+    });
+  }catch(e){console.warn('gaps',e)}
+}
+var _r=render;
+render=function(){var r=_r.apply(this,arguments);gaps();return r};
+gaps();
+})();
+</script>
+</body>
+</html>

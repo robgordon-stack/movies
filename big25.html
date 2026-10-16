@@ -209,11 +209,13 @@
 <a data-k="directors" href="sightsound.html#directors">S&amp;S Directors</a>
 <a data-k="bbc21" href="bbc21.html">BBC 21st C.</a>
 <a data-k="big25" href="big25.html">Big Picture 25</a>
+<a data-k="peary" href="peary.html">Peary Cult</a>
+<a data-k="m1001" href="1001movies.html">1001 Movies</a>
 <a data-k="lacinetek" href="lacinetek-top.html">LaCinetek</a>
 <a data-k="wright1000" href="edgar-wright-1000.html">Edgar Wright</a>
 </div></nav>
 <script>(function(){
-var P={'lb500.html':'lb500','imdb250.html':'imdb250','empire500.html':'empire500','tspdt1000.html':'tspdt1000','bbc21.html':'bbc21','big25.html':'big25','lacinetek-top.html':'lacinetek','edgar-wright-1000.html':'wright1000'};
+var P={'lb500.html':'lb500','imdb250.html':'imdb250','empire500.html':'empire500','tspdt1000.html':'tspdt1000','bbc21.html':'bbc21','big25.html':'big25','peary.html':'peary','1001movies.html':'m1001','lacinetek-top.html':'lacinetek','edgar-wright-1000.html':'wright1000'};
 function cur(){var f=location.pathname.split('/').pop()||'';if(f==='sightsound.html'){var h=location.hash.slice(1);if(h!=='critics'&&h!=='directors'){try{h=localStorage.getItem('ssList')}catch(e){}}return h==='directors'?'directors':'critics'}return P[f]}
 function mark(){var k=cur(),a=document.querySelectorAll('#listnav a[data-k]');a.forEach(function(x){var on=x.dataset.k===k;x.classList.toggle('active',on);if(on)x.setAttribute('aria-current','page');else x.removeAttribute('aria-current')});var el=document.querySelector('#listnav a.active');if(el&&el.scrollIntoView)try{el.scrollIntoView({inline:'center',block:'nearest'})}catch(e){}}
 mark();window.addEventListener('hashchange',mark);
@@ -365,7 +367,7 @@ function render() {
 render();
 
 // ===== Auto-sync statuses & links from collection.json / wishlist.json =====
-function lbNorm(s){return (s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');}
+function lbNorm(s){return (s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]/g,'').replace(/colour/g,'color').replace(/neighbour/g,'neighbor');}
 const LB_ALIAS={dreams:'akirakurosawasdreams',jointsecurityarea:'jsajointsecurityarea'};
 function lbCounts(){
   const nOwned=FILMS.filter(f=>f.s==='owned').length,nWish=FILMS.filter(f=>f.s==='wishlist').length,nMiss=FILMS.filter(f=>f.s==='missing').length;

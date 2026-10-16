@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="1001 Movies">
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0d0d0d"><link rel="apple-touch-icon" href="icon-192.png">
+<title>1001 Movies — Collection Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0e0e;
+    --surface: #161616;
+    --surface2: #1e1e1e;
+    --border: #2a2a2a;
+    --owned: #c8f0a0;
+    --owned-dim: rgba(200,240,160,0.12);
+    --owned-mid: rgba(200,240,160,0.35);
+    --wishlist: #f0d080;
+    --wishlist-dim: rgba(240,208,128,0.12);
+    --wishlist-mid: rgba(240,208,128,0.35);
+    --missing: #e05555;
+    --missing-dim: rgba(224,85,85,0.1);
+    --missing-mid: rgba(224,85,85,0.3);
+    --text: #e8e4dc;
+    --text-dim: #888;
+    --text-faint: #444;
+    --accent: #c8f0a0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: var(--bg); color: var(--text); font-family: 'DM Mono', monospace; }
+  body { min-height: 100vh; padding-bottom: env(safe-area-inset-bottom, 0px); }
+
+  /* HEADER */
+  .header {
+    padding: calc(3rem + env(safe-area-inset-top, 0px)) 2rem 2rem;
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(14,14,14,0.96);
+    backdrop-filter: blur(12px);
+  }
+  .header-top {
+    display: flex; align-items: baseline; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;
+  }
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    line-height: 1; letter-spacing: -0.02em;
+    color: var(--text);
+  }
+  h1 em { color: var(--accent); font-style: italic; }
+  .last-updated { font-size: 11px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* STATS BAR */
+  .stats {
+    display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem;
+  }
+  .stat { display: flex; flex-direction: column; gap: 2px; }
+  .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem; line-height: 1;
+  }
+  .stat-num.owned { color: var(--owned); }
+  .stat-num.wishlist { color: var(--wishlist); }
+  .stat-num.missing { color: var(--missing); }
+  .stat-label { font-size: 11px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* PROGRESS BAR */
+  .progress-wrap { margin-bottom: 1.5rem; }
+  .progress-bar {
+    height: 4px; background: var(--border); border-radius: 2px; overflow: hidden;
+    display: flex;
+  }
+  .progress-seg { height: 100%; transition: width 0.5s ease; }
+  .progress-seg.owned { background: var(--owned); }
+  .progress-seg.wishlist { background: var(--wishlist); }
+  .progress-seg.missing { background: var(--border); }
+
+  /* CONTROLS */
+  .controls {
+    display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;
+  }
+  .filter-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 2px;
+    border: 1px solid var(--border);
+    background: transparent; color: var(--text-dim);
+    cursor: pointer; transition: all 0.15s;
+  }
+  .filter-btn:hover { border-color: var(--text-dim); color: var(--text); }
+  .filter-btn.active-all { border-color: var(--text); color: var(--text); background: var(--surface2); }
+  .filter-btn.active-owned { border-color: var(--owned); color: var(--owned); background: var(--owned-dim); }
+  .filter-btn.active-wishlist { border-color: var(--wishlist); color: var(--wishlist); background: var(--wishlist-dim); }
+  .filter-btn.active-missing { border-color: var(--missing); color: var(--missing); background: var(--missing-dim); }
+
+  .search-wrap { margin-left: auto; position: relative; }
+  .search-input {
+    font-family: 'DM Mono', monospace; font-size: 12px;
+    background: var(--surface2); border: 1px solid var(--border);
+    color: var(--text); padding: 5px 12px 5px 30px;
+    border-radius: 2px; width: 200px; outline: none;
+    transition: border-color 0.15s;
+  }
+  .search-input:focus { border-color: var(--text-dim); }
+  .search-icon { position: absolute; left: 9px; top: 50%; transform: translateY(-50%); color: var(--text-dim); font-size: 12px; pointer-events: none; }
+
+  /* SORT */
+  .sort-wrap { display: flex; gap: 4px; margin-left: 8px; }
+  .sort-btn {
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 5px 10px; border-radius: 2px;
+    border: 1px solid var(--border);
+    background: transparent; color: var(--text-faint);
+    cursor: pointer; transition: all 0.15s;
+  }
+  .sort-btn.active { border-color: var(--text-dim); color: var(--text-dim); }
+
+  /* LIST */
+  .film-list {
+    padding: 0 2rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
+    gap: 1px;
+  }
+
+  .film-item {
+    display: flex; align-items: center; gap: 1rem;
+    padding: 0.6rem 1rem 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.1s;
+    cursor: default;
+  }
+  .film-item:hover { background: var(--surface); }
+  .film-item.status-owned { border-left: 2px solid var(--owned); padding-left: calc(1rem - 2px); }
+  .film-item.status-wishlist { border-left: 2px solid var(--wishlist); padding-left: calc(1rem - 2px); }
+  .film-item.status-missing { border-left: 2px solid var(--text-faint); padding-left: calc(1rem - 2px); }
+
+  .rank {
+    font-size: 11px; color: var(--text-faint);
+    width: 32px; text-align: right; flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+  .film-info { flex: 1; min-width: 0; }
+  .film-title {
+    font-size: 13px; color: var(--text);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    line-height: 1.3;
+  }
+  .film-title.faded { color: var(--text-dim); }
+  .film-year { font-size: 10px; color: var(--text-faint); margin-top: 1px; }
+  .status-pill {
+    font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 2px 7px; border-radius: 1px; flex-shrink: 0;
+    font-weight: 500;
+  }
+  .pill-owned { background: var(--owned-dim); color: var(--owned); border: 1px solid var(--owned-mid); }
+  .pill-wishlist { background: var(--wishlist-dim); color: var(--wishlist); border: 1px solid var(--wishlist-mid); }
+  .pill-missing { background: transparent; color: var(--text-faint); border: 1px solid var(--border); }
+
+  /* EMPTY STATE */
+  .empty { padding: 4rem 2rem; text-align: center; color: var(--text-dim); font-size: 13px; }
+
+  /* COUNT DISPLAY */
+  .count-display {
+    font-size: 11px; color: var(--text-dim); padding: 1rem 2rem 0.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 600px) {
+    .header { padding: calc(1.5rem + env(safe-area-inset-top, 0px)) 1rem 1rem; }
+    .film-list { padding: 0 0 4rem; }
+    .count-display { padding: 1rem 1rem 0.5rem; }
+    .stats { gap: 1.2rem; }
+    .stat-num { font-size: 1.6rem; }
+  }
+.top-row{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:1rem;flex-wrap:wrap}
+.back{font-size:11px;color:var(--text-dim);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;display:inline-block;padding:10px 0}
+.back:hover{color:var(--text)}
+.back:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+<style>.imdb-chip{font-size:9px;font-weight:700;letter-spacing:.05em;padding:2px 6px;border-radius:4px;border:1px solid rgba(255,255,255,.2);color:#aaa;margin-right:8px;cursor:pointer;white-space:nowrap}.imdb-chip:hover{color:#f5c518;border-color:#f5c518}</style>
+</style>
+</head>
+<body>
+<style id="listnav-css">
+#listnav{position:sticky;top:0;z-index:1000;background:rgba(14,14,14,.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#2a2a2a);padding-top:env(safe-area-inset-top,0px);display:flex;align-items:center}
+#listnav .ln-scroll{display:flex;gap:6px;overflow-x:auto;padding:8px 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch;flex:1}
+#listnav .ln-scroll::-webkit-scrollbar{display:none}
+#listnav a{flex:0 0 auto;text-decoration:none;font-family:'DM Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.04em;white-space:nowrap;color:var(--text-dim,#888);border:1px solid var(--border,#2a2a2a);border-radius:999px;padding:6px 12px;transition:color .15s,border-color .15s,background .15s}
+#listnav a:hover{color:var(--text,#e8e4dc)}
+#listnav a.ln-home{color:var(--text,#e8e4dc);border-color:transparent;padding-left:8px}
+#listnav a.active{color:#111;background:var(--accent,#c8f0a0);border-color:var(--accent,#c8f0a0);font-weight:500}
+</style>
+<nav id="listnav" aria-label="Lists"><div class="ln-scroll">
+<a class="ln-home" href="index.html">&larr; Archive</a>
+<a data-k="lb500" href="lb500.html">Letterboxd 500</a>
+<a data-k="imdb250" href="imdb250.html">IMDb 250</a>
+<a data-k="empire500" href="empire500.html">Empire 500</a>
+<a data-k="tspdt1000" href="tspdt1000.html">TSPDT 1000</a>
+<a data-k="critics" href="sightsound.html#critics">S&amp;S Critics</a>
+<a data-k="directors" href="sightsound.html#directors">S&amp;S Directors</a>
+<a data-k="bbc21" href="bbc21.html">BBC 21st C.</a>
+<a data-k="big25" href="big25.html">Big Picture 25</a>
+<a data-k="peary" href="peary.html">Peary Cult</a>
+<a data-k="m1001" href="1001movies.html">1001 Movies</a>
+<a data-k="lacinetek" href="lacinetek-top.html">LaCinetek</a>
+<a data-k="wright1000" href="edgar-wright-1000.html">Edgar Wright</a>
+</div></nav>
+<script>(function(){
+var P={'lb500.html':'lb500','imdb250.html':'imdb250','empire500.html':'empire500','tspdt1000.html':'tspdt1000','bbc21.html':'bbc21','big25.html':'big25','peary.html':'peary','1001movies.html':'m1001','lacinetek-top.html':'lacinetek','edgar-wright-1000.html':'wright1000'};
+function cur(){var f=location.pathname.split('/').pop()||'';if(f==='sightsound.html'){var h=location.hash.slice(1);if(h!=='critics'&&h!=='directors'){try{h=localStorage.getItem('ssList')}catch(e){}}return h==='directors'?'directors':'critics'}return P[f]}
+function mark(){var k=cur(),a=document.querySelectorAll('#listnav a[data-k]');a.forEach(function(x){var on=x.dataset.k===k;x.classList.toggle('active',on);if(on)x.setAttribute('aria-current','page');else x.removeAttribute('aria-current')});var el=document.querySelector('#listnav a.active');if(el&&el.scrollIntoView)try{el.scrollIntoView({inline:'center',block:'nearest'})}catch(e){}}
+mark();window.addEventListener('hashchange',mark);
+document.querySelectorAll('#listnav a[href^="sightsound.html#"]').forEach(function(x){x.addEventListener('click',function(){var k=x.dataset.k;try{localStorage.setItem('ssList',k)}catch(e){}setTimeout(mark,0)})});
+})();</script>
+
+
+<div class="header">
+  <div class="top-row"><a class="back" href="index.html">← The Archive</a></div>
+  <div class="header-top">
+    <h1>1001 Movies<br><em>vs your collection</em></h1>
+    <span class="last-updated">1001 Movies You Must See Before You Die</span>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-num owned" id="count-owned">0</span>
+      <span class="stat-label">Owned</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num wishlist" id="count-wishlist">0</span>
+      <span class="stat-label">Wishlist</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num missing" id="count-missing">0</span>
+      <span class="stat-label">Missing</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" id="count-pct" style="color:var(--text)">0%</span>
+      <span class="stat-label">Coverage</span>
+    </div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-bar">
+      <div class="progress-seg owned" id="prog-owned" style="width:0%"></div>
+      <div class="progress-seg wishlist" id="prog-wishlist" style="width:0%"></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="filter-btn active-all" data-filter="all" onclick="setFilter('all')">All 1265</button>
+    <button class="filter-btn" data-filter="owned" onclick="setFilter('owned')">Owned</button>
+    <button class="filter-btn" data-filter="wishlist" onclick="setFilter('wishlist')">Wishlist</button>
+    <button class="filter-btn" data-filter="missing" onclick="setFilter('missing')">Missing</button>
+
+    <div class="sort-wrap">
+      <button class="sort-btn active" id="sort-rank" onclick="setSort('rank')">Order</button>
+      <button class="sort-btn" id="sort-year" onclick="setSort('year')">Year</button>
+      <button class="sort-btn" id="sort-title" onclick="setSort('title')">Title</button>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input class="search-input" type="text" placeholder="Search..." id="search-input" oninput="onSearch()" />
+    </div>
+  </div>
+</div>
+
+<div class="count-display" id="count-display"></div>
+<div class="film-list" id="film-list"></div>
+
+<script>
+window.NO_GAPS=true;
+const FILMS = [
+  {r:1,t:"A Trip to the Moon",y:1902,s:"missing",a:["Le Voyage Dans La Lune"]},
+  {r:2,t:"The Great Train Robbery",y:1903,s:"missing"},
+  {r:3,t:"The Birth of a Nation",y:1915,s:"missing"},
+  {r:4,t:"Les Vampires",y:1915,s:"missing"},
+  {r:5,t:"Intolerance",y:1916,s:"missing"},
+  {r:6,t:"The Cabinet of Dr. Caligari",y:1920,s:"missing",a:["Das Kabinett des Doktor Caligari"]},
+  {r:7,t:"Broken Blossoms",y:1919,s:"missing"},
+  {r:8,t:"Within Our Gates",y:1920,s:"missing"},
+  {r:9,t:"Way Down East",y:1920,s:"missing"},
+  {r:10,t:"Orphans of the Storm",y:1921,s:"missing"},
+  {r:11,t:"The Phantom Carriage",y:1921,s:"missing",a:["Körkarlen"]},
+  {r:12,t:"The Smiling Madame Beudet",y:1922,s:"missing",a:["La Souriante Madame Beudet"]},
+  {r:13,t:"Dr. Mabuse, the Gambler",y:1922,s:"missing",a:["Dr. Mabuse, der Spieler"]},
+  {r:14,t:"Nanook of the North",y:1922,s:"missing"},
+  {r:15,t:"Nosferatu: A Symphony of Horror",y:1922,s:"missing",a:["Nosferatu, A Symphony of Terror", "Nosferatu, eine Symphonie des Grauens", "Nosferatu"]},
+  {r:16,t:"Häxan",y:1923,s:"missing"},
+  {r:17,t:"Foolish Wives",y:1922,s:"missing"},
+  {r:18,t:"Our Hospitality",y:1923,s:"missing"},
+  {r:19,t:"The Wheel",y:1923,s:"missing",a:["La Roue"]},
+  {r:20,t:"The Last Laugh",y:1924,s:"missing",a:["Der Letzte Mann"]},
+  {r:21,t:"Strike",y:1925,s:"missing",a:["Stachka"]},
+  {r:22,t:"Sherlock Jr.",y:1924,s:"missing",a:["Sherlock, Jr."]},
+  {r:23,t:"The Great White Silence",y:1924,s:"missing"},
+  {r:24,t:"Greed",y:1924,s:"missing"},
+  {r:25,t:"The Thief of Bagdad",y:1924,s:"missing"},
+  {r:26,t:"The Eagle",y:1925,s:"missing"},
+  {r:27,t:"The Phantom of the Opera",y:1925,s:"missing"},
+  {r:28,t:"Battleship Potemkin",y:1925,s:"missing",a:["The Battleship Potemkin", "Bronenosets Potyomkin"]},
+  {r:29,t:"The Gold Rush",y:1925,s:"missing"},
+  {r:30,t:"The Big Parade",y:1925,s:"missing"},
+  {r:31,t:"Seven Chances",y:1925,s:"missing"},
+  {r:32,t:"The Adventures of Prince Achmed",y:1926,s:"missing",a:["Die Abenteuer des Prinzen Achmed"]},
+  {r:33,t:"Metropolis",y:1927,s:"missing"},
+  {r:34,t:"Sunrise",y:1927,s:"missing"},
+  {r:35,t:"The General",y:1926,s:"missing"},
+  {r:36,t:"The Unknown",y:1927,s:"missing"},
+  {r:37,t:"October",y:1927,s:"missing",a:["Oktyabr"]},
+  {r:38,t:"The Jazz Singer",y:1927,s:"missing"},
+  {r:39,t:"Napoleon",y:1927,s:"missing",a:["Napoléon"]},
+  {r:40,t:"The Kid Brother",y:1927,s:"missing"},
+  {r:41,t:"The Crowd",y:1928,s:"missing"},
+  {r:42,t:"The Docks of New York",y:1928,s:"missing"},
+  {r:43,t:"The Passion of Joan of Arc",y:1928,s:"missing",a:["La Passion de Jeanne d'Arc"]},
+  {r:44,t:"Un Chien Andalou",y:1929,s:"missing",a:["An Andalusian Dog"]},
+  {r:45,t:"Steamboat Bill, Jr.",y:1928,s:"missing"},
+  {r:46,t:"Storm Over Asia",y:1928,s:"missing",a:["Potomok Chingis-khana"]},
+  {r:47,t:"A Throw of Dice",y:1929,s:"missing",a:["Prapancha Pash"]},
+  {r:48,t:"The Man with the Movie Camera",y:1929,s:"missing",a:["Chelovek S Kinoapparatom"]},
+  {r:49,t:"Pandora's Box",y:1929,s:"missing",a:["Die Büchse der Pandora"]},
+  {r:50,t:"Blackmail",y:1929,s:"missing"},
+  {r:51,t:"Little Caesar",y:1931,s:"missing"},
+  {r:52,t:"The Blue Angel",y:1930,s:"missing",a:["Der Blaue Engel"]},
+  {r:53,t:"All Quiet on the Western Front",y:1930,s:"missing"},
+  {r:54,t:"L'Âge d'or",y:1930,s:"missing",a:["The Age of Gold"]},
+  {r:55,t:"Earth",y:1930,s:"missing",a:["Zemlya"]},
+  {r:56,t:"À Nous la Liberté",y:1931,s:"missing",a:["Freedom for Us"]},
+  {r:57,t:"Limite",y:1931,s:"missing"},
+  {r:58,t:"Tabu",y:1931,s:"missing"},
+  {r:59,t:"City Lights",y:1931,s:"missing"},
+  {r:60,t:"Dracula",y:1931,s:"missing"},
+  {r:61,t:"Frankenstein",y:1931,s:"missing"},
+  {r:62,t:"The Public Enemy",y:1931,s:"missing"},
+  {r:63,t:"M",y:1931,s:"missing"},
+  {r:64,t:"The Million",y:1931,s:"missing",a:["Le Million"]},
+  {r:65,t:"La Chienne",y:1931,s:"missing",a:["The Bitch"]},
+  {r:66,t:"Vampyr",y:1932,s:"missing",a:["The Vampire"]},
+  {r:67,t:"I Am a Fugitive from a Chain Gang",y:1932,s:"missing",a:["I Am a Fugitive From a Chain Gang"]},
+  {r:68,t:"Boudu Saved from Drowning",y:1932,s:"missing",a:["Boudu Sauvé des Eaux"]},
+  {r:69,t:"Love Me Tonight",y:1932,s:"missing"},
+  {r:70,t:"Shanghai Express",y:1932,s:"missing"},
+  {r:71,t:"Trouble in Paradise",y:1932,s:"missing"},
+  {r:72,t:"Scarface: The Shame of a Nation",y:1932,s:"missing",a:["Scarface"]},
+  {r:73,t:"Freaks",y:1932,s:"missing"},
+  {r:74,t:"Me and My Gal",y:1932,s:"missing"},
+  {r:75,t:"42nd Street",y:1933,s:"missing"},
+  {r:76,t:"Footlight Parade",y:1933,s:"missing"},
+  {r:77,t:"The Bitter Tea of General Yen",y:1933,s:"missing"},
+  {r:78,t:"She Done Him Wrong",y:1933,s:"missing"},
+  {r:79,t:"Duck Soup",y:1933,s:"missing"},
+  {r:80,t:"Zero for Conduct",y:1933,s:"missing",a:["Zéro de Conduite"]},
+  {r:81,t:"Gold Diggers of 1933",y:1933,s:"missing"},
+  {r:82,t:"King Kong",y:1933,s:"missing"},
+  {r:83,t:"Land Without Bread",y:1933,s:"missing",a:["Las Hurdes"]},
+  {r:84,t:"Sons of the Desert",y:1933,s:"missing"},
+  {r:85,t:"Queen Christina",y:1933,s:"missing"},
+  {r:86,t:"Triumph of the Will",y:1935,s:"missing",a:["Triumph des Willens"]},
+  {r:87,t:"It's a Gift",y:1934,s:"missing"},
+  {r:88,t:"The Goddess",y:1934,s:"missing",a:["Shen nu"]},
+  {r:89,t:"It Happened One Night",y:1934,s:"missing"},
+  {r:90,t:"L'Atalante",y:1934,s:"missing"},
+  {r:91,t:"The Black Cat",y:1934,s:"missing"},
+  {r:92,t:"The Thin Man",y:1934,s:"missing"},
+  {r:93,t:"Judge Priest",y:1934,s:"missing"},
+  {r:94,t:"Mutiny on the Bounty",y:1935,s:"missing"},
+  {r:95,t:"The 39 Steps",y:1935,s:"missing"},
+  {r:96,t:"A Night at the Opera",y:1935,s:"missing"},
+  {r:97,t:"Bride of Frankenstein",y:1935,s:"missing"},
+  {r:98,t:"Captain Blood",y:1935,s:"missing"},
+  {r:99,t:"Top Hat",y:1935,s:"missing"},
+  {r:100,t:"Peter Ibbetson",y:1935,s:"missing"},
+  {r:101,t:"Modern Times",y:1936,s:"missing"},
+  {r:102,t:"Swing Time",y:1936,s:"missing"},
+  {r:103,t:"Mr. Deeds Goes to Town",y:1936,s:"missing"},
+  {r:104,t:"My Man Godfrey",y:1936,s:"missing"},
+  {r:105,t:"The Story of a Cheat",y:1936,s:"missing",a:["Le Roman d'un Tricheur"]},
+  {r:106,t:"Camille",y:1936,s:"missing"},
+  {r:107,t:"Things to Come",y:1936,s:"missing"},
+  {r:108,t:"Dodsworth",y:1936,s:"missing"},
+  {r:109,t:"A Day in the Country",y:1936,s:"missing",a:["Une Partie de Campagne"]},
+  {r:110,t:"Sabotage",y:1936,s:"missing"},
+  {r:111,t:"Pépé le Moko",y:1937,s:"missing"},
+  {r:112,t:"Make Way for Tomorrow",y:1937,s:"missing"},
+  {r:113,t:"Grand Illusion",y:1937,s:"missing",a:["La Grande Illusion"]},
+  {r:114,t:"Stella Dallas",y:1937,s:"missing"},
+  {r:115,t:"Midnight Song",y:1937,s:"missing",a:["Ye Ban Ge Sheng"]},
+  {r:116,t:"Snow White and the Seven Dwarfs",y:1937,s:"missing"},
+  {r:117,t:"Captains Courageous",y:1937,s:"missing"},
+  {r:118,t:"The Awful Truth",y:1937,s:"missing"},
+  {r:119,t:"The Life of Emile Zola",y:1937,s:"missing"},
+  {r:120,t:"Jezebel",y:1938,s:"missing"},
+  {r:121,t:"The Adventures of Robin Hood",y:1938,s:"missing"},
+  {r:122,t:"Angels with Dirty Faces",y:1938,s:"missing"},
+  {r:123,t:"The Baker's Wife",y:1938,s:"missing",a:["La Femme du Boulanger"]},
+  {r:124,t:"Bringing Up Baby",y:1938,s:"missing"},
+  {r:125,t:"Olympia Part One: Festival of the Nations",y:1938,s:"missing",a:["Olympia Part 1: Festival of the Nations", "Olympia 1. Teil: Fest der Völker"]},
+  {r:126,t:"Olympia Part Two: Festival of Beauty",y:1938,s:"missing",a:["Olympia Part 2: Festival of Beauty", "Olympia 2. Teil: Fest der Schönheit"]},
+  {r:127,t:"The Lady Vanishes",y:1938,s:"missing"},
+  {r:128,t:"Wuthering Heights",y:1939,s:"missing"},
+  {r:129,t:"Mr. Smith Goes to Washington",y:1939,s:"missing"},
+  {r:130,t:"Stagecoach",y:1939,s:"missing"},
+  {r:131,t:"Only Angels Have Wings",y:1939,s:"missing"},
+  {r:132,t:"Destry Rides Again",y:1939,s:"missing"},
+  {r:133,t:"Gone with the Wind",y:1939,s:"missing",a:["Gone With the Wind"]},
+  {r:134,t:"Daybreak",y:1939,s:"missing",a:["Le jour se lève"]},
+  {r:135,t:"Gunga Din",y:1939,s:"missing"},
+  {r:136,t:"Ninotchka",y:1939,s:"missing"},
+  {r:137,t:"The Wizard of Oz",y:1939,s:"missing"},
+  {r:138,t:"The Rules of the Game",y:1939,s:"missing",a:["La Règle du Jeu"]},
+  {r:139,t:"The Story of the Last Chrysanthemum",y:1939,s:"missing",a:["The Story of the Late Chrysanthemums", "Zangiku Monogatari", "The Story of the Last Chrysanthemums"]},
+  {r:140,t:"Babes in Arms",y:1939,s:"missing"},
+  {r:141,t:"His Girl Friday",y:1940,s:"missing"},
+  {r:142,t:"Fantasia",y:1940,s:"missing"},
+  {r:143,t:"Rebecca",y:1940,s:"missing"},
+  {r:144,t:"The Philadelphia Story",y:1940,s:"missing"},
+  {r:145,t:"The Grapes of Wrath",y:1940,s:"missing"},
+  {r:146,t:"The Mortal Storm",y:1940,s:"missing"},
+  {r:147,t:"The Bank Dick",y:1940,s:"missing"},
+  {r:148,t:"Pinocchio",y:1940,s:"missing"},
+  {r:149,t:"Dance, Girl, Dance",y:1940,s:"missing"},
+  {r:150,t:"Citizen Kane",y:1941,s:"missing"},
+  {r:151,t:"Sergeant York",y:1941,s:"missing"},
+  {r:152,t:"The Lady Eve",y:1941,s:"missing"},
+  {r:153,t:"The Wolf Man",y:1941,s:"missing"},
+  {r:154,t:"High Sierra",y:1941,s:"missing"},
+  {r:155,t:"How Green Was My Valley",y:1941,s:"missing"},
+  {r:156,t:"Sullivan's Travels",y:1941,s:"missing"},
+  {r:157,t:"The Maltese Falcon",y:1941,s:"missing"},
+  {r:158,t:"Dumbo",y:1941,s:"missing"},
+  {r:159,t:"The Palm Beach Story",y:1942,s:"missing"},
+  {r:160,t:"Now, Voyager",y:1942,s:"missing"},
+  {r:161,t:"To Be or Not to Be",y:1942,s:"missing",a:["To Be Or Not To Be"]},
+  {r:162,t:"The Magnificent Ambersons",y:1942,s:"missing"},
+  {r:163,t:"Yankee Doodle Dandy",y:1942,s:"missing"},
+  {r:164,t:"Mrs. Miniver",y:1942,s:"missing"},
+  {r:165,t:"Casablanca",y:1942,s:"missing"},
+  {r:166,t:"Cat People",y:1942,s:"missing"},
+  {r:167,t:"Fires Were Started",y:1943,s:"missing"},
+  {r:168,t:"The Ox-Bow Incident",y:1943,s:"missing"},
+  {r:169,t:"The Life and Death of Colonel Blimp",y:1943,s:"missing"},
+  {r:170,t:"Meshes of the Afternoon",y:1943,s:"missing"},
+  {r:171,t:"The Seventh Victim",y:1943,s:"missing"},
+  {r:172,t:"The Man in Grey",y:1943,s:"missing"},
+  {r:173,t:"Shadow of a Doubt",y:1943,s:"missing"},
+  {r:174,t:"Ossessione",y:1943,s:"missing",a:["Obsession"]},
+  {r:175,t:"I Walked with a Zombie",y:1943,s:"missing"},
+  {r:176,t:"Laura",y:1944,s:"missing"},
+  {r:177,t:"Meet Me in St. Louis",y:1944,s:"missing"},
+  {r:178,t:"To Have and Have Not",y:1944,s:"missing"},
+  {r:179,t:"Gaslight",y:1944,s:"missing"},
+  {r:180,t:"Henry V",y:1944,s:"missing"},
+  {r:181,t:"Double Indemnity",y:1944,s:"missing"},
+  {r:182,t:"Murder, My Sweet",y:1944,s:"missing",a:["Farewell My Lovely"]},
+  {r:183,t:"Ivan the Terrible, Part I",y:1944,s:"missing",a:["Ivan Groznyj"]},
+  {r:184,t:"Ivan the Terrible, Part II: The Boyars' Plot",y:1958,s:"missing",a:["Ivan Groznyj: Skaz Vtoroy – Boyarskiy Zagovor"]},
+  {r:185,t:"Mildred Pierce",y:1945,s:"missing"},
+  {r:186,t:"Detour",y:1945,s:"missing"},
+  {r:187,t:"I Know Where I'm Going!",y:1945,s:"missing"},
+  {r:188,t:"The Lost Weekend",y:1945,s:"missing"},
+  {r:189,t:"Les Enfants du paradis",y:1945,s:"missing",a:["The Children of Paradise", "Les Enfants du Paradis"]},
+  {r:190,t:"The Battle of San Pietro",y:1945,s:"missing"},
+  {r:191,t:"Brief Encounter",y:1945,s:"missing"},
+  {r:192,t:"Rome, Open City",y:1945,s:"missing",a:["Roma, Città Aperta"]},
+  {r:193,t:"Spellbound",y:1945,s:"missing"},
+  {r:194,t:"The Best Years of Our Lives",y:1946,s:"missing"},
+  {r:195,t:"Paisan",y:1946,s:"missing",a:["Paisà"]},
+  {r:196,t:"The Postman Always Rings Twice",y:1946,s:"missing"},
+  {r:197,t:"Beauty and the Beast",y:1946,s:"missing",a:["La Belle et la Bête"]},
+  {r:198,t:"The Killers",y:1946,s:"missing"},
+  {r:199,t:"It's a Wonderful Life",y:1946,s:"missing"},
+  {r:200,t:"The Big Sleep",y:1946,s:"missing"},
+  {r:201,t:"Gilda",y:1946,s:"missing"},
+  {r:202,t:"A Matter of Life and Death",y:1946,s:"missing"},
+  {r:203,t:"Great Expectations",y:1946,s:"missing"},
+  {r:204,t:"My Darling Clementine",y:1946,s:"missing"},
+  {r:205,t:"Notorious",y:1946,s:"missing"},
+  {r:206,t:"Black Narcissus",y:1947,s:"missing"},
+  {r:207,t:"The Stranger",y:1946,s:"missing"},
+  {r:208,t:"Out of the Past",y:1947,s:"missing"},
+  {r:209,t:"Monsieur Verdoux",y:1947,s:"missing"},
+  {r:210,t:"Odd Man Out",y:1947,s:"missing"},
+  {r:211,t:"The Ghost and Mrs. Muir",y:1947,s:"missing"},
+  {r:212,t:"The Bicycle Thief",y:1948,s:"missing",a:["Ladri di Biciclette", "Bicycle Thieves"]},
+  {r:213,t:"Letter from an Unknown Woman",y:1948,s:"missing",a:["Letter From an Unknown Woman"]},
+  {r:214,t:"Secret Beyond the Door",y:1948,s:"missing"},
+  {r:215,t:"Force of Evil",y:1948,s:"missing"},
+  {r:216,t:"Spring in a Small Town",y:1948,s:"missing",a:["Xiao Cheng Zhi Chun"]},
+  {r:217,t:"Red River",y:1948,s:"missing"},
+  {r:218,t:"The Paleface",y:1948,s:"missing"},
+  {r:219,t:"The Snake Pit",y:1948,s:"missing"},
+  {r:220,t:"The Lady from Shanghai",y:1947,s:"missing",a:["The Lady From Shanghai"]},
+  {r:221,t:"Rope",y:1948,s:"missing"},
+  {r:222,t:"The Red Shoes",y:1948,s:"missing"},
+  {r:223,t:"The Treasure of the Sierra Madre",y:1948,s:"missing"},
+  {r:224,t:"Louisiana Story",y:1948,s:"missing"},
+  {r:225,t:"Gun Crazy",y:1950,s:"missing"},
+  {r:226,t:"The Reckless Moment",y:1949,s:"missing"},
+  {r:227,t:"White Heat",y:1949,s:"missing"},
+  {r:228,t:"Adam's Rib",y:1949,s:"missing"},
+  {r:229,t:"The Heiress",y:1949,s:"missing"},
+  {r:230,t:"The Third Man",y:1949,s:"missing"},
+  {r:231,t:"Kind Hearts and Coronets",y:1949,s:"missing"},
+  {r:232,t:"Whiskey Galore!",y:1949,s:"missing"},
+  {r:233,t:"On the Town",y:1949,s:"missing"},
+  {r:234,t:"Orpheus",y:1950,s:"missing",a:["Orphée"]},
+  {r:235,t:"The Asphalt Jungle",y:1950,s:"missing"},
+  {r:236,t:"Rashomon",y:1950,s:"missing"},
+  {r:237,t:"All About Eve",y:1950,s:"missing"},
+  {r:238,t:"Winchester '73",y:1950,s:"missing"},
+  {r:239,t:"Rio Grande",y:1950,s:"missing"},
+  {r:240,t:"Sunset Blvd.",y:1950,s:"missing"},
+  {r:241,t:"The Young and the Damned",y:1950,s:"missing",a:["Los Olvidados"]},
+  {r:242,t:"In a Lonely Place",y:1950,s:"missing"},
+  {r:243,t:"Ace in the Hole",y:1951,s:"missing",a:["The Big Carnival"]},
+  {r:244,t:"Strangers on a Train",y:1951,s:"missing"},
+  {r:245,t:"A Streetcar Named Desire",y:1951,s:"missing"},
+  {r:246,t:"An American in Paris",y:1951,s:"missing"},
+  {r:247,t:"Pandora and the Flying Dutchman",y:1951,s:"missing"},
+  {r:248,t:"The African Queen",y:1951,s:"missing"},
+  {r:249,t:"A Place in the Sun",y:1951,s:"missing"},
+  {r:250,t:"The Lavender Hill Mob",y:1951,s:"missing"},
+  {r:251,t:"Diary of a Country Priest",y:1951,s:"missing",a:["Journal d'un Curé de Campagne"]},
+  {r:252,t:"The Day the Earth Stood Still",y:1951,s:"missing"},
+  {r:253,t:"The Quiet Man",y:1952,s:"missing"},
+  {r:254,t:"Forbidden Games",y:1952,s:"missing",a:["Jeux Interdits"]},
+  {r:255,t:"Europa '51",y:1952,s:"missing"},
+  {r:256,t:"Singin' in the Rain",y:1952,s:"missing",a:["Singin' In the Rain"]},
+  {r:257,t:"The Bad and the Beautiful",y:1952,s:"missing"},
+  {r:258,t:"Ikiru",y:1952,s:"missing",a:["To Live"]},
+  {r:259,t:"Umberto D.",y:1952,s:"missing",a:["Umberto D"]},
+  {r:260,t:"High Noon",y:1952,s:"missing"},
+  {r:261,t:"The Golden Coach",y:1952,s:"missing",a:["Le Carrosse d'or"]},
+  {r:262,t:"Angel Face",y:1952,s:"missing"},
+  {r:263,t:"The Big Sky",y:1952,s:"missing"},
+  {r:264,t:"Summer with Monika",y:1953,s:"missing",a:["Sommaren med Monika"]},
+  {r:265,t:"Pickup on South Street",y:1953,s:"missing"},
+  {r:266,t:"The Band Wagon",y:1953,s:"missing"},
+  {r:267,t:"Mr. Hulot's Holiday",y:1953,s:"missing",a:["Les Vacances de M. Hulot", "Monsieur Hulot's Holiday"]},
+  {r:268,t:"The Earrings of Madame de...",y:1953,s:"missing",a:["The Earrings of Madame De...", "Madame De..."]},
+  {r:269,t:"The Wages of Fear",y:1953,s:"missing",a:["Wages of Fear", "Le Salaire de la Peur"]},
+  {r:270,t:"The Bigamist",y:1953,s:"missing"},
+  {r:271,t:"The Naked Spur",y:1953,s:"missing"},
+  {r:272,t:"Tokyo Story",y:1953,s:"missing"},
+  {r:273,t:"From Here to Eternity",y:1953,s:"missing"},
+  {r:274,t:"Ugetsu Monogatari",y:1953,s:"missing",a:["Tales of Ugetsu"]},
+  {r:275,t:"Voyage in Italy",y:1953,s:"missing",a:["Viaggio in Italia", "Journey to Italy"]},
+  {r:276,t:"Shane",y:1953,s:"missing"},
+  {r:277,t:"Gentlemen Prefer Blondes",y:1953,s:"missing"},
+  {r:278,t:"Roman Holiday",y:1953,s:"missing"},
+  {r:279,t:"The Big Heat",y:1953,s:"missing"},
+  {r:280,t:"Beat the Devil",y:1953,s:"missing"},
+  {r:281,t:"On the Waterfront",y:1954,s:"missing"},
+  {r:282,t:"La Strada",y:1954,s:"missing",a:["The Road"]},
+  {r:283,t:"Les Diaboliques",y:1954,s:"missing"},
+  {r:284,t:"A Star Is Born",y:1954,s:"missing",a:["A Star is Born"]},
+  {r:285,t:"Rear Window",y:1954,s:"missing"},
+  {r:286,t:"Senso",y:1954,s:"missing",a:["The Wanton Countess"]},
+  {r:287,t:"Silver Lode",y:1954,s:"missing"},
+  {r:288,t:"The Barefoot Contessa",y:1954,s:"missing"},
+  {r:289,t:"Seven Samurai",y:1954,s:"missing",a:["Shichinin no Samurai"]},
+  {r:290,t:"Sansho the Bailiff",y:1954,s:"missing",a:["Sanshô Dayû"]},
+  {r:291,t:"Carmen Jones",y:1954,s:"missing"},
+  {r:292,t:"Johnny Guitar",y:1954,s:"missing"},
+  {r:293,t:"Salt of the Earth",y:1954,s:"missing"},
+  {r:294,t:"Seven Brides for Seven Brothers",y:1954,s:"missing"},
+  {r:295,t:"Animal Farm",y:1954,s:"missing"},
+  {r:296,t:"Lola Montès",y:1955,s:"missing",a:["The Sins of Lola Montes"]},
+  {r:297,t:"Pather Panchali",y:1955,s:"missing"},
+  {r:298,t:"Ordet",y:1955,s:"missing"},
+  {r:299,t:"Marty",y:1955,s:"missing"},
+  {r:300,t:"Artists and Models",y:1955,s:"missing"},
+  {r:301,t:"Rebel Without a Cause",y:1955,s:"missing"},
+  {r:302,t:"The Mad Masters",y:1955,s:"missing",a:["Les Maîtres Fous"]},
+  {r:303,t:"Hill 24 Doesn't Answer",y:1955,s:"missing"},
+  {r:304,t:"Bad Day at Black Rock",y:1955,s:"missing"},
+  {r:305,t:"Night and Fog",y:1956,s:"missing",a:["Nuit et Brouillard"]},
+  {r:306,t:"The Phenix City Story",y:1955,s:"missing"},
+  {r:307,t:"The Man with the Golden Arm",y:1955,s:"missing"},
+  {r:308,t:"Kiss Me Deadly",y:1955,s:"missing"},
+  {r:309,t:"Guys and Dolls",y:1955,s:"missing"},
+  {r:310,t:"The Night of the Hunter",y:1955,s:"missing"},
+  {r:311,t:"The Ladykillers",y:1955,s:"missing"},
+  {r:312,t:"Oklahoma!",y:1955,s:"missing"},
+  {r:313,t:"Smiles of a Summer Night",y:1955,s:"missing",a:["Sommarnattens Leende"]},
+  {r:314,t:"Bob the Gambler",y:1955,s:"missing",a:["Bob le Flambeur"]},
+  {r:315,t:"All That Heaven Allows",y:1955,s:"missing"},
+  {r:316,t:"The Man from Laramie",y:1955,s:"missing",a:["The Man From Laramie"]},
+  {r:317,t:"The Ten Commandments",y:1956,s:"missing"},
+  {r:318,t:"The Searchers",y:1956,s:"missing"},
+  {r:319,t:"The Burmese Harp",y:1956,s:"missing",a:["Biruma no Tategoto"]},
+  {r:320,t:"Forbidden Planet",y:1956,s:"missing"},
+  {r:321,t:"Written on the Wind",y:1956,s:"missing"},
+  {r:322,t:"A Man Escaped",y:1956,s:"missing",a:["Un Condamné à Mort s'est Échappé ou le Vent Souffle où il Veut"]},
+  {r:323,t:"Bigger Than Life",y:1956,s:"missing"},
+  {r:324,t:"Invasion of the Body Snatchers",y:1956,s:"missing"},
+  {r:325,t:"Giant",y:1956,s:"missing"},
+  {r:326,t:"The Wrong Man",y:1956,s:"missing"},
+  {r:327,t:"High Society",y:1956,s:"missing"},
+  {r:328,t:"The Man Who Knew Too Much",y:1956,s:"missing"},
+  {r:329,t:"Throne of Blood",y:1957,s:"missing",a:["Kumonosu Jo"]},
+  {r:330,t:"Paths of Glory",y:1957,s:"missing"},
+  {r:331,t:"An Affair to Remember",y:1957,s:"missing"},
+  {r:332,t:"The Seventh Seal",y:1957,s:"missing",a:["Det Sjunde Inseglet"]},
+  {r:333,t:"12 Angry Men",y:1957,s:"missing"},
+  {r:334,t:"Wild Strawberries",y:1957,s:"missing",a:["Smultronstället"]},
+  {r:335,t:"The Incredible Shrinking Man",y:1957,s:"missing"},
+  {r:336,t:"Gunfight at the O.K. Corral",y:1957,s:"missing"},
+  {r:337,t:"Nights of Cabiria",y:1957,s:"missing",a:["Le Notti di Cabiria"]},
+  {r:338,t:"The Cranes Are Flying",y:1957,s:"missing",a:["The Cranes are Flying", "Letjat Zhuravli"]},
+  {r:339,t:"Aparajito",y:1956,s:"missing",a:["The Unvanquished"]},
+  {r:340,t:"The Bridge on the River Kwai",y:1957,s:"missing"},
+  {r:341,t:"Sweet Smell of Success",y:1957,s:"missing"},
+  {r:342,t:"Mother India",y:1957,s:"missing",a:["Bharat Mata"]},
+  {r:343,t:"Touch of Evil",y:1958,s:"missing"},
+  {r:344,t:"Gigi",y:1958,s:"missing"},
+  {r:345,t:"The Defiant Ones",y:1958,s:"missing"},
+  {r:346,t:"Man of the West",y:1958,s:"missing"},
+  {r:347,t:"Vertigo",y:1958,s:"missing"},
+  {r:348,t:"Ashes and Diamonds",y:1958,s:"missing",a:["Popiól i Diament"]},
+  {r:349,t:"Cairo Station",y:1958,s:"missing",a:["Bab el Hadid"]},
+  {r:350,t:"The Music Room",y:1958,s:"missing",a:["Jalsaghar"]},
+  {r:351,t:"Mon Oncle",y:1958,s:"missing",a:["My Uncle"]},
+  {r:352,t:"Some Came Running",y:1958,s:"missing"},
+  {r:353,t:"Dracula",y:1958,s:"missing"},
+  {r:354,t:"Some Like It Hot",y:1959,s:"missing"},
+  {r:355,t:"North by Northwest",y:1959,s:"missing"},
+  {r:356,t:"The 400 Blows",y:1959,s:"missing",a:["Les Quatre Cents Coups"]},
+  {r:357,t:"Pickpocket",y:1959,s:"missing"},
+  {r:358,t:"Hiroshima Mon Amour",y:1959,s:"missing"},
+  {r:359,t:"Ride Lonesome",y:1959,s:"missing"},
+  {r:360,t:"Black Orpheus",y:1959,s:"missing",a:["Orfeu Negro"]},
+  {r:361,t:"Ben-Hur",y:1959,s:"missing"},
+  {r:362,t:"Anatomy of a Murder",y:1959,s:"missing"},
+  {r:363,t:"Shadows",y:1958,s:"missing"},
+  {r:364,t:"Apur Sansar",y:1959,s:"missing",a:["The World of Apu"]},
+  {r:365,t:"Rio Bravo",y:1959,s:"missing"},
+  {r:366,t:"Floating Weeds",y:1959,s:"missing",a:["Ukigusa"]},
+  {r:367,t:"Eyes Without a Face",y:1960,s:"missing",a:["Les Yeux Sans Visage"]},
+  {r:368,t:"Saturday Night and Sunday Morning",y:1960,s:"missing"},
+  {r:369,t:"La Dolce Vita",y:1960,s:"missing"},
+  {r:370,t:"Le Trou",y:1960,s:"missing",a:["The Hole"]},
+  {r:371,t:"Rocco and His Brothers",y:1960,s:"missing",a:["Rocco and his Brothers", "Rocco e i Suoi Fratelli"]},
+  {r:372,t:"L'Avventura",y:1960,s:"missing",a:["The Adventure"]},
+  {r:373,t:"Breathless",y:1960,s:"missing",a:["A Bout de Souffle"]},
+  {r:374,t:"Spartacus",y:1960,s:"missing"},
+  {r:375,t:"The Apartment",y:1960,s:"missing"},
+  {r:376,t:"The Housemaid",y:1960,s:"missing",a:["Hanyeo"]},
+  {r:377,t:"The Cloud-Capped Star",y:1960,s:"missing",a:["Meghe Dhaka Tara"]},
+  {r:378,t:"Psycho",y:1960,s:"missing"},
+  {r:379,t:"Shoot the Piano Player",y:1960,s:"missing",a:["Tirez sur le Pianiste"]},
+  {r:380,t:"Peeping Tom",y:1960,s:"missing"},
+  {r:381,t:"Black Sunday",y:1960,s:"missing",a:["La Maschera del Demonio", "Revenge of the Vampire"]},
+  {r:382,t:"The Young One",y:1960,s:"missing",a:["La Joven"]},
+  {r:383,t:"Splendor in the Grass",y:1961,s:"missing"},
+  {r:384,t:"Viridiana",y:1961,s:"missing"},
+  {r:385,t:"La Jetée",y:1962,s:"missing",a:["The Pier"]},
+  {r:386,t:"Breakfast at Tiffany's",y:1961,s:"missing"},
+  {r:387,t:"Lola",y:1961,s:"missing"},
+  {r:388,t:"The Exiles",y:1961,s:"missing"},
+  {r:389,t:"La Notte",y:1961,s:"missing",a:["The Night"]},
+  {r:390,t:"West Side Story",y:1961,s:"missing"},
+  {r:391,t:"The Hustler",y:1961,s:"missing"},
+  {r:392,t:"The Ladies Man",y:1961,s:"missing"},
+  {r:393,t:"Through a Glass Darkly",y:1961,s:"missing",a:["Såsom i en Spegel"]},
+  {r:394,t:"Chronicle of a Summer",y:1961,s:"missing",a:["Chronique d'un Été"]},
+  {r:395,t:"Last Year at Marienbad",y:1961,s:"missing",a:["L'Année Dernière à Marienbad"]},
+  {r:396,t:"One-Eyed Jacks",y:1961,s:"missing"},
+  {r:397,t:"Cléo from 5 to 7",y:1962,s:"missing",a:["Cleo From 5 to 7", "Cléo de 5 à 7"]},
+  {r:398,t:"Dog Star Man",y:1964,s:"missing"},
+  {r:399,t:"My Life to Live",y:1962,s:"missing",a:["Vivre sa Vie: Film en Douze Tableaux"]},
+  {r:400,t:"An Autumn Afternoon",y:1962,s:"missing",a:["Sanma no Aji"]},
+  {r:401,t:"Lolita",y:1962,s:"missing"},
+  {r:402,t:"The Man Who Shot Liberty Valance",y:1962,s:"missing"},
+  {r:403,t:"Heaven and Earth Magic",y:1962,s:"missing"},
+  {r:404,t:"Lawrence of Arabia",y:1962,s:"missing"},
+  {r:405,t:"To Kill a Mockingbird",y:1962,s:"missing"},
+  {r:406,t:"Keeper of Promises",y:1962,s:"missing",a:["O Pagador de Promessas"]},
+  {r:407,t:"L'Eclisse",y:1962,s:"missing",a:["The Eclipse"]},
+  {r:408,t:"A Dog's Life",y:1962,s:"missing",a:["Mondo Cane"]},
+  {r:409,t:"The Exterminating Angel",y:1962,s:"missing",a:["El Ángel Exterminador"]},
+  {r:410,t:"Jules and Jim",y:1962,s:"missing",a:["Jules et Jim"]},
+  {r:411,t:"The Manchurian Candidate",y:1962,s:"missing"},
+  {r:412,t:"What Ever Happened to Baby Jane?",y:1962,s:"missing"},
+  {r:413,t:"8½",y:1963,s:"missing",a:["8 1/2"]},
+  {r:414,t:"The Birds",y:1963,s:"missing"},
+  {r:415,t:"Passenger",y:1963,s:"missing",a:["Pasazerka"]},
+  {r:416,t:"The Servant",y:1963,s:"missing"},
+  {r:417,t:"Flaming Creatures",y:1963,s:"missing"},
+  {r:418,t:"The House Is Black",y:1963,s:"missing",a:["The House is Black", "Khaneh Siah Ast"]},
+  {r:419,t:"Hud",y:1963,s:"missing"},
+  {r:420,t:"The Leopard",y:1963,s:"missing",a:["Il Gattopardo"]},
+  {r:421,t:"Barren Lives",y:1963,s:"missing",a:["Vidas Secas"]},
+  {r:422,t:"Shock Corridor",y:1963,s:"missing"},
+  {r:423,t:"Contempt",y:1963,s:"missing",a:["Le Mépris"]},
+  {r:424,t:"Blonde Cobra",y:1963,s:"missing"},
+  {r:425,t:"The Cool World",y:1963,s:"missing"},
+  {r:426,t:"The Nutty Professor",y:1963,s:"missing"},
+  {r:427,t:"The Great Escape",y:1963,s:"missing"},
+  {r:428,t:"Méditerranée",y:1963,s:"missing"},
+  {r:429,t:"An Actor's Revenge",y:1963,s:"missing",a:["Yukinojo Henge"]},
+  {r:430,t:"The Haunting",y:1963,s:"missing"},
+  {r:431,t:"Winter Light",y:1963,s:"missing",a:["Nattvardsgästerna"]},
+  {r:432,t:"Goldfinger",y:1964,s:"missing"},
+  {r:433,t:"My Fair Lady",y:1964,s:"missing"},
+  {r:434,t:"Red Desert",y:1964,s:"missing",a:["The Red Desert", "Il Deserto Rosso"]},
+  {r:435,t:"Woman in the Dunes",y:1964,s:"missing",a:["Suna no Onna"]},
+  {r:436,t:"Shadows of Forgotten Ancestors",y:1965,s:"missing",a:["Tini Zabutykh Predkiv"]},
+  {r:437,t:"Scorpio Rising",y:1963,s:"missing"},
+  {r:438,t:"Marnie",y:1964,s:"missing"},
+  {r:439,t:"The Masque of the Red Death",y:1964,s:"missing"},
+  {r:440,t:"Before the Revolution",y:1964,s:"missing",a:["Prima Della Rivoluzione"]},
+  {r:441,t:"Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",y:1964,s:"missing",a:["Dr. Strangelove, or: How I Learned to Stop Worrying and Love the Bomb"]},
+  {r:442,t:"Black God, White Devil",y:1964,s:"missing",a:["Deus e o Diabo na Terra do Sol"]},
+  {r:443,t:"A Hard Day's Night",y:1964,s:"missing"},
+  {r:444,t:"The Umbrellas of Cherbourg",y:1964,s:"missing",a:["Les Parapluies de Cherbourg"]},
+  {r:445,t:"Gertrud",y:1964,s:"missing"},
+  {r:446,t:"Mary Poppins",y:1964,s:"missing"},
+  {r:447,t:"Onibaba",y:1964,s:"missing",a:["The Demon"]},
+  {r:448,t:"The Gospel According to St. Matthew",y:1964,s:"missing",a:["Il Vangelo Secondo Matteo"]},
+  {r:449,t:"The Shop on Main Street",y:1965,s:"missing",a:["Obchod na Korze"]},
+  {r:450,t:"Doctor Zhivago",y:1965,s:"missing"},
+  {r:451,t:"The War Game",y:1966,s:"missing"},
+  {r:452,t:"Tokyo Olympiad",y:1965,s:"missing",a:["Tokyo Orimpikku"]},
+  {r:453,t:"Juliet of the Spirits",y:1965,s:"missing",a:["Giuletta Degli Spiriti"]},
+  {r:454,t:"The Battle of Algiers",y:1966,s:"missing",a:["La Battaglia di Algeri"]},
+  {r:455,t:"The Sound of Music",y:1965,s:"missing"},
+  {r:456,t:"The Man Who Had His Hair Cut Short",y:1965,s:"missing",a:["De man die Zijn Haar Kort Liet Knippen"]},
+  {r:457,t:"Alphaville",y:1965,s:"missing",a:["Alphaville, une Étrange Aventure de Lemmy Caution"]},
+  {r:458,t:"Chimes at Midnight",y:1965,s:"missing",a:["Campanadas a Medianoche"]},
+  {r:459,t:"Faster, Pussycat! Kill! Kill!",y:1965,s:"missing"},
+  {r:460,t:"Vinyl",y:1965,s:"missing"},
+  {r:461,t:"The Saragossa Manuscript",y:1965,s:"missing",a:["Rekopis Znaleziony w Saragossie"]},
+  {r:462,t:"Repulsion",y:1965,s:"missing"},
+  {r:463,t:"Pierrot le Fou",y:1965,s:"missing",a:["Pierrot Goes Wild"]},
+  {r:464,t:"Golden River",y:1965,s:"missing",a:["Subarnarekha"]},
+  {r:465,t:"Hold Me While I'm Naked",y:1966,s:"missing"},
+  {r:466,t:"Who's Afraid of Virginia Woolf?",y:1966,s:"missing"},
+  {r:467,t:"Blow-Up",y:1966,s:"missing",a:["Blowup"]},
+  {r:468,t:"Daisies",y:1966,s:"missing",a:["Sedmikrasky"]},
+  {r:469,t:"Come Drink With Me",y:1966,s:"missing",a:["Da Zui Xia"]},
+  {r:470,t:"Seconds",y:1966,s:"missing"},
+  {r:471,t:"The Good, the Bad and the Ugly",y:1966,s:"missing",a:["The Good, the Bad, and the Ugly", "Il Buono, il Brutto, il Cattivo"]},
+  {r:472,t:"Persona",y:1966,s:"missing"},
+  {r:473,t:"Au hasard Balthazar",y:1966,s:"missing",a:["Balthazar", "Au Hasard Balthazar"]},
+  {r:474,t:"Masculin Féminin",y:1966,s:"missing",a:["Masculine-Feminine", "Masculin, Féminin"]},
+  {r:475,t:"Report",y:1967,s:"missing"},
+  {r:476,t:"Two or Three Things I Know About Her",y:1967,s:"missing",a:["2 ou 3 Choses Que je Sais D'elle"]},
+  {r:477,t:"Belle de Jour",y:1967,s:"missing"},
+  {r:478,t:"Cool Hand Luke",y:1967,s:"missing"},
+  {r:479,t:"PlayTime",y:1967,s:"missing",a:["Playtime"]},
+  {r:480,t:"The Red and the White",y:1967,s:"missing",a:["Csillagosok, Katonák"]},
+  {r:481,t:"The Graduate",y:1967,s:"missing"},
+  {r:482,t:"Point Blank",y:1967,s:"missing"},
+  {r:483,t:"The Young Girls of Rochefort",y:1967,s:"missing",a:["Les Demoiselles de Rochefort"]},
+  {r:484,t:"Weekend",y:1967,s:"missing",a:["Week End"]},
+  {r:485,t:"Le Samouraï",y:1967,s:"missing",a:["The Godson"]},
+  {r:486,t:"Wavelength",y:1967,s:"missing"},
+  {r:487,t:"Closely Watched Trains",y:1966,s:"missing",a:["Ostre Sledované Vlaky"]},
+  {r:488,t:"Earth Entranced",y:1967,s:"missing",a:["Terra em Transe"]},
+  {r:489,t:"In the Heat of the Night",y:1967,s:"missing"},
+  {r:490,t:"Marketa Lazarová",y:1967,s:"missing"},
+  {r:491,t:"The Firemen's Ball",y:1967,s:"missing",a:["The Fireman's Ball", "Horí, Má Panenko"]},
+  {r:492,t:"The Jungle Book",y:1967,s:"missing"},
+  {r:493,t:"Bonnie and Clyde",y:1967,s:"missing"},
+  {r:494,t:"Viy",y:1967,s:"missing"},
+  {r:495,t:"Hombre",y:1967,s:"missing"},
+  {r:496,t:"The Cow",y:1969,s:"missing",a:["Gaav"]},
+  {r:497,t:"Once Upon a Time in the West",y:1968,s:"missing",a:["C'era una Volta il West"]},
+  {r:498,t:"Faces",y:1968,s:"missing"},
+  {r:499,t:"Planet of the Apes",y:1968,s:"missing"},
+  {r:500,t:"Rosemary's Baby",y:1968,s:"missing"},
+  {r:501,t:"if....",y:1968,s:"missing",a:["If..."]},
+  {r:502,t:"David Holzman's Diary",y:1968,s:"missing"},
+  {r:503,t:"Memories of Underdevelopment",y:1968,s:"missing",a:["Memorias del Subdesarrollo"]},
+  {r:504,t:"High School",y:1968,s:"missing"},
+  {r:505,t:"Hour of the Wolf",y:1968,s:"missing",a:["Vargtimmen"]},
+  {r:506,t:"2001: A Space Odyssey",y:1968,s:"missing"},
+  {r:507,t:"Night of the Living Dead",y:1968,s:"missing"},
+  {r:508,t:"Targets",y:1968,s:"missing"},
+  {r:509,t:"Shame",y:1968,s:"missing",a:["Skammen"]},
+  {r:510,t:"The Producers",y:1967,s:"missing"},
+  {r:511,t:"Z",y:1969,s:"missing"},
+  {r:512,t:"Fellini Satyricon",y:1969,s:"missing"},
+  {r:513,t:"Andrei Rublev",y:1966,s:"missing",a:["Andrei Rublyov"]},
+  {r:514,t:"The Color of Pomegranates",y:1969,s:"missing",a:["Sayat Nova"]},
+  {r:515,t:"Midnight Cowboy",y:1969,s:"missing"},
+  {r:516,t:"Butch Cassidy and the Sundance Kid",y:1969,s:"missing"},
+  {r:517,t:"A Touch of Zen",y:1970,s:"missing",a:["Hsia Nu"]},
+  {r:518,t:"Easy Rider",y:1969,s:"missing"},
+  {r:519,t:"Kes",y:1969,s:"missing"},
+  {r:520,t:"Lucía",y:1969,s:"missing"},
+  {r:521,t:"In the Year of the Pig",y:1969,s:"missing"},
+  {r:522,t:"The Wild Bunch",y:1969,s:"missing"},
+  {r:523,t:"My Night at Maud's",y:1969,s:"missing",a:["Ma Nuit Chez Maud"]},
+  {r:524,t:"Tristana",y:1970,s:"missing"},
+  {r:525,t:"The Conformist",y:1970,s:"missing",a:["Il Conformista"]},
+  {r:526,t:"The Butcher",y:1970,s:"missing",a:["Le Boucher"]},
+  {r:527,t:"El Topo",y:1970,s:"missing"},
+  {r:528,t:"Five Easy Pieces",y:1970,s:"missing"},
+  {r:529,t:"Deep End",y:1970,s:"missing"},
+  {r:530,t:"The Spider's Stratagem",y:1970,s:"missing",a:["La Strategia del Ragno"]},
+  {r:531,t:"The Ear",y:1970,s:"missing",a:["Ucho"]},
+  {r:532,t:"Little Big Man",y:1970,s:"missing"},
+  {r:533,t:"Patton",y:1970,s:"missing"},
+  {r:534,t:"The Bird with the Crystal Plumage",y:1970,s:"missing",a:["L'uccello Dalle Piume de Cristallo"]},
+  {r:535,t:"M*A*S*H",y:1970,s:"missing"},
+  {r:536,t:"Zabriskie Point",y:1970,s:"missing"},
+  {r:537,t:"Performance",y:1970,s:"missing"},
+  {r:538,t:"Woodstock",y:1970,s:"missing"},
+  {r:539,t:"Gimme Shelter",y:1970,s:"missing"},
+  {r:540,t:"The Garden of the Finzi-Continis",y:1970,s:"missing",a:["Il Giardino dei Finzi-Contini"]},
+  {r:541,t:"Dirty Harry",y:1971,s:"missing"},
+  {r:542,t:"A Clockwork Orange",y:1971,s:"missing"},
+  {r:543,t:"McCabe & Mrs. Miller",y:1971,s:"missing",a:["McCabe and Mrs. Miller"]},
+  {r:544,t:"The Sorrow and the Pity",y:1969,s:"missing",a:["La Chagrin et la Pitié"]},
+  {r:545,t:"Willy Wonka and the Chocolate Factory",y:1971,s:"missing"},
+  {r:546,t:"The Devils",y:1971,s:"missing"},
+  {r:547,t:"The Hired Hand",y:1971,s:"missing"},
+  {r:548,t:"WR: Mysteries of the Organism",y:1971,s:"missing",a:["W.R.: Mysteries of the Organism", "W.R.: Misterije Organizma"]},
+  {r:549,t:"Walkabout",y:1971,s:"missing"},
+  {r:550,t:"Klute",y:1971,s:"missing"},
+  {r:551,t:"Harold and Maude",y:1971,s:"missing"},
+  {r:552,t:"The French Connection",y:1971,s:"missing"},
+  {r:553,t:"Red Psalm",y:1972,s:"missing",a:["Még Kér a Nép"]},
+  {r:554,t:"Get Carter",y:1971,s:"missing"},
+  {r:555,t:"Shaft",y:1971,s:"missing"},
+  {r:556,t:"Sweet Sweetback's Baadasssss Song",y:1971,s:"missing"},
+  {r:557,t:"The Last Picture Show",y:1971,s:"missing"},
+  {r:558,t:"Wanda",y:1970,s:"missing"},
+  {r:559,t:"Murmur of the Heart",y:1971,s:"missing",a:["Le Souffle au Coeur"]},
+  {r:560,t:"Straw Dogs",y:1971,s:"missing"},
+  {r:561,t:"Two-Lane Blacktop",y:1971,s:"missing"},
+  {r:562,t:"Wake in Fright",y:1971,s:"missing"},
+  {r:563,t:"Deliverance",y:1972,s:"missing"},
+  {r:564,t:"Aguirre, the Wrath of God",y:1972,s:"missing",a:["Aguirre, der Zorn Gottes"]},
+  {r:565,t:"Cabaret",y:1972,s:"missing"},
+  {r:566,t:"Solaris",y:1972,s:"missing",a:["Solyaris"]},
+  {r:567,t:"Cries and Whispers",y:1972,s:"missing",a:["Viskingar och Rop"]},
+  {r:568,t:"The Discreet Charm of the Bourgeoisie",y:1972,s:"missing",a:["Le Charme Discret de la Bourgeoisie"]},
+  {r:569,t:"The Godfather",y:1972,s:"missing"},
+  {r:570,t:"Last Tango in Paris",y:1972,s:"missing",a:["Ultimo Tango a Parigi"]},
+  {r:571,t:"The Bitter Tears of Petra von Kant",y:1972,s:"missing",a:["The Bitter Tears of Petra Von Kant", "Die Bitteren Tränen der Petra Von Kant"]},
+  {r:572,t:"Fat City",y:1972,s:"missing"},
+  {r:573,t:"The Heartbreak Kid",y:1972,s:"missing"},
+  {r:574,t:"Frenzy",y:1972,s:"missing"},
+  {r:575,t:"Pink Flamingos",y:1972,s:"missing"},
+  {r:576,t:"Sleuth",y:1972,s:"missing"},
+  {r:577,t:"Superfly",y:1972,s:"missing"},
+  {r:578,t:"The Sting",y:1973,s:"missing"},
+  {r:579,t:"The Mother and the Whore",y:1973,s:"missing",a:["La Maman et la Putain"]},
+  {r:580,t:"High Plains Drifter",y:1973,s:"missing"},
+  {r:581,t:"Badlands",y:1973,s:"missing"},
+  {r:582,t:"American Graffiti",y:1973,s:"missing"},
+  {r:583,t:"Papillon",y:1973,s:"missing"},
+  {r:584,t:"The Long Goodbye",y:1973,s:"missing"},
+  {r:585,t:"The Wicker Man",y:1973,s:"missing"},
+  {r:586,t:"Enter the Dragon",y:1973,s:"missing"},
+  {r:587,t:"Serpico",y:1973,s:"missing"},
+  {r:588,t:"Don't Look Now",y:1973,s:"missing"},
+  {r:589,t:"Day for Night",y:1973,s:"missing",a:["La Nuit Américaine"]},
+  {r:590,t:"Mean Streets",y:1973,s:"missing"},
+  {r:591,t:"Sleeper",y:1973,s:"missing"},
+  {r:592,t:"The Exorcist",y:1973,s:"missing"},
+  {r:593,t:"F for Fake",y:1973,s:"missing",a:["Vérités et Mensonges"]},
+  {r:594,t:"Pat Garrett & Billy the Kid",y:1973,s:"missing",a:["Pat Garrett and Billy the Kid"]},
+  {r:595,t:"Turkish Delight",y:1973,s:"missing",a:["Turks Fruit"]},
+  {r:596,t:"The Spirit of the Beehive",y:1973,s:"missing",a:["El Espíritu de la Colmena"]},
+  {r:597,t:"The Harder They Come",y:1973,s:"missing"},
+  {r:598,t:"Fantastic Planet",y:1973,s:"missing",a:["La Planète Sauvage"]},
+  {r:599,t:"Amarcord",y:1973,s:"missing"},
+  {r:600,t:"The Towering Inferno",y:1974,s:"missing"},
+  {r:601,t:"Bring Me the Head of Alfredo Garcia",y:1974,s:"missing"},
+  {r:602,t:"Dersu Uzala",y:1975,s:"missing"},
+  {r:603,t:"The Godfather Part II",y:1974,s:"missing",a:["The Godfather: Part II"]},
+  {r:604,t:"The Conversation",y:1974,s:"missing"},
+  {r:605,t:"The Mirror",y:1974,s:"missing",a:["Zerkalo"]},
+  {r:606,t:"Chinatown",y:1974,s:"missing"},
+  {r:607,t:"A Woman Under the Influence",y:1974,s:"missing"},
+  {r:608,t:"Young Frankenstein",y:1974,s:"missing"},
+  {r:609,t:"The Texas Chain Saw Massacre",y:1974,s:"missing"},
+  {r:610,t:"Blazing Saddles",y:1974,s:"missing"},
+  {r:611,t:"Céline and Julie Go Boating",y:1974,s:"missing",a:["Celine and Julie Go Boating", "Céline et Julie Vont en Bateau"]},
+  {r:612,t:"Ali: Fear Eats the Soul",y:1974,s:"missing",a:["Angst Essen Seele Auf"]},
+  {r:613,t:"Barry Lyndon",y:1975,s:"missing"},
+  {r:614,t:"The Rocky Horror Picture Show",y:1975,s:"missing"},
+  {r:615,t:"Jeanne Dielman, 23, quai du Commerce, 1080 Bruxelles",y:1975,s:"missing",a:["Jeanne Dielman, 23 Quai du Commerce, 1080 Bruxelles"]},
+  {r:616,t:"The Travelling Players",y:1975,s:"missing",a:["O Thiassos"]},
+  {r:617,t:"Monty Python and the Holy Grail",y:1975,s:"missing"},
+  {r:618,t:"The Wall",y:1975,s:"missing",a:["Deewaar"]},
+  {r:619,t:"Dog Day Afternoon",y:1975,s:"missing"},
+  {r:620,t:"One Flew Over the Cuckoo's Nest",y:1975,s:"missing"},
+  {r:621,t:"Manila in the Claws of Brightness",y:1975,s:"missing",a:["Maynila: sa Mga Kuko Ng Liwanag"]},
+  {r:622,t:"Fox and His Friends",y:1975,s:"missing",a:["Fox and his Friends", "Faustrecht der Freiheit"]},
+  {r:623,t:"Nashville",y:1975,s:"missing"},
+  {r:624,t:"Salò, or the 120 Days of Sodom",y:1975,s:"missing",a:["Salo, or the 120 Days of Sodom", "Salò o le Centoventi Giornate di Sodoma"]},
+  {r:625,t:"Cria!",y:1976,s:"missing",a:["Cría Cuervos"]},
+  {r:626,t:"Picnic at Hanging Rock",y:1975,s:"missing"},
+  {r:627,t:"India Song",y:1975,s:"missing"},
+  {r:628,t:"Jaws",y:1975,s:"missing"},
+  {r:629,t:"The Man Who Fell to Earth",y:1976,s:"missing"},
+  {r:630,t:"All the President's Men",y:1976,s:"missing"},
+  {r:631,t:"The Outlaw Josey Wales",y:1976,s:"missing"},
+  {r:632,t:"The Killing of a Chinese Bookie",y:1976,s:"missing"},
+  {r:633,t:"Network",y:1976,s:"missing"},
+  {r:634,t:"Carrie",y:1976,s:"missing"},
+  {r:635,t:"Taxi Driver",y:1976,s:"missing"},
+  {r:636,t:"Rocky",y:1976,s:"missing"},
+  {r:637,t:"In the Realm of the Senses",y:1976,s:"missing",a:["Ai no Corrida"]},
+  {r:638,t:"1900",y:1976,s:"missing",a:["Novecento"]},
+  {r:639,t:"Ascent",y:1977,s:"missing",a:["Voskhozhdeniye"]},
+  {r:640,t:"Close Encounters of the Third Kind",y:1977,s:"missing"},
+  {r:641,t:"The Last Wave",y:1977,s:"missing"},
+  {r:642,t:"Star Wars",y:1977,s:"missing"},
+  {r:643,t:"Stroszek",y:1977,s:"missing"},
+  {r:644,t:"Ceddo",y:1977,s:"missing"},
+  {r:645,t:"The American Friend",y:1977,s:"missing",a:["Der Amerikanische Freund"]},
+  {r:646,t:"Annie Hall",y:1977,s:"missing"},
+  {r:647,t:"Suspiria",y:1977,s:"missing"},
+  {r:648,t:"Sleeping Dogs",y:1977,s:"missing"},
+  {r:649,t:"Last Chants for a Slow Dance",y:1977,s:"missing"},
+  {r:650,t:"Man of Marble",y:1977,s:"missing",a:["Czlowiek z Marmuru"]},
+  {r:651,t:"Saturday Night Fever",y:1977,s:"missing"},
+  {r:652,t:"Killer of Sheep",y:1978,s:"missing"},
+  {r:653,t:"Eraserhead",y:1977,s:"missing"},
+  {r:654,t:"Soldier of Orange",y:1977,s:"missing",a:["Soldaat van Oranje"]},
+  {r:655,t:"The Hills Have Eyes",y:1977,s:"missing"},
+  {r:656,t:"Days of Heaven",y:1978,s:"missing"},
+  {r:657,t:"Halloween",y:1978,s:"missing"},
+  {r:658,t:"The Tree of Wooden Clogs",y:1978,s:"missing",a:["L'albero Degli Zoccoli"]},
+  {r:659,t:"The Chant of Jimmie Blacksmith",y:1978,s:"missing"},
+  {r:660,t:"The Deer Hunter",y:1978,s:"missing"},
+  {r:661,t:"Dawn of the Dead",y:1978,s:"missing"},
+  {r:662,t:"Up in Smoke",y:1978,s:"missing"},
+  {r:663,t:"Grease",y:1978,s:"missing"},
+  {r:664,t:"Shaolin Master Killer",y:1978,s:"missing",a:["Shao Lin San Shi Liu Fang"]},
+  {r:665,t:"Five Deadly Venoms",y:1978,s:"missing",a:["Wu Du"]},
+  {r:666,t:"My Brilliant Career",y:1979,s:"missing"},
+  {r:667,t:"The Marriage of Maria Braun",y:1979,s:"missing",a:["Die Ehe der Maria Braun"]},
+  {r:668,t:"Nosferatu: Phantom of the Night",y:1979,s:"missing",a:["Nosferatu: Phantom der Nacht"]},
+  {r:669,t:"Stalker",y:1979,s:"missing"},
+  {r:670,t:"Life of Brian",y:1979,s:"missing"},
+  {r:671,t:"Real Life",y:1979,s:"missing"},
+  {r:672,t:"Breaking Away",y:1979,s:"missing"},
+  {r:673,t:"Alien",y:1979,s:"missing"},
+  {r:674,t:"Being There",y:1979,s:"missing"},
+  {r:675,t:"Manhattan",y:1979,s:"missing"},
+  {r:676,t:"Apocalypse Now",y:1979,s:"missing"},
+  {r:677,t:"All That Jazz",y:1979,s:"missing"},
+  {r:678,t:"The Muppet Movie",y:1979,s:"missing"},
+  {r:679,t:"Christ Stopped at Eboli",y:1979,s:"missing",a:["Cristo si è Fermato a Eboli"]},
+  {r:680,t:"Mad Max",y:1979,s:"missing"},
+  {r:681,t:"The Tin Drum",y:1979,s:"missing",a:["Die Blechtrommel"]},
+  {r:682,t:"The Jerk",y:1979,s:"missing"},
+  {r:683,t:"Kramer vs. Kramer",y:1979,s:"missing"},
+  {r:684,t:"Ordinary People",y:1980,s:"missing"},
+  {r:685,t:"Star Wars: Episode V - The Empire Strikes Back",y:1980,s:"missing",a:["The Empire Strikes Back"]},
+  {r:686,t:"Atlantic City",y:1980,s:"missing"},
+  {r:687,t:"The Last Metro",y:1980,s:"missing",a:["Le Dernier Métro"]},
+  {r:688,t:"The Shining",y:1980,s:"missing"},
+  {r:689,t:"The Elephant Man",y:1980,s:"missing"},
+  {r:690,t:"The Big Red One",y:1980,s:"missing"},
+  {r:691,t:"Loulou",y:1980,s:"missing"},
+  {r:692,t:"Raging Bull",y:1980,s:"missing"},
+  {r:693,t:"Airplane!",y:1980,s:"missing"},
+  {r:694,t:"An American Werewolf in London",y:1981,s:"missing"},
+  {r:695,t:"Diva",y:1981,s:"missing"},
+  {r:696,t:"Raiders of the Lost Ark",y:1981,s:"missing"},
+  {r:697,t:"Das Boot",y:1981,s:"missing",a:["The Boat"]},
+  {r:698,t:"Gallipoli",y:1981,s:"missing"},
+  {r:699,t:"Chariots of Fire",y:1981,s:"missing"},
+  {r:700,t:"Body Heat",y:1981,s:"missing"},
+  {r:701,t:"Man of Iron",y:1981,s:"missing",a:["Czlowiek z Zelaza"]},
+  {r:702,t:"Reds",y:1981,s:"missing"},
+  {r:703,t:"Three Brothers",y:1981,s:"missing",a:["Tre Fratelli"]},
+  {r:704,t:"E.T. the Extra-Terrestrial",y:1982,s:"missing",a:["E.T.: The Extra-Terrestrial"]},
+  {r:705,t:"The Evil Dead",y:1981,s:"missing"},
+  {r:706,t:"Fast Times at Ridgemont High",y:1982,s:"missing"},
+  {r:707,t:"Too Early / Too Late",y:1981,s:"missing",a:["Too Early, Too Late", "Zu Früh, Zu Spät", "Trop Tôt, Trop Tard"]},
+  {r:708,t:"Poltergeist",y:1982,s:"missing"},
+  {r:709,t:"Yol",y:1982,s:"missing"},
+  {r:710,t:"Blade Runner",y:1982,s:"missing"},
+  {r:711,t:"Diner",y:1982,s:"missing"},
+  {r:712,t:"Tootsie",y:1982,s:"missing"},
+  {r:713,t:"Fitzcarraldo",y:1982,s:"missing"},
+  {r:714,t:"Gandhi",y:1982,s:"missing"},
+  {r:715,t:"The Thing",y:1982,s:"missing"},
+  {r:716,t:"Fanny and Alexander",y:1982,s:"missing",a:["Fanny och Alexander"]},
+  {r:717,t:"The Night of the Shooting Stars",y:1982,s:"missing",a:["La Notte di San Lorenzo"]},
+  {r:718,t:"A Question of Silence",y:1982,s:"missing",a:["De Stilte Rond Christine M."]},
+  {r:719,t:"The Draughtsman's Contract",y:1982,s:"missing"},
+  {r:720,t:"A Christmas Story",y:1983,s:"missing"},
+  {r:721,t:"L'Argent",y:1983,s:"missing",a:["Money"]},
+  {r:722,t:"The Right Stuff",y:1983,s:"missing"},
+  {r:723,t:"The Big Chill",y:1983,s:"missing"},
+  {r:724,t:"Sans Soleil",y:1983,s:"missing",a:["Sunless"]},
+  {r:725,t:"Star Wars: Episode VI - Return of the Jedi",y:1983,s:"missing",a:["Return of the Jedi"]},
+  {r:726,t:"The Ballad of Narayama",y:1983,s:"missing",a:["Narayama Bushi-ko"]},
+  {r:727,t:"Terms of Endearment",y:1983,s:"missing"},
+  {r:728,t:"El Norte",y:1983,s:"missing"},
+  {r:729,t:"The Fourth Man",y:1983,s:"missing",a:["De Vierde Man"]},
+  {r:730,t:"Videodrome",y:1983,s:"missing"},
+  {r:731,t:"Koyaanisqatsi",y:1982,s:"missing"},
+  {r:732,t:"Scarface",y:1983,s:"missing"},
+  {r:733,t:"The King of Comedy",y:1982,s:"missing"},
+  {r:734,t:"Local Hero",y:1983,s:"missing"},
+  {r:735,t:"Once Upon a Time in America",y:1984,s:"missing"},
+  {r:736,t:"The Last Battle",y:1983,s:"missing",a:["Le Dernier Combat"]},
+  {r:737,t:"The Terminator",y:1984,s:"missing"},
+  {r:738,t:"The Natural",y:1984,s:"missing"},
+  {r:739,t:"Ghostbusters",y:1984,s:"missing"},
+  {r:740,t:"Paris, Texas",y:1984,s:"missing"},
+  {r:741,t:"A Nightmare on Elm Street",y:1984,s:"missing"},
+  {r:742,t:"This Is Spinal Tap",y:1984,s:"missing",a:["This is Spinal Tap"]},
+  {r:743,t:"A Passage to India",y:1984,s:"missing"},
+  {r:744,t:"Beverly Hills Cop",y:1984,s:"missing"},
+  {r:745,t:"The Killing Fields",y:1984,s:"missing"},
+  {r:746,t:"Stranger Than Paradise",y:1984,s:"missing",a:["Stranger than Paradise"]},
+  {r:747,t:"Amadeus",y:1984,s:"missing"},
+  {r:748,t:"Utu",y:1984,s:"missing"},
+  {r:749,t:"Prizzi's Honor",y:1985,s:"missing"},
+  {r:750,t:"The Time to Live and the Time to Die",y:1985,s:"missing",a:["Tong Nien Wang Shi"]},
+  {r:751,t:"The Breakfast Club",y:1985,s:"missing"},
+  {r:752,t:"Come and See",y:1985,s:"missing",a:["Idi i Smotri"]},
+  {r:753,t:"Mishima: A Life in Four Chapters",y:1985,s:"missing"},
+  {r:754,t:"Out of Africa",y:1985,s:"missing"},
+  {r:755,t:"Ran",y:1985,s:"missing"},
+  {r:756,t:"Back to the Future",y:1985,s:"missing"},
+  {r:757,t:"Brazil",y:1985,s:"missing"},
+  {r:758,t:"Kiss of the Spider Woman",y:1985,s:"missing"},
+  {r:759,t:"The Quiet Earth",y:1985,s:"missing"},
+  {r:760,t:"The Purple Rose of Cairo",y:1985,s:"missing"},
+  {r:761,t:"Vagabond",y:1985,s:"missing",a:["Sans Toit ni Loi"]},
+  {r:762,t:"Shoah",y:1985,s:"missing"},
+  {r:763,t:"The Color Purple",y:1985,s:"missing"},
+  {r:764,t:"A Room with a View",y:1985,s:"missing"},
+  {r:765,t:"The Official Story",y:1985,s:"missing",a:["La Historia Oficial"]},
+  {r:766,t:"Manhunter",y:1986,s:"missing"},
+  {r:767,t:"Blue Velvet",y:1986,s:"missing"},
+  {r:768,t:"Hannah and Her Sisters",y:1986,s:"missing"},
+  {r:769,t:"She's Gotta Have It",y:1986,s:"missing"},
+  {r:770,t:"Children of a Lesser God",y:1986,s:"missing"},
+  {r:771,t:"Caravaggio",y:1986,s:"missing"},
+  {r:772,t:"Salvador",y:1986,s:"missing"},
+  {r:773,t:"Platoon",y:1986,s:"missing"},
+  {r:774,t:"Down by Law",y:1986,s:"missing",a:["Down By Law"]},
+  {r:775,t:"The Decline of the American Empire",y:1986,s:"missing",a:["Le Déclin de l'Empire Américain"]},
+  {r:776,t:"Peking Opera Blues",y:1986,s:"missing",a:["Do Ma Daan"]},
+  {r:777,t:"Aliens",y:1986,s:"missing"},
+  {r:778,t:"Ferris Bueller's Day Off",y:1986,s:"missing"},
+  {r:779,t:"The Fly",y:1986,s:"missing"},
+  {r:780,t:"Top Gun",y:1986,s:"missing"},
+  {r:781,t:"Sherman's March",y:1986,s:"missing"},
+  {r:782,t:"Stand by Me",y:1986,s:"missing",a:["Stand By Me"]},
+  {r:783,t:"Tampopo",y:1985,s:"missing"},
+  {r:784,t:"The Horse Thief",y:1986,s:"missing",a:["Dao Ma Zei"]},
+  {r:785,t:"Au Revoir les Enfants",y:1987,s:"missing",a:["Goodbye Children"]},
+  {r:786,t:"Raising Arizona",y:1987,s:"missing"},
+  {r:787,t:"Yeelen",y:1987,s:"missing",a:["Brightness"]},
+  {r:788,t:"Project A, Part II",y:1987,s:"missing",a:["'A' Gai Waak Juk Jaap"]},
+  {r:789,t:"Wings of Desire",y:1987,s:"missing",a:["Der Himmel Über Berlin"]},
+  {r:790,t:"Withnail and I",y:1987,s:"missing"},
+  {r:791,t:"The Princess Bride",y:1987,s:"missing"},
+  {r:792,t:"A Chinese Ghost Story",y:1987,s:"missing",a:["Sinnui Yauman"]},
+  {r:793,t:"Full Metal Jacket",y:1987,s:"missing"},
+  {r:794,t:"Broadcast News",y:1987,s:"missing"},
+  {r:795,t:"Babette's Feast",y:1987,s:"missing",a:["Babbetes Gaestebud"]},
+  {r:796,t:"Good Morning, Vietnam",y:1987,s:"missing"},
+  {r:797,t:"Moonstruck",y:1987,s:"missing"},
+  {r:798,t:"Wall Street",y:1987,s:"missing"},
+  {r:799,t:"The Untouchables",y:1987,s:"missing"},
+  {r:800,t:"Red Sorghum",y:1988,s:"missing",a:["Hong Gao Liang"]},
+  {r:801,t:"Fatal Attraction",y:1987,s:"missing"},
+  {r:802,t:"The Dead",y:1987,s:"missing"},
+  {r:803,t:"Housekeeping",y:1987,s:"missing"},
+  {r:804,t:"Bull Durham",y:1988,s:"missing"},
+  {r:805,t:"Hotel Terminus: The Life and Times of Klaus Barbie",y:1988,s:"missing",a:["Hôtel Terminus: Klaus Barbie et Son Temps"]},
+  {r:806,t:"Women on the Verge of a Nervous Breakdown",y:1988,s:"missing",a:["Mujeres al Borde de un Ataque de Nervios"]},
+  {r:807,t:"The Vanishing",y:1988,s:"missing",a:["Spoorloos"]},
+  {r:808,t:"Alice",y:1988,s:"missing",a:["Neco z Alenky"]},
+  {r:809,t:"Ariel",y:1988,s:"missing"},
+  {r:810,t:"The Thin Blue Line",y:1988,s:"missing"},
+  {r:811,t:"Akira",y:1988,s:"missing"},
+  {r:812,t:"A Fish Called Wanda",y:1988,s:"missing"},
+  {r:813,t:"A Tale of the Wind",y:1988,s:"missing",a:["Une Histoire de Vent"]},
+  {r:814,t:"The Naked Gun",y:1988,s:"missing"},
+  {r:815,t:"Cinema Paradiso",y:1988,s:"missing",a:["Nuovo Cinema Paradiso"]},
+  {r:816,t:"Grave of the Fireflies",y:1988,s:"missing",a:["Hotaru no Haka"]},
+  {r:817,t:"Big",y:1988,s:"missing"},
+  {r:818,t:"Who Framed Roger Rabbit",y:1988,s:"missing",a:["Who Framed Roger Rabbit?"]},
+  {r:819,t:"Dekalog",y:1989,s:"missing",a:["The Decalogue"]},
+  {r:820,t:"Rain Man",y:1988,s:"missing"},
+  {r:821,t:"Die Hard",y:1988,s:"missing"},
+  {r:822,t:"Dangerous Liaisons",y:1988,s:"missing"},
+  {r:823,t:"Dead Ringers",y:1988,s:"missing"},
+  {r:824,t:"RoboCop",y:1987,s:"missing"},
+  {r:825,t:"Distant Voices, Still Lives",y:1988,s:"missing"},
+  {r:826,t:"Landscape in the Mist",y:1988,s:"missing",a:["Topio Stin Omichli"]},
+  {r:827,t:"The Story of Women",y:1988,s:"missing",a:["Une Affaire de Femmes"]},
+  {r:828,t:"The Accidental Tourist",y:1988,s:"missing"},
+  {r:829,t:"Drowning By Numbers",y:1988,s:"missing"},
+  {r:830,t:"When Harry Met Sally...",y:1989,s:"missing",a:["When Harry Met Sally"]},
+  {r:831,t:"Crimes and Misdemeanors",y:1989,s:"missing"},
+  {r:832,t:"Batman",y:1989,s:"missing"},
+  {r:833,t:"Field of Dreams",y:1989,s:"missing"},
+  {r:834,t:"Glory",y:1989,s:"missing"},
+  {r:835,t:"The Cook, the Thief, His Wife & Her Lover",y:1989,s:"missing",a:["The Cook, the Thief, His Wife, & Her Lover"]},
+  {r:836,t:"My Left Foot",y:1989,s:"missing"},
+  {r:837,t:"The Killer",y:1989,s:"missing",a:["Die Xue Shuang Xiong"]},
+  {r:838,t:"Drugstore Cowboy",y:1989,s:"missing"},
+  {r:839,t:"The Asthenic Syndrome",y:1989,s:"missing",a:["Astenicheskij Sindrom"]},
+  {r:840,t:"Do the Right Thing",y:1989,s:"missing"},
+  {r:841,t:"The Unbelievable Truth",y:1989,s:"missing"},
+  {r:842,t:"Roger & Me",y:1989,s:"missing"},
+  {r:843,t:"sex, lies, and videotape",y:1989,s:"missing",a:["Sex, Lies, and Videotape"]},
+  {r:844,t:"A City of Sadness",y:1989,s:"missing",a:["Beiqing Chengshi"]},
+  {r:845,t:"Say Anything",y:1989,s:"missing"},
+  {r:846,t:"Trust",y:1990,s:"missing"},
+  {r:847,t:"No Fear, No Die",y:1990,s:"missing",a:["S'en Fout la Mort"]},
+  {r:848,t:"GoodFellas",y:1990,s:"missing",a:["Goodfellas"]},
+  {r:849,t:"Close-Up",y:1990,s:"missing",a:["Nema-ye Nazdik"]},
+  {r:850,t:"King of New York",y:1990,s:"missing"},
+  {r:851,t:"Pretty Woman",y:1990,s:"missing"},
+  {r:852,t:"Dances with Wolves",y:1990,s:"missing"},
+  {r:853,t:"Henry: Portrait of a Serial Killer",y:1986,s:"missing"},
+  {r:854,t:"Archangel",y:1990,s:"missing"},
+  {r:855,t:"Total Recall",y:1990,s:"missing"},
+  {r:856,t:"Edward Scissorhands",y:1990,s:"missing"},
+  {r:857,t:"Europa Europa",y:1990,s:"missing",a:["Hitlerjunge Salomon"]},
+  {r:858,t:"Reversal of Fortune",y:1990,s:"missing"},
+  {r:859,t:"Jacob's Ladder",y:1990,s:"missing"},
+  {r:860,t:"Boyz 'N the Hood",y:1991,s:"missing"},
+  {r:861,t:"La Belle Noiseuse",y:1991,s:"missing",a:["The Beautiful Troublemaker"]},
+  {r:862,t:"The Rapture",y:1991,s:"missing"},
+  {r:863,t:"A Brighter Summer Day",y:1991,s:"missing",a:["Guling Jie Shaonian Sha Ren Shijian"]},
+  {r:864,t:"JFK",y:1991,s:"missing"},
+  {r:865,t:"Slacker",y:1991,s:"missing"},
+  {r:866,t:"Once Upon a Time in China",y:1991,s:"missing",a:["Wong Fei-Hung"]},
+  {r:867,t:"Thelma & Louise",y:1991,s:"missing"},
+  {r:868,t:"My Own Private Idaho",y:1991,s:"missing"},
+  {r:869,t:"The Silence of the Lambs",y:1991,s:"missing"},
+  {r:870,t:"Terminator 2: Judgment Day",y:1991,s:"missing"},
+  {r:871,t:"Delicatessen",y:1991,s:"missing"},
+  {r:872,t:"The Double Life of Véronique",y:1991,s:"missing",a:["The Double Life of Veronique", "La Double Vie de Véronique"]},
+  {r:873,t:"Tongues Untied",y:1989,s:"missing"},
+  {r:874,t:"Raise the Red Lantern",y:1991,s:"missing",a:["Da Hong Deng Long Gao Gao Gua"]},
+  {r:875,t:"Hearts of Darkness: A Filmmaker's Apocalypse",y:1991,s:"missing"},
+  {r:876,t:"Naked Lunch",y:1991,s:"missing"},
+  {r:877,t:"Romper Stomper",y:1992,s:"missing"},
+  {r:878,t:"Strictly Ballroom",y:1992,s:"missing"},
+  {r:879,t:"The Player",y:1992,s:"missing"},
+  {r:880,t:"Reservoir Dogs",y:1992,s:"missing"},
+  {r:881,t:"Glengarry Glen Ross",y:1992,s:"missing"},
+  {r:882,t:"A Tale of Winter",y:1992,s:"missing",a:["Conte D'hiver"]},
+  {r:883,t:"Unforgiven",y:1992,s:"missing"},
+  {r:884,t:"The Actress",y:1992,s:"missing",a:["Yuen Ling-Yuk", "Center Stage"]},
+  {r:885,t:"Man Bites Dog",y:1992,s:"missing",a:["C'est Arrivé Près de Chez Vous"]},
+  {r:886,t:"The Crying Game",y:1992,s:"missing"},
+  {r:887,t:"Bram Stoker's Dracula",y:1992,s:"missing"},
+  {r:888,t:"Candyman",y:1992,s:"missing"},
+  {r:889,t:"Aileen Wuornos: The Selling of a Serial Killer",y:1992,s:"missing"},
+  {r:890,t:"The Blue Kite",y:1993,s:"missing",a:["Lan Feng Zheng"]},
+  {r:891,t:"Philadelphia",y:1993,s:"missing"},
+  {r:892,t:"The Puppetmaster",y:1993,s:"missing",a:["Hsimeng Jensheng"]},
+  {r:893,t:"Short Cuts",y:1993,s:"missing"},
+  {r:894,t:"Schindler's List",y:1993,s:"missing"},
+  {r:895,t:"Three Colours: Blue",y:1993,s:"missing",a:["Three Colors: Blue", "Trois Couleurs: Bleu"]},
+  {r:896,t:"Farewell My Concubine",y:1993,s:"missing",a:["Ba Wang Bie Ji"]},
+  {r:897,t:"Groundhog Day",y:1993,s:"missing"},
+  {r:898,t:"The Piano",y:1993,s:"missing"},
+  {r:899,t:"The Wedding Banquet",y:1993,s:"missing",a:["Hsi Yen"]},
+  {r:900,t:"Thirty Two Short Films About Glenn Gould",y:1993,s:"missing"},
+  {r:901,t:"Jurassic Park",y:1993,s:"missing"},
+  {r:902,t:"The Age of Innocence",y:1993,s:"missing"},
+  {r:903,t:"The Lion King",y:1994,s:"missing"},
+  {r:904,t:"The Last Seduction",y:1994,s:"missing"},
+  {r:905,t:"The Wild Reeds",y:1994,s:"missing",a:["Les Roseaux Sauvages"]},
+  {r:906,t:"Crumb",y:1994,s:"missing"},
+  {r:907,t:"Heavenly Creatures",y:1994,s:"missing"},
+  {r:908,t:"Pulp Fiction",y:1994,s:"missing"},
+  {r:909,t:"Three Colours: Red",y:1994,s:"missing",a:["Three Colors: Red", "Trois Couleurs: Rouge"]},
+  {r:910,t:"Natural Born Killers",y:1994,s:"missing"},
+  {r:911,t:"Muriel's Wedding",y:1994,s:"missing"},
+  {r:912,t:"The Adventures of Priscilla, Queen of the Desert",y:1994,s:"missing"},
+  {r:913,t:"Hoop Dreams",y:1994,s:"missing"},
+  {r:914,t:"Satantango",y:1994,s:"missing",a:["Sátántangó"]},
+  {r:915,t:"Clerks",y:1994,s:"missing"},
+  {r:916,t:"Four Weddings and a Funeral",y:1994,s:"missing"},
+  {r:917,t:"Forrest Gump",y:1994,s:"missing"},
+  {r:918,t:"Through the Olive Trees",y:1994,s:"missing",a:["Zire Darakhatan Zeyton"]},
+  {r:919,t:"The Shawshank Redemption",y:1994,s:"missing"},
+  {r:920,t:"Dear Diary",y:1993,s:"missing",a:["Caro Diario"]},
+  {r:921,t:"Chungking Express",y:1994,s:"missing",a:["Chong Qing Sen Lin"]},
+  {r:922,t:"The Kingdom",y:1994,s:"missing",a:["Riget"]},
+  {r:923,t:"Lamerica",y:1994,s:"missing"},
+  {r:924,t:"Braveheart",y:1995,s:"missing"},
+  {r:925,t:"Deseret",y:1995,s:"missing"},
+  {r:926,t:"Babe",y:1995,s:"missing"},
+  {r:927,t:"Se7en",y:1995,s:"missing"},
+  {r:928,t:"Smoke",y:1995,s:"missing"},
+  {r:929,t:"The White Balloon",y:1995,s:"missing",a:["Badkonake Sefid"]},
+  {r:930,t:"Underground",y:1995,s:"missing"},
+  {r:931,t:"The Brave-Hearted Will Take the Bride",y:1995,s:"missing",a:["Dilwale Dulhaniya le Jayenge"]},
+  {r:932,t:"Cyclo",y:1995,s:"missing",a:["Xich Lo"]},
+  {r:933,t:"Clueless",y:1995,s:"missing"},
+  {r:934,t:"Safe",y:1995,s:"missing"},
+  {r:935,t:"Heat",y:1995,s:"missing"},
+  {r:936,t:"Toy Story",y:1995,s:"missing"},
+  {r:937,t:"Toy Story 2",y:1999,s:"missing"},
+  {r:938,t:"Toy Story 3",y:2010,s:"missing"},
+  {r:939,t:"Toy Story 4",y:2019,s:"missing"},
+  {r:940,t:"Dead Man",y:1995,s:"missing"},
+  {r:941,t:"The Usual Suspects",y:1995,s:"missing"},
+  {r:942,t:"Zero Kelvin",y:1995,s:"missing",a:["Kjærlighetens Kjøtere"]},
+  {r:943,t:"Casino",y:1995,s:"missing"},
+  {r:944,t:"Strange Days",y:1995,s:"missing"},
+  {r:945,t:"Trainspotting",y:1996,s:"missing"},
+  {r:946,t:"Fargo",y:1996,s:"missing"},
+  {r:947,t:"Gabbeh",y:1996,s:"missing"},
+  {r:948,t:"Three Lives and Only One Death",y:1996,s:"missing",a:["Trois Vies & Une Seule Mort"]},
+  {r:949,t:"Shine",y:1996,s:"missing"},
+  {r:950,t:"Scream",y:1996,s:"missing"},
+  {r:951,t:"Secrets & Lies",y:1996,s:"missing"},
+  {r:952,t:"The English Patient",y:1996,s:"missing"},
+  {r:953,t:"Lone Star",y:1996,s:"missing"},
+  {r:954,t:"Breaking the Waves",y:1996,s:"missing"},
+  {r:955,t:"Independence Day",y:1996,s:"missing"},
+  {r:956,t:"The Pillow Book",y:1996,s:"missing"},
+  {r:957,t:"The Ice Storm",y:1997,s:"missing"},
+  {r:958,t:"Hana-Bi",y:1997,s:"missing"},
+  {r:959,t:"Boogie Nights",y:1997,s:"missing"},
+  {r:960,t:"L.A. Confidential",y:1997,s:"missing"},
+  {r:961,t:"Funny Games",y:1997,s:"missing"},
+  {r:962,t:"Open Your Eyes",y:1997,s:"missing",a:["Abre Los Ojos"]},
+  {r:963,t:"The Sweet Hereafter",y:1997,s:"missing"},
+  {r:964,t:"Titanic",y:1997,s:"missing"},
+  {r:965,t:"Taste of Cherry",y:1997,s:"missing",a:["Ta'm e Guilass"]},
+  {r:966,t:"Deconstructing Harry",y:1997,s:"missing"},
+  {r:967,t:"Happy Together",y:1997,s:"missing",a:["Cheun Gwong Tsa Sit"]},
+  {r:968,t:"Princess Mononoke",y:1997,s:"missing",a:["Mononoke Hime"]},
+  {r:969,t:"Fast, Cheap, and Out of Control",y:1997,s:"missing"},
+  {r:970,t:"The Butcher Boy",y:1997,s:"missing"},
+  {r:971,t:"Kundun",y:1997,s:"missing"},
+  {r:972,t:"Mother and Son",y:1997,s:"missing",a:["Mat' i Syn"]},
+  {r:973,t:"Saving Private Ryan",y:1998,s:"missing"},
+  {r:974,t:"Run Lola Run",y:1998,s:"missing",a:["Lola Rennt"]},
+  {r:975,t:"Rushmore",y:1998,s:"missing"},
+  {r:976,t:"The Celebration",y:1998,s:"missing",a:["Festen"]},
+  {r:977,t:"Buffalo '66",y:1998,s:"missing"},
+  {r:978,t:"Ring",y:1998,s:"missing",a:["Ringu"]},
+  {r:979,t:"Happiness",y:1998,s:"missing"},
+  {r:980,t:"The Thin Red Line",y:1998,s:"missing"},
+  {r:981,t:"Tetsuo",y:1989,s:"missing",a:["Tetsuo: The Iron Man"]},
+  {r:982,t:"Lock, Stock and Two Smoking Barrels",y:1998,s:"missing",a:["Lock, Stock, and Two Smoking Barrels"]},
+  {r:983,t:"Pi",y:1998,s:"missing"},
+  {r:984,t:"The Idiots",y:1998,s:"missing",a:["Idioterne"]},
+  {r:985,t:"Sombre",y:1998,s:"missing"},
+  {r:986,t:"There's Something About Mary",y:1998,s:"missing"},
+  {r:987,t:"The Big Lebowski",y:1998,s:"missing"},
+  {r:988,t:"The Blair Witch Project",y:1999,s:"missing"},
+  {r:989,t:"Being John Malkovich",y:1999,s:"missing"},
+  {r:990,t:"The Sixth Sense",y:1999,s:"missing"},
+  {r:991,t:"Three Kings",y:1999,s:"missing"},
+  {r:992,t:"Magnolia",y:1999,s:"missing"},
+  {r:993,t:"Fight Club",y:1999,s:"missing"},
+  {r:994,t:"Audition",y:1999,s:"missing",a:["Ōdishon"]},
+  {r:995,t:"American Beauty",y:1999,s:"missing"},
+  {r:996,t:"Beau Travail",y:1999,s:"missing"},
+  {r:997,t:"All About My Mother",y:1999,s:"missing",a:["Todo Sobre mi Madre"]},
+  {r:998,t:"The Matrix",y:1999,s:"missing"},
+  {r:999,t:"Taboo",y:1999,s:"missing",a:["Gohatto"]},
+  {r:1000,t:"Rosetta",y:1999,s:"missing"},
+  {r:1001,t:"The Wind Will Carry Us",y:1999,s:"missing",a:["Bād mā rā Khāhad Bord"]},
+  {r:1002,t:"Time Regained",y:1999,s:"missing",a:["Le Temps Retrouvé"]},
+  {r:1003,t:"Attack the Gas Station",y:1999,s:"missing",a:["Juyuso Seupgyeok Sageon"]},
+  {r:1004,t:"Eyes Wide Shut",y:1999,s:"missing"},
+  {r:1005,t:"The Gleaners and I",y:2000,s:"missing",a:["Les Glaneurs et la Glaneuse"]},
+  {r:1006,t:"In the Mood for Love",y:2000,s:"missing",a:["Dut Yeung Nin Wa"]},
+  {r:1007,t:"Gladiator",y:2000,s:"missing"},
+  {r:1008,t:"Kippur",y:2000,s:"missing"},
+  {r:1009,t:"Yi Yi",y:2000,s:"missing",a:["A One and a Two"]},
+  {r:1010,t:"Requiem for a Dream",y:2000,s:"missing"},
+  {r:1011,t:"Amores Perros",y:2000,s:"missing"},
+  {r:1012,t:"Memento",y:2000,s:"missing"},
+  {r:1013,t:"Crouching Tiger, Hidden Dragon",y:2000,s:"missing",a:["Wo Hu Cang Long"]},
+  {r:1014,t:"Nine Queens",y:2000,s:"missing",a:["Nueve Reinas"]},
+  {r:1015,t:"The Captive",y:2000,s:"missing",a:["La Captive"]},
+  {r:1016,t:"Ali Zaoua, Prince of the Streets",y:2000,s:"missing",a:["Ali Zaoua, Prince de la Rue"]},
+  {r:1017,t:"Meet the Parents",y:2000,s:"missing"},
+  {r:1018,t:"Signs & Wonders",y:2000,s:"missing"},
+  {r:1019,t:"Traffic",y:2000,s:"missing"},
+  {r:1020,t:"Dancer in the Dark",y:2000,s:"missing"},
+  {r:1021,t:"O Brother, Where Art Thou?",y:2000,s:"missing"},
+  {r:1022,t:"The Lord of the Rings: The Fellowship of the Ring",y:2001,s:"missing"},
+  {r:1023,t:"The Lord of the Rings: The Two Towers",y:2002,s:"missing"},
+  {r:1024,t:"The Lord of the Rings: The Return of the King",y:2003,s:"missing"},
+  {r:1025,t:"Spirited Away",y:2001,s:"missing",a:["Sen to Chihiro no Kamikakushi"]},
+  {r:1026,t:"No Man's Land",y:2001,s:"missing"},
+  {r:1027,t:"Amélie",y:2001,s:"missing",a:["Le Fabuleux Destin d' Amélie Poulain"]},
+  {r:1028,t:"What Time Is It There?",y:2001,s:"missing",a:["Ni na Bian Ji Dian"]},
+  {r:1029,t:"Y Tu Mamá También",y:2001,s:"missing",a:["Y Tu Mama Tambien"]},
+  {r:1030,t:"Kandahar",y:2001,s:"missing",a:["Safar e Ghandehar"]},
+  {r:1031,t:"The Piano Teacher",y:2001,s:"missing",a:["La Pianiste"]},
+  {r:1032,t:"The Son's Room",y:2001,s:"missing",a:["La Stanza del Figlio"]},
+  {r:1033,t:"Moulin Rouge!",y:2001,s:"missing",a:["Moulin Rouge"]},
+  {r:1034,t:"Monsoon Wedding",y:2001,s:"missing"},
+  {r:1035,t:"Fat Girl",y:2001,s:"missing",a:["A Ma Soeur!"]},
+  {r:1036,t:"Mulholland Drive",y:2001,s:"missing"},
+  {r:1037,t:"The Royal Tenenbaums",y:2001,s:"missing"},
+  {r:1038,t:"Lantana",y:2001,s:"missing"},
+  {r:1039,t:"A.I. Artificial Intelligence",y:2001,s:"missing",a:["A.I.: Artificial Intelligence"]},
+  {r:1040,t:"Gangs of New York",y:2002,s:"missing"},
+  {r:1041,t:"Russian Ark",y:2002,s:"missing",a:["Russkij Kovcheg"]},
+  {r:1042,t:"Bowling for Columbine",y:2002,s:"missing"},
+  {r:1043,t:"City of God",y:2002,s:"missing",a:["Cidade de Deus"]},
+  {r:1044,t:"Talk to Her",y:2002,s:"missing",a:["Hable Con Ella"]},
+  {r:1045,t:"The Pianist",y:2002,s:"missing"},
+  {r:1046,t:"Adaptation.",y:2002,s:"missing"},
+  {r:1047,t:"Far from Heaven",y:2002,s:"missing"},
+  {r:1048,t:"Chicago",y:2002,s:"missing"},
+  {r:1049,t:"Hero",y:2002,s:"missing",a:["Ying Xiong"]},
+  {r:1050,t:"Distant",y:2002,s:"missing",a:["Uzak"]},
+  {r:1051,t:"Rabbit-Proof Fence",y:2002,s:"missing"},
+  {r:1052,t:"Irreversible",y:2002,s:"missing"},
+  {r:1053,t:"Bus 174",y:2002,s:"missing"},
+  {r:1054,t:"Elephant",y:2003,s:"missing"},
+  {r:1055,t:"Aileen: Life and Death of a Serial Killer",y:2003,s:"missing"},
+  {r:1056,t:"Oldboy",y:2003,s:"missing"},
+  {r:1057,t:"Good Bye, Lenin!",y:2003,s:"missing"},
+  {r:1058,t:"Osama",y:2003,s:"missing"},
+  {r:1059,t:"The Barbarian Invasions",y:2003,s:"missing",a:["Les Invasions Barbares"]},
+  {r:1060,t:"Kill Bill: Vol. 1",y:2003,s:"missing",a:["Kill Bill, Vol. 1"]},
+  {r:1061,t:"The Best of Youth",y:2003,s:"missing",a:["La Meglio Gioventù"]},
+  {r:1062,t:"Lost in Translation",y:2003,s:"missing"},
+  {r:1063,t:"Head-On",y:2004,s:"missing",a:["Gegen Die Wand"]},
+  {r:1064,t:"The Consequences of Love",y:2004,s:"missing",a:["Le Conseguenze dell'Amore"]},
+  {r:1065,t:"Moolaadé",y:2004,s:"missing"},
+  {r:1066,t:"Downfall",y:2004,s:"missing",a:["Der Untergang"]},
+  {r:1067,t:"Fahrenheit 9/11",y:2004,s:"missing"},
+  {r:1068,t:"The Passion of the Christ",y:2004,s:"missing"},
+  {r:1069,t:"Collateral",y:2004,s:"missing"},
+  {r:1070,t:"The Aviator",y:2004,s:"missing"},
+  {r:1071,t:"Million Dollar Baby",y:2004,s:"missing"},
+  {r:1072,t:"3-Iron",y:2004,s:"missing",a:["Bin-Jip"]},
+  {r:1073,t:"Crash",y:2004,s:"missing"},
+  {r:1074,t:"Sideways",y:2004,s:"missing"},
+  {r:1075,t:"A Very Long Engagement",y:2004,s:"missing",a:["Un Long Dimanche de Fiançailles"]},
+  {r:1076,t:"Tsotsi",y:2005,s:"missing"},
+  {r:1077,t:"Brokeback Mountain",y:2005,s:"missing"},
+  {r:1078,t:"Go, See, and Become",y:2005,s:"missing",a:["Va, Vis et Deviens", "Live and Become"]},
+  {r:1079,t:"Paradise Now",y:2005,s:"missing"},
+  {r:1080,t:"Caché",y:2005,s:"missing",a:["Hidden"]},
+  {r:1081,t:"The Constant Gardener",y:2005,s:"missing"},
+  {r:1082,t:"Pan's Labyrinth",y:2006,s:"missing",a:["El Laberinto del Fauno"]},
+  {r:1083,t:"The Lives of Others",y:2006,s:"missing",a:["Das Leben der Anderen"]},
+  {r:1084,t:"Apocalypto",y:2006,s:"missing"},
+  {r:1085,t:"Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan",y:2006,s:"missing",a:["Borat"]},
+  {r:1086,t:"Once",y:2006,s:"missing"},
+  {r:1087,t:"The Queen",y:2006,s:"missing"},
+  {r:1088,t:"The Host",y:2006,s:"missing",a:["Gwoemul"]},
+  {r:1089,t:"The Prestige",y:2006,s:"missing"},
+  {r:1090,t:"Children of Men",y:2006,s:"missing"},
+  {r:1091,t:"United 93",y:2006,s:"missing"},
+  {r:1092,t:"The Last King of Scotland",y:2006,s:"missing"},
+  {r:1093,t:"Babel",y:2006,s:"missing"},
+  {r:1094,t:"Volver",y:2006,s:"missing"},
+  {r:1095,t:"Little Miss Sunshine",y:2006,s:"missing"},
+  {r:1096,t:"The Departed",y:2006,s:"missing"},
+  {r:1097,t:"Paranormal Activity",y:2007,s:"missing"},
+  {r:1098,t:"There Will Be Blood",y:2007,s:"missing"},
+  {r:1099,t:"La Vie en Rose",y:2007,s:"missing"},
+  {r:1100,t:"Into the Wild",y:2007,s:"missing"},
+  {r:1101,t:"Atonement",y:2007,s:"missing"},
+  {r:1102,t:"Surfwise",y:2007,s:"missing"},
+  {r:1103,t:"The Bourne Ultimatum",y:2007,s:"missing"},
+  {r:1104,t:"No Country for Old Men",y:2007,s:"missing"},
+  {r:1105,t:"The Diving Bell and the Butterfly",y:2007,s:"missing",a:["Le Scaphandre et le Papillon"]},
+  {r:1106,t:"The Hurt Locker",y:2008,s:"missing"},
+  {r:1107,t:"Slumdog Millionaire",y:2008,s:"missing"},
+  {r:1108,t:"The Dark Knight",y:2008,s:"missing"},
+  {r:1109,t:"Let the Right One In",y:2008,s:"missing",a:["Låt den Rätte Komma In"]},
+  {r:1110,t:"WALL·E",y:2008,s:"missing",a:["Wall-E"]},
+  {r:1111,t:"The Good, the Bad, the Weird",y:2008,s:"missing",a:["Joheun nom Nabbeun nom Isanghan nom"]},
+  {r:1112,t:"The Wrestler",y:2008,s:"missing"},
+  {r:1113,t:"The Curious Case of Benjamin Button",y:2008,s:"missing"},
+  {r:1114,t:"The Class",y:2008,s:"missing",a:["Entre les Murs"]},
+  {r:1115,t:"Anvil! The Story of Anvil",y:2008,s:"missing"},
+  {r:1116,t:"Gomorrah",y:2008,s:"missing",a:["Gomorra"]},
+  {r:1117,t:"District 9",y:2009,s:"missing"},
+  {r:1118,t:"Avatar",y:2009,s:"missing"},
+  {r:1119,t:"An Education",y:2009,s:"missing"},
+  {r:1120,t:"Precious: Based on the Novel \"Push\" by Sapphire",y:2009,s:"missing",a:["Precious"]},
+  {r:1121,t:"The Hangover",y:2009,s:"missing"},
+  {r:1122,t:"In the Loop",y:2009,s:"missing"},
+  {r:1123,t:"Fish Tank",y:2009,s:"missing"},
+  {r:1124,t:"Inglourious Basterds",y:2009,s:"missing"},
+  {r:1125,t:"The White Ribbon",y:2009,s:"missing",a:["Das Weisse Band: Eine Deutsche Kindergeschichte"]},
+  {r:1126,t:"Nostalgia for the Light",y:2010,s:"missing",a:["Nostalgia de la luz"]},
+  {r:1127,t:"Black Swan",y:2010,s:"missing"},
+  {r:1128,t:"Inception",y:2010,s:"missing"},
+  {r:1129,t:"The Social Network",y:2010,s:"missing"},
+  {r:1130,t:"Monsters",y:2010,s:"missing"},
+  {r:1131,t:"Four Lions",y:2010,s:"missing"},
+  {r:1132,t:"True Grit",y:2010,s:"missing"},
+  {r:1133,t:"Of Gods and Men",y:2010,s:"missing",a:["Des Hommes et des Dieux"]},
+  {r:1134,t:"The King's Speech",y:2010,s:"missing"},
+  {r:1135,t:"Senna",y:2010,s:"missing"},
+  {r:1136,t:"Cave of Forgotten Dreams",y:2010,s:"missing"},
+  {r:1137,t:"The Artist",y:2011,s:"missing"},
+  {r:1138,t:"A Separation",y:2011,s:"missing",a:["Jodái-e Náder az Simin"]},
+  {r:1139,t:"The Girl with the Dragon Tattoo",y:2011,s:"missing"},
+  {r:1140,t:"War Horse",y:2011,s:"missing"},
+  {r:1141,t:"The Descendants",y:2011,s:"missing"},
+  {r:1142,t:"Hugo",y:2011,s:"missing"},
+  {r:1143,t:"Le Havre",y:2011,s:"missing"},
+  {r:1144,t:"Shame",y:2011,s:"missing"},
+  {r:1145,t:"Tinker Tailor Soldier Spy",y:2011,s:"missing"},
+  {r:1146,t:"Bridesmaids",y:2011,s:"missing"},
+  {r:1147,t:"The Tree of Life",y:2011,s:"missing"},
+  {r:1148,t:"The Kid with a Bike",y:2011,s:"missing",a:["Le Gamin au vélo"]},
+  {r:1149,t:"Drive",y:2011,s:"missing"},
+  {r:1150,t:"The Cabin in the Woods",y:2011,s:"missing"},
+  {r:1151,t:"Wadjda",y:2012,s:"missing"},
+  {r:1152,t:"Lincoln",y:2012,s:"missing"},
+  {r:1153,t:"Life of Pi",y:2012,s:"missing"},
+  {r:1154,t:"Les Misérables",y:2012,s:"missing"},
+  {r:1155,t:"Argo",y:2012,s:"missing"},
+  {r:1156,t:"Skyfall",y:2012,s:"missing"},
+  {r:1157,t:"Blancanieves",y:2012,s:"missing"},
+  {r:1158,t:"Amour",y:2012,s:"missing"},
+  {r:1159,t:"Django Unchained",y:2012,s:"missing"},
+  {r:1160,t:"The Act of Killing",y:2012,s:"missing"},
+  {r:1161,t:"Gravity",y:2013,s:"missing"},
+  {r:1162,t:"The Great Beauty",y:2013,s:"missing",a:["La grande bellezza"]},
+  {r:1163,t:"Blue Is the Warmest Color",y:2013,s:"missing",a:["La vie d'Adèle - Chapitres 1 et 2"]},
+  {r:1164,t:"12 Years a Slave",y:2013,s:"missing"},
+  {r:1165,t:"Nebraska",y:2013,s:"missing"},
+  {r:1166,t:"Inside Llewyn Davis",y:2013,s:"missing"},
+  {r:1167,t:"American Hustle",y:2013,s:"missing"},
+  {r:1168,t:"A Touch of Sin",y:2013,s:"missing",a:["Tian zhu ding"]},
+  {r:1169,t:"Ida",y:2013,s:"missing"},
+  {r:1170,t:"Under the Skin",y:2013,s:"missing"},
+  {r:1171,t:"The Wolf of Wall Street",y:2013,s:"missing"},
+  {r:1172,t:"Leviathan",y:2014,s:"missing",a:["Leviafan"]},
+  {r:1173,t:"Boyhood",y:2014,s:"missing"},
+  {r:1174,t:"Birdman or (The Unexpected Virtue of Ignorance)",y:2014,s:"missing",a:["Birdman: Or (The Unexpected Virtue of Ignorance)", "Birdman"]},
+  {r:1175,t:"Whiplash",y:2014,s:"missing"},
+  {r:1176,t:"The Grand Budapest Hotel",y:2014,s:"missing"},
+  {r:1177,t:"Citizenfour",y:2014,s:"missing"},
+  {r:1178,t:"Guardians of the Galaxy",y:2014,s:"missing"},
+  {r:1179,t:"The Theory of Everything",y:2014,s:"missing"},
+  {r:1180,t:"The Look of Silence",y:2014,s:"missing"},
+  {r:1181,t:"Star Wars: The Force Awakens",y:2015,s:"missing"},
+  {r:1182,t:"The Revenant",y:2015,s:"missing"},
+  {r:1183,t:"Son of Saul",y:2015,s:"missing",a:["Saul fia"]},
+  {r:1184,t:"Bridge of Spies",y:2015,s:"missing"},
+  {r:1185,t:"The Big Short",y:2015,s:"missing"},
+  {r:1186,t:"Spotlight",y:2015,s:"missing"},
+  {r:1187,t:"Tangerine",y:2015,s:"missing"},
+  {r:1188,t:"Straight Outta Compton",y:2015,s:"missing"},
+  {r:1189,t:"Mad Max: Fury Road",y:2015,s:"missing"},
+  {r:1190,t:"Victoria",y:2015,s:"missing"},
+  {r:1191,t:"La La Land",y:2016,s:"missing"},
+  {r:1192,t:"Hell or High Water",y:2016,s:"missing"},
+  {r:1193,t:"The Jungle Book",y:2016,s:"missing"},
+  {r:1194,t:"Jackie",y:2016,s:"missing"},
+  {r:1195,t:"Toni Erdmann",y:2016,s:"missing"},
+  {r:1196,t:"Under the Shadow",y:2016,s:"missing"},
+  {r:1197,t:"Manchester by the Sea",y:2016,s:"missing"},
+  {r:1198,t:"I, Daniel Blake",y:2016,s:"missing"},
+  {r:1199,t:"13th",y:2016,s:"missing"},
+  {r:1200,t:"Arrival",y:2016,s:"missing"},
+  {r:1201,t:"Moonlight",y:2016,s:"missing"},
+  {r:1202,t:"The Handmaiden",y:2016,s:"missing"},
+  {r:1203,t:"Dawson City: Frozen Time",y:2016,s:"missing"},
+  {r:1204,t:"Lady Macbeth",y:2016,s:"missing"},
+  {r:1205,t:"Lady Bird",y:2017,s:"missing"},
+  {r:1206,t:"The Shape of Water",y:2017,s:"missing"},
+  {r:1207,t:"Three Billboards Outside Ebbing, Missouri",y:2017,s:"missing"},
+  {r:1208,t:"Call Me by Your Name",y:2017,s:"missing"},
+  {r:1209,t:"Mother!",y:2017,s:"missing"},
+  {r:1210,t:"Blade Runner 2049",y:2017,s:"missing"},
+  {r:1211,t:"Get Out",y:2017,s:"missing"},
+  {r:1212,t:"Phantom Thread",y:2017,s:"missing"},
+  {r:1213,t:"The Greatest Showman",y:2017,s:"missing"},
+  {r:1214,t:"Black Panther",y:2018,s:"missing"},
+  {r:1215,t:"Crazy Rich Asians",y:2018,s:"missing"},
+  {r:1216,t:"Capernaum",y:2018,s:"missing"},
+  {r:1217,t:"A Star is Born",y:2018,s:"missing"},
+  {r:1218,t:"Avengers: Infinity War",y:2018,s:"missing"},
+  {r:1219,t:"Roma",y:2018,s:"missing"},
+  {r:1220,t:"Hereditary",y:2018,s:"missing"},
+  {r:1221,t:"The Favourite",y:2018,s:"missing"},
+  {r:1222,t:"Sorry to Bother You",y:2018,s:"missing"},
+  {r:1223,t:"Vice",y:2018,s:"missing"},
+  {r:1224,t:"BlacKkKlansman",y:2018,s:"missing"},
+  {r:1225,t:"Avengers: Endgame",y:2019,s:"missing"},
+  {r:1226,t:"Portrait of a Lady on Fire",y:2019,s:"missing",a:["Portrait de la jeune fille en feu"]},
+  {r:1227,t:"For Sama",y:2019,s:"missing"},
+  {r:1228,t:"Booksmart",y:2019,s:"missing"},
+  {r:1229,t:"Once Upon a Time... in Hollywood",y:2019,s:"missing",a:["Once Upon a Time in Hollywood"]},
+  {r:1230,t:"The Farewell",y:2019,s:"missing"},
+  {r:1231,t:"Joker",y:2019,s:"missing"},
+  {r:1232,t:"Parasite",y:2019,s:"missing"},
+  {r:1233,t:"Monos",y:2019,s:"missing"},
+  {r:1234,t:"Little Women",y:2019,s:"missing"},
+  {r:1235,t:"The Lighthouse",y:2019,s:"missing"},
+  {r:1236,t:"The Vast of Night",y:2019,s:"missing"},
+  {r:1237,t:"The Assistant",y:2019,s:"missing"},
+  {r:1238,t:"Rocks",y:2019,s:"missing"},
+  {r:1239,t:"Saint Maud",y:2019,s:"missing"},
+  {r:1240,t:"Tenet",y:2020,s:"missing"},
+  {r:1241,t:"Ma Rainey's Black Bottom",y:2020,s:"missing"},
+  {r:1242,t:"Soul",y:2020,s:"missing"},
+  {r:1243,t:"Never Rarely Sometimes Always",y:2020,s:"missing"},
+  {r:1244,t:"Lovers Rock",y:2020,s:"missing"},
+  {r:1245,t:"Nomadland",y:2020,s:"missing"},
+  {r:1246,t:"Quo Vadis, Aida?",y:2020,s:"missing"},
+  {r:1247,t:"Drive My Car",y:2021,s:"missing"},
+  {r:1248,t:"Summer of Soul (...or, When the Revolution Could Not Be Televised)",y:2021,s:"missing"},
+  {r:1249,t:"Dune",y:2021,s:"missing"},
+  {r:1250,t:"Aftersun",y:2022,s:"missing"},
+  {r:1251,t:"RRR",y:2022,s:"missing"},
+  {r:1252,t:"Anatomy of a Fall",y:2023,s:"missing"},
+  {r:1253,t:"Barbie",y:2023,s:"missing"},
+  {r:1254,t:"Oppenheimer",y:2023,s:"missing"},
+  {r:1255,t:"The Zone of Interest",y:2023,s:"missing"},
+  {r:1256,t:"Sing Sing",y:2023,s:"missing"},
+  {r:1257,t:"Dune: Part Two",y:2024,s:"missing"},
+  {r:1258,t:"The Brutalist",y:2024,s:"missing"},
+  {r:1259,t:"Anora",y:2024,s:"missing"},
+  {r:1260,t:"One Battle After Another",y:2025,s:"missing"},
+  {r:1261,t:"Sorry, Baby",y:2025,s:"missing"},
+  {r:1262,t:"It Was Just an Accident",y:2025,s:"missing"},
+  {r:1263,t:"Sinners",y:2025,s:"missing"},
+  {r:1264,t:"Weapons",y:2025,s:"missing"},
+  {r:1265,t:"Sirāt",y:2025,s:"missing",a:["Sirat"]},
+];
+
+let currentFilter = 'all';
+let currentSort = 'rank';
+let searchQ = '';
+
+function setFilter(f) {
+  currentFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.className = 'filter-btn';
+    if(b.dataset.filter === f) b.classList.add('active-'+f);
+  });
+  render();
+}
+
+function setSort(s) {
+  currentSort = s;
+  document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('sort-'+s).classList.add('active');
+  render();
+}
+
+function onSearch() {
+  searchQ = document.getElementById('search-input').value.toLowerCase();
+  render();
+}
+
+
+let LINKS = {};
+const NK = s => (s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+const FL = f => LINKS[NK(f.t)+'|'+f.y] || {};
+const lbUrl = f => f.lb || FL(f).lb || ('https://letterboxd.com/search/films/'+encodeURIComponent(f.t+' '+f.y)+'/');
+const imdbUrl = f => { const i = f.imdb_id || FL(f).imdb; return i ? 'https://www.imdb.com/title/'+i+'/' : 'https://www.imdb.com/find/?q='+encodeURIComponent(f.t+' '+f.y); };
+function openIMDb(e, el){ e.preventDefault(); e.stopPropagation(); window.open(el.dataset.u, '_blank', 'noopener'); return false; }
+fetch('film_links.json').then(r => r.ok ? r.json() : {}).then(j => { LINKS = j; render(); }).catch(() => {});
+function render() {
+  let films = [...FILMS];
+  if(currentFilter !== 'all') films = films.filter(f => f.s === currentFilter);
+  if(searchQ) films = films.filter(f => f.t.toLowerCase().includes(searchQ) || (f.a||[]).some(x=>x.toLowerCase().includes(searchQ)) || String(f.y).includes(searchQ));
+  if(currentSort === 'year') films.sort((a,b) => a.y - b.y);
+  else if(currentSort === 'title') films.sort((a,b) => a.t.localeCompare(b.t));
+  else films.sort((a,b) => a.r - b.r);
+
+  const listEl = document.getElementById('film-list');
+  document.getElementById('count-display').textContent =
+    `Showing ${films.length} film${films.length!==1?'s':''}`;
+
+  listEl.innerHTML = films.map(f => `
+    <a class="film-item status-${f.s}" href="${lbUrl(f)}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+      <span class="rank">${f.r}</span>
+      <div class="film-info">
+        <div class="film-title${f.s==='missing'?' faded':''}">${f.t}</div>
+        <div class="film-year">${f.y}</div>
+      </div>
+      <span class="imdb-chip" data-u="${imdbUrl(f)}" onclick="return openIMDb(event,this)">IMDb</span> <span class="status-pill pill-${f.s}">${f.s==='owned'?'owned':f.s==='wishlist'?'wish':'—'}</span>
+    </a>
+  `).join('');
+}
+
+render();
+
+// ===== Auto-sync statuses & links from collection.json / wishlist.json =====
+function lbNorm(s){return (s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]/g,'').replace(/colour/g,'color').replace(/neighbour/g,'neighbor');}
+const LB_ALIAS={dreams:'akirakurosawasdreams',jointsecurityarea:'jsajointsecurityarea'};
+function lbCounts(){
+  const nOwned=FILMS.filter(f=>f.s==='owned').length,nWish=FILMS.filter(f=>f.s==='wishlist').length,nMiss=FILMS.filter(f=>f.s==='missing').length;
+  document.getElementById('count-owned').textContent=nOwned;
+  document.getElementById('count-wishlist').textContent=nWish;
+  document.getElementById('count-missing').textContent=nMiss;
+  document.getElementById('count-pct').textContent=Math.round(nOwned/FILMS.length*100)+'%';
+  document.getElementById('prog-owned').style.width=(nOwned/FILMS.length*100)+'%';
+  document.getElementById('prog-wishlist').style.width=(nWish/FILMS.length*100)+'%';
+}
+async function lbSync(){
+  try{
+    const [c,w]=await Promise.all(['collection.json','wishlist.json'].map(u=>fetch(u+'?v='+Date.now()).then(r=>{if(!r.ok)throw 0;return r.json();})));
+    const idx=a=>(Array.isArray(a)?a:(a.films||[])).map(d=>({n:lbNorm(d.title),y:d.year,lb:d.lb}));
+    const ci=idx(c),wi=idx(w);
+    const find=(list,f)=>{for(const nm of [f.t].concat(f.a||[])){const k=LB_ALIAS[lbNorm(nm)]||lbNorm(nm);const d=list.find(d=>(d.n===k||(k.length>=10&&d.n.startsWith(k)))&&Math.abs(d.y-f.y)<=2);if(d)return d;}return null;};
+    FILMS.forEach(f=>{const o=find(ci,f),wl=o?null:find(wi,f);f.s=o?'owned':wl?'wishlist':'missing';f.lb=(o||wl||{}).lb||f.lb;});
+    lbCounts();render();
+  }catch(e){console.warn('m1001 sync skipped (using built-in statuses)',e);}
+}
+lbSync();
+document.addEventListener("visibilitychange",()=>{document.hidden||lbSync()});
+window.addEventListener("pageshow",e=>{e.persisted&&lbSync()});
+if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').then(r=>r.update()).catch(()=>{}));
+lbCounts();
+</script>
+<style>#ownFab{bottom:calc(16px + env(safe-area-inset-bottom))}</style>
+<script>
+(function(){
+  function go(f){
+    var b=document.querySelector("[onclick*=\"setFilter('all'\"]"); if(b) b.click();
+    var el=document.getElementById('search-input'); if(el){el.value=f.title; onSearch();}
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  window.OWN_ADAPTER={
+    getTop500:function(){return typeof FILMS!=='undefined'?FILMS.map(function(f){return{title:f.t,year:f.y,rank:f.r,status:f.s}}):[]},
+    alias:typeof LB_ALIAS!=='undefined'?LB_ALIAS:{},
+    openOwned:go,openWanted:go,openTop:go
+  };
+})();
+</script>
+<script src="ownsearch.js"></script>
+<script>
+/* ===== On Your Wishlist + Top Gaps panel (shared across list pages) ===== */
+(function(){
+var wlP=null,lastKey='';
+function getWl(){return wlP||(wlP=fetch('wishlist.json?v='+Date.now()).then(function(r){return r.json()}).then(function(d){return Array.isArray(d)?d:(d&&d.films)||[]}).catch(function(){return []}))}
+var nz=function(s){return (s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'')};
+var esc=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+function films(){return typeof curFilms==='function'?curFilms():FILMS}
+function build(wl){
+  var F=films(),wm=new Map();wl.forEach(function(w){if(w.title)wm.set(nz(w.title),w)});
+  var onW=F.filter(function(f){return f.s==='wishlist'}).sort(function(a,b){return a.r-b.r});
+  var top=Math.min(100,Math.ceil(F.length/5));
+  var gaps=window.NO_GAPS?[]:F.filter(function(f){return f.s==='missing'&&f.r<=top}).sort(function(a,b){return a.r-b.r});
+  if(!onW.length&&!gaps.length)return '';
+  function cardOf(f,red){
+    var w=wm.get(nz(f.t)),p=w&&w.poster,sc=w&&+w.lb_score?(+w.lb_score).toFixed(1):'';
+    var url=(w&&w.lb)||('https://letterboxd.com/search/'+encodeURIComponent(f.t)+'/');
+    var img=p?'<img src="'+esc(p)+'" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="">':'<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--text-dim);padding:3px;text-align:center">'+esc(f.t)+'</div>';
+    var bg=red?'rgba(224,85,85,.85);color:#fff':'rgba(240,208,128,.85);color:#111';
+    return '<a href="'+esc(url)+'" target="_blank" rel="noopener" style="flex:0 0 72px;text-decoration:none"><div style="position:relative;width:72px;height:108px;border-radius:6px;overflow:hidden;background:var(--surface2);margin-bottom:5px;border:1px solid var(--border)">'+img+'<div style="position:absolute;top:3px;right:3px;background:'+bg+';border-radius:3px;font-size:7px;font-weight:800;padding:1px 4px">#'+f.r+'</div></div><div style="font-size:9px;color:var(--text);line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">'+esc(f.t)+'</div>'+(sc?'<div style="font-size:9px;color:var(--wishlist)">★ '+sc+'</div>':'<div style="font-size:9px;color:var(--text-dim)">'+f.y+'</div>')+'</a>'}
+  var row=function(a,r){return '<div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none">'+a.map(function(f){return cardOf(f,r)}).join('')+'</div>'};
+  var h='';
+  if(onW.length)h+='<div style="margin-bottom:28px"><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--wishlist);margin-bottom:4px">On Your Wishlist · '+onW.length+' film'+(onW.length!==1?'s':'')+'</div><div style="font-size:12px;color:var(--text-dim);margin-bottom:12px">Films from this list you already want — sorted by rank</div>'+row(onW,false)+'</div>';
+  if(gaps.length)h+='<div><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--missing);margin-bottom:4px">Top '+top+' Gaps · '+gaps.length+' film'+(gaps.length!==1?'s':'')+'</div><div style="font-size:12px;color:var(--text-dim);margin-bottom:12px">Highly ranked films not owned or wishlisted</div>'+row(gaps,true)+'</div>';
+  return h;
+}
+function gaps(){
+  try{
+    var F=films(),k=F.length+':'+F.filter(function(f){return f.s==='wishlist'}).length+':'+F.filter(function(f){return f.s==='missing'}).length+':'+F[0].t;
+    if(k===lastKey)return;lastKey=k;
+    getWl().then(function(wl){
+      var p=document.getElementById('gaps-panel');
+      if(!p){var l=document.getElementById('film-list');if(!l)return;p=document.createElement('div');p.id='gaps-panel';p.style.padding='1.5rem 1rem 6rem';l.insertAdjacentElement('afterend',p)}
+      p.innerHTML=build(wl);
+    });
+  }catch(e){console.warn('gaps',e)}
+}
+var _r=render;
+render=function(){var r=_r.apply(this,arguments);gaps();return r};
+gaps();
+})();
+</script>
+</body>
+</html>
