@@ -1,5 +1,38 @@
 [
   {
+    "title": "The Dull-Ice Flower",
+    "year": 1989,
+    "decade": "1980s",
+    "director": "Yang Li-kuo",
+    "country": "Taiwan",
+    "genre": "Drama, Family",
+    "runtime": 100,
+    "poster": "https://image.tmdb.org/t/p/w342/iczUBXzquHaxAb2w2G7eHUJmuUG.jpg",
+    "imdb_id": "tt0097791",
+    "tmdb_id": 316880,
+    "synopsis": "Ku Ah-ming is a 4th grader at Chungshan Elementary School in Shuiyu Township, Taiwan. Despite being not very good in most subjects at school, he is very talented in art and has a great imagination, though most teachers don't know what he's expressing in his artwork.",
+    "cast": [
+      "Wong Kwan-Yuen",
+      "Lee Suk-Ching",
+      "Chan Chung-Yung"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Dull Ice Flower",
+      "Lu bing hua",
+      "魯冰花",
+      "로빙화"
+    ],
+    "lb": "https://letterboxd.com/tmdb/316880/",
+    "imdb_score": 8.3,
+    "score": 8.3,
+    "id": "1792207074721tmlf2k46tr",
+    "priority": "High",
+    "owned": false,
+    "added": 1792207074721,
+    "has4k": false
+  },
+  {
     "title": "24 Hour Party People",
     "year": 2002,
     "decade": "2000s",
