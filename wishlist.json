@@ -1,5 +1,44 @@
 [
   {
+    "title": "Rosemary's Baby",
+    "year": 1968,
+    "decade": "1960s",
+    "director": "Roman Polanski",
+    "country": "United States",
+    "genre": "Drama, Horror, Thriller",
+    "runtime": 138,
+    "poster": "https://image.tmdb.org/t/p/w342/kKvQ0pyMnJweWVz2Pwbyeivq5Zk.jpg",
+    "imdb_id": "tt0063522",
+    "tmdb_id": 805,
+    "synopsis": "A young couple, Rosemary and Guy, moves into an infamous New York apartment building, known by frightening legends and mysterious events, with the purpose of starting a family.",
+    "cast": [
+      "Mia Farrow",
+      "John Cassavetes",
+      "Ruth Gordon"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "La llavor del diable",
+      "La semilla del diablo",
+      "Le bébé de Rosemary",
+      "Rosemary's Baby: Das zweite Gesicht",
+      "Rosemary's Baby: Im Teufelskreis",
+      "Rosemary's Baby: Satan lebt!",
+      "Rosemarys baby",
+      "Rozumari no akachan"
+    ],
+    "lb": "https://letterboxd.com/tmdb/805/",
+    "imdb_score": 8,
+    "rt_score": 0.97,
+    "mc_score": 96,
+    "score": 9.1,
+    "id": "1792402279278ay28p04iqip",
+    "priority": "High",
+    "owned": false,
+    "added": 1792402279278,
+    "has4k": false
+  },
+  {
     "title": "Annie Hall",
     "year": 1977,
     "decade": "1970s",
