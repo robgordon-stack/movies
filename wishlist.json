@@ -1,5 +1,40 @@
 [
   {
+    "title": "The Quick and the Dead",
+    "year": 1995,
+    "decade": "1990s",
+    "director": "Sam Raimi",
+    "country": "United States",
+    "genre": "Western",
+    "runtime": 107,
+    "poster": "https://image.tmdb.org/t/p/w342/jhEmrXJpP6F3cqwyLjvgBgxxxFA.jpg",
+    "imdb_id": "tt0114214",
+    "tmdb_id": 12106,
+    "synopsis": "A mysterious woman comes to compete in a quick-draw elimination tournament, in a town taken over by a notorious gunman.",
+    "cast": [
+      "Sharon Stone",
+      "Gene Hackman",
+      "Russell Crowe"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Mort Ou Vif: Duel à Redemption",
+      "Бързата и смъртта",
+      "致命的快感",
+      "风舞狂沙"
+    ],
+    "lb": "https://letterboxd.com/tmdb/12106/",
+    "imdb_score": 6.5,
+    "rt_score": 0.62,
+    "mc_score": 49,
+    "score": 5.9,
+    "id": "1793181562007cclgcs7xw5v",
+    "priority": "Someday",
+    "owned": false,
+    "added": 1793181562007,
+    "has4k": false
+  },
+  {
     "title": "13 Assassins",
     "year": 2010,
     "decade": "2010s",
