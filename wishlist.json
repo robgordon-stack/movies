@@ -1,5 +1,43 @@
 [
   {
+    "title": "To Wong Foo, Thanks for Everything! Julie Newmar",
+    "year": 1995,
+    "decade": "1990s",
+    "director": "Beeban Kidron",
+    "country": "United States",
+    "genre": "Comedy, Drama",
+    "runtime": 108,
+    "poster": "https://image.tmdb.org/t/p/w342/8bkJiI6N8wDxAtQ49bLUt0qCBII.jpg",
+    "imdb_id": "tt0114682",
+    "tmdb_id": 9090,
+    "synopsis": "Veteran drag queens Vida Boheme and Noxeema Jackson take novice Chi-Chi Rodriguez under their wing on a madcap road trip across the country to compete in the Drag Queen of America pageant in Los Angeles.",
+    "cast": [
+      "Patrick Swayze",
+      "Wesley Snipes",
+      "John Leguizamo"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "3人のエンジェル",
+      "A Wong Foo, gracias por todo, Julie Newmar",
+      "Os Três Mosqueteiros do Amor",
+      "To Wong Foo, Thanks For Everything! (Julie Newmar)",
+      "Wong Foo, kösz mindent!",
+      "Вонгу Фу, с благодарностью за всё! Джули Ньюмар",
+      "สามแต๋ว เฮอะ! ใครว่าไม้ประดับ"
+    ],
+    "lb": "https://letterboxd.com/tmdb/9090/",
+    "imdb_score": 6.9,
+    "rt_score": 0.49,
+    "mc_score": 60,
+    "score": 5.9,
+    "id": "1793182211476svq7j7mqnmj",
+    "priority": "Someday",
+    "owned": false,
+    "added": 1793182211476,
+    "has4k": false
+  },
+  {
     "title": "The Quick and the Dead",
     "year": 1995,
     "decade": "1990s",
