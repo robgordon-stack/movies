@@ -1,5 +1,44 @@
 [
   {
+    "title": "13 Assassins",
+    "year": 2010,
+    "decade": "2010s",
+    "director": "Takashi Miike",
+    "country": "Japan",
+    "genre": "Adventure, Drama, Action",
+    "runtime": 141,
+    "poster": "https://image.tmdb.org/t/p/w342/yUsVsiVXUwClk4vSCx80vrdO6MV.jpg",
+    "imdb_id": "tt1436045",
+    "tmdb_id": 58857,
+    "synopsis": "A bravado period action film set at the end of Japan's feudal era in which a group of unemployed samurai are enlisted to bring down a sadistic lord and prevent him from ascending to the throne and plunging the country into a war-torn future.",
+    "cast": [
+      "Koji Yakusho",
+      "Takayuki Yamada",
+      "Yusuke Iseya"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "13인의 자객",
+      "Jûsan-nin no shikaku",
+      "Jūsannin no Shikaku",
+      "Thirteen Assassins",
+      "Trece asesinos",
+      "Тринадцать убийц",
+      "十三人の刺客",
+      "殊死血战"
+    ],
+    "lb": "https://letterboxd.com/tmdb/58857/",
+    "imdb_score": 7.5,
+    "rt_score": 0.95,
+    "mc_score": 84,
+    "score": 8.5,
+    "id": "17931815212075axifhshbkx",
+    "priority": "High",
+    "owned": false,
+    "added": 1793181521207,
+    "has4k": false
+  },
+  {
     "title": "Rosemary's Baby",
     "year": 1968,
     "decade": "1960s",
