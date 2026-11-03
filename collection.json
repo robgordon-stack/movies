@@ -47422,5 +47422,43 @@
     "format": "4K Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "The Double Life of Véronique",
+    "year": 1991,
+    "decade": "1990s",
+    "director": "Krzysztof Kieślowski",
+    "country": "France",
+    "genre": "Drama, Fantasy",
+    "runtime": 98,
+    "poster": "https://image.tmdb.org/t/p/w342/oqRyO9xrNBRaxqF9pCHHgLuaATx.jpg",
+    "imdb_id": "tt0101765",
+    "tmdb_id": 1600,
+    "synopsis": "Véronique is a beautiful young French woman who aspires to be a renowned singer; Weronika lives in Poland, has a similar career goal and looks identical to Véronique, though the two are not related. The film follows both women as they contend with the ups and downs of their individual lives, with Véronique embarking on an unusual romance with Alexandre Fabbri, a puppeteer who may be able to help her with her existential issues.",
+    "cast": [
+      "Irène Jacob",
+      "Halina Gryglaszewska",
+      "Philippe Volter"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "A Dupla Vida de Véronique",
+      "Cuộc đời đôi của Weronika",
+      "Die zwei Leben der Veronika",
+      "Dvojí život Veroniky",
+      "Futari no Beronika",
+      "La Double Vie de Véronique",
+      "La doble vida de Verònica",
+      "La doble vida de Verónica"
+    ],
+    "lb": "https://letterboxd.com/tmdb/1600/",
+    "imdb_score": 7.6,
+    "rt_score": 0.86,
+    "mc_score": 86,
+    "score": 8.3,
+    "distributor": "Curzon",
+    "format": "4K Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
