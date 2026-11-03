@@ -11514,63 +11514,6 @@
     ]
   },
   {
-    "id": "1775363589985khfxw1e5ltr",
-    "title": "Past Lives",
-    "priority": "High",
-    "added": 1775363589985,
-    "owned": false,
-    "poster": "https://image.tmdb.org/t/p/w500/k3waqVXSnvCZWfJYNtdamTgTtTA.jpg",
-    "imdb_id": "tt13238346",
-    "year": 2023,
-    "runtime": 106,
-    "genre": "Drama, Romance",
-    "country": "United States",
-    "director": "Celine Song",
-    "tmdb_id": 666277,
-    "lb": "https://letterboxd.com/film/past-lives/",
-    "notes": "4K",
-    "has4k": true,
-    "score": 9,
-    "imdb_score": 7.9,
-    "lb_score": 4.2,
-    "rt_score": 0.98,
-    "mc_score": 98,
-    "similar": [
-      {
-        "title": "Burning",
-        "year": 2018,
-        "imdb_id": "tt7282468"
-      },
-      {
-        "title": "In the Mood for Love",
-        "year": 2000,
-        "imdb_id": "tt0118694"
-      },
-      {
-        "title": "Minari",
-        "year": 2020,
-        "imdb_id": "tt10633456"
-      }
-    ],
-    "female_director": true,
-    "synopsis": "After decades apart, childhood friends Nora and Hae Sung are reunited in New York for one fateful weekend as they confront notions of destiny, love, and the choices that make a life.",
-    "cast": [
-      "Greta Lee",
-      "Teo Yoo",
-      "John Magaro"
-    ],
-    "alt_titles": [
-      "Előző életek",
-      "Geçmiş Yaşamlar",
-      "Keçmiş Yaşamlar",
-      "Mga Nakaraang Buhay",
-      "Nos vies d'avant",
-      "Past Lives (Vidas pasadas)",
-      "Vidas Pasadas",
-      "Vidas Passadas"
-    ]
-  },
-  {
     "id": "177536358998524ycdlt9b1a",
     "title": "Hiroshima Mon Amour",
     "priority": "High",
