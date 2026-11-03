@@ -1920,49 +1920,6 @@
     ]
   },
   {
-    "id": "17906752731446wzfcd9iqfj",
-    "title": "Paterson",
-    "year": 2016,
-    "director": "Jim Jarmusch",
-    "poster": "https://image.tmdb.org/t/p/w342/AuJ1ZlfqwuAr9H5Qr1U9KILylse.jpg",
-    "imdb_id": "tt5247022",
-    "genre": "Comedy, Drama, Romance",
-    "country": "France",
-    "runtime": 118,
-    "priority": "High",
-    "notes": null,
-    "owned": false,
-    "added": 1790675273144,
-    "imdb_score": 7.3,
-    "rt_score": 0.96,
-    "mc_score": 90,
-    "score": 8.4,
-    "tmdb_id": 370755,
-    "synopsis": "A week in the life of Paterson, a poet bus driver, and his wife Laura, a very creative artist, who live in Paterson, New Jersey, hometown of many famous poets and artists.",
-    "cast": [
-      "Adam Driver",
-      "Golshifteh Farahani",
-      "Rizwan Manji"
-    ],
-    "female_director": false,
-    "lb": "https://letterboxd.com/film/paterson/",
-    "lb_score": 3.89,
-    "similar": [
-      {
-        "title": "Only Lovers Left Alive",
-        "year": 2013
-      },
-      {
-        "title": "Columbus",
-        "year": 2017
-      },
-      {
-        "title": "Certain Women",
-        "year": 2016
-      }
-    ]
-  },
-  {
     "id": "1790675252346xvnh47ftsir",
     "title": "Meek's Cutoff",
     "year": 2010,
