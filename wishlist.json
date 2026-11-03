@@ -15784,58 +15784,6 @@
     ]
   },
   {
-    "title": "The Double Life of Véronique",
-    "year": 1991,
-    "director": "Krzysztof Kieślowski",
-    "poster": "https://image.tmdb.org/t/p/w342/oqRyO9xrNBRaxqF9pCHHgLuaATx.jpg",
-    "imdb_id": "tt0101765",
-    "genre": "Drama, Mystery, Romance",
-    "country": "France",
-    "runtime": 98,
-    "priority": "Someday",
-    "notes": null,
-    "owned": false,
-    "has4k": false,
-    "tmdb_id": 1600,
-    "lb": "https://letterboxd.com/film/the-double-life-of-veronique/",
-    "score": 8.7,
-    "imdb_score": 8.1,
-    "lb_score": 4.3,
-    "rt_score": 0.93,
-    "distributor": "Criterion",
-    "similar": [
-      {
-        "title": "Three Colors: Blue",
-        "year": 1993,
-        "imdb_id": "tt0108394"
-      },
-      {
-        "title": "Blind Chance",
-        "year": 1987,
-        "imdb_id": "tt0093061"
-      }
-    ],
-    "id": "1777199999187xf9wd7mcqi",
-    "added": 1777199999187,
-    "female_director": false,
-    "synopsis": "Véronique is a beautiful young French woman who aspires to be a renowned singer; Weronika lives in Poland, has a similar career goal and looks identical to Véronique, though the two are not related. The film follows both women as they contend with the ups and downs of their individual lives, with Véronique embarking on an unusual romance with Alexandre Fabbri, a puppeteer who may be able to help her with her existential issues.",
-    "cast": [
-      "Irène Jacob",
-      "Halina Gryglaszewska",
-      "Philippe Volter"
-    ],
-    "alt_titles": [
-      "A Dupla Vida de Véronique",
-      "Cuộc đời đôi của Weronika",
-      "Die zwei Leben der Veronika",
-      "Dvojí život Veroniky",
-      "Futari no Beronika",
-      "La Double Vie de Véronique",
-      "La doble vida de Verònica",
-      "La doble vida de Verónica"
-    ]
-  },
-  {
     "title": "My Dinner with Andre",
     "year": 1981,
     "director": "Louis Malle",
