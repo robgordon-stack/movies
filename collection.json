@@ -47244,5 +47244,43 @@
     "format": "Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "Fantastic Mr. Fox",
+    "year": 2009,
+    "decade": "2000s",
+    "director": "Wes Anderson",
+    "country": "Usa",
+    "genre": "Adventure, Animation, Comedy, Family",
+    "runtime": 87,
+    "poster": "https://image.tmdb.org/t/p/w342/bOVr292mwn3jxr1e0NmUPM1rcjo.jpg",
+    "imdb_id": "tt0432283",
+    "tmdb_id": 10315,
+    "synopsis": "The Fantastic Mr. Fox, bored with his current life, plans a heist against the three local farmers. The farmers, tired of sharing their chickens with the sly fox, seek revenge against him and his family.",
+    "cast": [
+      "George Clooney",
+      "Meryl Streep",
+      "Jason Schwartzman"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "A Fantasztikus Róka úr",
+      "Le Fantastique Mr. Fox",
+      "Möhtəşəm Cənab Tülkü",
+      "O Fantástico Senhor Raposo",
+      "O Fantástico Sr. Raposo",
+      "O apithanos kyrios Fox",
+      "Бесподобный мистер Фокс",
+      "Фантастични господин Лисац"
+    ],
+    "lb": "https://letterboxd.com/tmdb/10315/",
+    "imdb_score": 7.9,
+    "rt_score": 0.93,
+    "mc_score": 83,
+    "score": 8.5,
+    "distributor": "Criterion Collection",
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
