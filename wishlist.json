@@ -8613,59 +8613,6 @@
     ]
   },
   {
-    "id": "17753640833181f8t6jjg3du",
-    "title": "Fantastic Mr. Fox",
-    "priority": "High",
-    "added": 1775364083318,
-    "owned": false,
-    "poster": "https://image.tmdb.org/t/p/w500/euZyZb6iGreujYKrGyZHRddhUYh.jpg",
-    "imdb_id": "tt0432283",
-    "year": 2009,
-    "runtime": 87,
-    "genre": "Adventure, Animation, Comedy, Family",
-    "country": "United States",
-    "director": "Wes Anderson",
-    "tmdb_id": 10315,
-    "lb": "https://letterboxd.com/film/fantastic-mr-fox/",
-    "notes": "Criterion",
-    "has4k": false,
-    "distributor": "Criterion",
-    "score": 8.4,
-    "imdb_score": 7.9,
-    "lb_score": 4,
-    "rt_score": 0.93,
-    "mc_score": 83,
-    "similar": [
-      {
-        "title": "Isle of Dogs",
-        "year": 2018,
-        "imdb_id": "tt5104604"
-      },
-      {
-        "title": "James and the Giant Peach",
-        "year": 1996,
-        "imdb_id": "tt0116683"
-      }
-    ],
-    "female_director": false,
-    "synopsis": "The Fantastic Mr. Fox, bored with his current life, plans a heist against the three local farmers. The farmers, tired of sharing their chickens with the sly fox, seek revenge against him and his family.",
-    "cast": [
-      "George Clooney",
-      "Meryl Streep",
-      "Jason Schwartzman"
-    ],
-    "alt_titles": [
-      "A Fantasztikus Róka úr",
-      "Le Fantastique Mr. Fox",
-      "Möhtəşəm Cənab Tülkü",
-      "O Fantástico Senhor Raposo",
-      "O Fantástico Sr. Raposo",
-      "O apithanos kyrios Fox",
-      "Бесподобный мистер Фокс",
-      "Фантастични господин Лисац"
-    ]
-  },
-  {
     "id": "17753640833189s8zvmbze3m",
     "title": "Werckmeister Harmonies",
     "priority": "Someday",
