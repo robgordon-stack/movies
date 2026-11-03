@@ -47384,5 +47384,43 @@
     "format": "Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "Breaking the Waves",
+    "year": 1996,
+    "decade": "1990s",
+    "director": "Lars von Trier",
+    "country": "Denmark",
+    "genre": "Drama, Romance",
+    "runtime": 159,
+    "poster": "https://image.tmdb.org/t/p/w342/dQWMcdHXUOSHtr7ypOCa5T79JMS.jpg",
+    "imdb_id": "tt0115751",
+    "tmdb_id": 145,
+    "synopsis": "In a small, conservative Scottish village, an oilman is paralyzed in an accident. His wife, who prayed for his return, feels guilty; even more, when he urges her to have sex with another.",
+    "cast": [
+      "Emily Watson",
+      "Stellan Skarsgård",
+      "Katrin Cartlidge"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Amor omnie",
+      "Breaking the waves - Aallonmurtaja",
+      "Contra viento y marea",
+      "Damazontas ta kymata",
+      "Kiseki no Umi",
+      "L'amour est un pouvoir sacré",
+      "Rompiendo las olas",
+      "브레이킹 더 웨이브"
+    ],
+    "lb": "https://letterboxd.com/tmdb/145/",
+    "imdb_score": 7.8,
+    "rt_score": 0.84,
+    "mc_score": 82,
+    "score": 8.1,
+    "distributor": "Curzon",
+    "format": "4K Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
