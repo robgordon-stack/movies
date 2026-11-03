@@ -47460,5 +47460,36 @@
     "format": "4K Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "First Cow",
+    "year": 2020,
+    "decade": "2020s",
+    "director": "Kelly Reichardt",
+    "country": "Usa",
+    "genre": "Drama, History",
+    "runtime": 122,
+    "poster": "https://image.tmdb.org/t/p/w342/yS41crZ1i0fFxCQbuL7I1Y1VBwm.jpg",
+    "imdb_id": "tt9231040",
+    "tmdb_id": 558582,
+    "synopsis": "In the 1820s, a taciturn loner and skilled cook travels west to Oregon Territory, where he meets a Chinese immigrant also seeking his fortune. Soon the two team up on a dangerous scheme to steal milk from the wealthy landowner’s prized Jersey cow—the first, and only, in the territory.",
+    "cast": [
+      "John Magaro",
+      "Orion Lee",
+      "Toby Jones"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "퍼스트 카우"
+    ],
+    "lb": "https://letterboxd.com/tmdb/558582/",
+    "imdb_score": 7.1,
+    "rt_score": 0.95,
+    "mc_score": 90,
+    "score": 8.5,
+    "distributor": "Mubi",
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
