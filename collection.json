@@ -47282,5 +47282,34 @@
     "format": "Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "Paterson",
+    "year": 2016,
+    "decade": "2010s",
+    "director": "Jim Jarmusch",
+    "country": "Usa",
+    "genre": "Drama",
+    "runtime": 118,
+    "poster": "https://image.tmdb.org/t/p/w342/AuJ1ZlfqwuAr9H5Qr1U9KILylse.jpg",
+    "imdb_id": "tt5247022",
+    "tmdb_id": 370755,
+    "synopsis": "A week in the life of Paterson, a poet bus driver, and his wife Laura, a very creative artist, who live in Paterson, New Jersey, hometown of many famous poets and artists.",
+    "cast": [
+      "Adam Driver",
+      "Golshifteh Farahani",
+      "Rizwan Manji"
+    ],
+    "female_director": false,
+    "alt_titles": [],
+    "lb": "https://letterboxd.com/tmdb/370755/",
+    "imdb_score": 7.3,
+    "rt_score": 0.96,
+    "mc_score": 90,
+    "score": 8.6,
+    "distributor": "",
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
