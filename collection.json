@@ -47171,5 +47171,40 @@
     "format": "4K Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "Toni Erdmann",
+    "year": 2016,
+    "decade": "2010s",
+    "director": "Maren Ade",
+    "country": "Germany",
+    "genre": "Comedy, Drama",
+    "runtime": 162,
+    "poster": "https://image.tmdb.org/t/p/w342/v3gf7T8hb8aYv05X2jHmxJQWPZr.jpg",
+    "imdb_id": "tt4048272",
+    "tmdb_id": 374475,
+    "synopsis": "Convinced that his daughter has forgotten how to laugh, a father shows up unannounced while she's living abroad and bombards her with outrageous jokes.",
+    "cast": [
+      "Sandra Hüller",
+      "Peter Simonischek",
+      "Michael Wittenborn"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "As Faces De Toni Erdmann",
+      "Min pappa Toni Erdmann",
+      "Τόνι Έρντμαν",
+      "Тони Эрдманн",
+      "토니 에드만"
+    ],
+    "lb": "https://letterboxd.com/tmdb/374475/",
+    "imdb_score": 7.3,
+    "rt_score": 0.93,
+    "mc_score": 93,
+    "score": 8.6,
+    "distributor": "",
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
