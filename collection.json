@@ -47206,5 +47206,43 @@
     "format": "Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "Past Lives",
+    "year": 2023,
+    "decade": "2020s",
+    "director": "Celine Song",
+    "country": "Usa",
+    "genre": "Drama, Romance",
+    "runtime": 106,
+    "poster": "https://image.tmdb.org/t/p/w342/k3waqVXSnvCZWfJYNtdamTgTtTA.jpg",
+    "imdb_id": "tt13238346",
+    "tmdb_id": 666277,
+    "synopsis": "After decades apart, childhood friends Nora and Hae Sung are reunited in New York for one fateful weekend as they confront notions of destiny, love, and the choices that make a life.",
+    "cast": [
+      "Greta Lee",
+      "Teo Yoo",
+      "John Magaro"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Előző életek",
+      "Geçmiş Yaşamlar",
+      "Keçmiş Yaşamlar",
+      "Mga Nakaraang Buhay",
+      "Nos vies d'avant",
+      "Past Lives (Vidas pasadas)",
+      "Vidas Pasadas",
+      "Vidas Passadas"
+    ],
+    "lb": "https://letterboxd.com/tmdb/666277/",
+    "imdb_score": 7.8,
+    "rt_score": 0.95,
+    "mc_score": 94,
+    "score": 8.9,
+    "distributor": "",
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
