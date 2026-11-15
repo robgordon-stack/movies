@@ -8732,63 +8732,6 @@
     ]
   },
   {
-    "id": "17753640833185pwsv7inyqd",
-    "title": "A Separation",
-    "priority": "Someday",
-    "added": 1775364083318,
-    "owned": false,
-    "poster": "https://image.tmdb.org/t/p/w500/xQadpnoLokxzN3hRpCPbBGpxsiz.jpg",
-    "imdb_id": "tt1832382",
-    "year": 2011,
-    "runtime": 123,
-    "genre": "Drama",
-    "country": "Iran",
-    "director": "Asghar Farhadi",
-    "tmdb_id": 60243,
-    "lb": "https://letterboxd.com/film/a-separation/",
-    "has4k": false,
-    "score": 9,
-    "imdb_score": 8.3,
-    "lb_score": 4.2,
-    "rt_score": 0.99,
-    "mc_score": 95,
-    "distributor": "Artificial Eye",
-    "similar": [
-      {
-        "title": "The Salesman",
-        "year": 2016,
-        "imdb_id": "tt5664326"
-      },
-      {
-        "title": "About Elly",
-        "year": 2009,
-        "imdb_id": "tt1258528"
-      },
-      {
-        "title": "Capernaum",
-        "year": 2018,
-        "imdb_id": "tt8267604"
-      }
-    ],
-    "female_director": false,
-    "synopsis": "A married couple are faced with a difficult decision – to improve the life of their child by moving to another country or to stay in Iran and look after a deteriorating parent who has Alzheimer's disease.",
-    "cast": [
-      "Payman Maadi",
-      "Leila Hatami",
-      "Shahab Hosseini"
-    ],
-    "alt_titles": [
-      "A Separação",
-      "Betsuri",
-      "Bir Ayrılık",
-      "Bir Ayrılıq",
-      "Enas horismos",
-      "Issiskyrimas",
-      "Jodaeeye Nader az Simin",
-      "Jodaeiye Nader az Simin"
-    ]
-  },
-  {
     "id": "177536408331875nvdur17q5",
     "title": "An Elephant Sitting Still",
     "priority": "Someday",
