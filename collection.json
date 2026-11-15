@@ -47935,5 +47935,43 @@
     "format": "Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "Before Sunset",
+    "year": 2004,
+    "decade": "2000s",
+    "director": "Richard Linklater",
+    "country": "Usa",
+    "genre": "Drama, Romance",
+    "runtime": 80,
+    "poster": "https://image.tmdb.org/t/p/w342/gycdE1ARByGQcK4fYR2mgpU6OO.jpg",
+    "imdb_id": "tt0381681",
+    "tmdb_id": 80,
+    "synopsis": "Nine years later, Jesse travels across Europe giving readings from a book he wrote about the night he spent in Vienna with Celine. After his reading in Paris, Celine finds him, and they spend part of the day together before Jesse has to again leave for a flight. They are both in relationships now, and Jesse has a son, but as their strong feelings for each other start to return, both confess a longing for more.",
+    "cast": [
+      "Ethan Hawke",
+      "Julie Delpy",
+      "Vernon Dobtcheff"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Antes do Pôr do Sol",
+      "Før Solnedgang",
+      "Günəş Batmadan Əvvəl",
+      "Пре заласка сунца",
+      "情留相逢时",
+      "日落之前",
+      "爱在日落余晖时",
+      "비포 선셋"
+    ],
+    "lb": "https://letterboxd.com/tmdb/80/",
+    "imdb_score": 8.1,
+    "rt_score": 0.95,
+    "mc_score": 91,
+    "score": 8.9,
+    "distributor": "Criterion Collection",
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
