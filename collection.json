@@ -47859,5 +47859,43 @@
     "format": "4K Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "KPop Demon Hunters",
+    "year": 2025,
+    "decade": "2020s",
+    "director": "Maggie Kang, Chris Appelhans",
+    "country": "Usa",
+    "genre": "Fantasy, Music, Comedy, Animation",
+    "runtime": 96,
+    "poster": "https://image.tmdb.org/t/p/w342/zT7Lhw3BhJbMkRqm9Zlx2YGMsY0.jpg",
+    "imdb_id": "tt14205554",
+    "tmdb_id": 803796,
+    "synopsis": "When K-pop superstars Rumi, Mira and Zoey aren't selling out stadiums, they're using their secret powers to protect their fans from supernatural threats.",
+    "cast": [
+      "Arden Cho",
+      "May Hong",
+      "Ji-young Yoo"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "As guerreiras K-Pop",
+      "Canta con Las guerreras k-pop",
+      "Guerreiras do K-Pop: Para Cantar Junto",
+      "K-POP：猎魔女团",
+      "K-Pop: Demon Hunters",
+      "KPop Demon Hunters A Sing-Along Event",
+      "KPop Demon Hunters Sing Along",
+      "Kpop: Şeytan Ovçuları"
+    ],
+    "lb": "https://letterboxd.com/tmdb/803796/",
+    "imdb_score": 7.4,
+    "rt_score": 0.92,
+    "mc_score": 77,
+    "score": 8.1,
+    "distributor": "Criterion Collection",
+    "format": "4K Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
