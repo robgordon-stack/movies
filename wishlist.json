@@ -9953,63 +9953,6 @@
     ]
   },
   {
-    "id": "1775363710752m8cnd2l7g8m",
-    "title": "Before Sunset",
-    "priority": "Must Own",
-    "added": 1775363710752,
-    "owned": false,
-    "poster": "https://image.tmdb.org/t/p/w500/4sW5XH9ZfYXpvFzev00S1IGAEbg.jpg",
-    "imdb_id": "tt0381681",
-    "year": 2004,
-    "runtime": 80,
-    "genre": "Drama, Romance",
-    "country": "United States",
-    "director": "Richard Linklater",
-    "tmdb_id": 80,
-    "lb": "https://letterboxd.com/film/before-sunset/",
-    "has4k": true,
-    "distributor": "Criterion",
-    "score": 8.6,
-    "imdb_score": 8.1,
-    "lb_score": 4.3,
-    "rt_score": 0.95,
-    "mc_score": 80,
-    "similar": [
-      {
-        "title": "Before Sunrise",
-        "year": 1995,
-        "imdb_id": "tt0112471"
-      },
-      {
-        "title": "Before Midnight",
-        "year": 2013,
-        "imdb_id": "tt2209418"
-      },
-      {
-        "title": "Certified Copy",
-        "year": 2010,
-        "imdb_id": "tt1020773"
-      }
-    ],
-    "female_director": false,
-    "synopsis": "Nine years later, Jesse travels across Europe giving readings from a book he wrote about the night he spent in Vienna with Celine. After his reading in Paris, Celine finds him, and they spend part of the day together before Jesse has to again leave for a flight. They are both in relationships now, and Jesse has a son, but as their strong feelings for each other start to return, both confess a longing for more.",
-    "cast": [
-      "Ethan Hawke",
-      "Julie Delpy",
-      "Vernon Dobtcheff"
-    ],
-    "alt_titles": [
-      "Antes do Pôr do Sol",
-      "Før Solnedgang",
-      "Günəş Batmadan Əvvəl",
-      "Пре заласка сунца",
-      "情留相逢时",
-      "日落之前",
-      "爱在日落余晖时",
-      "비포 선셋"
-    ]
-  },
-  {
     "id": "17753635899860b5zq1t06lgp",
     "title": "Django Unchained",
     "priority": "Someday",
