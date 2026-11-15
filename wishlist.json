@@ -9164,54 +9164,6 @@
     ]
   },
   {
-    "id": "1775363855869l683eznh8k",
-    "title": "Network",
-    "priority": "High",
-    "added": 1775363855869,
-    "owned": false,
-    "poster": "https://image.tmdb.org/t/p/w500/qZomlHsaALUtkFeMDwdYmwS2Pbo.jpg",
-    "imdb_id": "tt0074958",
-    "year": 1976,
-    "runtime": 121,
-    "genre": "Drama",
-    "country": "United States",
-    "director": "Sidney Lumet",
-    "tmdb_id": 10774,
-    "lb": "https://letterboxd.com/film/network/",
-    "has4k": true,
-    "score": 8.5,
-    "imdb_score": 8.1,
-    "lb_score": 4.2,
-    "rt_score": 0.92,
-    "mc_score": 83,
-    "distributor": "Criterion",
-    "similar": [
-      {
-        "title": "Broadcast News",
-        "year": 1987,
-        "imdb_id": "tt0092699"
-      },
-      {
-        "title": "Quiz Show",
-        "year": 1994,
-        "imdb_id": "tt0110932"
-      }
-    ],
-    "female_director": false,
-    "synopsis": "When veteran anchorman Howard Beale is forced to retire his 25-year post because of his age, he announces to viewers that he will kill himself during his farewell broadcast. Network executives rethink their decision when his fanatical tirade results in a spike in ratings.",
-    "cast": [
-      "Faye Dunaway",
-      "William Holden",
-      "Peter Finch"
-    ],
-    "alt_titles": [
-      "Network - Main basse sur la TV",
-      "Reshet Shidur",
-      "To diktyo",
-      "荧光屏后"
-    ]
-  },
-  {
     "id": "1775363855869wt6kbjr5krf",
     "title": "Starship Troopers",
     "priority": "Someday",
