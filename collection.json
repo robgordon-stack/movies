@@ -47605,5 +47605,41 @@
     "format": "Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "Rust and Bone",
+    "year": 2012,
+    "decade": "2010s",
+    "director": "Jacques Audiard",
+    "country": "France",
+    "genre": "Drama, Romance",
+    "runtime": 123,
+    "poster": "https://image.tmdb.org/t/p/w342/6bcerd7CeQ5y5Dilym1O2C8c8Gl.jpg",
+    "imdb_id": "tt2053425",
+    "tmdb_id": 97365,
+    "synopsis": "Put in charge of his young son, Ali leaves Belgium for Antibes to live with his sister and her husband as a family. Ali's bond with Stephanie, a killer whale trainer, grows deeper after Stephanie suffers a horrible accident.",
+    "cast": [
+      "Marion Cotillard",
+      "Matthias Schoenaerts",
+      "Armand Verdure"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "De rouille et d'os",
+      "Haluda va'etzem",
+      "Herdoil eta Hezurrezkoa",
+      "Kosci i rdza",
+      "Metal y hueso",
+      "Rez a Kost"
+    ],
+    "lb": "https://letterboxd.com/tmdb/97365/",
+    "imdb_score": 7.4,
+    "rt_score": 0.81,
+    "mc_score": 73,
+    "score": 7.6,
+    "distributor": "",
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
