@@ -13608,64 +13608,6 @@
     ]
   },
   {
-    "id": "177543901776205lyb58jge3",
-    "title": "The Great Beauty",
-    "year": 2013,
-    "director": "Paolo Sorrentino",
-    "poster": "https://image.tmdb.org/t/p/w1280/7suf0vaQfv5E7X1GVh4HJwK90yo.jpg",
-    "imdb_id": "tt2358891",
-    "genre": "Drama",
-    "country": "Italy",
-    "runtime": 141,
-    "priority": "High",
-    "notes": null,
-    "owned": false,
-    "added": 1775439017762,
-    "tmdb_id": 179144,
-    "lb": "https://letterboxd.com/film/the-great-beauty/",
-    "has4k": false,
-    "distributor": "Criterion",
-    "imdb_score": 7.3,
-    "lb_score": 3.9,
-    "rt_score": 0.87,
-    "mc_score": 85,
-    "score": 8.1,
-    "similar": [
-      {
-        "title": "The Consequences of Love",
-        "year": 2004,
-        "imdb_id": "tt0398492"
-      },
-      {
-        "title": "La Dolce Vita",
-        "year": 1960,
-        "imdb_id": "tt0053779"
-      },
-      {
-        "title": "8½",
-        "year": 1963,
-        "imdb_id": "tt0056801"
-      }
-    ],
-    "female_director": false,
-    "synopsis": "Jep Gambardella has seduced his way through the lavish nightlife of Rome for decades, but after his 65th birthday and a shock from the past, Jep looks past the nightclubs and parties to find a timeless landscape of absurd, exquisite beauty.",
-    "cast": [
-      "Toni Servillo",
-      "Carlo Verdone",
-      "Sabrina Ferilli"
-    ],
-    "alt_titles": [
-      "Den store skjønnheten",
-      "Didis grozis",
-      "I teleia omorfia",
-      "Kohutav ilu",
-      "La gran belleza",
-      "La grande bellezza",
-      "Suuri kauneus",
-      "Yafa la'netzakh"
-    ]
-  },
-  {
     "id": "1775438976263cj8ox4i9nq",
     "title": "Synecdoche, New York",
     "year": 2008,
