@@ -47713,5 +47713,43 @@
     "format": "Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "All About Eve",
+    "year": 1950,
+    "decade": "1950s",
+    "director": "Joseph L. Mankiewicz",
+    "country": "Usa",
+    "genre": "Drama",
+    "runtime": 139,
+    "poster": "https://image.tmdb.org/t/p/w342/blBzZaatPWVuWpXEnPscMA4Xp6m.jpg",
+    "imdb_id": "tt0042192",
+    "tmdb_id": 705,
+    "synopsis": "From the moment she glimpses her idol at the stage door, Eve Harrington is determined to take the reins of power away from the great actress Margo Channing. Eve maneuvers her way into Margo's Broadway role, becomes a sensation and even causes turmoil in the lives of Margo's director boyfriend, her playwright and his wife. Only the cynical drama critic sees through Eve, admiring her audacity and perfect pattern of deceit.",
+    "cast": [
+      "Bette Davis",
+      "Anne Baxter",
+      "George Sanders"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "A Malvada",
+      "Alles draait om Eva",
+      "Alles über Eva",
+      "Allt om Eva",
+      "Allt um Evu",
+      "Alt om Eva",
+      "Beszéljünk Éváról!",
+      "Eva"
+    ],
+    "lb": "https://letterboxd.com/tmdb/705/",
+    "imdb_score": 8.2,
+    "rt_score": 0.99,
+    "mc_score": 98,
+    "score": 9.3,
+    "distributor": "Criterion Collection",
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
