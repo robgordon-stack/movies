@@ -47529,5 +47529,43 @@
     "format": "Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "The Great Beauty",
+    "year": 2013,
+    "decade": "2010s",
+    "director": "Paolo Sorrentino",
+    "country": "France",
+    "genre": "Drama",
+    "runtime": 142,
+    "poster": "https://image.tmdb.org/t/p/w342/7suf0vaQfv5E7X1GVh4HJwK90yo.jpg",
+    "imdb_id": "tt2358891",
+    "tmdb_id": 179144,
+    "synopsis": "Jep Gambardella has seduced his way through the lavish nightlife of Rome for decades, but after his 65th birthday and a shock from the past, Jep looks past the nightclubs and parties to find a timeless landscape of absurd, exquisite beauty.",
+    "cast": [
+      "Toni Servillo",
+      "Carlo Verdone",
+      "Sabrina Ferilli"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Den store skjønnheten",
+      "Didis grozis",
+      "I teleia omorfia",
+      "Kohutav ilu",
+      "La gran belleza",
+      "La grande bellezza",
+      "Suuri kauneus",
+      "Yafa la'netzakh"
+    ],
+    "lb": "https://letterboxd.com/tmdb/179144/",
+    "imdb_score": 7.7,
+    "rt_score": 0.91,
+    "mc_score": 86,
+    "score": 8.5,
+    "distributor": "Criterion",
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
