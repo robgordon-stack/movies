@@ -4127,56 +4127,6 @@
     ]
   },
   {
-    "id": "1780708549201ijos76n1ny",
-    "title": "Before Sunrise",
-    "year": 1995,
-    "director": "Richard Linklater",
-    "poster": "https://image.tmdb.org/t/p/w342/kf1Jb1c2JAOqjuzA3H4oDM263uB.jpg",
-    "imdb_id": "tt0112471",
-    "genre": "Drama, Romance",
-    "country": "Austria",
-    "runtime": 101,
-    "priority": "Someday",
-    "notes": null,
-    "owned": false,
-    "added": 1780708549201,
-    "tmdb_id": 76,
-    "imdb_score": 8,
-    "score": 8.9,
-    "similar": [
-      {
-        "title": "The Illusionist",
-        "year": 2006,
-        "imdb_id": "tt0443543"
-      },
-      {
-        "title": "Amadeus",
-        "year": 1984,
-        "imdb_id": "tt0086879"
-      }
-    ],
-    "rt_score": 1,
-    "lb": "https://boxd.it/2bcU",
-    "lb_score": 4.3,
-    "synopsis": "An unexpected meeting on a train leads two travelers to spend an evening wandering through Vienna. As the night unfolds, they share stories and conversations about life and love, exploring new ideas while a quiet intimacy grows between them, knowing it may be their only night together.",
-    "cast": [
-      "Ethan Hawke",
-      "Julie Delpy",
-      "Andrea Eckert"
-    ],
-    "female_director": false,
-    "alt_titles": [
-      "Antes do Amanhecer",
-      "Før Soloppgang",
-      "Günəş Doğmadan Əvvəl",
-      "Zwischenstopp in Wien",
-      "До сходу сонця",
-      "Перед сходом сонця",
-      "Пре свитања",
-      "ビフォア・サンライズ 恋人までの距離"
-    ]
-  },
-  {
     "id": "1780708491368lyjeiwr001s",
     "title": "Neon Genesis Evangelion: The End of Evangelion",
     "year": 1997,
