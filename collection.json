@@ -47897,5 +47897,43 @@
     "format": "4K Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "Before Sunrise",
+    "year": 1995,
+    "decade": "1990s",
+    "director": "Richard Linklater",
+    "country": "Austria",
+    "genre": "Drama, Romance",
+    "runtime": 101,
+    "poster": "https://image.tmdb.org/t/p/w342/kf1Jb1c2JAOqjuzA3H4oDM263uB.jpg",
+    "imdb_id": "tt0112471",
+    "tmdb_id": 76,
+    "synopsis": "An unexpected meeting on a train leads two travelers to spend an evening wandering through Vienna. As the night unfolds, they share stories and conversations about life and love, exploring new ideas while a quiet intimacy grows between them, knowing it may be their only night together.",
+    "cast": [
+      "Ethan Hawke",
+      "Julie Delpy",
+      "Andrea Eckert"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Antes do Amanhecer",
+      "Før Soloppgang",
+      "Günəş Doğmadan Əvvəl",
+      "Zwischenstopp in Wien",
+      "До сходу сонця",
+      "Перед сходом сонця",
+      "Пре свитања",
+      "ビフォア・サンライズ 恋人までの距離"
+    ],
+    "lb": "https://letterboxd.com/tmdb/76/",
+    "imdb_score": 8.1,
+    "rt_score": 1,
+    "mc_score": 79,
+    "score": 8.7,
+    "distributor": "Criterion Collection",
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
