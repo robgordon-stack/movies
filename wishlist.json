@@ -11000,57 +11000,6 @@
     ]
   },
   {
-    "id": "1775363589986fpcpt5k2ic7",
-    "title": "The Conformist",
-    "priority": "High",
-    "added": 1775363589986,
-    "owned": false,
-    "poster": "https://image.tmdb.org/t/p/w500/nLJjFRqIJAK8qz0OKYnpKCblZNK.jpg",
-    "imdb_id": "tt0065571",
-    "year": 1971,
-    "runtime": 108,
-    "genre": "Drama",
-    "country": "Italy",
-    "director": "Bernardo Bertolucci",
-    "tmdb_id": 8416,
-    "lb": "https://letterboxd.com/film/the-conformist/",
-    "has4k": false,
-    "score": 8.5,
-    "imdb_score": 7.9,
-    "lb_score": 4.1,
-    "rt_score": 0.95,
-    "distributor": "Kino Lorber",
-    "similar": [
-      {
-        "title": "Last Tango in Paris",
-        "year": 1972,
-        "imdb_id": "tt0070849"
-      },
-      {
-        "title": "The Garden of the Finzi-Continis",
-        "year": 1970,
-        "imdb_id": "tt0066619"
-      }
-    ],
-    "female_director": false,
-    "synopsis": "A weak-willed Italian man becomes a fascist flunky who goes abroad to arrange the assassination of his old teacher, now a political dissident.",
-    "cast": [
-      "Jean-Louis Trintignant",
-      "Stefania Sandrelli",
-      "Gastone Moschin"
-    ],
-    "alt_titles": [
-      "Ansatsu no Mori",
-      "De conformist",
-      "El conformista",
-      "Fascisten",
-      "Fascistene",
-      "Il conformista",
-      "Konformisten",
-      "Le conformiste"
-    ]
-  },
-  {
     "id": "1775363589985tj4nam3pbd",
     "title": "Céline and Julie Go Boating",
     "priority": "High",
