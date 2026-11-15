@@ -47973,5 +47973,43 @@
     "format": "Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "Before Midnight",
+    "year": 2013,
+    "decade": "2010s",
+    "director": "Richard Linklater",
+    "country": "Greece",
+    "genre": "Romance, Drama",
+    "runtime": 109,
+    "poster": "https://image.tmdb.org/t/p/w342/qbGKJmNUroDz75kh5Oafoall89e.jpg",
+    "imdb_id": "tt2209418",
+    "tmdb_id": 132344,
+    "synopsis": "It has been nine years since we last met Jesse and Celine, the French-American couple who once met on a train in Vienna. They now live in Paris with twin daughters but have spent a summer in Greece at the invitation of an author colleague of Jesse's. When the vacation is over and Jesse must send his teenage son off to the States, he begins to question his life decisions, and his relationship with Celine is at risk.",
+    "cast": [
+      "Ethan Hawke",
+      "Julie Delpy",
+      "Seamus Davey-Fitzpatrick"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Abans del capvespre",
+      "Antes da Meia-Noite",
+      "Antes del anochecer",
+      "Enne keskööd",
+      "Før Midnatt",
+      "Gecəyarısından Əvvəl",
+      "Перед опівніччю",
+      "Пре поноћи"
+    ],
+    "lb": "https://letterboxd.com/tmdb/132344/",
+    "imdb_score": 7.9,
+    "rt_score": 0.98,
+    "mc_score": 94,
+    "score": 9,
+    "distributor": "Criterion Collection",
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
