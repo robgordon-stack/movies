@@ -47675,5 +47675,43 @@
     "format": "4K Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "Modern Times",
+    "year": 1936,
+    "decade": "1930s",
+    "director": "Charlie Chaplin",
+    "country": "Usa",
+    "genre": "Comedy, Drama, Romance",
+    "runtime": 87,
+    "poster": "https://image.tmdb.org/t/p/w342/AthaPakkuCLROdKxtRbKWclkDBK.jpg",
+    "imdb_id": "tt0027977",
+    "tmdb_id": 3082,
+    "synopsis": "A bumbling tramp desires to build a home with a young woman, yet is thwarted time and time again by his lack of experience and habit of being in the wrong place at the wrong time...",
+    "cast": [
+      "Charlie Chaplin",
+      "Paulette Goddard",
+      "Henry Bergman"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Alazmena alhaditha",
+      "Asr-e jadid",
+      "Asri Zamanlar",
+      "Dr. Hauser & Co. Ges.m.b.H.",
+      "Les Temps Modernes",
+      "Modan Taimusu",
+      "Modern Zamanlar",
+      "Moderne tijden"
+    ],
+    "lb": "https://letterboxd.com/tmdb/3082/",
+    "imdb_score": 8.5,
+    "rt_score": 0.98,
+    "mc_score": 96,
+    "score": 9.3,
+    "distributor": "Criterion",
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
