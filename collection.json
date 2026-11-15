@@ -47567,5 +47567,43 @@
     "format": "Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "The Conformist",
+    "year": 1971,
+    "decade": "1970s",
+    "director": "Bernardo Bertolucci",
+    "country": "Germany",
+    "genre": "Drama",
+    "runtime": 108,
+    "poster": "https://image.tmdb.org/t/p/w342/nLJjFRqIJAK8qz0OKYnpKCblZNK.jpg",
+    "imdb_id": "tt0065571",
+    "tmdb_id": 8416,
+    "synopsis": "A weak-willed Italian man becomes a fascist flunky who goes abroad to arrange the assassination of his old teacher, now a political dissident.",
+    "cast": [
+      "Jean-Louis Trintignant",
+      "Stefania Sandrelli",
+      "Gastone Moschin"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Ansatsu no Mori",
+      "De conformist",
+      "El conformista",
+      "Fascisten",
+      "Fascistene",
+      "Il conformista",
+      "Konformisten",
+      "Le conformiste"
+    ],
+    "lb": "https://letterboxd.com/tmdb/8416/",
+    "imdb_score": 7.9,
+    "rt_score": 0.98,
+    "mc_score": 100,
+    "score": 9.2,
+    "distributor": "Kino Lorber",
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
