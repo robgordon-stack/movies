@@ -11219,62 +11219,6 @@
     ]
   },
   {
-    "id": "1775363589985sqazc1r9re",
-    "title": "Modern Times",
-    "priority": "Must Own",
-    "added": 1775363589985,
-    "owned": false,
-    "poster": "https://image.tmdb.org/t/p/w500/7uoiKOEjxBBW0AgDGQWrlfGQ90w.jpg",
-    "imdb_id": "tt0027977",
-    "year": 1936,
-    "runtime": 87,
-    "genre": "Comedy, Drama, Romance",
-    "country": "United States",
-    "director": "Charlie Chaplin",
-    "tmdb_id": 3082,
-    "lb": "https://letterboxd.com/film/modern-times/",
-    "has4k": false,
-    "score": 9,
-    "imdb_score": 8.5,
-    "lb_score": 4.3,
-    "rt_score": 0.98,
-    "distributor": "Criterion",
-    "similar": [
-      {
-        "title": "The Kid",
-        "year": 1921,
-        "imdb_id": "tt0012349"
-      },
-      {
-        "title": "City Lights",
-        "year": 1931,
-        "imdb_id": "tt0021749"
-      },
-      {
-        "title": "Metropolis",
-        "year": 1927,
-        "imdb_id": "tt0017136"
-      }
-    ],
-    "female_director": false,
-    "synopsis": "A bumbling tramp desires to build a home with a young woman, yet is thwarted time and time again by his lack of experience and habit of being in the wrong place at the wrong time...",
-    "cast": [
-      "Charlie Chaplin",
-      "Paulette Goddard",
-      "Henry Bergman"
-    ],
-    "alt_titles": [
-      "Alazmena alhaditha",
-      "Asr-e jadid",
-      "Dr. Hauser & Co. Ges.m.b.H.",
-      "Les Temps Modernes",
-      "Modan Taimusu",
-      "Modern Zamanlar",
-      "Moderne tijden",
-      "Modernoi kairoi"
-    ]
-  },
-  {
     "id": "17753635899855xp0c0614w",
     "title": "Army of Shadows",
     "priority": "High",
