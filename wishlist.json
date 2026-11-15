@@ -10155,63 +10155,6 @@
     ]
   },
   {
-    "id": "17753637107510zydx1iw6rjg",
-    "title": "Some Like It Hot",
-    "priority": "Must Own",
-    "added": 1775363710751,
-    "owned": false,
-    "poster": "https://image.tmdb.org/t/p/w500/hVIKyTK13AvOGv7ICmJjK44DTzp.jpg",
-    "imdb_id": "tt0053291",
-    "year": 1959,
-    "runtime": 123,
-    "genre": "Comedy, Romance, Crime",
-    "country": "United States",
-    "director": "Billy Wilder",
-    "tmdb_id": 239,
-    "lb": "https://letterboxd.com/film/some-like-it-hot/",
-    "notes": "4K",
-    "has4k": true,
-    "score": 8.7,
-    "imdb_score": 8.2,
-    "lb_score": 4.2,
-    "rt_score": 0.95,
-    "distributor": "Criterion",
-    "similar": [
-      {
-        "title": "The Apartment",
-        "year": 1960,
-        "imdb_id": "tt0053604"
-      },
-      {
-        "title": "Tootsie",
-        "year": 1982,
-        "imdb_id": "tt0084805"
-      },
-      {
-        "title": "His Girl Friday",
-        "year": 1940,
-        "imdb_id": "tt0032599"
-      }
-    ],
-    "female_director": false,
-    "synopsis": "In Prohibition-era Chicago, musicians Joe and Jerry witness a mob hit, and flee the state in an all-female band disguised as Josephine and Daphne, but further complications set in.",
-    "cast": [
-      "Tony Curtis",
-      "Jack Lemmon",
-      "Marilyn Monroe"
-    ],
-    "alt_titles": [
-      "B джaзе только девушки",
-      "Bazia daghesho doust darand",
-      "Bəziləri isti sevir",
-      "Cazda yalnız qızlardır",
-      "Düü testimoni scomud",
-      "Hamim V'Taeem",
-      "Hett om öronen",
-      "Hoe warmer hoe beter"
-    ]
-  },
-  {
     "id": "17753635899860b5zq1t06lgp",
     "title": "Django Unchained",
     "priority": "Someday",
