@@ -4518,56 +4518,6 @@
     ]
   },
   {
-    "id": "1780708286151pikhjz0gqr7",
-    "title": "Project Hail Mary",
-    "year": 2026,
-    "director": "Phil Lord, Christopher Miller",
-    "poster": "https://image.tmdb.org/t/p/w342/yihdXomYb5kTeSivtFndMy5iDmf.jpg",
-    "imdb_id": "tt12042730",
-    "genre": "Sci-Fi, Adventure",
-    "country": "United States",
-    "runtime": 157,
-    "priority": "Someday",
-    "notes": null,
-    "owned": false,
-    "added": 1780708286151,
-    "tmdb_id": 687163,
-    "imdb_score": 8.7,
-    "score": 8.9,
-    "similar": [
-      {
-        "title": "Solaris",
-        "year": 2002,
-        "imdb_id": "tt0307479"
-      },
-      {
-        "title": "Stowaway",
-        "year": 2021,
-        "imdb_id": "tt9203694"
-      }
-    ],
-    "rt_score": 0.94,
-    "lb": "https://boxd.it/pEeQ",
-    "lb_score": 4.31,
-    "synopsis": "Science teacher Ryland Grace wakes up on a spaceship light years from home with no recollection of who he is or how he got there. As his memory returns, he begins to uncover his mission: solve the riddle of the mysterious substance causing the sun to die out. He must call on his scientific knowledge and unorthodox ideas to save everything on Earth from extinction.",
-    "cast": [
-      "Ryan Gosling",
-      "Sandra Hüller",
-      "James Ortiz"
-    ],
-    "female_director": false,
-    "alt_titles": [
-      "Devoradores de Estrelas",
-      "Projecto Fin del Mundo",
-      "Projecto Hail Mary",
-      "Projekti Shpresa e Fundit",
-      "Projet dernière chance",
-      "Proyek Hail Mary",
-      "Проект «Аве Мария»",
-      "Проект «Конец света»"
-    ]
-  },
-  {
     "id": "1780708155868u3e3zryhz3j",
     "title": "Central Station",
     "year": 1998,
