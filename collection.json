@@ -48011,5 +48011,43 @@
     "format": "Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "Project Hail Mary",
+    "year": 2026,
+    "decade": "2020s",
+    "director": "Phil Lord, Christopher Miller",
+    "country": "Usa",
+    "genre": "Sci-Fi, Adventure",
+    "runtime": 157,
+    "poster": "https://image.tmdb.org/t/p/w342/iOb2fjXLbpJgyQXe46n1WtGCnaa.jpg",
+    "imdb_id": "tt12042730",
+    "tmdb_id": 687163,
+    "synopsis": "Science teacher Ryland Grace wakes up on a spaceship light years from home with no recollection of who he is or how he got there. As his memory returns, he begins to uncover his mission: solve the riddle of the mysterious substance causing the sun to die out. He must call on his scientific knowledge and unorthodox ideas to save everything on Earth from extinction.",
+    "cast": [
+      "Ryan Gosling",
+      "Sandra Hüller",
+      "James Ortiz"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Devoradores de Estrelas",
+      "Projecto Fin del Mundo",
+      "Projecto Hail Mary",
+      "Projekti Shpresa e Fundit",
+      "Projet dernière chance",
+      "Proyek Hail Mary",
+      "Проект «Аве Мария»",
+      "Проект «Конец света»"
+    ],
+    "lb": "https://letterboxd.com/tmdb/687163/",
+    "imdb_score": 8.2,
+    "rt_score": 0.95,
+    "mc_score": 77,
+    "score": 8.5,
+    "distributor": "",
+    "format": "4K Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
