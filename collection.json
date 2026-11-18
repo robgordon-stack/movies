@@ -48049,5 +48049,42 @@
     "format": "4K Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "A Man Escaped",
+    "year": 1956,
+    "decade": "1950s",
+    "director": "Robert Bresson",
+    "country": "France",
+    "genre": "Drama, Thriller",
+    "runtime": 101,
+    "poster": "https://image.tmdb.org/t/p/w342/gkoZ8fFib24zhB2DKpjQ09SK9FU.jpg",
+    "imdb_id": "tt0049902",
+    "tmdb_id": 15244,
+    "synopsis": "A captured French Resistance fighter during World War II engineers a daunting escape from prison.",
+    "cast": [
+      "François Leterrier",
+      "Charles Le Clainche",
+      "Maurice Beerblock"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "A Man Escaped or The Wind Bloweth Where It Listeth",
+      "En dödsdömd har rymt",
+      "En dødsdømt er rømt",
+      "Fugiu Um Condenado à Morte",
+      "K smrti odsouzený uprchl",
+      "Le vent souffle où il veut",
+      "Um Condenado à Morte Escapou",
+      "Un condamné à mort s'est échappé"
+    ],
+    "lb": "https://letterboxd.com/tmdb/15244/",
+    "imdb_score": 8.1,
+    "rt_score": 1,
+    "score": 9.1,
+    "distributor": "Criterion",
+    "format": "Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
