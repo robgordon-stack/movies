@@ -48086,5 +48086,39 @@
     "format": "Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "Peking Opera Blues",
+    "year": 1986,
+    "decade": "1980s",
+    "director": "Tsui Hark",
+    "country": "Hong Kong",
+    "genre": "Action, Comedy, Drama",
+    "runtime": 105,
+    "poster": "https://image.tmdb.org/t/p/w342/6IcSrruE0hpBvqo40DRfX65nBRX.jpg",
+    "imdb_id": "tt0090952",
+    "tmdb_id": 39776,
+    "synopsis": "In 1913 Beijing, three fierce women—disguised rebel Tsao Wan, jewel-seeking Sheung Hung, and opera heiress Pai Niu—embark on a daring quest filled with intrigue and betrayal, challenging societal norms amidst political turmoil and the vibrant world of Peking Opera.",
+    "cast": [
+      "Brigitte Lin Ching-hsia",
+      "Sally Yeh Chian-wen",
+      "Cherie Chung Cho-hung"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Dao ma dan",
+      "Do ma daan",
+      "Fünf Schwerter für die Freiheit",
+      "Peking Action Blues",
+      "刀馬旦"
+    ],
+    "lb": "https://letterboxd.com/tmdb/39776/",
+    "imdb_score": 7.2,
+    "rt_score": 0.8,
+    "score": 7.6,
+    "distributor": "",
+    "format": "4K Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
