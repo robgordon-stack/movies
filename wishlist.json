@@ -7188,63 +7188,6 @@
     ]
   },
   {
-    "id": "17758766329870gd9mfmcvb4m",
-    "title": "Godzilla Minus One",
-    "year": 2023,
-    "director": "Takashi Yamazaki",
-    "poster": "https://image.tmdb.org/t/p/w1280/2E2WTX0TJEflAged6kzErwqX1kt.jpg",
-    "imdb_id": "tt23289160",
-    "genre": "Action, Adventure, Drama",
-    "country": "Japan",
-    "runtime": 124,
-    "priority": "Someday",
-    "notes": null,
-    "owned": false,
-    "added": 1775876632988,
-    "lb": "https://letterboxd.com/film/godzilla-minus-one/",
-    "score": 8.4,
-    "imdb_score": 7.9,
-    "lb_score": 4,
-    "rt_score": 0.98,
-    "mc_score": 78,
-    "similar": [
-      {
-        "title": "Shin Godzilla",
-        "year": 2016,
-        "imdb_id": "tt4262980"
-      },
-      {
-        "title": "The Host",
-        "year": 2006,
-        "imdb_id": "tt0468492"
-      },
-      {
-        "title": "Cloverfield",
-        "year": 2008,
-        "imdb_id": "tt1060277"
-      }
-    ],
-    "has4k": true,
-    "tmdb_id": 940721,
-    "female_director": false,
-    "synopsis": "In postwar Japan, Godzilla brings new devastation to an already scorched landscape. With no military intervention or government help in sight, the survivors must join together in the face of despair and fight back against an unrelenting horror.",
-    "cast": [
-      "Ryunosuke Kamiki",
-      "Minami Hamabe",
-      "Yuki Yamada"
-    ],
-    "alt_titles": [
-      "G Minus One",
-      "G-1.0",
-      "G-1.0／C",
-      "Godzilla -1.0",
-      "Godzilla Minus One / Minus Color",
-      "Godzilla Minus One Minus Color",
-      "Godzilla Minus One/Minus Color",
-      "Godzilla Minus One: Em Preto e Branco"
-    ]
-  },
-  {
     "id": "1775874263968vgrmc7l35wl",
     "title": "Champion",
     "year": 1949,
