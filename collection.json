@@ -48120,5 +48120,42 @@
     "format": "4K Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "Godzilla Minus One",
+    "year": 2023,
+    "decade": "2020s",
+    "director": "Takashi Yamazaki",
+    "country": "Japan",
+    "genre": "Sci-Fi, Horror, Action",
+    "runtime": 125,
+    "poster": "https://image.tmdb.org/t/p/w342/2E2WTX0TJEflAged6kzErwqX1kt.jpg",
+    "imdb_id": "tt23289160",
+    "tmdb_id": 940721,
+    "synopsis": "In postwar Japan, Godzilla brings new devastation to an already scorched landscape. With no military intervention or government help in sight, the survivors must join together in the face of despair and fight back against an unrelenting horror.",
+    "cast": [
+      "Ryunosuke Kamiki",
+      "Minami Hamabe",
+      "Yuki Yamada"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "G Minus One",
+      "G-1.0",
+      "G-1.0／C",
+      "Godzilla -1.0",
+      "Godzilla Minus One / Minus Color",
+      "Godzilla Minus One Minus Color",
+      "Godzilla Minus One/Minus Color",
+      "Godzilla Minus One: Em Preto e Branco"
+    ],
+    "lb": "https://letterboxd.com/tmdb/940721/",
+    "imdb_score": 7.6,
+    "mc_score": 81,
+    "score": 7.9,
+    "distributor": "",
+    "format": "4K Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
