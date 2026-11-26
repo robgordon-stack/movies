@@ -9072,57 +9072,6 @@
     ]
   },
   {
-    "id": "1775363855869w7mogtrf41",
-    "title": "Scarface",
-    "priority": "Someday",
-    "added": 1775363855869,
-    "owned": false,
-    "poster": "https://image.tmdb.org/t/p/w500/iQ5ztdjvteGeboxtmRdXEChJOHh.jpg",
-    "imdb_id": "tt0086250",
-    "year": 1983,
-    "runtime": 170,
-    "genre": "Action, Crime, Drama",
-    "country": "United States",
-    "director": "Brian De Palma",
-    "tmdb_id": 111,
-    "lb": "https://letterboxd.com/film/scarface-1983/",
-    "has4k": true,
-    "score": 7.7,
-    "imdb_score": 8.3,
-    "lb_score": 3.9,
-    "rt_score": 0.83,
-    "mc_score": 65,
-    "similar": [
-      {
-        "title": "Carlito's Way",
-        "year": 1993,
-        "imdb_id": "tt0106519"
-      },
-      {
-        "title": "Blow",
-        "year": 2001,
-        "imdb_id": "tt0207201"
-      }
-    ],
-    "female_director": false,
-    "synopsis": "After getting a green card in exchange for assassinating a Cuban government official, Tony Montana stakes a claim on the drug trade in Miami. Viciously murdering anyone who stands in his way, Tony eventually becomes the biggest drug lord in the state, controlling nearly all the cocaine that comes through Miami. But increased pressure from the police, wars with Colombian drug cartels and his own drug-fueled paranoia serve to fuel the flames of his eventual downfall.",
-    "cast": [
-      "Al Pacino",
-      "Steven Bauer",
-      "Michelle Pfeiffer"
-    ],
-    "alt_titles": [
-      "Arpinaama",
-      "Caracortada",
-      "Le balafré",
-      "Scarface - Toni, das Narbengesicht",
-      "Scarface El precio del poder",
-      "Yaralı Yüz",
-      "Yaralı Üz",
-      "Zjazvená tvár"
-    ]
-  },
-  {
     "id": "1775363855869n71n1wzf2us",
     "title": "Shutter Island",
     "priority": "Someday",
