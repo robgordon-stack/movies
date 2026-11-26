@@ -48157,5 +48157,41 @@
     "format": "4K Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "The Deer Hunter",
+    "year": 1978,
+    "decade": "1970s",
+    "director": "Michael Cimino",
+    "country": "Uk",
+    "genre": "Drama, War",
+    "runtime": 183,
+    "poster": "https://image.tmdb.org/t/p/w342/bbGtogDZOg09bm42KIpCXUXICkh.jpg",
+    "imdb_id": "tt0077416",
+    "tmdb_id": 11778,
+    "synopsis": "Three steelworkers enlist in the army and are sent to Vietnam, one leaving behind a rushed marriage, the others a shared love. What they encounter during the war changes their lives forever.",
+    "cast": [
+      "Robert De Niro",
+      "Christopher Walken",
+      "John Cazale"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Kauriinmetsästäjä",
+      "O Franco Atirador",
+      "The Man Who Came to Play",
+      "Vanatorul de Cerbi",
+      "Łowca Jeleni",
+      "獵鹿者",
+      "사슴 사냥꾼"
+    ],
+    "lb": "https://letterboxd.com/tmdb/11778/",
+    "imdb_score": 8.1,
+    "mc_score": 90,
+    "score": 8.6,
+    "distributor": "",
+    "format": "4K Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
