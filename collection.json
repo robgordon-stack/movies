@@ -48193,5 +48193,42 @@
     "format": "4K Blu-ray",
     "watched": false,
     "spine": ""
+  },
+  {
+    "title": "Scarface",
+    "year": 1983,
+    "decade": "1980s",
+    "director": "Brian De Palma",
+    "country": "United States",
+    "genre": "Action, Crime, Drama",
+    "runtime": 170,
+    "poster": "https://image.tmdb.org/t/p/w342/iQ5ztdjvteGeboxtmRdXEChJOHh.jpg",
+    "imdb_id": "tt0086250",
+    "tmdb_id": 111,
+    "synopsis": "After getting a green card in exchange for assassinating a Cuban government official, Tony Montana stakes a claim on the drug trade in Miami. Viciously murdering anyone who stands in his way, Tony eventually becomes the biggest drug lord in the state, controlling nearly all the cocaine that comes through Miami. But increased pressure from the police, wars with Colombian drug cartels and his own drug-fueled paranoia serve to fuel the flames of his eventual downfall.",
+    "cast": [
+      "Al Pacino",
+      "Steven Bauer",
+      "Michelle Pfeiffer"
+    ],
+    "female_director": false,
+    "alt_titles": [
+      "Arpinaama",
+      "Caracortada",
+      "Le balafré",
+      "Scarface - Toni, das Narbengesicht",
+      "Scarface El precio del poder",
+      "Yaralı Yüz",
+      "Yaralı Üz",
+      "Zjazvená tvár"
+    ],
+    "lb": "https://letterboxd.com/tmdb/111/",
+    "imdb_score": 8.3,
+    "mc_score": 65,
+    "score": 7.4,
+    "distributor": "",
+    "format": "4K Blu-ray",
+    "watched": false,
+    "spine": ""
   }
 ]
